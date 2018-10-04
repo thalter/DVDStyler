@@ -22,8 +22,12 @@
 #include <wx/colourdata.h>
 #endif
 #include <wx/artprov.h>
+#include <wx/statbmp.h>
+#include <vector>
+using namespace std;
 
 WX_DECLARE_OBJARRAY(wxBitmap, BitmapArray);
+
 
 class ColourPanel: public wxPanel {
 public:
@@ -187,12 +191,9 @@ protected:
 	void BeginCheckGroup(wxSizer* sizer, wxString label, bool value, bool readonly = false);
 	void EndGroup();
 
-	wxArrayPtrVoid m_icons;
-	wxArrayInt m_tooltipIcon;
-	wxArrayString m_tooltipTitle;
-	wxArrayString m_tooltipText;
 	int AddIcon(wxSizer* sizer, const wxString& title, const wxString& tooltip, wxArtID artId = wxART_INFORMATION);
 	void UpdateIcon(int index, const wxString& title, const wxString& tooltip, wxArtID artId = wxART_INFORMATION);
+	wxStaticBitmap* GetIcon(int index) { return m_icons[index]; }
 	
 	/**
 	 * @return the pointer to the control with given index
@@ -236,6 +237,11 @@ protected:
 	virtual void OnShowTooltip(wxMouseEvent& event);
 	
 private:
+	vector<wxStaticBitmap*> m_icons;
+	wxArrayInt m_tooltipIcon;
+	wxArrayString m_tooltipTitle;
+	wxArrayString m_tooltipText;
+
     DECLARE_EVENT_TABLE()
 };
 

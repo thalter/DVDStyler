@@ -17,7 +17,6 @@
 #include <wx/grid.h>
 #include <wx/spinctrl.h>
 #include <wx/statline.h>
-#include <wx/statbmp.h>
 #include <wx/bmpcbox.h>
 #include <wx/tglbtn.h>
 #include <wx/tooltip.h>
@@ -873,7 +872,7 @@ int wxPropDlg::AddIcon(wxSizer* sizer, const wxString& title, const wxString& to
 	wxStaticBitmap* icon = new wxStaticBitmap(propWindow, wxID_ANY, wxArtProvider::GetBitmap(artId, wxART_BUTTON));
 	icon->SetName(wxString::Format(_T("%d"), m_tooltipTitle.GetCount() - 1));
 	sizer->Add(icon, 0, wxALIGN_CENTER_VERTICAL);
-	m_icons.Add(icon);
+	m_icons.push_back(icon);
 	icon->Connect(wxEVT_ENTER_WINDOW, wxMouseEventHandler(wxPropDlg::OnShowTooltip), NULL, this);
 	return m_tooltipTitle.GetCount() - 1;
 }
@@ -884,7 +883,7 @@ void wxPropDlg::UpdateIcon(int index, const wxString& title, const wxString& too
 	if (tooltip.length())
 		m_tooltipText[index] = tooltip;
 	m_tooltipIcon[index] = artId == wxART_WARNING ? wxICON_WARNING : wxICON_INFORMATION;
-	((wxStaticBitmap*) m_icons[index])->SetBitmap(wxArtProvider::GetBitmap(artId, wxART_BUTTON));
+	m_icons[index]->SetBitmap(wxArtProvider::GetBitmap(artId, wxART_BUTTON));
 }
 
 void wxPropDlg::OnShowTooltip(wxMouseEvent& event) {
