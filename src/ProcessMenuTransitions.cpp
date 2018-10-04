@@ -11,6 +11,7 @@
 #include "mediaenc_ffmpeg.h"
 #include "mediatrc_ffmpeg.h"
 #include "DVD.h"
+#include "Menu.h"
 #include "Config.h"
 #include <wxSVG/SVGDocument.h>
 #include <wxSVG/SVGImageElement.h>

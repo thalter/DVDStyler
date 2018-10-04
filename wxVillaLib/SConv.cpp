@@ -50,5 +50,5 @@ wxFont SConv::ToFont(wxString value)
 	  return wxFont();
 	value.Remove(0, v.length()+1);
   }
-  return wxFont(params[0],params[1],params[2],params[3],params[4], value);
+  return wxFont(params[0], (wxFontFamily)params[1], (wxFontStyle)params[2], (wxFontWeight)params[3], params[4], value);
 }

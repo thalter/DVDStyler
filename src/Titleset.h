@@ -1,9 +1,7 @@
 /////////////////////////////////////////////////////////////////////////////
 // Name:        Titleset.h
-// Purpose:     The class to store a DVD Titleset
 // Author:      Alex Thuering
 // Created:	    29.01.2003
-// RCS-ID:      $Id: Titleset.h,v 1.8 2016/12/11 10:06:09 ntalex Exp $
 // Copyright:   (c) Alex Thuering
 // Licence:     GPL
 /////////////////////////////////////////////////////////////////////////////
@@ -11,6 +9,7 @@
 #ifndef TITLESET_H
 #define TITLESET_H
 
+#include "SubStream.h"
 #include "Pgc.h"
 
 /** Video parameters of titleset */
@@ -45,45 +44,6 @@ private:
 	wxString m_resolution;
 	wxString m_caption;
 	WidescreenType m_widescreen;
-};
-
-enum SubStreamContent {
-	sscNORMAL = 0, sscLARGE, sscCHILDREN, sscNORMAL_CC, sscLARGE_CC, sscCHILDREN_CC, sscFORCED, sscDIRECTOR,
-	sscLARGE_DIRECTOR, sscCHILDREN_DIRECTOR
-};
-
-/**
- * Stores information about subpicture stream
- */
-class SubStream {
-public:
-	/** Default constructor */
-	SubStream(): m_mode(ssmNORMAL), m_content(sscNORMAL) {}
-	/** Constructor */
-	SubStream(wxString id, SubStreamMode mode): m_id(id), m_mode(mode), m_content(sscNORMAL) {}
-	
-	/** Sets id */
-	void SetId(wxString id) { m_id = id; }
-	/** Returns id */
-	wxString GetId() { return m_id; }
-	
-	/** Sets mode */
-	void SetMode(SubStreamMode mode) { m_mode = mode; }
-	/** Returns mode */
-	SubStreamMode GetMode() { return m_mode; }
-	
-	/** Sets content type */
-	void SetContent(SubStreamContent content) { m_content = content; }
-	/** Returns content type */
-	SubStreamContent GetContent() { return m_content; }
-	
-	wxSvgXmlNode* GetXML(DVDFileType type);
-	bool PutXML(wxSvgXmlNode* node);
-		
-private:
-	wxString m_id;
-	SubStreamMode m_mode;
-	SubStreamContent m_content;
 };
 
 /**
@@ -163,6 +123,9 @@ public:
 	bool PutXML(wxSvgXmlNode* node, DVD* dvd, int tsi, wxProgressDialog* progressDlg);
 };
 
+/**
+ * Stores information about DVD titleset
+ */
 class Titleset {
 public:
 	Titleset() { WX_CLEAR_ARRAY(m_menus); WX_CLEAR_ARRAY(m_titles); }

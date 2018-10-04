@@ -35,20 +35,6 @@ extern "C" {
 #define AUDIO_BUF_SIZE 524288
 #define VIDEO_BUF_SIZE 1835008
 
-#if LIBAVCODEC_VERSION_INT < AV_VERSION_INT(54, 25, 0)
-#define AVCodecID CodecID
-#define AV_CODEC_ID_NONE CODEC_ID_NONE
-#define AV_CODEC_ID_MPEG2VIDEO CODEC_ID_MPEG2VIDEO
-#define AV_CODEC_ID_MP2 CODEC_ID_MP2
-#define AV_CODEC_ID_AC3 CODEC_ID_AC3
-#endif
-
-#if LIBAVCODEC_VERSION_INT < AV_VERSION_INT(55, 28, 1)
-#define av_frame_alloc avcodec_alloc_frame
-#define av_frame_free avcodec_free_frame
-#endif
-
-
 wxFfmpegMediaEncoder::wxFfmpegMediaEncoder(int threadCount) {
 	m_threadCount = threadCount;
 	m_gopSize = -1;
@@ -74,10 +60,6 @@ wxString wxFfmpegMediaEncoder::GetBackendVersion() {
 			LIBAVCODEC_VERSION_INT >> 16, LIBAVCODEC_VERSION_INT >> 8 & 0xFF, LIBAVCODEC_VERSION_INT & 0xFF,
 			LIBAVUTIL_VERSION_INT >> 16, LIBAVUTIL_VERSION_INT >> 8 & 0xFF, LIBAVUTIL_VERSION_INT & 0xFF);
 }
-
-#if LIBAVFORMAT_VERSION_INT < AV_VERSION_INT(52, 45, 0)
-#define av_guess_format guess_format
-#endif
 
 void print_error(const char *filename, int err) {
 	char errbuf[128];
@@ -223,7 +205,7 @@ bool wxFfmpegMediaEncoder::addAudioStream(int codecId) {
 	c->time_base = (AVRational){ 1, c->sample_rate };
 	// some formats want stream headers to be separate
 	if(m_outputCtx->oformat->flags & AVFMT_GLOBALHEADER)
-	    c->flags |= CODEC_FLAG_GLOBAL_HEADER;
+	    c->flags |= AV_CODEC_FLAG_GLOBAL_HEADER;
 	
 	return true;
 }
@@ -453,7 +435,6 @@ bool wxFfmpegMediaEncoder::writeVideoFrame() {
 	
 	// encode the image
 	m_picture->pts = m_nextVideoPts++;
-#if LIBAVFORMAT_VERSION_INT >= AV_VERSION_INT(54, 0, 0)
 	AVPacket pkt;
 	av_init_packet(&pkt);
 	pkt.data = m_videoOutbuf;
@@ -481,31 +462,6 @@ bool wxFfmpegMediaEncoder::writeVideoFrame() {
 			return false;
 		}
 	}
-#else
-	int out_size = avcodec_encode_video(c, m_videoOutbuf, VIDEO_BUF_SIZE, m_picture);
-	if (out_size < 0) {
-		wxLogError(wxT("Video encoding failed"));
-		return false;
-	}
-	// if zero size, it means the image was buffered
-	if (out_size == 0)
-		return true;
-	AVPacket pkt;
-	av_init_packet(&pkt);
-	
-	pkt.pts = av_rescale_q(c->coded_frame->pts, c->time_base, m_videoStm->time_base);
-	if (c->coded_frame->key_frame)
-		pkt.flags |= AV_PKT_FLAG_KEY;
-	pkt.stream_index = m_videoStm->index;
-	pkt.data = m_videoOutbuf;
-	pkt.size = out_size;
-	
-	// write the compressed frame in the media file
-	if (av_interleaved_write_frame(m_outputCtx, &pkt) != 0) {
-		wxLogError(wxT("Error while writing video frame"));
-		return false;
-	}
-#endif
 	av_packet_unref(&pkt);
 	return true;
 }
