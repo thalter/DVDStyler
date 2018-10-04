@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: DVDStyler 3.0.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-23 10:31+0200\n"
-"PO-Revision-Date: 2018-09-26 22:51+0900\n"
+"PO-Revision-Date: 2018-10-04 19:47+0900\n"
 "Last-Translator: ecodrv <ecodrv at yahoo.co.jp>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -143,15 +143,15 @@ msgstr "OK"
 
 #: src/AnimationDlg.cpp:29
 msgid "width"
-msgstr ""
+msgstr "幅"
 
 #: src/AnimationDlg.cpp:29
 msgid "height"
-msgstr ""
+msgstr "高さ"
 
 #: src/AnimationDlg.cpp:29
 msgid "opacity"
-msgstr ""
+msgstr "不透明度"
 
 #: src/AnimationDlg.cpp:45
 msgid "font size"
@@ -349,7 +349,7 @@ msgstr "MPC-HC プレイヤー"
 
 #: src/BurnDlg.cpp:345
 msgid "Custom video player"
-msgstr "その他の DVD プレイヤー"
+msgstr "他の DVD プレイヤー"
 
 #: src/BurnDlg.cpp:396
 msgid "N/A"
@@ -413,7 +413,7 @@ msgstr "ディレクトリ '%s' を作成できません。"
 
 #: src/BurnDlg.cpp:615
 msgid "Please select a video player"
-msgstr "DVD プレイヤーを選択して下さい"
+msgstr "インストール済の DVD プレイヤーを選択して下さい"
 
 #: src/BurnDlg.cpp:620
 msgid "Please select path to video player"
@@ -1419,7 +1419,7 @@ msgid "&Grid"
 msgstr "グリッド(&G)"
 
 #: src/MenuEditor.cpp:498 src/ProcessMenuTransitions.cpp:177
-#, fuzzy, c-format
+#, c-format
 msgid "VMGM menu %d"
 msgstr "メニュー %d"
 
@@ -1861,7 +1861,7 @@ msgid "Formatting DVD-RW"
 msgstr "DVD-RWメディアをフォーマット中"
 
 #: src/ProcessFormatDvd.cpp:43
-#, fuzzy, c-format
+#, c-format
 msgid "Please insert a rewritable DVD into the device %s."
 msgstr "消去可能な DVD を、デバイス %s に挿入してください。"
 
@@ -1943,7 +1943,7 @@ msgid "Error creation of transition"
 msgstr "Error creation of transition"
 
 #: src/ProcessMenuTransitions.cpp:178
-#, fuzzy, c-format
+#, c-format
 msgid "Generate transition from %s"
 msgstr "既定の音声形式:"
 
@@ -1960,7 +1960,6 @@ msgstr ""
 "好きな DVD プレーヤーで以下のディレクトリを開いてください: "
 
 #: src/ProcessPreview.cpp:49
-#, fuzzy
 msgid ""
 "VLC player is not found. Please install VLC player (http://www.videolan.org) in Applications directory or "
 "open the following directory with your favorite DVD player: "
