@@ -11,9 +11,10 @@
 #ifndef BUTTON_PROP_DLG_H
 #define BUTTON_PROP_DLG_H
 
-#include <wx/wx.h>
-#include <wxVillaLib/PropDlg.h>
 #include "DVD.h"
+#include "MenuObject.h"
+#include <wxVillaLib/PropDlg.h>
+#include <wxSVG/SVGPreserveAspectRatio.h>
 
 class MenuObjectPropDlg: public wxPropDlg {
 public:
@@ -53,6 +54,11 @@ private:
 	void UpdateChapters();
 	void OnChangeTarget(wxCommandEvent& evt);
 	void OnChangeChapter(wxCommandEvent& evt);
+	
+	int m_audioIcon;
+	void OnChangeAudio(wxCommandEvent& evt);
+	int m_subtitleIcon;
+	void OnChangeSubtitle(wxCommandEvent& evt);
 	
 	bool m_displayVideoFrame; // shows if video frame must be automatically selected if it is available
 	long m_defaultPos;
