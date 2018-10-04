@@ -144,6 +144,18 @@ msgstr "Лицензия"
 msgid "OK"
 msgstr "OK"
 
+#: src/AnimationDlg.cpp:29
+msgid "width"
+msgstr "ширина"
+
+#: src/AnimationDlg.cpp:29
+msgid "height"
+msgstr "высота"
+
+#: src/AnimationDlg.cpp:29
+msgid "opacity"
+msgstr "непрозрачность"
+
 #: src/AnimationDlg.cpp:45
 msgid "font size"
 msgstr "размер шрифта"

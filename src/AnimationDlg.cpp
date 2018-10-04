@@ -26,6 +26,7 @@ public:
 			m_animations(animations) {
 		// parameters
 		const wxString attributes[] = { wxT("x"), wxT("y"), wxT("width"), wxT("height"), wxT("opacity") };
+		const wxString labels[] = { wxT("x"), wxT("y"), _("width"), _("height"), _("opacity") };
 		for (unsigned int i = 0; i < WXSIZEOF(attributes); i++) {
 			wxString label = wxGetTranslation(attributes[i]);
 			if (attributes[i] == wxT("opacity")) {
