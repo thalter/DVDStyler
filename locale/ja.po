@@ -1,16 +1,17 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: DVDStyler 2.4\n"
+"Project-Id-Version: DVDStyler 3.0.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-23 10:31+0200\n"
-"PO-Revision-Date: 2013-01-26 14:47+0900\n"
-"Last-Translator: OKANO Takayoshi <kano at na.rim.or.jp>\n"
+"PO-Revision-Date: 2018-09-26 22:51+0900\n"
+"Last-Translator: ecodrv <ecodrv at yahoo.co.jp>\n"
 "Language-Team: \n"
-"Language: \n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 2.0.8\n"
 "X-Poedit-SearchPath-0: src\n"
 "X-Poedit-SearchPath-1: wxVillaLib\n"
 "X-Poedit-SearchPath-2: buttons\n"
@@ -140,31 +141,41 @@ msgstr "ライセンス"
 msgid "OK"
 msgstr "OK"
 
+#: src/AnimationDlg.cpp:29
+msgid "width"
+msgstr ""
+
+#: src/AnimationDlg.cpp:29
+msgid "height"
+msgstr ""
+
+#: src/AnimationDlg.cpp:29
+msgid "opacity"
+msgstr ""
+
 #: src/AnimationDlg.cpp:45
 msgid "font size"
-msgstr ""
+msgstr "フォントの大きさ"
 
 #: src/AnimationDlg.cpp:156
 msgid "Attribute"
-msgstr ""
+msgstr "属性"
 
 #: src/AnimationDlg.cpp:156
 msgid "Values (separated by semicolon)"
-msgstr ""
+msgstr "値 (セミコロンで区切る)"
 
 #: src/AnimationDlg.cpp:156
 msgid "Begin"
-msgstr ""
+msgstr "開始 (秒)"
 
 #: src/AnimationDlg.cpp:156
-#, fuzzy
 msgid "Duration (sec)"
-msgstr "合計時間:"
+msgstr "再生時間 (秒)"
 
 #: src/AnimationDlg.cpp:207
-#, fuzzy
 msgid "Animations"
-msgstr "アクション:"
+msgstr "アニメーション"
 
 #: src/AudioPropDlg.cpp:79
 msgid "Audio properties"
@@ -177,7 +188,7 @@ msgstr "ファイル名:"
 #: src/AudioPropDlg.cpp:87 src/TitlePropDlg.cpp:196 src/VideoFrameDlg.cpp:77 src/VideoPropDlg.cpp:111
 #: src/VobListBox.cpp:109
 msgid "Duration:"
-msgstr "合計時間:"
+msgstr "再生時間:"
 
 #: src/AudioPropDlg.cpp:91 src/VideoPropDlg.cpp:115
 msgid "Source Format:"
@@ -209,25 +220,23 @@ msgstr "フィルター:"
 
 #: src/AudioPropDlg.cpp:125
 msgid "Volume adjustment"
-msgstr ""
+msgstr "音量調整"
 
 #: src/AudioPropDlg.cpp:128 src/SettingsDlg.cpp:202 src/SettingsDlg.cpp:300
-#, fuzzy
 msgid "No"
-msgstr "なし"
+msgstr "いいえ"
 
 #: src/AudioPropDlg.cpp:130
 msgid "Change (%)"
-msgstr ""
+msgstr "変更 (%)"
 
 #: src/AudioPropDlg.cpp:135 src/SettingsDlg.cpp:120
-#, fuzzy
 msgid "Normalize"
-msgstr "通常時"
+msgstr "ノーマライズ"
 
 #: src/AudioPropDlg.cpp:137
 msgid "Change (dB)"
-msgstr ""
+msgstr "変更 (dB)"
 
 #: src/AudioPropDlg.cpp:206 src/Stream.cpp:102
 msgid "stereo"
@@ -235,7 +244,7 @@ msgstr "ステレオ"
 
 #: src/AudioPropDlg.cpp:244 src/AudioPropDlg.cpp:426
 msgid "Track gain:"
-msgstr ""
+msgstr "トラックゲイン:"
 
 #: src/AudioPropDlg.cpp:348
 #, c-format
@@ -249,7 +258,7 @@ msgstr "音量の値 '%s' が正しくありません"
 
 #: src/AudioPropDlg.cpp:389
 msgid "Analysis of audio"
-msgstr ""
+msgstr "音声解析"
 
 #: src/AudioPropDlg.cpp:389 src/MainWin.cpp:825 src/SysUtils.cpp:303 src/VobListBox.cpp:577
 msgid "Please wait..."
@@ -269,8 +278,8 @@ msgstr "書込み"
 msgid "Temp directory:"
 msgstr "一時保存用ディレクトリ:"
 
-#: src/BurnDlg.cpp:114 src/BurnDlg.cpp:138 src/BurnDlg.cpp:160 src/BurnDlg.cpp:186
-#: src/SubtitlePropDlg.cpp:148 src/SubtitlePropDlg.cpp:161 src/SubtitlePropDlg.cpp:179
+#: src/BurnDlg.cpp:114 src/BurnDlg.cpp:138 src/BurnDlg.cpp:160 src/BurnDlg.cpp:186 src/SubtitlePropDlg.cpp:148
+#: src/SubtitlePropDlg.cpp:161 src/SubtitlePropDlg.cpp:179
 msgid "..."
 msgstr "..."
 
@@ -288,7 +297,7 @@ msgstr "プレビュー"
 
 #: src/BurnDlg.cpp:146
 msgid "Download"
-msgstr ""
+msgstr "ダウンロード"
 
 #: src/BurnDlg.cpp:150
 msgid "just generate"
@@ -328,19 +337,19 @@ msgstr "開始"
 
 #: src/BurnDlg.cpp:229 src/SubtitlePropDlg.cpp:244 src/VideoFrameDlg.cpp:75 wxVillaLib/PropDlg.cpp:208
 msgid "Reset"
-msgstr "デフォルト"
+msgstr "リセット"
 
 #: src/BurnDlg.cpp:341
 msgid "VLC media player"
-msgstr ""
+msgstr "VLC media player"
 
 #: src/BurnDlg.cpp:343
 msgid "MPC-HC player"
-msgstr ""
+msgstr "MPC-HC プレイヤー"
 
 #: src/BurnDlg.cpp:345
 msgid "Custom video player"
-msgstr ""
+msgstr "その他の DVD プレイヤー"
 
 #: src/BurnDlg.cpp:396
 msgid "N/A"
@@ -368,7 +377,6 @@ msgid "Choose a file"
 msgstr "ファイル選択"
 
 #: src/BurnDlg.cpp:537
-#, fuzzy
 msgid "Programs"
 msgstr "プログラム"
 
@@ -383,18 +391,19 @@ msgid "Choose a file to save iso image"
 msgstr "ISO イメージファイルを保存するファイル名を選択"
 
 #: src/BurnDlg.cpp:588
-#, fuzzy
 msgid "Please enter output directory"
-msgstr "ボリューム名を入力してください。"
+msgstr "保存先ディレクトリを指定して下さい"
 
 #: src/BurnDlg.cpp:594
 msgid "Output directory contains files. Please choose another output directory."
 msgstr ""
+"保存先ディレクトリに無関係なファイル等が存在します。\n"
+"別のディレクトリを指定して下さい。"
 
 #: src/BurnDlg.cpp:600
-#, fuzzy, c-format
+#, c-format
 msgid "Directory '%s' already exist. Do you want to overwrite it?"
-msgstr "'%s' というファイルは既に存在します。上書きしてよいですか?"
+msgstr "ディレクトリ %s は既に存在します。上書きしますか？"
 
 #: src/BurnDlg.cpp:608 src/BurnDlg.cpp:660 src/ProcessCleanTemp.cpp:43 src/ProcessCleanTemp.cpp:47
 #: src/ProcessCleanTemp.cpp:51
@@ -403,13 +412,12 @@ msgid "Can't create directory '%s'"
 msgstr "ディレクトリ '%s' を作成できません。"
 
 #: src/BurnDlg.cpp:615
-#, fuzzy
 msgid "Please select a video player"
-msgstr "デバイス名を入力してください"
+msgstr "DVD プレイヤーを選択して下さい"
 
 #: src/BurnDlg.cpp:620
 msgid "Please select path to video player"
-msgstr ""
+msgstr "DVD プレイヤーのパスを指定して下さい"
 
 #: src/BurnDlg.cpp:627
 msgid "Please enter file name to save ISO"
@@ -447,13 +455,11 @@ msgstr "ファイル '%s' を削除できません"
 #, c-format
 msgid "There is %d file (%0.1f MB) in the transcoding cache."
 msgid_plural "There are %d files (%0.1f MB) in the transcoding cache."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "トランスコード用キャッシュに %d 個のファイル (%0.1f MB) があります。"
 
 #: src/Cache.cpp:375
-#, fuzzy
 msgid "Do you want to clear the cache?"
-msgstr "本当に %s を削除しますか?"
+msgstr "キャッシュを消去しますか？"
 
 #: src/Cache.cpp:376 src/MainWin.cpp:962
 msgid "Confirm"
@@ -485,9 +491,8 @@ msgid "Program"
 msgstr "プログラム"
 
 #: src/ChaptersDlg.cpp:149
-#, fuzzy
 msgid "Regular cell"
-msgstr "通常"
+msgstr "通常のセル"
 
 #: src/ChaptersDlg.cpp:152 src/VideoPropDlg.cpp:234
 msgid "End:"
@@ -517,9 +522,8 @@ msgid "Commands:"
 msgstr "コマンド:"
 
 #: src/ChaptersDlg.cpp:188
-#, fuzzy
 msgid "Add cell at begin if it doesn't exist"
-msgstr "メニュー/VMメニューが存在しない場合は、空のメニューを作成する"
+msgstr "セルが先頭に無ければ追加する"
 
 #: src/ChaptersDlg.cpp:445 src/ChaptersDlg.cpp:450
 #, c-format
@@ -570,7 +574,7 @@ msgstr "タイトルセットの読み込みができません。"
 
 #: src/DVD.cpp:912 src/DVD.cpp:931 src/DVD.cpp:944
 msgid "Omit"
-msgstr ""
+msgstr "取り除く"
 
 #: src/DVD.cpp:914 src/DVD.cpp:933 src/DVD.cpp:946 src/ProgressDlg.cpp:227
 msgid "Copy"
@@ -590,7 +594,7 @@ msgstr "PCM 48 kHz"
 
 #: src/DVD.cpp:961
 msgid "CD (700 MB)"
-msgstr ""
+msgstr "CD (700 MB)"
 
 #: src/DVD.cpp:962
 msgid "DVD-1 (1.4 GB)"
@@ -646,32 +650,31 @@ msgstr "現在のメニューの冒頭へジャンプ"
 #: src/DVDAction.cpp:63
 #, c-format
 msgid "from titleset %d"
-msgstr "タイトルセット %d から"
+msgstr "in titleset %d"
 
 #: src/DVDAction.cpp:69
-#, fuzzy
 msgid "jump to title menu"
-msgstr "タイトル VM メニューへジャンプ"
+msgstr "jump to 'title' VMGM menu"
 
 #: src/DVDAction.cpp:69
 msgid "jump to root menu"
-msgstr "ルートメニューへジャンプ"
+msgstr "jump to 'root' titleset menu"
 
 #: src/DVDAction.cpp:69
 msgid "jump to subtitle menu"
-msgstr "字幕メニューへジャンプ"
+msgstr "jump to 'subtitle' titleset menu"
 
 #: src/DVDAction.cpp:70
 msgid "jump to audio menu"
-msgstr "音声メニューへジャンプ"
+msgstr "jump to 'audio' titleset menu"
 
 #: src/DVDAction.cpp:70
 msgid "jump to angle menu"
-msgstr "アングルメニューへジャンプ"
+msgstr "jump to 'angle' titleset menu"
 
 #: src/DVDAction.cpp:70
 msgid "jump to chapter menu"
-msgstr "チャプターメニューへジャンプ"
+msgstr "jump to 'chapter' titleset menu"
 
 #: src/DVDAction.cpp:75 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:626 src/MenuObjectPropDlg.cpp:646
 msgid "menu"
@@ -679,21 +682,20 @@ msgstr "メニュー"
 
 #: src/DVDAction.cpp:77 src/DVDAction.cpp:94
 msgid "jump to menu"
-msgstr "メニューへジャンプ"
+msgstr "jump to menu"
 
 #: src/DVDAction.cpp:92
-#, fuzzy
 msgid "jump to VMGM menu"
-msgstr "メニューへジャンプ"
+msgstr "jump to VMGM menu"
 
 #: src/DVDAction.cpp:100
 #, c-format
 msgid "jump to title %d chapter %d"
-msgstr "タイトル %d チャプター %d へジャンプ"
+msgstr "jump to title %d chapter %d"
 
 #: src/DVDAction.cpp:105
 msgid "jump to title"
-msgstr "タイトルへジャンプ"
+msgstr "jump to title"
 
 #: src/DVDAction.cpp:183 src/MenuObjectPropDlg.cpp:418 src/MenuObjectPropDlg.cpp:639
 #: src/MenuObjectPropDlg.cpp:648 src/MenuObjectPropDlg.cpp:658 src/MenuObjectPropDlg.cpp:667
@@ -707,9 +709,8 @@ msgid "title"
 msgstr "タイトル"
 
 #: src/DVDAction.cpp:186 src/MenuObjectPropDlg.cpp:615 src/MenuPropDlg.cpp:55
-#, fuzzy
 msgid "VMGM menu"
-msgstr "メニュー"
+msgstr "VMGMメニュー"
 
 #: src/DVDAction.cpp:196
 #, c-format
@@ -717,9 +718,8 @@ msgid "cannot jump to titleset %d, only %d exist"
 msgstr "タイトルセット %d へジャンプできません (タイトルセットは %d しかありません)"
 
 #: src/DVDAction.cpp:204
-#, fuzzy
 msgid "cannot jump to VMGM menu; none exist"
-msgstr "メニューがないのでジャンプできません"
+msgstr "VMGMメニューがないのでジャンプできません"
 
 #: src/DVDAction.cpp:206 src/DVDAction.cpp:441
 msgid "cannot jump to menu; none exist"
@@ -755,9 +755,9 @@ msgid "cannot find %s"
 msgstr "%s が見つかりません"
 
 #: src/DVDAction.cpp:220
-#, fuzzy, c-format
+#, c-format
 msgid "cannot jump to VMGM menu %d, only %d exist"
-msgstr "メニュー %d へジャンプできません (メニューは %d しかありません)"
+msgstr "VMGMメニュー %d へジャンプできません (%d 個しかありません)"
 
 #: src/DVDAction.cpp:222
 #, c-format
@@ -785,11 +785,10 @@ msgstr ""
 "メニューだけです)"
 
 #: src/DVDAction.cpp:256
-#, fuzzy
 msgid "cannot jump from regular menu to a title in another titleset, use VMGM menu instead"
 msgstr ""
-"通常のメニューから他のタイトルセット内のタイトルへはジャンプできません (通常のメニューではなく VM メニューを"
-"使ってください)"
+"タイトルセットメニューから他のタイトルセット内のタイトルへはジャンプできません。代わりにVMGMメニューを使用し"
+"て下さい"
 
 #: src/DVDAction.cpp:258
 msgid "cannot jump to a title in another titleset"
@@ -816,9 +815,9 @@ msgid "cell"
 msgstr "セル"
 
 #: src/DVDAction.cpp:288 src/DVDAction.cpp:404
-#, fuzzy, c-format
+#, c-format
 msgid "jumping from VMGM menu to %s is not allowed"
-msgstr "vmMenu から %s へジャンプすることはできません"
+msgstr "VMGMメニューから %s へジャンプすることはできません"
 
 #: src/DVDAction.cpp:320
 #, c-format
@@ -914,31 +913,28 @@ msgid "Create jumppads"
 msgstr "jumppad を作成"
 
 #: src/DVDPropDlg.cpp:32
-#, fuzzy
 msgid "Create empty VMGM/titleset menus if it doesn't exist"
-msgstr "メニュー/VMメニューが存在しない場合は、空のメニューを作成する"
+msgstr "メニューが存在しない場合は、空のメニューを作成する"
 
 #: src/dvdstyler.cpp:191
 msgid "automatically starts the generation and burning"
 msgstr "生成と焼き付けを自動で開始する"
 
 #: src/dvdstyler.cpp:192
-#, fuzzy
 msgid "temporary directory"
-msgstr "一時保存用ディレクトリ内を削除中"
+msgstr "一時保存用ディレクトリ"
 
 #: src/dvdstyler.cpp:193
-#, fuzzy
 msgid "output directory"
-msgstr "最後に使ったディレクトリ"
+msgstr "保存先ディレクトリ"
 
 #: src/dvdstyler.cpp:194
 msgid "output ISO file name"
-msgstr ""
+msgstr "保存先 ISO ファイル名"
 
 #: src/dvdstyler.cpp:195
 msgid "DVD device to burn"
-msgstr ""
+msgstr "書込み DVD デバイス"
 
 #: src/dvdstyler.cpp:196
 msgid "write log messages to standard error"
@@ -1013,13 +1009,12 @@ msgid "&Menu"
 msgstr "メニュー(&M)"
 
 #: src/MainWin.cpp:185 src/TitlesetManager.cpp:150 src/TitlesetManager.cpp:171
-#, fuzzy
 msgid "&Chapter menu"
-msgstr "チャプターメニュー"
+msgstr "チャプターメニュー(&C)"
 
 #: src/MainWin.cpp:186
 msgid "&VMGM menu"
-msgstr ""
+msgstr "VMGMメニュー(&V)"
 
 #: src/MainWin.cpp:187 src/TitlesetManager.cpp:152 src/TitlesetManager.cpp:173
 msgid "&Titleset"
@@ -1067,9 +1062,8 @@ msgid "&Assign to background"
 msgstr "背景に設定する(&A)"
 
 #: src/MainWin.cpp:263
-#, fuzzy
 msgid "&Play"
-msgstr "すべて再生"
+msgstr "再生(&P)"
 
 #: src/MainWin.cpp:264 src/MenuEditor.cpp:374 src/TitlesetManager.cpp:184 wxVillaLib/PropDlg.cpp:649
 msgid "&Delete"
@@ -1143,7 +1137,7 @@ msgstr "%s (%.1f GB)"
 #: src/MainWin.cpp:568
 #, c-format
 msgid "%d slides"
-msgstr ""
+msgstr "画像 %d 枚"
 
 #: src/MainWin.cpp:580 src/SettingsDlg.cpp:125
 msgid "min"
@@ -1155,9 +1149,8 @@ msgid "Are you sure you want to delete '%s' from the file system?"
 msgstr "本当に '%s' をファイルシステムから削除しますか?"
 
 #: src/MainWin.cpp:755
-#, fuzzy
 msgid "Select chapter"
-msgstr "タイトル選択"
+msgstr "チャプター選択"
 
 #: src/MainWin.cpp:782
 msgid "Play all"
@@ -1255,14 +1248,13 @@ msgid "Choose DVD device or directory"
 msgstr "DVD デバイスまたはディレクトリの選択"
 
 #: src/MainWin.cpp:1249
-#, fuzzy
 msgid "Choose a titleset to add:"
-msgstr "ISO イメージファイルを保存するファイル名を選択"
+msgstr "追加先のタイトルセットを選択して下さい:"
 
 #: src/Menu.cpp:816
-#, fuzzy, c-format
+#, c-format
 msgid "%s and %s are overlapping"
-msgstr "ボタンが重なっています"
+msgstr "%s と %s が重なっています"
 
 #: src/MenuActionsDlg.cpp:103
 msgid "ID"
@@ -1314,9 +1306,9 @@ msgid "Cells:"
 msgstr "セル:"
 
 #: src/MenuCellsDlg.cpp:238 src/MenuCellsDlg.cpp:242
-#, fuzzy, c-format
+#, c-format
 msgid "The cells %d and %d are overlapping"
-msgstr "ボタンが重なっています"
+msgstr "セル %d と %d が重なっています"
 
 #: src/MenuEditor.cpp:93 src/MenuEditor.cpp:417
 msgid ": unknown format"
@@ -1339,42 +1331,36 @@ msgid "&Send to Back"
 msgstr "最背面に(&S)"
 
 #: src/MenuEditor.cpp:315
-#, fuzzy
 msgid "To &Left"
-msgstr "左へ(&L)"
+msgstr "複数選択で、左端を揃える(&L)"
 
 #: src/MenuEditor.cpp:316
-#, fuzzy
 msgid "To &Right"
-msgstr "右へ(&R)"
+msgstr "複数選択で、右端を揃える(&R)"
 
 #: src/MenuEditor.cpp:317
 msgid "To &Top"
-msgstr ""
+msgstr "複数選択で、上端を揃える(&T)"
 
 #: src/MenuEditor.cpp:318
 msgid "To &Bottom"
-msgstr ""
+msgstr "複数選択で、下端を揃える(&B)"
 
 #: src/MenuEditor.cpp:319
-#, fuzzy
 msgid "To Center &horizontally"
-msgstr "左右中央(&H)"
+msgstr "複数選択で、左右中央を揃える(&H)"
 
 #: src/MenuEditor.cpp:320
-#, fuzzy
 msgid "To Center &vertically"
-msgstr "上下中央(&V)"
+msgstr "複数選択で、上下中央を揃える(&V)"
 
 #: src/MenuEditor.cpp:321
-#, fuzzy
 msgid "To &Center of Menu horizontally"
-msgstr "左右中央(&H)"
+msgstr "メニューの左右中央に配置(&C)"
 
 #: src/MenuEditor.cpp:322
-#, fuzzy
 msgid "To Center of &Menu vertically"
-msgstr "上下中央(&V)"
+msgstr "メニューの上下中央に配置(&M)"
 
 #: src/MenuEditor.cpp:340
 msgid "&Show Safe TV area"
@@ -1496,14 +1482,12 @@ msgid "Play all titles"
 msgstr "全タイトルを再生"
 
 #: src/MenuObjectPropDlg.cpp:141
-#, fuzzy
 msgid "single titleset"
-msgstr "タイトルセット"
+msgstr "１個のタイトルセット"
 
 #: src/MenuObjectPropDlg.cpp:142
-#, fuzzy
 msgid "all titlesets"
-msgstr "タイトルセット"
+msgstr "全てのタイトルセット"
 
 #: src/MenuObjectPropDlg.cpp:169 src/MenuObjectPropDlg.cpp:178
 msgid "last selected"
@@ -1527,7 +1511,7 @@ msgstr "字幕"
 
 #: src/MenuObjectPropDlg.cpp:190
 msgid "Auto execute command by select"
-msgstr ""
+msgstr "選択されたら自動実行する"
 
 #: src/MenuObjectPropDlg.cpp:193
 msgid "Navigation"
@@ -1561,8 +1545,7 @@ msgstr "実行時"
 msgid "Font..."
 msgstr "フォント設定..."
 
-#: src/MenuObjectPropDlg.cpp:384 src/MenuObjectPropDlg.cpp:543 src/MenuPropDlg.cpp:81
-#: src/VideoPropDlg.cpp:137
+#: src/MenuObjectPropDlg.cpp:384 src/MenuObjectPropDlg.cpp:543 src/MenuPropDlg.cpp:81 src/VideoPropDlg.cpp:137
 msgid "Keep Aspect Ratio"
 msgstr "横縦比を保持する"
 
@@ -1638,9 +1621,8 @@ msgid "Rotation"
 msgstr "回転"
 
 #: src/MenuObjectPropDlg.cpp:530
-#, fuzzy
 msgid "Angle:"
-msgstr "アングル"
+msgstr "角度:"
 
 #: src/MenuObjectPropDlg.cpp:536
 msgid "Size"
@@ -1655,9 +1637,8 @@ msgid "Height:"
 msgstr "高さ:"
 
 #: src/MenuObjectPropDlg.cpp:555
-#, fuzzy
 msgid "Animations..."
-msgstr "アクション:"
+msgstr "アニメーション..."
 
 #: src/MenuObjectPropDlg.cpp:606
 msgid "start of current menu"
@@ -1690,14 +1671,12 @@ msgid "Format:"
 msgstr "フォーマット:"
 
 #: src/MenuPropDlg.cpp:132
-#, fuzzy
 msgid "Background:"
-msgstr "背景"
+msgstr "背景:"
 
 #: src/MenuPropDlg.cpp:133
-#, fuzzy
 msgid "Image and Video Files"
-msgstr "映像ファイル"
+msgstr "画像/映像ファイル"
 
 #: src/MenuPropDlg.cpp:148 src/VobListBox.cpp:145
 msgid "Audio:"
@@ -1705,11 +1684,11 @@ msgstr "音声:"
 
 #: src/MenuPropDlg.cpp:170
 msgid "Loop"
-msgstr ""
+msgstr "Loop (リピート)"
 
 #: src/MenuPropDlg.cpp:181
 msgid "Subpicture start/end:"
-msgstr ""
+msgstr "サブピクチャー 開始/終了:"
 
 #: src/MenuPropDlg.cpp:187
 msgid "Remember last selected button"
@@ -1717,7 +1696,7 @@ msgstr "最後に選んだボタンを記憶する"
 
 #: src/MenuPropDlg.cpp:206
 msgid "Entry"
-msgstr "項目"
+msgstr "エントリー"
 
 #: src/MenuPropDlg.cpp:209
 msgid "Root"
@@ -1744,18 +1723,16 @@ msgid "Post commands:"
 msgstr "ポスト・コマンド:"
 
 #: src/MenuPropDlg.cpp:236
-#, fuzzy
 msgid "Cells..."
-msgstr "セル:"
+msgstr "セル..."
 
 #: src/MenuPropDlg.cpp:237
-#, fuzzy
 msgid "Actions..."
-msgstr "アクション:"
+msgstr "アクション..."
 
 #: src/MenuPropDlg.cpp:271
 msgid "Subpicture end must be greater than start or empty"
-msgstr ""
+msgstr "サブピクチャーの終了欄は、開始欄より大きくするか、空欄にして下さい"
 
 #: src/MenuPropDlg.cpp:278 src/TitlePropDlg.cpp:320
 #, c-format
@@ -1769,7 +1746,7 @@ msgstr "ファイル %s は音声ファイルではありません。"
 
 #: src/MenuPropDlg.cpp:304
 msgid "Post commands will not be executed if pause is set to -1"
-msgstr ""
+msgstr "ポスト・コマンドを入力する時は、停止時間を 0 以上にして下さい"
 
 #: src/MessageDlg.cpp:76
 msgid "&Don't show this message again"
@@ -1838,9 +1815,9 @@ msgid "Burning"
 msgstr "書き込み中"
 
 #: src/ProcessBurn.cpp:67 src/ProcessBurn.cpp:85
-#, fuzzy, c-format
+#, c-format
 msgid "Please insert a blank or rewritable DVD into the device %s."
-msgstr "消去可能な DVD を、デバイス %s に挿入してください。"
+msgstr "空きの/書き換え可能な DVD をデバイス %s に挿入して下さい。"
 
 #: src/ProcessBurn.cpp:69 src/ProcessBurn.cpp:87 src/ProcessBurn.cpp:129 src/ProcessFormatDvd.cpp:45
 #: src/ProcessPreview.cpp:88 src/ProgressDlg.cpp:291
@@ -1857,9 +1834,9 @@ msgid "Cleaning temporary directory"
 msgstr "一時保存用ディレクトリ内を削除中"
 
 #: src/ProcessCleanTemp.cpp:74 src/ProcessCleanTemp.cpp:85
-#, fuzzy, c-format
+#, c-format
 msgid "Cannot remove directory '%s'"
-msgstr "ディレクトリ '%s' を作成できません。"
+msgstr "Cannot remove directory '%s'"
 
 #: src/ProcessDvdFilesystem.cpp:80
 msgid "Generating DVD"
@@ -1875,9 +1852,9 @@ msgid "Found transcoded file in cache for '%s'"
 msgstr "キャッシュ中に、'%s' のトランスコード済みファイルがありました"
 
 #: src/ProcessEncode.cpp:78
-#, fuzzy, c-format
+#, c-format
 msgid "Transcode video %u of %lu"
-msgstr "映像ファイルのトランスコード: "
+msgstr "映像のトランスコード (%u / %lu)"
 
 #: src/ProcessFormatDvd.cpp:33
 msgid "Formatting DVD-RW"
@@ -1962,9 +1939,8 @@ msgstr "ファイル '%s' の名前を '%s' に変更できません"
 
 #: src/ProcessMenuTransitions.cpp:103 src/ProcessMenuTransitions.cpp:160 src/ProcessMenuTransitions.cpp:241
 #: src/ProcessMenuTransitions.cpp:253
-#, fuzzy
 msgid "Error creation of transition"
-msgstr "スライドショー生成に失敗しました"
+msgstr "Error creation of transition"
 
 #: src/ProcessMenuTransitions.cpp:178
 #, fuzzy, c-format
@@ -1976,13 +1952,12 @@ msgid "Start preview"
 msgstr "プレビュー開始"
 
 #: src/ProcessPreview.cpp:42 src/ProcessPreview.cpp:58 src/ProcessPreview.cpp:79
-#, fuzzy
 msgid ""
 "Starting of selected DVD player is failed. Please open the following directory with your favorite DVD "
 "player: "
 msgstr ""
-"DVD プレーヤーを起動できません。'設定/内部/プレビューコマンド' で設定されている DVD プレーヤーのパス名を確認"
-"して修正するか、DVD プレーヤーで以下のディレクトリを開いてください: "
+"指定された DVD プレーヤーを起動できません。\n"
+"好きな DVD プレーヤーで以下のディレクトリを開いてください: "
 
 #: src/ProcessPreview.cpp:49
 #, fuzzy
@@ -2013,21 +1988,19 @@ msgstr "スライドショー生成に失敗しました"
 #: src/ProcessSlideshow.cpp:121
 #, c-format
 msgid "Converting slide %u image to video"
-msgstr "スライド画像 %u を動画に変換中"
+msgstr "スライドショーの画像 %u 枚目を映像に変換中"
 
 #: src/ProcessSlideshow.cpp:172
-#, fuzzy
 msgid "Audio file duration: "
-msgstr "音声の長さ: %f 秒"
+msgstr "音声ファイルの長さ: "
 
 #: src/ProcessSlideshow.cpp:178
-#, fuzzy
 msgid "Concat audio files"
-msgstr "音声ファイル"
+msgstr "音声ファイルを連結する"
 
 #: src/ProcessSlideshow.cpp:232
 msgid "Error loading transition definition"
-msgstr ""
+msgstr "Error loading transition definition"
 
 #: src/ProcessSubtitles.cpp:58
 #, c-format
@@ -2048,14 +2021,14 @@ msgid "Multiplexing video and audio streams"
 msgstr "音声と映像ストリームを多重化中"
 
 #: src/ProcessTranscode.cpp:244
-#, fuzzy, c-format
+#, c-format
 msgid "Analysis of audio track %d"
-msgstr "音声トラック %d を選択して、"
+msgstr "音声トラック %d の解析"
 
 #: src/ProcessTranscode.cpp:248 src/ProcessTranscode.cpp:262 wxVillaLib/ProgramProcess.cpp:84
 #, c-format
 msgid "Execution of '%s' failed."
-msgstr ""
+msgstr "Execution of '%s' failed."
 
 #: src/ProgressDlg.cpp:75
 msgid "Generate DVD"
@@ -2075,7 +2048,7 @@ msgstr "詳細ログを非表示"
 
 #: src/ProgressDlg.cpp:93
 msgid "Turn off PC when finished"
-msgstr ""
+msgstr "終了時に PC をシャットダウンする"
 
 #: src/ProgressDlg.cpp:97
 msgid "Minimize"
@@ -2090,9 +2063,8 @@ msgid "Show details"
 msgstr "詳細ログの表示"
 
 #: src/ProgressDlg.cpp:228 src/ProgressDlg.cpp:232
-#, fuzzy
 msgid "Encoding Mode"
-msgstr "フレームをエンコード中 (%d / %d)"
+msgstr "Encoding Mode"
 
 #: src/ProgressDlg.cpp:274 wxVillaLib/ProgramProcess.cpp:30
 msgid "Failed"
@@ -2136,7 +2108,7 @@ msgstr "既定のディスク容量:"
 
 #: src/SettingsDlg.cpp:79
 msgid "Default video format:"
-msgstr "既定の動画形式:"
+msgstr "既定の映像形式:"
 
 #: src/SettingsDlg.cpp:97
 msgid "Keep aspect ratio"
@@ -2152,7 +2124,7 @@ msgstr "既定のチャプター長:"
 
 #: src/SettingsDlg.cpp:127
 msgid "Add chapter at title end"
-msgstr ""
+msgstr "タイトルの最後にチャプターを追加する"
 
 #: src/SettingsDlg.cpp:154
 msgid "Default button:"
@@ -2163,19 +2135,16 @@ msgid "Accept invalid actions"
 msgstr "不適切な操作を許容する"
 
 #: src/SettingsDlg.cpp:162
-#, fuzzy
 msgid "Default slide duration:"
-msgstr "既定の動画形式:"
+msgstr "既定のスライドショーの再生時間:"
 
 #: src/SettingsDlg.cpp:163
-#, fuzzy
 msgid "Default transition duration:"
-msgstr "既定の音声形式:"
+msgstr "スライドショーの切替効果の再生時間:"
 
 #: src/SettingsDlg.cpp:170
-#, fuzzy
 msgid "Default slide transition:"
-msgstr "既定の動画形式:"
+msgstr "既定のスライドショーの切替効果:"
 
 #: src/SettingsDlg.cpp:176
 msgid "Last directory"
@@ -2194,22 +2163,20 @@ msgid "Undo history size:"
 msgstr "取り消し用の履歴記憶数:"
 
 #: src/SettingsDlg.cpp:197
-#, fuzzy
 msgid "Clear transcoding cache:"
-msgstr "キャッシュから、トランスコード済みファイルを探します"
+msgstr "トランスコード用キャッシュ消去:"
 
 #: src/SettingsDlg.cpp:200
-#, fuzzy
 msgid "Prompt"
-msgstr "プロパティ"
+msgstr "毎回選択する"
 
 #: src/SettingsDlg.cpp:201 src/SettingsDlg.cpp:299
 msgid "Yes"
-msgstr ""
+msgstr "はい"
 
 #: src/SettingsDlg.cpp:206
 msgid "Clear cache now"
-msgstr ""
+msgstr "キャッシュを今すぐ消去する"
 
 #: src/SettingsDlg.cpp:210
 msgid "\"Don't show again\" flags:"
@@ -2233,7 +2200,7 @@ msgstr "メニュー映像のビットレート:"
 
 #: src/SettingsDlg.cpp:247
 msgid "Slideshow video bitrate:"
-msgstr "スライドショー動画のビットレート:"
+msgstr "スライドショー映像のビットレート:"
 
 #: src/SettingsDlg.cpp:252
 msgid "Default audio bitrate:"
@@ -2252,25 +2219,24 @@ msgid "KB"
 msgstr "KB"
 
 #: src/SettingsDlg.cpp:258
-#, fuzzy
 msgid "internal"
-msgstr "インターレース"
+msgstr "内部(CBR)"
 
 #: src/SettingsDlg.cpp:263
 msgid "Encoder:"
-msgstr ""
+msgstr "エンコーダー:"
 
 #: src/SettingsDlg.cpp:273
 msgid "CBR"
-msgstr ""
+msgstr "CBR"
 
 #: src/SettingsDlg.cpp:274
 msgid "1-pass VBR"
-msgstr ""
+msgstr "1-pass VBR"
 
 #: src/SettingsDlg.cpp:275
 msgid "2-pass VBR"
-msgstr ""
+msgstr "2-pass VBR"
 
 #: src/SettingsDlg.cpp:290
 msgid "Create ISO command:"
@@ -2298,15 +2264,15 @@ msgstr "mplex を使う:"
 
 #: src/SettingsDlg.cpp:301
 msgid "For menus only"
-msgstr ""
+msgstr "メニューのみ"
 
 #: src/SettingsDlg.cpp:306
 msgid "NTSC film:"
-msgstr ""
+msgstr "NTSC フィルム:"
 
 #: src/SettingsDlg.cpp:307
 msgid "reencode by default"
-msgstr ""
+msgstr "既定は再エンコード"
 
 #: src/SettingsDlg.cpp:309
 msgid "Debug"
@@ -2314,7 +2280,7 @@ msgstr "デバッグ"
 
 #: src/SettingsDlg.cpp:310
 msgid "Don't remove temp files"
-msgstr "一時作成ファイル (dvdauthor.xml) を削除しない "
+msgstr "一時作成ファイル (dvdauthor.xml 等) を削除しない"
 
 #: src/SettingsDlg.cpp:333
 msgid "Language change will not take effect until DVDStyler is restarted"
@@ -2326,27 +2292,23 @@ msgstr "「次回から表示しない」設定を、すべてリセットしま
 
 #: src/SettingsDlg.cpp:412
 msgid "The transcoding cache is successfully cleared."
-msgstr ""
+msgstr "トランスコード用キャッシュは消去されました。"
 
 #: src/SlideDlg.cpp:44
-#, fuzzy
 msgid "Slide properties"
-msgstr "映像プロパティ"
+msgstr "スライドショーのプロパティ"
 
 #: src/SlideDlg.cpp:48
-#, fuzzy
 msgid "File name:"
 msgstr "ファイル名:"
 
 #: src/SlideDlg.cpp:53 src/TitlePropDlg.cpp:207
-#, fuzzy
 msgid "Transition:"
-msgstr "翻訳製作"
+msgstr "切替効果:"
 
 #: src/SlideDlg.cpp:72
-#, fuzzy
 msgid "Default"
-msgstr "既定のボタン:"
+msgstr "既定"
 
 #: src/Slideshow.cpp:243
 msgid "None"
@@ -2354,7 +2316,7 @@ msgstr "なし"
 
 #: src/Slideshow.cpp:244
 msgid "Random"
-msgstr ""
+msgstr "ランダム"
 
 #: src/StatusBar.cpp:60
 #, c-format
@@ -2396,7 +2358,7 @@ msgstr "字幕プロパティ"
 
 #: src/SubtitlePropDlg.cpp:112
 msgid "Force display"
-msgstr ""
+msgstr "強制的に表示"
 
 #: src/SubtitlePropDlg.cpp:116
 msgid "Charset:"
@@ -2444,7 +2406,7 @@ msgstr "余白"
 
 #: src/SubtitlePropDlg.cpp:242
 msgid "&Use as defaults"
-msgstr ""
+msgstr "この設定をデフォルトにする(&U)"
 
 #: src/SubtitlePropDlg.cpp:385
 msgid "slant"
@@ -2471,28 +2433,24 @@ msgid "Select template for DVD menus"
 msgstr "DVD メニュー用テンプレートを選択"
 
 #: src/TemplateDlg.cpp:61
-#, fuzzy
 msgid "Caption:"
-msgstr "合計時間:"
+msgstr "表題:"
 
 #: src/TemplateDlg.cpp:63
 msgid "Disc Title"
 msgstr "ディスクタイトル"
 
 #: src/TemplateDlg.cpp:69
-#, fuzzy
 msgid "Title selection"
-msgstr "タイトルセット"
+msgstr "タイトル選択"
 
 #: src/TemplateDlg.cpp:71
-#, fuzzy
 msgid "Chapter selection"
-msgstr "チャプター"
+msgstr "チャプター選択"
 
 #: src/TemplateDlg.cpp:77
-#, fuzzy
 msgid "Category"
-msgstr "区分:"
+msgstr "分類"
 
 #: src/TemplateDlg.cpp:80
 msgid "All"
@@ -2508,7 +2466,7 @@ msgstr "テンプレート"
 
 #: src/TemplateDlg.cpp:115 templates/category.xml:5
 msgid "Christmas & New Year's Eve"
-msgstr ""
+msgstr "クリスマス & 大晦日"
 
 #: src/TitlePropDlg.cpp:118
 msgid "Add file..."
@@ -2539,9 +2497,8 @@ msgid "Remove image"
 msgstr "画像削除"
 
 #: src/TitlePropDlg.cpp:233
-#, fuzzy
 msgid "Audio file:"
-msgstr "音声ファイル"
+msgstr "音声ファイル:"
 
 #: src/TitlePropDlg.cpp:267
 msgid "Palette:"
@@ -2569,9 +2526,8 @@ msgid "Can't load titles"
 msgstr "タイトルの読み込みができません。"
 
 #: src/TitlesetManager.cpp:151 src/TitlesetManager.cpp:172
-#, fuzzy
 msgid "&VMGM Menu"
-msgstr "メニュー(&M)"
+msgstr "VMGMメニュー(&V)"
 
 #: src/TitlesetManager.cpp:163
 msgid "&Left"
@@ -2599,20 +2555,19 @@ msgid "Slideshow (1 image)"
 msgstr "スライドショー (画像 1 枚)"
 
 #: src/TitlesetManager.cpp:466
-#, fuzzy
 msgid ""
 "The selected video files don't fit on DVD without re-encoding.\n"
 "Do you want to enable re-encoding?"
-msgstr ""
-"選択した映像ファイルは DVD に収まりません。\n"
-"映像品質(ビットレート)を落とすか、タイトルを減らしてください。"
+msgstr "選択した映像ファイルは、再エンコード無し(コピー)だと DVD に収まりません。再エンコードしますか？"
 
 #: src/TitlesetManager.cpp:488
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Adding file %s.\n"
 "Please wait..."
-msgstr "お待ちください..."
+msgstr ""
+"ファイル %s を追加しています。\n"
+"お待ちください..."
 
 #: src/TitlesetManager.cpp:503
 #, c-format
@@ -2648,9 +2603,8 @@ msgid "Please add a video track first."
 msgstr "先に映像トラックを追加してください。"
 
 #: src/TitlesetManager.cpp:880
-#, fuzzy
 msgid "Maximal 99 menus are allowed for one titleset."
-msgstr "1 タイトルセットに含められるタイトルは最大 99 までです。"
+msgstr "1 タイトルセットに含められるメニューは最大 99 までです。"
 
 #: src/TitlesetManager.cpp:1217
 #, c-format
@@ -2674,7 +2628,6 @@ msgid "progressive"
 msgstr "プログレッシブ"
 
 #: src/VideoPropDlg.cpp:128
-#, fuzzy
 msgid "interlace"
 msgstr "インターレース"
 
@@ -2687,14 +2640,12 @@ msgid "TFF"
 msgstr "TFF"
 
 #: src/VideoPropDlg.cpp:141
-#, fuzzy
 msgid "border"
 msgstr "枠線"
 
 #: src/VideoPropDlg.cpp:142
-#, fuzzy
 msgid "crop"
-msgstr "トリミング"
+msgstr "切り取り"
 
 #: src/VideoPropDlg.cpp:146
 msgid "Border"
@@ -2702,12 +2653,11 @@ msgstr "枠線"
 
 #: src/VideoPropDlg.cpp:162
 msgid "Crop"
-msgstr "トリミング"
+msgstr "切り取り"
 
 #: src/VideoPropDlg.cpp:179
-#, fuzzy
 msgid "Fade-In/Out:"
-msgstr "フェードアウト:"
+msgstr "フェード イン/アウト:"
 
 #: src/VideoPropDlg.cpp:218
 msgid "Start:"
@@ -2715,11 +2665,11 @@ msgstr "開始:"
 
 #: src/VideoPropDlg.cpp:232
 msgid "Cut beginning"
-msgstr ""
+msgstr "時間欄を開始欄に反映"
 
 #: src/VideoPropDlg.cpp:248
 msgid "Cut ending"
-msgstr ""
+msgstr "時間欄を終了欄に反映"
 
 #: src/VideoPropDlg.cpp:675 src/VideoPropDlg.cpp:680
 msgid "Invalid time"
@@ -2882,9 +2832,8 @@ msgstr "簡素な矢印"
 #: buttons/arrow-simple-v2.xml:50 buttons/arrow3d-left.xml:41 buttons/arrow3d-right.xml:41
 #: buttons/ellipse-v2.xml:44 buttons/ellipse45.xml:47 buttons/frame-v2.xml:53 buttons/frame45.xml:63
 #: buttons/home-v2.xml:35 buttons/text-circle-v2.xml:32 buttons/text-square-v2.xml:33
-#: buttons/text-underlined-v3.xml:32 buttons/text-v3.xml:58 objects/ellipse-v3.xml:57
-#: objects/ellipse45.xml:59 objects/frame-v3.xml:67 objects/frame45.xml:76 objects/rectangle-v2.xml:38
-#: objects/text-v2.xml:53
+#: buttons/text-underlined-v3.xml:32 buttons/text-v3.xml:58 objects/ellipse-v3.xml:57 objects/ellipse45.xml:59
+#: objects/frame-v3.xml:67 objects/frame45.xml:76 objects/rectangle-v2.xml:38 objects/text-v2.xml:53
 msgid "Shadow"
 msgstr "影"
 
@@ -2987,7 +2936,7 @@ msgstr "楕円"
 #: buttons/movie.xml:33 objects/ellipse-v3.xml:29 objects/ellipse45.xml:31 objects/frame-v3.xml:25
 #: objects/frame45.xml:27
 msgid "Image opacity"
-msgstr "画像の透明度"
+msgstr "画像の不透明度"
 
 #: buttons/ellipse-v2.xml:63 buttons/ellipse45.xml:66 buttons/frame-v2.xml:72 buttons/frame45.xml:82
 #: objects/ellipse-v3.xml:50 objects/ellipse45.xml:52 objects/frame-v3.xml:60 objects/frame45.xml:69
@@ -2995,9 +2944,8 @@ msgid "Inner colour"
 msgstr "内側の色"
 
 #: buttons/ellipse45.xml:3 objects/ellipse45.xml:3
-#, fuzzy
 msgid "Ellipse 45°"
-msgstr "楕円"
+msgstr "楕円 45°"
 
 #: buttons/frame-v2.xml:3 objects/frame-v3.xml:3
 msgid "Frame"
@@ -3022,9 +2970,8 @@ msgid "Border colour"
 msgstr "枠線の色"
 
 #: buttons/frame45.xml:3 objects/frame45.xml:3
-#, fuzzy
 msgid "Frame 45°"
-msgstr "フレーム枠"
+msgstr "フレーム枠 45°"
 
 #: buttons/hand-left.xml:4
 msgid "Hand Left"
@@ -3048,7 +2995,7 @@ msgstr "色"
 
 #: buttons/movie.xml:3
 msgid "Movie"
-msgstr ""
+msgstr "映画"
 
 #: buttons/ok2.xml:4
 msgid "Ok"
@@ -3133,13 +3080,12 @@ msgid "Background colour"
 msgstr "背景の色"
 
 #: objects/gold-frame.xml:3
-#, fuzzy
 msgid "Gold frame"
-msgstr "映像フレーム"
+msgstr "金色のフレーム枠"
 
 #: objects/image.xml:16
 msgid "Opacity"
-msgstr "透明度"
+msgstr "不透明度"
 
 #: objects/rectangle-v2.xml:3
 msgid "Rectangle"
@@ -3155,19 +3101,19 @@ msgstr "基本"
 
 #: templates/category.xml:4
 msgid "Birthday"
-msgstr ""
+msgstr "誕生日"
 
 #: templates/category.xml:6
 msgid "Love"
-msgstr ""
+msgstr "ラブ"
 
 #: templates/category.xml:7
 msgid "Miscellaneous"
-msgstr ""
+msgstr "様々"
 
 #: templates/category.xml:8
 msgid "Nature"
-msgstr ""
+msgstr "自然"
 
 #: templates/category.xml:9
 msgid "Seasons"
@@ -3179,28 +3125,27 @@ msgstr "旅行"
 
 #: templates/category.xml:11
 msgid "Wedding"
-msgstr ""
+msgstr "結婚式"
 
 #: transitions/fade.xml:4
-#, fuzzy
 msgid "Fade-In/Out"
-msgstr "フェードアウト:"
+msgstr "フェード イン/アウト"
 
 #: transitions/wipeBottomToTop.xml:4
 msgid "Wipe bottom to top"
-msgstr ""
+msgstr "ワイプ 下から上"
 
 #: transitions/wipeLeftToRight.xml:4
 msgid "Wipe left to right"
-msgstr ""
+msgstr "ワイプ 左から右"
 
 #: transitions/wipeRightToLeft.xml:4
 msgid "Wipe right to left"
-msgstr ""
+msgstr "ワイプ 右から左"
 
 #: transitions/wipeTopToBottom.xml:4
 msgid "Wipe top to bottom"
-msgstr ""
+msgstr "ワイプ 上から下"
 
 #~ msgid "Christmas"
 #~ msgstr "クリスマス"
