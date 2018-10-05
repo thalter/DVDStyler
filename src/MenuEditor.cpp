@@ -577,7 +577,8 @@ wxString MenuEditor::HitTest(int x, int y) {
 				child->UpdateMatrix(matrix);
 				p = p.MatrixTransform(matrix.Inverse());
 			}
-			wxSVGRect bbox = child->GetBBox();
+			wxSVGRect bbox = wxSVGRect(child->GetX().GetAnimVal(), child->GetY().GetAnimVal(),
+					child->GetWidth().GetAnimVal(), child->GetHeight().GetAnimVal());
 			if (!bbox.IsEmpty()
 					&& p.GetX() >= bbox.GetX() && p.GetX() <= bbox.GetX() + bbox.GetWidth()
 					&& p.GetY() >= bbox.GetY() && p.GetY() <= bbox.GetY() + bbox.GetHeight()) {
