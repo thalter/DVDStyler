@@ -11,7 +11,9 @@
 #ifndef MENU_OBJECT_H
 #define MENU_OBJECT_H
 
+#include <src/SubStream.h>
 #include "DVDAction.h"
+#include "MenuObjectDef.h"
 #include <wx/image.h>
 #include <wx/dynarray.h>
 #include <wxSVG/SVGLength.h>
@@ -31,38 +33,6 @@ class wxSVGAnimateElement;
 class Menu;
 class DVD;
 
-enum MenuButtonState { mbsNORMAL, mbsHIGHLIGHTED, mbsSELECTED };
-
-enum SubStreamMode {
-	ssmNORMAL = 0,
-	ssmWIDESCREEN,
-	ssmLETTERBOX,
-	ssmPANSCAN
-};
-
-struct MenuObjectParam {
-  wxString name;
-  wxString title;
-  wxString type;
-  vector<wxString> element; // id of element
-  wxString attribute; // attribute name
-  bool changeable; // changed if select the button
-  wxColour normalColour;
-  wxColour highlightedColour;
-  wxColour selectedColour;
-  inline bool isChangeable() {
-	  return changeable && (normalColour != highlightedColour || normalColour != selectedColour);
-  }
-};
-
-WX_DEFINE_ARRAY(MenuObjectParam*, MenuObjectParams);
-
-struct MenuObjectSize {
-	unsigned int value;
-	unsigned int valueInc;
-	unsigned int valuePercent;
-	wxArrayString elements;
-};
 
 enum NavigationButton {
   nbLEFT = 0,
@@ -71,7 +41,7 @@ enum NavigationButton {
   nbDOWN
 };
 
-class MenuObject {
+class MenuObject: public MenuObjectDef {
 public:
 	/** Constructor */
 	MenuObject(Menu* menu, bool vmg, wxString fileName = wxT(""), int x = 0, int y = 0, wxString param = wxT(""));
@@ -116,30 +86,10 @@ public:
     void UpdateSize();
     void UpdateMatrix(wxSVGMatrix& matrix) const;
     
-    int GetObjectParamsCount() const { return m_params.Count(); }
-    MenuObjectParam* GetObjectParam(int index) const { return m_params[index]; }
-    MenuObjectParam* GetObjectParam(wxString name) const;
-    MenuObjectParam* GetInitParam();
-    MenuObjectParam* GetImageParam();
     int GetChangebaleColourCount(bool drawButtonsOnBackground);
     const wxSVGLength& GetTextOffset() const { return m_textOffset; }
     
-    wxString GetParam(wxString name, wxString attribute = wxT("")) const;
-	void SetParam(wxString name, wxString value, wxString attribute = wxT(""));
-    int GetParamInt(wxString name, wxString attribute = wxT("")) const;
-	void SetParamInt(wxString name, int value, wxString attribute = wxT(""));
-	double GetParamDouble(wxString name) const;
-	void SetParamDouble(wxString name, double value);
-	wxFont GetParamFont(wxString name) const;
-	void SetParamFont(wxString name, wxFont value);
-	wxColour GetParamColour(wxString name, MenuButtonState state = mbsNORMAL) const;
-	void SetParamColour(wxString name, wxColour value, MenuButtonState state = mbsNORMAL);
-	double GetParamVideoClipBegin(const wxString& name);
-	double GetParamVideoDuration(const wxString& name);
-	void SetParamImageVideo(const wxString& name, const wxString& filename, long pos, int duration);
-	/** Returns object svg element by element id */
-	wxSVGElement* GetElementById(wxString id);
-	/** Returns animation elements */
+    /** Returns animation elements */
 	vector<wxSVGAnimateElement*> GetAnimations();
 	/** Sets animation elements */
 	void SetAnimations(vector<wxSVGAnimateElement*>& animations);
@@ -168,28 +118,22 @@ public:
 	void SetFocusDest(NavigationButton navButton, wxString value) { m_direction[navButton] = value; }
 	wxString GetDefaultFocusDest(NavigationButton navButton);
 	
+	/** Returns image (thumbnail) */
 	wxImage GetImage(int maxWidth, int maxHeight);
 	
 	virtual wxSvgXmlNode* GetXML(DVDFileType type, DVD* dvd, SubStreamMode mode = ssmNORMAL, bool withSVG = false);
 	virtual bool PutXML(wxSvgXmlNode* node);
 	
-	static void SetImageVideoParams(wxSVGSVGElement* svgElem, const wxString& id, const wxString& filename, long pos,
-			int duration);
-private:
+protected:
 	Menu* m_menu; // can be null
 	wxString m_id;
 	bool m_button;
 	bool m_autoExecute;
 	DVDAction m_action;
 	wxString m_fileName;
-	wxString m_title;
-	bool m_previewHighlighted;
 	
 	wxString m_direction[4]; // left, right, up, down button names
 	
-	MenuObjectParams m_params;
-	wxString m_initParameter;
-	wxSVGLength m_textOffset;
 	bool m_displayVideoFrame; // sets if video frame must be displayed
 	bool m_customVideoFrame; // shows if custom video frame is selected
 	int m_displayVobId; // VOB-ID of displayed frame
@@ -197,26 +141,17 @@ private:
 	bool m_keepAspectRatio;
 	wxSVGImageElement* m_aspectRatioElem;
 		
-	bool m_defaultSize;
-	MenuObjectSize m_defaultWidth;
-	MenuObjectSize m_defaultHeight;
-	
-	MenuObjectSize m_minWidth;
-	MenuObjectSize m_minHeight;
-	
-	bool m_deleteSVG;
-	wxSVGDocument* m_svg;
 	wxSVGUseElement* m_use;
-	wxSVGSVGElement* m_symbol;
-	wxSVGSVGElement* AddSymol(wxString id, wxSVGElement* content);
-	void AddUse(wxString id, int x, int y, int width, int height, const wxSVGTransformList* transforms = NULL);
+	wxSVGSVGElement* m_buttonSVG;
+	wxSVGSVGElement* AddButtonSVG(wxString id, wxSVGElement* content);
+	void AddUseElement(wxString id, int x, int y, int width, int height, const wxSVGTransformList* transforms = NULL);
+	virtual wxSVGSVGElement* GetButtonSVG() const;
 	
 	void SetScale(double scaleX, double scaleY);
 	
 	bool Init(wxString filename, int x = 0, int y = 0, wxString param = wxT(""));
 	bool LoadSVG(wxSVGDocument& svg, wxSvgXmlNode* node);
 	wxString GenerateId(wxString prefix);
-	void InitSize(wxString value, MenuObjectSize& size);
 	unsigned int CalcSize(MenuObjectSize& size, bool width);
 	bool IsAlignRight(MenuObjectSize& size);
 	void UpdateTransform();

@@ -298,8 +298,8 @@ void MenuObjectPropDlg::CreateLook(wxBoxSizer* mainSizer) {
     // object look parameters
     bool lastChangeable = false;
     wxFlexGridSizer* grid = NULL;
-    for (int i=0; i<m_object->GetObjectParamsCount(); i++) {
-		MenuObjectParam* param = m_object->GetObjectParam(i);
+    for (unsigned int i=0; i<m_object->GetParams().size(); i++) {
+		MenuObjectParam* param = m_object->GetParams()[i];
 		if (param->name == wxT("rotation")) {
 			continue;
 		}
@@ -951,8 +951,8 @@ bool MenuObjectPropDlg::SetValues() {
 	}
 
 	// set look parameters
-	for (int i = 0; i < m_object->GetObjectParamsCount(); i++) {
-		MenuObjectParam* param = m_object->GetObjectParam(i);
+	for (unsigned int i = 0; i < m_object->GetParams().size(); i++) {
+		MenuObjectParam* param = m_object->GetParams()[i];
 		if (param->name == wxT("rotation")) {
 			continue;
 		}
