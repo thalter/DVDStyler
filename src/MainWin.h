@@ -150,6 +150,8 @@ public:
 	wxToolBar* m_toolbar;
 	int m_splitterDirSash;
 	int m_splitterTitleSash;
+	wxMenu* m_thumbFileMenu;
+	wxMenu* m_thumbButtonsMenu;
 	
     /** shows directory tree */
 	void ShowDirTree(bool show);
@@ -173,6 +175,9 @@ public:
 	void OnPlayUI(wxUpdateUIEvent& event);
 	void OnDelete(wxCommandEvent& event);
 	void OnDeleteUI(wxUpdateUIEvent& event);
+	void OnEditButton(wxCommandEvent& event);
+	void OnResetButton(wxCommandEvent& event);
+	void OnResetButtonUI(wxUpdateUIEvent &event);
 	void OnRefresh(wxCommandEvent& event);
 	
 	virtual void OnNew(wxCommandEvent& event); // wxGlade: <event_handler>
@@ -198,6 +203,7 @@ public:
 	virtual void OnSettings(wxCommandEvent& event); // wxGlade: <event_handler>
 	virtual void OnAbout(wxCommandEvent& event); // wxGlade: <event_handler>
 	virtual void OnHelpContents(wxCommandEvent &event); // wxGlade: <event_handler>
+	virtual void OnCreateButton(wxCommandEvent& event);
 	
 	void OnSplitterTitleSash(wxSplitterEvent &event);
 	void OnResize(wxSizeEvent &event);

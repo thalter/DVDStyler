@@ -8,6 +8,7 @@
 // Licence:     GPL
 /////////////////////////////////////////////////////////////////////////////
 
+#include <src/ButtonEditDlg.h>
 #include "MainWin.h"
 #include "BurnDlg.h"
 #include "ProgressDlg.h"
@@ -16,6 +17,7 @@
 #include "TemplateDlg.h"
 #include "DVDPropDlg.h"
 #include "SettingsDlg.h"
+#include "Menu.h"
 #include "Config.h"
 #include "MPEG.h"
 #include "MessageDlg.h"
@@ -78,7 +80,10 @@ enum {
 	THUMBMENU_PLAY_ID,
 	THUMBMENU_BACKGROUND_ID,
 	THUMBMENU_REFRESH_ID,
-	THUMBMENU_DELETE_ID
+	THUMBMENU_DELETE_ID,
+	THUMBMENU_EDIT_BT_ID,
+	THUMBMENU_RESET_BT_ID,
+	MENU_CREATE_BUTTON_ID
 };
 
 BEGIN_EVENT_TABLE(MainWin, wxFrame)
@@ -103,6 +108,7 @@ BEGIN_EVENT_TABLE(MainWin, wxFrame)
     EVT_MENU(wxID_HELP_CONTENTS, MainWin::OnHelpContents)
     EVT_MENU(wxID_ABOUT, MainWin::OnAbout)
     // end wxGlade
+	EVT_MENU(MENU_CREATE_BUTTON_ID, MainWin::OnCreateButton)
     EVT_UPDATE_UI(MENU_DVD_ADD_CHAPTER_MENU_ID, MainWin::OnAddChapterMenuUpdateUI)
     EVT_UPDATE_UI(MENU_DVD_ADD_TITLESET_ID, MainWin::OnAddTitlesetUpdateUI)
     EVT_UPDATE_UI(wxID_UNDO, MainWin::OnUpdateUIUndo)
@@ -130,6 +136,9 @@ BEGIN_EVENT_TABLE(MainWin, wxFrame)
 	EVT_UPDATE_UI(THUMBMENU_PLAY_ID, MainWin::OnPlayUI)
 	EVT_MENU(THUMBMENU_DELETE_ID, MainWin::OnDelete)
 	EVT_UPDATE_UI(THUMBMENU_DELETE_ID, MainWin::OnDeleteUI)
+	EVT_MENU(THUMBMENU_EDIT_BT_ID, MainWin::OnEditButton)
+	EVT_MENU(THUMBMENU_RESET_BT_ID, MainWin::OnResetButton)
+	EVT_UPDATE_UI(THUMBMENU_RESET_BT_ID, MainWin::OnResetButtonUI)
 	EVT_MENU(THUMBMENU_REFRESH_ID, MainWin::OnRefresh)
 	
 	EVT_SIZE(MainWin::OnResize)
@@ -191,6 +200,7 @@ MainWin::MainWin(): wxFrame(NULL, -1, _T(""), wxDefaultPosition, wxDefaultSize,
     m_menubar->Append(wxglade_tmp_menu_3, _("&DVD"));
     wxMenu* wxglade_tmp_menu_4 = new wxMenu();
     wxglade_tmp_menu_4->Append(MENU_SETTINGS_ID, _("&Settings..."), wxEmptyString, wxITEM_NORMAL);
+    wxglade_tmp_menu_4->Append(MENU_CREATE_BUTTON_ID, _("&Create button from SVG..."), wxEmptyString, wxITEM_NORMAL);
     m_menubar->Append(wxglade_tmp_menu_4, _("&Configuration"));
     wxMenu* wxglade_tmp_menu_5 = new wxMenu();
     wxglade_tmp_menu_5->Append(wxID_HELP_CONTENTS, _("&Contents\tF1"), wxEmptyString, wxITEM_NORMAL);
@@ -257,14 +267,20 @@ MainWin::MainWin(): wxFrame(NULL, -1, _T(""), wxDefaultPosition, wxDefaultSize,
 			SetSize(rect);
 	}
 	
-    wxMenu* thumbMenu = new wxMenu;
-    thumbMenu->Append(THUMBMENU_BACKGROUND_ID, _("&Assign to background"));
-    thumbMenu->AppendSeparator();
-    thumbMenu->Append(THUMBMENU_PLAY_ID, _("&Play"));
-	thumbMenu->Append(THUMBMENU_DELETE_ID, _("&Delete"))->SetBitmap(wxArtProvider::GetBitmap(wxART_DELETE, wxART_MENU));
-    thumbMenu->AppendSeparator();
-	thumbMenu->Append(THUMBMENU_REFRESH_ID, _("&Refresh") + wxString(wxT("\tF5")));
-	m_thumbnails->SetPopupMenu(thumbMenu);
+    m_thumbFileMenu = new wxMenu;
+    m_thumbFileMenu->Append(THUMBMENU_BACKGROUND_ID, _("&Assign to background"));
+    m_thumbFileMenu->AppendSeparator();
+    m_thumbFileMenu->Append(THUMBMENU_PLAY_ID, _("&Play"));
+    m_thumbFileMenu->Append(THUMBMENU_DELETE_ID, _("&Delete"))->SetBitmap(wxArtProvider::GetBitmap(wxART_DELETE, wxART_MENU));
+    m_thumbFileMenu->AppendSeparator();
+    m_thumbFileMenu->Append(THUMBMENU_REFRESH_ID, _("&Refresh") + wxString(wxT("\tF5")));
+	m_thumbnails->SetPopupMenu(m_thumbFileMenu);
+	
+	m_thumbButtonsMenu = new wxMenu;
+	m_thumbButtonsMenu->Append(THUMBMENU_EDIT_BT_ID, _("&Edit button"));
+	m_thumbButtonsMenu->Append(THUMBMENU_RESET_BT_ID, _("&Reset button"));
+	m_thumbButtonsMenu->AppendSeparator();
+	m_thumbButtonsMenu->Append(THUMBMENU_REFRESH_ID, _("&Refresh") + wxString(wxT("\tF5")));
 	
     wxMenu* thumbGlobalMenu = new wxMenu;
     thumbGlobalMenu->Append(THUMBMENU_REFRESH_ID, _("&Refresh") + wxString(wxT("\tF5")));
@@ -429,6 +445,7 @@ void MainWin::OnDirTreeBt(wxCommandEvent& event) {
 		OnDirSelected(evt);
 	} else
 		ShowDirTree(false);
+	m_thumbnails->SetPopupMenu(m_thumbFileMenu);
 }
 
 void MainWin::OnBackgroundsBt(wxCommandEvent& event) {
@@ -452,6 +469,7 @@ void MainWin::OnBackgroundsBt(wxCommandEvent& event) {
 	}
 	m_thumbnails->SetCaption(_("Backgrounds"));
 	m_thumbnails->SortItems();
+	m_thumbnails->SetPopupMenu(m_thumbFileMenu);
 }
 
 void MainWin::OnButtonsBt(wxCommandEvent& event) {
@@ -473,6 +491,26 @@ void MainWin::OnButtonsBt(wxCommandEvent& event) {
 			buttons.Add(fname);
 		fname = wxFindNextFile();
 	}
+	
+	set<wxString> canBeReseted;
+	wxString btDir = wxStandardPaths::Get().GetUserDataDir() + wxFILE_SEP_PATH + wxT("buttons") + wxFILE_SEP_PATH;
+	if (wxDirExists(btDir)) {
+		fname = wxFindFirstFile(btDir + wxT("*.xml"));
+		while (!fname.IsEmpty()) {
+			wxFileName fileName(fname);
+			fileName = wxFileName(fileName.GetFullName());
+			fileName.MakeAbsolute(BUTTONS_DIR);
+			int idx = buttons.Index(fileName.GetFullPath());
+			if (idx != wxNOT_FOUND) {
+				buttons.RemoveAt(idx);
+				buttons.Insert(fname, idx);
+				canBeReseted.insert(fname);
+			} else {
+				buttons.Add(fname);
+			}
+			fname = wxFindNextFile();
+		}
+	}
 
 	ShowDirTree(false);
 	m_thumbnails->Clear();
@@ -481,9 +519,12 @@ void MainWin::OnButtonsBt(wxCommandEvent& event) {
 		wxLogNull log;
 		MenuObject bt(NULL, false, buttons[i], 0, 0, _("button"));
 		thumb->SetImage(bt.GetImage(m_thumbnails->GetThumbImageWidth(), m_thumbnails->GetThumbImageHeight()));
+		if (canBeReseted.find(buttons[i]) != canBeReseted.end())
+			thumb->SetId(1);
 		m_thumbnails->InsertItem(thumb);
 	}
 	m_thumbnails->SetCaption(_("Buttons"));
+	m_thumbnails->SetPopupMenu(m_thumbButtonsMenu);
 }
 
 void MainWin::OnPageChanged(wxNotebookEvent& event) {
@@ -1300,6 +1341,57 @@ void MainWin::OnDVDOptions(wxCommandEvent& event) {
 void MainWin::OnSettings(wxCommandEvent& event) {
 	SettingsDlg dlg(this, &m_cache);
 	dlg.ShowModal();
+}
+
+
+void MainWin::OnCreateButton(wxCommandEvent& event) {
+	wxFileDialog fileDlg(this, _("Open a SVG file"), m_lastDir, "",
+			_("SVG files") + wxString(" (*.svg)|*.svg"), wxFD_OPEN);
+	fileDlg.Centre();
+	if (fileDlg.ShowModal() != wxID_OK)
+		return;
+	ButtonEditDlg dlg(this);
+	if (!dlg.LoadSVG(fileDlg.GetPath()))
+		return;
+	dlg.ShowModal();
+}
+
+void MainWin::OnEditButton(wxCommandEvent& event) {
+	wxString filename = m_thumbnails->GetSelectedItem()->GetFilename();
+	ButtonEditDlg dlg(this);
+	if (!dlg.LoadButton(filename))
+		return;
+	if (dlg.ShowModal() == wxID_OK) {
+		m_thumbnails->GetSelectedItem()->SetFilename(dlg.GetDestFileName());
+		wxLogNull log;	
+		MenuObject bt(NULL, false, dlg.GetDestFileName(), 0, 0, _("button"));
+		m_thumbnails->GetSelectedItem()->SetImage(
+				bt.GetImage(m_thumbnails->GetThumbImageWidth(), m_thumbnails->GetThumbImageHeight()));
+		m_thumbnails->GetSelectedItem()->SetId(1);
+		m_thumbnails->GetSelectedItem()->Update();
+		m_thumbnails->Refresh();
+	}
+}
+
+void MainWin::OnResetButton(wxCommandEvent& event) {
+	if (m_thumbnails->GetSelectedItem()->GetId() != 1)
+		return; // button cannot be reseted
+	wxRemoveFile(m_thumbnails->GetSelectedItem()->GetFilename());
+	wxFileName fileName(m_thumbnails->GetSelectedItem()->GetFilename());
+	fileName = wxFileName(fileName.GetFullName());
+	fileName.MakeAbsolute(BUTTONS_DIR);
+	m_thumbnails->GetSelectedItem()->SetFilename(fileName.GetFullPath());
+	wxLogNull log;	
+	MenuObject bt(NULL, false, fileName.GetFullPath(), 0, 0, _("button"));
+	m_thumbnails->GetSelectedItem()->SetImage(
+			bt.GetImage(m_thumbnails->GetThumbImageWidth(), m_thumbnails->GetThumbImageHeight()));
+	m_thumbnails->GetSelectedItem()->SetId(1);
+	m_thumbnails->GetSelectedItem()->Update();
+	m_thumbnails->Refresh();
+}
+
+void MainWin::OnResetButtonUI(wxUpdateUIEvent &event) {
+	event.Enable(m_thumbnails->GetSelectedItem() && m_thumbnails->GetSelectedItem()->GetId() == 1);
 }
 
 void MainWin::OnHelpContents(wxCommandEvent& event) {

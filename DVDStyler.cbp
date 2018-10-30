@@ -87,6 +87,10 @@
 		<Unit filename="src/AudioPropDlg.h" />
 		<Unit filename="src/BurnDlg.cpp" />
 		<Unit filename="src/BurnDlg.h" />
+		<Unit filename="src/ButtonEditDlg.cpp" />
+		<Unit filename="src/ButtonEditDlg.h" />
+		<Unit filename="src/ButtonAddParamDlg.cpp" />
+		<Unit filename="src/ButtonAddParamDlg.h" />
 		<Unit filename="src/Cache.cpp" />
 		<Unit filename="src/Cache.h" />
 		<Unit filename="src/ChaptersDlg.cpp" />
@@ -207,6 +211,8 @@
 		<Unit filename="wxVillaLib/utils.cpp" />
 		<Unit filename="wxVillaLib/utils.h" />
 		<Unit filename="wxsmith/AnimationDlg.wxs" />
+		<Unit filename="wxsmith/ButtonEditDlg.wxs" />
+		<Unit filename="wxsmith/ButtonAddParamDlg.wxs" />
 		<Extensions>
 			<code_completion />
 			<debugger />
@@ -225,6 +231,8 @@
 					<wxDialog wxs="wxsmith/SlideDlg.wxs" src="src/SlideDlg.cpp" hdr="src/SlideDlg.h" fwddecl="0" i18n="1" name="SlideDlg" language="CPP" />
 					<wxDialog wxs="wxsmith/ProgressDlg.wxs" src="src/ProgressDlg.cpp" hdr="src/ProgressDlg.h" fwddecl="0" i18n="1" name="ProgressDlg" language="CPP" />
 					<wxDialog wxs="wxsmith/AnimationDlg.wxs" src="src/AnimationDlg.cpp" hdr="src/AnimationDlg.h" fwddecl="0" i18n="1" name="AnimationDlg" language="CPP" />
+					<wxDialog wxs="wxsmith/ButtonEditDlg.wxs" src="src/ButtonEditDlg.cpp" hdr="src/ButtonEditDlg.h" fwddecl="0" i18n="1" name="ButtonEditDlg" language="CPP" />
+					<wxDialog wxs="wxsmith/ButtonAddParamDlg.wxs" src="src/ButtonAddParamDlg.cpp" hdr="src/ButtonAddParamDlg.h" fwddecl="0" i18n="1" name="ButtonAddParamDlg" language="CPP" />
 				</resources>
 			</wxsmith>
 			<envvars />
