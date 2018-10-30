@@ -11,10 +11,10 @@
 #define ANIMATIONDLG_H
 
 //(*Headers(AnimationDlg)
-#include <wx/sizer.h>
-#include <wx/grid.h>
 #include <wx/bmpbuttn.h>
 #include <wx/dialog.h>
+#include <wx/grid.h>
+#include <wx/sizer.h>
 //*)
 #include <wxSVG/SVGAnimateElement.h>
 #include <vector>
@@ -36,9 +36,9 @@ private:
 	void OnOkBt(wxCommandEvent& event);
 		
 	//(*Declarations(AnimationDlg)
+	wxBitmapButton* m_addBt;
 	wxBitmapButton* m_delBt;
 	wxGrid* m_grid;
-	wxBitmapButton* m_addBt;
 	//*)
 
 	//(*Identifiers(AnimationDlg)
