@@ -907,11 +907,11 @@ void wxPropDlg::OnShowTooltip(wxMouseEvent& event) {
 		SendMessageW(hwndToolTips, TTM_TRACKPOSITION, 0, (LPARAM)MAKELONG(event.GetX(), event.GetY()));
 	}
 #else
-	wxRichToolTip* tip = new wxRichToolTip(m_tooltipTitle[idx], m_tooltipText[idx]);
-	tip->SetIcon(m_tooltipIcon[idx]);
-	tip->SetTipKind(wxTipKind_Bottom);
-	tip->SetTimeout(3000, 0);
-	tip->ShowFor((wxWindow*) event.GetEventObject());
+	wxRichToolTip tip(m_tooltipTitle[idx], m_tooltipText[idx]);
+	tip.SetIcon(m_tooltipIcon[idx]);
+	tip.SetTipKind(wxTipKind_Bottom);
+	tip.SetTimeout(3000, 0);
+	tip.ShowFor((wxWindow*) event.GetEventObject());
 #endif
 }
 
