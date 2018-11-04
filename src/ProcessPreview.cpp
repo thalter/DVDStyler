@@ -75,7 +75,7 @@ Please open the following directory with your favorite DVD player: ");
 				cmd += wxT(" \"dvd:///$DIR\"");
 		}
 		cmd.Replace(wxT("$DIR"), dvdOutDir.Mid(0, dvdOutDir.length() - 1));
-		if (!Exec(cmd)) {
+		if (!ExecAsync(cmd)) {
 			wxString msg = _("Starting of selected DVD player is failed. \
 Please open the following directory with your favorite DVD player: ");
 			msg += dvdOutDir;
