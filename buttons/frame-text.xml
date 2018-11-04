@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- Created by ecodrv -->
+<button>
+	<title>Frame and Text</title>
+	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<defs>
+			<clipPath id="cp">
+				<rect id="def_frame" x="5%" y="5%" width="90%" height="72%" rx="20"/>
+			</clipPath>
+			<filter id="frameshadowFilter">
+				<feGaussianBlur stdDeviation="3"/>
+			</filter>
+			<filter id="textshadowFilter">
+				<feGaussianBlur stdDeviation="2"/>
+			</filter>
+		</defs>
+		<use xlink:href="#def_frame" style="fill:#101010;stroke:none;"/>
+		<image id="image" x="5%" y="5%" width="90%" height="72%" preserveAspectRatio="xmidymid slice" style="clip-path:url(#cp);opacity:1;"/>
+		<use id="frameshadow" xlink:href="#rect" x="2" y="2" style="fill:none;filter:url(#frameshadowFilter);stroke:#404040;stroke-opacity:1;visibility:hidden;"/>
+		<g id="body_rect" style="fill:none;stroke:#ffffff;">
+			<use id="rect" xlink:href="#def_frame" style="stroke-width:5;"/>
+		</g>
+		<use id="textshadow" xlink:href="#text" x="2" y="2" style="fill:#202020;fill-opacity:1;filter:url(#textshadowFilter);visibility:hidden;"/>
+		<g id="body_text" style="fill:#ffffff;fill-opacity:1;stroke:none;">
+			<text id="text" transform="translate(0,0)" x="50%" y="83%" xml:space="preserve" style="dominant-baseline:text-after-edge;text-anchor:middle;font-size:20;font-style:normal;font-weight:normal;">T</text>
+		</g>
+	</svg>
+	<parameters>
+		<parameter>
+			<title>Image</title>
+			<name>href</name>
+			<type>image</type>
+			<element>image</element>
+			<attribute>xlink:href</attribute>
+		</parameter>
+		<parameter>
+			<title>Border width</title>
+			<name>stroke-width</name>
+			<type>integer</type>
+			<element>rect</element>
+			<attribute>stroke-width</attribute>
+		</parameter>
+		<parameter>
+			<title>Corner round</title>
+			<name>rx</name>
+			<type>integer</type>
+			<element>def_frame</element>
+			<attribute>rx</attribute>
+		</parameter>
+		<parameter>
+			<title>Border colour</title>
+			<name>stroke</name>
+			<type>colour</type>
+			<element>body_rect</element>
+			<attribute>stroke</attribute>
+			<changeable/>
+			<default-value>
+				<highlighted>#FF0000</highlighted>
+				<selected>#FFFF00</selected>
+			</default-value>
+		</parameter>
+		<parameter>
+			<title>Shadow</title>
+			<name>frame_shadow</name>
+			<type>shadow</type>
+			<element>frameshadow</element>
+			<attribute>stroke</attribute>
+		</parameter>
+		<parameter>
+			<title>Text colour</title>
+			<name>text_fill</name>
+			<type>colour</type>
+			<element>body_text</element>
+			<attribute>fill</attribute>
+		</parameter>
+		<parameter>
+			<title>Shadow</title>
+			<name>text_shadow</name>
+			<type>shadow</type>
+			<element>textshadow</element>
+			<attribute>fill</attribute>
+		</parameter>
+		<parameter>
+			<title>Text offset</title>
+			<name>textOffset</name>
+			<type>integer(-500,50)</type>
+			<element>text</element>
+			<attribute>transform#2</attribute>
+		</parameter>
+		<parameter>
+			<title>Text</title>
+			<name>text</name>
+			<type>text</type>
+			<element>text</element>
+		</parameter>
+	</parameters>
+	<init-parameter>href</init-parameter>
+	<init-parameter>text</init-parameter>
+	<default-size>
+		<width>188</width>
+		<height>131</height>
+	</default-size>
+	<min-size>
+		<width>8</width>
+		<height>8</height>
+	</min-size>
+</button>
