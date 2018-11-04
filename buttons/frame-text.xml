@@ -67,6 +67,12 @@
 			<attribute>stroke</attribute>
 		</parameter>
 		<parameter>
+			<title>Text</title>
+			<name>text</name>
+			<type>text</type>
+			<element>text</element>
+		</parameter>
+		<parameter>
 			<title>Text colour</title>
 			<name>text_fill</name>
 			<type>colour</type>
@@ -86,12 +92,6 @@
 			<type>integer(-500,50)</type>
 			<element>text</element>
 			<attribute>transform#2</attribute>
-		</parameter>
-		<parameter>
-			<title>Text</title>
-			<name>text</name>
-			<type>text</type>
-			<element>text</element>
 		</parameter>
 	</parameters>
 	<init-parameter>href</init-parameter>
