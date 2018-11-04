@@ -15,6 +15,11 @@ bool Process::Exec(wxString command, wxString inputFile, wxString outputFile) {
 	return exec.Execute(command, inputFile, outputFile);
 }
 
+bool Process::ExecAsync(wxString command) {
+	progressDlg->AddDetailMsg(_("Executing command: ") + command);
+	return wxExecute(command) != 0;
+}
+
 bool Process::DeleteFile(wxString fname) {
 	if (wxFileExists(fname) && !wxRemoveFile(fname)) {
 		progressDlg->AddDetailMsg(wxString::Format(_("Can't remove file '%s'"), fname.c_str()), *wxRED);
