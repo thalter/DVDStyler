@@ -15,6 +15,7 @@
 #include <set>
 
 class PgcArray;
+class wxProgressDialog;
 #define StringSet std::set<wxString>
 
 class Pgc {

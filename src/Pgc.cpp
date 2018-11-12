@@ -9,6 +9,7 @@
 /////////////////////////////////////////////////////////////////////////////
 
 #include "Pgc.h"
+#include "Menu.h"
 #include "DVD.h"
 #include "Config.h"
 #include <wx/tokenzr.h>

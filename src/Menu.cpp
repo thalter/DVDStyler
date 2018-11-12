@@ -150,7 +150,7 @@ void Menu::UpdateResolution(double fx, double fy) {
 		obj->SetX(round(obj->GetX()*fx/2)*2);
 		obj->SetY(round(obj->GetY()*fy/2)*2);
 		// update object size
-		if (!obj->IsDefaultSize() || obj->GetObjectParam(wxT("text")) == NULL) {
+		if (!obj->IsDefaultSize() || obj->GetParamByName(wxT("text")) == NULL) {
 			obj->SetDefaultSize(false);
 			obj->SetWidth(round(obj->GetWidth()*fy));
 			obj->SetHeight(round(obj->GetHeight()*fy));
@@ -321,8 +321,8 @@ void Menu::RemoveChangeable(wxSVGElement* element, MenuObject* obj) {
 		if (elem->GetId().length()) {
 			// check if element has changeable attributes
 			bool isChangeable = false;
-			for (int i = 0; i < obj->GetObjectParamsCount(); i++) {
-				MenuObjectParam* param = obj->GetObjectParam(i);
+			for (unsigned int i = 0; i < obj->GetParams().size(); i++) {
+				MenuObjectParam* param = obj->GetParams()[i];
 				if (!param->isChangeable())
 					continue;
 				for (vector<wxString>::const_iterator elemIt = param->element.begin();
@@ -357,8 +357,8 @@ bool Menu::RemoveNotChangeable(wxSVGElement* element, MenuObject* obj) {
 		if (elem->GetId().length()) {
 			// check if element has changeable attributes
 			bool isChangeable = false;
-			for (int i = 0; i < obj->GetObjectParamsCount(); i++) {
-				MenuObjectParam* param = obj->GetObjectParam(i);
+			for (unsigned int i = 0; i < obj->GetParams().size(); i++) {
+				MenuObjectParam* param = obj->GetParams()[i];
 				for (vector<wxString>::const_iterator elemIt = param->element.begin();
 						elemIt != param->element.end(); elemIt++) {
 					if (*elemIt == elem->GetId() && param->changeable) {
@@ -454,8 +454,8 @@ wxSVGSVGElement* Menu::GetSVGCopy(MenuDrawType drawType) {
 				wxSVGSVGElement* symbol = (wxSVGSVGElement*)svgNode->GetElementById(wxT("s_") + obj->GetId());
 				if (symbol)
 					RemoveNotChangeable(symbol, obj);
-				for (int i = 0; i < obj->GetObjectParamsCount(); i++) {
-					MenuObjectParam* param = obj->GetObjectParam(i);
+				for (unsigned int i = 0; i < obj->GetParams().size(); i++) {
+					MenuObjectParam* param = obj->GetParams()[i];
 					if (param->isChangeable() && drawType != mdBUTTONS_NORMAL) {
 						for (vector<wxString>::const_iterator elemIt = param->element.begin();
 								elemIt != param->element.end(); elemIt++) {
@@ -508,8 +508,8 @@ int Menu::ReduceColours() {
 		MenuObject& obj = *GetObject(i);
 		if (!obj.IsButton() || !obj.GetAction().IsValid(m_dvd, m_tsi, m_pgci, true))
 			continue;
-		for (int j = 0; j < obj.GetObjectParamsCount(); j++) {
-			MenuObjectParam* param = obj.GetObjectParam(j);
+		for (unsigned int j = 0; j < obj.GetParams().size(); j++) {
+			MenuObjectParam* param = obj.GetParams()[j];
 			if (param->isChangeable()) {
 				palette.Add(s_config.GetDrawButtonsOnBackground() ? wxColour() : param->normalColour,
 						param->highlightedColour, param->selectedColour);
@@ -528,8 +528,8 @@ int Menu::ReduceColours() {
 		MenuObject& obj = *GetObject(i);
 		if (!obj.IsButton() || !obj.GetAction().IsValid(m_dvd, m_tsi, m_pgci, true))
 			continue;
-		for (int j = 0; j < obj.GetObjectParamsCount(); j++) {
-			MenuObjectParam* param = obj.GetObjectParam(j);
+		for (unsigned int j = 0; j < obj.GetParams().size(); j++) {
+			MenuObjectParam* param = obj.GetParams()[j];
 			if (param->isChangeable()) {
 				wxColour tmp;
 				if (palette.Apply(param, s_config.GetDrawButtonsOnBackground())) {

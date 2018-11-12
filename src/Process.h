@@ -37,6 +37,9 @@ protected:
 	/** Executes given command */
 	bool Exec(wxString command, wxString inputFile = wxEmptyString, wxString outputFile = wxEmptyString);
 	
+	/** Executes given command in background */
+	bool ExecAsync(wxString command);
+	
 	/** Removes given file and print error message if it failed */
 	bool DeleteFile(wxString fname);
 };  

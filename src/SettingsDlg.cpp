@@ -12,6 +12,7 @@
 #include "Config.h"
 #include "Languages.h"
 #include "DVD.h"
+#include "MenuObject.h"
 #include "Cache.h"
 #include <wxVillaLib/utils.h>
 #include <wx/notebook.h>

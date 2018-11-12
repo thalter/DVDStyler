@@ -26,6 +26,7 @@ SET size=
 SET HQ=NO
 SET height=
 SET CQM=
+SET maxrate=8500000
 
 
 REM -----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -117,10 +118,11 @@ SET /A twopass_threshold=%twopass_threshold% * 1000
 SET /A MediumBitrate_threshold=%MediumBitrate_threshold% * 1000
 SET /A LowBitrate_threshold=%LowBitrate_threshold% * 1000
 IF EXIST "%Matrix_High%.txt" SET /P CQM=<"%Matrix_High%.txt" & SET Matrix=%Matrix_High%
+IF %bitrate% GTR 8000000 SET maxrate=9500000
 IF %bitrate% LSS %MediumBitrate_threshold% IF EXIST "%Matrix_Medium%.txt" SET /P CQM=<"%Matrix_Medium%.txt" & SET Matrix=%Matrix_Medium%
 IF %bitrate% LSS %LowBitrate_threshold% IF EXIST "%Matrix_Low%.txt" SET /P CQM=<"%Matrix_Low%.txt" & SET Matrix=%Matrix_Low%
-IF %bitrate% LSS %twopass_threshold% GOTO 2pass
-IF %bitrate% GEQ %VBR_threshold% GOTO CBR
+IF %bitrate% LEQ %twopass_threshold% GOTO 2pass
+IF %bitrate% GTR %VBR_threshold% GOTO CBR
 
 
 REM -----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -130,12 +132,12 @@ REM ----------------------------------------------------------------------------
 SET mode=1-pass VBR
 SET ORIGINAL=!ORIGINAL: -g 15 = -g 12 !
 SET ORIGINAL=!ORIGINAL: -g 18 = -g 12 !
-SET ORIGINAL=!ORIGINAL:-maxrate:v:0 %bitrate%=-maxrate:v:0 8500000 -dc 10 -bf 2 -qmin 1 -lmin 0.75 -mblmin 50!
+SET ORIGINAL=!ORIGINAL:-maxrate:v:0 %bitrate%=-maxrate:v:0 %maxrate% -dc 10 -bf 2 -qmin 1 -lmin 0.75 -mblmin 50!
 SET ORIGINAL=!ORIGINAL:-minrate:v:0 %bitrate% =!
 SET ORIGINAL=!ORIGINAL:-c:v:0 mpeg2video=-c:v:0 mpeg2video %CQM%!
 SET HQ_params=%HQ_params:-bf 2=%
-IF %bitrate% LSS %HQ_threshold% SET ORIGINAL=!ORIGINAL:-c:v:0 mpeg2video=-c:v:0 mpeg2video %HQ_params%! & SET HQ=YES
-IF "%HQ%"=="NO" IF %bitrate% LSS %XHQ_threshold% SET ORIGINAL=!ORIGINAL:-c:v:0 mpeg2video=-c:v:0 mpeg2video %HQ_params%! & SET HQ=YES
+IF %bitrate% LEQ %HQ_threshold% SET ORIGINAL=!ORIGINAL:-c:v:0 mpeg2video=-c:v:0 mpeg2video %HQ_params%! & SET HQ=YES
+IF "%HQ%"=="NO" IF %bitrate% LEQ %XHQ_threshold% SET ORIGINAL=!ORIGINAL:-c:v:0 mpeg2video=-c:v:0 mpeg2video %HQ_params%! & SET HQ=YES
 GOTO dont_touch
 
 
@@ -152,8 +154,8 @@ SET ORIGINAL=!ORIGINAL:maxrate:v:0 %bitrate%=maxrate:v:0 %Fixed_Rate%!
 
 :NoFix
 SET ORIGINAL=!ORIGINAL:-c:v:0 mpeg2video=-c:v:0 mpeg2video -dc 10 %CQM%!
-IF %bitrate% LSS %HQ_threshold% SET ORIGINAL=!ORIGINAL:-c:v:0 mpeg2video=-c:v:0 mpeg2video %HQ_params%! & SET HQ=YES
-IF "%HQ%"=="NO" IF %bitrate% LSS %XHQ_threshold% SET ORIGINAL=!ORIGINAL:-c:v:0 mpeg2video=-c:v:0 mpeg2video %HQ_params%! & SET HQ=YES
+IF %bitrate% LEQ %HQ_threshold% SET ORIGINAL=!ORIGINAL:-c:v:0 mpeg2video=-c:v:0 mpeg2video %HQ_params%! & SET HQ=YES
+IF "%HQ%"=="NO" IF %bitrate% LEQ %XHQ_threshold% SET ORIGINAL=!ORIGINAL:-c:v:0 mpeg2video=-c:v:0 mpeg2video %HQ_params%! & SET HQ=YES
 
 :dont_touch
 setlocal DisableDelayedExpansion
@@ -175,15 +177,15 @@ SET mode=2-pass VBR
 SET FIRST=%ORIGINAL%
 SET FIRST=!FIRST: -g 15 = -g 12 !
 SET FIRST=!FIRST: -g 18 = -g 12 !
-SET FIRST=!FIRST:-maxrate:v:0 %bitrate%=-maxrate:v:0 8500000 -dc 10 -bf 2 -q:v 2!
+SET FIRST=!FIRST:-maxrate:v:0 %bitrate%=-maxrate:v:0 %maxrate% -dc 10 -bf 2 -q:v 2!
 SET FIRST=!FIRST:-minrate:v:0 %bitrate% =!
-IF %bitrate% LSS %XHQ_threshold% IF EXIST "Fox New.txt" SET /P CQM=<"Fox New.txt" & SET Matrix=Fox New
-IF %bitrate% LSS %HQ_threshold% SET HQ_params=-b_strategy 2 -brd_scale 2 -profile:v 4
-IF %bitrate% LSS %XHQ_threshold% SET HQ_params=-b_strategy 2 -brd_scale 2 -profile:v 4
+IF %bitrate% LEQ %XHQ_threshold% IF EXIST "Fox New.txt" SET /P CQM=<"Fox New.txt" & SET Matrix=Fox New
+IF %bitrate% LEQ %HQ_threshold% SET HQ_params=-b_strategy 2 -brd_scale 2 -profile:v 4
+IF %bitrate% LEQ %XHQ_threshold% SET HQ_params=-b_strategy 2 -brd_scale 2 -profile:v 4
 SET FIRST=!FIRST:-c:v:0 mpeg2video=-c:v:0 mpeg2video %CQM%!
-IF %bitrate% LSS %HQ_threshold% SET FIRST=!FIRST:-c:v:0 mpeg2video=-c:v:0 mpeg2video %HQ_params%! & SET HQ=YES
-IF "%HQ%"=="NO" IF %bitrate% LSS %XHQ_threshold% SET FIRST=!FIRST:-c:v:0 mpeg2video=-c:v:0 mpeg2video %HQ_params%!
-IF %bitrate% LSS %XHQ_threshold% SET HQ=YES (extreme)
+IF %bitrate% LEQ %HQ_threshold% SET FIRST=!FIRST:-c:v:0 mpeg2video=-c:v:0 mpeg2video %HQ_params%! & SET HQ=YES
+IF "%HQ%"=="NO" IF %bitrate% LEQ %XHQ_threshold% SET FIRST=!FIRST:-c:v:0 mpeg2video=-c:v:0 mpeg2video %HQ_params%!
+IF %bitrate% LEQ %XHQ_threshold% SET HQ=YES (extreme)
 IF NOT DEFINED out_m2v SET FIRST=!FIRST:%out%=-an -passlogfile "%out_path%ffmpeg" -pass 1 -y "NUL.avi"! & GOTO second
 SET FIRST=!FIRST:%out_m2v%=-an -passlogfile "%out_path%ffmpeg" -pass 1 -y "NUL.avi"!
 SET /A pos=0
@@ -198,11 +200,11 @@ SET FIRST=!FIRST:~0,%pos%!
 SET SECOND=%ORIGINAL%
 SET SECOND=!SECOND: -g 15 = -g 12 !
 SET SECOND=!SECOND: -g 18 = -g 12 !
-SET SECOND=!SECOND:-maxrate:v:0 %bitrate%=-maxrate:v:0 8500000 -dc 10 -bf 2 -lmin 0.75 -mblmin 50 -qmin 1!
+SET SECOND=!SECOND:-maxrate:v:0 %bitrate%=-maxrate:v:0 %maxrate% -dc 10 -bf 2 -lmin 0.75 -mblmin 50 -qmin 1!
 SET SECOND=!SECOND:-minrate:v:0 %bitrate% =!
 FOR /F "tokens=1,2 delims==" %%a IN (ff_vbr.ini) DO IF %%a==HQ_params SET HQ_params=%%b
 SET HQ_params=%HQ_params:-bf 2=%
-IF %bitrate% LSS %XHQ_threshold% SET HQ_params=-pre_dia_size 5 -dia_size 5 -qcomp 0.7 -qblur 0 -preme 2 -me_method dia -sc_threshold 0 -sc_factor 4 -bidir_refine 4 -profile:v 4 -mbd rd -mbcmp satd -precmp satd -cmp satd -subcmp satd -skipcmp satd
+IF %bitrate% LEQ %XHQ_threshold% SET HQ_params=-pre_dia_size 5 -dia_size 5 -qcomp 0.7 -qblur 0 -preme 2 -me_method dia -sc_threshold 0 -bidir_refine 4 -profile:v 4 -mbd rd -mbcmp satd -precmp satd -cmp satd -subcmp satd -skipcmp satd
 SET SECOND=!SECOND:-c:v:0 mpeg2video=-c:v:0 mpeg2video %CQM%!
 IF NOT "%HQ%"=="NO" SET SECOND=!SECOND:-c:v:0 mpeg2video=-c:v:0 mpeg2video %HQ_params%!
 IF NOT DEFINED out_m2v SET SECOND=!SECOND:%out%=-passlogfile "%out_path%ffmpeg" -pass 2 %out%! & GOTO twopasslog

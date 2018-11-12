@@ -11,7 +11,8 @@
 #ifndef SLIDESHOW_H
 #define SLIDESHOW_H
 
-#include "Menu.h"
+#include "DVDAction.h"
+#include "mediaenc.h"
 #include <vector>
 using namespace std;
 

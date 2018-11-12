@@ -23,7 +23,7 @@ const wxString s_translations[][2] = {
 	{ wxT("Korean"), wxString(wxT("김프사랑 <yongdoria at gmail.com>"), wxConvUTF8) },
 	{ wxT("Macedonian"), wxT("Damjan Dimitrioski <damjandimitrioski at gmail.com>") },
 	{ wxT("Norwegian"), wxString(wxT("Olav Inge Frøynes <olavinge at gmail.com>"), wxConvUTF8) },
-	{ wxT("Polish"), wxString(wxT("Michał Trzebiatowski <hippie_1968 at hotmail.com>"), wxConvUTF8) },
+	{ wxT("Polish"), wxString(wxT("Maciej <aaciej at gmail.com>, Michał Trzebiatowski <hippie_1968 at hotmail.com>"), wxConvUTF8) },
 	{ wxT("Portuguese"), wxString(wxT("João Frade / / 100 NOME PT <100nome.portugal at gmail.com>"), wxConvUTF8) },
 	{ wxT("Portuguese (Brazilian)"), wxString(wxT("Paulo Eduardo (SKYFORGE) <skyforge at hotmail.com.br>, Henrique Barone <henrique.blender at gmail.com>, Paulo Henrique Araújo <paulohenriqueyer at hotmail.com>, Igor Ruckert <igorruckert at yahoo.com.br>"), wxConvUTF8) },
 	{ wxT("Romanian"), wxT("Dan Ibanescu <ibanescu.dan at gmail.com>") },

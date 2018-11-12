@@ -577,7 +577,8 @@ wxString MenuEditor::HitTest(int x, int y) {
 				child->UpdateMatrix(matrix);
 				p = p.MatrixTransform(matrix.Inverse());
 			}
-			wxSVGRect bbox = child->GetBBox();
+			wxSVGRect bbox = wxSVGRect(child->GetX().GetAnimVal(), child->GetY().GetAnimVal(),
+					child->GetWidth().GetAnimVal(), child->GetHeight().GetAnimVal());
 			if (!bbox.IsEmpty()
 					&& p.GetX() >= bbox.GetX() && p.GetX() <= bbox.GetX() + bbox.GetWidth()
 					&& p.GetY() >= bbox.GetY() && p.GetY() <= bbox.GetY() + bbox.GetHeight()) {
@@ -704,7 +705,7 @@ wxRect MenuEditor::CreateSelection(wxString id) {
 	selRect->SetY(bbox.GetY());
 	selRect->SetWidth(bbox.GetWidth());
 	selRect->SetHeight(bbox.GetHeight());
-	if (obj->GetAngle() != 0 && obj->GetObjectParam(wxT("rotation")) == NULL) {
+	if (obj->GetAngle() != 0 && obj->GetParamByName(wxT("rotation")) == NULL) {
 		selRect->SetTransform(wxSVGAnimatedTransformList());
 		selRect->Rotate(obj->GetAngle(), bbox.GetX() + bbox.GetWidth()/2, bbox.GetY() + bbox.GetHeight()/2);
 	}
@@ -1517,8 +1518,8 @@ void MenuEditor::OnProperties(wxCommandEvent& event) {
 				MenuObject* obj = m_menu->GetObject(*it);
 				if (obj->GetId() == m_actionObject)
 					continue;
-				for (int i = 0; i < actionObj->GetObjectParamsCount(); i++) {
-					MenuObjectParam* param = actionObj->GetObjectParam(i);
+				for (unsigned int i = 0; i < actionObj->GetParams().size(); i++) {
+					MenuObjectParam* param = actionObj->GetParams()[i];
 					if (param->changeable && param->type == wxT("colour")) {
 						obj->SetParamColour(param->name, param->normalColour);
 						obj->SetParamColour(param->name, param->highlightedColour, mbsHIGHLIGHTED);

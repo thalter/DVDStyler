@@ -9,6 +9,7 @@
 
 #include "ProcessMenu.h"
 #include "DVD.h"
+#include "Menu.h"
 #include "Config.h"
 #include "mediaenc_ffmpeg.h"
 #include "mediatrc_ffmpeg.h"

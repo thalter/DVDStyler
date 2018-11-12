@@ -209,7 +209,6 @@ bool Vob::AddAudioFile(wxString filename) {
 /** Adds the given subtitles file to the vob */
 bool Vob::AddSubtitlesFile(wxString filename) {
 	TextSub* textSub = new TextSub(filename);
-#if wxCHECK_VERSION(2,9,0)
 	// detect encoding
 	wxFile file;
 	if (!file.Open(filename))
@@ -234,9 +233,10 @@ bool Vob::AddSubtitlesFile(wxString filename) {
 		if (encoding.StartsWith(wxT("windows-"))) {
 			encoding = wxT("CP") + encoding.substr(8);
 		}
-		textSub->SetCharacterSet(encoding);
+		if (encoding.length()) {
+			textSub->SetCharacterSet(encoding);
+		}
 	}
-#endif
 	m_subtitles.Add(textSub);
 	return true;
 }

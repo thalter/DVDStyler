@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxDialog" name="ButtonAddParamDlg">
+		<title>Add parameter</title>
+		<size>750,400</size>
+		<id_arg>0</id_arg>
+		<style>wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER</style>
+		<object class="wxBoxSizer" variable="mainSizer" member="no">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<object class="wxSplitterWindow" name="ID_SPLITTERWINDOW1" variable="m_splitterWindow" member="yes">
+					<minpanesize>10</minpanesize>
+					<orientation>vertical</orientation>
+					<object class="wxPanel" name="ID_PANEL1" variable="panel1" member="no">
+						<pos>6,5</pos>
+						<object class="wxBoxSizer" variable="BoxSizer1" member="no">
+							<orient>wxVERTICAL</orient>
+							<object class="sizeritem">
+								<object class="wxStaticText" name="wxID_ANY" variable="StaticText1" member="no">
+									<label>Please select an SVG element&#x0A;for new parameter:</label>
+								</object>
+								<flag>wxBOTTOM|wxEXPAND</flag>
+								<border>5</border>
+							</object>
+							<object class="sizeritem">
+								<object class="wxListBox" name="ID_LISTBOX1" variable="m_elementsListBox" member="yes">
+									<default>-1</default>
+									<handler function="OnSelectSvgElement" entry="EVT_LISTBOX" />
+								</object>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<option>1</option>
+							</object>
+						</object>
+					</object>
+					<object class="Custom" name="ID_SVG_CTRL" subclass="wxSVGCtrl" variable="m_svgCtrl" member="yes">
+						<creating_code>$(THIS) = new $(CLASS)($(PARENT),$(ID),$(POS),$(SIZE),0,$(NAME));</creating_code>
+						<include_file>wxSVG/svgctrl.h</include_file>
+					</object>
+				</object>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxStdDialogButtonSizer" variable="StdDialogButtonSizer1" member="no">
+					<object class="button">
+						<object class="wxButton" name="wxID_OK">
+							<label></label>
+						</object>
+					</object>
+					<object class="button">
+						<object class="wxButton" name="wxID_CANCEL">
+							<label></label>
+						</object>
+					</object>
+				</object>
+				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+			</object>
+		</object>
+	</object>
+</wxsmith>

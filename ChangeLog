@@ -1,3 +1,11 @@
+Version 3.1 beta 3 <2018-11-04>
+-------------------------------
+
+  * added possibility to create a new button from SVG file
+  * added possibility to edit buttons
+  * win32: fixed starting VLC player 
+  * added frame-text button and template (thanks to ecodrv)
+
 Version 3.1 beta 2 <2018-01-24>
 -------------------------------
 

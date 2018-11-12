@@ -15,8 +15,8 @@
 #include "rc/remove.png.h"
 
 //(*InternalHeaders(AnimationDlg)
-#include <wx/intl.h>
 #include <wx/button.h>
+#include <wx/intl.h>
 #include <wx/string.h>
 //*)
 
@@ -26,6 +26,7 @@ public:
 			m_animations(animations) {
 		// parameters
 		const wxString attributes[] = { wxT("x"), wxT("y"), wxT("width"), wxT("height"), wxT("opacity") };
+		const wxString labels[] = { wxT("x"), wxT("y"), _("width"), _("height"), _("opacity") };
 		for (unsigned int i = 0; i < WXSIZEOF(attributes); i++) {
 			wxString label = wxGetTranslation(attributes[i]);
 			if (attributes[i] == wxT("opacity")) {
@@ -35,8 +36,8 @@ public:
 			paramElements.Add(wxT(""));
 			paramAttributes.Add(attributes[i]);
 		}
-		for (int i = 0; i < object->GetObjectParamsCount(); i++) {
-			MenuObjectParam* param = object->GetObjectParam(i);
+		for (unsigned int i = 0; i < object->GetParams().size(); i++) {
+			MenuObjectParam* param = object->GetParams()[i];
 			if (param->type != wxT("integer") && param->type != wxT("decimal") && param->type != wxT("percent")
 					&& param->type != wxT("colour") && param->type != wxT("text")) {
 				continue;
@@ -199,10 +200,10 @@ AnimationDlg::AnimationDlg(wxWindow* parent, MenuObject* menuObject) {
 	VECTOR_COPY(v, m_animations, wxSVGAnimateElement)
 	
 	//(*Initialize(AnimationDlg)
-	wxBoxSizer* boxSizer3;
 	wxBoxSizer* boxSizer2;
-	wxStdDialogButtonSizer* stdDialogButtonSizer;
+	wxBoxSizer* boxSizer3;
 	wxBoxSizer* mainSizer;
+	wxStdDialogButtonSizer* stdDialogButtonSizer;
 
 	Create(parent, wxID_ANY, _("Animations"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE, _T("wxID_ANY"));
 	mainSizer = new wxBoxSizer(wxVERTICAL);

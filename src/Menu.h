@@ -146,6 +146,7 @@ public:
 	
 	bool SaveSpumux(wxString fileName, SubStreamMode mode, wxString btFile, wxString hlFile, wxString selFile);
 	wxSvgXmlNode* GetXML(DVDFileType type, wxSvgXmlNode* node = NULL);
+	/** Initializes object with XML data */
 	bool PutXML(wxSvgXmlNode* node);
 	/** Stores object data to string */
 	wxString Serialize();

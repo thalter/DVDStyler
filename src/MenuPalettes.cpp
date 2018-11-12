@@ -59,8 +59,8 @@ MenuPalettes::MenuPalettes(MenuObject& obj, bool drawButtonsOnBackground) {
 	// palette 1 for buttons_normal => all colours + transport colour
 	IntHashSet colours;
 	if (!m_drawButtonsOnBackground) {
-		for (int i = 0; i < obj.GetObjectParamsCount(); i++) {
-			MenuObjectParam* param = obj.GetObjectParam(i);
+		for (unsigned int i = 0; i < obj.GetParams().size(); i++) {
+			MenuObjectParam* param = obj.GetParams()[i];
 			if (param->isChangeable()) {
 				wxColour& colour = param->normalColour;
 				int value = colour.Ok() ? (colour.Red() << 16) + (colour.Green() << 8) + colour.Blue() : -1;
@@ -73,8 +73,8 @@ MenuPalettes::MenuPalettes(MenuObject& obj, bool drawButtonsOnBackground) {
 	
 	// palette(s) 2 for buttons_highlighted => a palette per colour from palette 1
 	IntHashSetMap coloursMap;
-	for (int i = 0; i < obj.GetObjectParamsCount(); i++) {
-		MenuObjectParam* param = obj.GetObjectParam(i);
+	for (unsigned int i = 0; i < obj.GetParams().size(); i++) {
+		MenuObjectParam* param = obj.GetParams()[i];
 		if (param->isChangeable()) {
 			wxColour colour1 = m_drawButtonsOnBackground ? wxColour() : param->normalColour;
 			int key1 = colour1.Ok() ? (colour1.Red() << 16) + (colour1.Green() << 8) + colour1.Blue() : -1;
@@ -89,8 +89,8 @@ MenuPalettes::MenuPalettes(MenuObject& obj, bool drawButtonsOnBackground) {
 	
 	// palette(s) 3 for buttons_selected => a palette per colour from palette 1 and 2
 	IntHashSet2DMap colours2DMap;
-	for (int i = 0; i < obj.GetObjectParamsCount(); i++) {
-		MenuObjectParam* param = obj.GetObjectParam(i);
+	for (unsigned int i = 0; i < obj.GetParams().size(); i++) {
+		MenuObjectParam* param = obj.GetParams()[i];
 		if (param->isChangeable()) {
 			wxColour colour1 = m_drawButtonsOnBackground ? wxColour() : param->normalColour;
 			int key1 = colour1.Ok() ? (colour1.Red() << 16) + (colour1.Green() << 8) + colour1.Blue() : -1;

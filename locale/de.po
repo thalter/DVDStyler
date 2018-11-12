@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: DVDStyler v3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-23 10:31+0200\n"
-"PO-Revision-Date: 2016-06-24 13:24+0200\n"
+"PO-Revision-Date: 2018-10-04 10:16+0200\n"
 "Last-Translator: Alex Thuering <alex at thuering.biz>\n"
 "Language-Team: German <translation-team-de at lists.sourceforge.net>\n"
 "Language: de\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Basepath: ..\n"
-"X-Generator: Poedit 2.0.1\n"
+"X-Generator: Poedit 2.1.1\n"
 "X-Poedit-SearchPath-0: src\n"
 "X-Poedit-SearchPath-1: wxVillaLib\n"
 "X-Poedit-SearchPath-2: buttons\n"
@@ -151,6 +151,18 @@ msgstr "Lizenz"
 msgid "OK"
 msgstr "OK"
 
+#: src/AnimationDlg.cpp:29
+msgid "width"
+msgstr "Breite"
+
+#: src/AnimationDlg.cpp:29
+msgid "height"
+msgstr "Höhe"
+
+#: src/AnimationDlg.cpp:29
+msgid "opacity"
+msgstr "Undurchsichtigkeit"
+
 #: src/AnimationDlg.cpp:45
 msgid "font size"
 msgstr "Schriftgröße"
@@ -276,8 +288,8 @@ msgstr "Brennen"
 msgid "Temp directory:"
 msgstr "Temporärer Ordner:"
 
-#: src/BurnDlg.cpp:114 src/BurnDlg.cpp:138 src/BurnDlg.cpp:160 src/BurnDlg.cpp:186
-#: src/SubtitlePropDlg.cpp:148 src/SubtitlePropDlg.cpp:161 src/SubtitlePropDlg.cpp:179
+#: src/BurnDlg.cpp:114 src/BurnDlg.cpp:138 src/BurnDlg.cpp:160 src/BurnDlg.cpp:186 src/SubtitlePropDlg.cpp:148
+#: src/SubtitlePropDlg.cpp:161 src/SubtitlePropDlg.cpp:179
 msgid "..."
 msgstr "…"
 
@@ -1545,8 +1557,7 @@ msgstr "Ausgewählt"
 msgid "Font..."
 msgstr "Schrift …"
 
-#: src/MenuObjectPropDlg.cpp:384 src/MenuObjectPropDlg.cpp:543 src/MenuPropDlg.cpp:81
-#: src/VideoPropDlg.cpp:137
+#: src/MenuObjectPropDlg.cpp:384 src/MenuObjectPropDlg.cpp:543 src/MenuPropDlg.cpp:81 src/VideoPropDlg.cpp:137
 msgid "Keep Aspect Ratio"
 msgstr "Seitenverhältnis beibehalten"
 
@@ -2833,9 +2844,8 @@ msgstr "Einfacher Pfeil"
 #: buttons/arrow-simple-v2.xml:50 buttons/arrow3d-left.xml:41 buttons/arrow3d-right.xml:41
 #: buttons/ellipse-v2.xml:44 buttons/ellipse45.xml:47 buttons/frame-v2.xml:53 buttons/frame45.xml:63
 #: buttons/home-v2.xml:35 buttons/text-circle-v2.xml:32 buttons/text-square-v2.xml:33
-#: buttons/text-underlined-v3.xml:32 buttons/text-v3.xml:58 objects/ellipse-v3.xml:57
-#: objects/ellipse45.xml:59 objects/frame-v3.xml:67 objects/frame45.xml:76 objects/rectangle-v2.xml:38
-#: objects/text-v2.xml:53
+#: buttons/text-underlined-v3.xml:32 buttons/text-v3.xml:58 objects/ellipse-v3.xml:57 objects/ellipse45.xml:59
+#: objects/frame-v3.xml:67 objects/frame45.xml:76 objects/rectangle-v2.xml:38 objects/text-v2.xml:53
 msgid "Shadow"
 msgstr "Schatten"
 

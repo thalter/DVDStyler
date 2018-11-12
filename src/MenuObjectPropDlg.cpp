@@ -9,6 +9,7 @@
 /////////////////////////////////////////////////////////////////////////////
 
 #include "MenuObjectPropDlg.h"
+#include "Menu.h"
 #include "VideoFrameDlg.h"
 #include "AnimationDlg.h"
 #include "Config.h"
@@ -30,6 +31,8 @@ enum {
 	CUSTOM_ACTION_RADIO_ID,
 	TARGET_CHOICE_ID,
 	CHAPTER_CHOICE_ID,
+	AUDIO_CHOICE_ID,
+	SUBTITLE_CHOICE_ID,
 	AUTO_SIZE_RADIO_ID,
 	KEEP_ASPECT_CB_ID,
 	IMAGE_RADIO_ID,
@@ -46,6 +49,8 @@ BEGIN_EVENT_TABLE(MenuObjectPropDlg, wxPropDlg)
 	EVT_RADIOBUTTON(CUSTOM_ACTION_RADIO_ID, MenuObjectPropDlg::OnCustomActionSelected)
 	EVT_CHOICE(TARGET_CHOICE_ID, MenuObjectPropDlg::OnChangeTarget)
 	EVT_CHOICE(CHAPTER_CHOICE_ID, MenuObjectPropDlg::OnChangeChapter)
+	EVT_CHOICE(AUDIO_CHOICE_ID, MenuObjectPropDlg::OnChangeAudio)
+	EVT_CHOICE(SUBTITLE_CHOICE_ID, MenuObjectPropDlg::OnChangeSubtitle)
 	EVT_RADIOBUTTON(KEEP_ASPECT_CB_ID, MenuObjectPropDlg::OnKeepAspectRatio)
 	EVT_RADIOBUTTON(IMAGE_RADIO_ID, MenuObjectPropDlg::OnImageRadio)
 	EVT_RADIOBUTTON(VIDEOFRAME_RADIO_ID, MenuObjectPropDlg::OnImageRadio)
@@ -80,6 +85,8 @@ MenuObjectPropDlg::MenuObjectPropDlg(wxWindow* parent, wxString id, bool multObj
 	m_videoDuration = 0;
 	m_targetChoice = NULL;
 	m_chapterChoice = NULL;
+	m_audioIcon = -1;
+	m_subtitleIcon = -1;
 	Create();
 	if (!multObjects)
 		SetTitle(GetTitle()+ wxT(" - ") + menu->GetObject(id)->GetId(true));
@@ -167,9 +174,14 @@ void MenuObjectPropDlg::CreatePropPanel(wxSizer* sizer) {
 		for (int i = 0; i < (int) m_dvd->GetAudioStreamCount(); i++)
 			labels.Add(_("track") + wxString::Format(wxT(" %d"), i + 1));
 		AddText(grid, _("Audio") + wxString(wxT(":")), wxALIGN_CENTER_VERTICAL|wxALIGN_RIGHT);
-		wxSizer* s = AddChoiceProp(grid, wxT(""), labels[action.GetAudio()+1], labels, 0, false);
-		if (m_dvd->GetAudioStreamCount() == 1)
+		wxSizer* s = AddChoiceProp(grid, wxT(""), labels[action.GetAudio()+1], labels, 0, false, AUDIO_CHOICE_ID);
+		bool showAudioIcon = ((wxChoice*)GetLastControl())->GetSelection() > 0;
+		if (m_dvd->GetAudioStreamCount() == 1) {
 			GetLastControl()->Enable(false);
+		} else if (m_tsi == -1) {
+			s->Add(2, 2);
+			m_audioIcon = AddIcon(s, _("Warning"), _("Please use titleset menu to select audio tracks."), wxART_WARNING);
+		}
 		s->Add(16, 16);
 		labels.Clear();
 		labels.Add(_("last selected"));
@@ -179,9 +191,15 @@ void MenuObjectPropDlg::CreatePropPanel(wxSizer* sizer) {
 		AddText(s, _("subtitle") + wxString(wxT(":")));
 		s->Add(16, 16);
 		int subtitleIdx = action.GetSubtitle() + 1 < (int) labels.size() ? action.GetSubtitle() + 1 : 0;
-		AddChoiceProp(s, wxT(""), labels[subtitleIdx], labels, 0, true);
-		if (m_dvd->GetSubtitleStreamsCount() == 0)
+		s = AddChoiceProp(s, wxT(""), labels[subtitleIdx], labels, 0, false, SUBTITLE_CHOICE_ID);
+		bool showSubtitleIcon = ((wxChoice*)GetLastControl())->GetSelection() > 0;
+		if (m_dvd->GetSubtitleStreamsCount() == 0) {
 			GetLastControl()->Enable(false);
+		} else if (m_tsi == -1) {
+			s->Add(2, 2);
+			m_subtitleIcon = AddIcon(s, _("Warning"), _("Please use titleset menu to select subtitle tracks."), wxART_WARNING);
+		}
+		s->AddStretchSpacer();
 
 		paneSz->Add(grid, 0, wxEXPAND|wxBOTTOM, 4);
 		AddCheckProp(paneSz, _("Auto execute command by select"), m_object->IsAutoExecute());
@@ -214,6 +232,10 @@ void MenuObjectPropDlg::CreatePropPanel(wxSizer* sizer) {
 #else
 		AddStaticLine(mainSizer, _("Look"));
 #endif
+		if (m_audioIcon >= 0)
+			GetIcon(m_audioIcon)->Show(showAudioIcon);
+		if (m_subtitleIcon >= 0)
+			GetIcon(m_subtitleIcon)->Show(showSubtitleIcon);
 	}
     CreateLook(paneSz);
     if (!m_multObjects)
@@ -276,8 +298,8 @@ void MenuObjectPropDlg::CreateLook(wxBoxSizer* mainSizer) {
     // object look parameters
     bool lastChangeable = false;
     wxFlexGridSizer* grid = NULL;
-    for (int i=0; i<m_object->GetObjectParamsCount(); i++) {
-		MenuObjectParam* param = m_object->GetObjectParam(i);
+    for (unsigned int i=0; i<m_object->GetParams().size(); i++) {
+		MenuObjectParam* param = m_object->GetParams()[i];
 		if (param->name == wxT("rotation")) {
 			continue;
 		}
@@ -728,6 +750,17 @@ void MenuObjectPropDlg::OnChangeChapter(wxCommandEvent& evt) {
 	}
 }
 
+
+void MenuObjectPropDlg::OnChangeAudio(wxCommandEvent& evt) {
+	if (m_audioIcon >= 0)
+		GetIcon(m_audioIcon)->Show(evt.GetSelection() > 0);
+}
+
+void MenuObjectPropDlg::OnChangeSubtitle(wxCommandEvent& evt) {
+	if (m_subtitleIcon >= 0)
+		GetIcon(m_subtitleIcon)->Show(evt.GetSelection() > 0);
+}
+
 void MenuObjectPropDlg::OnJumpActionSelected(wxCommandEvent& evt) {
 	m_targetChoice->Enable(true);
 	m_chapterChoice->Enable(m_chapterChoice->GetCount() > 1 && (m_dvd->IsJumppadsEnabled() || m_tsi != -1));
@@ -918,8 +951,8 @@ bool MenuObjectPropDlg::SetValues() {
 	}
 
 	// set look parameters
-	for (int i = 0; i < m_object->GetObjectParamsCount(); i++) {
-		MenuObjectParam* param = m_object->GetObjectParam(i);
+	for (unsigned int i = 0; i < m_object->GetParams().size(); i++) {
+		MenuObjectParam* param = m_object->GetParams()[i];
 		if (param->name == wxT("rotation")) {
 			continue;
 		}

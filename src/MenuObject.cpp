@@ -10,13 +10,13 @@
 
 #include "DVD.h"
 #include "Menu.h"
+#include "Utils.h"
 #include <wxVillaLib/utils.h>
 #include <wxSVG/svg.h>
 #include <wxSVGXML/svgxmlhelpr.h>
 #include <wx/mstream.h>
 #include <wx/filename.h>
 #include <wx/regex.h>
-#include <wx/tokenzr.h>
 #include <wx/log.h>
 
 #define BUTTONS_DIR wxFindDataDirectory(_T("buttons"))
@@ -28,7 +28,7 @@ wxRegEx s_jumpTitlesetMenu(wxT("jump titleset ([[:digit:]]+) menu;"));
 ///////////////////////////// MenuObject /////////////////////////////////////
 
 MenuObject::MenuObject(Menu* menu, bool vmg, wxString fileName, int x, int y, wxString param):
-		m_action(vmg), m_textOffset(0), m_svg(NULL), m_use(NULL), m_symbol(NULL) {
+		MenuObjectDef(menu != NULL ? menu->GetSVG() : NULL), m_action(vmg), m_use(NULL), m_buttonSVG(NULL) {
 	m_menu = menu;
 	if (menu == NULL) {
 		m_deleteSVG = true;
@@ -52,13 +52,6 @@ MenuObject::MenuObject(Menu* menu, bool vmg, wxString fileName, int x, int y, wx
 	m_customVideoFrame = false;
 	m_displayVobId = DVD::MakeId(0, 0, 0);
 
-	m_defaultSize = true;
-	m_defaultWidth.value = m_defaultHeight.value = 0;
-	m_defaultWidth.valueInc = m_defaultHeight.valueInc = 0;
-	m_defaultWidth.valuePercent = m_defaultHeight.valuePercent = 0;
-	m_minWidth.value = m_minHeight.value = 0;
-	m_minWidth.valueInc = m_minHeight.valueInc = 0;
-	m_minWidth.valuePercent = m_minHeight.valuePercent = 0;
 	m_keepAspectRatio = false;
 	m_aspectRatioElem = NULL;
 
@@ -67,13 +60,11 @@ MenuObject::MenuObject(Menu* menu, bool vmg, wxString fileName, int x, int y, wx
 }
 
 MenuObject::~MenuObject() {
-	WX_CLEAR_ARRAY(m_params)
+	VECTOR_CLEAR(m_params, MenuObjectParam)
 	if (m_use)
 		m_use->GetParent()->RemoveChild(m_use);
-	if (m_symbol)
-		m_symbol->GetParent()->RemoveChild(m_symbol);
-	if (m_deleteSVG)
-		delete m_svg;
+	if (GetButtonSVG())
+		GetButtonSVG()->GetParent()->RemoveChild(GetButtonSVG());
 }
 
 bool MenuObject::Init(wxString fileName, int x, int y, wxString param) {
@@ -90,7 +81,7 @@ bool MenuObject::Init(wxString fileName, int x, int y, wxString param) {
 	m_title = XmlReadValue(root, wxT("title"));
 	
 	if (m_id.length()) { // load button
-		m_symbol = (wxSVGSVGElement*) m_svg->GetElementById(wxT("s_") + m_id);
+		m_buttonSVG = (wxSVGSVGElement*) m_svg->GetElementById(wxT("s_") + m_id);
 		m_use = (wxSVGUseElement*) m_svg->GetElementById(m_id);
 	} else {
 		// create new button
@@ -109,13 +100,13 @@ bool MenuObject::Init(wxString fileName, int x, int y, wxString param) {
 		if (root) {
 			m_defaultWidth.value = root->GetWidth().GetBaseVal();
 			m_defaultHeight.value = root->GetHeight().GetBaseVal();
-			if (!m_symbol)
-				AddSymol(m_id, root);
+			if (!GetButtonSVG())
+				AddButtonSVG(m_id, root);
 			if (!m_use)
-				AddUse(m_id, x, y, m_defaultWidth.value, m_defaultHeight.value);
+				AddUseElement(m_id, x, y, m_defaultWidth.value, m_defaultHeight.value);
 			wxSvgXmlNode* imageNode = XmlFindNode(svgNode, wxT("image"));
 			if (imageNode != NULL) {
-				wxSVGElement* elem = (wxSVGElement*) m_symbol->GetElementById(imageNode->GetAttribute(wxT("id")));
+				wxSVGElement* elem = GetElementById(imageNode->GetAttribute(wxT("id")));
 				if (elem && elem->GetDtd() == wxSVG_IMAGE_ELEMENT)
 					m_aspectRatioElem = (wxSVGImageElement*) elem;
 			}
@@ -129,24 +120,11 @@ bool MenuObject::Init(wxString fileName, int x, int y, wxString param) {
 		while (child) {
 			if (child->GetType() == wxSVGXML_ELEMENT_NODE && child->GetName() == wxT("parameter")) {
 				MenuObjectParam* param = new MenuObjectParam;
-				param->title = XmlReadValue(child, wxT("title"));
-				param->name = XmlReadValue(child, wxT("name"));
-				param->type = XmlReadValue(child, wxT("type"));
-				wxStringTokenizer tokenizer(XmlReadValue(child, wxT("element")), wxT(","), wxTOKEN_RET_EMPTY_ALL);
-				while (tokenizer.HasMoreTokens()) {
-					param->element.push_back(tokenizer.GetNextToken());
-				}
-				param->attribute = XmlReadValue(child, wxT("attribute"));
-				param->changeable = XmlFindNode(child, wxT("changeable")) != NULL && param->type == wxT("colour");
-				m_params.Add(param);
+				param->PutXML(child);
+				m_params.push_back(param);
 				if (param->changeable) {
 					param->changeable = false;
 					param->normalColour = GetParamColour(param->name);
-					wxCSSStyleDeclaration style;
-					style.SetProperty(wxCSS_PROPERTY_STROKE, XmlReadValue(child, wxT("default-value/highlighted")));
-					param->highlightedColour = style.GetStroke().GetRGBColor();
-					style.SetProperty(wxCSS_PROPERTY_STROKE, XmlReadValue(child, wxT("default-value/selected")));
-					param->selectedColour = style.GetStroke().GetRGBColor();
 					param->changeable = true;
 				}
 			}
@@ -164,49 +142,18 @@ bool MenuObject::Init(wxString fileName, int x, int y, wxString param) {
 	// load default size
 	wxSvgXmlNode* defaultSizeNode = XmlFindNode(root, wxT("default-size"));
 	if (defaultSizeNode && defaultSizeNode->GetFirstChild()) {
-		wxString sizeElem = XmlReadValue(defaultSizeNode, wxT("element"));
-		if (sizeElem.length() > 0) {
-			m_defaultWidth.elements.Add(sizeElem);
-			m_defaultHeight.elements.Add(sizeElem);
-		}
-		InitSize(XmlReadValue(defaultSizeNode, wxT("width")), m_defaultWidth);
-		InitSize(XmlReadValue(defaultSizeNode, wxT("height")), m_defaultHeight);
+		InitSize(defaultSizeNode, m_defaultWidth, m_defaultHeight);
 	}
 
 	// load min size
 	wxSvgXmlNode* minSizeNode = XmlFindNode(root, wxT("min-size"));
-	if (minSizeNode) {
-		wxString sizeElem = XmlReadValue(minSizeNode, wxT("element"));
-		if (sizeElem.length() > 0) {
-			m_minWidth.elements.Add(sizeElem);
-			m_minHeight.elements.Add(sizeElem);
-		}
-		InitSize(XmlReadValue(minSizeNode, wxT("width")), m_minWidth);
-		InitSize(XmlReadValue(minSizeNode, wxT("height")), m_minHeight);
+	if (minSizeNode && minSizeNode->GetFirstChild()) {
+		InitSize(minSizeNode, m_minWidth, m_minHeight);
 	}
 
 	UpdateSize();
 
 	return true;
-}
-
-void MenuObject::InitSize(wxString value, MenuObjectSize& size) {
-	long lval = 0;
-	if (value.Index(wxT('|'))) {
-		if (value.BeforeFirst(wxT('|')).ToLong(&lval))
-			size.value = lval;
-		value = value.AfterFirst(wxT('|'));
-	}
-	while (value.Length() > 0) {
-		wxString val = value.BeforeFirst(wxT('+'));
-		if (val.Last() == wxT('%') && val.SubString(0, val.length()-2).ToLong(&lval))
-			size.valuePercent += lval;
-		else if (val.ToLong(&lval))
-			size.valueInc += lval;
-		else
-			size.elements.Add(val);
-		value = value.AfterFirst(wxT('+'));
-	}
 }
 
 bool MenuObject::LoadSVG(wxSVGDocument& svg, wxSvgXmlNode* node) {
@@ -231,31 +178,9 @@ wxString MenuObject::GenerateId(wxString prefix) {
 	return wxT("");
 }
 
-MenuObjectParam* MenuObject::GetObjectParam(wxString name) const {
-	for (unsigned int i = 0; i < m_params.size(); i++) {
-		if (m_params[i]->name == name)
-			return m_params[i];
-	}
-	return NULL;
-}
-
-MenuObjectParam* MenuObject::GetInitParam() {
-	if (!m_initParameter.length())
-		return NULL;
-	return GetObjectParam(m_initParameter);
-}
-
-MenuObjectParam* MenuObject::GetImageParam() {
-	for (unsigned int i = 0; i < m_params.size(); i++) {
-		if (m_params[i]->type == wxT("image"))
-			return m_params[i];
-	}
-	return NULL;
-}
-
 int MenuObject::GetChangebaleColourCount(bool drawButtonsOnBackground) {
 	int count = 0;
-	for (int i = 0; i < (int) m_params.Count(); i++) {
+	for (int i = 0; i < (int) m_params.size(); i++) {
 		if (m_params[i]->isChangeable() && ((m_params[i]->normalColour.IsOk() && !drawButtonsOnBackground)
 				|| m_params[i]->highlightedColour.IsOk() || m_params[i]->selectedColour.IsOk()))
 			count++;
@@ -263,26 +188,26 @@ int MenuObject::GetChangebaleColourCount(bool drawButtonsOnBackground) {
 	return count;
 }
 
-wxSVGSVGElement* MenuObject::AddSymol(wxString id, wxSVGElement* content) {
-	m_symbol = new wxSVGSVGElement;
-	m_symbol->SetId(wxT("s_") + id);
-	m_svg->GetElementById(wxT("defs"))->AppendChild(m_symbol);
+wxSVGSVGElement* MenuObject::AddButtonSVG(wxString id, wxSVGElement* content) {
+	m_buttonSVG = new wxSVGSVGElement;
+	m_buttonSVG->SetId(wxT("s_") + id);
+	m_svg->GetElementById(wxT("defs"))->AppendChild(m_buttonSVG);
 	if (content->GetDtd() == wxSVG_SVG_ELEMENT) {
-		m_symbol->SetViewBox(((wxSVGSVGElement*) content)->GetViewBox());
-		m_symbol->SetPreserveAspectRatio(((wxSVGSVGElement*) content)->GetPreserveAspectRatio());
+		m_buttonSVG->SetViewBox(((wxSVGSVGElement*) content)->GetViewBox());
+		m_buttonSVG->SetPreserveAspectRatio(((wxSVGSVGElement*) content)->GetPreserveAspectRatio());
 	} else if (content->GetDtd() == wxSVG_SYMBOL_ELEMENT) {
-		m_symbol->SetViewBox(((wxSVGSymbolElement*) content)->GetViewBox());
-		m_symbol->SetPreserveAspectRatio(((wxSVGSymbolElement*) content)->GetPreserveAspectRatio());
+		m_buttonSVG->SetViewBox(((wxSVGSymbolElement*) content)->GetViewBox());
+		m_buttonSVG->SetPreserveAspectRatio(((wxSVGSymbolElement*) content)->GetPreserveAspectRatio());
 	}
 	wxSvgXmlElement* child = content->GetChildren();
 	while (child) {
-		m_symbol->AppendChild(((wxSVGSVGElement*) child)->CloneNode());
+		m_buttonSVG->AppendChild(((wxSVGSVGElement*) child)->CloneNode());
 		child = child->GetNext();
 	}
-	return m_symbol;
+	return m_buttonSVG;
 }
 
-void MenuObject::AddUse(wxString id, int x, int y, int width, int height, const wxSVGTransformList* transforms) {
+void MenuObject::AddUseElement(wxString id, int x, int y, int width, int height, const wxSVGTransformList* transforms) {
 	m_use = new wxSVGUseElement;
 	m_use->SetId(id);
 	m_use->SetHref(wxT("#s_") + id);
@@ -298,19 +223,23 @@ void MenuObject::AddUse(wxString id, int x, int y, int width, int height, const 
 		m_svg->GetElementById(wxT("objects"))->AppendChild(m_use);
 }
 
+wxSVGSVGElement* MenuObject::GetButtonSVG() const {
+	return m_buttonSVG;
+}
+
 void MenuObject::SetScale(double scaleX, double scaleY) {
-	wxSVGGElement* transElem = (wxSVGGElement*) m_symbol->GetElementById(TRANS_ELEM_ID);
+	wxSVGGElement* transElem = (wxSVGGElement*) GetButtonSVG()->GetElementById(TRANS_ELEM_ID);
 	if (transElem == NULL) {
 		if (scaleX == 1 && scaleY == 1)
 			return;
 		// add transElem
 		transElem = new wxSVGGElement();
 		transElem->SetId(TRANS_ELEM_ID);
-		m_symbol->AddChild(transElem);
+		GetButtonSVG()->AddChild(transElem);
 		// move all children elements in gElem
-		while (m_symbol->GetFirstChild() != transElem) {
-			wxSvgXmlNode* elem = m_symbol->GetFirstChild();
-			m_symbol->RemoveChild(elem);
+		while (GetButtonSVG()->GetFirstChild() != transElem) {
+			wxSvgXmlNode* elem = GetButtonSVG()->GetFirstChild();
+			GetButtonSVG()->RemoveChild(elem);
 			transElem->AppendChild(elem);
 		}
 	}
@@ -385,7 +314,7 @@ void MenuObject::UpdateTransform() {
 }
 
 double MenuObject::GetAngle() const {
-	MenuObjectParam* param = GetObjectParam(wxT("rotation"));
+	MenuObjectParam* param = GetParamByName(wxT("rotation"));
 	if (param != NULL) {
 		return GetParamDouble(wxT("rotation"));
 	}
@@ -399,7 +328,7 @@ void MenuObject::SetAngle(double angle) {
 		angle -= 360;
 	if (angle < 0)
 		angle += 360;
-	MenuObjectParam* param = GetObjectParam(wxT("rotation"));
+	MenuObjectParam* param = GetParamByName(wxT("rotation"));
 	if (param != NULL) {
 		SetParamDouble(wxT("rotation"), angle);
 		return;
@@ -427,7 +356,7 @@ wxRect MenuObject::GetBBox() const {
 
 wxRect MenuObject::GetResultBBox() const {
 	wxRect bbox = wxRect(GetX(), GetY(), GetWidth(), GetHeight());
-//	wxSVGElement* cElem = (wxSVGElement*) m_symbol->GetElementById(wxT("circle"));
+//	wxSVGElement* cElem = GetElementById(wxT("circle"));
 //	if (cElem != NULL) {
 //		wxSVGSVGElement* viewportElem = new wxSVGSVGElement();
 //		viewportElem->SetWidth(m_use->GetWidth().GetBaseVal());
@@ -488,8 +417,8 @@ wxRect MenuObject::GetFrameBBox(SubStreamMode mode, bool ignorePadding) {
 
 unsigned int MenuObject::CalcSize(MenuObjectSize& size, bool width) {
 	unsigned int result = 0;
-	for (unsigned int idx = 0; idx < size.elements.GetCount(); idx++) {
-		wxSVGElement* elem = (wxSVGElement*) m_symbol->GetElementById(size.elements[idx]);
+	for (unsigned int idx = 0; idx < size.elements.size(); idx++) {
+		wxSVGElement* elem = GetElementById(size.elements[idx]);
 		if (elem) {
 			if (elem->GetDtd() == wxSVG_IMAGE_ELEMENT) {
 				wxSVGImageElement* imgElem = (wxSVGImageElement*) elem;
@@ -510,7 +439,7 @@ bool MenuObject::IsAlignRight(MenuObjectSize& size) {
 	if (size.elements.size() == 0) {
 		return false;
 	}
-	wxSVGElement* elem = (wxSVGElement*) m_symbol->GetElementById(size.elements[0]);
+	wxSVGElement* elem = GetElementById(size.elements[0]);
 	if (!elem || elem->GetDtd() != wxSVG_TEXT_ELEMENT) {
 		return false;
 	}
@@ -558,348 +487,6 @@ void MenuObject::UpdateSize() {
 		SetY(0);
 }
 
-wxString MenuObject::GetParam(wxString name, wxString attribute) const {
-	MenuObjectParam* param = GetObjectParam(name);
-	if (!param)
-		return wxT("");
-	wxSVGElement* elem = (wxSVGElement*) m_symbol->GetElementById(param->element.front());
-	if (!elem)
-		return wxT("");
-	if (param->attribute.length()) {
-		// return attribute value
-		if (param->attribute.Find(wxT('#')) > 0) {
-			wxString value = elem->GetAttribute(param->attribute.BeforeFirst(wxT('#')));
-			long n = 0;
-			param->attribute.AfterFirst(wxT('#')).ToLong(&n);
-			if (n > 0 && value.length() > 0 && value.Index(wxT('(')) > 0) {
-				// return n-parameter of the function (e.g. if you want to get rotation angle of transform)
-				value = value.AfterFirst(wxT('(')).BeforeFirst(wxT(')'));
-				for (int i = 1; i < n; i++)
-					value = value.AfterFirst(wxT(','));
-				value = value.BeforeFirst(wxT(','));
-				return value.Trim().Trim(false);
-			}
-		}
-		return elem->GetAttribute(attribute.length() && attribute[0] != wxT('-') ?
-				attribute : param->attribute + attribute);
-	} else if (elem->GetDtd() == wxSVG_TEXT_ELEMENT) {
-		if (attribute.length())
-			return elem->GetAttribute(attribute);
-		wxString value;
-		wxSvgXmlNode* child = elem->GetChildren();
-		while (child != NULL) {
-			if (child->GetType() == wxSVGXML_TEXT_NODE)
-				value += child->GetContent().Strip(wxString::both);
-			else if (child->GetType() == wxSVGXML_ELEMENT_NODE
-					&& ((wxSVGElement*) child)->GetDtd() == wxSVG_TBREAK_ELEMENT)
-				value += wxT("\n");
-			child = child->GetNextSibling();
-		}
-		return value;
-	}
-	return wxT("");
-}
-
-void MenuObject::SetParam(wxString name, wxString value, wxString attribute) {
-	MenuObjectParam* param = GetObjectParam(name);
-	if (!param)
-		return;
-	for (vector<wxString>::const_iterator elemIt = param->element.begin(); elemIt != param->element.end(); elemIt++) {
-		wxSVGElement* elem = (wxSVGElement*) m_symbol->GetElementById(*elemIt);
-		if (!elem)
-			continue;
-		if (param->attribute.length()) {
-			if (param->attribute.Find(wxT('#')) > 0) {
-				// sets n-parameter of the function (e.g. if you want to set rotation angle of transform)
-				wxString oldValue = elem->GetAttribute(param->attribute.BeforeFirst(wxT('#')));
-				long n = 0;
-				param->attribute.AfterFirst(wxT('#')).ToLong(&n);
-				if (n > 0 && oldValue.length() > 0 && oldValue.Index(wxT('(')) > 0) {
-					wxString newValue = oldValue.BeforeFirst(wxT('(')) + wxT('(');
-					for (int i = 1; i < n; i++)
-						newValue += oldValue.BeforeFirst(wxT(',')) + wxT(',');
-					newValue += value;
-					if (oldValue.Index(wxT(')')) < oldValue.Index(wxT(',')) && oldValue.Index(wxT(')')) > 0)
-						newValue += wxT(')') + oldValue.AfterFirst(wxT(')'));
-					else
-						newValue += wxT(',') + oldValue.AfterFirst(wxT(','));
-					value = newValue;
-				}
-				elem->SetAttribute(param->attribute.BeforeFirst(wxT('#')), value);
-			} else {
-				elem->SetAttribute(attribute.length() && attribute[0] != wxT('-') ?
-						attribute : param->attribute + attribute, value);
-			}
-			if (elem->GetDtd() == wxSVG_IMAGE_ELEMENT && param->attribute == wxT("xlink:href"))
-				((wxSVGImageElement*) elem)->SetCanvasItem(NULL);
-		} else if (elem->GetDtd() == wxSVG_TEXT_ELEMENT) {
-			if (attribute.length()) {
-				elem->SetAttribute(attribute, value);
-				return;
-			}
-			wxStringTokenizer tokenizer(value, wxT("\r\n"), wxTOKEN_RET_EMPTY_ALL);
-			wxSvgXmlNode* child = elem->GetChildren();
-			while (tokenizer.HasMoreTokens()) {
-				wxString token = tokenizer.GetNextToken();
-				// insert text node (token)
-				if (child != NULL && child->GetType() == wxSVGXML_TEXT_NODE) {
-					child->SetContent(token);
-					child = child->GetNextSibling();
-				} else
-					elem->InsertChild(new wxSvgXmlNode(wxSVGXML_TEXT_NODE, wxEmptyString, token), child);
-				// insert t-break
-				if (tokenizer.HasMoreTokens()) {
-					if (child != NULL && child->GetType() == wxSVGXML_ELEMENT_NODE
-							&& ((wxSVGElement*) child)->GetDtd() != wxSVG_TBREAK_ELEMENT)
-						child = child->GetNextSibling();
-					else
-						elem->InsertChild(new wxSVGTBreakElement(), child);
-				}
-				((wxSVGTextElement*) elem)->SetXmlspace(wxT("preserve"));
-			}
-			while (child != NULL) {
-				wxSvgXmlNode* nextChild = child->GetNextSibling();
-				elem->RemoveChild(child);
-				child = nextChild;
-			}
-			((wxSVGTextElement*) elem)->SetCanvasItem(NULL);
-		}
-	}
-}
-
-int MenuObject::GetParamInt(wxString name, wxString attribute) const {
-	long lval = 0;
-	GetParam(name, attribute).ToLong(&lval);
-	return lval;
-}
-
-void MenuObject::SetParamInt(wxString name, int value, wxString attribute) {
-	SetParam(name, wxString::Format(wxT("%d"), value), attribute);
-}
-
-double MenuObject::GetParamDouble(wxString name) const {
-	double dval = 0;
-	GetParam(name).ToDouble(&dval);
-	return dval;
-}
-
-void MenuObject::SetParamDouble(wxString name, double value) {
-	SetParam(name, wxString::Format(wxT("%g"), value));
-}
-
-wxFont MenuObject::GetParamFont(wxString name) const {
-	MenuObjectParam* param = GetObjectParam(name);
-	if (!param)
-		return wxFont(20, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL, false);
-	wxSVGElement* elem = (wxSVGElement*) m_symbol->GetElementById(param->element.front());
-	if (!elem) {
-		return wxFont(20, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL, false);
-	}
-
-	int size = 20;
-	double dval;
-	if (elem->GetAttribute(wxT("font-size")).ToDouble(&dval))
-		size = (int) dval;
-
-	wxFontStyle style = wxFONTSTYLE_NORMAL;
-	wxString styleStr = elem->GetAttribute(wxT("font-style"));
-	if (styleStr == wxT("italic"))
-		style = wxFONTSTYLE_ITALIC;
-	else if (styleStr == wxT("oblique"))
-		style = wxFONTSTYLE_SLANT;
-
-	wxFontWeight weight = wxFONTWEIGHT_NORMAL;
-	wxString weightStr = elem->GetAttribute(wxT("font-weight"));
-	if (weightStr == wxT("bold"))
-		weight = wxFONTWEIGHT_BOLD;
-	if (weightStr == wxT("bolder"))
-		weight = wxFONTWEIGHT_MAX;
-	else if (weightStr == wxT("lighter"))
-		weight = wxFONTWEIGHT_LIGHT;
-
-	wxString faceName = elem->GetAttribute(wxT("font-family"));
-
-	return wxFont(size, wxFONTFAMILY_DEFAULT, style, weight, false, faceName);
-}
-
-void MenuObject::SetParamFont(wxString name, wxFont value) {
-	MenuObjectParam* param = GetObjectParam(name);
-	if (!param)
-		return;
-	for (vector<wxString>::const_iterator elemIt = param->element.begin(); elemIt != param->element.end(); elemIt++) {
-		wxSVGElement* elem = (wxSVGElement*) m_symbol->GetElementById(*elemIt);
-		if (!elem)
-			continue;
-	
-		elem->SetAttribute(wxT("font-size"), wxString::Format(wxT("%d"), value.GetPointSize()));
-	
-		wxString styleStr = wxT("normal");
-		if (value.GetStyle() == wxFONTSTYLE_ITALIC)
-			styleStr = wxT("italic");
-		else if (value.GetStyle() == wxFONTSTYLE_SLANT)
-			styleStr = wxT("oblique");
-		elem->SetAttribute(wxT("font-style"), styleStr);
-	
-		wxString weightStr = wxT("normal");
-		if (value.GetWeight() == wxFONTWEIGHT_BOLD)
-			weightStr = wxT("bold");
-		if (value.GetWeight() == wxFONTWEIGHT_MAX)
-			weightStr = wxT("bolder");
-		else if (value.GetWeight() == wxFONTWEIGHT_LIGHT)
-			weightStr = wxT("lighter");
-		elem->SetAttribute(wxT("font-weight"), weightStr);
-	
-		elem->SetAttribute(wxT("font-family"), value.GetFaceName());
-		
-		if (elem->GetDtd() == wxSVG_TEXT_ELEMENT)
-			((wxSVGTextElement*) elem)->SetCanvasItem(NULL);
-	}
-}
-
-wxColour MenuObject::GetParamColour(wxString name, MenuButtonState state) const {
-	MenuObjectParam* param = GetObjectParam(name);
-	if (!param)
-		return wxColour();
-	if (param->changeable) {
-		switch (state) {
-		case mbsNORMAL:
-			return param->normalColour;
-		case mbsHIGHLIGHTED:
-			return param->highlightedColour;
-		case mbsSELECTED:
-			return param->selectedColour;
-		}
-	}
-	wxSVGElement* elem = (wxSVGElement*) m_symbol->GetElementById(param->element.front());
-	if (!elem)
-		return wxColour();
-	if (param->attribute.length()) {
-		const wxCSSStyleDeclaration& style = wxSVGStylable::GetElementStyle(*elem);
-		const wxCSSValue& value = style.GetPropertyCSSValue(param->attribute);
-		switch (value.GetCSSValueType()) {
-		case wxCSS_PRIMITIVE_VALUE:
-			return ((wxCSSPrimitiveValue&) value).GetRGBColorValue();
-		case wxCSS_SVG_COLOR:
-		case wxCSS_SVG_PAINT:
-			return ((wxSVGColor&) value).GetRGBColor();
-		default:
-			break;
-		}
-	}
-	return wxColour();
-}
-
-void MenuObject::SetParamColour(wxString name, wxColour value, MenuButtonState state) {
-	MenuObjectParam* param = GetObjectParam(name);
-	if (!param)
-		return;
-	if (param->changeable) {
-		switch (state) {
-		case mbsNORMAL:
-			param->normalColour = value;
-			break;
-		case mbsHIGHLIGHTED:
-			param->highlightedColour = value;
-			break;
-		case mbsSELECTED:
-			param->selectedColour = value;
-			break;
-		}
-	}
-	if (state != mbsNORMAL)
-		return;
-	wxSVGElement* elem = (wxSVGElement*) m_symbol->GetElementById(param->element.front());
-	if (!elem)
-		return;
-	if (param->attribute.length()) {
-		wxSVGPaint paint(value);
-		elem->SetAttribute(param->attribute, paint.GetCSSText());
-	}
-}
-
-double MenuObject::GetParamVideoClipBegin(const wxString& name) {
-	MenuObjectParam* param = GetObjectParam(name);
-	if (!param)
-		return 0;
-	wxSVGElement* elem = (wxSVGElement*) m_symbol->GetElementById(param->element.front());
-	if (!elem || elem->GetDtd() != wxSVG_VIDEO_ELEMENT)
-		return 0;
-	return ((wxSVGVideoElement*) elem)->GetClipBegin();
-}
-
-double MenuObject::GetParamVideoDuration(const wxString& name) {
-	MenuObjectParam* param = GetObjectParam(name);
-	if (!param)
-		return 0;
-	wxSVGElement* elem = (wxSVGElement*) m_symbol->GetElementById(param->element.front());
-	if (!elem || elem->GetDtd() != wxSVG_VIDEO_ELEMENT)
-		return 0;
-	return ((wxSVGVideoElement*) elem)->GetDur();
-}
-
-void MenuObject::SetParamImageVideo(const wxString& name, const wxString& filename, long pos, int duration) {
-	MenuObjectParam* param = GetObjectParam(name);
-	if (!param)
-		return;
-	for (vector<wxString>::const_iterator elemIt = param->element.begin(); elemIt != param->element.end(); elemIt++) {
-		MenuObject::SetImageVideoParams(m_symbol, *elemIt, filename, pos, duration);
-	}
-}
-
-void MenuObject::SetImageVideoParams(wxSVGSVGElement* svgElem, const wxString& id, const wxString& filename,
-		long pos, int duration) {
-	wxSVGElement* elem = (wxSVGElement*) svgElem->GetElementById(id);
-	if (!elem || (elem->GetDtd() != wxSVG_IMAGE_ELEMENT && elem->GetDtd() != wxSVG_VIDEO_ELEMENT))
-		return;
-	if (duration <= 0) {
-		if (elem->GetDtd() != wxSVG_IMAGE_ELEMENT) {
-			wxSVGVideoElement* oldElem = (wxSVGVideoElement*) elem;
-			wxSVGImageElement* newElem = new wxSVGImageElement;
-			newElem->SetId(oldElem->GetId());
-			newElem->SetX(oldElem->GetX().GetBaseVal());
-			newElem->SetY(oldElem->GetY().GetBaseVal());
-			newElem->SetWidth(oldElem->GetWidth().GetBaseVal());
-			newElem->SetHeight(oldElem->GetHeight().GetBaseVal());
-			newElem->SetStyle(oldElem->GetStyle());
-			newElem->SetPreserveAspectRatio(oldElem->GetPreserveAspectRatio());
-			oldElem->GetParent()->InsertBefore(newElem, oldElem);
-			oldElem->GetParent()->RemoveChild(oldElem);
-			elem = newElem;
-		}
-		wxString href = filename + (filename.length() && pos >= 0 ? wxString::Format(wxT("#%ld"), pos) : wxT(""));
-		if (href != ((wxSVGImageElement*) elem)->GetHref()) {
-			((wxSVGImageElement*) elem)->SetCanvasItem(NULL);
-			((wxSVGImageElement*) elem)->SetHref(href);
-		}
-	} else {
-		if (elem->GetDtd() != wxSVG_VIDEO_ELEMENT) {
-			wxSVGImageElement* oldElem = (wxSVGImageElement*) elem;
-			wxSVGVideoElement* newElem = new wxSVGVideoElement;
-			newElem->SetId(oldElem->GetId());
-			newElem->SetX(oldElem->GetX().GetBaseVal());
-			newElem->SetY(oldElem->GetY().GetBaseVal());
-			newElem->SetWidth(oldElem->GetWidth().GetBaseVal());
-			newElem->SetHeight(oldElem->GetHeight().GetBaseVal());
-			newElem->SetStyle(oldElem->GetStyle());
-			newElem->SetPreserveAspectRatio(oldElem->GetPreserveAspectRatio());
-			oldElem->GetParent()->InsertBefore(newElem, oldElem);
-			oldElem->GetParent()->RemoveChild(oldElem);
-			elem = newElem;
-		}
-		if (filename != ((wxSVGVideoElement*) elem)->GetHref()) {
-			((wxSVGVideoElement*) elem)->SetCanvasItem(NULL);
-			((wxSVGVideoElement*) elem)->SetHref(filename);
-		}
-		((wxSVGVideoElement*) elem)->SetClipBegin(((double)pos)/1000);
-		((wxSVGVideoElement*) elem)->SetDur(duration);
-	}
-}
-
-/** Returns object svg element by element id */
-wxSVGElement* MenuObject::GetElementById(wxString id) {
-	return (wxSVGElement*) m_symbol->GetElementById(id);
-}
-
 void GetAnimationElements(wxSVGElement* child, vector<wxSVGAnimateElement*>& animations) {
 	while (child) {
 		if (child->GetType() == wxSVGXML_ELEMENT_NODE && child->GetDtd() == wxSVG_ANIMATE_ELEMENT) {
@@ -913,7 +500,7 @@ void GetAnimationElements(wxSVGElement* child, vector<wxSVGAnimateElement*>& ani
 vector<wxSVGAnimateElement*> MenuObject::GetAnimations() {
 	vector<wxSVGAnimateElement*> animations;
 	GetAnimationElements((wxSVGElement*) m_use->GetFirstChild(), animations);
-	GetAnimationElements((wxSVGElement*) m_symbol->GetFirstChild(), animations);
+	GetAnimationElements((wxSVGElement*) GetButtonSVG()->GetFirstChild(), animations);
 	return animations;
 }
 
@@ -930,11 +517,11 @@ void RemoveAnimationElements(wxSVGElement* child) {
 
 /** Sets animation elements */
 void MenuObject::SetAnimations(vector<wxSVGAnimateElement*>& animations) {
-	RemoveAnimationElements((wxSVGElement*) m_symbol->GetFirstChild());
+	RemoveAnimationElements((wxSVGElement*) GetButtonSVG()->GetFirstChild());
 	RemoveAnimationElements((wxSVGElement*) m_use->GetFirstChild());
 	for (auto anim : animations) {
 		if (anim->GetHref().length() >0)
-			m_symbol->AddChild(anim);
+			GetButtonSVG()->AddChild(anim);
 		else
 			m_use->AddChild(anim);
 	}
@@ -1054,10 +641,10 @@ wxImage MenuObject::GetImage(int maxWidth, int maxHeight) {
 	if (!m_use)
 		return wxImage();
 	if (m_previewHighlighted) {
-		for (int i = 0; i < GetObjectParamsCount(); i++) {
-			MenuObjectParam* param = GetObjectParam(i);
+		for (unsigned int i = 0; i < m_params.size(); i++) {
+			MenuObjectParam* param = m_params[i];
 			if (param->changeable) {
-				wxSVGElement* elem = (wxSVGElement*) m_symbol->GetElementById(param->element.front());
+				wxSVGElement* elem = GetElementById(param->element.front());
 				if (elem && param->attribute.length()) {
 					wxSVGPaint paint(param->highlightedColour);
 					elem->SetAttribute(param->attribute, paint.GetCSSText());
@@ -1093,8 +680,8 @@ wxSvgXmlNode* MenuObject::GetXML(DVDFileType type, DVD* dvd, SubStreamMode mode,
 			rootNode->AddChild(directionNode);
 		}
 		XmlWriteValue(rootNode, _T("filename"), GetFileName().AfterLast(wxFILE_SEP_PATH));
-		for (int i = 0; i < GetObjectParamsCount(); i++) {
-			MenuObjectParam* param = GetObjectParam(i);
+		for (unsigned int i = 0; i < m_params.size(); i++) {
+			MenuObjectParam* param = m_params[i];
 			if (param->changeable) {
 				wxSvgXmlNode* paramNode = new wxSvgXmlNode(wxSVGXML_ELEMENT_NODE, _T("parameter"));
 				paramNode->AddProperty(_T("name"), param->name);
@@ -1166,7 +753,7 @@ wxSvgXmlNode* MenuObject::GetXML(DVDFileType type, DVD* dvd, SubStreamMode mode,
 		rootNode->DeleteProperty(wxT("id"));
 		wxSvgXmlNode* svgNode = new wxSvgXmlNode(wxSVGXML_ELEMENT_NODE, wxT("svg"));
 		wxSvgXmlNode* defsNode = new wxSvgXmlNode(wxSVGXML_ELEMENT_NODE, wxT("defs"));
-		wxSVGElement* symbol = (wxSVGElement*) m_symbol->CloneNode();
+		wxSVGElement* symbol = (wxSVGElement*) GetButtonSVG()->CloneNode();
 		symbol->SetId(wxT(""));
 		defsNode->AddChild(symbol);
 		svgNode->AddChild(defsNode);
@@ -1256,11 +843,11 @@ bool MenuObject::PutXML(wxSvgXmlNode* node) {
 			wxSVGElement* defsNode = (wxSVGElement*) XmlFindNode(root, wxT("defs"));
 			wxSvgXmlElement* child = defsNode->GetChildren();
 			while (child) {
-				AddSymol(m_id, (wxSVGElement*) child);
+				AddButtonSVG(m_id, (wxSVGElement*) child);
 				child = child->GetNext();
 			}
 			wxSVGUseElement* useElem = (wxSVGUseElement*) XmlFindNode(root, wxT("use"));
-			AddUse(m_id, useElem->GetX().GetBaseVal(), useElem->GetY().GetBaseVal(), useElem->GetWidth().GetBaseVal(),
+			AddUseElement(m_id, useElem->GetX().GetBaseVal(), useElem->GetY().GetBaseVal(), useElem->GetWidth().GetBaseVal(),
 					useElem->GetHeight().GetBaseVal(), &useElem->GetTransform().GetBaseVal());
 		}
 	}

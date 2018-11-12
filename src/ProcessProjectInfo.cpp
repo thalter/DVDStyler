@@ -9,6 +9,7 @@
 
 #include "ProcessProjectInfo.h"
 #include "DVD.h"
+#include "Menu.h"
 #include "Utils.h"
 #include <wxSVG/SVGDocument.h>
 
