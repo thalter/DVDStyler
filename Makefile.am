@@ -61,7 +61,7 @@ libs:
 dmg:
 	rm -f DVDStyler.dmg DVDStyler-@VERSION@-MacOSX.dmg
 	hdiutil eject /dev/disk1 || echo
-	hdiutil create -megabytes 70 -layout NONE DVDStyler.dmg
+	hdiutil create -megabytes 100 -layout NONE DVDStyler.dmg
 	hdid -nomount DVDStyler.dmg
 	newfs_hfs -v DVDStyler /dev/disk1
 	hdiutil eject /dev/disk1
