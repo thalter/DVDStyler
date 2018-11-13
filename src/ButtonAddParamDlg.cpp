@@ -75,7 +75,9 @@ ButtonAddParamDlg::ButtonAddParamDlg(wxWindow* parent, wxSVGSVGElement* rootElem
 	m_doc->GetRootElement()->SetViewBox(rootElem->GetViewBox());
 	m_svgCtrl->SetSVG(m_doc);
 	
-	m_elementsListBox->Set(elements);
+	wxArrayString s;
+	s.assign(elements.begin(), elements.end());
+	m_elementsListBox->Set(s);
 	m_elementsListBox->SetSelection(elements.size() - 1);
 	wxCommandEvent evt;
 	OnSelectSvgElement(evt);
