@@ -1,2 +1,6 @@
 *.o
 *.d
+*.deps
+*.a
+/Makefile
+/Makefile.in
