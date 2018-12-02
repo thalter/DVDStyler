@@ -7,3 +7,7 @@
 /dvdvmy.h
 /Version.h
 /fonts.conf
+.deps
+/Makefile
+/Makefile.in
+/dvdstyler
