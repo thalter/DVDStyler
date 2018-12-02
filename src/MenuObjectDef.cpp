@@ -154,6 +154,17 @@ void MenuObjectDef::UpdateIdList() {
 bool MenuObjectDef::LoadSVG(const wxString& filename) {
 	if (!m_svg->Load(filename))
 		return false;
+	wxSVGSVGElement* root = m_svg->GetRootElement();
+	if (!root)
+		return false;
+	if (root->GetViewBox().GetBaseVal().IsEmpty()) {
+		root->SetViewBox(wxSVGRect(0, 0, root->GetWidth().GetBaseVal().GetValue(),
+				root->GetHeight().GetBaseVal().GetValue()));
+	}
+	root->SetWidth(200);
+	root->SetHeight(200);
+	m_defaultWidth.value = 64;
+	m_defaultHeight.value = 64;
 	UpdateIdList();
 	return true;
 }

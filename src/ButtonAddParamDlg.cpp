@@ -13,11 +13,15 @@
 #include <wx/string.h>
 #include <wx/log.h>
 #include <wxSVG/SVGSVGElement.h>
+#include <wxSVG/SVGGElement.h>
+
 
 //*)
 
 //(*IdInit(ButtonAddParamDlg)
 const long ButtonAddParamDlg::ID_LISTBOX1 = wxNewId();
+const long ButtonAddParamDlg::ID_TEXTCTRL1 = wxNewId();
+const long ButtonAddParamDlg::ID_TEXTCTRL2 = wxNewId();
 const long ButtonAddParamDlg::ID_PANEL1 = wxNewId();
 const long ButtonAddParamDlg::ID_SVG_CTRL = wxNewId();
 const long ButtonAddParamDlg::ID_SPLITTERWINDOW1 = wxNewId();
@@ -33,8 +37,11 @@ ButtonAddParamDlg::ButtonAddParamDlg(wxWindow* parent, wxSVGSVGElement* rootElem
 	//(*Initialize(ButtonAddParamDlg)
 	wxBoxSizer* BoxSizer1;
 	wxBoxSizer* mainSizer;
+	wxFlexGridSizer* FlexGridSizer1;
 	wxPanel* panel1;
 	wxStaticText* StaticText1;
+	wxStaticText* StaticText2;
+	wxStaticText* StaticText3;
 	wxStdDialogButtonSizer* StdDialogButtonSizer1;
 
 	Create(parent, wxID_ANY, _("Add parameter"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER, _T("wxID_ANY"));
@@ -49,6 +56,18 @@ ButtonAddParamDlg::ButtonAddParamDlg(wxWindow* parent, wxSVGSVGElement* rootElem
 	BoxSizer1->Add(StaticText1, 0, wxBOTTOM|wxEXPAND, 5);
 	m_elementsListBox = new wxListBox(panel1, ID_LISTBOX1, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_LISTBOX1"));
 	BoxSizer1->Add(m_elementsListBox, 1, wxEXPAND, 5);
+	FlexGridSizer1 = new wxFlexGridSizer(0, 2, 2, 2);
+	StaticText2 = new wxStaticText(panel1, wxID_ANY, _("Fill:"), wxDefaultPosition, wxDefaultSize, 0, _T("wxID_ANY"));
+	FlexGridSizer1->Add(StaticText2, 0, wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
+	m_fillCtrl = new wxTextCtrl(panel1, ID_TEXTCTRL1, _("Text"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_TEXTCTRL1"));
+	m_fillCtrl->Disable();
+	FlexGridSizer1->Add(m_fillCtrl, 1, wxLEFT|wxEXPAND, 5);
+	StaticText3 = new wxStaticText(panel1, wxID_ANY, _("Stroke:"), wxDefaultPosition, wxDefaultSize, 0, _T("wxID_ANY"));
+	FlexGridSizer1->Add(StaticText3, 1, wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
+	m_strokeCtrl = new wxTextCtrl(panel1, ID_TEXTCTRL2, _("Text"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_TEXTCTRL2"));
+	m_strokeCtrl->Disable();
+	FlexGridSizer1->Add(m_strokeCtrl, 1, wxLEFT|wxEXPAND, 5);
+	BoxSizer1->Add(FlexGridSizer1, 0, wxEXPAND, 5);
 	panel1->SetSizer(BoxSizer1);
 	BoxSizer1->Fit(panel1);
 	BoxSizer1->SetSizeHints(panel1);
@@ -68,12 +87,7 @@ ButtonAddParamDlg::ButtonAddParamDlg(wxWindow* parent, wxSVGSVGElement* rootElem
 	//*)
 	
 	m_nodeList = nodeList;
-	m_doc = new wxSVGDocument;
-	m_doc->SetRootElement(new wxSVGSVGElement());
-	m_doc->GetRootElement()->SetWidth(rootElem->GetWidth());
-	m_doc->GetRootElement()->SetHeight(rootElem->GetHeight());
-	m_doc->GetRootElement()->SetViewBox(rootElem->GetViewBox());
-	m_svgCtrl->SetSVG(m_doc);
+	CreateSvgDoc(rootElem->GetWidth().GetBaseVal(), rootElem->GetHeight().GetBaseVal(), rootElem->GetViewBox());
 	
 	wxArrayString s;
 	s.assign(elements.begin(), elements.end());
@@ -95,12 +109,77 @@ int ButtonAddParamDlg::GetSelection() const {
 	return m_elementsListBox->GetSelection();
 }
 
+wxSVGSVGElement* ButtonAddParamDlg::CreateSvgDoc(double width, double height, const wxSVGRect& viewBox) {
+	m_doc = new wxSVGDocument;
+	m_doc->SetRootElement(new wxSVGSVGElement());
+	m_doc->GetRootElement()->SetWidth(width);
+	m_doc->GetRootElement()->SetHeight(height);
+	m_doc->GetRootElement()->SetViewBox(viewBox);
+	m_svgCtrl->SetSVG(m_doc);
+	return m_doc->GetRootElement();
+}
+
 void ButtonAddParamDlg::OnSelectSvgElement(wxCommandEvent& event) {
-	if (m_doc->GetRootElement()->GetFirstChild()) {
-		wxSvgXmlNode* child = m_doc->GetRootElement()->GetFirstChild();
-		m_doc->GetRootElement()->RemoveChild(child);
-		delete child;
+	wxSVGElement* selectedElem = (wxSVGElement*) m_nodeList[GetSelection() + 1];
+	// clear
+	double width = m_doc->GetRootElement()->GetWidth().GetBaseVal();
+	double height = m_doc->GetRootElement()->GetHeight().GetBaseVal();
+	wxSVGRect viewBox = m_doc->GetRootElement()->GetViewBox();
+	delete m_doc;
+	wxSVGSVGElement* root = CreateSvgDoc(width, height, viewBox);
+	// clione defs
+	wxSVGElement* defs = (wxSVGElement*) m_nodeList[0]->GetFirstChild();
+	if (defs != NULL && defs->GetDtd() == wxSVG_DEFS_ELEMENT) {
+		root->AppendChild(defs->CloneNode());
 	}
-	m_doc->GetRootElement()->AppendChild(m_nodeList[GetSelection() + 1]->CloneNode());
+	// find out transforms, fill and stroke
+	vector<wxSVGElement*> parentList;
+	wxSVGElement* parent = (wxSVGElement*) selectedElem->GetParent();
+	while (parent != NULL) {
+		parentList.insert(parentList.begin(), parent);
+		parent = (wxSVGElement*) parent->GetParent();
+	}
+	wxSVGTransformList tList;
+	wxSVGPaint fill;
+	wxSVGPaint stroke;
+	double strokeWidth = 0;
+	for (wxSVGElement* parentElem : parentList) {
+		wxSVGTransformable* transformable = wxSVGTransformable::GetSVGTransformable(*parentElem);
+		if (transformable != NULL && transformable->GetTransform().GetBaseVal().size() > 0) {
+			tList.Add(transformable->GetTransform().GetBaseVal()[0]);
+		}
+		wxSVGStylable* stylable = wxSVGStylable::GetSVGStylable(*parentElem);
+		if (stylable != NULL) {
+			if (stylable->GetFill().Ok()) {
+				fill = stylable->GetFill();
+			}
+			if (stylable->GetStroke().Ok()) {
+				stroke = stylable->GetStroke();
+				strokeWidth = stylable->GetStrokeWidth();
+			}
+		}
+	}
+	// create g-element and clone selected
+	wxSVGGElement* gElem = new wxSVGGElement();
+	gElem->SetTransform(tList);
+	gElem->SetFill(fill);
+	gElem->SetStroke(stroke);
+	gElem->SetStrokeWidth(strokeWidth);
+	gElem->AddChild(selectedElem->CloneNode());
+	root->AppendChild(gElem);
 	m_svgCtrl->Refresh();
+	
+	// display fill and stroke
+	wxSVGStylable* stylable = wxSVGStylable::GetSVGStylable(*selectedElem);
+	if (stylable != NULL) {
+		if (stylable->GetFill().Ok()) {
+			fill = stylable->GetFill();
+		}
+		if (stylable->GetStroke().Ok()) {
+			stroke = stylable->GetStroke();
+			strokeWidth = stylable->GetStrokeWidth();
+		}
+	}
+	m_fillCtrl->SetValue(fill.GetCSSText());
+	m_strokeCtrl->SetValue(stroke.GetCSSText());
 }

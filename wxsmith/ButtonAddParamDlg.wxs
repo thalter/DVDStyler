@@ -31,11 +31,54 @@
 								<border>5</border>
 								<option>1</option>
 							</object>
+							<object class="sizeritem">
+								<object class="wxFlexGridSizer" variable="FlexGridSizer1" member="no">
+									<cols>2</cols>
+									<vgap>2</vgap>
+									<hgap>2</hgap>
+									<object class="sizeritem">
+										<object class="wxStaticText" name="wxID_ANY" variable="StaticText2" member="no">
+											<label>Fill:</label>
+										</object>
+										<flag>wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+									</object>
+									<object class="sizeritem">
+										<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="m_fillCtrl" member="yes">
+											<value>Text</value>
+											<enabled>0</enabled>
+										</object>
+										<flag>wxLEFT|wxEXPAND</flag>
+										<border>5</border>
+										<option>1</option>
+									</object>
+									<object class="sizeritem">
+										<object class="wxStaticText" name="wxID_ANY" variable="StaticText3" member="no">
+											<label>Stroke:</label>
+										</object>
+										<flag>wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<option>1</option>
+									</object>
+									<object class="sizeritem">
+										<object class="wxTextCtrl" name="ID_TEXTCTRL2" variable="m_strokeCtrl" member="yes">
+											<value>Text</value>
+											<enabled>0</enabled>
+										</object>
+										<flag>wxLEFT|wxEXPAND</flag>
+										<border>5</border>
+										<option>1</option>
+									</object>
+								</object>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+							</object>
 						</object>
 					</object>
 					<object class="Custom" name="ID_SVG_CTRL" subclass="wxSVGCtrl" variable="m_svgCtrl" member="yes">
 						<creating_code>$(THIS) = new $(CLASS)($(PARENT),$(ID),$(POS),$(SIZE),0,$(NAME));</creating_code>
 						<include_file>wxSVG/svgctrl.h</include_file>
+						<style></style>
 					</object>
 				</object>
 				<flag>wxALL|wxEXPAND</flag>

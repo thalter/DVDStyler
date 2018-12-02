@@ -17,6 +17,7 @@
 #include <wx/sizer.h>
 #include <wx/splitter.h>
 #include <wx/stattext.h>
+#include <wx/textctrl.h>
 #include <wxSVG/svgctrl.h>
 //*)
 #include <wxSVG/NodeList.h>
@@ -32,6 +33,8 @@ public:
 	wxListBox* m_elementsListBox;
 	wxSVGCtrl* m_svgCtrl;
 	wxSplitterWindow* m_splitterWindow;
+	wxTextCtrl* m_fillCtrl;
+	wxTextCtrl* m_strokeCtrl;
 	//*)
 	
 	int GetSelection() const;
@@ -39,6 +42,8 @@ public:
 protected:
 	//(*Identifiers(ButtonAddParamDlg)
 	static const long ID_LISTBOX1;
+	static const long ID_TEXTCTRL1;
+	static const long ID_TEXTCTRL2;
 	static const long ID_PANEL1;
 	static const long ID_SVG_CTRL;
 	static const long ID_SPLITTERWINDOW1;
@@ -46,6 +51,7 @@ protected:
 	
 	wxNodeList m_nodeList;
 	wxSVGDocument* m_doc;
+	wxSVGSVGElement* CreateSvgDoc(double width, double height, const wxSVGRect& viewBox);
 
 private:
 	//(*Handlers(ButtonAddParamDlg)
