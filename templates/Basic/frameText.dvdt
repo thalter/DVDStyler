@@ -33,7 +33,7 @@
                   <circle cx="15" cy="50%" r="5" id="circle" style="fill:none;"/>
                   <use x="2" y="2" id="shadow" xlink:href="#text" style="fill:#202020;fill-opacity:1;filter:url(#shadowFilter);visibility:visible;"/>
                   <g id="gText" style="fill:#ffffff;fill-opacity:1;">
-                    <text x="30" y="50%" id="text" xml:space="preserve" style="dominant-baseline:middle;font-family:sans-serif;font-size:26;font-style:normal;font-weight:normal;text-anchor:;">Play all</text>
+                    <text x="30" y="50%" id="text" xml:space="preserve" style="dominant-baseline:middle;font-family:sans-serif;font-size:26;">Play all</text>
                   </g>
                 </svg>
                 <svg id="s_button02">
@@ -45,7 +45,7 @@
                   <circle cx="15" cy="50%" r="5" id="circle" style="fill:none;"/>
                   <use x="2" y="2" id="shadow" xlink:href="#text" style="fill:#202020;fill-opacity:1;filter:url(#shadowFilter);visibility:visible;"/>
                   <g id="gText" style="fill:#ffffff;fill-opacity:1;">
-                    <text x="30" y="50%" id="text" xml:space="preserve" style="dominant-baseline:middle;font-family:sans-serif;font-size:26;font-style:normal;font-weight:normal;text-anchor:;">Select title</text>
+                    <text x="30" y="50%" id="text" xml:space="preserve" style="dominant-baseline:middle;font-family:sans-serif;font-size:26;">Select title</text>
                   </g>
                 </svg>
               </defs>
@@ -101,7 +101,7 @@
                   </g>
                   <use id="textshadow" xlink:href="#text" x="2" y="2" style="fill:#202020;fill-opacity:1;filter:url(#textshadowFilter);visibility:visible;"/>
                   <g id="body_text" style="fill:#ffffff;fill-opacity:1;stroke:none;">
-                    <text id="text" transform="translate(0,0)" x="50%" y="83%" xml:space="preserve" style="dominant-baseline:text-after-edge;text-anchor:middle;font-family:sans-serif;font-size:24;font-style:normal;font-weight:normal;">T</text>
+                    <text id="text" transform="translate(0,0)" x="50%" y="83%" xml:space="preserve" style="dominant-baseline:text-after-edge;text-anchor:middle;font-family:sans-serif;font-size:24;">Text</text>
                   </g>
                 </svg>
                 <svg id="s_button02">
@@ -124,7 +124,7 @@
                   </g>
                   <use id="textshadow" xlink:href="#text" x="2" y="2" style="fill:#202020;fill-opacity:1;filter:url(#textshadowFilter);visibility:visible;"/>
                   <g id="body_text" style="fill:#ffffff;fill-opacity:1;stroke:none;">
-                    <text id="text" transform="translate(0,0)" x="50%" y="83%" xml:space="preserve" style="dominant-baseline:text-after-edge;text-anchor:middle;font-family:sans-serif;font-size:24;font-style:normal;font-weight:normal;">T</text>
+                    <text id="text" transform="translate(0,0)" x="50%" y="83%" xml:space="preserve" style="dominant-baseline:text-after-edge;text-anchor:middle;font-family:sans-serif;font-size:24;">Text</text>
                   </g>
                 </svg>
                 <svg id="s_button03">
@@ -147,7 +147,7 @@
                   </g>
                   <use id="textshadow" xlink:href="#text" x="2" y="2" style="fill:#202020;fill-opacity:1;filter:url(#textshadowFilter);visibility:visible;"/>
                   <g id="body_text" style="fill:#ffffff;fill-opacity:1;stroke:none;">
-                    <text id="text" transform="translate(0,0)" x="50%" y="83%" xml:space="preserve" style="dominant-baseline:text-after-edge;text-anchor:middle;font-family:sans-serif;font-size:24;font-style:normal;font-weight:normal;">T</text>
+                    <text id="text" transform="translate(0,0)" x="50%" y="83%" xml:space="preserve" style="dominant-baseline:text-after-edge;text-anchor:middle;font-family:sans-serif;font-size:24;">Text</text>
                   </g>
                 </svg>
                 <svg id="s_button04">
@@ -170,7 +170,7 @@
                   </g>
                   <use id="textshadow" xlink:href="#text" x="2" y="2" style="fill:#202020;fill-opacity:1;filter:url(#textshadowFilter);visibility:visible;"/>
                   <g id="body_text" style="fill:#ffffff;fill-opacity:1;stroke:none;">
-                    <text id="text" transform="translate(0,0)" x="50%" y="83%" xml:space="preserve" style="dominant-baseline:text-after-edge;text-anchor:middle;font-family:sans-serif;font-size:24;font-style:normal;font-weight:normal;">T</text>
+                    <text id="text" transform="translate(0,0)" x="50%" y="83%" xml:space="preserve" style="dominant-baseline:text-after-edge;text-anchor:middle;font-family:sans-serif;font-size:24;">Text</text>
                   </g>
                 </svg>
                 <svg id="s_button05">
@@ -193,7 +193,7 @@
                   </g>
                   <use id="textshadow" xlink:href="#text" x="2" y="2" style="fill:#202020;fill-opacity:1;filter:url(#textshadowFilter);visibility:visible;"/>
                   <g id="body_text" style="fill:#ffffff;fill-opacity:1;stroke:none;">
-                    <text id="text" transform="translate(0,0)" x="50%" y="83%" xml:space="preserve" style="dominant-baseline:text-after-edge;text-anchor:middle;font-family:sans-serif;font-size:24;font-style:normal;font-weight:normal;">T</text>
+                    <text id="text" transform="translate(0,0)" x="50%" y="83%" xml:space="preserve" style="dominant-baseline:text-after-edge;text-anchor:middle;font-family:sans-serif;font-size:24;">Text</text>
                   </g>
                 </svg>
                 <svg id="s_button06">
@@ -216,7 +216,7 @@
                   </g>
                   <use id="textshadow" xlink:href="#text" x="2" y="2" style="fill:#202020;fill-opacity:1;filter:url(#textshadowFilter);visibility:visible;"/>
                   <g id="body_text" style="fill:#ffffff;fill-opacity:1;stroke:none;">
-                    <text id="text" transform="translate(0,0)" x="50%" y="83%" xml:space="preserve" style="dominant-baseline:text-after-edge;text-anchor:middle;font-family:sans-serif;font-size:24;font-style:normal;font-weight:normal;">T</text>
+                    <text id="text" transform="translate(0,0)" x="50%" y="83%" xml:space="preserve" style="dominant-baseline:text-after-edge;text-anchor:middle;font-family:sans-serif;font-size:24;">Text</text>
                   </g>
                 </svg>
                 <svg id="s_button07" viewBox="0 0 128 128">
