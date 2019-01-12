@@ -30,6 +30,7 @@
 #include "../locale/bitmaps/slovakia.png.h"
 #include "../locale/bitmaps/slovenia.png.h"
 #include "../locale/bitmaps/serbia.png.h"
+#include "../locale/bitmaps/sri_lanka.png.h"
 #include "../locale/bitmaps/sweden.png.h"
 #include "../locale/bitmaps/turkey.png.h"
 #include "../locale/bitmaps/ukraine.png.h"
@@ -71,6 +72,7 @@ Lang s_langs[] = {
 	{ "Português (Brasil)", wxLANGUAGE_PORTUGUESE_BRAZILIAN, (const unsigned char *) brazil_png, sizeof(brazil_png)},
 	{ "Română", wxLANGUAGE_ROMANIAN, (const unsigned char *) romania_png, sizeof(romania_png)},
 	{ "Pyccкий", wxLANGUAGE_RUSSIAN, (const unsigned char *) russia_png, sizeof(russia_png)},
+	{ "සිංහල", wxLANGUAGE_SINHALESE, (const unsigned char *) sri_lanka_png, sizeof(sri_lanka_png)},
 	{ "Slovenčina", wxLANGUAGE_SLOVAK, (const unsigned char *) slovakia_png, sizeof(slovakia_png)},
 	{ "Slovenščina", wxLANGUAGE_SLOVENIAN, (const unsigned char *) slovenia_png, sizeof(slovenia_png)},
 	{ "Srpski", wxLANGUAGE_SERBIAN, (const unsigned char *) serbia_png, sizeof(serbia_png)},

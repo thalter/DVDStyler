@@ -1,0 +1,3275 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-19 14:53+0530\n"
+"PO-Revision-Date: 2018-12-23 20:51+0530\n"
+"Language-Team: Sinhala <akashsovis at gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 2.2\n"
+"Last-Translator: \n"
+"Language: si_LK\n"
+
+#: src/About.cpp:35
+msgid "About ..."
+msgstr "පිළිබඳ ..."
+
+#: src/About.cpp:39
+msgid "About"
+msgstr "පිළබඳ"
+
+#: src/About.cpp:46
+msgid "Written by: "
+msgstr "සැකසුම: "
+
+#: src/About.cpp:48
+msgid "Version: "
+msgstr "අනුවාදය: "
+
+#: src/About.cpp:50
+msgid "Licence type: "
+msgstr "බලපත්‍ර වර්ගය: "
+
+#: src/About.cpp:52
+msgid "Copyright: "
+msgstr "ප්‍රකාශණ හිමිකම: "
+
+#: src/About.cpp:73
+msgid "DVDStyler is a crossplatform authoring system for Video DVD production."
+msgstr "DVDStyler බහු ප්‍රරූප වීඩියෝ ඩීවීඩී තැටි සැකසීමේ මෘදුකාංගයකි."
+
+#: src/About.cpp:85
+msgid "Forum"
+msgstr "පෝරමය"
+
+#: src/About.cpp:86
+#, c-format
+msgid "Please use %sDVDStyler forum%s to get support, ask questions, or discuss this software."
+msgstr "කරුණාකර මෘදුකාංගය පිළිබඳ සහාය ලබාගැනීමට, ගැටළු ඉදිරිපත් කිරීමට හෝ සාකච්ඡා සඳහා %sDVDStyler forum%s භාවිතා කරන්න."
+
+#: src/About.cpp:88
+msgid "WIKI"
+msgstr "WIKI"
+
+#: src/About.cpp:89
+#, c-format
+msgid "Some documentation and %sFAQ%s you can find in %sDVDStyler WIKI%s or you can publish there your comments or small guides."
+msgstr "සමහරක් ලේඛන සහ %sFAQ%s, %sDVDStyler WIKI%s හි සොයාගත හැකි අතර අදහස් හෝ කුඩා මාර්ගෝපදේශන ද එහිදී ඔබට සැකසිය හැක."
+
+#: src/About.cpp:92
+msgid "Bugs & RFE"
+msgstr "දෝෂ හා RFE"
+
+#: src/About.cpp:93
+#, c-format
+msgid "Please use %sSourceforge Bugtracing system%s to report bug and %sSourceforge RFE system%s to submit a new feature request."
+msgstr "කරුණාකර දෝෂ වාර්තා කිරීමට %sSourceforge Bugtracing system%s ද, නව අංග ඉල්ලීමට %sSourceforge RFE system%s ද භාවිතා කරන්න."
+
+#: src/About.cpp:98
+msgid "Support"
+msgstr "උපකාර"
+
+#: src/About.cpp:106
+msgid "Author and Maintainer"
+msgstr "කර්තෘ හා අයිතිකරු"
+
+#: src/About.cpp:111
+msgid "Doc Writer"
+msgstr "ලේඛක"
+
+#: src/About.cpp:116
+msgid "Packager (.deb)"
+msgstr "ඇසුරුම්කරු (.deb)"
+
+#: src/About.cpp:121
+msgid "Translations"
+msgstr "පරිවර්තකවරු"
+
+#: src/About.cpp:127
+msgid "Libraries and Tools"
+msgstr "වගකීම් සහ උපාංග"
+
+#: src/About.cpp:136
+msgid "Authors"
+msgstr "කර්තෘන්"
+
+#: src/About.cpp:143
+msgid ""
+"DVDStyler is <a href='http://www.gnu.org/philosophy/free-sw.html'>free software</a> distributed under <a href='http://www.gnu.org/copyleft/gpl.html'>GNU General Public License (GPL)</a>. Please visit those sites for details "
+"of each agreement."
+msgstr ""
+"DVDStyler  <a href='http://www.gnu.org/copyleft/gpl.html'>GNU පොදු මහජන බලපත්‍රය (GPL)</a> යටතේ පවතින <a href='http://www.gnu.org/philosophy/free-sw.html'>නිදහස් මෘදුකාංගයකි</a>. කරුණාකර එක් එක් සම්මුතීන් පිළිබඳ දැනගැනීමට ඒ ඒ වේබ් අඩවි වෙත "
+"පිවිසෙන්න."
+
+#: src/About.cpp:148
+msgid ""
+"THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL "
+"THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS "
+"IN THE SOFTWARE."
+msgstr ""
+"මෙම මෘදුකාංගය කිසිඳු කඩිනම් හෝ ව්‍යංගාර්ථ වගකීමක් නොමැතිව, ඇතුළත් වන එහෙත් ඊට පමණක් සීමා නොවන වාණිජමය වගකීමක් ඇති, යම් කාර්යයකට සුදුසුකම් කියන හා කඩකළ නොහැකි \"පවතින පරිදි\" ලබා දී ඇත. කිසිඳු හෙයකින් මෘදුකාංගය මඟින් හෝ ඒ හා සම්බන්ධ හෝ එය භාවිතය සම්බන්ධ හෝ වෙනත් කිසිඳු අයුරක "
+"අයිතිවාසිකමක්, අලාභයක් හෝ වෙනත් වගකීමක් කොන්ත්‍රාත්තුව, තෝරතය හෝ අන් අයුරකින් සිදුවිය ද කර්තෘ හෝ කර්තෘ කාරකවරු මේ සඳහා  වගකියනු නො ලැබේ."
+
+#: src/About.cpp:157
+msgid "Licence"
+msgstr "බලපත්‍රය"
+
+#: src/About.cpp:162 buttons/ok.xml:3
+msgid "OK"
+msgstr "හරි"
+
+#: src/AnimationDlg.cpp:29
+msgid "width"
+msgstr "පළල"
+
+#: src/AnimationDlg.cpp:29
+msgid "height"
+msgstr "උස"
+
+#: src/AnimationDlg.cpp:29
+msgid "opacity"
+msgstr "පාරාන්ධතාව"
+
+#: src/AnimationDlg.cpp:46
+msgid "font size"
+msgstr "අක්ෂර පරිමාණය"
+
+#: src/AnimationDlg.cpp:157
+msgid "Attribute"
+msgstr "ගුණාංග"
+
+#: src/AnimationDlg.cpp:157
+msgid "Values (separated by semicolon)"
+msgstr "අගයන් (තිත් කොමා මඟින් වෙන් කරන්න)"
+
+#: src/AnimationDlg.cpp:157
+msgid "Begin"
+msgstr "අරඹන්න"
+
+#: src/AnimationDlg.cpp:157
+msgid "Duration (sec)"
+msgstr "ප්‍රවර්තනය (තත්)"
+
+#: src/AnimationDlg.cpp:208
+msgid "Animations"
+msgstr "සජීවීකරණ"
+
+#: src/AudioPropDlg.cpp:79
+msgid "Audio properties"
+msgstr "ශ්‍රව්‍ය ලක්ෂණ"
+
+#: src/AudioPropDlg.cpp:83 src/VideoPropDlg.cpp:107
+msgid "File Name:"
+msgstr "ගොනු නාමය:"
+
+#: src/AudioPropDlg.cpp:87 src/TitlePropDlg.cpp:196 src/VideoFrameDlg.cpp:77 src/VideoPropDlg.cpp:112 src/VobListBox.cpp:109
+msgid "Duration:"
+msgstr "ප්‍රවර්තනය:"
+
+#: src/AudioPropDlg.cpp:91 src/VideoPropDlg.cpp:116
+msgid "Source Format:"
+msgstr "මූලාශ්‍ර ආකෘතිය:"
+
+#: src/AudioPropDlg.cpp:95 src/VideoPropDlg.cpp:120
+msgid "Destination Format:"
+msgstr "ගමනාන්ත ආකෘතිය:"
+
+#: src/AudioPropDlg.cpp:100
+msgid "5.1"
+msgstr "5.1"
+
+#: src/AudioPropDlg.cpp:104 src/SettingsDlg.cpp:73 src/SubtitlePropDlg.cpp:107
+msgid "Language:"
+msgstr "භාෂාව:"
+
+#: src/AudioPropDlg.cpp:108
+msgid "Time delay:"
+msgstr "කාල පමාව:"
+
+#: src/AudioPropDlg.cpp:117
+msgid "ms"
+msgstr "මිලි තත්"
+
+#: src/AudioPropDlg.cpp:120 src/VideoPropDlg.cpp:182
+msgid "Filters:"
+msgstr "පෙරහන්:"
+
+#: src/AudioPropDlg.cpp:125
+msgid "Volume adjustment"
+msgstr "හඬ සැකසුම්"
+
+#: src/AudioPropDlg.cpp:128 src/SettingsDlg.cpp:203 src/SettingsDlg.cpp:302
+msgid "No"
+msgstr "නැත"
+
+#: src/AudioPropDlg.cpp:130
+msgid "Change (%)"
+msgstr "වෙනස (%)"
+
+#: src/AudioPropDlg.cpp:135 src/SettingsDlg.cpp:121
+msgid "Normalize"
+msgstr "සාමාන්‍යකරණය"
+
+#: src/AudioPropDlg.cpp:137
+msgid "Change (dB)"
+msgstr "වෙනස (dB)"
+
+#: src/AudioPropDlg.cpp:206 src/Stream.cpp:114
+msgid "stereo"
+msgstr "ද්විමාන (Stereo)"
+
+#: src/AudioPropDlg.cpp:244 src/AudioPropDlg.cpp:426
+msgid "Track gain:"
+msgstr "පථ ලාභය:"
+
+#: src/AudioPropDlg.cpp:348
+#, c-format
+msgid "Invalid time value '%s'"
+msgstr "අවලංගු කාල පරාසය '%s'"
+
+#: src/AudioPropDlg.cpp:354
+#, c-format
+msgid "Invalid volume value '%s'"
+msgstr "අවලංගු හඬ පරාසය '%s'"
+
+#: src/AudioPropDlg.cpp:389
+msgid "Analysis of audio"
+msgstr "ශ්‍රව්‍ය විශ්ලේෂණය"
+
+#: src/AudioPropDlg.cpp:389 src/MainWin.cpp:868 src/SysUtils.cpp:303 src/VobListBox.cpp:611
+msgid "Please wait..."
+msgstr "කරුණාකර රැඳී සිටින්න..."
+
+#: src/BurnDlg.cpp:104 src/BurnDlg.cpp:459 src/BurnDlg.cpp:466 src/BurnDlg.cpp:588 src/BurnDlg.cpp:595 src/BurnDlg.cpp:601 src/BurnDlg.cpp:608 src/BurnDlg.cpp:615 src/BurnDlg.cpp:620 src/BurnDlg.cpp:627 src/BurnDlg.cpp:632
+#: src/BurnDlg.cpp:638 src/BurnDlg.cpp:644 src/BurnDlg.cpp:657 src/BurnDlg.cpp:660 src/MainWin.cpp:1069 src/MainWin.cpp:1090 src/MainWin.cpp:1095 src/ProcessBurn.cpp:68 src/ProcessBurn.cpp:86 src/ProcessBurn.cpp:128
+#: src/ProcessFormatDvd.cpp:44 src/ProcessFormatDvd.cpp:53 src/ProcessPreview.cpp:45 src/ProcessPreview.cpp:53 src/ProcessPreview.cpp:61 src/ProcessPreview.cpp:82 src/ProcessPreview.cpp:87 src/TitlesetManager.cpp:467
+msgid "Burn"
+msgstr "දවන්න"
+
+#: src/BurnDlg.cpp:109
+msgid "Temp directory:"
+msgstr "තාවකාලික නාමාවලිය:"
+
+#: src/BurnDlg.cpp:114 src/BurnDlg.cpp:138 src/BurnDlg.cpp:160 src/BurnDlg.cpp:186 src/SubtitlePropDlg.cpp:148 src/SubtitlePropDlg.cpp:161 src/SubtitlePropDlg.cpp:179
+msgid "..."
+msgstr "..."
+
+#: src/BurnDlg.cpp:119 src/BurnDlg.cpp:166 src/BurnDlg.cpp:192
+msgid "Free:"
+msgstr "නිදහස්:"
+
+#: src/BurnDlg.cpp:123 src/BurnDlg.cpp:170 src/BurnDlg.cpp:196
+msgid "Required:"
+msgstr "අත්‍යවශ්‍ය:"
+
+#: src/BurnDlg.cpp:129
+msgid "preview"
+msgstr "පෙරදසුන"
+
+#: src/BurnDlg.cpp:146
+msgid "Download"
+msgstr "බාගත"
+
+#: src/BurnDlg.cpp:150
+msgid "just generate"
+msgstr "ජනනය පමණක්"
+
+#: src/BurnDlg.cpp:155 src/BurnDlg.cpp:181
+msgid "Save to:"
+msgstr "සුරකින්න:"
+
+#: src/BurnDlg.cpp:176
+msgid "create iso image"
+msgstr "iso ඡායාවක් තනන්න"
+
+#: src/BurnDlg.cpp:202
+msgid "burn"
+msgstr "දවන්න"
+
+#: src/BurnDlg.cpp:207
+msgid "format DVD-RW"
+msgstr "DVD-RW ප්‍රතිආකෘතිගත කරන්න"
+
+#: src/BurnDlg.cpp:212
+msgid "Device:"
+msgstr "ධාවකය:"
+
+#: src/BurnDlg.cpp:216
+msgid "Speed:"
+msgstr "වේගය:"
+
+#: src/BurnDlg.cpp:222
+msgid "add error correction data"
+msgstr "වැරදි නිවැරදි කිරීමේ දත්ත ඇතුළත් කරන්න"
+
+#: src/BurnDlg.cpp:227 src/MenuCellsDlg.cpp:108
+msgid "Start"
+msgstr "ආරම්භ"
+
+#: src/BurnDlg.cpp:229 src/SubtitlePropDlg.cpp:244 src/VideoFrameDlg.cpp:75 wxVillaLib/PropDlg.cpp:207
+msgid "Reset"
+msgstr "ප්‍රත්‍යාරම්භ"
+
+#: src/BurnDlg.cpp:341
+msgid "VLC media player"
+msgstr "VLC මාධ්‍ය ධාවකය"
+
+#: src/BurnDlg.cpp:343
+msgid "MPC-HC player"
+msgstr "MPC-HC ධාවකය"
+
+#: src/BurnDlg.cpp:345
+msgid "Custom video player"
+msgstr "ව්‍යවහාරිත වීඩියෝ ධාවකය"
+
+#: src/BurnDlg.cpp:396
+msgid "N/A"
+msgstr "ශූන්‍ය"
+
+#: src/BurnDlg.cpp:401 src/BurnDlg.cpp:436 src/BurnDlg.cpp:437 src/BurnDlg.cpp:438
+msgid "GB"
+msgstr "ගිබ"
+
+#: src/BurnDlg.cpp:459
+msgid "There is not enough space to store ISO file."
+msgstr "ISO ගොනුව සුරැකීමට ප්‍රමාණවත් තරම් ඉඩකඩ නොමැත."
+
+#: src/BurnDlg.cpp:466
+msgid "There is not enough space on temporary directory."
+msgstr "තාවකාලික නාමාවලියේ ප්‍රමාණවත් තරම් ඉඩකඩ නොමැත."
+
+#: src/BurnDlg.cpp:507 src/BurnDlg.cpp:517 wxVillaLib/PropDlg.cpp:830
+msgid "Choose a directory"
+msgstr "නාමාවලියක් තනන්න"
+
+#: src/BurnDlg.cpp:536 src/MainWin.cpp:1214 src/TitlePropDlg.cpp:423 src/TitlePropDlg.cpp:439 wxVillaLib/PropDlg.cpp:788
+msgid "Choose a file"
+msgstr "ගොනුවක් තෝරන්න"
+
+#: src/BurnDlg.cpp:537
+msgid "Programs"
+msgstr "වැඩසටහන්"
+
+#: src/BurnDlg.cpp:538 src/MainWin.cpp:1048 src/MainWin.cpp:1209 src/MainWin.cpp:1213 src/MenuObjectPropDlg.cpp:457 src/MenuPropDlg.cpp:141 src/MenuPropDlg.cpp:155 src/TitlePropDlg.cpp:235 src/TitlePropDlg.cpp:425
+msgid "All Files"
+msgstr "සියළු ගොනු"
+
+#: src/BurnDlg.cpp:569
+msgid "Choose a file to save iso image"
+msgstr "iso ඡායාව සුරැකීමට ගොනුවක් තෝරන්න"
+
+#: src/BurnDlg.cpp:588
+msgid "Please enter output directory"
+msgstr "කරුණාකර ප්‍රතිදාන නාමාවලිය ඇතුළත් කරන්න"
+
+#: src/BurnDlg.cpp:594
+msgid "Output directory contains files. Please choose another output directory."
+msgstr "ප්‍රතිදාන නාමාවලියේ ගොනු පවතියි. කරුණාකර වෙනත් ප්‍රතිදාන නාමාවලියක් තෝරන්න."
+
+#: src/BurnDlg.cpp:600
+#, c-format
+msgid "Directory '%s' already exist. Do you want to overwrite it?"
+msgstr "'%s' නාමාවලිය දැනටමත් පවතියි. ඔබ මෙය නැවත ලිවීමට කැමති ද?"
+
+#: src/BurnDlg.cpp:608 src/BurnDlg.cpp:660 src/ProcessCleanTemp.cpp:43 src/ProcessCleanTemp.cpp:47 src/ProcessCleanTemp.cpp:51
+#, c-format
+msgid "Can't create directory '%s'"
+msgstr "'%s' නාමාවලිය සැකසිය නොහැක"
+
+#: src/BurnDlg.cpp:615
+msgid "Please select a video player"
+msgstr "කරුණාකර වීඩියෝ ධාවකයක් තෝරන්න"
+
+#: src/BurnDlg.cpp:620
+msgid "Please select path to video player"
+msgstr "කරුණාකර වීඩියෝ ධාවකය වෙත මාර්ගය තෝරන්න"
+
+#: src/BurnDlg.cpp:627
+msgid "Please enter file name to save ISO"
+msgstr "කරුණාකර ISO ගොනුව සුරැකීමට නාමයක් ලබා දෙන්න"
+
+#: src/BurnDlg.cpp:631 src/ButtonEditDlg.cpp:580
+#, c-format
+msgid "File '%s' already exist. Do you want to overwrite it?"
+msgstr "'%s' ගොනුව දැනටමත් පවතියි. ඔබට මෙය නැවත ලිවීමට අවශ්‍ය ද?"
+
+#: src/BurnDlg.cpp:638
+msgid "Please enter device name"
+msgstr "කරුණාකර උපාංග නාමය ඇතුළත් කරන්න"
+
+#: src/BurnDlg.cpp:644
+msgid "Invalid device name"
+msgstr "වැරදි උපාංග නාමයක්"
+
+#: src/BurnDlg.cpp:656
+#, c-format
+msgid ""
+"There are %d transcoded file(s) in the cache. They\n"
+"will be removed if you change temporary directory."
+msgstr ""
+"පරිවර්තිත ගොනු %d ප්‍රමාණයක් තාවකාලික නාමාවලියේ ඇත.\n"
+"තාවකාලික නාමාවලිය වෙනස් කළහොත් මේවා ද ඉවත් වේ."
+
+#: src/ButtonAddParamDlg.cpp:46
+msgid ""
+"Please select an SVG element\n"
+"for new parameter:"
+msgstr ""
+"කරුණාකර නව පරාමිතිය සඳහා SVG\n"
+"මූලයක් තෝරන්න:"
+
+#: src/ButtonEditDlg.cpp:167
+msgid "name"
+msgstr "නාමය"
+
+#: src/ButtonEditDlg.cpp:167 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:438 src/MenuObjectPropDlg.cpp:676 src/MenuObjectPropDlg.cpp:685 src/MenuObjectPropDlg.cpp:697
+msgid "title"
+msgstr "මාතෘකාව"
+
+#: src/ButtonEditDlg.cpp:167
+msgid "type"
+msgstr "වර්ගය"
+
+#: src/ButtonEditDlg.cpp:167
+msgid "ID of element"
+msgstr "මූලයේ අනන්‍යතාව"
+
+#: src/ButtonEditDlg.cpp:167
+msgid "attribute name"
+msgstr "ගුණාංග නාමය"
+
+#: src/ButtonEditDlg.cpp:167
+msgid "dynamic"
+msgstr "ගතික"
+
+#: src/ButtonEditDlg.cpp:168
+msgid "value"
+msgstr "අගය"
+
+#: src/ButtonEditDlg.cpp:168 src/ButtonEditDlg.cpp:256
+msgid "highlighted"
+msgstr "ඉස්මතු කළ"
+
+#: src/ButtonEditDlg.cpp:168 src/ButtonEditDlg.cpp:257
+msgid "selected"
+msgstr "තේරූ"
+
+#: src/ButtonEditDlg.cpp:246
+msgid "Create button"
+msgstr "බොත්තම සකසන්න"
+
+#: src/ButtonEditDlg.cpp:255
+msgid "normal"
+msgstr "සාමාන්‍ය"
+
+#: src/ButtonEditDlg.cpp:259
+msgid "Button state"
+msgstr "බොත්තම් තත්වය"
+
+#: src/ButtonEditDlg.cpp:266
+msgid "Directory:"
+msgstr "නාමාවලිය:"
+
+#: src/ButtonEditDlg.cpp:268 buttons/circle.xml:21 buttons/circle2.xml:21 buttons/pill.xml:44 buttons/text-circle-v2.xml:19 buttons/text-square-v2.xml:20 buttons/text-underlined-v3.xml:19 buttons/text-v3.xml:19
+msgid "Label"
+msgstr "ලේබලය"
+
+#: src/ButtonEditDlg.cpp:270 src/SlideDlg.cpp:48
+msgid "File name:"
+msgstr "ගොනු නාමය:"
+
+#: src/ButtonEditDlg.cpp:275
+msgid ".xml"
+msgstr ".xml"
+
+#: src/ButtonEditDlg.cpp:278
+msgid "Title:"
+msgstr "මාතෘකාව:"
+
+#: src/ButtonEditDlg.cpp:282
+msgid "Default width:"
+msgstr "මූලික පළල:"
+
+#: src/ButtonEditDlg.cpp:288 src/ButtonEditDlg.cpp:311 src/ButtonEditDlg.cpp:335 src/ButtonEditDlg.cpp:358
+msgid "or"
+msgstr "හෝ"
+
+#: src/ButtonEditDlg.cpp:292 src/ButtonEditDlg.cpp:297 src/ButtonEditDlg.cpp:315 src/ButtonEditDlg.cpp:320 src/ButtonEditDlg.cpp:339 src/ButtonEditDlg.cpp:344 src/ButtonEditDlg.cpp:362 src/ButtonEditDlg.cpp:367
+msgid "+"
+msgstr "+"
+
+#: src/ButtonEditDlg.cpp:302 src/ButtonEditDlg.cpp:325 src/ButtonEditDlg.cpp:349 src/ButtonEditDlg.cpp:372 src/SubtitlePropDlg.cpp:153 src/SubtitlePropDlg.cpp:167 src/SubtitlePropDlg.cpp:184
+msgid "%"
+msgstr "%"
+
+#: src/ButtonEditDlg.cpp:305
+msgid "Min width:"
+msgstr "අවම පළල:"
+
+#: src/ButtonEditDlg.cpp:329
+msgid "Default height:"
+msgstr "මූලික උස:"
+
+#: src/ButtonEditDlg.cpp:352
+msgid "Min height:"
+msgstr "අවම උස:"
+
+#: src/ButtonEditDlg.cpp:376
+msgid "Parameters:"
+msgstr "පරාමිති:"
+
+#: src/ButtonEditDlg.cpp:382 src/MainWin.cpp:321
+msgid "Save"
+msgstr "සුරකින්න"
+
+#: src/ButtonEditDlg.cpp:446
+msgid "Edit button"
+msgstr "සංස්කරණ බොත්තම"
+
+#: src/ButtonEditDlg.cpp:490
+msgid "Add"
+msgstr "එක් කරන්න"
+
+#: src/ButtonEditDlg.cpp:492
+msgid "Remove selected"
+msgstr "තේරීම ඉවත් කරන්න"
+
+#: src/ButtonEditDlg.cpp:533
+msgid "No SVG element is selected"
+msgstr "කිසිඳු SVG මූලයක් තෝරා නැත"
+
+#: src/Cache.cpp:238 src/Cache.cpp:263 src/Process.cpp:20 src/ProcessMenuTransitions.cpp:121 src/ProcessTranscode.cpp:159 src/ProcessTranscode.cpp:174
+#, c-format
+msgid "Can't remove file '%s'"
+msgstr "'%s' ගොනුව ඉවත් කළ නොහැක"
+
+#: src/Cache.cpp:372
+#, c-format
+msgid "There is %d file (%0.1f MB) in the transcoding cache."
+msgid_plural "There are %d files (%0.1f MB) in the transcoding cache."
+msgstr[0] "පරිවර්තන නාමාවලියේ %d ගොනුවක් (%0.1f මෙබ) ඇත."
+msgstr[1] "පරිවර්තන නාමාවලියේ %d ගොනු (%0.1f මෙබ) ඇත."
+
+#: src/Cache.cpp:375
+msgid "Do you want to clear the cache?"
+msgstr "ඔබට තාවකාලික දත්ත ඉවත් කළ යුතු ද?"
+
+#: src/Cache.cpp:376 src/MainWin.cpp:1005
+msgid "Confirm"
+msgstr "තහවුරු"
+
+#: src/ChaptersDlg.cpp:94
+msgid "Chapters"
+msgstr "පරිච්ඡේද"
+
+#: src/ChaptersDlg.cpp:103 src/TitlePropDlg.cpp:140
+msgid "Chapters:"
+msgstr "පරිච්ඡේද:"
+
+#: src/ChaptersDlg.cpp:128 src/VideoFrameDlg.cpp:61 src/VideoPropDlg.cpp:207
+msgid "Time:"
+msgstr "කාලය:"
+
+#: src/ChaptersDlg.cpp:142
+msgid "Type:"
+msgstr "වර්ග:"
+
+#: src/ChaptersDlg.cpp:145 src/MenuCellsDlg.cpp:44 src/MenuCellsDlg.cpp:64 src/MenuCellsDlg.cpp:195 src/MenuPropDlg.cpp:216
+msgid "Chapter"
+msgstr "පරිච්ඡේදය"
+
+#: src/ChaptersDlg.cpp:147 src/MenuCellsDlg.cpp:44 src/MenuCellsDlg.cpp:65 src/MenuCellsDlg.cpp:195
+msgid "Program"
+msgstr "වැඩසටහන"
+
+#: src/ChaptersDlg.cpp:149
+msgid "Regular cell"
+msgstr "ක්‍රමානුකූල කෝෂය"
+
+#: src/ChaptersDlg.cpp:152 src/VideoPropDlg.cpp:235
+msgid "End:"
+msgstr "සීමාව:"
+
+#: src/ChaptersDlg.cpp:156 src/DVD.cpp:966 src/DVD.cpp:1003 src/MenuPropDlg.cpp:195
+msgid "Auto"
+msgstr "ස්වයං"
+
+#: src/ChaptersDlg.cpp:157 src/DVD.cpp:1006 src/MenuObjectPropDlg.cpp:161 src/MenuObjectPropDlg.cpp:556 src/SettingsDlg.cpp:177
+msgid "Custom"
+msgstr "පුද්ගලික"
+
+#: src/ChaptersDlg.cpp:169 src/MenuPropDlg.cpp:171 src/TitlePropDlg.cpp:150
+msgid "Pause:"
+msgstr "විරාමය:"
+
+#: src/ChaptersDlg.cpp:174 src/MainWin.cpp:617 src/MenuPropDlg.cpp:171 src/SettingsDlg.cpp:163 src/SettingsDlg.cpp:165 src/TitlePropDlg.cpp:150 src/TitlePropDlg.cpp:196 src/VideoFrameDlg.cpp:82 src/VideoPropDlg.cpp:188
+#: src/VideoPropDlg.cpp:193
+msgid "sec"
+msgstr "තත්"
+
+#: src/ChaptersDlg.cpp:177
+msgid "Commands:"
+msgstr "ආඥා:"
+
+#: src/ChaptersDlg.cpp:188
+msgid "Add cell at begin if it doesn't exist"
+msgstr "ආරම්භයේ කෝෂයක් නොමැතිනම් එක් කරන්න"
+
+#: src/ChaptersDlg.cpp:445 src/ChaptersDlg.cpp:450
+#, c-format
+msgid "'%s' is not valid time"
+msgstr "'%s' අවලංගු කාලයකි"
+
+#: src/ChaptersDlg.cpp:455
+msgid "Start time cannot be after end time"
+msgstr "ආරම්භක කාලය අවසන් කාලයට වඩා ඉදිරියෙන් විය නොහැක"
+
+#: src/DirCtrl.cpp:24 src/MainWin.cpp:276 src/MainWin.cpp:283 src/MainWin.cpp:286
+msgid "&Refresh"
+msgstr "ප්‍රාණවත්"
+
+#: src/DVD.cpp:270 src/Menu.cpp:1141 src/MenuEditor.cpp:464
+msgid "Wide screen DVD menu can contain maximal 12 buttons"
+msgstr "පුළුල් තිර DVD මෙනු උපරිම බොත්තම් 12ක් දක්වා සහාය දක්වයි"
+
+#: src/DVD.cpp:273 src/Menu.cpp:1144 src/MenuEditor.cpp:467
+msgid "Wide screen DVD menu (nopanscan/noletterbox) can contain maximal 18 buttons"
+msgstr "පුළුල් තිර DVD මෙනු (nopanscan/noletterbox) උපරිම බොත්තම් 18ක් දක්වා සහාය දක්වයි"
+
+#: src/DVD.cpp:277 src/Menu.cpp:1148 src/MenuEditor.cpp:471
+msgid "DVD menu can contain maximal 34 buttons"
+msgstr "DVD මෙනු උපරිම බොත්තම් 34ක් දක්වා සහාය දක්වයි"
+
+#: src/DVD.cpp:359
+msgid "Some actions are invalid. Please click 'Details' for more information."
+msgstr "සමහරක් කාර්යයන් අවලංගුයි. කරුණාකර වැඩි විස්තර සඳහා 'තොරතුරු' තෝරන්න."
+
+#: src/DVD.cpp:486 src/MenuObjectDef.cpp:183
+#, c-format
+msgid "Cannot open file '%s'."
+msgstr "'%s' ගොනුව විවෘත කළ නොහැක."
+
+#: src/DVD.cpp:492
+#, c-format
+msgid "'%s' is not a DVDStyler project file"
+msgstr "'%s' DVDStyler ගොනුවක් නොවේ"
+
+#: src/DVD.cpp:590
+msgid "Can't load vmgm menus"
+msgstr "vmgm මෙනුව ලබාගත නොහැක"
+
+#: src/DVD.cpp:599
+msgid "Can't load titleset"
+msgstr "මාතෘකා කට්ටලය ලබාගත නොහැක"
+
+#: src/DVD.cpp:917 src/DVD.cpp:944 src/DVD.cpp:957
+msgid "Omit"
+msgstr "අත්හරින්න"
+
+#: src/DVD.cpp:919 src/DVD.cpp:946 src/DVD.cpp:959 src/ProgressDlg.cpp:227
+msgid "Copy"
+msgstr "පිටපත්"
+
+#: src/DVD.cpp:947
+msgid "MP2 48 kHz"
+msgstr "MP2 48 kHz"
+
+#: src/DVD.cpp:948
+msgid "AC3 48 kHz"
+msgstr "AC3 48 kHz"
+
+#: src/DVD.cpp:950
+msgid "PCM 48 kHz"
+msgstr "PCM 48 kHz"
+
+#: src/DVD.cpp:974
+msgid "SD (standard)"
+msgstr "SD (සම්මත)"
+
+#: src/DVD.cpp:975
+msgid "Half HD (1280 x 720)"
+msgstr "අර්ධ HD (1280 x 720)"
+
+#: src/DVD.cpp:976
+msgid "HDV (1440 x 1080)"
+msgstr "HDV (1440 x 1080)"
+
+#: src/DVD.cpp:977
+msgid "Full HD (1920 x 1080)"
+msgstr "පූර්ණ HD (1920 x 1080)"
+
+#: src/DVD.cpp:983
+msgid "CD (700 MB)"
+msgstr "සීඩී තැටි (700 MB)"
+
+#: src/DVD.cpp:984
+msgid "DVD-1 (1.4 GB)"
+msgstr "ඩීවීඩී-1 තැටි (1.4 GB)"
+
+#: src/DVD.cpp:985
+msgid "DVD-2 (2.6 GB)"
+msgstr "ඩීවීඩී-2 තැටි (2.6 GB)"
+
+#: src/DVD.cpp:986
+msgid "DVD-5 (4.7 GB)"
+msgstr "ඩීවීඩී-5 තැටි (4.7 GB)"
+
+#: src/DVD.cpp:987
+msgid "DVD-9 (8.5 GB)"
+msgstr "ඩීවීඩී-9 තැටි (8.5 GB)"
+
+#: src/DVD.cpp:988
+msgid "Unlimited"
+msgstr "අසීමිත"
+
+#: src/DVD.cpp:995
+msgid "Call last menu"
+msgstr "අවසාන මෙනුව ගන්න"
+
+#: src/DVD.cpp:996
+msgid "Call root menu"
+msgstr "මූලාශ්‍ර මෙනුව ගන්න"
+
+#: src/DVD.cpp:997
+msgid "Play next title"
+msgstr "මීළඟ මාතෘකාව ධාවනය කරන්න"
+
+#: src/DVD.cpp:1005
+#, c-format
+msgid "%d MBit/s"
+msgstr "තත්. මෙබිටු %d"
+
+#: src/DVDAction.cpp:43
+#, c-format
+msgid "select audio track %d and "
+msgstr "%d ශ්‍රව්‍ය පථය තෝරා"
+
+#: src/DVDAction.cpp:46
+#, c-format
+msgid "select subtitle track %d and "
+msgstr "%d උපසිරැසි පථය තෝරා"
+
+#: src/DVDAction.cpp:54
+msgid "jump to start of current menu"
+msgstr "වර්තමාන මෙනුවේ ආරම්භයට යන්න"
+
+#: src/DVDAction.cpp:63
+#, c-format
+msgid "from titleset %d"
+msgstr "%d මාතෘකා කට්ටලයෙන්"
+
+#: src/DVDAction.cpp:69
+msgid "jump to title menu"
+msgstr "මාතෘකා මෙනුවට යන්න"
+
+#: src/DVDAction.cpp:69
+msgid "jump to root menu"
+msgstr "මූලාශ්‍ර මෙනුවට යන්න"
+
+#: src/DVDAction.cpp:69
+msgid "jump to subtitle menu"
+msgstr "උපසිරැසි මෙනුවට යන්න"
+
+#: src/DVDAction.cpp:70
+msgid "jump to audio menu"
+msgstr "ශ්‍රව්‍ය මෙනුවට යන්න"
+
+#: src/DVDAction.cpp:70
+msgid "jump to angle menu"
+msgstr "කෝණ මෙනුවට යන්න"
+
+#: src/DVDAction.cpp:70
+msgid "jump to chapter menu"
+msgstr "පරිච්ඡේද මෙනුවට යන්න"
+
+#: src/DVDAction.cpp:75 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:646 src/MenuObjectPropDlg.cpp:666
+msgid "menu"
+msgstr "මෙනුව"
+
+#: src/DVDAction.cpp:77 src/DVDAction.cpp:94
+msgid "jump to menu"
+msgstr "මෙනුවට යන්න"
+
+#: src/DVDAction.cpp:92
+msgid "jump to VMGM menu"
+msgstr "VMGM මෙනුවට යන්න"
+
+#: src/DVDAction.cpp:100
+#, c-format
+msgid "jump to title %d chapter %d"
+msgstr "%d මාතෘකාවේ %d පරිච්ඡේදයට යන්න"
+
+#: src/DVDAction.cpp:105
+msgid "jump to title"
+msgstr "මාතෘකාවට යන්න"
+
+#: src/DVDAction.cpp:183 src/MenuObjectPropDlg.cpp:440 src/MenuObjectPropDlg.cpp:659 src/MenuObjectPropDlg.cpp:668 src/MenuObjectPropDlg.cpp:678 src/MenuObjectPropDlg.cpp:687 src/MenuObjectPropDlg.cpp:696
+msgid "titleset"
+msgstr "මාතෘකා කට්ටලය"
+
+#: src/DVDAction.cpp:186 src/MenuObjectPropDlg.cpp:635 src/MenuPropDlg.cpp:55
+msgid "VMGM menu"
+msgstr "VMGM මෙනුව"
+
+#: src/DVDAction.cpp:196
+#, c-format
+msgid "cannot jump to titleset %d, only %d exist"
+msgstr "%d මාතෘකා කට්ටලයට යා නොහැක, %d පමණක් පවතී"
+
+#: src/DVDAction.cpp:204
+msgid "cannot jump to VMGM menu; none exist"
+msgstr "VMGM මෙනුවට යා නොහැක; කිසිවක් නො පවතියි"
+
+#: src/DVDAction.cpp:206 src/DVDAction.cpp:441
+msgid "cannot jump to menu; none exist"
+msgstr "මෙනුවට යා නොහැක; කිසිවක් නො පවතියි"
+
+#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:652
+msgid "title menu"
+msgstr "මාතෘකා මෙනුව"
+
+#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:652
+msgid "root menu"
+msgstr "මූලාශ්‍ර මෙනුව"
+
+#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:652
+msgid "subtitle menu"
+msgstr "උපසිරැසි මෙනුව"
+
+#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:653
+msgid "audio menu"
+msgstr "ශ්‍රව්‍ය මෙනුව"
+
+#: src/DVDAction.cpp:212 src/MenuObjectPropDlg.cpp:653
+msgid "angle menu"
+msgstr "කෝණ මෙනුව"
+
+#: src/DVDAction.cpp:212 src/MenuObjectPropDlg.cpp:653
+msgid "chapter menu"
+msgstr "පරිච්ඡේද මෙනුව"
+
+#: src/DVDAction.cpp:215
+#, c-format
+msgid "cannot find %s"
+msgstr "%s සොයාගත නොහැක"
+
+#: src/DVDAction.cpp:220
+#, c-format
+msgid "cannot jump to VMGM menu %d, only %d exist"
+msgstr "%d  VMGM මෙනුවට යා නොහැක, %d පමණක් පවතියි"
+
+#: src/DVDAction.cpp:222
+#, c-format
+msgid "cannot jump to menu %d, only %d exist"
+msgstr "%d මෙනුවට යා නොහැක, %d පමණක් පවතියි"
+
+#: src/DVDAction.cpp:233
+msgid "cannot jump to title; none exist"
+msgstr "මාතෘකාවට යා නොහැක; කිසිවක් නොපවතියි"
+
+#: src/DVDAction.cpp:236
+#, c-format
+msgid "cannot jump to title %d, only %d exist"
+msgstr "%d මාතෘකාවට යා නොහැක, %d පමණක් පවතියි"
+
+#: src/DVDAction.cpp:241
+#, c-format
+msgid "cannot jump to chapter %d of title %d, only %d exist"
+msgstr "%d පරිච්ඡේදය; %d මාතෘකාවේ යා නොහැක, %d පමණක් පවතියි"
+
+#: src/DVDAction.cpp:253
+msgid "cannot jump to a specific menu in another titleset, only to root/chapter/audio/subtitle/angle menu"
+msgstr "වෙනත් මාතෘකා කට්ටලයක කිසියම් මෙනුවකට යා නොහැක, මූලාශ්‍ර/පරිච්ඡේද/ශ්‍රව්‍ය/උපසිරැසි/කෝණ මෙනු වෙත පමණි"
+
+#: src/DVDAction.cpp:256
+msgid "cannot jump from regular menu to a title in another titleset, use VMGM menu instead"
+msgstr "සාමාන්‍ය මෙනුවක සිට වෙනත් මාතෘකා කට්ටලයක පවතින මාතෘකාවකට යා නොහැක, VMGM මෙනුවක් මේ සඳහා භාවිතා කරන්න"
+
+#: src/DVDAction.cpp:258
+msgid "cannot jump to a title in another titleset"
+msgstr "වෙනත් මාතෘකා කට්ටලයක මාතෘකාවකට යා නොහැක"
+
+#: src/DVDAction.cpp:270
+msgid "invalid action"
+msgstr "අවලංගු කාර්යය"
+
+#: src/DVDAction.cpp:280 src/DVDAction.cpp:371
+msgid "cannot jump to a menu from a title, use 'call' instead"
+msgstr "මාතෘකාවක සිට මෙනුවකට යා නොහැක, 'අමතන්න' මේ සඳහා භාවිතා කරන්න"
+
+#: src/DVDAction.cpp:287 src/DVDAction.cpp:403
+msgid "chapter"
+msgstr "පරිච්ඡේදය"
+
+#: src/DVDAction.cpp:287 src/DVDAction.cpp:403
+msgid "program"
+msgstr "වැඩසටහන"
+
+#: src/DVDAction.cpp:287 src/DVDAction.cpp:403
+msgid "cell"
+msgstr "කුටිය"
+
+#: src/DVDAction.cpp:288 src/DVDAction.cpp:404
+#, c-format
+msgid "jumping from VMGM menu to %s is not allowed"
+msgstr "VMGM මෙනුවේ සිට %s වෙත යාම අනවසරයි"
+
+#: src/DVDAction.cpp:320
+#, c-format
+msgid "on token '%s'"
+msgstr "'%s' ටෝකනයේ"
+
+#: src/DVDAction.cpp:336
+msgid "0 is not valid menu/chapter number"
+msgstr "0 අවලංගු මෙනු/පරිච්ඡේද අංකයකි"
+
+#: src/DVDAction.cpp:340
+msgid "0 is not valid title number"
+msgstr "0 අවලංගු මාතෘකා අංකයකි"
+
+#: src/DVDAction.cpp:344
+msgid "0 is not valid program number"
+msgstr "0 අවලංගු වැඩසටහන් අංකයකි"
+
+#: src/DVDAction.cpp:348
+msgid "0 is not valid cell number"
+msgstr "0 අවලංගු කුටි අංකයකි"
+
+#: src/DVDAction.cpp:377
+msgid "cannot specify chapter when jumping to another menu"
+msgstr "වෙනත් මෙනුවකට යන අවස්ථාවේ පරිච්ඡේදය තේරිය නොහැක"
+
+#: src/DVDAction.cpp:381
+msgid "cannot omit menu/title if specifying vmgm/titleset"
+msgstr "vmgm/මාතෘකා කට්ටලය ලබා දෙන්නේනම් මෙනු/මාතෘකා අත්හැරිය නොහැක"
+
+#: src/DVDAction.cpp:385 src/DVDAction.cpp:468
+msgid "VMGM must be specified with FPC"
+msgstr "VMGM, FPC සමඟ ලබාදිය යුතුයි"
+
+#: src/DVDAction.cpp:396
+msgid "VMGM does not have titles"
+msgstr "VMGM හි මාතෘකා නො පවතියි"
+
+#: src/DVDAction.cpp:409
+msgid "cannot jump to a chapter from a FPC"
+msgstr "FPC සිට පරිච්ඡේදයක් වෙත යා නොහැක"
+
+#: src/DVDAction.cpp:415
+msgid "menus do not have chapters"
+msgstr "මෙනු හි පරිච්ඡේද නො පවතියි"
+
+#: src/DVDAction.cpp:420
+#, c-format
+msgid "cannot jump to chapter %d, only %d exist"
+msgstr "%d පරිච්ඡේදය වෙත යා නොහැක, %d පමණක් පවතියි"
+
+#: src/DVDAction.cpp:455
+msgid "cannot 'call' a menu from another menu, use 'jump' instead"
+msgstr "වෙනත් මෙනුවක සිට තවත් මෙනුවක් 'ඇමතිය' නොහැක, 'යන්න' මේ සඳහා භාවිතා කරන්න"
+
+#: src/DVDAction.cpp:459
+msgid "cannot 'call' another title, use 'jump' instead"
+msgstr "වෙනත් මාතෘකාවක් 'ඇමතිය' නොහැක, 'යන්න' මේ සඳහා භාවිතා කරන්න"
+
+#: src/DVDAction.cpp:463
+msgid "cannot 'call' a chapter within a menu"
+msgstr "මෙනුවක් ඇතුළත පරිච්ඡේදයක් 'ඇමතිය' නොහැක"
+
+#: src/DVDAction.cpp:473
+msgid "cannot call to a menu in another titleset"
+msgstr "වෙනත් මාතෘකා කට්ටලයක මෙනුවකට ඇමතිය නොහැක"
+
+#: src/DVDAction.cpp:476
+msgid "cannot call to a specific menu PGC, only an entry"
+msgstr "කිසියම් PCG මෙනුවකට ඇමතිය නොහැක, ඇතුළුවීම පමණයි"
+
+#: src/DVDAction.cpp:504
+#, c-format
+msgid "cannot set SPRM %d"
+msgstr "%d SPRM සැකසිය නොහැක"
+
+#: src/DVDAction.cpp:558
+#, c-format
+msgid "unsupported VM opcode %d"
+msgstr "සහාය නො දක්වන %d VM op කේතය"
+
+#: src/DVDAction.cpp:577
+#, c-format
+msgid "invalid action '%s'"
+msgstr "'%s' අවලංගු කාර්යය"
+
+#: src/DVDPropDlg.cpp:29
+msgid "First Play Commands:"
+msgstr "ආරම්භ ධාවන අණ:"
+
+#: src/DVDPropDlg.cpp:31
+msgid "Create jumppads"
+msgstr "යැවීමේ උපධාන සකසන්න"
+
+#: src/DVDPropDlg.cpp:32
+msgid "Create empty VMGM/titleset menus if it doesn't exist"
+msgstr "නො පවතියිනම් හිස් VMGM/මාතෘකා කට්ටල මෙනු සකසන්න"
+
+#: src/dvdstyler.cpp:191
+msgid "automatically starts the generation and burning"
+msgstr "ජනනය හා දැවීම ස්වයංක්‍රියව අරඹයි"
+
+#: src/dvdstyler.cpp:192
+msgid "temporary directory"
+msgstr "තාවකාලික නාමාවලිය"
+
+#: src/dvdstyler.cpp:193
+msgid "output directory"
+msgstr "ප්‍රතිදාන නාමාවලිය"
+
+#: src/dvdstyler.cpp:194
+msgid "output ISO file name"
+msgstr "ප්‍රතිදාන ISO ගොනු නාමය"
+
+#: src/dvdstyler.cpp:195
+msgid "DVD device to burn"
+msgstr "දැවීමට DVD ධාවකය"
+
+#: src/dvdstyler.cpp:196
+msgid "write log messages to standard error"
+msgstr "සම්මත දෝෂ සඳහා ලඝු පණිවුඩ ලියන්න"
+
+#: src/dvdstyler.cpp:197
+msgid "show version of program"
+msgstr "වැඩසටහන් අනුවාදය පෙන්වන්න"
+
+#: src/dvdstyler.cpp:198
+msgid "show summary of options"
+msgstr "විකල්පයන්හි සාරාංශය පෙන්වන්න"
+
+#: src/dvdstyler.cpp:199
+msgid "input file"
+msgstr "ආදාන ගොනුව"
+
+#: src/MainWin.cpp:169
+msgid "&New\tCtrl-N"
+msgstr "නව\tCtrl-N"
+
+#: src/MainWin.cpp:170
+msgid "&Open...\tCtrl-O"
+msgstr "විවෘත...\tCtrl-O"
+
+#: src/MainWin.cpp:171
+msgid "&Save\tCtrl-S"
+msgstr "සුරැකි\tCtrl-S"
+
+#: src/MainWin.cpp:172
+msgid "S&ave as...\tShift-Ctrl-S"
+msgstr "ලෙස සුරැකි...\tShift-Ctrl-S"
+
+#: src/MainWin.cpp:173
+msgid "&Burn DVD...\tF9"
+msgstr "ඩීවීඩී දැවීම...\tF9"
+
+#: src/MainWin.cpp:178
+msgid "&Exit\tAlt-X"
+msgstr "පිටවීම\tAlt-X"
+
+#: src/MainWin.cpp:179
+msgid "&File"
+msgstr "ගොනුව"
+
+#: src/MainWin.cpp:181
+msgid "&Undo\tCtrl-Z"
+msgstr "නිෂ්ප්‍රභ\tCtrl-Z"
+
+#: src/MainWin.cpp:184
+msgid "&Redo\tCtrl-Y"
+msgstr "ප්‍රතිප්‍රභ\tCtrl-Y"
+
+#: src/MainWin.cpp:187
+msgid "&Edit"
+msgstr "සංස්කරණ"
+
+#: src/MainWin.cpp:190 src/MainWin.cpp:333 src/TitlesetManager.cpp:146 src/TitlesetManager.cpp:167
+msgid "&File..."
+msgstr "ගොනු..."
+
+#: src/MainWin.cpp:191 src/MainWin.cpp:334 src/TitlesetManager.cpp:147 src/TitlesetManager.cpp:168
+msgid "File as &chapter..."
+msgstr "ගොනුව පරිච්ඡේදයක් ලෙස..."
+
+#: src/MainWin.cpp:192 src/MainWin.cpp:335 src/TitlesetManager.cpp:148 src/TitlesetManager.cpp:169
+msgid "Titles from &DVD..."
+msgstr "ඩීවීඩීයෙන් මාතෘකා..."
+
+#: src/MainWin.cpp:193 src/TitlesetManager.cpp:149 src/TitlesetManager.cpp:170
+msgid "&Menu"
+msgstr "මෙනු"
+
+#: src/MainWin.cpp:194 src/TitlesetManager.cpp:150 src/TitlesetManager.cpp:171
+msgid "&Chapter menu"
+msgstr "පරිච්ඡේද මෙනු"
+
+#: src/MainWin.cpp:195
+msgid "&VMGM menu"
+msgstr "VMGM මෙනු"
+
+#: src/MainWin.cpp:196 src/TitlesetManager.cpp:152 src/TitlesetManager.cpp:173
+msgid "&Titleset"
+msgstr "මාතෘකා කට්ටල"
+
+#: src/MainWin.cpp:197 src/MenuEditor.cpp:360 src/MenuEditor.cpp:382 src/TitlesetManager.cpp:155 src/TitlesetManager.cpp:176
+msgid "&Add"
+msgstr "එකතු"
+
+#: src/MainWin.cpp:199
+msgid "&Options..."
+msgstr "විකල්ප..."
+
+#: src/MainWin.cpp:200
+msgid "&DVD"
+msgstr "ඩීවීඩී"
+
+#: src/MainWin.cpp:202
+msgid "&Settings..."
+msgstr "සැකසුම්..."
+
+#: src/MainWin.cpp:203
+msgid "&Create button from SVG..."
+msgstr "SVG මඟින් බොත්තම් තනන්න..."
+
+#: src/MainWin.cpp:204
+msgid "&Configuration"
+msgstr "හැඩගැස්වීම්"
+
+#: src/MainWin.cpp:206
+msgid "&Contents\tF1"
+msgstr "පටුන\tF1"
+
+#: src/MainWin.cpp:207
+msgid "&About..."
+msgstr "පිළිබඳ..."
+
+#: src/MainWin.cpp:208
+msgid "&Help"
+msgstr "උපකාර"
+
+#: src/MainWin.cpp:211
+msgid "Directory"
+msgstr "නාමාවලි"
+
+#: src/MainWin.cpp:271
+msgid "&Assign to background"
+msgstr "පසුබිමට සකසන්න"
+
+#: src/MainWin.cpp:273
+msgid "&Play"
+msgstr "ධාවනය"
+
+#: src/MainWin.cpp:274 src/MenuEditor.cpp:374 src/TitlesetManager.cpp:184 wxVillaLib/PropDlg.cpp:648
+msgid "&Delete"
+msgstr "මකන්න"
+
+#: src/MainWin.cpp:280
+msgid "&Edit button"
+msgstr "සංස්කරණ බොත්තම"
+
+#: src/MainWin.cpp:281
+msgid "&Reset button"
+msgstr "ප්‍රත්‍යාරම්භ බොත්තම"
+
+#: src/MainWin.cpp:306
+msgid "DVDStyler"
+msgstr "DVDStyler"
+
+#: src/MainWin.cpp:319
+msgid "New"
+msgstr "නව"
+
+#: src/MainWin.cpp:320
+msgid "Open..."
+msgstr "විවෘත..."
+
+#: src/MainWin.cpp:323 src/MainWin.cpp:325
+msgid "DVD Options..."
+msgstr "ඩීවීඩී විකල්ප..."
+
+#: src/MainWin.cpp:327
+msgid "Burn..."
+msgstr "දවන්න..."
+
+#: src/MainWin.cpp:331 src/MainWin.cpp:339
+msgid "Add File..."
+msgstr "ගොනු ලබාදෙන්න..."
+
+#: src/MainWin.cpp:356 src/MainWin.cpp:364
+msgid "File browser"
+msgstr "ගොනු බ්‍රව්සරය"
+
+#: src/MainWin.cpp:357 src/MainWin.cpp:366 src/MainWin.cpp:470
+msgid "Backgrounds"
+msgstr "පසුබිම්"
+
+#: src/MainWin.cpp:358 src/MainWin.cpp:367 src/MainWin.cpp:526 src/MenuPropDlg.cpp:182
+msgid "Buttons"
+msgstr "බොත්තම්"
+
+#: src/MainWin.cpp:520 src/MainWin.cpp:1367 src/MainWin.cpp:1385 src/MenuObject.cpp:265 src/MenuObjectPropDlg.cpp:265 src/MenuObjectPropDlg.cpp:280 buttons/text-circle-v2.xml:13 buttons/text-square-v2.xml:14
+#: buttons/text-underlined-v3.xml:12 buttons/text-v3.xml:13
+msgid "button"
+msgstr "බොත්තම"
+
+#: src/MainWin.cpp:577
+msgid "Double click to set the background."
+msgstr "පසුතලය සැකසීමට දෙවරක් ක්ලික් කරන්න"
+
+#: src/MainWin.cpp:584
+#, c-format
+msgid "%s (%.1f KB)"
+msgstr "%s (%.1f කිබ)"
+
+#: src/MainWin.cpp:586
+#, c-format
+msgid "%s (%.1f MB)"
+msgstr "%s (%.1f මෙබ)"
+
+#: src/MainWin.cpp:589
+#, c-format
+msgid "%s (%.1f GB)"
+msgstr "%s (%.1f ගිබ)"
+
+#: src/MainWin.cpp:609
+#, c-format
+msgid "%d slides"
+msgstr "%d පථ"
+
+#: src/MainWin.cpp:621 src/SettingsDlg.cpp:126
+msgid "min"
+msgstr "මිනි"
+
+#: src/MainWin.cpp:696
+#, c-format
+msgid "Are you sure you want to delete '%s' from the file system?"
+msgstr "'%s' ගොනු පද්ධතියෙන් විනාශ කිරීමට අවශ්‍ය බව ඔබට විශ්වාස ද?"
+
+#: src/MainWin.cpp:797
+msgid "Select chapter"
+msgstr "පරිච්ඡේදය තෝරන්න"
+
+#: src/MainWin.cpp:824
+msgid "Play all"
+msgstr "සියල්ල ධාවනය"
+
+#: src/MainWin.cpp:826
+msgid "Select title"
+msgstr "මාතෘකාව තෝරන්න"
+
+#: src/MainWin.cpp:828 src/TitlesetManager.cpp:1001
+msgid "Back"
+msgstr "ආපසු"
+
+#: src/MainWin.cpp:830
+msgid "Previous"
+msgstr "පෙර"
+
+#: src/MainWin.cpp:832
+msgid "Next"
+msgstr "පසු"
+
+#: src/MainWin.cpp:879
+#, c-format
+msgid "Error opening '%s'"
+msgstr "'%s' විවෘත කිරීමේ දෝෂ"
+
+#: src/MainWin.cpp:899
+msgid "Open a DVDStyler project file"
+msgstr "DVDStyler ගොනුවක් විවෘත කරන්න"
+
+#: src/MainWin.cpp:900 src/MainWin.cpp:1047
+msgid "Project files"
+msgstr "ව්‍යාපෘති ගොනු"
+
+#: src/MainWin.cpp:931 src/MainWin.cpp:1003
+msgid "Untitled"
+msgstr "නිර්නාමික"
+
+#: src/MainWin.cpp:1004
+#, c-format
+msgid "The file '%s' was modified, save changes?"
+msgstr "'%s' ගොනුව විකරණය කර ඇත, වෙනස්කම් සුරකින්න ද?"
+
+#: src/MainWin.cpp:1046
+msgid "Save a DVDStyler project file"
+msgstr "DVDStyler ගොනුවක් සුරකින්න"
+
+#: src/MainWin.cpp:1068
+msgid ""
+"The selected video files don't fit on DVD. Please reduce\n"
+"video quality (bitrate) or remove some titles."
+msgstr ""
+"තෝරාගත් වීඩියෝ ගොනුව ඩීවීඩීයට නො සෑහේ. කරුණාකර වීඩියෝ\n"
+"ගුණත්වය (බිටු සීඝ්‍රතාව) පහත් හෝ සමහරක් මාතෘකා ඉවත් කරන්න."
+
+#: src/MainWin.cpp:1089
+msgid ""
+"Project doesn't contain any video title. To add a title please\n"
+"drag a video file into the bottom section of the window."
+msgstr ""
+"ව්‍යාපෘතිය කිසිඳු වීඩියෝ මාතෘකාවක් නො දරයි. එක් කිරීමට කරුණාකර\n"
+"වීඩියෝ ගොනුවක් වින්ඩෝවේ පහළ ප්‍රදේශයට ඇද දමන්න."
+
+#: src/MainWin.cpp:1094
+#, c-format
+msgid ""
+"Titleset %d doesn't contain any video title. To add a title\n"
+"please drag a video file into the bottom section of the window."
+msgstr ""
+"මාතෘකා කට්ටලය කිසිඳු වීඩියෝ මාතෘකාවක් නො දරයි. එක් කිරීමට\n"
+"කරුණාකර වීඩියෝ ගොනුවක් වින්ඩෝවේ පහළ ප්‍රදේශයට ඇද දමන්න."
+
+#: src/MainWin.cpp:1203
+msgid "Audio/Video/Subtitle Files"
+msgstr "ශ්‍රව්‍ය/වීඩියෝ/උපසිරැසි ගොනු"
+
+#: src/MainWin.cpp:1205 src/MenuPropDlg.cpp:154 src/TitlePropDlg.cpp:234 src/TitlePropDlg.cpp:441
+msgid "Audio Files"
+msgstr "ශ්‍රව්‍ය ගොනු"
+
+#: src/MainWin.cpp:1206 src/MainWin.cpp:1211 src/MenuPropDlg.cpp:139
+msgid "Video Files"
+msgstr "වීඩියෝ ගොනු"
+
+#: src/MainWin.cpp:1207 src/TitlePropDlg.cpp:442
+msgid "Subtitle Files"
+msgstr "උපසිරැසි ගොනු"
+
+#: src/MainWin.cpp:1208 src/MainWin.cpp:1212
+msgid "Image Files"
+msgstr "ඡායාරූප ගොනු"
+
+#: src/MainWin.cpp:1240
+msgid "Choose DVD device or directory"
+msgstr "ඩීවීඩී ධාවකය හෝ නාමාවලිය තෝරන්න"
+
+#: src/MainWin.cpp:1292
+msgid "Choose a titleset to add:"
+msgstr "එක් කිරීමට මාතෘකා කට්ටලයක් තෝරන්න"
+
+#: src/MainWin.cpp:1348
+msgid "Open a SVG file"
+msgstr "SVG ගොනුවක් විවෘත කරන්න"
+
+#: src/MainWin.cpp:1349
+msgid "SVG files"
+msgstr "SVG ගොනු"
+
+#: src/Menu.cpp:839
+#, c-format
+msgid "%s and %s are overlapping"
+msgstr "%s සහ %s අනිව්‍යාප්ත වෙයි"
+
+#: src/MenuActionsDlg.cpp:103
+msgid "ID"
+msgstr "අනන්‍යතාව"
+
+#: src/MenuActionsDlg.cpp:103
+msgid "Command"
+msgstr "ආඥාව"
+
+#: src/MenuActionsDlg.cpp:136
+msgid "Menu Actions"
+msgstr "මෙනු කාර්යය"
+
+#: src/MenuActionsDlg.cpp:138
+msgid "Actions:"
+msgstr "කාර්යය:"
+
+#: src/MenuActionsDlg.cpp:220
+#, c-format
+msgid "Duplicated action ID '%s'."
+msgstr "'%s' පිටපත් කාර්යය අනන්‍යතා"
+
+#: src/MenuCellsDlg.cpp:44 src/MenuCellsDlg.cpp:195
+msgid "Regular"
+msgstr "ක්‍රමානුකූල"
+
+#: src/MenuCellsDlg.cpp:108
+msgid "Type"
+msgstr "වර්ගය"
+
+#: src/MenuCellsDlg.cpp:108
+msgid "End"
+msgstr "අවසානය"
+
+#: src/MenuCellsDlg.cpp:108
+msgid "Pause"
+msgstr "විරාමය"
+
+#: src/MenuCellsDlg.cpp:108
+msgid "Commands"
+msgstr "ආඥා"
+
+#: src/MenuCellsDlg.cpp:140
+msgid "Menu cells"
+msgstr "මෙනු කුටි"
+
+#: src/MenuCellsDlg.cpp:142
+msgid "Cells:"
+msgstr "කුටි:"
+
+#: src/MenuCellsDlg.cpp:238 src/MenuCellsDlg.cpp:242
+#, c-format
+msgid "The cells %d and %d are overlapping"
+msgstr "%d හා %d කුටි අනිව්‍යාප්ත වේ"
+
+#: src/MenuEditor.cpp:93 src/MenuEditor.cpp:417
+msgid ": unknown format"
+msgstr ": නාඳුනන ආකෘතිය"
+
+#: src/MenuEditor.cpp:308
+msgid "&Bring to Front"
+msgstr "ඉදිරියටම ගන්න"
+
+#: src/MenuEditor.cpp:309
+msgid "Bring &Forward"
+msgstr "ඉදිරියට ගන්න"
+
+#: src/MenuEditor.cpp:310
+msgid "Send Back&ward"
+msgstr "පසුපසට ගන්න"
+
+#: src/MenuEditor.cpp:311
+msgid "&Send to Back"
+msgstr "පසුපසටම ගන්න"
+
+#: src/MenuEditor.cpp:315
+msgid "To &Left"
+msgstr "වමට"
+
+#: src/MenuEditor.cpp:316
+msgid "To &Right"
+msgstr "දකුණට"
+
+#: src/MenuEditor.cpp:317
+msgid "To &Top"
+msgstr "ඉහළට"
+
+#: src/MenuEditor.cpp:318
+msgid "To &Bottom"
+msgstr "පහළට"
+
+#: src/MenuEditor.cpp:319
+msgid "To Center &horizontally"
+msgstr "තිරස්ව කේන්ද්‍රගත කරන්න"
+
+#: src/MenuEditor.cpp:320
+msgid "To Center &vertically"
+msgstr "සිරස්ව කේන්ද්‍රගත කරන්න"
+
+#: src/MenuEditor.cpp:321
+msgid "To &Center of Menu horizontally"
+msgstr "තිරස්ව මෙනුවට කේන්ද්‍රගත කරන්න"
+
+#: src/MenuEditor.cpp:322
+msgid "To Center of &Menu vertically"
+msgstr "සිරස්ව මෙනුවට කේන්ද්‍රගත කරන්න"
+
+#: src/MenuEditor.cpp:340
+msgid "&Show Safe TV area"
+msgstr "ආරක්ෂිත දර්ශන තලය පෙන්වන්න"
+
+#: src/MenuEditor.cpp:345
+msgid "&none"
+msgstr "කිසිත් නැත"
+
+#: src/MenuEditor.cpp:352
+msgid "&Show"
+msgstr "පෙන්වන්න"
+
+#: src/MenuEditor.cpp:353
+msgid "&Over objects"
+msgstr "වස්තු මත"
+
+#: src/MenuEditor.cpp:354
+msgid "&Colour..."
+msgstr "වර්ණය..."
+
+#: src/MenuEditor.cpp:358
+msgid "A&rrange"
+msgstr "අසුරන්න"
+
+#: src/MenuEditor.cpp:359
+msgid "A&lign"
+msgstr "ගලපන්න"
+
+#: src/MenuEditor.cpp:363
+msgid "&First highlighted button"
+msgstr "පළමු ඉස්මතු කළ බොත්තම"
+
+#: src/MenuEditor.cpp:365
+msgid "Cu&t"
+msgstr "කැපුම"
+
+#: src/MenuEditor.cpp:368 src/TitlesetManager.cpp:178
+msgid "&Copy"
+msgstr "පිටපත්"
+
+#: src/MenuEditor.cpp:371 src/MenuEditor.cpp:385 src/TitlesetManager.cpp:156 src/TitlesetManager.cpp:181
+msgid "&Paste"
+msgstr "ඇලවීම"
+
+#: src/MenuEditor.cpp:378 src/MenuEditor.cpp:388 src/TitlesetManager.cpp:187
+msgid "&Properties..."
+msgstr "ලක්ෂණ..."
+
+#: src/MenuEditor.cpp:383
+msgid "&View"
+msgstr "දසුන"
+
+#: src/MenuEditor.cpp:384
+msgid "&Grid"
+msgstr "ජාලකය"
+
+#: src/MenuEditor.cpp:498 src/ProcessMenuTransitions.cpp:178
+#, c-format
+msgid "VMGM menu %d"
+msgstr "VMGM %d මෙනුව"
+
+#: src/MenuEditor.cpp:498
+#, c-format
+msgid "Menu %d"
+msgstr "%d මෙනුව"
+
+#: src/MenuEditor.cpp:500
+#, c-format
+msgid "button%d"
+msgstr "%d බොත්තම"
+
+#: src/MenuEditor.cpp:543
+msgid "Please type in text to insert"
+msgstr "කරුණාකර අක්ෂර ඇතුළත් කරන්න"
+
+#: src/MenuEditor.cpp:543
+msgid "Input text"
+msgstr "අක්ෂර ඇතුළත් කරන්න"
+
+#: src/MenuEditor.cpp:545
+msgid "Please choose an image to insert"
+msgstr "කරුණාකර ඡායාරූපයක් ඇතුළත් කරන්න"
+
+#: src/MenuEditor.cpp:546 src/MenuObjectPropDlg.cpp:456 src/MenuPropDlg.cpp:140 src/TitlePropDlg.cpp:424
+msgid "Image Files "
+msgstr "ඡායාරූප ගොනු"
+
+#: src/MenuEditor.cpp:548 buttons/arrow-text-left.xml:8 buttons/arrow-text-left.xml:12 buttons/arrow-text-right.xml:8 buttons/arrow-text-right.xml:13 buttons/pill2.xml:24 buttons/pill2.xml:36 buttons/pill3.xml:17
+#: buttons/pill3.xml:29 buttons/text-v3.xml:3 objects/text-v2.xml:3 objects/text-v2.xml:19
+msgid "Text"
+msgstr "වගන්ති"
+
+#: src/MenuObject.cpp:265
+msgid "object"
+msgstr "වස්තු"
+
+#: src/MenuObject.cpp:816 src/MenuObject.cpp:825
+#, c-format
+msgid "can't open file '%s'"
+msgstr "'%s' ගොනුව විවෘත කළ නොහැක"
+
+#: src/MenuObjectPropDlg.cpp:65 src/MenuPropDlg.cpp:49 src/TitlePropDlg.cpp:68
+msgid "Properties"
+msgstr "ලක්ෂණ"
+
+#: src/MenuObjectPropDlg.cpp:106 src/MenuObjectPropDlg.cpp:116
+msgid "Action"
+msgstr "කාර්යය"
+
+#: src/MenuObjectPropDlg.cpp:134
+msgid "Jump to"
+msgstr "වෙත යන්න"
+
+#: src/MenuObjectPropDlg.cpp:143
+msgid "Play all titles"
+msgstr "සියළුම මාතෘකා ධාවනය"
+
+#: src/MenuObjectPropDlg.cpp:145
+msgid "single titleset"
+msgstr "තනි මාතෘකා කට්ටලය"
+
+#: src/MenuObjectPropDlg.cpp:146
+msgid "all titlesets"
+msgstr "සියළුම මාතෘකා කට්ටල"
+
+#: src/MenuObjectPropDlg.cpp:173 src/MenuObjectPropDlg.cpp:187
+msgid "last selected"
+msgstr "අවසන් තේරීම"
+
+#: src/MenuObjectPropDlg.cpp:175 src/MenuObjectPropDlg.cpp:190
+msgid "track"
+msgstr "පථය"
+
+#: src/MenuObjectPropDlg.cpp:176 src/MenuPropDlg.cpp:217 src/TitlePropDlg.cpp:254
+msgid "Audio"
+msgstr "ශ්‍රව්‍ය"
+
+#: src/MenuObjectPropDlg.cpp:183 src/MenuObjectPropDlg.cpp:200 src/NewProjectDlg.cpp:134
+msgid "Warning"
+msgstr "අවවාදයයි"
+
+#: src/MenuObjectPropDlg.cpp:183
+msgid "Please use titleset menu to select audio tracks."
+msgstr "කරුණාකර ශ්‍රව්‍ය පථ තේරීමට මාතෘකා කට්ටල භාවිතා කරන්න."
+
+#: src/MenuObjectPropDlg.cpp:188
+msgid "off"
+msgstr "අක්‍රිය"
+
+#: src/MenuObjectPropDlg.cpp:191
+msgid "subtitle"
+msgstr "උපසිරැසි"
+
+#: src/MenuObjectPropDlg.cpp:200
+msgid "Please use titleset menu to select subtitle tracks."
+msgstr "කරුණාකර උපසිරැසි පථ තේරීමට මාතෘකා කට්ටල භාවිතා කරන්න."
+
+#: src/MenuObjectPropDlg.cpp:205
+msgid "Auto execute command by select"
+msgstr "තේරීමෙන් විධානය ස්වයංක්‍රිය ව සම්පූර්ණ කරන්න"
+
+#: src/MenuObjectPropDlg.cpp:208
+msgid "Navigation"
+msgstr "යාත්‍රණය"
+
+#: src/MenuObjectPropDlg.cpp:223 src/MenuObjectPropDlg.cpp:233
+msgid "Look"
+msgstr "දැක්ම"
+
+#: src/MenuObjectPropDlg.cpp:261 src/MenuObjectPropDlg.cpp:268
+msgid "none"
+msgstr "කිසිත් නැත"
+
+#: src/MenuObjectPropDlg.cpp:267 src/MenuPropDlg.cpp:126 src/SettingsDlg.cpp:274 src/VideoPropDlg.cpp:132
+msgid "auto"
+msgstr "ස්වයං"
+
+#: src/MenuObjectPropDlg.cpp:311
+msgid "Normal"
+msgstr "සාමාන්‍ය"
+
+#: src/MenuObjectPropDlg.cpp:312
+msgid "Highlighted"
+msgstr "ඉස්මතු කළ"
+
+#: src/MenuObjectPropDlg.cpp:313
+msgid "Selected"
+msgstr "තේරූ"
+
+#: src/MenuObjectPropDlg.cpp:339
+msgid "Font..."
+msgstr "අක්ෂර මාදිලිය..."
+
+#: src/MenuObjectPropDlg.cpp:403 src/MenuObjectPropDlg.cpp:563 src/MenuPropDlg.cpp:81 src/VideoPropDlg.cpp:138
+msgid "Keep Aspect Ratio"
+msgstr "දර්ශනානුපාතය පවත්වාගෙන යන්න"
+
+#: src/MenuObjectPropDlg.cpp:406 src/MenuPropDlg.cpp:84
+msgid "X Min"
+msgstr "X අවම"
+
+#: src/MenuObjectPropDlg.cpp:407 src/MenuPropDlg.cpp:85
+msgid "X Mid"
+msgstr "X මධ්‍ය"
+
+#: src/MenuObjectPropDlg.cpp:408 src/MenuPropDlg.cpp:86
+msgid "X Max"
+msgstr "X උපරිම"
+
+#: src/MenuObjectPropDlg.cpp:412 src/MenuPropDlg.cpp:90
+msgid "Y Min"
+msgstr "Y අවම"
+
+#: src/MenuObjectPropDlg.cpp:413 src/MenuPropDlg.cpp:91
+msgid "Y Mid"
+msgstr "Y මධ්‍ය"
+
+#: src/MenuObjectPropDlg.cpp:414 src/MenuPropDlg.cpp:92
+msgid "Y Max"
+msgstr "Y උපරිම"
+
+#: src/MenuObjectPropDlg.cpp:418 src/MenuPropDlg.cpp:96
+msgid "Meet"
+msgstr "හමුව"
+
+#: src/MenuObjectPropDlg.cpp:419 src/MenuPropDlg.cpp:97
+msgid "Slice"
+msgstr "කැබලි"
+
+#: src/MenuObjectPropDlg.cpp:454 buttons/ellipse-v2.xml:23 buttons/ellipse45.xml:26 buttons/frame-v2.xml:18 buttons/frame45.xml:21 buttons/movie.xml:26 buttons/panting_frame.xml:39 buttons/sticky_note.xml:40
+#: objects/ellipse-v3.xml:22 objects/ellipse45.xml:24 objects/frame-v3.xml:18 objects/frame45.xml:20 objects/gold-frame.xml:45 objects/image.xml:3 objects/image.xml:9
+msgid "Image"
+msgstr "ඡායාරූපය"
+
+#: src/MenuObjectPropDlg.cpp:462
+msgid "Video"
+msgstr "වීඩියෝ"
+
+#: src/MenuObjectPropDlg.cpp:515 src/SubtitlePropDlg.cpp:186
+msgid "Offset:"
+msgstr "අනුලම්බ:"
+
+#: src/MenuObjectPropDlg.cpp:523
+msgid "Deviation:"
+msgstr "අපගමනය:"
+
+#: src/MenuObjectPropDlg.cpp:538
+msgid "Location"
+msgstr "පිහිටීම"
+
+#: src/MenuObjectPropDlg.cpp:541
+msgid "X:"
+msgstr "X:"
+
+#: src/MenuObjectPropDlg.cpp:542
+msgid "Y:"
+msgstr "Y:"
+
+#: src/MenuObjectPropDlg.cpp:548 buttons/arrow-blue.xml:26 buttons/arrow-cool.xml:17 buttons/arrow-double.xml:13 buttons/arrow-gold.xml:26 buttons/arrow-green-double.xml:383 buttons/arrow-green.xml:375 buttons/arrow-red.xml:29
+#: buttons/arrow-simple-v2.xml:43 buttons/arrow-star.xml:21 buttons/arrow.xml:42 buttons/arrow2.xml:25 buttons/arrow3.xml:19 buttons/frame45.xml:35 objects/frame45.xml:34
+msgid "Rotation"
+msgstr "භ්‍රමණය"
+
+#: src/MenuObjectPropDlg.cpp:550
+msgid "Angle:"
+msgstr "කෝණය:"
+
+#: src/MenuObjectPropDlg.cpp:556
+msgid "Size"
+msgstr "පරිමාණය"
+
+#: src/MenuObjectPropDlg.cpp:558
+msgid "Width:"
+msgstr "පළල:"
+
+#: src/MenuObjectPropDlg.cpp:560
+msgid "Height:"
+msgstr "උස:"
+
+#: src/MenuObjectPropDlg.cpp:575
+msgid "Animations..."
+msgstr "සජීවීකරණ..."
+
+#: src/MenuObjectPropDlg.cpp:626
+msgid "start of current menu"
+msgstr "වර්තමාන මෙනුවේ ආරම්භය"
+
+#: src/MenuObjectPropDlg.cpp:711 src/MenuObjectPropDlg.cpp:715
+#, c-format
+msgid "chapter %d"
+msgstr "%d පරිච්ඡේදය"
+
+#: src/MenuObjectPropDlg.cpp:893
+msgid "Please enter the action command."
+msgstr "කරුණාකර කාර්යය විධානය ලබා දෙන්න."
+
+#: src/MenuPropDlg.cpp:52 src/TitlePropDlg.cpp:70 src/TitlesetManager.cpp:320
+msgid "Titleset"
+msgstr "මාතෘකා කට්ටලය"
+
+#: src/MenuPropDlg.cpp:53 src/MenuPropDlg.cpp:206 src/TitlesetManager.cpp:331 src/TitlesetManager.cpp:1213 buttons/pill.xml:26
+msgid "Menu"
+msgstr "මෙනුව"
+
+#: src/MenuPropDlg.cpp:105 src/TitlePropDlg.cpp:100
+msgid "Video object"
+msgstr "වීඩියෝ වස්තුව"
+
+#: src/MenuPropDlg.cpp:110 src/TitlePropDlg.cpp:191
+msgid "Format:"
+msgstr "ආකෘතිය:"
+
+#: src/MenuPropDlg.cpp:137
+msgid "Background:"
+msgstr "පසුතලය:"
+
+#: src/MenuPropDlg.cpp:138
+msgid "Image and Video Files"
+msgstr "ඡායා හා වීඩියෝ ගොනු"
+
+#: src/MenuPropDlg.cpp:153 src/VobListBox.cpp:146
+msgid "Audio:"
+msgstr "ශ්‍රව්‍ය:"
+
+#: src/MenuPropDlg.cpp:175
+msgid "Loop"
+msgstr "නැවත කිරීම"
+
+#: src/MenuPropDlg.cpp:186
+msgid "Subpicture start/end:"
+msgstr "අනු ඡායාව ආරම්භය/අවසානය:"
+
+#: src/MenuPropDlg.cpp:192
+msgid "Remember last selected button"
+msgstr "අවසානයේ තේරූ බොත්තම මතකයේ තබන්න"
+
+#: src/MenuPropDlg.cpp:211
+msgid "Entry"
+msgstr "ඇතුළත් කළ"
+
+#: src/MenuPropDlg.cpp:214
+msgid "Root"
+msgstr "මූලාශ්‍ර"
+
+#: src/MenuPropDlg.cpp:215
+msgid "Subtitle"
+msgstr "උපසිරැසි"
+
+#: src/MenuPropDlg.cpp:218
+msgid "Angle"
+msgstr "කෝණය"
+
+#: src/MenuPropDlg.cpp:221 src/TitlePropDlg.cpp:71 src/TitlePropDlg.cpp:263 src/TitlesetManager.cpp:331
+msgid "Title"
+msgstr "මාතෘකාව"
+
+#: src/MenuPropDlg.cpp:225 src/TitlePropDlg.cpp:269
+msgid "Pre commands:"
+msgstr "පෙර ආඥා:"
+
+#: src/MenuPropDlg.cpp:227 src/TitlePropDlg.cpp:271
+msgid "Post commands:"
+msgstr "පසු ආඥා:"
+
+#: src/MenuPropDlg.cpp:241
+msgid "Cells..."
+msgstr "කුටි..."
+
+#: src/MenuPropDlg.cpp:242
+msgid "Actions..."
+msgstr "කාර්යය..."
+
+#: src/MenuPropDlg.cpp:276
+msgid "Subpicture end must be greater than start or empty"
+msgstr "අනු ඡායා අවසානය ආරම්භයට වඩා විශාල හෝ හිස් විය යුතුයි"
+
+#: src/MenuPropDlg.cpp:283 src/TitlePropDlg.cpp:320
+#, c-format
+msgid "File %s doesn't exist."
+msgstr "%s ගොනුව නො පවතියි."
+
+#: src/MenuPropDlg.cpp:290 src/TitlePropDlg.cpp:327
+#, c-format
+msgid "File %s isn't audio file."
+msgstr "%s ගොනුව ශ්‍රව්‍ය නොවේ."
+
+#: src/MenuPropDlg.cpp:309
+msgid "Post commands will not be executed if pause is set to -1"
+msgstr "විරාමය -1 නම් පසු ආඥා ක්‍රියාත්මක කරනු නොලැබේ"
+
+#: src/MessageDlg.cpp:76
+msgid "&Don't show this message again"
+msgstr "මෙම පණිවුඩය නැවත නො පෙන්වන්න"
+
+#: src/MPEG.cpp:17 src/MPEG.cpp:47
+#, c-format
+msgid "Can't open file %s"
+msgstr "%s ගොනුව විවෘත කළ නොහැක"
+
+#: src/NewProjectDlg.cpp:27
+msgid "Create a new DVD"
+msgstr "නව ඩීවීඩීයක් තනන්න"
+
+#: src/NewProjectDlg.cpp:42
+msgid "Disc label:"
+msgstr "තැටි ලේබලය:"
+
+#: src/NewProjectDlg.cpp:49
+msgid "DVD Resolution:"
+msgstr "ඩීවීඩී විභේදනය:"
+
+#: src/NewProjectDlg.cpp:51 src/NewProjectDlg.cpp:134
+msgid "Info"
+msgstr "තොරතුරු"
+
+#: src/NewProjectDlg.cpp:56
+msgid "Disc capacity:"
+msgstr "තැටි ධාරිතාව:"
+
+#: src/NewProjectDlg.cpp:62
+msgid "Video bitrate:"
+msgstr "වීඩියෝ බිටු සීඝ්‍රතාව:"
+
+#: src/NewProjectDlg.cpp:65 src/NewProjectDlg.cpp:71 src/SettingsDlg.cpp:245 src/SettingsDlg.cpp:250 src/SettingsDlg.cpp:254
+msgid "KBit/s"
+msgstr "තත්. කිබිටු"
+
+#: src/NewProjectDlg.cpp:71
+msgid "Audio bitrate:"
+msgstr "ශ්‍රව්‍ය බිටු සීඝ්‍රතාව:"
+
+#: src/NewProjectDlg.cpp:82
+msgid "Video Format"
+msgstr "වීඩියෝ ආකෘතිය"
+
+#: src/NewProjectDlg.cpp:94
+msgid "Aspect Ratio"
+msgstr "දර්ශනානුපාතය"
+
+#: src/NewProjectDlg.cpp:104
+msgid "Audio Format"
+msgstr "ශ්‍රව්‍ය ආකෘතිය"
+
+#: src/NewProjectDlg.cpp:113 src/SettingsDlg.cpp:132
+msgid "Default title post command:"
+msgstr "මූලික මාතෘකා පසු ආඥාව:"
+
+#: src/NewProjectDlg.cpp:119
+msgid "Please enter the volume name."
+msgstr "වෙළුම් නාමය ලබා දෙන්න."
+
+#: src/NewProjectDlg.cpp:123
+msgid "Volume name can only be a maximum of 32 characters."
+msgstr "වෙළුම් නාමය උපරිම අක්ෂර 32ක් පමණක් විය යුතුයි."
+
+#: src/Pgc.cpp:274
+msgid "Can't load vob"
+msgstr "vob ලබාගත නොහැක"
+
+#: src/ProcessBurn.cpp:60
+msgid "Burning"
+msgstr "දැවෙමින්"
+
+#: src/ProcessBurn.cpp:67 src/ProcessBurn.cpp:85
+#, c-format
+msgid "Please insert a blank or rewritable DVD into the device %s."
+msgstr "කරුණාකර හිස් හෝ නැවත ලිවිය හැකි ඩීවිඩී තැටියක් %s ධාවකයට ඇතුළත් කරන්න."
+
+#: src/ProcessBurn.cpp:69 src/ProcessBurn.cpp:87 src/ProcessBurn.cpp:129 src/ProcessFormatDvd.cpp:45 src/ProcessPreview.cpp:88 src/ProgressDlg.cpp:291
+msgid "Aborted"
+msgstr "අත්හැරී ය"
+
+#: src/ProcessBurn.cpp:127
+#, c-format
+msgid "Size of Disc Image > %.2f GB. Do you want to continue?"
+msgstr "තැටි ඡායාවේ විශාලත්වය > %.2f ගිබි. ඉදිරියට යා යුතු ද?"
+
+#: src/ProcessCleanTemp.cpp:72
+msgid "Cleaning temporary directory"
+msgstr "තාවකාලික නාමාවලිය පිරිසිඳු කරමින්"
+
+#: src/ProcessCleanTemp.cpp:74 src/ProcessCleanTemp.cpp:85
+#, c-format
+msgid "Cannot remove directory '%s'"
+msgstr "'%s' නාමාවලිය ඉවත් කළ නොහැක"
+
+#: src/ProcessDvdFilesystem.cpp:80
+msgid "Generating DVD"
+msgstr "ඩීවීඩී ය සකසමින්"
+
+#: src/ProcessEccData.cpp:26
+msgid "Adding ECC data"
+msgstr "ECC දත්ත එක් කරමින්"
+
+#: src/ProcessEncode.cpp:39 src/ProcessSubtitles.cpp:32
+#, c-format
+msgid "Found transcoded file in cache for '%s'"
+msgstr "'%s' හී පරිවර්තිත ගොනුවක් තාවකාලික නාමාවලියේ හමුවිය"
+
+#: src/ProcessEncode.cpp:78
+#, c-format
+msgid "Transcode video %u of %lu"
+msgstr "වීඩියෝව පරිවර්තිත %uක් %luන්"
+
+#: src/ProcessFormatDvd.cpp:33
+msgid "Formatting DVD-RW"
+msgstr "DVD-RW ප්‍රතිආකෘතිගත කරමින්"
+
+#: src/ProcessFormatDvd.cpp:43
+#, c-format
+msgid "Please insert a rewritable DVD into the device %s."
+msgstr "කරුණාකර %s ධාවකයට නැවත ලිවිය හැකි ඩීවීඩීයක් ඇතුළු කරන්න."
+
+#: src/ProcessFormatDvd.cpp:53
+msgid "Formatting DVD-RW failed. Try again?"
+msgstr "ඩීවීඩී-RW ප්‍රතිසැකසුම්ගත කිරීම අ සාර්ථකයි. නැවත උත්සාහ කරන්න ද?"
+
+#: src/ProcessFormatDvd.cpp:58
+msgid "-> skipped <-"
+msgstr "-> අත්හැර <-"
+
+#: src/ProcessIsoImage.cpp:54
+msgid "There is not enough space to store ISO: cache emptying."
+msgstr "ISO ගොනුව සුරැකීමට ප්‍රමාණවත් තරම් ඉඩකඩ නොමැත: තාවකාලික නාමාවලිය හිස් කරමින්."
+
+#: src/ProcessIsoImage.cpp:57
+msgid "Creating ISO image"
+msgstr "iso ඡායාව තනමින්"
+
+#: src/ProcessMenu.cpp:68
+#, c-format
+msgid "Generating menu %u of %lu"
+msgstr "මෙනු %u හි %lu සැකසෙමින්"
+
+#: src/ProcessMenu.cpp:119
+msgid "Create menu MPEG"
+msgstr "MPEG මෙනුව සකසන්න"
+
+#: src/ProcessMenu.cpp:150 src/ProcessMenu.cpp:174 src/ProcessMenu.cpp:188 src/ProcessMenu.cpp:249 src/ProcessMenu.cpp:279 src/ProcessMenu.cpp:293
+msgid "Error creation of menu"
+msgstr "මෙනුව සැකසීමේ දෝෂ"
+
+#: src/ProcessMenu.cpp:156
+#, c-format
+msgid "Video duration: %f sec"
+msgstr "වීඩියෝ ප්‍රවර්තනය: තත් %f"
+
+#: src/ProcessMenu.cpp:164 src/ProcessMenuTransitions.cpp:251
+#, c-format
+msgid "Encoding frame %d of %d"
+msgstr "රාමුව %d හි %d විකේතනය කෙරෙමින්"
+
+#: src/ProcessMenu.cpp:201
+msgid "Transcode audio from"
+msgstr "ශ්‍රව්‍ය පරිවර්තනය, සිට"
+
+#: src/ProcessMenu.cpp:211 src/ProcessMenu.cpp:217 src/ProcessMenuTransitions.cpp:126 src/ProcessMenuTransitions.cpp:136 src/ProcessSlideshow.cpp:198 src/ProcessTranscode.cpp:153 src/ProcessTranscode.cpp:164
+#: src/ProcessTranscode.cpp:189 src/ProcessTranscode.cpp:201
+msgid "Error transcoding of "
+msgstr "පරිවර්තනය අසාර්ථකයි,"
+
+#: src/ProcessMenu.cpp:222 src/ProcessMenu.cpp:302 src/ProcessSlideshow.cpp:203
+msgid "Multiplexing audio and video"
+msgstr "ශ්‍රව්‍ය හා වීඩියෝ එකලස් කෙරෙමින්"
+
+#: src/ProcessMenu.cpp:261
+#, c-format
+msgid "Audio duration: %f sec"
+msgstr "ශ්‍රව්‍ය ප්‍රවර්තනය: තත් %f"
+
+#: src/ProcessMenu.cpp:275 src/SettingsDlg.cpp:238
+msgid "Frame count of menu:"
+msgstr "මෙනුවේ රාමු සංඛ්‍යාව:"
+
+#: src/ProcessMenu.cpp:327
+msgid "Multiplexing subpictures into mpeg"
+msgstr "අනුඡායා mpeg වෙත එකලස් කෙරෙමින්"
+
+#: src/ProcessMenu.cpp:334
+#, c-format
+msgid "Can't rename file '%s' in '%s'"
+msgstr "ගොනුව '%s' හි '%s' ප්‍රතිනාම කළ නොහැක"
+
+#: src/ProcessMenuTransitions.cpp:104 src/ProcessMenuTransitions.cpp:161 src/ProcessMenuTransitions.cpp:242 src/ProcessMenuTransitions.cpp:254
+msgid "Error creation of transition"
+msgstr "සංක්‍රාන්තිය සැකසීමේ දෝෂ"
+
+#: src/ProcessMenuTransitions.cpp:179
+#, c-format
+msgid "Generate transition from %s"
+msgstr "%s සිට සංක්‍රාන්තිය සකසන්න"
+
+#: src/ProcessPreview.cpp:36
+msgid "Start preview"
+msgstr "පෙරදසුන සකසන්න"
+
+#: src/ProcessPreview.cpp:42 src/ProcessPreview.cpp:58 src/ProcessPreview.cpp:79
+msgid "Starting of selected DVD player is failed. Please open the following directory with your favorite DVD player: "
+msgstr "තෝරාගත් ඩීවීඩී ධාවකය ආරම්භ කිරීමට අසමත්. කරුණාකර පහත නාමාවලිය ඔබගේ ප්‍රියතම ඩීවීඩී ධාවකයෙන් විවෘත කරන්න: "
+
+#: src/ProcessPreview.cpp:49
+msgid "VLC player is not found. Please install VLC player (http://www.videolan.org) in Applications directory or open the following directory with your favorite DVD player: "
+msgstr "VLC ධාවකය නොමැත. කරුණාකර VLC ධාවකය (http://www.videolan.org) ක්‍රමලේඛ නාමාවලියේ පිහිටුවන්න. නැතහොත් පහත නාමාවලිය ඔබගේ ප්‍රියතම ඩීවීඩී ධාවකයෙන් විවෘත කරන්න: "
+
+#: src/ProcessPreview.cpp:86
+msgid "Do you want to burn this video to DVD?"
+msgstr "ඔබට මෙම වීඩියෝව ඩීවීඩීයට දැවීමට අවශ්‍ය ද?"
+
+#: src/ProcessPreview.cpp:86
+msgid "Do you want to create an iso image of this video?"
+msgstr "ඔබට මෙම වීඩියෝවේ iso ඡායාවක් සැකසීමට අවශ්‍ය ද?"
+
+#: src/ProcessSlideshow.cpp:59
+#, c-format
+msgid "Generating slideshow %u of %lu"
+msgstr "ඡායා දර්ශනය %u හි %lu සැකසෙමින්"
+
+#: src/ProcessSlideshow.cpp:102 src/ProcessSlideshow.cpp:130 src/ProcessSlideshow.cpp:153
+msgid "Error creation of slideshow"
+msgstr "චිත්‍රකාචය සැකසීමේ දෝෂ"
+
+#: src/ProcessSlideshow.cpp:121
+#, c-format
+msgid "Converting slide %u image to video"
+msgstr "චිත්‍රකාච %u ඡායාවක සිට වීඩියෝවකට පරිවර්තනය කරමින්"
+
+#: src/ProcessSlideshow.cpp:172
+msgid "Audio file duration: "
+msgstr "ශ්‍රව්‍ය පථ ප්‍රවර්තනය: "
+
+#: src/ProcessSlideshow.cpp:178
+msgid "Concat audio files"
+msgstr "ශ්‍රව්‍ය පථ සංද්‍රාමය"
+
+#: src/ProcessSlideshow.cpp:232
+msgid "Error loading transition definition"
+msgstr "සංක්‍රාන්ති විග්‍රහ ලබා ගැනීමේ දෝෂ"
+
+#: src/ProcessSubtitles.cpp:58
+#, c-format
+msgid "Multiplexing subtitles %u of %lu"
+msgstr "උපසිරැසි %u හි%lu එකලස් කෙරෙමින්"
+
+#: src/ProcessSubtitles.cpp:93
+#, c-format
+msgid "Can't rename temporary file '%s'"
+msgstr "'%s' තාවකාලික ගොනුව ප්‍රතිනාම කළ නොහැක"
+
+#: src/ProcessTranscode.cpp:23
+msgid "Transcode video file: "
+msgstr "වීඩියෝ ගොනුව පරිවර්තනය: "
+
+#: src/ProcessTranscode.cpp:224
+msgid "Multiplexing video and audio streams"
+msgstr "ශ්‍රව්‍ය හා වීඩියෝ පථ එකලස් කරමින්"
+
+#: src/ProcessTranscode.cpp:244
+#, c-format
+msgid "Analysis of audio track %d"
+msgstr "%d ශ්‍රව්‍ය පථය විශ්ලේෂණය"
+
+#: src/ProcessTranscode.cpp:248 src/ProcessTranscode.cpp:262 wxVillaLib/ProgramProcess.cpp:84
+#, c-format
+msgid "Execution of '%s' failed."
+msgstr "'%s' ක්‍රියා කරවීම අසාර්ථකයි."
+
+#: src/ProgressDlg.cpp:75
+msgid "Generate DVD"
+msgstr "ඩීවීඩීය ජනනය"
+
+#: src/ProgressDlg.cpp:79
+msgid "Summary:"
+msgstr "සාරාංශය:"
+
+#: src/ProgressDlg.cpp:85
+msgid "Details:"
+msgstr "තොරතුරු:"
+
+#: src/ProgressDlg.cpp:91
+msgid "Hide details"
+msgstr "තොරතුරු සඟවන්න"
+
+#: src/ProgressDlg.cpp:93
+msgid "Turn off PC when finished"
+msgstr "අවසානයේ පරිගණකය වසන්න"
+
+#: src/ProgressDlg.cpp:97
+msgid "Minimize"
+msgstr "අවම"
+
+#: src/ProgressDlg.cpp:99 buttons/cancel.xml:3 buttons/cancel2.xml:4
+msgid "Cancel"
+msgstr "අවලංගු"
+
+#: src/ProgressDlg.cpp:147
+msgid "Show details"
+msgstr "තොරතුරු පෙන්වන්න"
+
+#: src/ProgressDlg.cpp:228 src/ProgressDlg.cpp:232
+msgid "Encoding Mode"
+msgstr "විකේතන ක්‍රමය"
+
+#: src/ProgressDlg.cpp:274 wxVillaLib/ProgramProcess.cpp:30
+msgid "Failed"
+msgstr "අසාර්ථකයි"
+
+#: src/ProgressDlg.cpp:281
+msgid "Close"
+msgstr "වසන්න"
+
+#: src/ProgressDlg.cpp:360
+msgid "Prepare"
+msgstr "සූදානම් කරන්න"
+
+#: src/ProgressDlg.cpp:368
+msgid "Search for transcoded files in cache"
+msgstr "තාවකාලික නාමාවලියේ පරිවර්තිත ගොනු සොයන්න"
+
+#: src/ProgressDlg.cpp:413
+msgid "Burning was successful."
+msgstr "දැවීම සාර්ථක විය."
+
+#: src/ProgressDlg.cpp:415
+msgid "Generating was successful."
+msgstr "ජනනය කිරීම සාර්ථක විය."
+
+#: src/SettingsDlg.cpp:41 src/SettingsDlg.cpp:413 src/SettingsDlg.cpp:419 buttons/settings.xml:3
+msgid "Settings"
+msgstr "සැකසුම්"
+
+#: src/SettingsDlg.cpp:59
+msgid "Interface"
+msgstr "අතුරුමුහුණත"
+
+#: src/SettingsDlg.cpp:74
+msgid "Default disc label:"
+msgstr "මූලික තැටි ලේබලය:"
+
+#: src/SettingsDlg.cpp:76
+msgid "Default disc capacity:"
+msgstr "මූලික තැටි ධාරිතාව:"
+
+#: src/SettingsDlg.cpp:80
+msgid "Default video format:"
+msgstr "මූලික වීඩියෝ ආකෘතිය:"
+
+#: src/SettingsDlg.cpp:98
+msgid "Keep aspect ratio"
+msgstr "දර්ශනානුපාතය පවත්වාගන්න"
+
+#: src/SettingsDlg.cpp:102
+msgid "Default audio format:"
+msgstr "මූලික ශ්‍රව්‍ය ආකෘතිය:"
+
+#: src/SettingsDlg.cpp:125
+msgid "Default chapter length:"
+msgstr "මූලික පරිච්ඡේද කාලය:"
+
+#: src/SettingsDlg.cpp:128
+msgid "Add chapter at title end"
+msgstr "මාතෘකා අවසානයට පරිච්ඡේදයක් එක් කරන්න"
+
+#: src/SettingsDlg.cpp:155
+msgid "Default button:"
+msgstr "මූලික බොත්තම:"
+
+#: src/SettingsDlg.cpp:160
+msgid "Accept invalid actions"
+msgstr "අවලංගු කාර්යය බාර ගන්න"
+
+#: src/SettingsDlg.cpp:163
+msgid "Default slide duration:"
+msgstr "මූලික චිත්‍රකාච කාලය:"
+
+#: src/SettingsDlg.cpp:164
+msgid "Default transition duration:"
+msgstr "මූලික සංක්‍රාන්ති කාලය:"
+
+#: src/SettingsDlg.cpp:171
+msgid "Default slide transition:"
+msgstr "මූලික චිත්‍රකාච සංක්‍රාන්තිය:"
+
+#: src/SettingsDlg.cpp:177
+msgid "Last directory"
+msgstr "අවසන් නාමාවලිය"
+
+#: src/SettingsDlg.cpp:178
+msgid "File Browser start directory:"
+msgstr "ගොනු බ්‍රව්සරය ආරම්භ කළ යුතු නාමාවලිය:"
+
+#: src/SettingsDlg.cpp:193
+msgid "Clear thumbnail cache after exit"
+msgstr "ඉවත් වීමේ දී සංක්ෂිප්ත දසුන් තාවකාලික ගොනු විනාශ කරන්න"
+
+#: src/SettingsDlg.cpp:197
+msgid "Undo history size:"
+msgstr "නිෂ්ප්‍රභ අතීත මතකය:"
+
+#: src/SettingsDlg.cpp:198
+msgid "Clear transcoding cache:"
+msgstr "පරිවර්තිත තාවකාලික මතකය ඉවත් කරන්න:"
+
+#: src/SettingsDlg.cpp:201
+msgid "Prompt"
+msgstr "ප්‍රේරකය"
+
+#: src/SettingsDlg.cpp:202 src/SettingsDlg.cpp:301
+msgid "Yes"
+msgstr "ඔව්"
+
+#: src/SettingsDlg.cpp:207
+msgid "Clear cache now"
+msgstr "තාවකාලික මතකය දැන් ඉවත් කරන්න"
+
+#: src/SettingsDlg.cpp:211
+msgid "\"Don't show again\" flags:"
+msgstr "\"නැවත නො පෙන්වන්න\" ධජ:"
+
+#: src/SettingsDlg.cpp:213
+msgid "Reset All"
+msgstr "සියල්ල ප්‍රත්‍යාරම්භ"
+
+#: src/SettingsDlg.cpp:222
+msgid "Core"
+msgstr "මධ්‍යය"
+
+#: src/SettingsDlg.cpp:241
+msgid "Draw buttons on background"
+msgstr "පසුතලයේ බොත්තම් අඳින්න"
+
+#: src/SettingsDlg.cpp:242
+msgid "Allow HD menus"
+msgstr "HD මෙනු සඳහා අවසර දෙන්න"
+
+#: src/SettingsDlg.cpp:244
+msgid "Menu video bitrate:"
+msgstr "වීඩියෝ බිටු සීඝ්‍රතාව:"
+
+#: src/SettingsDlg.cpp:249
+msgid "Slideshow video bitrate:"
+msgstr "චිත්‍රකාච බිටු සීඝ්‍රතාව:"
+
+#: src/SettingsDlg.cpp:254
+msgid "Default audio bitrate:"
+msgstr "මූලික ශ්‍රව්‍ය බිටු සීඝ්‍රතාව:"
+
+#: src/SettingsDlg.cpp:255
+msgid "Thread count:"
+msgstr "තන්තු ගණන:"
+
+#: src/SettingsDlg.cpp:256
+msgid "DVD reserved space:"
+msgstr "ඩීවීඩීයට වෙන්කළ ඉඩ:"
+
+#: src/SettingsDlg.cpp:256
+msgid "KB"
+msgstr "කිබිටු"
+
+#: src/SettingsDlg.cpp:260
+msgid "internal"
+msgstr "අභ්‍යන්තර"
+
+#: src/SettingsDlg.cpp:265
+msgid "Encoder:"
+msgstr "විකේතකය:"
+
+#: src/SettingsDlg.cpp:275
+msgid "CBR"
+msgstr "CBR"
+
+#: src/SettingsDlg.cpp:276
+msgid "1-pass VBR"
+msgstr "1-pass VBR"
+
+#: src/SettingsDlg.cpp:277
+msgid "2-pass VBR"
+msgstr "2-pass VBR"
+
+#: src/SettingsDlg.cpp:292
+msgid "Create ISO command:"
+msgstr "ISO ආඥාවක් සකසන්න:"
+
+#: src/SettingsDlg.cpp:293
+msgid "Burn command:"
+msgstr "දැවුම් ආඥා:"
+
+#: src/SettingsDlg.cpp:294
+msgid "Burn ISO command:"
+msgstr "ISO දැවුම් ආඥා:"
+
+#: src/SettingsDlg.cpp:295
+msgid "Add ECC command:"
+msgstr "ECC ආඥා එක් කරන්න:"
+
+#: src/SettingsDlg.cpp:296
+msgid "Format command:"
+msgstr "ආකෘති ආඥා:"
+
+#: src/SettingsDlg.cpp:298
+msgid "Use mplex:"
+msgstr "එකළස් විධි භාවිතා කරන්න:"
+
+#: src/SettingsDlg.cpp:303
+msgid "For menus only"
+msgstr "මෙනු සඳහා පමණි"
+
+#: src/SettingsDlg.cpp:308
+msgid "NTSC film:"
+msgstr "NTSC චිත්‍රපටි:"
+
+#: src/SettingsDlg.cpp:309
+msgid "re-encode by default"
+msgstr "මූලිකව ප්‍රතිවිකේතගත කරන්න"
+
+#: src/SettingsDlg.cpp:310
+msgid "HD video:"
+msgstr "HD වීඩියෝ:"
+
+#: src/SettingsDlg.cpp:311
+msgid "allow (experimental)"
+msgstr "ඉඩ හරින්න (පර්යේෂණාත්මක)"
+
+#: src/SettingsDlg.cpp:313
+msgid "Debug"
+msgstr "දෝෂ සකසන්න"
+
+#: src/SettingsDlg.cpp:314
+msgid "Don't remove temp files"
+msgstr "තාවකාලික ගොනු ඉවත් නොකරන්න"
+
+#: src/SettingsDlg.cpp:338
+msgid "Language change will not take effect until DVDStyler is restarted"
+msgstr "DVDStyler නැවත ආරම්භ කරන තුරු භාෂා වෙනස්කම් බල නො පායි"
+
+#: src/SettingsDlg.cpp:413
+msgid "All \"don't show again\" flags are reseted."
+msgstr "සියළු \"නැවත නො පෙන්වන්න\" ධජ ප්‍රත්‍යාරම්භ කරන ලදී."
+
+#: src/SettingsDlg.cpp:419
+msgid "The transcoding cache is successfully cleared."
+msgstr "පරිවර්තන තාවකාලික ගොනු සාර්ථක ව ඉවත් කරන ලදී."
+
+#: src/SlideDlg.cpp:44
+msgid "Slide properties"
+msgstr "සිවිකාච ලක්ෂණ"
+
+#: src/SlideDlg.cpp:53 src/TitlePropDlg.cpp:207
+msgid "Transition:"
+msgstr "සංක්‍රාන්ති:"
+
+#: src/SlideDlg.cpp:72
+msgid "Default"
+msgstr "මූලික"
+
+#: src/Slideshow.cpp:243
+msgid "None"
+msgstr "කිසිත් නැත"
+
+#: src/Slideshow.cpp:244
+msgid "Random"
+msgstr "සසම්භාවී"
+
+#: src/StatusBar.cpp:60
+#, c-format
+msgid "%d/%d Minutes"
+msgstr "%d/%d මිනිත්තු"
+
+#: src/StatusBar.cpp:62
+#, c-format
+msgid "%d Minutes"
+msgstr "%d මිනිත්තු"
+
+#: src/StatusBar.cpp:65
+#, c-format
+msgid "%d Mb/s"
+msgstr "තත්. මෙබිටු%d"
+
+#: src/StatusBar.cpp:66
+#, c-format
+msgid "%.1f Mb/s"
+msgstr "තත්. මෙබිටු%.1f"
+
+#: src/Stream.cpp:112
+msgid "mono"
+msgstr "තනි"
+
+#: src/Stream.cpp:118
+#, c-format
+msgid "%d channels"
+msgstr "%d නාලිකා"
+
+#: src/Stream.cpp:121
+#, c-format
+msgid "%d Hz"
+msgstr "හට්ස් %d"
+
+#: src/SubtitlePropDlg.cpp:102
+msgid "Subtitle Properties"
+msgstr "උපසිරැසි ලක්ෂණ"
+
+#: src/SubtitlePropDlg.cpp:112
+msgid "Force display"
+msgstr "ප්‍රදර්ශනය බලපෑම් කරන්න"
+
+#: src/SubtitlePropDlg.cpp:116
+msgid "Charset:"
+msgstr "අක්ෂර කාණ්ඩය:"
+
+#: src/SubtitlePropDlg.cpp:120
+msgid "Font:"
+msgstr "අක්ෂර මාදිලිය:"
+
+#: src/SubtitlePropDlg.cpp:137
+msgid "Preview:"
+msgstr "පෙරදසුන:"
+
+#: src/SubtitlePropDlg.cpp:139
+msgid "ABCabcXYZxyz"
+msgstr "ABCabcXYZxyz"
+
+#: src/SubtitlePropDlg.cpp:143
+msgid "Fill:"
+msgstr "පුරවන්න:"
+
+#: src/SubtitlePropDlg.cpp:156
+msgid "Outline:"
+msgstr "මායිම:"
+
+#: src/SubtitlePropDlg.cpp:169
+msgid "Thickness:"
+msgstr "ඝනත්වය:"
+
+#: src/SubtitlePropDlg.cpp:174
+msgid "Shadow:"
+msgstr "සෙවණැල්ල:"
+
+#: src/SubtitlePropDlg.cpp:197
+msgid "Alignment"
+msgstr "ගැලපීම"
+
+#: src/SubtitlePropDlg.cpp:218
+msgid "Margin"
+msgstr "සීමාව"
+
+#: src/SubtitlePropDlg.cpp:242
+msgid "&Use as defaults"
+msgstr "මූලික ලෙස භාවිතා කරන්න"
+
+#: src/SubtitlePropDlg.cpp:385
+msgid "slant"
+msgstr "බෑවුම්"
+
+#: src/SubtitlePropDlg.cpp:387
+msgid "italic"
+msgstr "ඇල"
+
+#: src/SubtitlePropDlg.cpp:392
+msgid "light"
+msgstr "ළා"
+
+#: src/SubtitlePropDlg.cpp:394
+msgid "bold"
+msgstr "තද"
+
+#: src/SysUtils.cpp:303
+msgid "Scan devices"
+msgstr "උපාංග පරික්ෂා කරන්න"
+
+#: src/TemplateDlg.cpp:56
+msgid "Select template for DVD menus"
+msgstr "DVD මෙනුවට අච්චුවක් තෝරන්න"
+
+#: src/TemplateDlg.cpp:61
+msgid "Caption:"
+msgstr "සිරස්තලය:"
+
+#: src/TemplateDlg.cpp:63
+msgid "Disc Title"
+msgstr "තැටි මාතෘකාව"
+
+#: src/TemplateDlg.cpp:69
+msgid "Title selection"
+msgstr "මාතෘකා තේරීම"
+
+#: src/TemplateDlg.cpp:71
+msgid "Chapter selection"
+msgstr "පරිච්ඡේද තේරීම"
+
+#: src/TemplateDlg.cpp:77
+msgid "Category"
+msgstr "ප්‍රවර්ග"
+
+#: src/TemplateDlg.cpp:80
+msgid "All"
+msgstr "සියල්ල"
+
+#: src/TemplateDlg.cpp:92
+msgid "&No template"
+msgstr "අච්චුවක් නොමැතිව"
+
+#: src/TemplateDlg.cpp:105
+msgid "Templates"
+msgstr "අච්චු"
+
+#: src/TemplateDlg.cpp:115 templates/category.xml:5
+msgid "Christmas & New Year's Eve"
+msgstr "නත්තල සහ නව වසර"
+
+#: src/TitlePropDlg.cpp:118
+msgid "Add file..."
+msgstr "ගොනු ලබාදෙන්න..."
+
+#: src/TitlePropDlg.cpp:122
+msgid "Remove file"
+msgstr "ගොනු ඉවත් කරන්න"
+
+#: src/TitlePropDlg.cpp:126 src/TitlePropDlg.cpp:183
+msgid "Properties..."
+msgstr "ලක්ෂණ..."
+
+#: src/TitlePropDlg.cpp:134
+msgid "do not remultiplex/transcode"
+msgstr "නැවත එකලස්/පරිවර්තනය නො කරන්න"
+
+#: src/TitlePropDlg.cpp:159
+msgid "Slideshow"
+msgstr "චිත්‍රකාච"
+
+#: src/TitlePropDlg.cpp:175
+msgid "Add image..."
+msgstr "ඡායාවක් එක් කරන්න..."
+
+#: src/TitlePropDlg.cpp:179
+msgid "Remove image"
+msgstr "ඡායාව ඉවත් කරන්න"
+
+#: src/TitlePropDlg.cpp:233
+msgid "Audio file:"
+msgstr "ශ්‍රව්‍ය ගොනු:"
+
+#: src/TitlePropDlg.cpp:267
+msgid "Palette:"
+msgstr "ඵලකය:"
+
+#: src/TitlePropDlg.cpp:354 src/TitlePropDlg.cpp:521
+#, c-format
+msgid "Invalid chapter timestamp '%s'"
+msgstr "අවලංගු '%s' පරිච්ඡේද කාල අච්චුව"
+
+#: src/TitlePropDlg.cpp:440
+msgid "Audio & Subtitle Files"
+msgstr "ශ්‍රව්‍ය හා උපසිරැසි ගොනු"
+
+#: src/Titleset.cpp:268 src/Titleset.cpp:333
+msgid "Can't load pgc"
+msgstr "pgc ලබාගත නොහැක"
+
+#: src/Titleset.cpp:385
+msgid "Can't load menus"
+msgstr "මෙනු ලබාගත නොහැක"
+
+#: src/Titleset.cpp:390
+msgid "Can't load titles"
+msgstr "මාතෘකා ලබාගත නොහැක"
+
+#: src/TitlesetManager.cpp:151 src/TitlesetManager.cpp:172
+msgid "&VMGM Menu"
+msgstr "VMGM මෙනු"
+
+#: src/TitlesetManager.cpp:163
+msgid "&Left"
+msgstr "වමට"
+
+#: src/TitlesetManager.cpp:164
+msgid "&Right"
+msgstr "දකුණට"
+
+#: src/TitlesetManager.cpp:177
+msgid "&Move"
+msgstr "චලනය"
+
+#: src/TitlesetManager.cpp:359
+msgid "Drag your video files from the File Browser to here."
+msgstr "ගොනු බ්‍රව්සරයෙන් ඔබගේ වීඩියෝ ගොනු මෙහි ඇද දමන්න."
+
+#: src/TitlesetManager.cpp:410
+#, c-format
+msgid "Slideshow (%d images)"
+msgstr "චිත්‍රකාච (ඡායා %d)"
+
+#: src/TitlesetManager.cpp:412
+msgid "Slideshow (1 image)"
+msgstr "චිත්‍රකාච (ඡායාවක්)"
+
+#: src/TitlesetManager.cpp:466
+msgid ""
+"The selected video files don't fit on DVD without re-encoding.\n"
+"Do you want to enable re-encoding?"
+msgstr ""
+"ප්‍රති විකේතනයෙන් තොරව තෝරාගත් වීඩියෝව ඩීවීඩීයට උචිත නොවේ.\n"
+"ඔබ ප්‍රති විකේතනයට අවසර දෙනවා ද?"
+
+#: src/TitlesetManager.cpp:488
+#, c-format
+msgid ""
+"Adding file %s.\n"
+"Please wait..."
+msgstr ""
+"%s ගොනුව එක් කරමින්.\n"
+"කරුණාකර රැඳෙන්න..."
+
+#: src/TitlesetManager.cpp:503
+#, c-format
+msgid "File '%s' doesn't contain any audio or video streams."
+msgstr "'%s' ගොනුව කිසිඳු ශ්‍රව්‍ය හෝ වීඩියෝ පථයක් නො දරයි."
+
+#: src/TitlesetManager.cpp:572
+msgid "This file contains video in PAL format. Do you want to change DVD format to PAL too?"
+msgstr "මෙම ගොනුව වීඩියෝව PAL ආකෘතියෙන් දරා සිටියි. ඩීවීඩී ආකෘතිය ද PAL වෙත වෙනස් කිරීමට ඔබ කැමති ද?"
+
+#: src/TitlesetManager.cpp:576
+msgid "This file contains video in NTSC format. Do you want to change DVD format to NTSC too?"
+msgstr "මෙම ගොනුව වීඩියෝව NTSC ආකෘතියෙන් දරා සිටියි. ඩීවීඩී ආකෘතිය ද NTSC වෙත වෙනස් කිරීමට ඔබ කැමති ද?"
+
+#: src/TitlesetManager.cpp:582
+msgid "Maximal 99 titles are allowed for one titleset."
+msgstr "උපරිම මාතෘකා 99ක් එක් මාතෘකා කට්ටලයකට ලබාදිය හැක."
+
+#: src/TitlesetManager.cpp:705
+msgid "The video bitrate is reduced below 2 Mb/s to fit your video on DVD. This can produce DVD with bad video quality."
+msgstr "මෙම වීඩියෝව ඩීවීඩීයට උචිත කිරීමට වීඩියෝ බිටු සීඝ්‍රතාව තත්. මෙබිටු 2ට වඩා අඩු කළේය. මෙමඟින් දුර්වල වීඩියෝ ගුණ පවතින ඩීවීඩියක් සැකසේ."
+
+#: src/TitlesetManager.cpp:718 src/TitlesetManager.cpp:755
+msgid "Please add a video track first."
+msgstr "කරුණාකර පළමුව වීඩීයෝ පථයක් එක් කරන්න."
+
+#: src/TitlesetManager.cpp:880
+msgid "Maximal 99 menus are allowed for one titleset."
+msgstr "උපරිම මාතෘකා 99ක් එක් මාතෘකා කට්ටලයකට ලබාදිය හැක."
+
+#: src/TitlesetManager.cpp:1217
+#, c-format
+msgid "Do you really want to delete %s?"
+msgstr "%s විනාශ කිරීමට ඔබට අවශ්‍ය ද?"
+
+#: src/TitlesetManager.cpp:1218
+msgid "Titleset Manager"
+msgstr "මාතෘකා කට්ටල කළමනාකරු"
+
+#: src/VideoFrameDlg.cpp:52
+msgid "Video frame"
+msgstr "වීඩියෝ රාමු"
+
+#: src/VideoPropDlg.cpp:102
+msgid "Video properties"
+msgstr "වීඩියෝ ලක්ෂණ"
+
+#: src/VideoPropDlg.cpp:128
+msgid "progressive"
+msgstr "ප්‍රගාමී"
+
+#: src/VideoPropDlg.cpp:129
+msgid "interlace"
+msgstr "රේන්දගත"
+
+#: src/VideoPropDlg.cpp:133
+msgid "BFF"
+msgstr "BFF"
+
+#: src/VideoPropDlg.cpp:134
+msgid "TFF"
+msgstr "TFF"
+
+#: src/VideoPropDlg.cpp:142
+msgid "border"
+msgstr "කඩඉම"
+
+#: src/VideoPropDlg.cpp:143
+msgid "crop"
+msgstr "කප්පාදු"
+
+#: src/VideoPropDlg.cpp:147
+msgid "Border"
+msgstr "කඩඉම"
+
+#: src/VideoPropDlg.cpp:163
+msgid "Crop"
+msgstr "කප්පාදු"
+
+#: src/VideoPropDlg.cpp:180
+msgid "Fade-In/Out:"
+msgstr "ආරම්භය/අවසානය විවර්ණ:"
+
+#: src/VideoPropDlg.cpp:219
+msgid "Start:"
+msgstr "ආරම්භ:"
+
+#: src/VideoPropDlg.cpp:233
+msgid "Cut beginning"
+msgstr "ආරම්භය කපන්න"
+
+#: src/VideoPropDlg.cpp:249
+msgid "Cut ending"
+msgstr "අවසානය කපන්න"
+
+#: src/VideoPropDlg.cpp:702 src/VideoPropDlg.cpp:707
+msgid "Invalid time"
+msgstr "අවලංගු කාලය"
+
+#: src/VobListBox.cpp:131
+msgid "Video:"
+msgstr "වීඩියෝ:"
+
+#: src/VobListBox.cpp:172 src/VobListBox.cpp:218
+msgid "Subtitle:"
+msgstr "උපසිරැසි:"
+
+#: src/WelcomeDlg.cpp:46
+msgid "Welcome"
+msgstr "ආයුබෝවන්"
+
+#: src/WelcomeDlg.cpp:52
+msgid "New project"
+msgstr "නව ව්‍යාපෘතිය"
+
+#: src/WelcomeDlg.cpp:57
+msgid "Create a new project"
+msgstr "නව ව්‍යාපෘතියක් තනන්න"
+
+#: src/WelcomeDlg.cpp:64
+msgid "Open project"
+msgstr "ව්‍යාපෘතියක් විවෘත කරන්න"
+
+#: src/WelcomeDlg.cpp:69
+msgid "Open an existing project file"
+msgstr "දැනටත් පවතින ව්‍යාපෘතියක් විවෘත කරන්න"
+
+#: src/WelcomeDlg.cpp:82
+msgid "Browse files..."
+msgstr "ගොනු විමසන්න..."
+
+#: wxVillaLib/imagjpg.cpp:255
+msgid "JPEG: Couldn't load - file is probably corrupted."
+msgstr "JPEG: ලබාගත නොහැක - ගොනුව දුෂ්ප්‍රතිපන්න වී ඇතිවා විය හැක."
+
+#: wxVillaLib/imagjpg.cpp:427
+msgid "JPEG: Couldn't save image."
+msgstr "JPEG: ඡායාව සුරැකීමට නොහැකි විය."
+
+#: wxVillaLib/imagjpg.cpp:512
+msgid "No handler found for image type."
+msgstr "ඡායා වර්ගයට හසුරුවන්නකු සොයාගත නොහැක."
+
+#: wxVillaLib/imagjpg.cpp:519
+#, c-format
+msgid "No image handler for type %d defined."
+msgstr "%d වර්ගයට ඡායා හසුරුවන්නකු සොයාගත නොහැක."
+
+#: wxVillaLib/imagjpg.cpp:537
+#, c-format
+msgid "Can't load image from file '%s': file does not exist."
+msgstr "'%s' ගොනුවෙන් ඡායාව ලබාගත නොහැක: ගොනුව නො පවතියි."
+
+#: wxVillaLib/PropDlg.cpp:201
+msgid "&Don't show this dialog again"
+msgstr "මෙම පණිවුඩය නැවත නො පෙන්වන්න"
+
+#: buttons/arrow-blue.xml:4
+msgid "Blue Arrow"
+msgstr "නිල් ඊතලය"
+
+#: buttons/arrow-blue.xml:33 buttons/arrow3.xml:26
+msgid "Colour of the circle"
+msgstr "වෘත්තයේ වර්ණය"
+
+#: buttons/arrow-blue.xml:40 buttons/arrow-red.xml:43 buttons/arrow-simple-v2.xml:19 buttons/arrow-text-left.xml:32 buttons/arrow-text-right.xml:33 buttons/arrow3d-left.xml:29 buttons/arrow3d-right.xml:29
+msgid "Stroke color"
+msgstr "පහරෙහි වර්ණය"
+
+#: buttons/arrow-blue.xml:47 buttons/arrow-cool.xml:38 buttons/arrow-gold.xml:33 buttons/arrow-mirror-left.xml:19 buttons/arrow-mirror-right.xml:19 buttons/arrow-red.xml:50 buttons/arrow-simple-v2.xml:31
+#: buttons/arrow-text-left.xml:25 buttons/arrow-text-right.xml:26 buttons/glow_arrow.xml:33
+msgid "Arrow color"
+msgstr "ඊතල වර්ණය"
+
+#: buttons/arrow-cool.xml:4
+msgid "Cool Arrow"
+msgstr "සිසිල් ඊතලය"
+
+#: buttons/arrow-cool.xml:24
+msgid "Color 1"
+msgstr "වර්ණ 1"
+
+#: buttons/arrow-cool.xml:31
+msgid "Color 2"
+msgstr "වර්ණ 2"
+
+#: buttons/arrow-double.xml:4
+msgid "Double Arrow"
+msgstr "ද්විත්ව ඊතල"
+
+#: buttons/arrow-double.xml:20
+msgid "Arrow color 1"
+msgstr "ඊතල වර්ණ 1"
+
+#: buttons/arrow-double.xml:32
+msgid "Arrow color 2"
+msgstr "ඊතල වර්ණ 2"
+
+#: buttons/arrow-gold.xml:4
+msgid "Golden Arrow"
+msgstr "රත්‍රන් ඊතලය"
+
+#: buttons/arrow-green-double.xml:4
+msgid "Green Arrow Double"
+msgstr "ද්විත්ව කොළ ඊතලය"
+
+#: buttons/arrow-green-double.xml:390
+msgid "Arrow 1 colour"
+msgstr "ඊතල වර්ණ 1"
+
+#: buttons/arrow-green-double.xml:402
+msgid "Arrow 2 colour"
+msgstr "ඊතල වර්ණ 2"
+
+#: buttons/arrow-green.xml:4
+msgid "Green Arrow"
+msgstr "කොළ ඊතලය"
+
+#: buttons/arrow-green.xml:382 buttons/arrow.xml:11 buttons/arrow2.xml:60 buttons/arrow3.xml:40
+msgid "Arrow colour"
+msgstr "ඊතල වර්ණය"
+
+#: buttons/arrow-mirror-left.xml:4
+msgid "Arrow Mirror Left"
+msgstr "ඊතලය වමට කැඩපත්"
+
+#: buttons/arrow-mirror-left.xml:31 buttons/arrow-mirror-right.xml:31
+msgid "Reflection color 1"
+msgstr "ඡායා වර්ණ 1"
+
+#: buttons/arrow-mirror-left.xml:38 buttons/arrow-mirror-right.xml:43
+msgid "Reflection color 2"
+msgstr "ඡායා වර්ණ 2"
+
+#: buttons/arrow-mirror-right.xml:4
+msgid "Arrow Mirror Right"
+msgstr "ඊතලය දකුණට කැඩපත්"
+
+#: buttons/arrow-red.xml:4
+msgid "Red Arrow"
+msgstr "රතු ඊතලය"
+
+#: buttons/arrow-red.xml:36 buttons/pill3.xml:22
+msgid "Button color"
+msgstr "බොත්තම් වර්ණය"
+
+#: buttons/arrow-simple-v2.xml:4
+msgid "Simple Arrow"
+msgstr "සාමාන්‍ය ඊතලය"
+
+#: buttons/arrow-simple-v2.xml:50 buttons/arrow3d-left.xml:41 buttons/arrow3d-right.xml:41 buttons/ellipse-v2.xml:44 buttons/ellipse45.xml:47 buttons/frame-v2.xml:53 buttons/frame45.xml:63 buttons/home-v2.xml:35
+#: buttons/settings.xml:30 buttons/text-circle-v2.xml:32 buttons/text-square-v2.xml:33 buttons/text-underlined-v3.xml:32 buttons/text-v3.xml:58 objects/ellipse-v3.xml:57 objects/ellipse45.xml:59 objects/frame-v3.xml:67
+#: objects/frame45.xml:76 objects/rectangle-v2.xml:38 objects/text-v2.xml:53
+msgid "Shadow"
+msgstr "සෙවණැල්ල"
+
+#: buttons/arrow-star.xml:3
+msgid "Star Arrow"
+msgstr "ඊතලය ආරම්භය"
+
+#: buttons/arrow-star.xml:28
+msgid "Colour of the star"
+msgstr "තරුවේ වර්ණය"
+
+#: buttons/arrow-star.xml:35
+msgid "Colour of the triangle"
+msgstr "ත්‍රිකෝණයේ වර්ණය"
+
+#: buttons/arrow-text-left.xml:4
+msgid "Text Arrow Left"
+msgstr "වමට වගන්ති ඊතලය"
+
+#: buttons/arrow-text-left.xml:18 buttons/arrow-text-right.xml:19 buttons/pill2.xml:42 buttons/pill3.xml:35
+msgid "Text color"
+msgstr "වගන්ති වර්ණය"
+
+#: buttons/arrow-text-right.xml:4
+msgid "Text Arrow Right"
+msgstr "දකුණට වගන්ති ඊතලය"
+
+#: buttons/arrow.xml:3
+msgid "Arrow"
+msgstr "ඊතලය"
+
+#: buttons/arrow.xml:23 buttons/cancel.xml:28 buttons/circle.xml:34 buttons/circle2.xml:27 buttons/ellipse-v2.xml:51 buttons/ellipse45.xml:54 buttons/ok.xml:27 objects/ellipse-v3.xml:43 objects/ellipse45.xml:45
+#: objects/frame-v3.xml:53 objects/frame45.xml:62 objects/text-v2.xml:32
+msgid "Outline colour"
+msgstr "මායිම් වර්ණය"
+
+#: buttons/arrow.xml:35 buttons/circle.xml:41 buttons/circle2.xml:34 buttons/ellipse-v2.xml:37 buttons/ellipse45.xml:40 objects/ellipse-v3.xml:36 objects/ellipse45.xml:38 objects/frame-v3.xml:46 objects/frame45.xml:55
+#: objects/text-v2.xml:39
+msgid "Outline width"
+msgstr "මායිම් පළල"
+
+#: buttons/arrow2.xml:3
+msgid "Circle Arrow 3D"
+msgstr "ත්‍රිමාණ වෘත ඊතලය"
+
+#: buttons/arrow2.xml:32
+msgid "Colour 1"
+msgstr "වර්ණ 1"
+
+#: buttons/arrow2.xml:39
+msgid "Colour 2"
+msgstr "වර්ණ 2"
+
+#: buttons/arrow2.xml:46
+msgid "Colour 3"
+msgstr "වර්ණ 3"
+
+#: buttons/arrow2.xml:53 buttons/arrow3.xml:33
+msgid "Ring colour"
+msgstr "කව වර්ණය"
+
+#: buttons/arrow3.xml:3
+msgid "Circle Arrow"
+msgstr "වෘත ඊතලය"
+
+#: buttons/arrow3d-left.xml:4
+msgid "3D Arrow Left"
+msgstr "වමට ත්‍රිමාණ ඊතලය"
+
+#: buttons/arrow3d-left.xml:15 buttons/arrow3d-right.xml:15
+msgid "Color of upper part"
+msgstr "ඉහළ කොටසේ වර්ණය"
+
+#: buttons/arrow3d-left.xml:22 buttons/arrow3d-right.xml:22
+msgid "Color of bottom part"
+msgstr "පහළ කොටසේ වර්ණය"
+
+#: buttons/arrow3d-right.xml:4
+msgid "3D Arrow Right"
+msgstr "දකුණට ත්‍රිමාණ ඊතලය"
+
+#: buttons/cancel.xml:16 buttons/ok.xml:14 objects/text-v2.xml:25
+msgid "Fill colour"
+msgstr "පිරැවුම් වර්ණය"
+
+#: buttons/cancel2.xml:12 buttons/ok2.xml:11
+msgid "Box color"
+msgstr "පෙට්ටි වර්ණය"
+
+#: buttons/cancel2.xml:24
+msgid "X color"
+msgstr "X වර්ණය"
+
+#: buttons/circle.xml:3 buttons/circle2.xml:3
+msgid "Circle"
+msgstr "වෘතය"
+
+#: buttons/circle.xml:11 buttons/circle2.xml:11
+msgid "01"
+msgstr "01"
+
+#: buttons/circle.xml:27 buttons/circle2.xml:53 buttons/text-circle-v2.xml:39
+msgid "Circle colour"
+msgstr "වෘත්ත වර්ණය"
+
+#: buttons/circle.xml:48 buttons/circle2.xml:41 buttons/pill.xml:50 buttons/text-circle-v2.xml:25 buttons/text-square-v2.xml:26 buttons/text-underlined-v3.xml:25 buttons/text-v3.xml:25
+msgid "Text colour"
+msgstr "වගන්ති වර්ණය"
+
+#: buttons/ellipse-v2.xml:3 objects/ellipse-v3.xml:3
+msgid "Ellipse"
+msgstr "ඉලිප්ස"
+
+#: buttons/ellipse-v2.xml:30 buttons/ellipse45.xml:33 buttons/frame-v2.xml:25 buttons/frame45.xml:28 buttons/movie.xml:33 objects/ellipse-v3.xml:29 objects/ellipse45.xml:31 objects/frame-v3.xml:25 objects/frame45.xml:27
+msgid "Image opacity"
+msgstr "ඡායා පාරාන්ධතාව"
+
+#: buttons/ellipse-v2.xml:63 buttons/ellipse45.xml:66 buttons/frame-v2.xml:72 buttons/frame45.xml:82 objects/ellipse-v3.xml:50 objects/ellipse45.xml:52 objects/frame-v3.xml:60 objects/frame45.xml:69
+msgid "Inner colour"
+msgstr "ඇතුළත වර්ණය"
+
+#: buttons/ellipse45.xml:3 objects/ellipse45.xml:3
+msgid "Ellipse 45°"
+msgstr "45° ඉලිප්සය"
+
+#: buttons/frame-v2.xml:3 objects/frame-v3.xml:3
+msgid "Frame"
+msgstr "රාමුව"
+
+#: buttons/frame-v2.xml:32 buttons/frame45.xml:42 buttons/text-v3.xml:44 objects/frame-v3.xml:32 objects/frame45.xml:41 objects/rectangle-v2.xml:17
+msgid "Rx"
+msgstr "Rx"
+
+#: buttons/frame-v2.xml:39 buttons/frame45.xml:49 buttons/text-v3.xml:51 objects/frame-v3.xml:39 objects/frame45.xml:48 objects/rectangle-v2.xml:24
+msgid "Ry"
+msgstr "Ry"
+
+#: buttons/frame-v2.xml:46 buttons/frame45.xml:56
+msgid "Border width"
+msgstr "කඩඉම් පළල"
+
+#: buttons/frame-v2.xml:60 buttons/frame45.xml:70 buttons/movie.xml:40
+msgid "Border colour"
+msgstr "කඩඉම් වර්ණය"
+
+#: buttons/frame45.xml:3 objects/frame45.xml:3
+msgid "Frame 45°"
+msgstr "45° රාමුව"
+
+#: buttons/glow_arrow.xml:5
+msgid "Glow Arrow"
+msgstr "දීප්තිමත් ඊතලය"
+
+#: buttons/glow_arrow.xml:26
+msgid "Invert (a,e)"
+msgstr "යටිකුරු (a,e)"
+
+#: buttons/glow_arrow.xml:40
+msgid "Glow colour"
+msgstr "දීප්ති වර්ණය"
+
+#: buttons/hand-left.xml:4
+msgid "Hand Left"
+msgstr "වම් හස්තය"
+
+#: buttons/hand-left.xml:13 buttons/hand-right.xml:13
+msgid "Hand color"
+msgstr "හස්ත වර්ණය"
+
+#: buttons/hand-right.xml:4
+msgid "Hand Right"
+msgstr "දකුණු හස්තය"
+
+#: buttons/home-v2.xml:4
+msgid "Home"
+msgstr "නිවෙස"
+
+#: buttons/home-v2.xml:23 buttons/settings.xml:18 objects/rectangle-v2.xml:31
+msgid "Colour"
+msgstr "වර්ණය"
+
+#: buttons/movie.xml:3
+msgid "Movie"
+msgstr "චිත්‍රපටි"
+
+#: buttons/ok2.xml:4
+msgid "Ok"
+msgstr "හරි"
+
+#: buttons/ok2.xml:24
+msgid "V color"
+msgstr "V වර්ණය"
+
+#: buttons/panting_frame.xml:4
+msgid "Painting Frame"
+msgstr "සිත්තර රාමුව"
+
+#: buttons/panting_frame.xml:46
+msgid "Frame colour"
+msgstr "රාමු වර්ණය"
+
+#: buttons/pill.xml:3
+msgid "Pill"
+msgstr "පෙත්ත"
+
+#: buttons/pill.xml:30
+msgid "C1"
+msgstr "C1"
+
+#: buttons/pill.xml:37
+msgid "C2"
+msgstr "C2"
+
+#: buttons/pill2.xml:4
+msgid "Pill 2"
+msgstr "පෙත්ත 2"
+
+#: buttons/pill2.xml:29
+msgid "Pill color"
+msgstr "පෙති වර්ණය"
+
+#: buttons/pill3.xml:4
+msgid "Pill 3"
+msgstr "පෙත්ත 3"
+
+#: buttons/sticky_note.xml:47
+msgid "Cor do alfinete"
+msgstr "Cor do alfinete"
+
+#: buttons/sticky_note.xml:54
+msgid "Cor da nota"
+msgstr ""
+
+#: buttons/text-circle-v2.xml:3
+msgid "Text with circle"
+msgstr "වගන්ති සහිත වෘතය"
+
+#: buttons/text-circle-v2.xml:51
+msgid "Circle radius"
+msgstr "වෘත්ත අරය"
+
+#: buttons/text-square-v2.xml:3
+msgid "Text with square"
+msgstr "වගන්ති සහිත සමචතුරස්‍රය"
+
+#: buttons/text-square-v2.xml:40
+msgid "Square colour"
+msgstr "සමචතුරස්‍ර වර්ණය"
+
+#: buttons/text-underlined-v3.xml:3
+msgid "Underlined text"
+msgstr "ඉරි ගැසූ වගන්ති"
+
+#: buttons/text-underlined-v3.xml:39
+msgid "Underline colour"
+msgstr "ඉරි වර්ණය"
+
+#: buttons/text-underlined-v3.xml:51
+msgid "Underline thickness"
+msgstr "ඉරි ඝනත්වය"
+
+#: buttons/text-underlined-v3.xml:58
+msgid "Underline offset"
+msgstr "ඉරි බෑවුම"
+
+#: buttons/text-v3.xml:37 objects/text-v2.xml:46
+msgid "Background colour"
+msgstr "පසුබිම් වර්ණය"
+
+#: objects/gold-frame.xml:3
+msgid "Gold frame"
+msgstr "රත්‍රන් රාමුව"
+
+#: objects/image.xml:16
+msgid "Opacity"
+msgstr "පාරාන්ධතාව"
+
+#: objects/rectangle-v2.xml:3
+msgid "Rectangle"
+msgstr "චතුරස්‍රය"
+
+#: objects/text-v2.xml:13
+msgid "text"
+msgstr "වගන්ති"
+
+#: templates/category.xml:3
+msgid "Basic"
+msgstr "මූලික"
+
+#: templates/category.xml:4
+msgid "Birthday"
+msgstr "උපන් දින"
+
+#: templates/category.xml:6
+msgid "Love"
+msgstr "ආදර"
+
+#: templates/category.xml:7
+msgid "Miscellaneous"
+msgstr "විවිධ"
+
+#: templates/category.xml:8
+msgid "Nature"
+msgstr "සොබාදහම"
+
+#: templates/category.xml:9
+msgid "Seasons"
+msgstr "සෘතු"
+
+#: templates/category.xml:10
+msgid "Travel"
+msgstr "චාරිකා"
+
+#: templates/category.xml:11
+msgid "Wedding"
+msgstr "මංගල"
+
+#: transitions/fade.xml:4
+msgid "Fade-In/Out"
+msgstr "ආරම්භය/අවසානය විවර්ණ"
+
+#: transitions/wipeBottomToTop.xml:4
+msgid "Wipe bottom to top"
+msgstr "පහළ සිට ඉහළට පිසින්න"
+
+#: transitions/wipeLeftToRight.xml:4
+msgid "Wipe left to right"
+msgstr "වම සිට දකුණට පිසින්න"
+
+#: transitions/wipeRightToLeft.xml:4
+msgid "Wipe right to left"
+msgstr "දකුණ සිට වමට පිසින්න"
+
+#: transitions/wipeTopToBottom.xml:4
+msgid "Wipe top to bottom"
+msgstr "ඉහළ සිට පහළට පිසින්න"
