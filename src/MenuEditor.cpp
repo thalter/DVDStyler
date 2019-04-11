@@ -539,7 +539,7 @@ bool MenuEditor::AddObject(wxString fname, int x, int y) {
 	MenuObject obj(NULL, false, fname);
 	MenuObjectParam* initParam = obj.GetInitParam();
 	if (initParam) {
-		if (initParam->type == wxT("text") || initParam->type == wxT("string"))
+		if (initParam->type == wxT("string"))
 			param = wxGetTextFromUser(_("Please type in text to insert"), _("Input text"), _T("Text"), this);
 		else if (initParam->type == wxT("image"))
 			param = wxFileSelector( _ ("Please choose an image to insert") , wxT("") ,wxGetCwd (), wxT(""),
@@ -551,6 +551,13 @@ bool MenuEditor::AddObject(wxString fname, int x, int y) {
 	}
 
 	DoSelect(m_menu->AddObject(fname, param, x, y), true, true);
+	
+	if (initParam && initParam->type == wxT("text") && m_selectedIds.size() > 0) {
+		m_actionObject = m_selectedIds[0];
+		wxCommandEvent evt;
+		OnProperties(evt);
+	}
+		
 	return true;
 }
 

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by Gustavo Rezende -->
+<!-- To invert, change the matrix to (-1,0,0,1,60,0) in button properties -->
+<button>
+  <title>Glow Arrow</title>
+  <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <linearGradient id="base">
+        <stop stop-color="#ffffff" stop-opacity="1" offset="0" />
+        <stop stop-color="#000000" stop-opacity="1" offset="1" />
+      </linearGradient>
+      <filter id="blur">
+        <feGaussianBlur stdDeviation="2" />
+      </filter>
+      <linearGradient xlink:href="#base" id="bevel1" x1="30" x2="30" y1="0" y2="60" gradientUnits="userSpaceOnUse" />
+      <linearGradient xlink:href="#base" id="bevel2" x1="30" x2="30" y1="50" y2="10" gradientUnits="userSpaceOnUse" />
+    </defs>
+    <g id="group" transform="matrix(1,0,0,1,0,0)">
+      <path id="big" fill="#333333" fill-opacity="1" stroke="url(#bevel1)" stroke-width="1.5" stroke-linejoin="round" stroke-opacity="1" d="M 0.77,0.76973532 59.231292,30.069873 0.77,59.23101 10.376233,30.041619 z" />
+      <path id="glow" fill="none" stroke="#00ff00" stroke-width="2" stroke-opacity="0.8" filter="url(#blur)" d="M 12.83159,14.198486 43.906115,30.041619 12.87534,45.847192 18.971177,30.041619 z" />
+      <path id="small" fill="none" stroke="url(#bevel2)" stroke-width="1.5" stroke-linejoin="round" stroke-opacity="0.7" d="M 10.520368,11.519915 46.841871,30.041619 10.576233,48.436478 17.520284,30.041619 z" />
+    </g>
+  </svg>
+  <parameters>
+    <parameter>
+      <title>Invert (a,e)</title>
+      <name>inv</name>
+      <type>string</type>
+      <element>group</element>
+      <attribute>transform</attribute>
+    </parameter>
+    <parameter>
+      <title>Arrow color</title>
+      <name>ac</name>
+      <type>colour</type>
+      <element>big</element>
+      <attribute>fill</attribute>
+    </parameter>
+    <parameter>
+      <title>Glow colour</title>
+      <name>gc</name>
+      <type>colour</type>
+      <element>glow</element>
+      <attribute>stroke</attribute>
+      <changeable />
+      <default-value>
+        <highlighted>#ff0000</highlighted>
+        <selected>#ffff00</selected>
+      </default-value>
+    </parameter>
+  </parameters>
+</button>

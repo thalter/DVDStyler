@@ -582,6 +582,24 @@ void ButtonEditDlg::OnSvgLeftClick(wxMouseEvent & event) {
 }
 
 void ButtonEditDlg::OnOkBt(wxCommandEvent& event) {
+	// update object definition
+	m_objectDef.GetDefaultWidth().value = m_defWidth->GetValue();
+	if (m_objectDef.GetDefaultWidth().elements.size())
+		m_objectDef.GetDefaultWidth().elements[0] = m_defWidthElem->GetValue();
+	else
+		m_objectDef.GetDefaultWidth().elements.push_back(m_defWidthElem->GetValue());
+	m_objectDef.GetDefaultWidth().valueInc = m_defWidthInc->GetValue();
+	m_objectDef.GetDefaultWidth().valuePercent = m_defWidthPercent->GetValue();
+
+	m_objectDef.GetDefaultHeight().value = m_defHeight->GetValue();
+	if (m_objectDef.GetDefaultHeight().elements.size())
+		m_objectDef.GetDefaultHeight().elements[0] = m_defHeightElem->GetValue();
+	else
+		m_objectDef.GetDefaultHeight().elements.push_back(m_defHeightElem->GetValue());
+	m_objectDef.GetDefaultHeight().valueInc = m_defHeightInc->GetValue();
+	m_objectDef.GetDefaultHeight().valuePercent = m_defHeightPercent->GetValue();
+	
+	// save
 	wxString dir = wxStandardPaths::Get().GetUserDataDir() + wxFILE_SEP_PATH;
 	if (!wxDirExists(dir))
 		wxDir::Make(dir);

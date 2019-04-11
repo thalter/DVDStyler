@@ -333,6 +333,7 @@ void MenuObjectPropDlg::CreateLook(wxBoxSizer* mainSizer) {
 				AddText(grid, title);
 				wxBoxSizer* sizer2 = new wxBoxSizer(wxHORIZONTAL);
 				AddTextProp(sizer2, wxT(""), m_object->GetParam(param->name), m_multObjects, -1, true, wxTE_MULTILINE);
+				((wxTextCtrl*) GetLastControl())->SetSelection(-1, -1);
 				if (m_multObjects)
 					GetLastControl()->Enable(false);
 				wxBoxSizer* sizer3 = new wxBoxSizer(wxVERTICAL);

@@ -144,7 +144,7 @@ bool wxFfmpegMediaTranscoder::SetOutputFile(const wxString& fileName, VideoForma
 	
 	if (audioFormats.size() > 0) {
 		AddOption(wxT("b:a"), wxString::Format(wxT("%d"), audioBitrate * 1000));
-		AddOption(wxT("ar"), wxT("48000"));
+		AddOption(wxT("ar"), wxT("48000")); // audio sample rate
 	}
 	
 	int outputStreamIdx = 0;
