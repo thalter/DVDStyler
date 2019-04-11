@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DVDStyler v3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-23 10:31+0200\n"
+"POT-Creation-Date: 2019-04-11 14:31+0200\n"
 "PO-Revision-Date: 2017-11-25 22:58+0100\n"
 "Last-Translator: Alex Thuering <alex at thuering.biz>\n"
 "Language-Team: \n"
@@ -156,27 +156,27 @@ msgstr "высота"
 msgid "opacity"
 msgstr "непрозрачность"
 
-#: src/AnimationDlg.cpp:45
+#: src/AnimationDlg.cpp:46
 msgid "font size"
 msgstr "размер шрифта"
 
-#: src/AnimationDlg.cpp:156
+#: src/AnimationDlg.cpp:157
 msgid "Attribute"
 msgstr "Атрибут"
 
-#: src/AnimationDlg.cpp:156
+#: src/AnimationDlg.cpp:157
 msgid "Values (separated by semicolon)"
 msgstr "Значения (разделённые точкой с запятой)"
 
-#: src/AnimationDlg.cpp:156
+#: src/AnimationDlg.cpp:157
 msgid "Begin"
 msgstr "Начало"
 
-#: src/AnimationDlg.cpp:156
+#: src/AnimationDlg.cpp:157
 msgid "Duration (sec)"
 msgstr "Продолжительность (сек)"
 
-#: src/AnimationDlg.cpp:207
+#: src/AnimationDlg.cpp:208
 msgid "Animations"
 msgstr "Анимации"
 
@@ -184,20 +184,20 @@ msgstr "Анимации"
 msgid "Audio properties"
 msgstr "Свойства аудио"
 
-#: src/AudioPropDlg.cpp:83 src/VideoPropDlg.cpp:106
+#: src/AudioPropDlg.cpp:83 src/VideoPropDlg.cpp:107
 msgid "File Name:"
 msgstr "Имя файла:"
 
-#: src/AudioPropDlg.cpp:87 src/TitlePropDlg.cpp:196 src/VideoFrameDlg.cpp:77 src/VideoPropDlg.cpp:111
+#: src/AudioPropDlg.cpp:87 src/TitlePropDlg.cpp:196 src/VideoFrameDlg.cpp:77 src/VideoPropDlg.cpp:112
 #: src/VobListBox.cpp:109
 msgid "Duration:"
 msgstr "Продолжительность:"
 
-#: src/AudioPropDlg.cpp:91 src/VideoPropDlg.cpp:115
+#: src/AudioPropDlg.cpp:91 src/VideoPropDlg.cpp:116
 msgid "Source Format:"
 msgstr "Исходный формат:"
 
-#: src/AudioPropDlg.cpp:95 src/VideoPropDlg.cpp:119
+#: src/AudioPropDlg.cpp:95 src/VideoPropDlg.cpp:120
 msgid "Destination Format:"
 msgstr "Конечный формат:"
 
@@ -205,7 +205,7 @@ msgstr "Конечный формат:"
 msgid "5.1"
 msgstr "5.1"
 
-#: src/AudioPropDlg.cpp:104 src/SettingsDlg.cpp:72 src/SubtitlePropDlg.cpp:107
+#: src/AudioPropDlg.cpp:104 src/SettingsDlg.cpp:73 src/SubtitlePropDlg.cpp:107
 msgid "Language:"
 msgstr "Язык:"
 
@@ -217,7 +217,7 @@ msgstr "Задержка:"
 msgid "ms"
 msgstr "мс"
 
-#: src/AudioPropDlg.cpp:120 src/VideoPropDlg.cpp:181
+#: src/AudioPropDlg.cpp:120 src/VideoPropDlg.cpp:182
 msgid "Filters:"
 msgstr "Фильтры:"
 
@@ -225,7 +225,7 @@ msgstr "Фильтры:"
 msgid "Volume adjustment"
 msgstr "Корректировка звука"
 
-#: src/AudioPropDlg.cpp:128 src/SettingsDlg.cpp:202 src/SettingsDlg.cpp:300
+#: src/AudioPropDlg.cpp:128 src/SettingsDlg.cpp:203 src/SettingsDlg.cpp:302
 msgid "No"
 msgstr "Нет"
 
@@ -233,7 +233,7 @@ msgstr "Нет"
 msgid "Change (%)"
 msgstr "Изменить (%)"
 
-#: src/AudioPropDlg.cpp:135 src/SettingsDlg.cpp:120
+#: src/AudioPropDlg.cpp:135 src/SettingsDlg.cpp:121
 msgid "Normalize"
 msgstr "Нормализировать"
 
@@ -241,7 +241,7 @@ msgstr "Нормализировать"
 msgid "Change (dB)"
 msgstr "Изменить (dB)"
 
-#: src/AudioPropDlg.cpp:206 src/Stream.cpp:102
+#: src/AudioPropDlg.cpp:206 src/Stream.cpp:114
 msgid "stereo"
 msgstr "стерео"
 
@@ -263,14 +263,14 @@ msgstr "Неверное значение громкости '%s'"
 msgid "Analysis of audio"
 msgstr "Анализ звука"
 
-#: src/AudioPropDlg.cpp:389 src/MainWin.cpp:825 src/SysUtils.cpp:303 src/VobListBox.cpp:577
+#: src/AudioPropDlg.cpp:389 src/MainWin.cpp:868 src/SysUtils.cpp:303 src/VobListBox.cpp:611
 msgid "Please wait..."
 msgstr "Пожалуйста подождите..."
 
 #: src/BurnDlg.cpp:104 src/BurnDlg.cpp:459 src/BurnDlg.cpp:466 src/BurnDlg.cpp:588 src/BurnDlg.cpp:595
 #: src/BurnDlg.cpp:601 src/BurnDlg.cpp:608 src/BurnDlg.cpp:615 src/BurnDlg.cpp:620 src/BurnDlg.cpp:627
 #: src/BurnDlg.cpp:632 src/BurnDlg.cpp:638 src/BurnDlg.cpp:644 src/BurnDlg.cpp:657 src/BurnDlg.cpp:660
-#: src/MainWin.cpp:1026 src/MainWin.cpp:1047 src/MainWin.cpp:1052 src/ProcessBurn.cpp:68
+#: src/MainWin.cpp:1069 src/MainWin.cpp:1090 src/MainWin.cpp:1095 src/ProcessBurn.cpp:68
 #: src/ProcessBurn.cpp:86 src/ProcessBurn.cpp:128 src/ProcessFormatDvd.cpp:44 src/ProcessFormatDvd.cpp:53
 #: src/ProcessPreview.cpp:45 src/ProcessPreview.cpp:53 src/ProcessPreview.cpp:61 src/ProcessPreview.cpp:82
 #: src/ProcessPreview.cpp:87 src/TitlesetManager.cpp:467
@@ -281,8 +281,8 @@ msgstr "Прожиг"
 msgid "Temp directory:"
 msgstr "Каталог для временных файлов:"
 
-#: src/BurnDlg.cpp:114 src/BurnDlg.cpp:138 src/BurnDlg.cpp:160 src/BurnDlg.cpp:186 src/SubtitlePropDlg.cpp:148
-#: src/SubtitlePropDlg.cpp:161 src/SubtitlePropDlg.cpp:179
+#: src/BurnDlg.cpp:114 src/BurnDlg.cpp:138 src/BurnDlg.cpp:160 src/BurnDlg.cpp:186
+#: src/SubtitlePropDlg.cpp:148 src/SubtitlePropDlg.cpp:161 src/SubtitlePropDlg.cpp:179
 msgid "..."
 msgstr "..."
 
@@ -338,7 +338,7 @@ msgstr "добавить данные для коррекции ошибок"
 msgid "Start"
 msgstr "Старт"
 
-#: src/BurnDlg.cpp:229 src/SubtitlePropDlg.cpp:244 src/VideoFrameDlg.cpp:75 wxVillaLib/PropDlg.cpp:208
+#: src/BurnDlg.cpp:229 src/SubtitlePropDlg.cpp:244 src/VideoFrameDlg.cpp:75 wxVillaLib/PropDlg.cpp:207
 msgid "Reset"
 msgstr "Сбросить"
 
@@ -370,12 +370,12 @@ msgstr "Не достаточно места для записи ISO-файла.
 msgid "There is not enough space on temporary directory."
 msgstr "Не достаточно места в каталоге для временных файлов."
 
-#: src/BurnDlg.cpp:507 src/BurnDlg.cpp:517 wxVillaLib/PropDlg.cpp:831
+#: src/BurnDlg.cpp:507 src/BurnDlg.cpp:517 wxVillaLib/PropDlg.cpp:830
 msgid "Choose a directory"
 msgstr "Выберите каталог"
 
-#: src/BurnDlg.cpp:536 src/MainWin.cpp:1171 src/TitlePropDlg.cpp:423 src/TitlePropDlg.cpp:439
-#: wxVillaLib/PropDlg.cpp:789
+#: src/BurnDlg.cpp:536 src/MainWin.cpp:1214 src/TitlePropDlg.cpp:423 src/TitlePropDlg.cpp:439
+#: wxVillaLib/PropDlg.cpp:788
 msgid "Choose a file"
 msgstr "Выберите файл"
 
@@ -383,8 +383,8 @@ msgstr "Выберите файл"
 msgid "Programs"
 msgstr "Программы"
 
-#: src/BurnDlg.cpp:538 src/MainWin.cpp:1005 src/MainWin.cpp:1166 src/MainWin.cpp:1170
-#: src/MenuObjectPropDlg.cpp:435 src/MenuPropDlg.cpp:136 src/MenuPropDlg.cpp:150 src/TitlePropDlg.cpp:235
+#: src/BurnDlg.cpp:538 src/MainWin.cpp:1048 src/MainWin.cpp:1209 src/MainWin.cpp:1213
+#: src/MenuObjectPropDlg.cpp:458 src/MenuPropDlg.cpp:141 src/MenuPropDlg.cpp:155 src/TitlePropDlg.cpp:235
 #: src/TitlePropDlg.cpp:425
 msgid "All Files"
 msgstr "Все файлы"
@@ -424,7 +424,7 @@ msgstr "Укажите, пожалуйста, путь к видео проиг�
 msgid "Please enter file name to save ISO"
 msgstr "Введите, пожалуйста, имя файла для сохранения ISO"
 
-#: src/BurnDlg.cpp:631
+#: src/BurnDlg.cpp:631 src/ButtonEditDlg.cpp:611
 #, c-format
 msgid "File '%s' already exist. Do you want to overwrite it?"
 msgstr "Файл '%s' уже существует, вы действительно хотите его переписать?"
@@ -446,7 +446,187 @@ msgstr ""
 "В кэше находятся %d файлов. Они будут удалены,\n"
 "если вы измените каталог для временных файлов."
 
-#: src/Cache.cpp:238 src/Cache.cpp:263 src/Process.cpp:20 src/ProcessMenuTransitions.cpp:120
+#: src/ButtonAddParamDlg.cpp:47
+msgid "Add parameter"
+msgstr ""
+
+#: src/ButtonAddParamDlg.cpp:55
+#, fuzzy
+msgid ""
+"Please select an SVG element\n"
+"for new parameter:"
+msgstr "Укажите, пожалуйста, путь к видео проигрывателю"
+
+#: src/ButtonAddParamDlg.cpp:60 src/SubtitlePropDlg.cpp:143
+msgid "Fill:"
+msgstr "Заполнение:"
+
+#: src/ButtonAddParamDlg.cpp:62 src/ButtonAddParamDlg.cpp:67 src/MenuEditor.cpp:548
+#: buttons/arrow-text-left.xml:8 buttons/arrow-text-left.xml:12 buttons/arrow-text-right.xml:8
+#: buttons/arrow-text-right.xml:13 buttons/frame-text.xml:70 buttons/pill2.xml:24 buttons/pill2.xml:36
+#: buttons/pill3.xml:17 buttons/pill3.xml:29 buttons/text-v3.xml:3 objects/text-v2.xml:3
+#: objects/text-v2.xml:19
+msgid "Text"
+msgstr "Текст"
+
+#: src/ButtonAddParamDlg.cpp:65
+#, fuzzy
+msgid "Stroke:"
+msgstr "Цвет контура"
+
+#: src/ButtonEditDlg.cpp:170
+msgid "name"
+msgstr ""
+
+#: src/ButtonEditDlg.cpp:170 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:439
+#: src/MenuObjectPropDlg.cpp:677 src/MenuObjectPropDlg.cpp:686 src/MenuObjectPropDlg.cpp:698
+msgid "title"
+msgstr "раздел"
+
+#: src/ButtonEditDlg.cpp:170
+msgid "type"
+msgstr ""
+
+#: src/ButtonEditDlg.cpp:170
+msgid "ID of element"
+msgstr ""
+
+#: src/ButtonEditDlg.cpp:170
+#, fuzzy
+msgid "attribute name"
+msgstr "Атрибут"
+
+#: src/ButtonEditDlg.cpp:170
+msgid "dynamic"
+msgstr ""
+
+#: src/ButtonEditDlg.cpp:171
+msgid "value"
+msgstr ""
+
+#: src/ButtonEditDlg.cpp:171 src/ButtonEditDlg.cpp:261
+#, fuzzy
+msgid "highlighted"
+msgstr "Выделенный"
+
+#: src/ButtonEditDlg.cpp:171 src/ButtonEditDlg.cpp:262
+#, fuzzy
+msgid "selected"
+msgstr "Выделенный"
+
+#: src/ButtonEditDlg.cpp:251
+#, fuzzy
+msgid "Create button"
+msgstr "Кнопка по умолчанию:"
+
+#: src/ButtonEditDlg.cpp:260
+#, fuzzy
+msgid "normal"
+msgstr "Обычный"
+
+#: src/ButtonEditDlg.cpp:264
+#, fuzzy
+msgid "Button state"
+msgstr "Кнопки"
+
+#: src/ButtonEditDlg.cpp:271
+#, fuzzy
+msgid "Directory:"
+msgstr "Каталог"
+
+#: src/ButtonEditDlg.cpp:273 buttons/circle-outline.xml:16 buttons/circle.xml:15 buttons/pill.xml:44
+#: buttons/text-circle-v2.xml:19 buttons/text-square-v2.xml:20 buttons/text-underlined-v3.xml:19
+#: buttons/text-v3.xml:19
+msgid "Label"
+msgstr "Надпись"
+
+#: src/ButtonEditDlg.cpp:275 src/SlideDlg.cpp:48
+msgid "File name:"
+msgstr "Имя файла:"
+
+#: src/ButtonEditDlg.cpp:280
+msgid ".xml"
+msgstr ""
+
+#: src/ButtonEditDlg.cpp:283
+#, fuzzy
+msgid "Title:"
+msgstr "Раздел"
+
+#: src/ButtonEditDlg.cpp:287
+#, fuzzy
+msgid "Default width:"
+msgstr "Кнопка по умолчанию:"
+
+#: src/ButtonEditDlg.cpp:293 src/ButtonEditDlg.cpp:316 src/ButtonEditDlg.cpp:340 src/ButtonEditDlg.cpp:363
+#, fuzzy
+msgid "or"
+msgstr "Ядро системы"
+
+#: src/ButtonEditDlg.cpp:297 src/ButtonEditDlg.cpp:302 src/ButtonEditDlg.cpp:320 src/ButtonEditDlg.cpp:325
+#: src/ButtonEditDlg.cpp:344 src/ButtonEditDlg.cpp:349 src/ButtonEditDlg.cpp:367 src/ButtonEditDlg.cpp:372
+msgid "+"
+msgstr ""
+
+#: src/ButtonEditDlg.cpp:307 src/ButtonEditDlg.cpp:330 src/ButtonEditDlg.cpp:354 src/ButtonEditDlg.cpp:377
+#: src/SubtitlePropDlg.cpp:153 src/SubtitlePropDlg.cpp:167 src/SubtitlePropDlg.cpp:184
+msgid "%"
+msgstr "%"
+
+#: src/ButtonEditDlg.cpp:310
+#, fuzzy
+msgid "Min width:"
+msgstr "Ширина контура"
+
+#: src/ButtonEditDlg.cpp:334
+#, fuzzy
+msgid "Default height:"
+msgstr "Стандартная длительность эпизода:"
+
+#: src/ButtonEditDlg.cpp:357
+#, fuzzy
+msgid "Min height:"
+msgstr "высота"
+
+#: src/ButtonEditDlg.cpp:382
+#, fuzzy
+msgid "Parameters:"
+msgstr "Эпизоды:"
+
+#: src/ButtonEditDlg.cpp:391 src/MainWin.cpp:321
+msgid "Save"
+msgstr "Сохранить"
+
+#: src/ButtonEditDlg.cpp:456
+#, fuzzy
+msgid "Edit button"
+msgstr "кнопка"
+
+#: src/ButtonEditDlg.cpp:500
+#, fuzzy
+msgid "Add"
+msgstr "&Добавить"
+
+#: src/ButtonEditDlg.cpp:502
+#, fuzzy
+msgid "Remove selected"
+msgstr "Удалить файл"
+
+#: src/ButtonEditDlg.cpp:546
+msgid "No SVG element is selected"
+msgstr ""
+
+#: src/ButtonEditDlg.cpp:627 src/NewProjectDlg.cpp:51 src/NewProjectDlg.cpp:134
+msgid "Info"
+msgstr ""
+
+#: src/ButtonEditDlg.cpp:627
+msgid ""
+"Click on image to select an SVG\n"
+" element for a new parameter"
+msgstr ""
+
+#: src/Cache.cpp:238 src/Cache.cpp:263 src/Process.cpp:25 src/ProcessMenuTransitions.cpp:121
 #: src/ProcessTranscode.cpp:159 src/ProcessTranscode.cpp:174
 #, c-format
 msgid "Can't remove file '%s'"
@@ -464,7 +644,7 @@ msgstr[2] "В кэше транскодирования %d файлов (%0.1f �
 msgid "Do you want to clear the cache?"
 msgstr "Вы хотите очистить кэш?"
 
-#: src/Cache.cpp:376 src/MainWin.cpp:962
+#: src/Cache.cpp:376 src/MainWin.cpp:1005
 msgid "Confirm"
 msgstr "Подтверждение"
 
@@ -476,7 +656,7 @@ msgstr "Эпизоды"
 msgid "Chapters:"
 msgstr "Эпизоды:"
 
-#: src/ChaptersDlg.cpp:128 src/VideoFrameDlg.cpp:61 src/VideoPropDlg.cpp:206
+#: src/ChaptersDlg.cpp:128 src/VideoFrameDlg.cpp:61 src/VideoPropDlg.cpp:207
 msgid "Time:"
 msgstr "Время:"
 
@@ -485,7 +665,7 @@ msgid "Type:"
 msgstr "Тип:"
 
 #: src/ChaptersDlg.cpp:145 src/MenuCellsDlg.cpp:44 src/MenuCellsDlg.cpp:64 src/MenuCellsDlg.cpp:195
-#: src/MenuPropDlg.cpp:211
+#: src/MenuPropDlg.cpp:216
 msgid "Chapter"
 msgstr "Эпизоды"
 
@@ -497,26 +677,26 @@ msgstr "Программа"
 msgid "Regular cell"
 msgstr "Обычная ячейка"
 
-#: src/ChaptersDlg.cpp:152 src/VideoPropDlg.cpp:234
+#: src/ChaptersDlg.cpp:152 src/VideoPropDlg.cpp:235
 msgid "End:"
 msgstr "Конец:"
 
-#: src/ChaptersDlg.cpp:156 src/DVD.cpp:953 src/DVD.cpp:981 src/MenuPropDlg.cpp:190
+#: src/ChaptersDlg.cpp:156 src/DVD.cpp:966 src/DVD.cpp:1003 src/MenuPropDlg.cpp:195
 msgid "Auto"
 msgstr "Автоматически"
 
-#: src/ChaptersDlg.cpp:157 src/DVD.cpp:984 src/MenuObjectPropDlg.cpp:157 src/MenuObjectPropDlg.cpp:536
-#: src/SettingsDlg.cpp:176
+#: src/ChaptersDlg.cpp:157 src/DVD.cpp:1006 src/MenuObjectPropDlg.cpp:161 src/MenuObjectPropDlg.cpp:557
+#: src/SettingsDlg.cpp:177
 msgid "Custom"
 msgstr "Пользовательское"
 
-#: src/ChaptersDlg.cpp:169 src/MenuPropDlg.cpp:166 src/TitlePropDlg.cpp:150
+#: src/ChaptersDlg.cpp:169 src/MenuPropDlg.cpp:171 src/TitlePropDlg.cpp:150
 msgid "Pause:"
 msgstr "Пауза:"
 
-#: src/ChaptersDlg.cpp:174 src/MainWin.cpp:576 src/MenuPropDlg.cpp:166 src/SettingsDlg.cpp:162
-#: src/SettingsDlg.cpp:164 src/TitlePropDlg.cpp:150 src/TitlePropDlg.cpp:196 src/VideoFrameDlg.cpp:82
-#: src/VideoPropDlg.cpp:187 src/VideoPropDlg.cpp:192
+#: src/ChaptersDlg.cpp:174 src/MainWin.cpp:617 src/MenuPropDlg.cpp:171 src/SettingsDlg.cpp:163
+#: src/SettingsDlg.cpp:165 src/TitlePropDlg.cpp:150 src/TitlePropDlg.cpp:196 src/VideoFrameDlg.cpp:82
+#: src/VideoPropDlg.cpp:188 src/VideoPropDlg.cpp:193
 msgid "sec"
 msgstr "сек"
 
@@ -537,101 +717,117 @@ msgstr "'%s' не является корректным временем"
 msgid "Start time cannot be after end time"
 msgstr "Время начала не может быть позже конечного времени"
 
-#: src/DirCtrl.cpp:24 src/MainWin.cpp:266 src/MainWin.cpp:270
+#: src/DirCtrl.cpp:24 src/MainWin.cpp:276 src/MainWin.cpp:283 src/MainWin.cpp:286
 msgid "&Refresh"
 msgstr "&Обновить"
 
-#: src/DVD.cpp:269 src/Menu.cpp:1118 src/MenuEditor.cpp:464
+#: src/DVD.cpp:270 src/Menu.cpp:1141 src/MenuEditor.cpp:464
 msgid "Wide screen DVD menu can contain maximal 12 buttons"
 msgstr "Широкоформатное DVD меню может содержать максимально 12 кнопки"
 
-#: src/DVD.cpp:272 src/Menu.cpp:1121 src/MenuEditor.cpp:467
+#: src/DVD.cpp:273 src/Menu.cpp:1144 src/MenuEditor.cpp:467
 msgid "Wide screen DVD menu (nopanscan/noletterbox) can contain maximal 18 buttons"
 msgstr "Широкоформатное DVD меню (nopanscan/noletterbox) может содержать максимально 18 кнопки"
 
-#: src/DVD.cpp:276 src/Menu.cpp:1125 src/MenuEditor.cpp:471
+#: src/DVD.cpp:277 src/Menu.cpp:1148 src/MenuEditor.cpp:471
 msgid "DVD menu can contain maximal 34 buttons"
 msgstr "DVD меню может содержать максимально 34 кнопки"
 
-#: src/DVD.cpp:358
+#: src/DVD.cpp:359
 msgid "Some actions are invalid. Please click 'Details' for more information."
 msgstr "Некоторые команды не действительны. Нажмите на \"Подробности\" для дополнительной информации."
 
-#: src/DVD.cpp:485
+#: src/DVD.cpp:486 src/MenuObjectDef.cpp:194
 #, c-format
 msgid "Cannot open file '%s'."
 msgstr "Невозможно открыть файл '%s'."
 
-#: src/DVD.cpp:491
+#: src/DVD.cpp:492
 #, c-format
 msgid "'%s' is not a DVDStyler project file"
 msgstr "'%s' не является файлом DVDStyler-проекта"
 
-#: src/DVD.cpp:587
+#: src/DVD.cpp:590
 msgid "Can't load vmgm menus"
 msgstr "Не удается загрузить VMGM меню"
 
-#: src/DVD.cpp:596
+#: src/DVD.cpp:599
 msgid "Can't load titleset"
 msgstr "Не удается загрузить набор разделов"
 
-#: src/DVD.cpp:912 src/DVD.cpp:931 src/DVD.cpp:944
+#: src/DVD.cpp:917 src/DVD.cpp:944 src/DVD.cpp:957
 msgid "Omit"
 msgstr "Пропустить"
 
-#: src/DVD.cpp:914 src/DVD.cpp:933 src/DVD.cpp:946 src/ProgressDlg.cpp:227
+#: src/DVD.cpp:919 src/DVD.cpp:946 src/DVD.cpp:959 src/ProgressDlg.cpp:227
 msgid "Copy"
 msgstr "Копировать"
 
-#: src/DVD.cpp:934
+#: src/DVD.cpp:947
 msgid "MP2 48 kHz"
 msgstr "MP2 48 кГц"
 
-#: src/DVD.cpp:935
+#: src/DVD.cpp:948
 msgid "AC3 48 kHz"
 msgstr "AC3 48 кГц"
 
-#: src/DVD.cpp:937
+#: src/DVD.cpp:950
 msgid "PCM 48 kHz"
 msgstr "PCM 48 кГц"
 
-#: src/DVD.cpp:961
+#: src/DVD.cpp:974
+msgid "SD (standard)"
+msgstr ""
+
+#: src/DVD.cpp:975
+msgid "Half HD (1280 x 720)"
+msgstr ""
+
+#: src/DVD.cpp:976
+msgid "HDV (1440 x 1080)"
+msgstr ""
+
+#: src/DVD.cpp:977
+msgid "Full HD (1920 x 1080)"
+msgstr ""
+
+#: src/DVD.cpp:983
 msgid "CD (700 MB)"
 msgstr "CD (700 МБ)"
 
-#: src/DVD.cpp:962
+#: src/DVD.cpp:984
 msgid "DVD-1 (1.4 GB)"
 msgstr "DVD-1 (1.4 ГБ)"
 
-#: src/DVD.cpp:963
+#: src/DVD.cpp:985
 msgid "DVD-2 (2.6 GB)"
 msgstr "DVD-2 (2.6 ГБ)"
 
-#: src/DVD.cpp:964
+#: src/DVD.cpp:986
 msgid "DVD-5 (4.7 GB)"
 msgstr "DVD-5 (4.7 ГБ)"
 
-#: src/DVD.cpp:965
+#: src/DVD.cpp:987
 msgid "DVD-9 (8.5 GB)"
 msgstr "DVD-9 (8.5 ГБ)"
 
-#: src/DVD.cpp:966
+#: src/DVD.cpp:988
 msgid "Unlimited"
 msgstr "Без ограничений"
 
-#: src/DVD.cpp:973
+#: src/DVD.cpp:995
 msgid "Call last menu"
 msgstr "Перейти к последнему показанному меню"
 
-#: src/DVD.cpp:974
+#: src/DVD.cpp:996
 msgid "Call root menu"
 msgstr "Перейти к корневому меню"
 
-#: src/DVD.cpp:975
+#: src/DVD.cpp:997
 msgid "Play next title"
 msgstr "Перейти к следующему разделу"
 
-#: src/DVD.cpp:983
+#: src/DVD.cpp:1005
 #, c-format
 msgid "%d MBit/s"
 msgstr "%d МБит/с"
@@ -679,7 +875,7 @@ msgstr "перейти к меню угла обзора"
 msgid "jump to chapter menu"
 msgstr "перейти к меню эпизодов"
 
-#: src/DVDAction.cpp:75 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:626 src/MenuObjectPropDlg.cpp:646
+#: src/DVDAction.cpp:75 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:647 src/MenuObjectPropDlg.cpp:667
 msgid "menu"
 msgstr "меню"
 
@@ -700,18 +896,13 @@ msgstr "перейти к разделу %d эпизод %d"
 msgid "jump to title"
 msgstr "перейти к разделу"
 
-#: src/DVDAction.cpp:183 src/MenuObjectPropDlg.cpp:418 src/MenuObjectPropDlg.cpp:639
-#: src/MenuObjectPropDlg.cpp:648 src/MenuObjectPropDlg.cpp:658 src/MenuObjectPropDlg.cpp:667
-#: src/MenuObjectPropDlg.cpp:676
+#: src/DVDAction.cpp:183 src/MenuObjectPropDlg.cpp:441 src/MenuObjectPropDlg.cpp:660
+#: src/MenuObjectPropDlg.cpp:669 src/MenuObjectPropDlg.cpp:679 src/MenuObjectPropDlg.cpp:688
+#: src/MenuObjectPropDlg.cpp:697
 msgid "titleset"
 msgstr "набор"
 
-#: src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:416 src/MenuObjectPropDlg.cpp:656
-#: src/MenuObjectPropDlg.cpp:665 src/MenuObjectPropDlg.cpp:677
-msgid "title"
-msgstr "раздел"
-
-#: src/DVDAction.cpp:186 src/MenuObjectPropDlg.cpp:615 src/MenuPropDlg.cpp:55
+#: src/DVDAction.cpp:186 src/MenuObjectPropDlg.cpp:636 src/MenuPropDlg.cpp:55
 msgid "VMGM menu"
 msgstr "VMGM меню"
 
@@ -728,27 +919,27 @@ msgstr "переход к VMGM меню не возможен, так как н�
 msgid "cannot jump to menu; none exist"
 msgstr "переход к меню не возможен, так как ни одно меню не создано"
 
-#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:632
+#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:653
 msgid "title menu"
 msgstr "меню разделов"
 
-#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:632
+#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:653
 msgid "root menu"
 msgstr "корневое меню"
 
-#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:632
+#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:653
 msgid "subtitle menu"
 msgstr "меню субтитров"
 
-#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:633
+#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:654
 msgid "audio menu"
 msgstr "аудио меню"
 
-#: src/DVDAction.cpp:212 src/MenuObjectPropDlg.cpp:633
+#: src/DVDAction.cpp:212 src/MenuObjectPropDlg.cpp:654
 msgid "angle menu"
 msgstr "меню угла обзора"
 
-#: src/DVDAction.cpp:212 src/MenuObjectPropDlg.cpp:633
+#: src/DVDAction.cpp:212 src/MenuObjectPropDlg.cpp:654
 msgid "chapter menu"
 msgstr "меню эпизодов"
 
@@ -957,253 +1148,263 @@ msgstr "показать список опций"
 msgid "input file"
 msgstr "входной файл"
 
-#: src/MainWin.cpp:160
+#: src/MainWin.cpp:169
 msgid "&New\tCtrl-N"
 msgstr "&Новый\tCtrl-N"
 
-#: src/MainWin.cpp:161
+#: src/MainWin.cpp:170
 msgid "&Open...\tCtrl-O"
 msgstr "&Открыть..\tCtrl-O"
 
-#: src/MainWin.cpp:162
+#: src/MainWin.cpp:171
 msgid "&Save\tCtrl-S"
 msgstr "&Сохранить\tCtrl-S"
 
-#: src/MainWin.cpp:163
+#: src/MainWin.cpp:172
 msgid "S&ave as...\tShift-Ctrl-S"
 msgstr "Сохранить &как...\tShift-Ctrl-S"
 
-#: src/MainWin.cpp:164
+#: src/MainWin.cpp:173
 msgid "&Burn DVD...\tF9"
 msgstr "Прожиг DVD...\tF9"
 
-#: src/MainWin.cpp:169
+#: src/MainWin.cpp:178
 msgid "&Exit\tAlt-X"
 msgstr "&Выход\tAlt-X"
 
-#: src/MainWin.cpp:170
+#: src/MainWin.cpp:179
 msgid "&File"
 msgstr "&Файл"
 
-#: src/MainWin.cpp:172
+#: src/MainWin.cpp:181
 msgid "&Undo\tCtrl-Z"
 msgstr "&Отменить изменение\tCtrl-Z"
 
-#: src/MainWin.cpp:175
+#: src/MainWin.cpp:184
 msgid "&Redo\tCtrl-Y"
 msgstr "&Восстановить изменение\tCtrl-Y"
 
-#: src/MainWin.cpp:178
+#: src/MainWin.cpp:187
 msgid "&Edit"
 msgstr "&Правка"
 
-#: src/MainWin.cpp:181 src/MainWin.cpp:317 src/TitlesetManager.cpp:146 src/TitlesetManager.cpp:167
+#: src/MainWin.cpp:190 src/MainWin.cpp:333 src/TitlesetManager.cpp:146 src/TitlesetManager.cpp:167
 msgid "&File..."
 msgstr "&Файл..."
 
-#: src/MainWin.cpp:182 src/MainWin.cpp:318 src/TitlesetManager.cpp:147 src/TitlesetManager.cpp:168
+#: src/MainWin.cpp:191 src/MainWin.cpp:334 src/TitlesetManager.cpp:147 src/TitlesetManager.cpp:168
 msgid "File as &chapter..."
 msgstr "Файл как эпизод..."
 
-#: src/MainWin.cpp:183 src/MainWin.cpp:319 src/TitlesetManager.cpp:148 src/TitlesetManager.cpp:169
+#: src/MainWin.cpp:192 src/MainWin.cpp:335 src/TitlesetManager.cpp:148 src/TitlesetManager.cpp:169
 msgid "Titles from &DVD..."
 msgstr "Разделы с &DVD..."
 
-#: src/MainWin.cpp:184 src/TitlesetManager.cpp:149 src/TitlesetManager.cpp:170
+#: src/MainWin.cpp:193 src/TitlesetManager.cpp:149 src/TitlesetManager.cpp:170
 msgid "&Menu"
 msgstr "&Меню"
 
-#: src/MainWin.cpp:185 src/TitlesetManager.cpp:150 src/TitlesetManager.cpp:171
+#: src/MainWin.cpp:194 src/TitlesetManager.cpp:150 src/TitlesetManager.cpp:171
 msgid "&Chapter menu"
 msgstr "Меню &эпизодов"
 
-#: src/MainWin.cpp:186
+#: src/MainWin.cpp:195
 msgid "&VMGM menu"
 msgstr "&VMGM меню"
 
-#: src/MainWin.cpp:187 src/TitlesetManager.cpp:152 src/TitlesetManager.cpp:173
+#: src/MainWin.cpp:196 src/TitlesetManager.cpp:152 src/TitlesetManager.cpp:173
 msgid "&Titleset"
 msgstr "&Набор разделов (titleset)"
 
-#: src/MainWin.cpp:188 src/MenuEditor.cpp:360 src/MenuEditor.cpp:382 src/TitlesetManager.cpp:155
+#: src/MainWin.cpp:197 src/MenuEditor.cpp:360 src/MenuEditor.cpp:382 src/TitlesetManager.cpp:155
 #: src/TitlesetManager.cpp:176
 msgid "&Add"
 msgstr "&Добавить"
 
-#: src/MainWin.cpp:190
+#: src/MainWin.cpp:199
 msgid "&Options..."
 msgstr "&Параметры..."
 
-#: src/MainWin.cpp:191
+#: src/MainWin.cpp:200
 msgid "&DVD"
 msgstr "&DVD"
 
-#: src/MainWin.cpp:193
+#: src/MainWin.cpp:202
 msgid "&Settings..."
 msgstr "&Параметры..."
 
-#: src/MainWin.cpp:194
+#: src/MainWin.cpp:203
+msgid "&Create button from SVG..."
+msgstr ""
+
+#: src/MainWin.cpp:204
 msgid "&Configuration"
 msgstr "&Настройка"
 
-#: src/MainWin.cpp:196
+#: src/MainWin.cpp:206
 msgid "&Contents\tF1"
 msgstr "&Содержание...\tF1"
 
-#: src/MainWin.cpp:197
+#: src/MainWin.cpp:207
 msgid "&About..."
 msgstr "&О программе..."
 
-#: src/MainWin.cpp:198
+#: src/MainWin.cpp:208
 msgid "&Help"
 msgstr "&Помощь"
 
-#: src/MainWin.cpp:201
+#: src/MainWin.cpp:211
 msgid "Directory"
 msgstr "Каталог"
 
-#: src/MainWin.cpp:261
+#: src/MainWin.cpp:271
 msgid "&Assign to background"
 msgstr "&Назначить как задний фон"
 
-#: src/MainWin.cpp:263
+#: src/MainWin.cpp:273
 msgid "&Play"
 msgstr "&Воспроизвести"
 
-#: src/MainWin.cpp:264 src/MenuEditor.cpp:374 src/TitlesetManager.cpp:184 wxVillaLib/PropDlg.cpp:649
+#: src/MainWin.cpp:274 src/MenuEditor.cpp:374 src/TitlesetManager.cpp:184 wxVillaLib/PropDlg.cpp:648
 msgid "&Delete"
 msgstr "&Удалить"
 
-#: src/MainWin.cpp:290
+#: src/MainWin.cpp:280
+#, fuzzy
+msgid "&Edit button"
+msgstr "кнопка"
+
+#: src/MainWin.cpp:281
+#, fuzzy
+msgid "&Reset button"
+msgstr "Кнопка по умолчанию:"
+
+#: src/MainWin.cpp:306
 msgid "DVDStyler"
 msgstr "DVDStyler"
 
-#: src/MainWin.cpp:303
+#: src/MainWin.cpp:319
 msgid "New"
 msgstr "Новый"
 
-#: src/MainWin.cpp:304
+#: src/MainWin.cpp:320
 msgid "Open..."
 msgstr "Открыть..."
 
-#: src/MainWin.cpp:305
-msgid "Save"
-msgstr "Сохранить"
-
-#: src/MainWin.cpp:307 src/MainWin.cpp:309
+#: src/MainWin.cpp:323 src/MainWin.cpp:325
 msgid "DVD Options..."
 msgstr "Параметры DVD..."
 
-#: src/MainWin.cpp:311
+#: src/MainWin.cpp:327
 msgid "Burn..."
 msgstr "Прожиг..."
 
-#: src/MainWin.cpp:315 src/MainWin.cpp:323
+#: src/MainWin.cpp:331 src/MainWin.cpp:339
 msgid "Add File..."
 msgstr "Добавить файл..."
 
-#: src/MainWin.cpp:340 src/MainWin.cpp:348
+#: src/MainWin.cpp:356 src/MainWin.cpp:364
 msgid "File browser"
 msgstr "Менеджер файлов"
 
-#: src/MainWin.cpp:341 src/MainWin.cpp:350 src/MainWin.cpp:453
+#: src/MainWin.cpp:357 src/MainWin.cpp:366 src/MainWin.cpp:470
 msgid "Backgrounds"
 msgstr "Фоновые изображения"
 
-#: src/MainWin.cpp:342 src/MainWin.cpp:351 src/MainWin.cpp:486 src/MenuPropDlg.cpp:177
+#: src/MainWin.cpp:358 src/MainWin.cpp:367 src/MainWin.cpp:526 src/MenuPropDlg.cpp:182
 msgid "Buttons"
 msgstr "Кнопки"
 
-#: src/MainWin.cpp:482 src/MenuObject.cpp:336 src/MenuObjectPropDlg.cpp:246 src/MenuObjectPropDlg.cpp:261
-#: buttons/text-circle-v2.xml:13 buttons/text-square-v2.xml:14 buttons/text-underlined-v3.xml:12
-#: buttons/text-v3.xml:13
+#: src/MainWin.cpp:520 src/MainWin.cpp:1367 src/MainWin.cpp:1385 src/MenuObject.cpp:265
+#: src/MenuObjectPropDlg.cpp:265 src/MenuObjectPropDlg.cpp:280 buttons/text-circle-v2.xml:13
+#: buttons/text-square-v2.xml:14 buttons/text-underlined-v3.xml:12 buttons/text-v3.xml:13
 msgid "button"
 msgstr "кнопка"
 
-#: src/MainWin.cpp:536
+#: src/MainWin.cpp:577
 msgid "Double click to set the background."
 msgstr "Двойной щелчок для установки фона."
 
-#: src/MainWin.cpp:543
+#: src/MainWin.cpp:584
 #, c-format
 msgid "%s (%.1f KB)"
 msgstr "%s (%.1f КБ)"
 
-#: src/MainWin.cpp:545
+#: src/MainWin.cpp:586
 #, c-format
 msgid "%s (%.1f MB)"
 msgstr "%s (%.1f МБ)"
 
-#: src/MainWin.cpp:548
+#: src/MainWin.cpp:589
 #, c-format
 msgid "%s (%.1f GB)"
 msgstr "%s (%.1f ГБ)"
 
-#: src/MainWin.cpp:568
+#: src/MainWin.cpp:609
 #, c-format
 msgid "%d slides"
 msgstr "%d слайдов"
 
-#: src/MainWin.cpp:580 src/SettingsDlg.cpp:125
+#: src/MainWin.cpp:621 src/SettingsDlg.cpp:126
 msgid "min"
 msgstr "мин"
 
-#: src/MainWin.cpp:655
+#: src/MainWin.cpp:696
 #, c-format
 msgid "Are you sure you want to delete '%s' from the file system?"
 msgstr "Вы действительно хотите безвозвратно удалить «%s»?"
 
-#: src/MainWin.cpp:755
+#: src/MainWin.cpp:797
 msgid "Select chapter"
 msgstr "Выбрать эпизод"
 
-#: src/MainWin.cpp:782
+#: src/MainWin.cpp:824
 msgid "Play all"
 msgstr "Воспроизвести"
 
-#: src/MainWin.cpp:784
+#: src/MainWin.cpp:826
 msgid "Select title"
 msgstr "Выбрать раздел"
 
-#: src/MainWin.cpp:786 src/TitlesetManager.cpp:1001
+#: src/MainWin.cpp:828 src/TitlesetManager.cpp:1001
 msgid "Back"
 msgstr "Назад"
 
-#: src/MainWin.cpp:788
+#: src/MainWin.cpp:830
 msgid "Previous"
 msgstr "Предыдущий"
 
-#: src/MainWin.cpp:790
+#: src/MainWin.cpp:832
 msgid "Next"
 msgstr "Следующий"
 
-#: src/MainWin.cpp:836
+#: src/MainWin.cpp:879
 #, c-format
 msgid "Error opening '%s'"
 msgstr "Ошибка открытия файла '%s'"
 
-#: src/MainWin.cpp:856
+#: src/MainWin.cpp:899
 msgid "Open a DVDStyler project file"
 msgstr "Загрузка файла проекта"
 
-#: src/MainWin.cpp:857 src/MainWin.cpp:1004
+#: src/MainWin.cpp:900 src/MainWin.cpp:1047
 msgid "Project files"
 msgstr "Проектные файлы"
 
-#: src/MainWin.cpp:888 src/MainWin.cpp:960
+#: src/MainWin.cpp:931 src/MainWin.cpp:1003
 msgid "Untitled"
 msgstr "Без названия"
 
-#: src/MainWin.cpp:961
+#: src/MainWin.cpp:1004
 #, c-format
 msgid "The file '%s' was modified, save changes?"
 msgstr "Файл '%s' изменён, сохранить изменения?"
 
-#: src/MainWin.cpp:1003
+#: src/MainWin.cpp:1046
 msgid "Save a DVDStyler project file"
 msgstr "Сохранение файла проекта"
 
-#: src/MainWin.cpp:1025
+#: src/MainWin.cpp:1068
 msgid ""
 "The selected video files don't fit on DVD. Please reduce\n"
 "video quality (bitrate) or remove some titles."
@@ -1212,7 +1413,7 @@ msgstr ""
 "Пожалуйста уменьшите качество видео (битрэйт)\n"
 "или удалите некоторые разделы."
 
-#: src/MainWin.cpp:1046
+#: src/MainWin.cpp:1089
 msgid ""
 "Project doesn't contain any video title. To add a title please\n"
 "drag a video file into the bottom section of the window."
@@ -1220,7 +1421,7 @@ msgstr ""
 "Проект не содержит ни одного видео раздела. Чтобы добавить\n"
 "раздел нужно перетянуть видео файл в нижнюю часть окна."
 
-#: src/MainWin.cpp:1051
+#: src/MainWin.cpp:1094
 #, c-format
 msgid ""
 "Titleset %d doesn't contain any video title. To add a title\n"
@@ -1229,35 +1430,44 @@ msgstr ""
 "Набор разделов %d не содержит ни одного видео раздела. Чтобы добавить раздел нужно перетянуть видео файл в "
 "нижнюю часть окна."
 
-#: src/MainWin.cpp:1160
+#: src/MainWin.cpp:1203
 msgid "Audio/Video/Subtitle Files"
 msgstr "Аудио/Видео/Субтитры"
 
-#: src/MainWin.cpp:1162 src/MenuPropDlg.cpp:149 src/TitlePropDlg.cpp:234 src/TitlePropDlg.cpp:441
+#: src/MainWin.cpp:1205 src/MenuPropDlg.cpp:154 src/TitlePropDlg.cpp:234 src/TitlePropDlg.cpp:441
 msgid "Audio Files"
 msgstr "Аудио файлы"
 
-#: src/MainWin.cpp:1163 src/MainWin.cpp:1168 src/MenuPropDlg.cpp:134
+#: src/MainWin.cpp:1206 src/MainWin.cpp:1211 src/MenuPropDlg.cpp:139
 msgid "Video Files"
 msgstr "Видео файлы"
 
-#: src/MainWin.cpp:1164 src/TitlePropDlg.cpp:442
+#: src/MainWin.cpp:1207 src/TitlePropDlg.cpp:442
 msgid "Subtitle Files"
 msgstr "Файлы субтитров"
 
-#: src/MainWin.cpp:1165 src/MainWin.cpp:1169
+#: src/MainWin.cpp:1208 src/MainWin.cpp:1212
 msgid "Image Files"
 msgstr "Файлы изображений"
 
-#: src/MainWin.cpp:1197
+#: src/MainWin.cpp:1240
 msgid "Choose DVD device or directory"
 msgstr "Выберите DVD привод или каталог"
 
-#: src/MainWin.cpp:1249
+#: src/MainWin.cpp:1292
 msgid "Choose a titleset to add:"
 msgstr "Выберите набор разделов для добавления:"
 
-#: src/Menu.cpp:816
+#: src/MainWin.cpp:1348
+msgid "Open a SVG file"
+msgstr ""
+
+#: src/MainWin.cpp:1349
+#, fuzzy
+msgid "SVG files"
+msgstr "Видео файлы"
+
+#: src/Menu.cpp:839
 #, c-format
 msgid "%s and %s are overlapping"
 msgstr "%s и %s пересекаются"
@@ -1424,7 +1634,7 @@ msgstr "&Вид"
 msgid "&Grid"
 msgstr "&Сетка"
 
-#: src/MenuEditor.cpp:498 src/ProcessMenuTransitions.cpp:177
+#: src/MenuEditor.cpp:498 src/ProcessMenuTransitions.cpp:178
 #, c-format
 msgid "VMGM menu %d"
 msgstr "VMGM меню %d"
@@ -1451,174 +1661,182 @@ msgstr "Ввод текста"
 msgid "Please choose an image to insert"
 msgstr "Выберите, пожалуйста, изображение для вставки"
 
-#: src/MenuEditor.cpp:546 src/MenuObjectPropDlg.cpp:434 src/MenuPropDlg.cpp:135 src/TitlePropDlg.cpp:424
+#: src/MenuEditor.cpp:546 src/MenuObjectPropDlg.cpp:457 src/MenuPropDlg.cpp:140 src/TitlePropDlg.cpp:424
 msgid "Image Files "
 msgstr "Графические файлы "
 
-#: src/MenuEditor.cpp:548 buttons/arrow-text-left.xml:8 buttons/arrow-text-left.xml:12
-#: buttons/arrow-text-right.xml:8 buttons/arrow-text-right.xml:13 buttons/pill2.xml:24 buttons/pill2.xml:36
-#: buttons/pill3.xml:17 buttons/pill3.xml:29 buttons/text-v3.xml:3 objects/text-v2.xml:3
-#: objects/text-v2.xml:19
-msgid "Text"
-msgstr "Текст"
-
-#: src/MenuObject.cpp:336
+#: src/MenuObject.cpp:265
 msgid "object"
 msgstr "Объект"
 
-#: src/MenuObject.cpp:1229 src/MenuObject.cpp:1238
+#: src/MenuObject.cpp:816 src/MenuObject.cpp:825
 #, c-format
 msgid "can't open file '%s'"
 msgstr "невозможно открыть файл '%s'"
 
-#: src/MenuObjectPropDlg.cpp:63 src/MenuPropDlg.cpp:49 src/TitlePropDlg.cpp:68
+#: src/MenuObjectPropDlg.cpp:65 src/MenuPropDlg.cpp:49 src/TitlePropDlg.cpp:68
 msgid "Properties"
 msgstr "Свойства"
 
-#: src/MenuObjectPropDlg.cpp:102 src/MenuObjectPropDlg.cpp:112
+#: src/MenuObjectPropDlg.cpp:106 src/MenuObjectPropDlg.cpp:116
 msgid "Action"
 msgstr "Действие"
 
-#: src/MenuObjectPropDlg.cpp:130
+#: src/MenuObjectPropDlg.cpp:134
 msgid "Jump to"
 msgstr "Перейти к"
 
-#: src/MenuObjectPropDlg.cpp:139
+#: src/MenuObjectPropDlg.cpp:143
 msgid "Play all titles"
 msgstr "Воспроизвести все разделы"
 
-#: src/MenuObjectPropDlg.cpp:141
+#: src/MenuObjectPropDlg.cpp:145
 msgid "single titleset"
 msgstr "один набор"
 
-#: src/MenuObjectPropDlg.cpp:142
+#: src/MenuObjectPropDlg.cpp:146
 msgid "all titlesets"
 msgstr "все набор"
 
-#: src/MenuObjectPropDlg.cpp:169 src/MenuObjectPropDlg.cpp:178
+#: src/MenuObjectPropDlg.cpp:173 src/MenuObjectPropDlg.cpp:187
 msgid "last selected"
 msgstr "последний выбранный"
 
-#: src/MenuObjectPropDlg.cpp:171 src/MenuObjectPropDlg.cpp:181
+#: src/MenuObjectPropDlg.cpp:175 src/MenuObjectPropDlg.cpp:190
 msgid "track"
 msgstr "дорожка"
 
-#: src/MenuObjectPropDlg.cpp:172 src/MenuPropDlg.cpp:212 src/TitlePropDlg.cpp:254
+#: src/MenuObjectPropDlg.cpp:176 src/MenuPropDlg.cpp:217 src/TitlePropDlg.cpp:254
 msgid "Audio"
 msgstr "Аудио"
 
-#: src/MenuObjectPropDlg.cpp:179
+#: src/MenuObjectPropDlg.cpp:183 src/MenuObjectPropDlg.cpp:200 src/NewProjectDlg.cpp:134
+#, fuzzy
+msgid "Warning"
+msgstr "Прожиг"
+
+#: src/MenuObjectPropDlg.cpp:183
+msgid "Please use titleset menu to select audio tracks."
+msgstr ""
+
+#: src/MenuObjectPropDlg.cpp:188
 msgid "off"
 msgstr "отключить"
 
-#: src/MenuObjectPropDlg.cpp:182
+#: src/MenuObjectPropDlg.cpp:191
 msgid "subtitle"
 msgstr "субтитры"
 
-#: src/MenuObjectPropDlg.cpp:190
+#: src/MenuObjectPropDlg.cpp:200
+msgid "Please use titleset menu to select subtitle tracks."
+msgstr ""
+
+#: src/MenuObjectPropDlg.cpp:205
 msgid "Auto execute command by select"
 msgstr "Автоматически выполнять команду при выделении"
 
-#: src/MenuObjectPropDlg.cpp:193
+#: src/MenuObjectPropDlg.cpp:208
 msgid "Navigation"
 msgstr "Навигация"
 
-#: src/MenuObjectPropDlg.cpp:208 src/MenuObjectPropDlg.cpp:218
+#: src/MenuObjectPropDlg.cpp:223 src/MenuObjectPropDlg.cpp:233
 msgid "Look"
 msgstr "Вид"
 
-#: src/MenuObjectPropDlg.cpp:242 src/MenuObjectPropDlg.cpp:249
+#: src/MenuObjectPropDlg.cpp:261 src/MenuObjectPropDlg.cpp:268
 msgid "none"
 msgstr "нет"
 
-#: src/MenuObjectPropDlg.cpp:248 src/MenuPropDlg.cpp:121 src/SettingsDlg.cpp:272 src/VideoPropDlg.cpp:131
+#: src/MenuObjectPropDlg.cpp:267 src/MenuPropDlg.cpp:126 src/SettingsDlg.cpp:274 src/VideoPropDlg.cpp:132
 msgid "auto"
 msgstr "авто"
 
-#: src/MenuObjectPropDlg.cpp:292
+#: src/MenuObjectPropDlg.cpp:311
 msgid "Normal"
 msgstr "Обычный"
 
-#: src/MenuObjectPropDlg.cpp:293
+#: src/MenuObjectPropDlg.cpp:312
 msgid "Highlighted"
 msgstr "Выделенный"
 
-#: src/MenuObjectPropDlg.cpp:294
+#: src/MenuObjectPropDlg.cpp:313
 msgid "Selected"
 msgstr "Выделенный"
 
-#: src/MenuObjectPropDlg.cpp:320
+#: src/MenuObjectPropDlg.cpp:340
 msgid "Font..."
 msgstr "Шрифт..."
 
-#: src/MenuObjectPropDlg.cpp:384 src/MenuObjectPropDlg.cpp:543 src/MenuPropDlg.cpp:81 src/VideoPropDlg.cpp:137
+#: src/MenuObjectPropDlg.cpp:404 src/MenuObjectPropDlg.cpp:564 src/MenuPropDlg.cpp:81
+#: src/VideoPropDlg.cpp:138
 msgid "Keep Aspect Ratio"
 msgstr "Сохранять соотношение сторон"
 
-#: src/MenuObjectPropDlg.cpp:387 src/MenuPropDlg.cpp:84
+#: src/MenuObjectPropDlg.cpp:407 src/MenuPropDlg.cpp:84
 msgid "X Min"
 msgstr "X слева"
 
-#: src/MenuObjectPropDlg.cpp:388 src/MenuPropDlg.cpp:85
+#: src/MenuObjectPropDlg.cpp:408 src/MenuPropDlg.cpp:85
 msgid "X Mid"
 msgstr "X середина"
 
-#: src/MenuObjectPropDlg.cpp:389 src/MenuPropDlg.cpp:86
+#: src/MenuObjectPropDlg.cpp:409 src/MenuPropDlg.cpp:86
 msgid "X Max"
 msgstr "X справа"
 
-#: src/MenuObjectPropDlg.cpp:393 src/MenuPropDlg.cpp:90
+#: src/MenuObjectPropDlg.cpp:413 src/MenuPropDlg.cpp:90
 msgid "Y Min"
 msgstr "Y слева"
 
-#: src/MenuObjectPropDlg.cpp:394 src/MenuPropDlg.cpp:91
+#: src/MenuObjectPropDlg.cpp:414 src/MenuPropDlg.cpp:91
 msgid "Y Mid"
 msgstr "Y середина"
 
-#: src/MenuObjectPropDlg.cpp:395 src/MenuPropDlg.cpp:92
+#: src/MenuObjectPropDlg.cpp:415 src/MenuPropDlg.cpp:92
 msgid "Y Max"
 msgstr "Y справа"
 
-#: src/MenuObjectPropDlg.cpp:399 src/MenuPropDlg.cpp:96
+#: src/MenuObjectPropDlg.cpp:419 src/MenuPropDlg.cpp:96
 msgid "Meet"
 msgstr "Рамка"
 
-#: src/MenuObjectPropDlg.cpp:400 src/MenuPropDlg.cpp:97
+#: src/MenuObjectPropDlg.cpp:420 src/MenuPropDlg.cpp:97
 msgid "Slice"
 msgstr "Срез"
 
-#: src/MenuObjectPropDlg.cpp:432 buttons/ellipse-v2.xml:23 buttons/ellipse45.xml:26 buttons/frame-v2.xml:18
-#: buttons/frame45.xml:21 buttons/movie.xml:26 objects/ellipse-v3.xml:22 objects/ellipse45.xml:24
-#: objects/frame-v3.xml:18 objects/frame45.xml:20 objects/gold-frame.xml:45 objects/image.xml:3
-#: objects/image.xml:9
+#: src/MenuObjectPropDlg.cpp:455 buttons/ellipse-v2.xml:23 buttons/ellipse45.xml:26 buttons/frame-text.xml:30
+#: buttons/frame-v2.xml:18 buttons/frame45.xml:21 buttons/movie.xml:26 buttons/painting_frame.xml:40
+#: buttons/sticky_note.xml:45 objects/ellipse-v3.xml:22 objects/ellipse45.xml:24 objects/frame-v3.xml:18
+#: objects/frame45.xml:20 objects/gold-frame.xml:45 objects/image.xml:3 objects/image.xml:9
+#: objects/sticky_note.xml:42
 msgid "Image"
 msgstr "Изображение"
 
-#: src/MenuObjectPropDlg.cpp:440
+#: src/MenuObjectPropDlg.cpp:463
 msgid "Video"
 msgstr "Видео"
 
-#: src/MenuObjectPropDlg.cpp:495 src/SubtitlePropDlg.cpp:186
+#: src/MenuObjectPropDlg.cpp:516 src/SubtitlePropDlg.cpp:186
 msgid "Offset:"
 msgstr "Смещение:"
 
-#: src/MenuObjectPropDlg.cpp:503
+#: src/MenuObjectPropDlg.cpp:524
 msgid "Deviation:"
 msgstr "Стандартное отклонение:"
 
-#: src/MenuObjectPropDlg.cpp:518
+#: src/MenuObjectPropDlg.cpp:539
 msgid "Location"
 msgstr "Расположение"
 
-#: src/MenuObjectPropDlg.cpp:521
+#: src/MenuObjectPropDlg.cpp:542
 msgid "X:"
 msgstr "X:"
 
-#: src/MenuObjectPropDlg.cpp:522
+#: src/MenuObjectPropDlg.cpp:543
 msgid "Y:"
 msgstr "Y:"
 
-#: src/MenuObjectPropDlg.cpp:528 buttons/arrow-blue.xml:26 buttons/arrow-cool.xml:17
+#: src/MenuObjectPropDlg.cpp:549 buttons/arrow-blue.xml:26 buttons/arrow-cool.xml:17
 #: buttons/arrow-double.xml:13 buttons/arrow-gold.xml:26 buttons/arrow-green-double.xml:383
 #: buttons/arrow-green.xml:375 buttons/arrow-red.xml:29 buttons/arrow-simple-v2.xml:43
 #: buttons/arrow-star.xml:21 buttons/arrow.xml:42 buttons/arrow2.xml:25 buttons/arrow3.xml:19
@@ -1626,36 +1844,36 @@ msgstr "Y:"
 msgid "Rotation"
 msgstr "Вращение"
 
-#: src/MenuObjectPropDlg.cpp:530
+#: src/MenuObjectPropDlg.cpp:551
 msgid "Angle:"
 msgstr "Угол:"
 
-#: src/MenuObjectPropDlg.cpp:536
+#: src/MenuObjectPropDlg.cpp:557
 msgid "Size"
 msgstr "Размер"
 
-#: src/MenuObjectPropDlg.cpp:538
+#: src/MenuObjectPropDlg.cpp:559
 msgid "Width:"
 msgstr "Ширина:"
 
-#: src/MenuObjectPropDlg.cpp:540
+#: src/MenuObjectPropDlg.cpp:561
 msgid "Height:"
 msgstr "Высота:"
 
-#: src/MenuObjectPropDlg.cpp:555
+#: src/MenuObjectPropDlg.cpp:576
 msgid "Animations..."
 msgstr "Анимации..."
 
-#: src/MenuObjectPropDlg.cpp:606
+#: src/MenuObjectPropDlg.cpp:627
 msgid "start of current menu"
 msgstr "началу текущего меню"
 
-#: src/MenuObjectPropDlg.cpp:691 src/MenuObjectPropDlg.cpp:695
+#: src/MenuObjectPropDlg.cpp:712 src/MenuObjectPropDlg.cpp:716
 #, c-format
 msgid "chapter %d"
 msgstr "эпизод %d"
 
-#: src/MenuObjectPropDlg.cpp:862
+#: src/MenuObjectPropDlg.cpp:894
 msgid "Please enter the action command."
 msgstr "Введите, пожалуйста, команду действия."
 
@@ -1663,7 +1881,7 @@ msgstr "Введите, пожалуйста, команду действия."
 msgid "Titleset"
 msgstr "Набор"
 
-#: src/MenuPropDlg.cpp:53 src/MenuPropDlg.cpp:201 src/TitlesetManager.cpp:331 src/TitlesetManager.cpp:1213
+#: src/MenuPropDlg.cpp:53 src/MenuPropDlg.cpp:206 src/TitlesetManager.cpp:331 src/TitlesetManager.cpp:1213
 #: buttons/pill.xml:26
 msgid "Menu"
 msgstr "Меню"
@@ -1676,81 +1894,81 @@ msgstr "Видео объект"
 msgid "Format:"
 msgstr "Формат:"
 
-#: src/MenuPropDlg.cpp:132
+#: src/MenuPropDlg.cpp:137
 msgid "Background:"
 msgstr "Фон:"
 
-#: src/MenuPropDlg.cpp:133
+#: src/MenuPropDlg.cpp:138
 msgid "Image and Video Files"
 msgstr "Файлы изображений и видео"
 
-#: src/MenuPropDlg.cpp:148 src/VobListBox.cpp:145
+#: src/MenuPropDlg.cpp:153 src/VobListBox.cpp:146
 msgid "Audio:"
 msgstr "Аудио:"
 
-#: src/MenuPropDlg.cpp:170
+#: src/MenuPropDlg.cpp:175
 msgid "Loop"
 msgstr "Замкнутый цикл"
 
-#: src/MenuPropDlg.cpp:181
+#: src/MenuPropDlg.cpp:186
 msgid "Subpicture start/end:"
 msgstr "Субкарника начало/конец:"
 
-#: src/MenuPropDlg.cpp:187
+#: src/MenuPropDlg.cpp:192
 msgid "Remember last selected button"
 msgstr "Запомнить последнею выбранную кнопку"
 
-#: src/MenuPropDlg.cpp:206
+#: src/MenuPropDlg.cpp:211
 msgid "Entry"
 msgstr "Запись"
 
-#: src/MenuPropDlg.cpp:209
+#: src/MenuPropDlg.cpp:214
 msgid "Root"
 msgstr "Корневое"
 
-#: src/MenuPropDlg.cpp:210
+#: src/MenuPropDlg.cpp:215
 msgid "Subtitle"
 msgstr "Субтитры"
 
-#: src/MenuPropDlg.cpp:213
+#: src/MenuPropDlg.cpp:218
 msgid "Angle"
 msgstr "Угол обзора"
 
-#: src/MenuPropDlg.cpp:216 src/TitlePropDlg.cpp:71 src/TitlePropDlg.cpp:263 src/TitlesetManager.cpp:331
+#: src/MenuPropDlg.cpp:221 src/TitlePropDlg.cpp:71 src/TitlePropDlg.cpp:263 src/TitlesetManager.cpp:331
 msgid "Title"
 msgstr "Раздел"
 
-#: src/MenuPropDlg.cpp:220 src/TitlePropDlg.cpp:269
+#: src/MenuPropDlg.cpp:225 src/TitlePropDlg.cpp:269
 msgid "Pre commands:"
 msgstr "Команды перед началом:"
 
-#: src/MenuPropDlg.cpp:222 src/TitlePropDlg.cpp:271
+#: src/MenuPropDlg.cpp:227 src/TitlePropDlg.cpp:271
 msgid "Post commands:"
 msgstr "Команды после завершения:"
 
-#: src/MenuPropDlg.cpp:236
+#: src/MenuPropDlg.cpp:241
 msgid "Cells..."
 msgstr "Ячейки..."
 
-#: src/MenuPropDlg.cpp:237
+#: src/MenuPropDlg.cpp:242
 msgid "Actions..."
 msgstr "Действия..."
 
-#: src/MenuPropDlg.cpp:271
+#: src/MenuPropDlg.cpp:276
 msgid "Subpicture end must be greater than start or empty"
 msgstr "Конечное время субкартинок должно быть больше начального или пустым"
 
-#: src/MenuPropDlg.cpp:278 src/TitlePropDlg.cpp:320
+#: src/MenuPropDlg.cpp:283 src/TitlePropDlg.cpp:320
 #, c-format
 msgid "File %s doesn't exist."
 msgstr "Файл '%s' не существует."
 
-#: src/MenuPropDlg.cpp:285 src/TitlePropDlg.cpp:327
+#: src/MenuPropDlg.cpp:290 src/TitlePropDlg.cpp:327
 #, c-format
 msgid "File %s isn't audio file."
 msgstr "Файл '%s' не является аудио-файлом."
 
-#: src/MenuPropDlg.cpp:304
+#: src/MenuPropDlg.cpp:309
 msgid "Post commands will not be executed if pause is set to -1"
 msgstr "Команды после завершения не будут запущены, если пауза равна -1"
 
@@ -1763,58 +1981,66 @@ msgstr "&Не показывать больше это сообщение"
 msgid "Can't open file %s"
 msgstr "Невозможно открыть файл '%s'"
 
-#: src/NewProjectDlg.cpp:19
+#: src/NewProjectDlg.cpp:27
 msgid "Create a new DVD"
 msgstr "Создать новый DVD"
 
-#: src/NewProjectDlg.cpp:34
+#: src/NewProjectDlg.cpp:42
 msgid "Disc label:"
 msgstr "Имя диска:"
 
-#: src/NewProjectDlg.cpp:37
+#: src/NewProjectDlg.cpp:49
+msgid "DVD Resolution:"
+msgstr ""
+
+#: src/NewProjectDlg.cpp:56
 msgid "Disc capacity:"
 msgstr "Размер диска:"
 
-#: src/NewProjectDlg.cpp:43
+#: src/NewProjectDlg.cpp:62
 msgid "Video bitrate:"
 msgstr "Видео битрэйт:"
 
-#: src/NewProjectDlg.cpp:46 src/NewProjectDlg.cpp:52 src/SettingsDlg.cpp:243 src/SettingsDlg.cpp:248
-#: src/SettingsDlg.cpp:252
+#: src/NewProjectDlg.cpp:65 src/NewProjectDlg.cpp:71 src/SettingsDlg.cpp:245 src/SettingsDlg.cpp:250
+#: src/SettingsDlg.cpp:254
 msgid "KBit/s"
 msgstr "КБит/с"
 
-#: src/NewProjectDlg.cpp:52
+#: src/NewProjectDlg.cpp:71
 msgid "Audio bitrate:"
 msgstr "Аудио битрэйт:"
 
-#: src/NewProjectDlg.cpp:63
+#: src/NewProjectDlg.cpp:82
 msgid "Video Format"
 msgstr "Видео формат"
 
-#: src/NewProjectDlg.cpp:72
+#: src/NewProjectDlg.cpp:94
 msgid "Aspect Ratio"
 msgstr "Соотношение сторон"
 
-#: src/NewProjectDlg.cpp:82
+#: src/NewProjectDlg.cpp:104
 msgid "Audio Format"
 msgstr "Аудио формат"
 
-#: src/NewProjectDlg.cpp:91 src/SettingsDlg.cpp:131
+#: src/NewProjectDlg.cpp:113 src/SettingsDlg.cpp:132
 msgid "Default title post command:"
 msgstr "После завершения раздела:"
 
-#: src/NewProjectDlg.cpp:97
+#: src/NewProjectDlg.cpp:119
 msgid "Please enter the volume name."
 msgstr "Введите, пожалуйста, имя диска."
 
-#: src/NewProjectDlg.cpp:101
+#: src/NewProjectDlg.cpp:123
 msgid "Volume name can only be a maximum of 32 characters."
 msgstr "Название диска может быть из максимально 32 символов."
 
-#: src/Pgc.cpp:255
+#: src/Pgc.cpp:274
 msgid "Can't load vob"
 msgstr "Не удается загрузить vob"
+
+#: src/Process.cpp:19
+msgid "Executing command: "
+msgstr "Выполнении команды:"
 
 #: src/ProcessBurn.cpp:60
 msgid "Burning"
@@ -1887,68 +2113,68 @@ msgstr "Не достаточно места для записи ISO-файла:
 msgid "Creating ISO image"
 msgstr "Создание ISO изображение"
 
-#: src/ProcessMenu.cpp:67
+#: src/ProcessMenu.cpp:68
 #, c-format
 msgid "Generating menu %u of %lu"
 msgstr "Генерирование меню %u из %lu"
 
-#: src/ProcessMenu.cpp:118
+#: src/ProcessMenu.cpp:119
 msgid "Create menu MPEG"
 msgstr "Создание MPEG-файла для меню"
 
-#: src/ProcessMenu.cpp:149 src/ProcessMenu.cpp:173 src/ProcessMenu.cpp:187 src/ProcessMenu.cpp:248
-#: src/ProcessMenu.cpp:278 src/ProcessMenu.cpp:292
+#: src/ProcessMenu.cpp:150 src/ProcessMenu.cpp:174 src/ProcessMenu.cpp:188 src/ProcessMenu.cpp:249
+#: src/ProcessMenu.cpp:279 src/ProcessMenu.cpp:293
 msgid "Error creation of menu"
 msgstr "Ошибка при создании меню"
 
-#: src/ProcessMenu.cpp:155
+#: src/ProcessMenu.cpp:156
 #, c-format
 msgid "Video duration: %f sec"
 msgstr "Длительность видео: %f сек"
 
-#: src/ProcessMenu.cpp:163 src/ProcessMenuTransitions.cpp:250
+#: src/ProcessMenu.cpp:164 src/ProcessMenuTransitions.cpp:251
 #, c-format
 msgid "Encoding frame %d of %d"
 msgstr "Кодирование кадра %d из %d"
 
-#: src/ProcessMenu.cpp:200
+#: src/ProcessMenu.cpp:201
 msgid "Transcode audio from"
 msgstr "Транскодирование аудио из"
 
-#: src/ProcessMenu.cpp:210 src/ProcessMenu.cpp:216 src/ProcessMenuTransitions.cpp:125
-#: src/ProcessMenuTransitions.cpp:135 src/ProcessSlideshow.cpp:198 src/ProcessTranscode.cpp:153
+#: src/ProcessMenu.cpp:211 src/ProcessMenu.cpp:217 src/ProcessMenuTransitions.cpp:126
+#: src/ProcessMenuTransitions.cpp:136 src/ProcessSlideshow.cpp:198 src/ProcessTranscode.cpp:153
 #: src/ProcessTranscode.cpp:164 src/ProcessTranscode.cpp:189 src/ProcessTranscode.cpp:201
 msgid "Error transcoding of "
 msgstr "Ошибка транскодирования "
 
-#: src/ProcessMenu.cpp:221 src/ProcessMenu.cpp:301 src/ProcessSlideshow.cpp:203
+#: src/ProcessMenu.cpp:222 src/ProcessMenu.cpp:302 src/ProcessSlideshow.cpp:203
 msgid "Multiplexing audio and video"
 msgstr "Мультиплексирование аудио и видео"
 
-#: src/ProcessMenu.cpp:260
+#: src/ProcessMenu.cpp:261
 #, c-format
 msgid "Audio duration: %f sec"
 msgstr "Длительность аудио: %f сек"
 
-#: src/ProcessMenu.cpp:274 src/SettingsDlg.cpp:237
+#: src/ProcessMenu.cpp:275 src/SettingsDlg.cpp:238
 msgid "Frame count of menu:"
 msgstr "Количество кадров в меню:"
 
-#: src/ProcessMenu.cpp:326
+#: src/ProcessMenu.cpp:327
 msgid "Multiplexing subpictures into mpeg"
 msgstr "Мультиплексация subpictures в mpeg"
 
-#: src/ProcessMenu.cpp:333
+#: src/ProcessMenu.cpp:334
 #, c-format
 msgid "Can't rename file '%s' in '%s'"
 msgstr "Невозможно переименовать файл '%s' в '%s'"
 
-#: src/ProcessMenuTransitions.cpp:103 src/ProcessMenuTransitions.cpp:160 src/ProcessMenuTransitions.cpp:241
-#: src/ProcessMenuTransitions.cpp:253
+#: src/ProcessMenuTransitions.cpp:104 src/ProcessMenuTransitions.cpp:161 src/ProcessMenuTransitions.cpp:242
+#: src/ProcessMenuTransitions.cpp:254
 msgid "Error creation of transition"
 msgstr "Ошибка при создании перехода"
 
-#: src/ProcessMenuTransitions.cpp:178
+#: src/ProcessMenuTransitions.cpp:179
 #, c-format
 msgid "Generate transition from %s"
 msgstr "Генерирование перехода от %s"
@@ -2095,217 +2321,227 @@ msgstr "Прожиг прошёл успешно."
 msgid "Generating was successful."
 msgstr "Создание DVD прошло успешно."
 
-#: src/SettingsDlg.cpp:40 src/SettingsDlg.cpp:406 src/SettingsDlg.cpp:412
+#: src/SettingsDlg.cpp:41 src/SettingsDlg.cpp:413 src/SettingsDlg.cpp:419 buttons/settings.xml:3
 msgid "Settings"
 msgstr "Настройки"
 
-#: src/SettingsDlg.cpp:58
+#: src/SettingsDlg.cpp:59
 msgid "Interface"
 msgstr "Интерфейс"
 
-#: src/SettingsDlg.cpp:73
+#: src/SettingsDlg.cpp:74
 msgid "Default disc label:"
 msgstr "Имя диска по умолчанию:"
 
-#: src/SettingsDlg.cpp:75
+#: src/SettingsDlg.cpp:76
 msgid "Default disc capacity:"
 msgstr "Размер диска по умолчанию:"
 
-#: src/SettingsDlg.cpp:79
+#: src/SettingsDlg.cpp:80
 msgid "Default video format:"
 msgstr "Видео формат по умолчанию:"
 
-#: src/SettingsDlg.cpp:97
+#: src/SettingsDlg.cpp:98
 msgid "Keep aspect ratio"
 msgstr "Сохранять соотношение сторон"
 
-#: src/SettingsDlg.cpp:101
+#: src/SettingsDlg.cpp:102
 msgid "Default audio format:"
 msgstr "Аудио формат по умолчанию:"
 
-#: src/SettingsDlg.cpp:124
+#: src/SettingsDlg.cpp:125
 msgid "Default chapter length:"
 msgstr "Стандартная длительность эпизода:"
 
-#: src/SettingsDlg.cpp:127
+#: src/SettingsDlg.cpp:128
 msgid "Add chapter at title end"
 msgstr "Добавлять эпизод в конце раздела"
 
-#: src/SettingsDlg.cpp:154
+#: src/SettingsDlg.cpp:155
 msgid "Default button:"
 msgstr "Кнопка по умолчанию:"
 
-#: src/SettingsDlg.cpp:159
+#: src/SettingsDlg.cpp:160
 msgid "Accept invalid actions"
 msgstr "Допускать недействительные команды"
 
-#: src/SettingsDlg.cpp:162
+#: src/SettingsDlg.cpp:163
 msgid "Default slide duration:"
 msgstr "Длительность слайда по умолчанию:"
 
-#: src/SettingsDlg.cpp:163
+#: src/SettingsDlg.cpp:164
 msgid "Default transition duration:"
 msgstr "Длительность перехода по умолчанию:"
 
-#: src/SettingsDlg.cpp:170
+#: src/SettingsDlg.cpp:171
 msgid "Default slide transition:"
 msgstr "Переход между слайдами:"
 
-#: src/SettingsDlg.cpp:176
+#: src/SettingsDlg.cpp:177
 msgid "Last directory"
 msgstr "Последний каталог"
 
-#: src/SettingsDlg.cpp:177
+#: src/SettingsDlg.cpp:178
 msgid "File Browser start directory:"
 msgstr "Начальный каталог обозревателя файлов:"
 
-#: src/SettingsDlg.cpp:192
+#: src/SettingsDlg.cpp:193
 msgid "Clear thumbnail cache after exit"
 msgstr "Очистить кэш предварительного просмотра файлов после завершения"
 
-#: src/SettingsDlg.cpp:196
+#: src/SettingsDlg.cpp:197
 msgid "Undo history size:"
 msgstr "Размер истории отмены изменений:"
 
-#: src/SettingsDlg.cpp:197
+#: src/SettingsDlg.cpp:198
 msgid "Clear transcoding cache:"
 msgstr "Очистка кэша переконвертированных файлов:"
 
-#: src/SettingsDlg.cpp:200
+#: src/SettingsDlg.cpp:201
 msgid "Prompt"
 msgstr "Спросить"
 
-#: src/SettingsDlg.cpp:201 src/SettingsDlg.cpp:299
+#: src/SettingsDlg.cpp:202 src/SettingsDlg.cpp:301
 msgid "Yes"
 msgstr "Да"
 
-#: src/SettingsDlg.cpp:206
+#: src/SettingsDlg.cpp:207
 msgid "Clear cache now"
 msgstr "Очисть кэш сейчас"
 
-#: src/SettingsDlg.cpp:210
+#: src/SettingsDlg.cpp:211
 msgid "\"Don't show again\" flags:"
 msgstr "Флажки \"Не показывать в следующий раз\":"
 
-#: src/SettingsDlg.cpp:212
+#: src/SettingsDlg.cpp:213
 msgid "Reset All"
 msgstr "Сбросить все"
 
-#: src/SettingsDlg.cpp:221
+#: src/SettingsDlg.cpp:222
 msgid "Core"
 msgstr "Ядро системы"
 
-#: src/SettingsDlg.cpp:240
+#: src/SettingsDlg.cpp:241
 msgid "Draw buttons on background"
 msgstr "Рисовать кнопки на фоне"
 
 #: src/SettingsDlg.cpp:242
+msgid "Allow HD menus"
+msgstr ""
+
+#: src/SettingsDlg.cpp:244
 msgid "Menu video bitrate:"
 msgstr "Видео битрэйт меню:"
 
-#: src/SettingsDlg.cpp:247
+#: src/SettingsDlg.cpp:249
 msgid "Slideshow video bitrate:"
 msgstr "Видео битрэйт слайд-шоу:"
 
-#: src/SettingsDlg.cpp:252
+#: src/SettingsDlg.cpp:254
 msgid "Default audio bitrate:"
 msgstr "Аудио битрэйт по умолчанию:"
 
-#: src/SettingsDlg.cpp:253
+#: src/SettingsDlg.cpp:255
 msgid "Thread count:"
 msgstr "Количество потоков:"
 
-#: src/SettingsDlg.cpp:254
+#: src/SettingsDlg.cpp:256
 msgid "DVD reserved space:"
 msgstr "Зарезервированное место на DVD:"
 
-#: src/SettingsDlg.cpp:254
+#: src/SettingsDlg.cpp:256
 msgid "KB"
 msgstr "КБ"
 
-#: src/SettingsDlg.cpp:258
+#: src/SettingsDlg.cpp:260
 msgid "internal"
 msgstr "внутренний"
 
-#: src/SettingsDlg.cpp:263
+#: src/SettingsDlg.cpp:265
 msgid "Encoder:"
 msgstr "Кодировщик:"
 
-#: src/SettingsDlg.cpp:273
+#: src/SettingsDlg.cpp:275
 msgid "CBR"
 msgstr "CBR"
 
-#: src/SettingsDlg.cpp:274
+#: src/SettingsDlg.cpp:276
 msgid "1-pass VBR"
 msgstr "1-pass VBR"
 
-#: src/SettingsDlg.cpp:275
+#: src/SettingsDlg.cpp:277
 msgid "2-pass VBR"
 msgstr "2-pass VBR"
 
-#: src/SettingsDlg.cpp:290
+#: src/SettingsDlg.cpp:292
 msgid "Create ISO command:"
 msgstr "Команда для создания ISO образа:"
 
-#: src/SettingsDlg.cpp:291
+#: src/SettingsDlg.cpp:293
 msgid "Burn command:"
 msgstr "Команда прожига:"
 
-#: src/SettingsDlg.cpp:292
+#: src/SettingsDlg.cpp:294
 msgid "Burn ISO command:"
 msgstr "Команда прожига ISO-образа:"
 
-#: src/SettingsDlg.cpp:293
+#: src/SettingsDlg.cpp:295
 msgid "Add ECC command:"
 msgstr "Команда добавления данных коррекции:"
 
-#: src/SettingsDlg.cpp:294
+#: src/SettingsDlg.cpp:296
 msgid "Format command:"
 msgstr "Команда форматирования:"
 
-#: src/SettingsDlg.cpp:296
+#: src/SettingsDlg.cpp:298
 msgid "Use mplex:"
 msgstr "Использовать mplex:"
 
-#: src/SettingsDlg.cpp:301
+#: src/SettingsDlg.cpp:303
 msgid "For menus only"
 msgstr "Только для меню"
 
-#: src/SettingsDlg.cpp:306
+#: src/SettingsDlg.cpp:308
 msgid "NTSC film:"
 msgstr "NTSC фильм:"
 
-#: src/SettingsDlg.cpp:307
-msgid "reencode by default"
+#: src/SettingsDlg.cpp:309
+#, fuzzy
+msgid "re-encode by default"
 msgstr "переконвертировать по умолчанию"
 
-#: src/SettingsDlg.cpp:309
+#: src/SettingsDlg.cpp:310
+#, fuzzy
+msgid "HD video:"
+msgstr "Видео:"
+
+#: src/SettingsDlg.cpp:311
+msgid "allow (experimental)"
+msgstr ""
+
+#: src/SettingsDlg.cpp:313
 msgid "Debug"
 msgstr "Отладка"
 
-#: src/SettingsDlg.cpp:310
+#: src/SettingsDlg.cpp:314
 msgid "Don't remove temp files"
 msgstr "Не удалять временные файлы"
 
-#: src/SettingsDlg.cpp:333
+#: src/SettingsDlg.cpp:338
 msgid "Language change will not take effect until DVDStyler is restarted"
 msgstr "Изменение языка вступит в силу только после перезагрузки программы"
 
-#: src/SettingsDlg.cpp:406
+#: src/SettingsDlg.cpp:413
 msgid "All \"don't show again\" flags are reseted."
 msgstr "Все флажки \"Не показывать в следующий раз\" сброшены."
 
-#: src/SettingsDlg.cpp:412
+#: src/SettingsDlg.cpp:419
 msgid "The transcoding cache is successfully cleared."
 msgstr "Kэш переконвертированных файлов успешно очищен."
 
 #: src/SlideDlg.cpp:44
 msgid "Slide properties"
 msgstr "Свойства слайда"
-
-#: src/SlideDlg.cpp:48
-msgid "File name:"
-msgstr "Имя файла:"
 
 #: src/SlideDlg.cpp:53 src/TitlePropDlg.cpp:207
 msgid "Transition:"
@@ -2343,16 +2579,16 @@ msgstr "%d МБ/с"
 msgid "%.1f Mb/s"
 msgstr "%.1f МБ/сек"
 
-#: src/Stream.cpp:100
+#: src/Stream.cpp:112
 msgid "mono"
 msgstr "моно"
 
-#: src/Stream.cpp:106
+#: src/Stream.cpp:118
 #, c-format
 msgid "%d channels"
 msgstr "%d каналов"
 
-#: src/Stream.cpp:109
+#: src/Stream.cpp:121
 #, c-format
 msgid "%d Hz"
 msgstr "%d Hz"
@@ -2380,14 +2616,6 @@ msgstr "Предварительный просмотр:"
 #: src/SubtitlePropDlg.cpp:139
 msgid "ABCabcXYZxyz"
 msgstr "ABCabcАБВабв"
-
-#: src/SubtitlePropDlg.cpp:143
-msgid "Fill:"
-msgstr "Заполнение:"
-
-#: src/SubtitlePropDlg.cpp:153 src/SubtitlePropDlg.cpp:167 src/SubtitlePropDlg.cpp:184
-msgid "%"
-msgstr "%"
 
 #: src/SubtitlePropDlg.cpp:156
 msgid "Outline:"
@@ -2518,15 +2746,15 @@ msgstr "Недействительное время эпизода '%s'"
 msgid "Audio & Subtitle Files"
 msgstr "Аудио файлы и субтитры"
 
-#: src/Titleset.cpp:302 src/Titleset.cpp:367
+#: src/Titleset.cpp:268 src/Titleset.cpp:333
 msgid "Can't load pgc"
 msgstr "Не удается загрузить pgc"
 
-#: src/Titleset.cpp:419
+#: src/Titleset.cpp:385
 msgid "Can't load menus"
 msgstr "Не удается загрузить menus"
 
-#: src/Titleset.cpp:424
+#: src/Titleset.cpp:390
 msgid "Can't load titles"
 msgstr "Не удается загрузить titles"
 
@@ -2620,59 +2848,59 @@ msgstr "Менеджер набора разделов"
 msgid "Video frame"
 msgstr "Видео кадр"
 
-#: src/VideoPropDlg.cpp:101
+#: src/VideoPropDlg.cpp:102
 msgid "Video properties"
 msgstr "Свойства видео"
 
-#: src/VideoPropDlg.cpp:127
+#: src/VideoPropDlg.cpp:128
 msgid "progressive"
 msgstr "прогрессивный"
 
-#: src/VideoPropDlg.cpp:128
+#: src/VideoPropDlg.cpp:129
 msgid "interlace"
 msgstr "чересстрочное"
 
-#: src/VideoPropDlg.cpp:132
+#: src/VideoPropDlg.cpp:133
 msgid "BFF"
 msgstr "BFF"
 
-#: src/VideoPropDlg.cpp:133
+#: src/VideoPropDlg.cpp:134
 msgid "TFF"
 msgstr "TFF"
 
-#: src/VideoPropDlg.cpp:141
+#: src/VideoPropDlg.cpp:142
 msgid "border"
 msgstr "Рамка"
 
-#: src/VideoPropDlg.cpp:142
+#: src/VideoPropDlg.cpp:143
 msgid "crop"
 msgstr "Обрезать"
 
-#: src/VideoPropDlg.cpp:146
+#: src/VideoPropDlg.cpp:147
 msgid "Border"
 msgstr "Рамка"
 
-#: src/VideoPropDlg.cpp:162
+#: src/VideoPropDlg.cpp:163
 msgid "Crop"
 msgstr "Обрезать"
 
-#: src/VideoPropDlg.cpp:179
+#: src/VideoPropDlg.cpp:180
 msgid "Fade-In/Out:"
 msgstr "Появление/затемнение:"
 
-#: src/VideoPropDlg.cpp:218
+#: src/VideoPropDlg.cpp:219
 msgid "Start:"
 msgstr "Начало:"
 
-#: src/VideoPropDlg.cpp:232
+#: src/VideoPropDlg.cpp:233
 msgid "Cut beginning"
 msgstr "Отрезать начало"
 
-#: src/VideoPropDlg.cpp:248
+#: src/VideoPropDlg.cpp:249
 msgid "Cut ending"
 msgstr "Отрезать конец"
 
-#: src/VideoPropDlg.cpp:675 src/VideoPropDlg.cpp:680
+#: src/VideoPropDlg.cpp:702 src/VideoPropDlg.cpp:707
 msgid "Invalid time"
 msgstr "Некорректное время"
 
@@ -2680,7 +2908,7 @@ msgstr "Некорректное время"
 msgid "Video:"
 msgstr "Видео:"
 
-#: src/VobListBox.cpp:171 src/VobListBox.cpp:217
+#: src/VobListBox.cpp:172 src/VobListBox.cpp:218
 msgid "Subtitle:"
 msgstr "Субтитры:"
 
@@ -2730,7 +2958,7 @@ msgstr "Не определено обработчика для изображе
 msgid "Can't load image from file '%s': file does not exist."
 msgstr "Загрузка изображения из файла '%s' невозможна: файл не существует."
 
-#: wxVillaLib/PropDlg.cpp:202
+#: wxVillaLib/PropDlg.cpp:201
 msgid "&Don't show this dialog again"
 msgstr "&Не показывать в следующий раз"
 
@@ -2751,6 +2979,7 @@ msgstr "Цвет контура"
 #: buttons/arrow-blue.xml:47 buttons/arrow-cool.xml:38 buttons/arrow-gold.xml:33
 #: buttons/arrow-mirror-left.xml:19 buttons/arrow-mirror-right.xml:19 buttons/arrow-red.xml:50
 #: buttons/arrow-simple-v2.xml:31 buttons/arrow-text-left.xml:25 buttons/arrow-text-right.xml:26
+#: buttons/glow_arrow.xml:33
 msgid "Arrow color"
 msgstr "Цвет стрелки"
 
@@ -2831,10 +3060,11 @@ msgid "Simple Arrow"
 msgstr "Простая стрелка"
 
 #: buttons/arrow-simple-v2.xml:50 buttons/arrow3d-left.xml:41 buttons/arrow3d-right.xml:41
-#: buttons/ellipse-v2.xml:44 buttons/ellipse45.xml:47 buttons/frame-v2.xml:53 buttons/frame45.xml:63
-#: buttons/home-v2.xml:35 buttons/text-circle-v2.xml:32 buttons/text-square-v2.xml:33
-#: buttons/text-underlined-v3.xml:32 buttons/text-v3.xml:58 objects/ellipse-v3.xml:57 objects/ellipse45.xml:59
-#: objects/frame-v3.xml:67 objects/frame45.xml:76 objects/rectangle-v2.xml:38 objects/text-v2.xml:53
+#: buttons/ellipse-v2.xml:44 buttons/ellipse45.xml:47 buttons/frame-text.xml:63 buttons/frame-text.xml:83
+#: buttons/frame-v2.xml:53 buttons/frame45.xml:63 buttons/home-v2.xml:35 buttons/settings.xml:30
+#: buttons/text-circle-v2.xml:32 buttons/text-square-v2.xml:33 buttons/text-underlined-v3.xml:32
+#: buttons/text-v3.xml:58 objects/ellipse-v3.xml:57 objects/ellipse45.xml:59 objects/frame-v3.xml:67
+#: objects/frame45.xml:76 objects/rectangle-v2.xml:38 objects/text-v2.xml:53
 msgid "Shadow"
 msgstr "Тень"
 
@@ -2866,14 +3096,15 @@ msgstr "Стрелка с текстом вправо"
 msgid "Arrow"
 msgstr "Стрелка"
 
-#: buttons/arrow.xml:23 buttons/cancel.xml:28 buttons/ellipse-v2.xml:51 buttons/ellipse45.xml:54
-#: buttons/ok.xml:27 objects/ellipse-v3.xml:43 objects/ellipse45.xml:45 objects/frame-v3.xml:53
-#: objects/frame45.xml:62 objects/text-v2.xml:32
+#: buttons/arrow.xml:23 buttons/cancel.xml:28 buttons/circle-outline.xml:36 buttons/circle.xml:28
+#: buttons/ellipse-v2.xml:51 buttons/ellipse45.xml:54 buttons/ok.xml:27 objects/ellipse-v3.xml:43
+#: objects/ellipse45.xml:45 objects/frame-v3.xml:53 objects/frame45.xml:62 objects/text-v2.xml:32
 msgid "Outline colour"
 msgstr "Цвет контура"
 
-#: buttons/arrow.xml:35 buttons/ellipse-v2.xml:37 buttons/ellipse45.xml:40 objects/ellipse-v3.xml:36
-#: objects/ellipse45.xml:38 objects/frame-v3.xml:46 objects/frame45.xml:55 objects/text-v2.xml:39
+#: buttons/arrow.xml:35 buttons/circle-outline.xml:48 buttons/circle.xml:35 buttons/ellipse-v2.xml:37
+#: buttons/ellipse45.xml:40 objects/ellipse-v3.xml:36 objects/ellipse45.xml:38 objects/frame-v3.xml:46
+#: objects/frame45.xml:55 objects/text-v2.xml:39
 msgid "Outline width"
 msgstr "Ширина контура"
 
@@ -2929,6 +3160,30 @@ msgstr "Цвет рамки"
 msgid "X color"
 msgstr "Цвет X"
 
+#: buttons/circle-outline.xml:3
+#, fuzzy
+msgid "Circle outline"
+msgstr "Цвет круга"
+
+#: buttons/circle-outline.xml:8 buttons/circle.xml:7
+msgid "01"
+msgstr ""
+
+#: buttons/circle-outline.xml:22 buttons/circle.xml:21 buttons/text-circle-v2.xml:39
+msgid "Circle colour"
+msgstr "Цвет круга"
+
+#: buttons/circle-outline.xml:29 buttons/circle.xml:42 buttons/frame-text.xml:76 buttons/pill.xml:50
+#: buttons/text-circle-v2.xml:25 buttons/text-square-v2.xml:26 buttons/text-underlined-v3.xml:25
+#: buttons/text-v3.xml:25
+msgid "Text colour"
+msgstr "Цвет текста"
+
+#: buttons/circle.xml:3
+#, fuzzy
+msgid "Circle"
+msgstr "Стрелка в круге"
+
 #: buttons/ellipse-v2.xml:3 objects/ellipse-v3.xml:3
 msgid "Ellipse"
 msgstr "Эллипс"
@@ -2948,6 +3203,31 @@ msgstr "Цвет заливки"
 msgid "Ellipse 45°"
 msgstr "Эллипс 45°"
 
+#: buttons/frame-text.xml:4
+msgid "Frame and Text"
+msgstr ""
+
+#: buttons/frame-text.xml:25
+msgid "T"
+msgstr ""
+
+#: buttons/frame-text.xml:37 buttons/frame-v2.xml:46 buttons/frame45.xml:56
+msgid "Border width"
+msgstr "Толщина рамки"
+
+#: buttons/frame-text.xml:44
+msgid "Corner round"
+msgstr ""
+
+#: buttons/frame-text.xml:51 buttons/frame-v2.xml:60 buttons/frame45.xml:70 buttons/movie.xml:40
+msgid "Border colour"
+msgstr "Цвет рамки"
+
+#: buttons/frame-text.xml:90
+#, fuzzy
+msgid "Text offset"
+msgstr "Стрелка с текстом влево"
+
 #: buttons/frame-v2.xml:3 objects/frame-v3.xml:3
 msgid "Frame"
 msgstr "Рамка"
@@ -2962,17 +3242,23 @@ msgstr "Rx"
 msgid "Ry"
 msgstr "Ry"
 
-#: buttons/frame-v2.xml:46 buttons/frame45.xml:56
-msgid "Border width"
-msgstr "Толщина рамки"
-
-#: buttons/frame-v2.xml:60 buttons/frame45.xml:70 buttons/movie.xml:40
-msgid "Border colour"
-msgstr "Цвет рамки"
-
 #: buttons/frame45.xml:3 objects/frame45.xml:3
 msgid "Frame 45°"
 msgstr "Рамка 45°"
+
+#: buttons/glow_arrow.xml:5
+#, fuzzy
+msgid "Glow Arrow"
+msgstr "Золотая стрелка"
+
+#: buttons/glow_arrow.xml:26
+msgid "Invert (a,e)"
+msgstr ""
+
+#: buttons/glow_arrow.xml:40
+#, fuzzy
+msgid "Glow colour"
+msgstr "Цвет стрелки"
 
 #: buttons/hand-left.xml:4
 msgid "Hand Left"
@@ -2990,7 +3276,7 @@ msgstr "Рука вправо"
 msgid "Home"
 msgstr "Дом"
 
-#: buttons/home-v2.xml:23 objects/rectangle-v2.xml:31
+#: buttons/home-v2.xml:23 buttons/settings.xml:18 objects/rectangle-v2.xml:31
 msgid "Colour"
 msgstr "Цвет"
 
@@ -3006,6 +3292,15 @@ msgstr "OK"
 msgid "V color"
 msgstr "Цвет V"
 
+#: buttons/painting_frame.xml:4
+msgid "Painting Frame"
+msgstr ""
+
+#: buttons/painting_frame.xml:47
+#, fuzzy
+msgid "Frame colour"
+msgstr "Цвет круга"
+
 #: buttons/pill.xml:3
 msgid "Pill"
 msgstr "Пилюля"
@@ -3017,16 +3312,6 @@ msgstr "C1"
 #: buttons/pill.xml:37
 msgid "C2"
 msgstr "C2"
-
-#: buttons/pill.xml:44 buttons/text-circle-v2.xml:19 buttons/text-square-v2.xml:20
-#: buttons/text-underlined-v3.xml:19 buttons/text-v3.xml:19
-msgid "Label"
-msgstr "Надпись"
-
-#: buttons/pill.xml:50 buttons/text-circle-v2.xml:25 buttons/text-square-v2.xml:26
-#: buttons/text-underlined-v3.xml:25 buttons/text-v3.xml:25
-msgid "Text colour"
-msgstr "Цвет текста"
 
 #: buttons/pill2.xml:4
 msgid "Pill 2"
@@ -3040,13 +3325,23 @@ msgstr "Цвет пилюли"
 msgid "Pill 3"
 msgstr "Пилюля 3"
 
+#: buttons/sticky_note.xml:4 objects/sticky_note.xml:4
+msgid "Sticky note"
+msgstr ""
+
+#: buttons/sticky_note.xml:52 objects/sticky_note.xml:56
+#, fuzzy
+msgid "Pin"
+msgstr "мин"
+
+#: buttons/sticky_note.xml:59
+#, fuzzy
+msgid "Selection colour"
+msgstr "Цвет отражения 1"
+
 #: buttons/text-circle-v2.xml:3
 msgid "Text with circle"
 msgstr "Текст с кругом"
-
-#: buttons/text-circle-v2.xml:39
-msgid "Circle colour"
-msgstr "Цвет круга"
 
 #: buttons/text-circle-v2.xml:51
 msgid "Circle radius"
@@ -3091,6 +3386,10 @@ msgstr "Прозрачность"
 #: objects/rectangle-v2.xml:3
 msgid "Rectangle"
 msgstr "Прямоугольник"
+
+#: objects/sticky_note.xml:49
+msgid "Note"
+msgstr ""
 
 #: objects/text-v2.xml:13
 msgid "text"
@@ -3159,9 +3458,6 @@ msgstr "Появление сверху вниз"
 
 #~ msgid "Colour:"
 #~ msgstr "Цвет:"
-
-#~ msgid "Executing command: "
-#~ msgstr "Выполнении команды:"
 
 #~ msgid ""
 #~ "Unfortunately there is no DVD player specified in the DVDStyler settings. Please set the path to the DVD "

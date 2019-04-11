@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DVDStyler 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-23 10:31+0200\n"
+"POT-Creation-Date: 2019-04-11 14:31+0200\n"
 "PO-Revision-Date: 2016-06-24 21:42+0800\n"
 "Last-Translator: 风逸兰 <stchen0214 at gmail.com>\n"
 "Language-Team: 风逸兰 <stchen0214 at gmail.com>\n"
@@ -131,27 +131,42 @@ msgstr "授权"
 msgid "OK"
 msgstr "确定"
 
-#: src/AnimationDlg.cpp:45
+#: src/AnimationDlg.cpp:29
+#, fuzzy
+msgid "width"
+msgstr "宽度:"
+
+#: src/AnimationDlg.cpp:29
+#, fuzzy
+msgid "height"
+msgstr "高度:"
+
+#: src/AnimationDlg.cpp:29
+#, fuzzy
+msgid "opacity"
+msgstr "不透明度"
+
+#: src/AnimationDlg.cpp:46
 msgid "font size"
 msgstr "字号"
 
-#: src/AnimationDlg.cpp:156
+#: src/AnimationDlg.cpp:157
 msgid "Attribute"
 msgstr "属性"
 
-#: src/AnimationDlg.cpp:156
+#: src/AnimationDlg.cpp:157
 msgid "Values (separated by semicolon)"
 msgstr "数据（分号分隔）"
 
-#: src/AnimationDlg.cpp:156
+#: src/AnimationDlg.cpp:157
 msgid "Begin"
 msgstr "开始"
 
-#: src/AnimationDlg.cpp:156
+#: src/AnimationDlg.cpp:157
 msgid "Duration (sec)"
 msgstr "持续时间（秒）："
 
-#: src/AnimationDlg.cpp:207
+#: src/AnimationDlg.cpp:208
 msgid "Animations"
 msgstr "动画"
 
@@ -159,20 +174,20 @@ msgstr "动画"
 msgid "Audio properties"
 msgstr "音频属性"
 
-#: src/AudioPropDlg.cpp:83 src/VideoPropDlg.cpp:106
+#: src/AudioPropDlg.cpp:83 src/VideoPropDlg.cpp:107
 msgid "File Name:"
 msgstr "文件名："
 
-#: src/AudioPropDlg.cpp:87 src/TitlePropDlg.cpp:196 src/VideoFrameDlg.cpp:77 src/VideoPropDlg.cpp:111
+#: src/AudioPropDlg.cpp:87 src/TitlePropDlg.cpp:196 src/VideoFrameDlg.cpp:77 src/VideoPropDlg.cpp:112
 #: src/VobListBox.cpp:109
 msgid "Duration:"
 msgstr "持续时间:"
 
-#: src/AudioPropDlg.cpp:91 src/VideoPropDlg.cpp:115
+#: src/AudioPropDlg.cpp:91 src/VideoPropDlg.cpp:116
 msgid "Source Format:"
 msgstr "来源格式："
 
-#: src/AudioPropDlg.cpp:95 src/VideoPropDlg.cpp:119
+#: src/AudioPropDlg.cpp:95 src/VideoPropDlg.cpp:120
 msgid "Destination Format:"
 msgstr "目标格式："
 
@@ -180,7 +195,7 @@ msgstr "目标格式："
 msgid "5.1"
 msgstr "5.1"
 
-#: src/AudioPropDlg.cpp:104 src/SettingsDlg.cpp:72 src/SubtitlePropDlg.cpp:107
+#: src/AudioPropDlg.cpp:104 src/SettingsDlg.cpp:73 src/SubtitlePropDlg.cpp:107
 msgid "Language:"
 msgstr "语言："
 
@@ -192,7 +207,7 @@ msgstr "时间延迟："
 msgid "ms"
 msgstr "毫秒"
 
-#: src/AudioPropDlg.cpp:120 src/VideoPropDlg.cpp:181
+#: src/AudioPropDlg.cpp:120 src/VideoPropDlg.cpp:182
 msgid "Filters:"
 msgstr "过滤器："
 
@@ -200,7 +215,7 @@ msgstr "过滤器："
 msgid "Volume adjustment"
 msgstr "音量调整"
 
-#: src/AudioPropDlg.cpp:128 src/SettingsDlg.cpp:202 src/SettingsDlg.cpp:300
+#: src/AudioPropDlg.cpp:128 src/SettingsDlg.cpp:203 src/SettingsDlg.cpp:302
 msgid "No"
 msgstr "否"
 
@@ -208,7 +223,7 @@ msgstr "否"
 msgid "Change (%)"
 msgstr "修改（%）"
 
-#: src/AudioPropDlg.cpp:135 src/SettingsDlg.cpp:120
+#: src/AudioPropDlg.cpp:135 src/SettingsDlg.cpp:121
 msgid "Normalize"
 msgstr "一般"
 
@@ -216,7 +231,7 @@ msgstr "一般"
 msgid "Change (dB)"
 msgstr "修改分贝（dB）"
 
-#: src/AudioPropDlg.cpp:206 src/Stream.cpp:102
+#: src/AudioPropDlg.cpp:206 src/Stream.cpp:114
 msgid "stereo"
 msgstr "立体声"
 
@@ -238,14 +253,14 @@ msgstr "无效的音量数值 '%s'"
 msgid "Analysis of audio"
 msgstr "音频分析"
 
-#: src/AudioPropDlg.cpp:389 src/MainWin.cpp:825 src/SysUtils.cpp:303 src/VobListBox.cpp:577
+#: src/AudioPropDlg.cpp:389 src/MainWin.cpp:868 src/SysUtils.cpp:303 src/VobListBox.cpp:611
 msgid "Please wait..."
 msgstr "请稍侯..."
 
 #: src/BurnDlg.cpp:104 src/BurnDlg.cpp:459 src/BurnDlg.cpp:466 src/BurnDlg.cpp:588 src/BurnDlg.cpp:595
 #: src/BurnDlg.cpp:601 src/BurnDlg.cpp:608 src/BurnDlg.cpp:615 src/BurnDlg.cpp:620 src/BurnDlg.cpp:627
 #: src/BurnDlg.cpp:632 src/BurnDlg.cpp:638 src/BurnDlg.cpp:644 src/BurnDlg.cpp:657 src/BurnDlg.cpp:660
-#: src/MainWin.cpp:1026 src/MainWin.cpp:1047 src/MainWin.cpp:1052 src/ProcessBurn.cpp:68
+#: src/MainWin.cpp:1069 src/MainWin.cpp:1090 src/MainWin.cpp:1095 src/ProcessBurn.cpp:68
 #: src/ProcessBurn.cpp:86 src/ProcessBurn.cpp:128 src/ProcessFormatDvd.cpp:44 src/ProcessFormatDvd.cpp:53
 #: src/ProcessPreview.cpp:45 src/ProcessPreview.cpp:53 src/ProcessPreview.cpp:61 src/ProcessPreview.cpp:82
 #: src/ProcessPreview.cpp:87 src/TitlesetManager.cpp:467
@@ -313,7 +328,7 @@ msgstr "加入错误校正资料"
 msgid "Start"
 msgstr "开始"
 
-#: src/BurnDlg.cpp:229 src/SubtitlePropDlg.cpp:244 src/VideoFrameDlg.cpp:75 wxVillaLib/PropDlg.cpp:208
+#: src/BurnDlg.cpp:229 src/SubtitlePropDlg.cpp:244 src/VideoFrameDlg.cpp:75 wxVillaLib/PropDlg.cpp:207
 msgid "Reset"
 msgstr "重设"
 
@@ -345,12 +360,12 @@ msgstr "没有足够空间来保存 ISO 文件。"
 msgid "There is not enough space on temporary directory."
 msgstr "暂存目录没有足够空间"
 
-#: src/BurnDlg.cpp:507 src/BurnDlg.cpp:517 wxVillaLib/PropDlg.cpp:831
+#: src/BurnDlg.cpp:507 src/BurnDlg.cpp:517 wxVillaLib/PropDlg.cpp:830
 msgid "Choose a directory"
 msgstr "选择一个目录"
 
-#: src/BurnDlg.cpp:536 src/MainWin.cpp:1171 src/TitlePropDlg.cpp:423 src/TitlePropDlg.cpp:439
-#: wxVillaLib/PropDlg.cpp:789
+#: src/BurnDlg.cpp:536 src/MainWin.cpp:1214 src/TitlePropDlg.cpp:423 src/TitlePropDlg.cpp:439
+#: wxVillaLib/PropDlg.cpp:788
 msgid "Choose a file"
 msgstr "选择一个文件"
 
@@ -358,8 +373,8 @@ msgstr "选择一个文件"
 msgid "Programs"
 msgstr "程序"
 
-#: src/BurnDlg.cpp:538 src/MainWin.cpp:1005 src/MainWin.cpp:1166 src/MainWin.cpp:1170
-#: src/MenuObjectPropDlg.cpp:435 src/MenuPropDlg.cpp:136 src/MenuPropDlg.cpp:150 src/TitlePropDlg.cpp:235
+#: src/BurnDlg.cpp:538 src/MainWin.cpp:1048 src/MainWin.cpp:1209 src/MainWin.cpp:1213
+#: src/MenuObjectPropDlg.cpp:458 src/MenuPropDlg.cpp:141 src/MenuPropDlg.cpp:155 src/TitlePropDlg.cpp:235
 #: src/TitlePropDlg.cpp:425
 msgid "All Files"
 msgstr "所有文件"
@@ -399,7 +414,7 @@ msgstr "请选择视频播放器路径"
 msgid "Please enter file name to save ISO"
 msgstr "请输入文件名称来保存 ISO"
 
-#: src/BurnDlg.cpp:631
+#: src/BurnDlg.cpp:631 src/ButtonEditDlg.cpp:611
 #, c-format
 msgid "File '%s' already exist. Do you want to overwrite it?"
 msgstr "文件 '%s' 已存在，您想要将其覆写吗？"
@@ -421,7 +436,187 @@ msgstr ""
 "快取中有 %d 个已转码文件。如果您变更暂存目录，\n"
 "这些文件将被清空。"
 
-#: src/Cache.cpp:238 src/Cache.cpp:263 src/Process.cpp:20 src/ProcessMenuTransitions.cpp:120
+#: src/ButtonAddParamDlg.cpp:47
+msgid "Add parameter"
+msgstr ""
+
+#: src/ButtonAddParamDlg.cpp:55
+#, fuzzy
+msgid ""
+"Please select an SVG element\n"
+"for new parameter:"
+msgstr "请选择视频播放器路径"
+
+#: src/ButtonAddParamDlg.cpp:60 src/SubtitlePropDlg.cpp:143
+msgid "Fill:"
+msgstr "填充:"
+
+#: src/ButtonAddParamDlg.cpp:62 src/ButtonAddParamDlg.cpp:67 src/MenuEditor.cpp:548
+#: buttons/arrow-text-left.xml:8 buttons/arrow-text-left.xml:12 buttons/arrow-text-right.xml:8
+#: buttons/arrow-text-right.xml:13 buttons/frame-text.xml:70 buttons/pill2.xml:24 buttons/pill2.xml:36
+#: buttons/pill3.xml:17 buttons/pill3.xml:29 buttons/text-v3.xml:3 objects/text-v2.xml:3
+#: objects/text-v2.xml:19
+msgid "Text"
+msgstr "文字"
+
+#: src/ButtonAddParamDlg.cpp:65
+#, fuzzy
+msgid "Stroke:"
+msgstr "框体颜色"
+
+#: src/ButtonEditDlg.cpp:170
+msgid "name"
+msgstr ""
+
+#: src/ButtonEditDlg.cpp:170 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:439
+#: src/MenuObjectPropDlg.cpp:677 src/MenuObjectPropDlg.cpp:686 src/MenuObjectPropDlg.cpp:698
+msgid "title"
+msgstr "标题"
+
+#: src/ButtonEditDlg.cpp:170
+msgid "type"
+msgstr ""
+
+#: src/ButtonEditDlg.cpp:170
+msgid "ID of element"
+msgstr ""
+
+#: src/ButtonEditDlg.cpp:170
+#, fuzzy
+msgid "attribute name"
+msgstr "属性"
+
+#: src/ButtonEditDlg.cpp:170
+msgid "dynamic"
+msgstr ""
+
+#: src/ButtonEditDlg.cpp:171
+msgid "value"
+msgstr ""
+
+#: src/ButtonEditDlg.cpp:171 src/ButtonEditDlg.cpp:261
+#, fuzzy
+msgid "highlighted"
+msgstr "高亮度显示"
+
+#: src/ButtonEditDlg.cpp:171 src/ButtonEditDlg.cpp:262
+#, fuzzy
+msgid "selected"
+msgstr "已选择的"
+
+#: src/ButtonEditDlg.cpp:251
+#, fuzzy
+msgid "Create button"
+msgstr "默认按钮："
+
+#: src/ButtonEditDlg.cpp:260
+#, fuzzy
+msgid "normal"
+msgstr "一般"
+
+#: src/ButtonEditDlg.cpp:264
+#, fuzzy
+msgid "Button state"
+msgstr "按钮"
+
+#: src/ButtonEditDlg.cpp:271
+#, fuzzy
+msgid "Directory:"
+msgstr "目录"
+
+#: src/ButtonEditDlg.cpp:273 buttons/circle-outline.xml:16 buttons/circle.xml:15 buttons/pill.xml:44
+#: buttons/text-circle-v2.xml:19 buttons/text-square-v2.xml:20 buttons/text-underlined-v3.xml:19
+#: buttons/text-v3.xml:19
+msgid "Label"
+msgstr "标签"
+
+#: src/ButtonEditDlg.cpp:275 src/SlideDlg.cpp:48
+msgid "File name:"
+msgstr "文件名称:"
+
+#: src/ButtonEditDlg.cpp:280
+msgid ".xml"
+msgstr ""
+
+#: src/ButtonEditDlg.cpp:283
+#, fuzzy
+msgid "Title:"
+msgstr "标题"
+
+#: src/ButtonEditDlg.cpp:287
+#, fuzzy
+msgid "Default width:"
+msgstr "默认按钮："
+
+#: src/ButtonEditDlg.cpp:293 src/ButtonEditDlg.cpp:316 src/ButtonEditDlg.cpp:340 src/ButtonEditDlg.cpp:363
+#, fuzzy
+msgid "or"
+msgstr "核心"
+
+#: src/ButtonEditDlg.cpp:297 src/ButtonEditDlg.cpp:302 src/ButtonEditDlg.cpp:320 src/ButtonEditDlg.cpp:325
+#: src/ButtonEditDlg.cpp:344 src/ButtonEditDlg.cpp:349 src/ButtonEditDlg.cpp:367 src/ButtonEditDlg.cpp:372
+msgid "+"
+msgstr ""
+
+#: src/ButtonEditDlg.cpp:307 src/ButtonEditDlg.cpp:330 src/ButtonEditDlg.cpp:354 src/ButtonEditDlg.cpp:377
+#: src/SubtitlePropDlg.cpp:153 src/SubtitlePropDlg.cpp:167 src/SubtitlePropDlg.cpp:184
+msgid "%"
+msgstr "%"
+
+#: src/ButtonEditDlg.cpp:310
+#, fuzzy
+msgid "Min width:"
+msgstr "轮廓宽度"
+
+#: src/ButtonEditDlg.cpp:334
+#, fuzzy
+msgid "Default height:"
+msgstr "默认章节长度："
+
+#: src/ButtonEditDlg.cpp:357
+#, fuzzy
+msgid "Min height:"
+msgstr "高度:"
+
+#: src/ButtonEditDlg.cpp:382
+#, fuzzy
+msgid "Parameters:"
+msgstr "章节:"
+
+#: src/ButtonEditDlg.cpp:391 src/MainWin.cpp:321
+msgid "Save"
+msgstr "保存"
+
+#: src/ButtonEditDlg.cpp:456
+#, fuzzy
+msgid "Edit button"
+msgstr "按钮"
+
+#: src/ButtonEditDlg.cpp:500
+#, fuzzy
+msgid "Add"
+msgstr "加入(&A)"
+
+#: src/ButtonEditDlg.cpp:502
+#, fuzzy
+msgid "Remove selected"
+msgstr "移除文件"
+
+#: src/ButtonEditDlg.cpp:546
+msgid "No SVG element is selected"
+msgstr ""
+
+#: src/ButtonEditDlg.cpp:627 src/NewProjectDlg.cpp:51 src/NewProjectDlg.cpp:134
+msgid "Info"
+msgstr ""
+
+#: src/ButtonEditDlg.cpp:627
+msgid ""
+"Click on image to select an SVG\n"
+" element for a new parameter"
+msgstr ""
+
+#: src/Cache.cpp:238 src/Cache.cpp:263 src/Process.cpp:25 src/ProcessMenuTransitions.cpp:121
 #: src/ProcessTranscode.cpp:159 src/ProcessTranscode.cpp:174
 #, c-format
 msgid "Can't remove file '%s'"
@@ -437,7 +632,7 @@ msgstr[0] "转码缓存区共有%d个文件（%0.1f MB）。"
 msgid "Do you want to clear the cache?"
 msgstr "您真的想要清空缓存吗?"
 
-#: src/Cache.cpp:376 src/MainWin.cpp:962
+#: src/Cache.cpp:376 src/MainWin.cpp:1005
 msgid "Confirm"
 msgstr "确认"
 
@@ -449,7 +644,7 @@ msgstr "章节"
 msgid "Chapters:"
 msgstr "章节:"
 
-#: src/ChaptersDlg.cpp:128 src/VideoFrameDlg.cpp:61 src/VideoPropDlg.cpp:206
+#: src/ChaptersDlg.cpp:128 src/VideoFrameDlg.cpp:61 src/VideoPropDlg.cpp:207
 msgid "Time:"
 msgstr "时间:"
 
@@ -458,7 +653,7 @@ msgid "Type:"
 msgstr "类型:"
 
 #: src/ChaptersDlg.cpp:145 src/MenuCellsDlg.cpp:44 src/MenuCellsDlg.cpp:64 src/MenuCellsDlg.cpp:195
-#: src/MenuPropDlg.cpp:211
+#: src/MenuPropDlg.cpp:216
 msgid "Chapter"
 msgstr "章节"
 
@@ -470,26 +665,26 @@ msgstr "程式"
 msgid "Regular cell"
 msgstr "正规单元"
 
-#: src/ChaptersDlg.cpp:152 src/VideoPropDlg.cpp:234
+#: src/ChaptersDlg.cpp:152 src/VideoPropDlg.cpp:235
 msgid "End:"
 msgstr "结束:"
 
-#: src/ChaptersDlg.cpp:156 src/DVD.cpp:953 src/DVD.cpp:981 src/MenuPropDlg.cpp:190
+#: src/ChaptersDlg.cpp:156 src/DVD.cpp:966 src/DVD.cpp:1003 src/MenuPropDlg.cpp:195
 msgid "Auto"
 msgstr "自动"
 
-#: src/ChaptersDlg.cpp:157 src/DVD.cpp:984 src/MenuObjectPropDlg.cpp:157 src/MenuObjectPropDlg.cpp:536
-#: src/SettingsDlg.cpp:176
+#: src/ChaptersDlg.cpp:157 src/DVD.cpp:1006 src/MenuObjectPropDlg.cpp:161 src/MenuObjectPropDlg.cpp:557
+#: src/SettingsDlg.cpp:177
 msgid "Custom"
 msgstr "自定义"
 
-#: src/ChaptersDlg.cpp:169 src/MenuPropDlg.cpp:166 src/TitlePropDlg.cpp:150
+#: src/ChaptersDlg.cpp:169 src/MenuPropDlg.cpp:171 src/TitlePropDlg.cpp:150
 msgid "Pause:"
 msgstr "暂停:"
 
-#: src/ChaptersDlg.cpp:174 src/MainWin.cpp:576 src/MenuPropDlg.cpp:166 src/SettingsDlg.cpp:162
-#: src/SettingsDlg.cpp:164 src/TitlePropDlg.cpp:150 src/TitlePropDlg.cpp:196 src/VideoFrameDlg.cpp:82
-#: src/VideoPropDlg.cpp:187 src/VideoPropDlg.cpp:192
+#: src/ChaptersDlg.cpp:174 src/MainWin.cpp:617 src/MenuPropDlg.cpp:171 src/SettingsDlg.cpp:163
+#: src/SettingsDlg.cpp:165 src/TitlePropDlg.cpp:150 src/TitlePropDlg.cpp:196 src/VideoFrameDlg.cpp:82
+#: src/VideoPropDlg.cpp:188 src/VideoPropDlg.cpp:193
 msgid "sec"
 msgstr "秒"
 
@@ -510,101 +705,117 @@ msgstr "'%s' 是无效的时间"
 msgid "Start time cannot be after end time"
 msgstr "开始时间不能在结束时间之后"
 
-#: src/DirCtrl.cpp:24 src/MainWin.cpp:266 src/MainWin.cpp:270
+#: src/DirCtrl.cpp:24 src/MainWin.cpp:276 src/MainWin.cpp:283 src/MainWin.cpp:286
 msgid "&Refresh"
 msgstr "刷新(&R)"
 
-#: src/DVD.cpp:269 src/Menu.cpp:1118 src/MenuEditor.cpp:464
+#: src/DVD.cpp:270 src/Menu.cpp:1141 src/MenuEditor.cpp:464
 msgid "Wide screen DVD menu can contain maximal 12 buttons"
 msgstr "宽屏DVD菜单最多只能使用 12 个按钮"
 
-#: src/DVD.cpp:272 src/Menu.cpp:1121 src/MenuEditor.cpp:467
+#: src/DVD.cpp:273 src/Menu.cpp:1144 src/MenuEditor.cpp:467
 msgid "Wide screen DVD menu (nopanscan/noletterbox) can contain maximal 18 buttons"
 msgstr "宽屏DVD菜单 (nopanscan/noletterbox) 最多只能使用 18 个按钮"
 
-#: src/DVD.cpp:276 src/Menu.cpp:1125 src/MenuEditor.cpp:471
+#: src/DVD.cpp:277 src/Menu.cpp:1148 src/MenuEditor.cpp:471
 msgid "DVD menu can contain maximal 34 buttons"
 msgstr "DVD菜单最多只能使用 34 个按钮"
 
-#: src/DVD.cpp:358
+#: src/DVD.cpp:359
 msgid "Some actions are invalid. Please click 'Details' for more information."
 msgstr "某些动作无效。请点选 '详细信息' 获取更多信息。"
 
-#: src/DVD.cpp:485
+#: src/DVD.cpp:486 src/MenuObjectDef.cpp:194
 #, c-format
 msgid "Cannot open file '%s'."
 msgstr "无法打开文件 %s "
 
-#: src/DVD.cpp:491
+#: src/DVD.cpp:492
 #, c-format
 msgid "'%s' is not a DVDStyler project file"
 msgstr "'%s' 不是 DVDStyler 的工程文件"
 
-#: src/DVD.cpp:587
+#: src/DVD.cpp:590
 msgid "Can't load vmgm menus"
 msgstr "无法载入视频菜单"
 
-#: src/DVD.cpp:596
+#: src/DVD.cpp:599
 msgid "Can't load titleset"
 msgstr "无法载入标题集"
 
-#: src/DVD.cpp:912 src/DVD.cpp:931 src/DVD.cpp:944
+#: src/DVD.cpp:917 src/DVD.cpp:944 src/DVD.cpp:957
 msgid "Omit"
 msgstr "忽略"
 
-#: src/DVD.cpp:914 src/DVD.cpp:933 src/DVD.cpp:946 src/ProgressDlg.cpp:227
+#: src/DVD.cpp:919 src/DVD.cpp:946 src/DVD.cpp:959 src/ProgressDlg.cpp:227
 msgid "Copy"
 msgstr "复制"
 
-#: src/DVD.cpp:934
+#: src/DVD.cpp:947
 msgid "MP2 48 kHz"
 msgstr "MP2 48 kHz"
 
-#: src/DVD.cpp:935
+#: src/DVD.cpp:948
 msgid "AC3 48 kHz"
 msgstr "AC3 48 kHz"
 
-#: src/DVD.cpp:937
+#: src/DVD.cpp:950
 msgid "PCM 48 kHz"
 msgstr "MP2 48 kHz"
 
-#: src/DVD.cpp:961
+#: src/DVD.cpp:974
+msgid "SD (standard)"
+msgstr ""
+
+#: src/DVD.cpp:975
+msgid "Half HD (1280 x 720)"
+msgstr ""
+
+#: src/DVD.cpp:976
+msgid "HDV (1440 x 1080)"
+msgstr ""
+
+#: src/DVD.cpp:977
+msgid "Full HD (1920 x 1080)"
+msgstr ""
+
+#: src/DVD.cpp:983
 msgid "CD (700 MB)"
 msgstr "CD (700 MB)"
 
-#: src/DVD.cpp:962
+#: src/DVD.cpp:984
 msgid "DVD-1 (1.4 GB)"
 msgstr "DVD-1 (1.4 GB)"
 
-#: src/DVD.cpp:963
+#: src/DVD.cpp:985
 msgid "DVD-2 (2.6 GB)"
 msgstr "DVD-2 (2.6 GB)"
 
-#: src/DVD.cpp:964
+#: src/DVD.cpp:986
 msgid "DVD-5 (4.7 GB)"
 msgstr "DVD-5 (4.7 GB)"
 
-#: src/DVD.cpp:965
+#: src/DVD.cpp:987
 msgid "DVD-9 (8.5 GB)"
 msgstr "DVD-9 (8.5 GB)"
 
-#: src/DVD.cpp:966
+#: src/DVD.cpp:988
 msgid "Unlimited"
 msgstr "无限制"
 
-#: src/DVD.cpp:973
+#: src/DVD.cpp:995
 msgid "Call last menu"
 msgstr "调用上次的菜单"
 
-#: src/DVD.cpp:974
+#: src/DVD.cpp:996
 msgid "Call root menu"
 msgstr "调用主菜单"
 
-#: src/DVD.cpp:975
+#: src/DVD.cpp:997
 msgid "Play next title"
 msgstr "播放下一个标题"
 
-#: src/DVD.cpp:983
+#: src/DVD.cpp:1005
 #, c-format
 msgid "%d MBit/s"
 msgstr "%d MBit/s"
@@ -652,7 +863,7 @@ msgstr "跳到视角菜单"
 msgid "jump to chapter menu"
 msgstr "跳到章节菜单"
 
-#: src/DVDAction.cpp:75 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:626 src/MenuObjectPropDlg.cpp:646
+#: src/DVDAction.cpp:75 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:647 src/MenuObjectPropDlg.cpp:667
 msgid "menu"
 msgstr "菜单"
 
@@ -673,18 +884,13 @@ msgstr "跳到标题 %d 章节 %d"
 msgid "jump to title"
 msgstr "跳到标题"
 
-#: src/DVDAction.cpp:183 src/MenuObjectPropDlg.cpp:418 src/MenuObjectPropDlg.cpp:639
-#: src/MenuObjectPropDlg.cpp:648 src/MenuObjectPropDlg.cpp:658 src/MenuObjectPropDlg.cpp:667
-#: src/MenuObjectPropDlg.cpp:676
+#: src/DVDAction.cpp:183 src/MenuObjectPropDlg.cpp:441 src/MenuObjectPropDlg.cpp:660
+#: src/MenuObjectPropDlg.cpp:669 src/MenuObjectPropDlg.cpp:679 src/MenuObjectPropDlg.cpp:688
+#: src/MenuObjectPropDlg.cpp:697
 msgid "titleset"
 msgstr "标题集"
 
-#: src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:416 src/MenuObjectPropDlg.cpp:656
-#: src/MenuObjectPropDlg.cpp:665 src/MenuObjectPropDlg.cpp:677
-msgid "title"
-msgstr "标题"
-
-#: src/DVDAction.cpp:186 src/MenuObjectPropDlg.cpp:615 src/MenuPropDlg.cpp:55
+#: src/DVDAction.cpp:186 src/MenuObjectPropDlg.cpp:636 src/MenuPropDlg.cpp:55
 msgid "VMGM menu"
 msgstr "VMGM 菜单"
 
@@ -701,27 +907,27 @@ msgstr "无法跳到 VMGM 菜单; 不存在"
 msgid "cannot jump to menu; none exist"
 msgstr "无法跳到菜单; 不存在"
 
-#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:632
+#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:653
 msgid "title menu"
 msgstr "标题菜单"
 
-#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:632
+#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:653
 msgid "root menu"
 msgstr "主菜单"
 
-#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:632
+#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:653
 msgid "subtitle menu"
 msgstr "字幕菜单"
 
-#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:633
+#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:654
 msgid "audio menu"
 msgstr "音频菜单"
 
-#: src/DVDAction.cpp:212 src/MenuObjectPropDlg.cpp:633
+#: src/DVDAction.cpp:212 src/MenuObjectPropDlg.cpp:654
 msgid "angle menu"
 msgstr "视角菜单"
 
-#: src/DVDAction.cpp:212 src/MenuObjectPropDlg.cpp:633
+#: src/DVDAction.cpp:212 src/MenuObjectPropDlg.cpp:654
 msgid "chapter menu"
 msgstr "章节菜单"
 
@@ -924,254 +1130,264 @@ msgstr "显示选项摘要"
 msgid "input file"
 msgstr "输入文件"
 
-#: src/MainWin.cpp:160
+#: src/MainWin.cpp:169
 msgid "&New\tCtrl-N"
 msgstr "新建(&N)\tCtrl-N"
 
-#: src/MainWin.cpp:161
+#: src/MainWin.cpp:170
 msgid "&Open...\tCtrl-O"
 msgstr "打开(&O)...\tCtrl-O"
 
-#: src/MainWin.cpp:162
+#: src/MainWin.cpp:171
 msgid "&Save\tCtrl-S"
 msgstr "保存(&S)\tCtrl-S"
 
-#: src/MainWin.cpp:163
+#: src/MainWin.cpp:172
 msgid "S&ave as...\tShift-Ctrl-S"
 msgstr "另存为(&A)...\tShift-Ctrl-S"
 
-#: src/MainWin.cpp:164
+#: src/MainWin.cpp:173
 msgid "&Burn DVD...\tF9"
 msgstr "烧录 DVD(&B)...\tF9"
 
-#: src/MainWin.cpp:169
+#: src/MainWin.cpp:178
 msgid "&Exit\tAlt-X"
 msgstr "退出(&E)\tAlt-X"
 
-#: src/MainWin.cpp:170
+#: src/MainWin.cpp:179
 msgid "&File"
 msgstr "文件(&F)"
 
-#: src/MainWin.cpp:172
+#: src/MainWin.cpp:181
 msgid "&Undo\tCtrl-Z"
 msgstr "复原(&U)\tCtrl-N"
 
-#: src/MainWin.cpp:175
+#: src/MainWin.cpp:184
 msgid "&Redo\tCtrl-Y"
 msgstr "重做(&R)\tCtrl-Y"
 
-#: src/MainWin.cpp:178
+#: src/MainWin.cpp:187
 msgid "&Edit"
 msgstr "编辑(&E)"
 
-#: src/MainWin.cpp:181 src/MainWin.cpp:317 src/TitlesetManager.cpp:146 src/TitlesetManager.cpp:167
+#: src/MainWin.cpp:190 src/MainWin.cpp:333 src/TitlesetManager.cpp:146 src/TitlesetManager.cpp:167
 msgid "&File..."
 msgstr "文件(&F)..."
 
-#: src/MainWin.cpp:182 src/MainWin.cpp:318 src/TitlesetManager.cpp:147 src/TitlesetManager.cpp:168
+#: src/MainWin.cpp:191 src/MainWin.cpp:334 src/TitlesetManager.cpp:147 src/TitlesetManager.cpp:168
 msgid "File as &chapter..."
 msgstr "章节文件(&C)..."
 
-#: src/MainWin.cpp:183 src/MainWin.cpp:319 src/TitlesetManager.cpp:148 src/TitlesetManager.cpp:169
+#: src/MainWin.cpp:192 src/MainWin.cpp:335 src/TitlesetManager.cpp:148 src/TitlesetManager.cpp:169
 msgid "Titles from &DVD..."
 msgstr "来自 DVD 标题(&D)..."
 
-#: src/MainWin.cpp:184 src/TitlesetManager.cpp:149 src/TitlesetManager.cpp:170
+#: src/MainWin.cpp:193 src/TitlesetManager.cpp:149 src/TitlesetManager.cpp:170
 msgid "&Menu"
 msgstr "菜单(&M)"
 
-#: src/MainWin.cpp:185 src/TitlesetManager.cpp:150 src/TitlesetManager.cpp:171
+#: src/MainWin.cpp:194 src/TitlesetManager.cpp:150 src/TitlesetManager.cpp:171
 msgid "&Chapter menu"
 msgstr "章节菜单(&C)"
 
-#: src/MainWin.cpp:186
+#: src/MainWin.cpp:195
 msgid "&VMGM menu"
 msgstr "VMGM 菜单(&V)"
 
-#: src/MainWin.cpp:187 src/TitlesetManager.cpp:152 src/TitlesetManager.cpp:173
+#: src/MainWin.cpp:196 src/TitlesetManager.cpp:152 src/TitlesetManager.cpp:173
 msgid "&Titleset"
 msgstr "标题集(&T)"
 
-#: src/MainWin.cpp:188 src/MenuEditor.cpp:360 src/MenuEditor.cpp:382 src/TitlesetManager.cpp:155
+#: src/MainWin.cpp:197 src/MenuEditor.cpp:360 src/MenuEditor.cpp:382 src/TitlesetManager.cpp:155
 #: src/TitlesetManager.cpp:176
 msgid "&Add"
 msgstr "加入(&A)"
 
-#: src/MainWin.cpp:190
+#: src/MainWin.cpp:199
 msgid "&Options..."
 msgstr "选项(&O)..."
 
-#: src/MainWin.cpp:191
+#: src/MainWin.cpp:200
 msgid "&DVD"
 msgstr "DVD(&D)"
 
-#: src/MainWin.cpp:193
+#: src/MainWin.cpp:202
 msgid "&Settings..."
 msgstr "设置(&S)..."
 
-#: src/MainWin.cpp:194
+#: src/MainWin.cpp:203
+msgid "&Create button from SVG..."
+msgstr ""
+
+#: src/MainWin.cpp:204
 msgid "&Configuration"
 msgstr "配置(&C)"
 
-#: src/MainWin.cpp:196
+#: src/MainWin.cpp:206
 msgid "&Contents\tF1"
 msgstr "内容(&C)\tF1"
 
-#: src/MainWin.cpp:197
+#: src/MainWin.cpp:207
 msgid "&About..."
 msgstr "关于(&A)..."
 
-#: src/MainWin.cpp:198
+#: src/MainWin.cpp:208
 msgid "&Help"
 msgstr "帮助(&H)"
 
-#: src/MainWin.cpp:201
+#: src/MainWin.cpp:211
 msgid "Directory"
 msgstr "目录"
 
-#: src/MainWin.cpp:261
+#: src/MainWin.cpp:271
 msgid "&Assign to background"
 msgstr "设定为背景(&A)"
 
-#: src/MainWin.cpp:263
+#: src/MainWin.cpp:273
 #, fuzzy
 msgid "&Play"
 msgstr "播放全部"
 
-#: src/MainWin.cpp:264 src/MenuEditor.cpp:374 src/TitlesetManager.cpp:184 wxVillaLib/PropDlg.cpp:649
+#: src/MainWin.cpp:274 src/MenuEditor.cpp:374 src/TitlesetManager.cpp:184 wxVillaLib/PropDlg.cpp:648
 msgid "&Delete"
 msgstr "删除(&D)"
 
-#: src/MainWin.cpp:290
+#: src/MainWin.cpp:280
+#, fuzzy
+msgid "&Edit button"
+msgstr "按钮"
+
+#: src/MainWin.cpp:281
+#, fuzzy
+msgid "&Reset button"
+msgstr "默认按钮："
+
+#: src/MainWin.cpp:306
 msgid "DVDStyler"
 msgstr "DVDStyler"
 
-#: src/MainWin.cpp:303
+#: src/MainWin.cpp:319
 msgid "New"
 msgstr "新增"
 
-#: src/MainWin.cpp:304
+#: src/MainWin.cpp:320
 msgid "Open..."
 msgstr "打开..."
 
-#: src/MainWin.cpp:305
-msgid "Save"
-msgstr "保存"
-
-#: src/MainWin.cpp:307 src/MainWin.cpp:309
+#: src/MainWin.cpp:323 src/MainWin.cpp:325
 msgid "DVD Options..."
 msgstr "DVD 选项..."
 
-#: src/MainWin.cpp:311
+#: src/MainWin.cpp:327
 msgid "Burn..."
 msgstr "烧录..."
 
-#: src/MainWin.cpp:315 src/MainWin.cpp:323
+#: src/MainWin.cpp:331 src/MainWin.cpp:339
 msgid "Add File..."
 msgstr "加入文件..."
 
-#: src/MainWin.cpp:340 src/MainWin.cpp:348
+#: src/MainWin.cpp:356 src/MainWin.cpp:364
 msgid "File browser"
 msgstr "文件浏览器"
 
-#: src/MainWin.cpp:341 src/MainWin.cpp:350 src/MainWin.cpp:453
+#: src/MainWin.cpp:357 src/MainWin.cpp:366 src/MainWin.cpp:470
 msgid "Backgrounds"
 msgstr "背景"
 
-#: src/MainWin.cpp:342 src/MainWin.cpp:351 src/MainWin.cpp:486 src/MenuPropDlg.cpp:177
+#: src/MainWin.cpp:358 src/MainWin.cpp:367 src/MainWin.cpp:526 src/MenuPropDlg.cpp:182
 msgid "Buttons"
 msgstr "按钮"
 
-#: src/MainWin.cpp:482 src/MenuObject.cpp:336 src/MenuObjectPropDlg.cpp:246 src/MenuObjectPropDlg.cpp:261
-#: buttons/text-circle-v2.xml:13 buttons/text-square-v2.xml:14 buttons/text-underlined-v3.xml:12
-#: buttons/text-v3.xml:13
+#: src/MainWin.cpp:520 src/MainWin.cpp:1367 src/MainWin.cpp:1385 src/MenuObject.cpp:265
+#: src/MenuObjectPropDlg.cpp:265 src/MenuObjectPropDlg.cpp:280 buttons/text-circle-v2.xml:13
+#: buttons/text-square-v2.xml:14 buttons/text-underlined-v3.xml:12 buttons/text-v3.xml:13
 msgid "button"
 msgstr "按钮"
 
-#: src/MainWin.cpp:536
+#: src/MainWin.cpp:577
 msgid "Double click to set the background."
 msgstr "连按两下便可设定为背景。"
 
-#: src/MainWin.cpp:543
+#: src/MainWin.cpp:584
 #, c-format
 msgid "%s (%.1f KB)"
 msgstr "%s (%.1f KB)"
 
-#: src/MainWin.cpp:545
+#: src/MainWin.cpp:586
 #, c-format
 msgid "%s (%.1f MB)"
 msgstr "%s (%.1f MB)"
 
-#: src/MainWin.cpp:548
+#: src/MainWin.cpp:589
 #, c-format
 msgid "%s (%.1f GB)"
 msgstr "%s (%.1f GB)"
 
-#: src/MainWin.cpp:568
+#: src/MainWin.cpp:609
 #, c-format
 msgid "%d slides"
 msgstr "%d 个幻灯片"
 
-#: src/MainWin.cpp:580 src/SettingsDlg.cpp:125
+#: src/MainWin.cpp:621 src/SettingsDlg.cpp:126
 msgid "min"
 msgstr "分钟"
 
-#: src/MainWin.cpp:655
+#: src/MainWin.cpp:696
 #, c-format
 msgid "Are you sure you want to delete '%s' from the file system?"
 msgstr "您确定想要从文件系统中删除 '%s'"
 
-#: src/MainWin.cpp:755
+#: src/MainWin.cpp:797
 msgid "Select chapter"
 msgstr "选择章节"
 
-#: src/MainWin.cpp:782
+#: src/MainWin.cpp:824
 msgid "Play all"
 msgstr "播放全部"
 
-#: src/MainWin.cpp:784
+#: src/MainWin.cpp:826
 msgid "Select title"
 msgstr "选择标题"
 
-#: src/MainWin.cpp:786 src/TitlesetManager.cpp:1001
+#: src/MainWin.cpp:828 src/TitlesetManager.cpp:1001
 msgid "Back"
 msgstr "返回"
 
-#: src/MainWin.cpp:788
+#: src/MainWin.cpp:830
 msgid "Previous"
 msgstr "上一个"
 
-#: src/MainWin.cpp:790
+#: src/MainWin.cpp:832
 msgid "Next"
 msgstr "下一个"
 
-#: src/MainWin.cpp:836
+#: src/MainWin.cpp:879
 #, c-format
 msgid "Error opening '%s'"
 msgstr "打开 '%s' 错误"
 
-#: src/MainWin.cpp:856
+#: src/MainWin.cpp:899
 msgid "Open a DVDStyler project file"
 msgstr "打开DVDStyler工程文件"
 
-#: src/MainWin.cpp:857 src/MainWin.cpp:1004
+#: src/MainWin.cpp:900 src/MainWin.cpp:1047
 msgid "Project files"
 msgstr "工程文件"
 
-#: src/MainWin.cpp:888 src/MainWin.cpp:960
+#: src/MainWin.cpp:931 src/MainWin.cpp:1003
 msgid "Untitled"
 msgstr "未命名"
 
-#: src/MainWin.cpp:961
+#: src/MainWin.cpp:1004
 #, c-format
 msgid "The file '%s' was modified, save changes?"
 msgstr "文件 '%s' 已被修改，要保存吗？"
 
-#: src/MainWin.cpp:1003
+#: src/MainWin.cpp:1046
 msgid "Save a DVDStyler project file"
 msgstr "保存DVDStyler工程文件"
 
-#: src/MainWin.cpp:1025
+#: src/MainWin.cpp:1068
 msgid ""
 "The selected video files don't fit on DVD. Please reduce\n"
 "video quality (bitrate) or remove some titles."
@@ -1179,7 +1395,7 @@ msgstr ""
 "选择的视频文件不符合 DVD 的容量，\n"
 "请降低视频品质(比特率)或移除一些标题。"
 
-#: src/MainWin.cpp:1046
+#: src/MainWin.cpp:1089
 msgid ""
 "Project doesn't contain any video title. To add a title please\n"
 "drag a video file into the bottom section of the window."
@@ -1187,7 +1403,7 @@ msgstr ""
 "工程内并无任何视频标题。若要加入标题，\n"
 "请拖拽一个视频文件到视窗底部区域。"
 
-#: src/MainWin.cpp:1051
+#: src/MainWin.cpp:1094
 #, c-format
 msgid ""
 "Titleset %d doesn't contain any video title. To add a title\n"
@@ -1196,35 +1412,44 @@ msgstr ""
 "标题集 %d 内并无任何视频标题。若要加入标题，\n"
 "请拖曳一个视频文件到视窗底部区域。"
 
-#: src/MainWin.cpp:1160
+#: src/MainWin.cpp:1203
 msgid "Audio/Video/Subtitle Files"
 msgstr "音频/视频/字幕文件"
 
-#: src/MainWin.cpp:1162 src/MenuPropDlg.cpp:149 src/TitlePropDlg.cpp:234 src/TitlePropDlg.cpp:441
+#: src/MainWin.cpp:1205 src/MenuPropDlg.cpp:154 src/TitlePropDlg.cpp:234 src/TitlePropDlg.cpp:441
 msgid "Audio Files"
 msgstr "音频文件"
 
-#: src/MainWin.cpp:1163 src/MainWin.cpp:1168 src/MenuPropDlg.cpp:134
+#: src/MainWin.cpp:1206 src/MainWin.cpp:1211 src/MenuPropDlg.cpp:139
 msgid "Video Files"
 msgstr "视频文件"
 
-#: src/MainWin.cpp:1164 src/TitlePropDlg.cpp:442
+#: src/MainWin.cpp:1207 src/TitlePropDlg.cpp:442
 msgid "Subtitle Files"
 msgstr "字幕文件"
 
-#: src/MainWin.cpp:1165 src/MainWin.cpp:1169
+#: src/MainWin.cpp:1208 src/MainWin.cpp:1212
 msgid "Image Files"
 msgstr "影像文件"
 
-#: src/MainWin.cpp:1197
+#: src/MainWin.cpp:1240
 msgid "Choose DVD device or directory"
 msgstr "选择 DVD 设备或目录"
 
-#: src/MainWin.cpp:1249
+#: src/MainWin.cpp:1292
 msgid "Choose a titleset to add:"
 msgstr "选择一个要加入的标题集:"
 
-#: src/Menu.cpp:816
+#: src/MainWin.cpp:1348
+msgid "Open a SVG file"
+msgstr ""
+
+#: src/MainWin.cpp:1349
+#, fuzzy
+msgid "SVG files"
+msgstr "视频文件"
+
+#: src/Menu.cpp:839
 #, c-format
 msgid "%s and %s are overlapping"
 msgstr "%s与%s重叠"
@@ -1391,7 +1616,7 @@ msgstr "视图(&V)"
 msgid "&Grid"
 msgstr "网格(&G)"
 
-#: src/MenuEditor.cpp:498 src/ProcessMenuTransitions.cpp:177
+#: src/MenuEditor.cpp:498 src/ProcessMenuTransitions.cpp:178
 #, c-format
 msgid "VMGM menu %d"
 msgstr "VMGM 菜单 %d"
@@ -1418,175 +1643,182 @@ msgstr "输入文字"
 msgid "Please choose an image to insert"
 msgstr "请选择要插入的影像"
 
-#: src/MenuEditor.cpp:546 src/MenuObjectPropDlg.cpp:434 src/MenuPropDlg.cpp:135 src/TitlePropDlg.cpp:424
+#: src/MenuEditor.cpp:546 src/MenuObjectPropDlg.cpp:457 src/MenuPropDlg.cpp:140 src/TitlePropDlg.cpp:424
 msgid "Image Files "
 msgstr "影像文件"
 
-#: src/MenuEditor.cpp:548 buttons/arrow-text-left.xml:8 buttons/arrow-text-left.xml:12
-#: buttons/arrow-text-right.xml:8 buttons/arrow-text-right.xml:13 buttons/pill2.xml:24 buttons/pill2.xml:36
-#: buttons/pill3.xml:17 buttons/pill3.xml:29 buttons/text-v3.xml:3 objects/text-v2.xml:3
-#: objects/text-v2.xml:19
-msgid "Text"
-msgstr "文字"
-
-#: src/MenuObject.cpp:336
+#: src/MenuObject.cpp:265
 msgid "object"
 msgstr "对象"
 
-#: src/MenuObject.cpp:1229 src/MenuObject.cpp:1238
+#: src/MenuObject.cpp:816 src/MenuObject.cpp:825
 #, c-format
 msgid "can't open file '%s'"
 msgstr "无法打开文件 %s "
 
-#: src/MenuObjectPropDlg.cpp:63 src/MenuPropDlg.cpp:49 src/TitlePropDlg.cpp:68
+#: src/MenuObjectPropDlg.cpp:65 src/MenuPropDlg.cpp:49 src/TitlePropDlg.cpp:68
 msgid "Properties"
 msgstr "属性"
 
-#: src/MenuObjectPropDlg.cpp:102 src/MenuObjectPropDlg.cpp:112
+#: src/MenuObjectPropDlg.cpp:106 src/MenuObjectPropDlg.cpp:116
 msgid "Action"
 msgstr "动作"
 
-#: src/MenuObjectPropDlg.cpp:130
+#: src/MenuObjectPropDlg.cpp:134
 msgid "Jump to"
 msgstr "跳到"
 
-#: src/MenuObjectPropDlg.cpp:139
+#: src/MenuObjectPropDlg.cpp:143
 msgid "Play all titles"
 msgstr "播放所有标题"
 
-#: src/MenuObjectPropDlg.cpp:141
+#: src/MenuObjectPropDlg.cpp:145
 msgid "single titleset"
 msgstr "标题集"
 
-#: src/MenuObjectPropDlg.cpp:142
+#: src/MenuObjectPropDlg.cpp:146
 msgid "all titlesets"
 msgstr "所有标题集"
 
-#: src/MenuObjectPropDlg.cpp:169 src/MenuObjectPropDlg.cpp:178
+#: src/MenuObjectPropDlg.cpp:173 src/MenuObjectPropDlg.cpp:187
 msgid "last selected"
 msgstr "最后选择的"
 
-#: src/MenuObjectPropDlg.cpp:171 src/MenuObjectPropDlg.cpp:181
+#: src/MenuObjectPropDlg.cpp:175 src/MenuObjectPropDlg.cpp:190
 msgid "track"
 msgstr "轨道"
 
-#: src/MenuObjectPropDlg.cpp:172 src/MenuPropDlg.cpp:212 src/TitlePropDlg.cpp:254
+#: src/MenuObjectPropDlg.cpp:176 src/MenuPropDlg.cpp:217 src/TitlePropDlg.cpp:254
 msgid "Audio"
 msgstr "音频"
 
-#: src/MenuObjectPropDlg.cpp:179
+#: src/MenuObjectPropDlg.cpp:183 src/MenuObjectPropDlg.cpp:200 src/NewProjectDlg.cpp:134
+#, fuzzy
+msgid "Warning"
+msgstr "正在烧录"
+
+#: src/MenuObjectPropDlg.cpp:183
+msgid "Please use titleset menu to select audio tracks."
+msgstr ""
+
+#: src/MenuObjectPropDlg.cpp:188
 msgid "off"
 msgstr "关闭"
 
-#: src/MenuObjectPropDlg.cpp:182
+#: src/MenuObjectPropDlg.cpp:191
 msgid "subtitle"
 msgstr "字幕"
 
-#: src/MenuObjectPropDlg.cpp:190
+#: src/MenuObjectPropDlg.cpp:200
+msgid "Please use titleset menu to select subtitle tracks."
+msgstr ""
+
+#: src/MenuObjectPropDlg.cpp:205
 msgid "Auto execute command by select"
 msgstr "依选择自动执行指令"
 
-#: src/MenuObjectPropDlg.cpp:193
+#: src/MenuObjectPropDlg.cpp:208
 msgid "Navigation"
 msgstr "导览"
 
-#: src/MenuObjectPropDlg.cpp:208 src/MenuObjectPropDlg.cpp:218
+#: src/MenuObjectPropDlg.cpp:223 src/MenuObjectPropDlg.cpp:233
 msgid "Look"
 msgstr "外观"
 
-#: src/MenuObjectPropDlg.cpp:242 src/MenuObjectPropDlg.cpp:249
+#: src/MenuObjectPropDlg.cpp:261 src/MenuObjectPropDlg.cpp:268
 msgid "none"
 msgstr "无"
 
-#: src/MenuObjectPropDlg.cpp:248 src/MenuPropDlg.cpp:121 src/SettingsDlg.cpp:272 src/VideoPropDlg.cpp:131
+#: src/MenuObjectPropDlg.cpp:267 src/MenuPropDlg.cpp:126 src/SettingsDlg.cpp:274 src/VideoPropDlg.cpp:132
 msgid "auto"
 msgstr "自动"
 
-#: src/MenuObjectPropDlg.cpp:292
+#: src/MenuObjectPropDlg.cpp:311
 msgid "Normal"
 msgstr "一般"
 
-#: src/MenuObjectPropDlg.cpp:293
+#: src/MenuObjectPropDlg.cpp:312
 msgid "Highlighted"
 msgstr "高亮度显示"
 
-#: src/MenuObjectPropDlg.cpp:294
+#: src/MenuObjectPropDlg.cpp:313
 msgid "Selected"
 msgstr "已选择的"
 
-#: src/MenuObjectPropDlg.cpp:320
+#: src/MenuObjectPropDlg.cpp:340
 msgid "Font..."
 msgstr "字型..."
 
-#: src/MenuObjectPropDlg.cpp:384 src/MenuObjectPropDlg.cpp:543 src/MenuPropDlg.cpp:81
-#: src/VideoPropDlg.cpp:137
+#: src/MenuObjectPropDlg.cpp:404 src/MenuObjectPropDlg.cpp:564 src/MenuPropDlg.cpp:81
+#: src/VideoPropDlg.cpp:138
 msgid "Keep Aspect Ratio"
 msgstr "维持画面比例"
 
-#: src/MenuObjectPropDlg.cpp:387 src/MenuPropDlg.cpp:84
+#: src/MenuObjectPropDlg.cpp:407 src/MenuPropDlg.cpp:84
 msgid "X Min"
 msgstr "X 最小值"
 
-#: src/MenuObjectPropDlg.cpp:388 src/MenuPropDlg.cpp:85
+#: src/MenuObjectPropDlg.cpp:408 src/MenuPropDlg.cpp:85
 msgid "X Mid"
 msgstr "X 中间值"
 
-#: src/MenuObjectPropDlg.cpp:389 src/MenuPropDlg.cpp:86
+#: src/MenuObjectPropDlg.cpp:409 src/MenuPropDlg.cpp:86
 msgid "X Max"
 msgstr "X 最大值"
 
-#: src/MenuObjectPropDlg.cpp:393 src/MenuPropDlg.cpp:90
+#: src/MenuObjectPropDlg.cpp:413 src/MenuPropDlg.cpp:90
 msgid "Y Min"
 msgstr "Y 最小值"
 
-#: src/MenuObjectPropDlg.cpp:394 src/MenuPropDlg.cpp:91
+#: src/MenuObjectPropDlg.cpp:414 src/MenuPropDlg.cpp:91
 msgid "Y Mid"
 msgstr "Y 中间值"
 
-#: src/MenuObjectPropDlg.cpp:395 src/MenuPropDlg.cpp:92
+#: src/MenuObjectPropDlg.cpp:415 src/MenuPropDlg.cpp:92
 msgid "Y Max"
 msgstr "Y 最大值"
 
-#: src/MenuObjectPropDlg.cpp:399 src/MenuPropDlg.cpp:96
+#: src/MenuObjectPropDlg.cpp:419 src/MenuPropDlg.cpp:96
 msgid "Meet"
 msgstr "适合"
 
-#: src/MenuObjectPropDlg.cpp:400 src/MenuPropDlg.cpp:97
+#: src/MenuObjectPropDlg.cpp:420 src/MenuPropDlg.cpp:97
 msgid "Slice"
 msgstr "切片"
 
-#: src/MenuObjectPropDlg.cpp:432 buttons/ellipse-v2.xml:23 buttons/ellipse45.xml:26 buttons/frame-v2.xml:18
-#: buttons/frame45.xml:21 buttons/movie.xml:26 objects/ellipse-v3.xml:22 objects/ellipse45.xml:24
-#: objects/frame-v3.xml:18 objects/frame45.xml:20 objects/gold-frame.xml:45 objects/image.xml:3
-#: objects/image.xml:9
+#: src/MenuObjectPropDlg.cpp:455 buttons/ellipse-v2.xml:23 buttons/ellipse45.xml:26 buttons/frame-text.xml:30
+#: buttons/frame-v2.xml:18 buttons/frame45.xml:21 buttons/movie.xml:26 buttons/painting_frame.xml:40
+#: buttons/sticky_note.xml:45 objects/ellipse-v3.xml:22 objects/ellipse45.xml:24 objects/frame-v3.xml:18
+#: objects/frame45.xml:20 objects/gold-frame.xml:45 objects/image.xml:3 objects/image.xml:9
+#: objects/sticky_note.xml:42
 msgid "Image"
 msgstr "影像"
 
-#: src/MenuObjectPropDlg.cpp:440
+#: src/MenuObjectPropDlg.cpp:463
 msgid "Video"
 msgstr "视频"
 
-#: src/MenuObjectPropDlg.cpp:495 src/SubtitlePropDlg.cpp:186
+#: src/MenuObjectPropDlg.cpp:516 src/SubtitlePropDlg.cpp:186
 msgid "Offset:"
 msgstr "偏移:"
 
-#: src/MenuObjectPropDlg.cpp:503
+#: src/MenuObjectPropDlg.cpp:524
 msgid "Deviation:"
 msgstr "偏差:"
 
-#: src/MenuObjectPropDlg.cpp:518
+#: src/MenuObjectPropDlg.cpp:539
 msgid "Location"
 msgstr "位置"
 
-#: src/MenuObjectPropDlg.cpp:521
+#: src/MenuObjectPropDlg.cpp:542
 msgid "X:"
 msgstr "X:"
 
-#: src/MenuObjectPropDlg.cpp:522
+#: src/MenuObjectPropDlg.cpp:543
 msgid "Y:"
 msgstr "Y:"
 
-#: src/MenuObjectPropDlg.cpp:528 buttons/arrow-blue.xml:26 buttons/arrow-cool.xml:17
+#: src/MenuObjectPropDlg.cpp:549 buttons/arrow-blue.xml:26 buttons/arrow-cool.xml:17
 #: buttons/arrow-double.xml:13 buttons/arrow-gold.xml:26 buttons/arrow-green-double.xml:383
 #: buttons/arrow-green.xml:375 buttons/arrow-red.xml:29 buttons/arrow-simple-v2.xml:43
 #: buttons/arrow-star.xml:21 buttons/arrow.xml:42 buttons/arrow2.xml:25 buttons/arrow3.xml:19
@@ -1594,36 +1826,36 @@ msgstr "Y:"
 msgid "Rotation"
 msgstr "旋转"
 
-#: src/MenuObjectPropDlg.cpp:530
+#: src/MenuObjectPropDlg.cpp:551
 msgid "Angle:"
 msgstr "视角："
 
-#: src/MenuObjectPropDlg.cpp:536
+#: src/MenuObjectPropDlg.cpp:557
 msgid "Size"
 msgstr "大小"
 
-#: src/MenuObjectPropDlg.cpp:538
+#: src/MenuObjectPropDlg.cpp:559
 msgid "Width:"
 msgstr "宽度:"
 
-#: src/MenuObjectPropDlg.cpp:540
+#: src/MenuObjectPropDlg.cpp:561
 msgid "Height:"
 msgstr "高度:"
 
-#: src/MenuObjectPropDlg.cpp:555
+#: src/MenuObjectPropDlg.cpp:576
 msgid "Animations..."
 msgstr "动画..."
 
-#: src/MenuObjectPropDlg.cpp:606
+#: src/MenuObjectPropDlg.cpp:627
 msgid "start of current menu"
 msgstr "目前菜单开始处"
 
-#: src/MenuObjectPropDlg.cpp:691 src/MenuObjectPropDlg.cpp:695
+#: src/MenuObjectPropDlg.cpp:712 src/MenuObjectPropDlg.cpp:716
 #, c-format
 msgid "chapter %d"
 msgstr "章节 %d"
 
-#: src/MenuObjectPropDlg.cpp:862
+#: src/MenuObjectPropDlg.cpp:894
 msgid "Please enter the action command."
 msgstr "请输入动作指令。"
 
@@ -1631,7 +1863,7 @@ msgstr "请输入动作指令。"
 msgid "Titleset"
 msgstr "标题集"
 
-#: src/MenuPropDlg.cpp:53 src/MenuPropDlg.cpp:201 src/TitlesetManager.cpp:331 src/TitlesetManager.cpp:1213
+#: src/MenuPropDlg.cpp:53 src/MenuPropDlg.cpp:206 src/TitlesetManager.cpp:331 src/TitlesetManager.cpp:1213
 #: buttons/pill.xml:26
 msgid "Menu"
 msgstr "菜单"
@@ -1644,81 +1876,81 @@ msgstr "视频"
 msgid "Format:"
 msgstr "格式:"
 
-#: src/MenuPropDlg.cpp:132
+#: src/MenuPropDlg.cpp:137
 msgid "Background:"
 msgstr "背景："
 
-#: src/MenuPropDlg.cpp:133
+#: src/MenuPropDlg.cpp:138
 msgid "Image and Video Files"
 msgstr "图像与视频文件"
 
-#: src/MenuPropDlg.cpp:148 src/VobListBox.cpp:145
+#: src/MenuPropDlg.cpp:153 src/VobListBox.cpp:146
 msgid "Audio:"
 msgstr "音频:"
 
-#: src/MenuPropDlg.cpp:170
+#: src/MenuPropDlg.cpp:175
 msgid "Loop"
 msgstr "循环"
 
-#: src/MenuPropDlg.cpp:181
+#: src/MenuPropDlg.cpp:186
 msgid "Subpicture start/end:"
 msgstr "子图开始/结束："
 
-#: src/MenuPropDlg.cpp:187
+#: src/MenuPropDlg.cpp:192
 msgid "Remember last selected button"
 msgstr "记住最后选择的按钮"
 
-#: src/MenuPropDlg.cpp:206
+#: src/MenuPropDlg.cpp:211
 msgid "Entry"
 msgstr "进入点"
 
-#: src/MenuPropDlg.cpp:209
+#: src/MenuPropDlg.cpp:214
 msgid "Root"
 msgstr "主"
 
-#: src/MenuPropDlg.cpp:210
+#: src/MenuPropDlg.cpp:215
 msgid "Subtitle"
 msgstr "字幕"
 
-#: src/MenuPropDlg.cpp:213
+#: src/MenuPropDlg.cpp:218
 msgid "Angle"
 msgstr "视角"
 
-#: src/MenuPropDlg.cpp:216 src/TitlePropDlg.cpp:71 src/TitlePropDlg.cpp:263 src/TitlesetManager.cpp:331
+#: src/MenuPropDlg.cpp:221 src/TitlePropDlg.cpp:71 src/TitlePropDlg.cpp:263 src/TitlesetManager.cpp:331
 msgid "Title"
 msgstr "标题"
 
-#: src/MenuPropDlg.cpp:220 src/TitlePropDlg.cpp:269
+#: src/MenuPropDlg.cpp:225 src/TitlePropDlg.cpp:269
 msgid "Pre commands:"
 msgstr "前指令:"
 
-#: src/MenuPropDlg.cpp:222 src/TitlePropDlg.cpp:271
+#: src/MenuPropDlg.cpp:227 src/TitlePropDlg.cpp:271
 msgid "Post commands:"
 msgstr "后指令:"
 
-#: src/MenuPropDlg.cpp:236
+#: src/MenuPropDlg.cpp:241
 msgid "Cells..."
 msgstr "单元格..."
 
-#: src/MenuPropDlg.cpp:237
+#: src/MenuPropDlg.cpp:242
 msgid "Actions..."
 msgstr "动作..."
 
-#: src/MenuPropDlg.cpp:271
+#: src/MenuPropDlg.cpp:276
 msgid "Subpicture end must be greater than start or empty"
 msgstr "子图结束必须大于开始或为空"
 
-#: src/MenuPropDlg.cpp:278 src/TitlePropDlg.cpp:320
+#: src/MenuPropDlg.cpp:283 src/TitlePropDlg.cpp:320
 #, c-format
 msgid "File %s doesn't exist."
 msgstr "文件 %s 不存在。"
 
-#: src/MenuPropDlg.cpp:285 src/TitlePropDlg.cpp:327
+#: src/MenuPropDlg.cpp:290 src/TitlePropDlg.cpp:327
 #, c-format
 msgid "File %s isn't audio file."
 msgstr "文件 %s 不是音频文件。"
 
-#: src/MenuPropDlg.cpp:304
+#: src/MenuPropDlg.cpp:309
 msgid "Post commands will not be executed if pause is set to -1"
 msgstr "若暂停设为-1，将不被执行。"
 
@@ -1731,58 +1963,66 @@ msgstr "不再显示此讯息(&D)"
 msgid "Can't open file %s"
 msgstr "无法打开文件 %s"
 
-#: src/NewProjectDlg.cpp:19
+#: src/NewProjectDlg.cpp:27
 msgid "Create a new DVD"
 msgstr "建立一个新的 DVD"
 
-#: src/NewProjectDlg.cpp:34
+#: src/NewProjectDlg.cpp:42
 msgid "Disc label:"
 msgstr "碟片标签:"
 
-#: src/NewProjectDlg.cpp:37
+#: src/NewProjectDlg.cpp:49
+msgid "DVD Resolution:"
+msgstr ""
+
+#: src/NewProjectDlg.cpp:56
 msgid "Disc capacity:"
 msgstr "碟片容量:"
 
-#: src/NewProjectDlg.cpp:43
+#: src/NewProjectDlg.cpp:62
 msgid "Video bitrate:"
 msgstr "视频比特率:"
 
-#: src/NewProjectDlg.cpp:46 src/NewProjectDlg.cpp:52 src/SettingsDlg.cpp:243 src/SettingsDlg.cpp:248
-#: src/SettingsDlg.cpp:252
+#: src/NewProjectDlg.cpp:65 src/NewProjectDlg.cpp:71 src/SettingsDlg.cpp:245 src/SettingsDlg.cpp:250
+#: src/SettingsDlg.cpp:254
 msgid "KBit/s"
 msgstr "KBit/s"
 
-#: src/NewProjectDlg.cpp:52
+#: src/NewProjectDlg.cpp:71
 msgid "Audio bitrate:"
 msgstr "音频比特率:"
 
-#: src/NewProjectDlg.cpp:63
+#: src/NewProjectDlg.cpp:82
 msgid "Video Format"
 msgstr "视频格式"
 
-#: src/NewProjectDlg.cpp:72
+#: src/NewProjectDlg.cpp:94
 msgid "Aspect Ratio"
 msgstr "画面比例"
 
-#: src/NewProjectDlg.cpp:82
+#: src/NewProjectDlg.cpp:104
 msgid "Audio Format"
 msgstr "音频格式"
 
-#: src/NewProjectDlg.cpp:91 src/SettingsDlg.cpp:131
+#: src/NewProjectDlg.cpp:113 src/SettingsDlg.cpp:132
 msgid "Default title post command:"
 msgstr "默认标题后指令:"
 
-#: src/NewProjectDlg.cpp:97
+#: src/NewProjectDlg.cpp:119
 msgid "Please enter the volume name."
 msgstr "输入卷辑名称。"
 
-#: src/NewProjectDlg.cpp:101
+#: src/NewProjectDlg.cpp:123
 msgid "Volume name can only be a maximum of 32 characters."
 msgstr "卷辑名称最大 32 个字元。"
 
-#: src/Pgc.cpp:255
+#: src/Pgc.cpp:274
 msgid "Can't load vob"
 msgstr "无法载入 vob"
+
+#: src/Process.cpp:19
+msgid "Executing command: "
+msgstr "执行指令: "
 
 #: src/ProcessBurn.cpp:60
 msgid "Burning"
@@ -1855,68 +2095,68 @@ msgstr "没有足够空间来保存 ISO: 请清空快取。"
 msgid "Creating ISO image"
 msgstr "正在建立 ISO 影像"
 
-#: src/ProcessMenu.cpp:67
+#: src/ProcessMenu.cpp:68
 #, c-format
 msgid "Generating menu %u of %lu"
 msgstr "正在制作菜单 %u / %lu"
 
-#: src/ProcessMenu.cpp:118
+#: src/ProcessMenu.cpp:119
 msgid "Create menu MPEG"
 msgstr "建立菜单 MPEG"
 
-#: src/ProcessMenu.cpp:149 src/ProcessMenu.cpp:173 src/ProcessMenu.cpp:187 src/ProcessMenu.cpp:248
-#: src/ProcessMenu.cpp:278 src/ProcessMenu.cpp:292
+#: src/ProcessMenu.cpp:150 src/ProcessMenu.cpp:174 src/ProcessMenu.cpp:188 src/ProcessMenu.cpp:249
+#: src/ProcessMenu.cpp:279 src/ProcessMenu.cpp:293
 msgid "Error creation of menu"
 msgstr "建立菜单错误"
 
-#: src/ProcessMenu.cpp:155
+#: src/ProcessMenu.cpp:156
 #, c-format
 msgid "Video duration: %f sec"
 msgstr "视频持续时间: %f 秒"
 
-#: src/ProcessMenu.cpp:163 src/ProcessMenuTransitions.cpp:250
+#: src/ProcessMenu.cpp:164 src/ProcessMenuTransitions.cpp:251
 #, c-format
 msgid "Encoding frame %d of %d"
 msgstr "正在编码影格 %d / %d"
 
-#: src/ProcessMenu.cpp:200
+#: src/ProcessMenu.cpp:201
 msgid "Transcode audio from"
 msgstr "转码音频: "
 
-#: src/ProcessMenu.cpp:210 src/ProcessMenu.cpp:216 src/ProcessMenuTransitions.cpp:125
-#: src/ProcessMenuTransitions.cpp:135 src/ProcessSlideshow.cpp:198 src/ProcessTranscode.cpp:153
+#: src/ProcessMenu.cpp:211 src/ProcessMenu.cpp:217 src/ProcessMenuTransitions.cpp:126
+#: src/ProcessMenuTransitions.cpp:136 src/ProcessSlideshow.cpp:198 src/ProcessTranscode.cpp:153
 #: src/ProcessTranscode.cpp:164 src/ProcessTranscode.cpp:189 src/ProcessTranscode.cpp:201
 msgid "Error transcoding of "
 msgstr "转码错误: "
 
-#: src/ProcessMenu.cpp:221 src/ProcessMenu.cpp:301 src/ProcessSlideshow.cpp:203
+#: src/ProcessMenu.cpp:222 src/ProcessMenu.cpp:302 src/ProcessSlideshow.cpp:203
 msgid "Multiplexing audio and video"
 msgstr "正在多工处理视频及音频"
 
-#: src/ProcessMenu.cpp:260
+#: src/ProcessMenu.cpp:261
 #, c-format
 msgid "Audio duration: %f sec"
 msgstr "音频持续时间: %f 秒"
 
-#: src/ProcessMenu.cpp:274 src/SettingsDlg.cpp:237
+#: src/ProcessMenu.cpp:275 src/SettingsDlg.cpp:238
 msgid "Frame count of menu:"
 msgstr "菜单影格计数:"
 
-#: src/ProcessMenu.cpp:326
+#: src/ProcessMenu.cpp:327
 msgid "Multiplexing subpictures into mpeg"
 msgstr "正在多工处理字幕到 MPEG"
 
-#: src/ProcessMenu.cpp:333
+#: src/ProcessMenu.cpp:334
 #, c-format
 msgid "Can't rename file '%s' in '%s'"
 msgstr "无法重新命名文件 '%s' 在 '%s'"
 
-#: src/ProcessMenuTransitions.cpp:103 src/ProcessMenuTransitions.cpp:160 src/ProcessMenuTransitions.cpp:241
-#: src/ProcessMenuTransitions.cpp:253
+#: src/ProcessMenuTransitions.cpp:104 src/ProcessMenuTransitions.cpp:161 src/ProcessMenuTransitions.cpp:242
+#: src/ProcessMenuTransitions.cpp:254
 msgid "Error creation of transition"
 msgstr "创建过渡效果出错"
 
-#: src/ProcessMenuTransitions.cpp:178
+#: src/ProcessMenuTransitions.cpp:179
 #, c-format
 msgid "Generate transition from %s"
 msgstr "从%s生成过渡"
@@ -2062,217 +2302,227 @@ msgstr "烧录成功。"
 msgid "Generating was successful."
 msgstr "制作成功。"
 
-#: src/SettingsDlg.cpp:40 src/SettingsDlg.cpp:406 src/SettingsDlg.cpp:412
+#: src/SettingsDlg.cpp:41 src/SettingsDlg.cpp:413 src/SettingsDlg.cpp:419 buttons/settings.xml:3
 msgid "Settings"
 msgstr "设定"
 
-#: src/SettingsDlg.cpp:58
+#: src/SettingsDlg.cpp:59
 msgid "Interface"
 msgstr "界面"
 
-#: src/SettingsDlg.cpp:73
+#: src/SettingsDlg.cpp:74
 msgid "Default disc label:"
 msgstr "默认碟片标签："
 
-#: src/SettingsDlg.cpp:75
+#: src/SettingsDlg.cpp:76
 msgid "Default disc capacity:"
 msgstr "默认碟片容量："
 
-#: src/SettingsDlg.cpp:79
+#: src/SettingsDlg.cpp:80
 msgid "Default video format:"
 msgstr "默认视频格式："
 
-#: src/SettingsDlg.cpp:97
+#: src/SettingsDlg.cpp:98
 msgid "Keep aspect ratio"
 msgstr "维持画面比例"
 
-#: src/SettingsDlg.cpp:101
+#: src/SettingsDlg.cpp:102
 msgid "Default audio format:"
 msgstr "默认音频格式："
 
-#: src/SettingsDlg.cpp:124
+#: src/SettingsDlg.cpp:125
 msgid "Default chapter length:"
 msgstr "默认章节长度："
 
-#: src/SettingsDlg.cpp:127
+#: src/SettingsDlg.cpp:128
 msgid "Add chapter at title end"
 msgstr "于标题末尾增加章节"
 
-#: src/SettingsDlg.cpp:154
+#: src/SettingsDlg.cpp:155
 msgid "Default button:"
 msgstr "默认按钮："
 
-#: src/SettingsDlg.cpp:159
+#: src/SettingsDlg.cpp:160
 msgid "Accept invalid actions"
 msgstr "允许无效动作"
 
-#: src/SettingsDlg.cpp:162
+#: src/SettingsDlg.cpp:163
 msgid "Default slide duration:"
 msgstr "默认幻灯片持续时间:"
 
-#: src/SettingsDlg.cpp:163
+#: src/SettingsDlg.cpp:164
 msgid "Default transition duration:"
 msgstr "默认转场持续时间:"
 
-#: src/SettingsDlg.cpp:170
+#: src/SettingsDlg.cpp:171
 msgid "Default slide transition:"
 msgstr "默认幻灯片转场效果："
 
-#: src/SettingsDlg.cpp:176
+#: src/SettingsDlg.cpp:177
 msgid "Last directory"
 msgstr "上次的目录"
 
-#: src/SettingsDlg.cpp:177
+#: src/SettingsDlg.cpp:178
 msgid "File Browser start directory:"
 msgstr "文件浏览器起始目录:"
 
-#: src/SettingsDlg.cpp:192
+#: src/SettingsDlg.cpp:193
 msgid "Clear thumbnail cache after exit"
 msgstr "退出后清除缩略图"
 
-#: src/SettingsDlg.cpp:196
+#: src/SettingsDlg.cpp:197
 msgid "Undo history size:"
 msgstr "撤销队列长度："
 
-#: src/SettingsDlg.cpp:197
+#: src/SettingsDlg.cpp:198
 msgid "Clear transcoding cache:"
 msgstr "清除转码缓存："
 
-#: src/SettingsDlg.cpp:200
+#: src/SettingsDlg.cpp:201
 msgid "Prompt"
 msgstr "提示"
 
-#: src/SettingsDlg.cpp:201 src/SettingsDlg.cpp:299
+#: src/SettingsDlg.cpp:202 src/SettingsDlg.cpp:301
 msgid "Yes"
 msgstr "是"
 
-#: src/SettingsDlg.cpp:206
+#: src/SettingsDlg.cpp:207
 msgid "Clear cache now"
 msgstr "清除缓存"
 
-#: src/SettingsDlg.cpp:210
+#: src/SettingsDlg.cpp:211
 msgid "\"Don't show again\" flags:"
 msgstr " \"不再显示\" 旗标: "
 
-#: src/SettingsDlg.cpp:212
+#: src/SettingsDlg.cpp:213
 msgid "Reset All"
 msgstr "全部重设"
 
-#: src/SettingsDlg.cpp:221
+#: src/SettingsDlg.cpp:222
 msgid "Core"
 msgstr "核心"
 
-#: src/SettingsDlg.cpp:240
+#: src/SettingsDlg.cpp:241
 msgid "Draw buttons on background"
 msgstr "拖放按钮在背景上"
 
 #: src/SettingsDlg.cpp:242
+msgid "Allow HD menus"
+msgstr ""
+
+#: src/SettingsDlg.cpp:244
 msgid "Menu video bitrate:"
 msgstr "菜单视频比特率:"
 
-#: src/SettingsDlg.cpp:247
+#: src/SettingsDlg.cpp:249
 msgid "Slideshow video bitrate:"
 msgstr "幻灯片放映视频比特率:"
 
-#: src/SettingsDlg.cpp:252
+#: src/SettingsDlg.cpp:254
 msgid "Default audio bitrate:"
 msgstr "默认音频比特率："
 
-#: src/SettingsDlg.cpp:253
+#: src/SettingsDlg.cpp:255
 msgid "Thread count:"
 msgstr "线程数："
 
-#: src/SettingsDlg.cpp:254
+#: src/SettingsDlg.cpp:256
 msgid "DVD reserved space:"
 msgstr "DVD 预留空间:"
 
-#: src/SettingsDlg.cpp:254
+#: src/SettingsDlg.cpp:256
 msgid "KB"
 msgstr "KB"
 
-#: src/SettingsDlg.cpp:258
+#: src/SettingsDlg.cpp:260
 msgid "internal"
 msgstr "内部"
 
-#: src/SettingsDlg.cpp:263
+#: src/SettingsDlg.cpp:265
 msgid "Encoder:"
 msgstr "编码器"
 
-#: src/SettingsDlg.cpp:273
+#: src/SettingsDlg.cpp:275
 msgid "CBR"
 msgstr "固定比特率"
 
-#: src/SettingsDlg.cpp:274
+#: src/SettingsDlg.cpp:276
 msgid "1-pass VBR"
 msgstr "可变比特率"
 
-#: src/SettingsDlg.cpp:275
+#: src/SettingsDlg.cpp:277
 msgid "2-pass VBR"
 msgstr "二阶可变比特率"
 
-#: src/SettingsDlg.cpp:290
+#: src/SettingsDlg.cpp:292
 msgid "Create ISO command:"
 msgstr "建立 ISO 指令:"
 
-#: src/SettingsDlg.cpp:291
+#: src/SettingsDlg.cpp:293
 msgid "Burn command:"
 msgstr "烧录指令:"
 
-#: src/SettingsDlg.cpp:292
+#: src/SettingsDlg.cpp:294
 msgid "Burn ISO command:"
 msgstr "烧录 ISO 指令:"
 
-#: src/SettingsDlg.cpp:293
+#: src/SettingsDlg.cpp:295
 msgid "Add ECC command:"
 msgstr "加入 ECC 指令:"
 
-#: src/SettingsDlg.cpp:294
+#: src/SettingsDlg.cpp:296
 msgid "Format command:"
 msgstr "格式化指令:"
 
-#: src/SettingsDlg.cpp:296
+#: src/SettingsDlg.cpp:298
 msgid "Use mplex:"
 msgstr "使用多工处理:"
 
-#: src/SettingsDlg.cpp:301
+#: src/SettingsDlg.cpp:303
 msgid "For menus only"
 msgstr "仅菜单"
 
-#: src/SettingsDlg.cpp:306
+#: src/SettingsDlg.cpp:308
 msgid "NTSC film:"
 msgstr "NTSC影片："
 
-#: src/SettingsDlg.cpp:307
-msgid "reencode by default"
+#: src/SettingsDlg.cpp:309
+#, fuzzy
+msgid "re-encode by default"
 msgstr "重编码（默认）"
 
-#: src/SettingsDlg.cpp:309
+#: src/SettingsDlg.cpp:310
+#, fuzzy
+msgid "HD video:"
+msgstr "视频:"
+
+#: src/SettingsDlg.cpp:311
+msgid "allow (experimental)"
+msgstr ""
+
+#: src/SettingsDlg.cpp:313
 msgid "Debug"
 msgstr "调试"
 
-#: src/SettingsDlg.cpp:310
+#: src/SettingsDlg.cpp:314
 msgid "Don't remove temp files"
 msgstr "不删除临时文件"
 
-#: src/SettingsDlg.cpp:333
+#: src/SettingsDlg.cpp:338
 msgid "Language change will not take effect until DVDStyler is restarted"
 msgstr "修改语言需要重启 DVDStyler 才能生效。"
 
-#: src/SettingsDlg.cpp:406
+#: src/SettingsDlg.cpp:413
 msgid "All \"don't show again\" flags are reseted."
 msgstr " 所有 \"不再显示\" 旗标已被重设。"
 
-#: src/SettingsDlg.cpp:412
+#: src/SettingsDlg.cpp:419
 msgid "The transcoding cache is successfully cleared."
 msgstr "转码缓存已成功清除。"
 
 #: src/SlideDlg.cpp:44
 msgid "Slide properties"
 msgstr "幻灯片内容"
-
-#: src/SlideDlg.cpp:48
-msgid "File name:"
-msgstr "文件名称:"
 
 #: src/SlideDlg.cpp:53 src/TitlePropDlg.cpp:207
 msgid "Transition:"
@@ -2310,16 +2560,16 @@ msgstr "%d MB/秒"
 msgid "%.1f Mb/s"
 msgstr "%.1f MB/秒"
 
-#: src/Stream.cpp:100
+#: src/Stream.cpp:112
 msgid "mono"
 msgstr "单声道"
 
-#: src/Stream.cpp:106
+#: src/Stream.cpp:118
 #, c-format
 msgid "%d channels"
 msgstr "%d 声道"
 
-#: src/Stream.cpp:109
+#: src/Stream.cpp:121
 #, c-format
 msgid "%d Hz"
 msgstr "%d Hz"
@@ -2347,14 +2597,6 @@ msgstr "预览:"
 #: src/SubtitlePropDlg.cpp:139
 msgid "ABCabcXYZxyz"
 msgstr "ABCabcXYZxyz"
-
-#: src/SubtitlePropDlg.cpp:143
-msgid "Fill:"
-msgstr "填充:"
-
-#: src/SubtitlePropDlg.cpp:153 src/SubtitlePropDlg.cpp:167 src/SubtitlePropDlg.cpp:184
-msgid "%"
-msgstr "%"
 
 #: src/SubtitlePropDlg.cpp:156
 msgid "Outline:"
@@ -2485,15 +2727,15 @@ msgstr "无效章节时间戳记 '%s'"
 msgid "Audio & Subtitle Files"
 msgstr "音效及字幕文件"
 
-#: src/Titleset.cpp:302 src/Titleset.cpp:367
+#: src/Titleset.cpp:268 src/Titleset.cpp:333
 msgid "Can't load pgc"
 msgstr "无法载入 pgc"
 
-#: src/Titleset.cpp:419
+#: src/Titleset.cpp:385
 msgid "Can't load menus"
 msgstr "无法载入菜单"
 
-#: src/Titleset.cpp:424
+#: src/Titleset.cpp:390
 msgid "Can't load titles"
 msgstr "无法载入标题"
 
@@ -2587,59 +2829,59 @@ msgstr "标题集管理"
 msgid "Video frame"
 msgstr "视频影格"
 
-#: src/VideoPropDlg.cpp:101
+#: src/VideoPropDlg.cpp:102
 msgid "Video properties"
 msgstr "视频内容"
 
-#: src/VideoPropDlg.cpp:127
+#: src/VideoPropDlg.cpp:128
 msgid "progressive"
 msgstr "进度"
 
-#: src/VideoPropDlg.cpp:128
+#: src/VideoPropDlg.cpp:129
 msgid "interlace"
 msgstr "交错"
 
-#: src/VideoPropDlg.cpp:132
+#: src/VideoPropDlg.cpp:133
 msgid "BFF"
 msgstr "BFF"
 
-#: src/VideoPropDlg.cpp:133
+#: src/VideoPropDlg.cpp:134
 msgid "TFF"
 msgstr "TFF"
 
-#: src/VideoPropDlg.cpp:141
+#: src/VideoPropDlg.cpp:142
 msgid "border"
 msgstr "轮廓"
 
-#: src/VideoPropDlg.cpp:142
+#: src/VideoPropDlg.cpp:143
 msgid "crop"
 msgstr "裁剪"
 
-#: src/VideoPropDlg.cpp:146
+#: src/VideoPropDlg.cpp:147
 msgid "Border"
 msgstr "轮廓"
 
-#: src/VideoPropDlg.cpp:162
+#: src/VideoPropDlg.cpp:163
 msgid "Crop"
 msgstr "裁剪"
 
-#: src/VideoPropDlg.cpp:179
+#: src/VideoPropDlg.cpp:180
 msgid "Fade-In/Out:"
 msgstr "淡入/淡出:"
 
-#: src/VideoPropDlg.cpp:218
+#: src/VideoPropDlg.cpp:219
 msgid "Start:"
 msgstr "开始:"
 
-#: src/VideoPropDlg.cpp:232
+#: src/VideoPropDlg.cpp:233
 msgid "Cut beginning"
 msgstr "裁剪开头"
 
-#: src/VideoPropDlg.cpp:248
+#: src/VideoPropDlg.cpp:249
 msgid "Cut ending"
 msgstr "裁剪结尾"
 
-#: src/VideoPropDlg.cpp:675 src/VideoPropDlg.cpp:680
+#: src/VideoPropDlg.cpp:702 src/VideoPropDlg.cpp:707
 msgid "Invalid time"
 msgstr "无效的时间"
 
@@ -2647,7 +2889,7 @@ msgstr "无效的时间"
 msgid "Video:"
 msgstr "视频:"
 
-#: src/VobListBox.cpp:171 src/VobListBox.cpp:217
+#: src/VobListBox.cpp:172 src/VobListBox.cpp:218
 msgid "Subtitle:"
 msgstr "字幕:"
 
@@ -2697,7 +2939,7 @@ msgstr "找不到定义类型 %d 的影像处理常式。"
 msgid "Can't load image from file '%s': file does not exist."
 msgstr "无法从文件 '%s' 载入影像: 文件不存在。"
 
-#: wxVillaLib/PropDlg.cpp:202
+#: wxVillaLib/PropDlg.cpp:201
 msgid "&Don't show this dialog again"
 msgstr "不再显示此对话框(&D)"
 
@@ -2718,6 +2960,7 @@ msgstr "框体颜色"
 #: buttons/arrow-blue.xml:47 buttons/arrow-cool.xml:38 buttons/arrow-gold.xml:33
 #: buttons/arrow-mirror-left.xml:19 buttons/arrow-mirror-right.xml:19 buttons/arrow-red.xml:50
 #: buttons/arrow-simple-v2.xml:31 buttons/arrow-text-left.xml:25 buttons/arrow-text-right.xml:26
+#: buttons/glow_arrow.xml:33
 msgid "Arrow color"
 msgstr "箭头颜色"
 
@@ -2798,11 +3041,11 @@ msgid "Simple Arrow"
 msgstr "简单箭头"
 
 #: buttons/arrow-simple-v2.xml:50 buttons/arrow3d-left.xml:41 buttons/arrow3d-right.xml:41
-#: buttons/ellipse-v2.xml:44 buttons/ellipse45.xml:47 buttons/frame-v2.xml:53 buttons/frame45.xml:63
-#: buttons/home-v2.xml:35 buttons/text-circle-v2.xml:32 buttons/text-square-v2.xml:33
-#: buttons/text-underlined-v3.xml:32 buttons/text-v3.xml:58 objects/ellipse-v3.xml:57
-#: objects/ellipse45.xml:59 objects/frame-v3.xml:67 objects/frame45.xml:76 objects/rectangle-v2.xml:38
-#: objects/text-v2.xml:53
+#: buttons/ellipse-v2.xml:44 buttons/ellipse45.xml:47 buttons/frame-text.xml:63 buttons/frame-text.xml:83
+#: buttons/frame-v2.xml:53 buttons/frame45.xml:63 buttons/home-v2.xml:35 buttons/settings.xml:30
+#: buttons/text-circle-v2.xml:32 buttons/text-square-v2.xml:33 buttons/text-underlined-v3.xml:32
+#: buttons/text-v3.xml:58 objects/ellipse-v3.xml:57 objects/ellipse45.xml:59 objects/frame-v3.xml:67
+#: objects/frame45.xml:76 objects/rectangle-v2.xml:38 objects/text-v2.xml:53
 msgid "Shadow"
 msgstr "阴影"
 
@@ -2834,14 +3077,15 @@ msgstr "文字右箭头"
 msgid "Arrow"
 msgstr "箭头"
 
-#: buttons/arrow.xml:23 buttons/cancel.xml:28 buttons/ellipse-v2.xml:51 buttons/ellipse45.xml:54
-#: buttons/ok.xml:27 objects/ellipse-v3.xml:43 objects/ellipse45.xml:45 objects/frame-v3.xml:53
-#: objects/frame45.xml:62 objects/text-v2.xml:32
+#: buttons/arrow.xml:23 buttons/cancel.xml:28 buttons/circle-outline.xml:36 buttons/circle.xml:28
+#: buttons/ellipse-v2.xml:51 buttons/ellipse45.xml:54 buttons/ok.xml:27 objects/ellipse-v3.xml:43
+#: objects/ellipse45.xml:45 objects/frame-v3.xml:53 objects/frame45.xml:62 objects/text-v2.xml:32
 msgid "Outline colour"
 msgstr "轮廓颜色"
 
-#: buttons/arrow.xml:35 buttons/ellipse-v2.xml:37 buttons/ellipse45.xml:40 objects/ellipse-v3.xml:36
-#: objects/ellipse45.xml:38 objects/frame-v3.xml:46 objects/frame45.xml:55 objects/text-v2.xml:39
+#: buttons/arrow.xml:35 buttons/circle-outline.xml:48 buttons/circle.xml:35 buttons/ellipse-v2.xml:37
+#: buttons/ellipse45.xml:40 objects/ellipse-v3.xml:36 objects/ellipse45.xml:38 objects/frame-v3.xml:46
+#: objects/frame45.xml:55 objects/text-v2.xml:39
 msgid "Outline width"
 msgstr "轮廓宽度"
 
@@ -2897,6 +3141,30 @@ msgstr "框颜色"
 msgid "X color"
 msgstr "X 颜色"
 
+#: buttons/circle-outline.xml:3
+#, fuzzy
+msgid "Circle outline"
+msgstr "圆圈颜色"
+
+#: buttons/circle-outline.xml:8 buttons/circle.xml:7
+msgid "01"
+msgstr ""
+
+#: buttons/circle-outline.xml:22 buttons/circle.xml:21 buttons/text-circle-v2.xml:39
+msgid "Circle colour"
+msgstr "圆圈颜色"
+
+#: buttons/circle-outline.xml:29 buttons/circle.xml:42 buttons/frame-text.xml:76 buttons/pill.xml:50
+#: buttons/text-circle-v2.xml:25 buttons/text-square-v2.xml:26 buttons/text-underlined-v3.xml:25
+#: buttons/text-v3.xml:25
+msgid "Text colour"
+msgstr "文字颜色"
+
+#: buttons/circle.xml:3
+#, fuzzy
+msgid "Circle"
+msgstr "圆圈箭头"
+
 #: buttons/ellipse-v2.xml:3 objects/ellipse-v3.xml:3
 msgid "Ellipse"
 msgstr "椭圆"
@@ -2916,6 +3184,31 @@ msgstr "内部颜色"
 msgid "Ellipse 45°"
 msgstr "椭圆 45°"
 
+#: buttons/frame-text.xml:4
+msgid "Frame and Text"
+msgstr ""
+
+#: buttons/frame-text.xml:25
+msgid "T"
+msgstr ""
+
+#: buttons/frame-text.xml:37 buttons/frame-v2.xml:46 buttons/frame45.xml:56
+msgid "Border width"
+msgstr "边框宽度"
+
+#: buttons/frame-text.xml:44
+msgid "Corner round"
+msgstr ""
+
+#: buttons/frame-text.xml:51 buttons/frame-v2.xml:60 buttons/frame45.xml:70 buttons/movie.xml:40
+msgid "Border colour"
+msgstr "边框颜色"
+
+#: buttons/frame-text.xml:90
+#, fuzzy
+msgid "Text offset"
+msgstr "文字左前头"
+
 #: buttons/frame-v2.xml:3 objects/frame-v3.xml:3
 msgid "Frame"
 msgstr "影格"
@@ -2930,17 +3223,23 @@ msgstr "Rx"
 msgid "Ry"
 msgstr "Ry"
 
-#: buttons/frame-v2.xml:46 buttons/frame45.xml:56
-msgid "Border width"
-msgstr "边框宽度"
-
-#: buttons/frame-v2.xml:60 buttons/frame45.xml:70 buttons/movie.xml:40
-msgid "Border colour"
-msgstr "边框颜色"
-
 #: buttons/frame45.xml:3 objects/frame45.xml:3
 msgid "Frame 45°"
 msgstr "影格 45°"
+
+#: buttons/glow_arrow.xml:5
+#, fuzzy
+msgid "Glow Arrow"
+msgstr "金色箭头"
+
+#: buttons/glow_arrow.xml:26
+msgid "Invert (a,e)"
+msgstr ""
+
+#: buttons/glow_arrow.xml:40
+#, fuzzy
+msgid "Glow colour"
+msgstr "箭头颜色"
 
 #: buttons/hand-left.xml:4
 msgid "Hand Left"
@@ -2958,7 +3257,7 @@ msgstr "手指向右"
 msgid "Home"
 msgstr "本地"
 
-#: buttons/home-v2.xml:23 objects/rectangle-v2.xml:31
+#: buttons/home-v2.xml:23 buttons/settings.xml:18 objects/rectangle-v2.xml:31
 msgid "Colour"
 msgstr "颜色"
 
@@ -2974,6 +3273,15 @@ msgstr "确定"
 msgid "V color"
 msgstr "V 颜色"
 
+#: buttons/painting_frame.xml:4
+msgid "Painting Frame"
+msgstr ""
+
+#: buttons/painting_frame.xml:47
+#, fuzzy
+msgid "Frame colour"
+msgstr "圆圈颜色"
+
 #: buttons/pill.xml:3
 msgid "Pill"
 msgstr "球状"
@@ -2985,16 +3293,6 @@ msgstr "C1"
 #: buttons/pill.xml:37
 msgid "C2"
 msgstr "C2"
-
-#: buttons/pill.xml:44 buttons/text-circle-v2.xml:19 buttons/text-square-v2.xml:20
-#: buttons/text-underlined-v3.xml:19 buttons/text-v3.xml:19
-msgid "Label"
-msgstr "标签"
-
-#: buttons/pill.xml:50 buttons/text-circle-v2.xml:25 buttons/text-square-v2.xml:26
-#: buttons/text-underlined-v3.xml:25 buttons/text-v3.xml:25
-msgid "Text colour"
-msgstr "文字颜色"
 
 #: buttons/pill2.xml:4
 msgid "Pill 2"
@@ -3008,13 +3306,23 @@ msgstr "填充颜色"
 msgid "Pill 3"
 msgstr "球状 3"
 
+#: buttons/sticky_note.xml:4 objects/sticky_note.xml:4
+msgid "Sticky note"
+msgstr ""
+
+#: buttons/sticky_note.xml:52 objects/sticky_note.xml:56
+#, fuzzy
+msgid "Pin"
+msgstr "分钟"
+
+#: buttons/sticky_note.xml:59
+#, fuzzy
+msgid "Selection colour"
+msgstr "反射颜色 1"
+
 #: buttons/text-circle-v2.xml:3
 msgid "Text with circle"
 msgstr "带圈的文字"
-
-#: buttons/text-circle-v2.xml:39
-msgid "Circle colour"
-msgstr "圆圈颜色"
 
 #: buttons/text-circle-v2.xml:51
 msgid "Circle radius"
@@ -3059,6 +3367,10 @@ msgstr "不透明度"
 #: objects/rectangle-v2.xml:3
 msgid "Rectangle"
 msgstr "矩形"
+
+#: objects/sticky_note.xml:49
+msgid "Note"
+msgstr ""
 
 #: objects/text-v2.xml:13
 msgid "text"
@@ -3130,9 +3442,6 @@ msgstr "从上到下抹除"
 
 #~ msgid "Colour:"
 #~ msgstr "颜色:"
-
-#~ msgid "Executing command: "
-#~ msgstr "执行指令: "
 
 #~ msgid ""
 #~ "Unfortunately there is no DVD player specified in the DVDStyler settings. Please set the path to the DVD "

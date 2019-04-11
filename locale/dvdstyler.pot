@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-12 10:07+0200\n"
+"POT-Creation-Date: 2019-04-11 14:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -381,7 +381,7 @@ msgid "Programs"
 msgstr ""
 
 #: src/BurnDlg.cpp:538 src/MainWin.cpp:1048 src/MainWin.cpp:1209
-#: src/MainWin.cpp:1213 src/MenuObjectPropDlg.cpp:457 src/MenuPropDlg.cpp:141
+#: src/MainWin.cpp:1213 src/MenuObjectPropDlg.cpp:458 src/MenuPropDlg.cpp:141
 #: src/MenuPropDlg.cpp:155 src/TitlePropDlg.cpp:235 src/TitlePropDlg.cpp:425
 msgid "All Files"
 msgstr ""
@@ -422,7 +422,7 @@ msgstr ""
 msgid "Please enter file name to save ISO"
 msgstr ""
 
-#: src/BurnDlg.cpp:631 src/ButtonEditDlg.cpp:580
+#: src/BurnDlg.cpp:631 src/ButtonEditDlg.cpp:611
 #, c-format
 msgid "File '%s' already exist. Do you want to overwrite it?"
 msgstr ""
@@ -442,145 +442,178 @@ msgid ""
 "will be removed if you change temporary directory."
 msgstr ""
 
-#: src/ButtonAddParamDlg.cpp:46
+#: src/ButtonAddParamDlg.cpp:47
+msgid "Add parameter"
+msgstr ""
+
+#: src/ButtonAddParamDlg.cpp:55
 msgid ""
 "Please select an SVG element\n"
 "for new parameter:"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:167
+#: src/ButtonAddParamDlg.cpp:60 src/SubtitlePropDlg.cpp:143
+msgid "Fill:"
+msgstr ""
+
+#: src/ButtonAddParamDlg.cpp:62 src/ButtonAddParamDlg.cpp:67
+#: src/MenuEditor.cpp:548 buttons/arrow-text-left.xml:8
+#: buttons/arrow-text-left.xml:12 buttons/arrow-text-right.xml:8
+#: buttons/arrow-text-right.xml:13 buttons/frame-text.xml:70
+#: buttons/pill2.xml:24 buttons/pill2.xml:36 buttons/pill3.xml:17
+#: buttons/pill3.xml:29 buttons/text-v3.xml:3 objects/text-v2.xml:3
+#: objects/text-v2.xml:19
+msgid "Text"
+msgstr ""
+
+#: src/ButtonAddParamDlg.cpp:65
+msgid "Stroke:"
+msgstr ""
+
+#: src/ButtonEditDlg.cpp:170
 msgid "name"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:167 src/DVDAction.cpp:184
-#: src/MenuObjectPropDlg.cpp:438 src/MenuObjectPropDlg.cpp:676
-#: src/MenuObjectPropDlg.cpp:685 src/MenuObjectPropDlg.cpp:697
+#: src/ButtonEditDlg.cpp:170 src/DVDAction.cpp:184
+#: src/MenuObjectPropDlg.cpp:439 src/MenuObjectPropDlg.cpp:677
+#: src/MenuObjectPropDlg.cpp:686 src/MenuObjectPropDlg.cpp:698
 msgid "title"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:167
+#: src/ButtonEditDlg.cpp:170
 msgid "type"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:167
+#: src/ButtonEditDlg.cpp:170
 msgid "ID of element"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:167
+#: src/ButtonEditDlg.cpp:170
 msgid "attribute name"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:167
+#: src/ButtonEditDlg.cpp:170
 msgid "dynamic"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:168
+#: src/ButtonEditDlg.cpp:171
 msgid "value"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:168 src/ButtonEditDlg.cpp:256
+#: src/ButtonEditDlg.cpp:171 src/ButtonEditDlg.cpp:261
 msgid "highlighted"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:168 src/ButtonEditDlg.cpp:257
+#: src/ButtonEditDlg.cpp:171 src/ButtonEditDlg.cpp:262
 msgid "selected"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:246
+#: src/ButtonEditDlg.cpp:251
 msgid "Create button"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:255
+#: src/ButtonEditDlg.cpp:260
 msgid "normal"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:259
+#: src/ButtonEditDlg.cpp:264
 msgid "Button state"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:266
+#: src/ButtonEditDlg.cpp:271
 msgid "Directory:"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:268 buttons/circle.xml:21 buttons/circle2.xml:21
-#: buttons/pill.xml:44 buttons/text-circle-v2.xml:19
+#: src/ButtonEditDlg.cpp:273 buttons/circle-outline.xml:16
+#: buttons/circle.xml:15 buttons/pill.xml:44 buttons/text-circle-v2.xml:19
 #: buttons/text-square-v2.xml:20 buttons/text-underlined-v3.xml:19
 #: buttons/text-v3.xml:19
 msgid "Label"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:270 src/SlideDlg.cpp:48
+#: src/ButtonEditDlg.cpp:275 src/SlideDlg.cpp:48
 msgid "File name:"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:275
+#: src/ButtonEditDlg.cpp:280
 msgid ".xml"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:278
+#: src/ButtonEditDlg.cpp:283
 msgid "Title:"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:282
+#: src/ButtonEditDlg.cpp:287
 msgid "Default width:"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:288 src/ButtonEditDlg.cpp:311
-#: src/ButtonEditDlg.cpp:335 src/ButtonEditDlg.cpp:358
+#: src/ButtonEditDlg.cpp:293 src/ButtonEditDlg.cpp:316
+#: src/ButtonEditDlg.cpp:340 src/ButtonEditDlg.cpp:363
 msgid "or"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:292 src/ButtonEditDlg.cpp:297
-#: src/ButtonEditDlg.cpp:315 src/ButtonEditDlg.cpp:320
-#: src/ButtonEditDlg.cpp:339 src/ButtonEditDlg.cpp:344
-#: src/ButtonEditDlg.cpp:362 src/ButtonEditDlg.cpp:367
+#: src/ButtonEditDlg.cpp:297 src/ButtonEditDlg.cpp:302
+#: src/ButtonEditDlg.cpp:320 src/ButtonEditDlg.cpp:325
+#: src/ButtonEditDlg.cpp:344 src/ButtonEditDlg.cpp:349
+#: src/ButtonEditDlg.cpp:367 src/ButtonEditDlg.cpp:372
 msgid "+"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:302 src/ButtonEditDlg.cpp:325
-#: src/ButtonEditDlg.cpp:349 src/ButtonEditDlg.cpp:372
+#: src/ButtonEditDlg.cpp:307 src/ButtonEditDlg.cpp:330
+#: src/ButtonEditDlg.cpp:354 src/ButtonEditDlg.cpp:377
 #: src/SubtitlePropDlg.cpp:153 src/SubtitlePropDlg.cpp:167
 #: src/SubtitlePropDlg.cpp:184
 msgid "%"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:305
+#: src/ButtonEditDlg.cpp:310
 msgid "Min width:"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:329
+#: src/ButtonEditDlg.cpp:334
 msgid "Default height:"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:352
+#: src/ButtonEditDlg.cpp:357
 msgid "Min height:"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:376
+#: src/ButtonEditDlg.cpp:382
 msgid "Parameters:"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:382 src/MainWin.cpp:321
+#: src/ButtonEditDlg.cpp:391 src/MainWin.cpp:321
 msgid "Save"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:446
+#: src/ButtonEditDlg.cpp:456
 msgid "Edit button"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:490
+#: src/ButtonEditDlg.cpp:500
 msgid "Add"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:492
+#: src/ButtonEditDlg.cpp:502
 msgid "Remove selected"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:533
+#: src/ButtonEditDlg.cpp:546
 msgid "No SVG element is selected"
 msgstr ""
 
-#: src/Cache.cpp:238 src/Cache.cpp:263 src/Process.cpp:20
+#: src/ButtonEditDlg.cpp:627 src/NewProjectDlg.cpp:51
+#: src/NewProjectDlg.cpp:134
+msgid "Info"
+msgstr ""
+
+#: src/ButtonEditDlg.cpp:627
+msgid ""
+"Click on image to select an SVG\n"
+" element for a new parameter"
+msgstr ""
+
+#: src/Cache.cpp:238 src/Cache.cpp:263 src/Process.cpp:25
 #: src/ProcessMenuTransitions.cpp:121 src/ProcessTranscode.cpp:159
 #: src/ProcessTranscode.cpp:174
 #, c-format
@@ -642,7 +675,7 @@ msgid "Auto"
 msgstr ""
 
 #: src/ChaptersDlg.cpp:157 src/DVD.cpp:1006 src/MenuObjectPropDlg.cpp:161
-#: src/MenuObjectPropDlg.cpp:556 src/SettingsDlg.cpp:177
+#: src/MenuObjectPropDlg.cpp:557 src/SettingsDlg.cpp:177
 msgid "Custom"
 msgstr ""
 
@@ -696,7 +729,7 @@ msgstr ""
 msgid "Some actions are invalid. Please click 'Details' for more information."
 msgstr ""
 
-#: src/DVD.cpp:486 src/MenuObjectDef.cpp:183
+#: src/DVD.cpp:486 src/MenuObjectDef.cpp:194
 #, c-format
 msgid "Cannot open file '%s'."
 msgstr ""
@@ -834,8 +867,8 @@ msgstr ""
 msgid "jump to chapter menu"
 msgstr ""
 
-#: src/DVDAction.cpp:75 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:646
-#: src/MenuObjectPropDlg.cpp:666
+#: src/DVDAction.cpp:75 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:647
+#: src/MenuObjectPropDlg.cpp:667
 msgid "menu"
 msgstr ""
 
@@ -856,14 +889,14 @@ msgstr ""
 msgid "jump to title"
 msgstr ""
 
-#: src/DVDAction.cpp:183 src/MenuObjectPropDlg.cpp:440
-#: src/MenuObjectPropDlg.cpp:659 src/MenuObjectPropDlg.cpp:668
-#: src/MenuObjectPropDlg.cpp:678 src/MenuObjectPropDlg.cpp:687
-#: src/MenuObjectPropDlg.cpp:696
+#: src/DVDAction.cpp:183 src/MenuObjectPropDlg.cpp:441
+#: src/MenuObjectPropDlg.cpp:660 src/MenuObjectPropDlg.cpp:669
+#: src/MenuObjectPropDlg.cpp:679 src/MenuObjectPropDlg.cpp:688
+#: src/MenuObjectPropDlg.cpp:697
 msgid "titleset"
 msgstr ""
 
-#: src/DVDAction.cpp:186 src/MenuObjectPropDlg.cpp:635 src/MenuPropDlg.cpp:55
+#: src/DVDAction.cpp:186 src/MenuObjectPropDlg.cpp:636 src/MenuPropDlg.cpp:55
 msgid "VMGM menu"
 msgstr ""
 
@@ -880,27 +913,27 @@ msgstr ""
 msgid "cannot jump to menu; none exist"
 msgstr ""
 
-#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:652
+#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:653
 msgid "title menu"
 msgstr ""
 
-#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:652
+#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:653
 msgid "root menu"
 msgstr ""
 
-#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:652
+#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:653
 msgid "subtitle menu"
 msgstr ""
 
-#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:653
+#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:654
 msgid "audio menu"
 msgstr ""
 
-#: src/DVDAction.cpp:212 src/MenuObjectPropDlg.cpp:653
+#: src/DVDAction.cpp:212 src/MenuObjectPropDlg.cpp:654
 msgid "angle menu"
 msgstr ""
 
-#: src/DVDAction.cpp:212 src/MenuObjectPropDlg.cpp:653
+#: src/DVDAction.cpp:212 src/MenuObjectPropDlg.cpp:654
 msgid "chapter menu"
 msgstr ""
 
@@ -1619,17 +1652,9 @@ msgstr ""
 msgid "Please choose an image to insert"
 msgstr ""
 
-#: src/MenuEditor.cpp:546 src/MenuObjectPropDlg.cpp:456
+#: src/MenuEditor.cpp:546 src/MenuObjectPropDlg.cpp:457
 #: src/MenuPropDlg.cpp:140 src/TitlePropDlg.cpp:424
 msgid "Image Files "
-msgstr ""
-
-#: src/MenuEditor.cpp:548 buttons/arrow-text-left.xml:8
-#: buttons/arrow-text-left.xml:12 buttons/arrow-text-right.xml:8
-#: buttons/arrow-text-right.xml:13 buttons/pill2.xml:24 buttons/pill2.xml:36
-#: buttons/pill3.xml:17 buttons/pill3.xml:29 buttons/text-v3.xml:3
-#: objects/text-v2.xml:3 objects/text-v2.xml:19
-msgid "Text"
 msgstr ""
 
 #: src/MenuObject.cpp:265
@@ -1732,81 +1757,82 @@ msgstr ""
 msgid "Selected"
 msgstr ""
 
-#: src/MenuObjectPropDlg.cpp:339
+#: src/MenuObjectPropDlg.cpp:340
 msgid "Font..."
 msgstr ""
 
-#: src/MenuObjectPropDlg.cpp:403 src/MenuObjectPropDlg.cpp:563
+#: src/MenuObjectPropDlg.cpp:404 src/MenuObjectPropDlg.cpp:564
 #: src/MenuPropDlg.cpp:81 src/VideoPropDlg.cpp:138
 msgid "Keep Aspect Ratio"
 msgstr ""
 
-#: src/MenuObjectPropDlg.cpp:406 src/MenuPropDlg.cpp:84
+#: src/MenuObjectPropDlg.cpp:407 src/MenuPropDlg.cpp:84
 msgid "X Min"
 msgstr ""
 
-#: src/MenuObjectPropDlg.cpp:407 src/MenuPropDlg.cpp:85
+#: src/MenuObjectPropDlg.cpp:408 src/MenuPropDlg.cpp:85
 msgid "X Mid"
 msgstr ""
 
-#: src/MenuObjectPropDlg.cpp:408 src/MenuPropDlg.cpp:86
+#: src/MenuObjectPropDlg.cpp:409 src/MenuPropDlg.cpp:86
 msgid "X Max"
 msgstr ""
 
-#: src/MenuObjectPropDlg.cpp:412 src/MenuPropDlg.cpp:90
+#: src/MenuObjectPropDlg.cpp:413 src/MenuPropDlg.cpp:90
 msgid "Y Min"
 msgstr ""
 
-#: src/MenuObjectPropDlg.cpp:413 src/MenuPropDlg.cpp:91
+#: src/MenuObjectPropDlg.cpp:414 src/MenuPropDlg.cpp:91
 msgid "Y Mid"
 msgstr ""
 
-#: src/MenuObjectPropDlg.cpp:414 src/MenuPropDlg.cpp:92
+#: src/MenuObjectPropDlg.cpp:415 src/MenuPropDlg.cpp:92
 msgid "Y Max"
 msgstr ""
 
-#: src/MenuObjectPropDlg.cpp:418 src/MenuPropDlg.cpp:96
+#: src/MenuObjectPropDlg.cpp:419 src/MenuPropDlg.cpp:96
 msgid "Meet"
 msgstr ""
 
-#: src/MenuObjectPropDlg.cpp:419 src/MenuPropDlg.cpp:97
+#: src/MenuObjectPropDlg.cpp:420 src/MenuPropDlg.cpp:97
 msgid "Slice"
 msgstr ""
 
-#: src/MenuObjectPropDlg.cpp:454 buttons/ellipse-v2.xml:23
-#: buttons/ellipse45.xml:26 buttons/frame-v2.xml:18 buttons/frame45.xml:21
-#: buttons/movie.xml:26 buttons/panting_frame.xml:39
-#: buttons/sticky_note.xml:40 objects/ellipse-v3.xml:22
+#: src/MenuObjectPropDlg.cpp:455 buttons/ellipse-v2.xml:23
+#: buttons/ellipse45.xml:26 buttons/frame-text.xml:30 buttons/frame-v2.xml:18
+#: buttons/frame45.xml:21 buttons/movie.xml:26 buttons/painting_frame.xml:40
+#: buttons/sticky_note.xml:45 objects/ellipse-v3.xml:22
 #: objects/ellipse45.xml:24 objects/frame-v3.xml:18 objects/frame45.xml:20
 #: objects/gold-frame.xml:45 objects/image.xml:3 objects/image.xml:9
+#: objects/sticky_note.xml:42
 msgid "Image"
 msgstr ""
 
-#: src/MenuObjectPropDlg.cpp:462
+#: src/MenuObjectPropDlg.cpp:463
 msgid "Video"
 msgstr ""
 
-#: src/MenuObjectPropDlg.cpp:515 src/SubtitlePropDlg.cpp:186
+#: src/MenuObjectPropDlg.cpp:516 src/SubtitlePropDlg.cpp:186
 msgid "Offset:"
 msgstr ""
 
-#: src/MenuObjectPropDlg.cpp:523
+#: src/MenuObjectPropDlg.cpp:524
 msgid "Deviation:"
 msgstr ""
 
-#: src/MenuObjectPropDlg.cpp:538
+#: src/MenuObjectPropDlg.cpp:539
 msgid "Location"
 msgstr ""
 
-#: src/MenuObjectPropDlg.cpp:541
+#: src/MenuObjectPropDlg.cpp:542
 msgid "X:"
 msgstr ""
 
-#: src/MenuObjectPropDlg.cpp:542
+#: src/MenuObjectPropDlg.cpp:543
 msgid "Y:"
 msgstr ""
 
-#: src/MenuObjectPropDlg.cpp:548 buttons/arrow-blue.xml:26
+#: src/MenuObjectPropDlg.cpp:549 buttons/arrow-blue.xml:26
 #: buttons/arrow-cool.xml:17 buttons/arrow-double.xml:13
 #: buttons/arrow-gold.xml:26 buttons/arrow-green-double.xml:383
 #: buttons/arrow-green.xml:375 buttons/arrow-red.xml:29
@@ -1816,36 +1842,36 @@ msgstr ""
 msgid "Rotation"
 msgstr ""
 
-#: src/MenuObjectPropDlg.cpp:550
+#: src/MenuObjectPropDlg.cpp:551
 msgid "Angle:"
 msgstr ""
 
-#: src/MenuObjectPropDlg.cpp:556
+#: src/MenuObjectPropDlg.cpp:557
 msgid "Size"
 msgstr ""
 
-#: src/MenuObjectPropDlg.cpp:558
+#: src/MenuObjectPropDlg.cpp:559
 msgid "Width:"
 msgstr ""
 
-#: src/MenuObjectPropDlg.cpp:560
+#: src/MenuObjectPropDlg.cpp:561
 msgid "Height:"
 msgstr ""
 
-#: src/MenuObjectPropDlg.cpp:575
+#: src/MenuObjectPropDlg.cpp:576
 msgid "Animations..."
 msgstr ""
 
-#: src/MenuObjectPropDlg.cpp:626
+#: src/MenuObjectPropDlg.cpp:627
 msgid "start of current menu"
 msgstr ""
 
-#: src/MenuObjectPropDlg.cpp:711 src/MenuObjectPropDlg.cpp:715
+#: src/MenuObjectPropDlg.cpp:712 src/MenuObjectPropDlg.cpp:716
 #, c-format
 msgid "chapter %d"
 msgstr ""
 
-#: src/MenuObjectPropDlg.cpp:893
+#: src/MenuObjectPropDlg.cpp:894
 msgid "Please enter the action command."
 msgstr ""
 
@@ -1966,10 +1992,6 @@ msgstr ""
 msgid "DVD Resolution:"
 msgstr ""
 
-#: src/NewProjectDlg.cpp:51 src/NewProjectDlg.cpp:134
-msgid "Info"
-msgstr ""
-
 #: src/NewProjectDlg.cpp:56
 msgid "Disc capacity:"
 msgstr ""
@@ -2013,6 +2035,10 @@ msgstr ""
 
 #: src/Pgc.cpp:274
 msgid "Can't load vob"
+msgstr ""
+
+#: src/Process.cpp:19
+msgid "Executing command: "
 msgstr ""
 
 #: src/ProcessBurn.cpp:60
@@ -2593,10 +2619,6 @@ msgstr ""
 msgid "ABCabcXYZxyz"
 msgstr ""
 
-#: src/SubtitlePropDlg.cpp:143
-msgid "Fill:"
-msgstr ""
-
 #: src/SubtitlePropDlg.cpp:156
 msgid "Outline:"
 msgstr ""
@@ -3044,7 +3066,8 @@ msgstr ""
 
 #: buttons/arrow-simple-v2.xml:50 buttons/arrow3d-left.xml:41
 #: buttons/arrow3d-right.xml:41 buttons/ellipse-v2.xml:44
-#: buttons/ellipse45.xml:47 buttons/frame-v2.xml:53 buttons/frame45.xml:63
+#: buttons/ellipse45.xml:47 buttons/frame-text.xml:63
+#: buttons/frame-text.xml:83 buttons/frame-v2.xml:53 buttons/frame45.xml:63
 #: buttons/home-v2.xml:35 buttons/settings.xml:30
 #: buttons/text-circle-v2.xml:32 buttons/text-square-v2.xml:33
 #: buttons/text-underlined-v3.xml:32 buttons/text-v3.xml:58
@@ -3082,14 +3105,14 @@ msgstr ""
 msgid "Arrow"
 msgstr ""
 
-#: buttons/arrow.xml:23 buttons/cancel.xml:28 buttons/circle.xml:34
-#: buttons/circle2.xml:27 buttons/ellipse-v2.xml:51 buttons/ellipse45.xml:54
+#: buttons/arrow.xml:23 buttons/cancel.xml:28 buttons/circle-outline.xml:36
+#: buttons/circle.xml:28 buttons/ellipse-v2.xml:51 buttons/ellipse45.xml:54
 #: buttons/ok.xml:27 objects/ellipse-v3.xml:43 objects/ellipse45.xml:45
 #: objects/frame-v3.xml:53 objects/frame45.xml:62 objects/text-v2.xml:32
 msgid "Outline colour"
 msgstr ""
 
-#: buttons/arrow.xml:35 buttons/circle.xml:41 buttons/circle2.xml:34
+#: buttons/arrow.xml:35 buttons/circle-outline.xml:48 buttons/circle.xml:35
 #: buttons/ellipse-v2.xml:37 buttons/ellipse45.xml:40
 #: objects/ellipse-v3.xml:36 objects/ellipse45.xml:38 objects/frame-v3.xml:46
 #: objects/frame45.xml:55 objects/text-v2.xml:39
@@ -3148,22 +3171,28 @@ msgstr ""
 msgid "X color"
 msgstr ""
 
-#: buttons/circle.xml:3 buttons/circle2.xml:3
-msgid "Circle"
+#: buttons/circle-outline.xml:3
+msgid "Circle outline"
 msgstr ""
 
-#: buttons/circle.xml:11 buttons/circle2.xml:11
+#: buttons/circle-outline.xml:8 buttons/circle.xml:7
 msgid "01"
 msgstr ""
 
-#: buttons/circle.xml:27 buttons/circle2.xml:53 buttons/text-circle-v2.xml:39
+#: buttons/circle-outline.xml:22 buttons/circle.xml:21
+#: buttons/text-circle-v2.xml:39
 msgid "Circle colour"
 msgstr ""
 
-#: buttons/circle.xml:48 buttons/circle2.xml:41 buttons/pill.xml:50
-#: buttons/text-circle-v2.xml:25 buttons/text-square-v2.xml:26
-#: buttons/text-underlined-v3.xml:25 buttons/text-v3.xml:25
+#: buttons/circle-outline.xml:29 buttons/circle.xml:42
+#: buttons/frame-text.xml:76 buttons/pill.xml:50 buttons/text-circle-v2.xml:25
+#: buttons/text-square-v2.xml:26 buttons/text-underlined-v3.xml:25
+#: buttons/text-v3.xml:25
 msgid "Text colour"
+msgstr ""
+
+#: buttons/circle.xml:3
+msgid "Circle"
 msgstr ""
 
 #: buttons/ellipse-v2.xml:3 objects/ellipse-v3.xml:3
@@ -3186,6 +3215,31 @@ msgstr ""
 msgid "Ellipse 45°"
 msgstr ""
 
+#: buttons/frame-text.xml:4
+msgid "Frame and Text"
+msgstr ""
+
+#: buttons/frame-text.xml:25
+msgid "T"
+msgstr ""
+
+#: buttons/frame-text.xml:37 buttons/frame-v2.xml:46 buttons/frame45.xml:56
+msgid "Border width"
+msgstr ""
+
+#: buttons/frame-text.xml:44
+msgid "Corner round"
+msgstr ""
+
+#: buttons/frame-text.xml:51 buttons/frame-v2.xml:60 buttons/frame45.xml:70
+#: buttons/movie.xml:40
+msgid "Border colour"
+msgstr ""
+
+#: buttons/frame-text.xml:90
+msgid "Text offset"
+msgstr ""
+
 #: buttons/frame-v2.xml:3 objects/frame-v3.xml:3
 msgid "Frame"
 msgstr ""
@@ -3198,14 +3252,6 @@ msgstr ""
 #: buttons/frame-v2.xml:39 buttons/frame45.xml:49 buttons/text-v3.xml:51
 #: objects/frame-v3.xml:39 objects/frame45.xml:48 objects/rectangle-v2.xml:24
 msgid "Ry"
-msgstr ""
-
-#: buttons/frame-v2.xml:46 buttons/frame45.xml:56
-msgid "Border width"
-msgstr ""
-
-#: buttons/frame-v2.xml:60 buttons/frame45.xml:70 buttons/movie.xml:40
-msgid "Border colour"
 msgstr ""
 
 #: buttons/frame45.xml:3 objects/frame45.xml:3
@@ -3256,11 +3302,11 @@ msgstr ""
 msgid "V color"
 msgstr ""
 
-#: buttons/panting_frame.xml:4
+#: buttons/painting_frame.xml:4
 msgid "Painting Frame"
 msgstr ""
 
-#: buttons/panting_frame.xml:46
+#: buttons/painting_frame.xml:47
 msgid "Frame colour"
 msgstr ""
 
@@ -3288,12 +3334,16 @@ msgstr ""
 msgid "Pill 3"
 msgstr ""
 
-#: buttons/sticky_note.xml:47
-msgid "Cor do alfinete"
+#: buttons/sticky_note.xml:4 objects/sticky_note.xml:4
+msgid "Sticky note"
 msgstr ""
 
-#: buttons/sticky_note.xml:54
-msgid "Cor da nota"
+#: buttons/sticky_note.xml:52 objects/sticky_note.xml:56
+msgid "Pin"
+msgstr ""
+
+#: buttons/sticky_note.xml:59
+msgid "Selection colour"
 msgstr ""
 
 #: buttons/text-circle-v2.xml:3
@@ -3342,6 +3392,10 @@ msgstr ""
 
 #: objects/rectangle-v2.xml:3
 msgid "Rectangle"
+msgstr ""
+
+#: objects/sticky_note.xml:49
+msgid "Note"
 msgstr ""
 
 #: objects/text-v2.xml:13
