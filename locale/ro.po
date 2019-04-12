@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DVD Styler v3.0.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-11 14:31+0200\n"
+"POT-Creation-Date: 2019-04-12 13:15+0200\n"
 "PO-Revision-Date: 2016-12-05 09:30+0200\n"
 "Last-Translator: \n"
 "Language-Team: Dan Ibănescu <ibanescu.dan at gmail.com>\n"
@@ -259,14 +259,14 @@ msgstr "Valoare volum '%s' invalidă"
 msgid "Analysis of audio"
 msgstr "Analiză audio"
 
-#: src/AudioPropDlg.cpp:389 src/MainWin.cpp:868 src/SysUtils.cpp:303 src/VobListBox.cpp:611
+#: src/AudioPropDlg.cpp:389 src/MainWin.cpp:872 src/SysUtils.cpp:303 src/VobListBox.cpp:611
 msgid "Please wait..."
 msgstr "Vă rog aşteptaţi..."
 
 #: src/BurnDlg.cpp:104 src/BurnDlg.cpp:459 src/BurnDlg.cpp:466 src/BurnDlg.cpp:588 src/BurnDlg.cpp:595
 #: src/BurnDlg.cpp:601 src/BurnDlg.cpp:608 src/BurnDlg.cpp:615 src/BurnDlg.cpp:620 src/BurnDlg.cpp:627
 #: src/BurnDlg.cpp:632 src/BurnDlg.cpp:638 src/BurnDlg.cpp:644 src/BurnDlg.cpp:657 src/BurnDlg.cpp:660
-#: src/MainWin.cpp:1069 src/MainWin.cpp:1090 src/MainWin.cpp:1095 src/ProcessBurn.cpp:68
+#: src/MainWin.cpp:1073 src/MainWin.cpp:1094 src/MainWin.cpp:1099 src/ProcessBurn.cpp:68
 #: src/ProcessBurn.cpp:86 src/ProcessBurn.cpp:128 src/ProcessFormatDvd.cpp:44 src/ProcessFormatDvd.cpp:53
 #: src/ProcessPreview.cpp:45 src/ProcessPreview.cpp:53 src/ProcessPreview.cpp:61 src/ProcessPreview.cpp:82
 #: src/ProcessPreview.cpp:87 src/TitlesetManager.cpp:467
@@ -370,7 +370,7 @@ msgstr "Nu este suficient spaţiu în directorul temporar."
 msgid "Choose a directory"
 msgstr "Alege un dosar"
 
-#: src/BurnDlg.cpp:536 src/MainWin.cpp:1214 src/TitlePropDlg.cpp:423 src/TitlePropDlg.cpp:439
+#: src/BurnDlg.cpp:536 src/MainWin.cpp:1218 src/TitlePropDlg.cpp:423 src/TitlePropDlg.cpp:439
 #: wxVillaLib/PropDlg.cpp:788
 msgid "Choose a file"
 msgstr "Alege un fişier"
@@ -379,7 +379,7 @@ msgstr "Alege un fişier"
 msgid "Programs"
 msgstr "Programe"
 
-#: src/BurnDlg.cpp:538 src/MainWin.cpp:1048 src/MainWin.cpp:1209 src/MainWin.cpp:1213
+#: src/BurnDlg.cpp:538 src/MainWin.cpp:1052 src/MainWin.cpp:1213 src/MainWin.cpp:1217
 #: src/MenuObjectPropDlg.cpp:458 src/MenuPropDlg.cpp:141 src/MenuPropDlg.cpp:155 src/TitlePropDlg.cpp:235
 #: src/TitlePropDlg.cpp:425
 msgid "All Files"
@@ -638,7 +638,7 @@ msgstr[2] "Există %d fişiere (%0.1f MB) în memoria cache de transcodare."
 msgid "Do you want to clear the cache?"
 msgstr "Vreți să goliți cache-ul?"
 
-#: src/Cache.cpp:376 src/MainWin.cpp:1005
+#: src/Cache.cpp:376 src/MainWin.cpp:1009
 msgid "Confirm"
 msgstr "Confirmare"
 
@@ -688,7 +688,7 @@ msgstr "Personalizare"
 msgid "Pause:"
 msgstr "Pauză:"
 
-#: src/ChaptersDlg.cpp:174 src/MainWin.cpp:617 src/MenuPropDlg.cpp:171 src/SettingsDlg.cpp:163
+#: src/ChaptersDlg.cpp:174 src/MainWin.cpp:621 src/MenuPropDlg.cpp:171 src/SettingsDlg.cpp:163
 #: src/SettingsDlg.cpp:165 src/TitlePropDlg.cpp:150 src/TitlePropDlg.cpp:196 src/VideoFrameDlg.cpp:82
 #: src/VideoPropDlg.cpp:188 src/VideoPropDlg.cpp:193
 msgid "sec"
@@ -1266,7 +1266,7 @@ msgstr "&Ştergere"
 msgid "&Edit button"
 msgstr "buton"
 
-#: src/MainWin.cpp:281
+#: src/MainWin.cpp:281 src/MainWin.cpp:1412
 #, fuzzy
 msgid "&Reset button"
 msgstr "Buton implicit:"
@@ -1303,100 +1303,100 @@ msgstr "Explorator fişiere"
 msgid "Backgrounds"
 msgstr "Fundaluri"
 
-#: src/MainWin.cpp:358 src/MainWin.cpp:367 src/MainWin.cpp:526 src/MenuPropDlg.cpp:182
+#: src/MainWin.cpp:358 src/MainWin.cpp:367 src/MainWin.cpp:530 src/MenuPropDlg.cpp:182
 msgid "Buttons"
 msgstr "Butoane"
 
-#: src/MainWin.cpp:520 src/MainWin.cpp:1367 src/MainWin.cpp:1385 src/MenuObject.cpp:265
+#: src/MainWin.cpp:522 src/MainWin.cpp:1371 src/MainWin.cpp:1393 src/MenuObject.cpp:265
 #: src/MenuObjectPropDlg.cpp:265 src/MenuObjectPropDlg.cpp:280 buttons/text-circle-v2.xml:13
 #: buttons/text-square-v2.xml:14 buttons/text-underlined-v3.xml:12 buttons/text-v3.xml:13
 msgid "button"
 msgstr "buton"
 
-#: src/MainWin.cpp:577
+#: src/MainWin.cpp:581
 msgid "Double click to set the background."
 msgstr "Dublu clic pentru setare fundal"
 
-#: src/MainWin.cpp:584
+#: src/MainWin.cpp:588
 #, c-format
 msgid "%s (%.1f KB)"
 msgstr "%s (%.1f Kb)"
 
-#: src/MainWin.cpp:586
+#: src/MainWin.cpp:590
 #, c-format
 msgid "%s (%.1f MB)"
 msgstr "%s (%.1f Mb)"
 
-#: src/MainWin.cpp:589
+#: src/MainWin.cpp:593
 #, c-format
 msgid "%s (%.1f GB)"
 msgstr "%s (%.1f Gb)"
 
-#: src/MainWin.cpp:609
+#: src/MainWin.cpp:613
 #, c-format
 msgid "%d slides"
 msgstr "%d diapozitive"
 
-#: src/MainWin.cpp:621 src/SettingsDlg.cpp:126
+#: src/MainWin.cpp:625 src/SettingsDlg.cpp:126
 msgid "min"
 msgstr "min"
 
-#: src/MainWin.cpp:696
+#: src/MainWin.cpp:700
 #, c-format
 msgid "Are you sure you want to delete '%s' from the file system?"
 msgstr "Sigur vreţi să ştergeţi '%s'?"
 
-#: src/MainWin.cpp:797
+#: src/MainWin.cpp:801
 msgid "Select chapter"
 msgstr "Selectare capitol"
 
-#: src/MainWin.cpp:824
+#: src/MainWin.cpp:828
 msgid "Play all"
 msgstr "Redă tot"
 
-#: src/MainWin.cpp:826
+#: src/MainWin.cpp:830
 msgid "Select title"
 msgstr "Selectează un titlu"
 
-#: src/MainWin.cpp:828 src/TitlesetManager.cpp:1001
+#: src/MainWin.cpp:832 src/TitlesetManager.cpp:1001
 msgid "Back"
 msgstr "Înapoi"
 
-#: src/MainWin.cpp:830
+#: src/MainWin.cpp:834
 msgid "Previous"
 msgstr "Anterior"
 
-#: src/MainWin.cpp:832
+#: src/MainWin.cpp:836
 msgid "Next"
 msgstr "Următorul"
 
-#: src/MainWin.cpp:879
+#: src/MainWin.cpp:883
 #, c-format
 msgid "Error opening '%s'"
 msgstr "Eroare la deschiderea '%s'"
 
-#: src/MainWin.cpp:899
+#: src/MainWin.cpp:903
 msgid "Open a DVDStyler project file"
 msgstr "Deschide un fişier proiect DVDStyler"
 
-#: src/MainWin.cpp:900 src/MainWin.cpp:1047
+#: src/MainWin.cpp:904 src/MainWin.cpp:1051
 msgid "Project files"
 msgstr "Fişiere proiect"
 
-#: src/MainWin.cpp:931 src/MainWin.cpp:1003
+#: src/MainWin.cpp:935 src/MainWin.cpp:1007
 msgid "Untitled"
 msgstr "Fără titlu"
 
-#: src/MainWin.cpp:1004
+#: src/MainWin.cpp:1008
 #, c-format
 msgid "The file '%s' was modified, save changes?"
 msgstr "Fişierul '%s' a fost modificat, salvaţi modificările?"
 
-#: src/MainWin.cpp:1046
+#: src/MainWin.cpp:1050
 msgid "Save a DVDStyler project file"
 msgstr "Salvarea unui fişier proiect DVDStyler"
 
-#: src/MainWin.cpp:1068
+#: src/MainWin.cpp:1072
 msgid ""
 "The selected video files don't fit on DVD. Please reduce\n"
 "video quality (bitrate) or remove some titles."
@@ -1404,7 +1404,7 @@ msgstr ""
 "Fişierele video selectate nu încap pe DVD. Vă rog\n"
 "reduceţi calitatea video (bitrate-ul) sau ştergeţi unele titluri."
 
-#: src/MainWin.cpp:1089
+#: src/MainWin.cpp:1093
 msgid ""
 "Project doesn't contain any video title. To add a title please\n"
 "drag a video file into the bottom section of the window."
@@ -1412,7 +1412,7 @@ msgstr ""
 "Proiectul nu conţine nici un titlu video. Pentru adăugarea unui titlu, vă rog\n"
 "să trageţi un fişier video în secţiunea inferioară a ferestrei."
 
-#: src/MainWin.cpp:1094
+#: src/MainWin.cpp:1098
 #, c-format
 msgid ""
 "Titleset %d doesn't contain any video title. To add a title\n"
@@ -1421,42 +1421,57 @@ msgstr ""
 "Grupul de titluri %d  nu conţine nici un titlu video. Pentru adăugarea unui titlu, vă rog\n"
 "să trageţi un fişier video în secţiunea inferioară a ferestrei."
 
-#: src/MainWin.cpp:1203
+#: src/MainWin.cpp:1207
 msgid "Audio/Video/Subtitle Files"
 msgstr "Fişiere audio/video/subtitrări"
 
-#: src/MainWin.cpp:1205 src/MenuPropDlg.cpp:154 src/TitlePropDlg.cpp:234 src/TitlePropDlg.cpp:441
+#: src/MainWin.cpp:1209 src/MenuPropDlg.cpp:154 src/TitlePropDlg.cpp:234 src/TitlePropDlg.cpp:441
 msgid "Audio Files"
 msgstr "Fişiere audio"
 
-#: src/MainWin.cpp:1206 src/MainWin.cpp:1211 src/MenuPropDlg.cpp:139
+#: src/MainWin.cpp:1210 src/MainWin.cpp:1215 src/MenuPropDlg.cpp:139
 msgid "Video Files"
 msgstr "Fişiere video"
 
-#: src/MainWin.cpp:1207 src/TitlePropDlg.cpp:442
+#: src/MainWin.cpp:1211 src/TitlePropDlg.cpp:442
 msgid "Subtitle Files"
 msgstr "Fişiere subtitrare"
 
-#: src/MainWin.cpp:1208 src/MainWin.cpp:1212
+#: src/MainWin.cpp:1212 src/MainWin.cpp:1216
 msgid "Image Files"
 msgstr "Fişier imagine"
 
-#: src/MainWin.cpp:1240
+#: src/MainWin.cpp:1244
 msgid "Choose DVD device or directory"
 msgstr "Alege un dispozitiv DVD sau un dosar"
 
-#: src/MainWin.cpp:1292
+#: src/MainWin.cpp:1296
 msgid "Choose a titleset to add:"
 msgstr "Alegeți grupul de titluri de adăugat:"
 
-#: src/MainWin.cpp:1348
+#: src/MainWin.cpp:1352
 msgid "Open a SVG file"
 msgstr ""
 
-#: src/MainWin.cpp:1349
+#: src/MainWin.cpp:1353
 #, fuzzy
 msgid "SVG files"
 msgstr "Fişiere video"
+
+#: src/MainWin.cpp:1383
+#, fuzzy
+msgid "Do you really want to reset this button?"
+msgstr "Sigur vreţi să ştergeţi %s?"
+
+#: src/MainWin.cpp:1401
+#, fuzzy
+msgid "Do you really want to delete this button?"
+msgstr "Sigur vreţi să ştergeţi %s?"
+
+#: src/MainWin.cpp:1412
+#, fuzzy
+msgid "&Delete button"
+msgstr "Buton implicit:"
 
 #: src/Menu.cpp:839
 #, c-format

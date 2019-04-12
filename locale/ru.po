@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DVDStyler v3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-11 14:31+0200\n"
-"PO-Revision-Date: 2017-11-25 22:58+0100\n"
+"POT-Creation-Date: 2019-04-12 13:15+0200\n"
+"PO-Revision-Date: 2019-04-12 14:00+0200\n"
 "Last-Translator: Alex Thuering <alex at thuering.biz>\n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Basepath: ..\n"
-"X-Generator: Poedit 2.0.1\n"
+"X-Generator: Poedit 2.1.1\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n"
 "%100>=20) ? 1 : 2);\n"
 "X-Poedit-SearchPath-0: src\n"
@@ -69,7 +69,7 @@ msgid ""
 "small guides."
 msgstr ""
 "Документацию и %sЧасто задаваемые вопросы%s вы можете найти в %sDVDStyler ВИКИ%s. Вы также можете там "
-"опубликовать свои комментарии или небольшие руководства. "
+"опубликовать свои комментарии или небольшие руководства."
 
 #: src/About.cpp:92
 msgid "Bugs & RFE"
@@ -263,14 +263,14 @@ msgstr "Неверное значение громкости '%s'"
 msgid "Analysis of audio"
 msgstr "Анализ звука"
 
-#: src/AudioPropDlg.cpp:389 src/MainWin.cpp:868 src/SysUtils.cpp:303 src/VobListBox.cpp:611
+#: src/AudioPropDlg.cpp:389 src/MainWin.cpp:872 src/SysUtils.cpp:303 src/VobListBox.cpp:611
 msgid "Please wait..."
 msgstr "Пожалуйста подождите..."
 
 #: src/BurnDlg.cpp:104 src/BurnDlg.cpp:459 src/BurnDlg.cpp:466 src/BurnDlg.cpp:588 src/BurnDlg.cpp:595
 #: src/BurnDlg.cpp:601 src/BurnDlg.cpp:608 src/BurnDlg.cpp:615 src/BurnDlg.cpp:620 src/BurnDlg.cpp:627
 #: src/BurnDlg.cpp:632 src/BurnDlg.cpp:638 src/BurnDlg.cpp:644 src/BurnDlg.cpp:657 src/BurnDlg.cpp:660
-#: src/MainWin.cpp:1069 src/MainWin.cpp:1090 src/MainWin.cpp:1095 src/ProcessBurn.cpp:68
+#: src/MainWin.cpp:1073 src/MainWin.cpp:1094 src/MainWin.cpp:1099 src/ProcessBurn.cpp:68
 #: src/ProcessBurn.cpp:86 src/ProcessBurn.cpp:128 src/ProcessFormatDvd.cpp:44 src/ProcessFormatDvd.cpp:53
 #: src/ProcessPreview.cpp:45 src/ProcessPreview.cpp:53 src/ProcessPreview.cpp:61 src/ProcessPreview.cpp:82
 #: src/ProcessPreview.cpp:87 src/TitlesetManager.cpp:467
@@ -281,8 +281,8 @@ msgstr "Прожиг"
 msgid "Temp directory:"
 msgstr "Каталог для временных файлов:"
 
-#: src/BurnDlg.cpp:114 src/BurnDlg.cpp:138 src/BurnDlg.cpp:160 src/BurnDlg.cpp:186
-#: src/SubtitlePropDlg.cpp:148 src/SubtitlePropDlg.cpp:161 src/SubtitlePropDlg.cpp:179
+#: src/BurnDlg.cpp:114 src/BurnDlg.cpp:138 src/BurnDlg.cpp:160 src/BurnDlg.cpp:186 src/SubtitlePropDlg.cpp:148
+#: src/SubtitlePropDlg.cpp:161 src/SubtitlePropDlg.cpp:179
 msgid "..."
 msgstr "..."
 
@@ -374,7 +374,7 @@ msgstr "Не достаточно места в каталоге для врем
 msgid "Choose a directory"
 msgstr "Выберите каталог"
 
-#: src/BurnDlg.cpp:536 src/MainWin.cpp:1214 src/TitlePropDlg.cpp:423 src/TitlePropDlg.cpp:439
+#: src/BurnDlg.cpp:536 src/MainWin.cpp:1218 src/TitlePropDlg.cpp:423 src/TitlePropDlg.cpp:439
 #: wxVillaLib/PropDlg.cpp:788
 msgid "Choose a file"
 msgstr "Выберите файл"
@@ -383,7 +383,7 @@ msgstr "Выберите файл"
 msgid "Programs"
 msgstr "Программы"
 
-#: src/BurnDlg.cpp:538 src/MainWin.cpp:1048 src/MainWin.cpp:1209 src/MainWin.cpp:1213
+#: src/BurnDlg.cpp:538 src/MainWin.cpp:1052 src/MainWin.cpp:1213 src/MainWin.cpp:1217
 #: src/MenuObjectPropDlg.cpp:458 src/MenuPropDlg.cpp:141 src/MenuPropDlg.cpp:155 src/TitlePropDlg.cpp:235
 #: src/TitlePropDlg.cpp:425
 msgid "All Files"
@@ -448,14 +448,15 @@ msgstr ""
 
 #: src/ButtonAddParamDlg.cpp:47
 msgid "Add parameter"
-msgstr ""
+msgstr "Добавить параметр"
 
 #: src/ButtonAddParamDlg.cpp:55
-#, fuzzy
 msgid ""
 "Please select an SVG element\n"
 "for new parameter:"
-msgstr "Укажите, пожалуйста, путь к видео проигрывателю"
+msgstr ""
+"Пожалуйста, выберите элемент SVG\n"
+"для нового параметра:"
 
 #: src/ButtonAddParamDlg.cpp:60 src/SubtitlePropDlg.cpp:143
 msgid "Fill:"
@@ -470,69 +471,61 @@ msgid "Text"
 msgstr "Текст"
 
 #: src/ButtonAddParamDlg.cpp:65
-#, fuzzy
 msgid "Stroke:"
-msgstr "Цвет контура"
+msgstr "Цвет контура:"
 
 #: src/ButtonEditDlg.cpp:170
 msgid "name"
-msgstr ""
+msgstr "имя"
 
-#: src/ButtonEditDlg.cpp:170 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:439
-#: src/MenuObjectPropDlg.cpp:677 src/MenuObjectPropDlg.cpp:686 src/MenuObjectPropDlg.cpp:698
+#: src/ButtonEditDlg.cpp:170 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:439 src/MenuObjectPropDlg.cpp:677
+#: src/MenuObjectPropDlg.cpp:686 src/MenuObjectPropDlg.cpp:698
 msgid "title"
 msgstr "раздел"
 
 #: src/ButtonEditDlg.cpp:170
 msgid "type"
-msgstr ""
+msgstr "тип"
 
 #: src/ButtonEditDlg.cpp:170
 msgid "ID of element"
-msgstr ""
+msgstr "ID элемента"
 
 #: src/ButtonEditDlg.cpp:170
-#, fuzzy
 msgid "attribute name"
-msgstr "Атрибут"
+msgstr "имя атрибута"
 
 #: src/ButtonEditDlg.cpp:170
 msgid "dynamic"
-msgstr ""
+msgstr "динамический"
 
 #: src/ButtonEditDlg.cpp:171
 msgid "value"
-msgstr ""
+msgstr "значение"
 
 #: src/ButtonEditDlg.cpp:171 src/ButtonEditDlg.cpp:261
-#, fuzzy
 msgid "highlighted"
-msgstr "Выделенный"
+msgstr "выделенный"
 
 #: src/ButtonEditDlg.cpp:171 src/ButtonEditDlg.cpp:262
-#, fuzzy
 msgid "selected"
-msgstr "Выделенный"
+msgstr "выбранный"
 
 #: src/ButtonEditDlg.cpp:251
-#, fuzzy
 msgid "Create button"
-msgstr "Кнопка по умолчанию:"
+msgstr "Создать кнопку"
 
 #: src/ButtonEditDlg.cpp:260
-#, fuzzy
 msgid "normal"
-msgstr "Обычный"
+msgstr "обычный"
 
 #: src/ButtonEditDlg.cpp:264
-#, fuzzy
 msgid "Button state"
-msgstr "Кнопки"
+msgstr "Состояние кнопки"
 
 #: src/ButtonEditDlg.cpp:271
-#, fuzzy
 msgid "Directory:"
-msgstr "Каталог"
+msgstr "Папка:"
 
 #: src/ButtonEditDlg.cpp:273 buttons/circle-outline.xml:16 buttons/circle.xml:15 buttons/pill.xml:44
 #: buttons/text-circle-v2.xml:19 buttons/text-square-v2.xml:20 buttons/text-underlined-v3.xml:19
@@ -546,27 +539,24 @@ msgstr "Имя файла:"
 
 #: src/ButtonEditDlg.cpp:280
 msgid ".xml"
-msgstr ""
+msgstr ".xml"
 
 #: src/ButtonEditDlg.cpp:283
-#, fuzzy
 msgid "Title:"
-msgstr "Раздел"
+msgstr "Название:"
 
 #: src/ButtonEditDlg.cpp:287
-#, fuzzy
 msgid "Default width:"
-msgstr "Кнопка по умолчанию:"
+msgstr "Ширина по-умолчанию:"
 
 #: src/ButtonEditDlg.cpp:293 src/ButtonEditDlg.cpp:316 src/ButtonEditDlg.cpp:340 src/ButtonEditDlg.cpp:363
-#, fuzzy
 msgid "or"
-msgstr "Ядро системы"
+msgstr "или"
 
 #: src/ButtonEditDlg.cpp:297 src/ButtonEditDlg.cpp:302 src/ButtonEditDlg.cpp:320 src/ButtonEditDlg.cpp:325
 #: src/ButtonEditDlg.cpp:344 src/ButtonEditDlg.cpp:349 src/ButtonEditDlg.cpp:367 src/ButtonEditDlg.cpp:372
 msgid "+"
-msgstr ""
+msgstr "+"
 
 #: src/ButtonEditDlg.cpp:307 src/ButtonEditDlg.cpp:330 src/ButtonEditDlg.cpp:354 src/ButtonEditDlg.cpp:377
 #: src/SubtitlePropDlg.cpp:153 src/SubtitlePropDlg.cpp:167 src/SubtitlePropDlg.cpp:184
@@ -574,57 +564,50 @@ msgid "%"
 msgstr "%"
 
 #: src/ButtonEditDlg.cpp:310
-#, fuzzy
 msgid "Min width:"
-msgstr "Ширина контура"
+msgstr "Мин. ширина:"
 
 #: src/ButtonEditDlg.cpp:334
-#, fuzzy
 msgid "Default height:"
-msgstr "Стандартная длительность эпизода:"
+msgstr "Высота по-умолчанию:"
 
 #: src/ButtonEditDlg.cpp:357
-#, fuzzy
 msgid "Min height:"
-msgstr "высота"
+msgstr "Мин. высота:"
 
 #: src/ButtonEditDlg.cpp:382
-#, fuzzy
 msgid "Parameters:"
-msgstr "Эпизоды:"
+msgstr "Параметры:"
 
 #: src/ButtonEditDlg.cpp:391 src/MainWin.cpp:321
 msgid "Save"
 msgstr "Сохранить"
 
 #: src/ButtonEditDlg.cpp:456
-#, fuzzy
 msgid "Edit button"
-msgstr "кнопка"
+msgstr "Редактировать кнопку"
 
 #: src/ButtonEditDlg.cpp:500
-#, fuzzy
 msgid "Add"
-msgstr "&Добавить"
+msgstr "Добавить"
 
 #: src/ButtonEditDlg.cpp:502
-#, fuzzy
 msgid "Remove selected"
-msgstr "Удалить файл"
+msgstr "Удалить выбранное"
 
 #: src/ButtonEditDlg.cpp:546
 msgid "No SVG element is selected"
-msgstr ""
+msgstr "Элемент SVG не выбран"
 
 #: src/ButtonEditDlg.cpp:627 src/NewProjectDlg.cpp:51 src/NewProjectDlg.cpp:134
 msgid "Info"
-msgstr ""
+msgstr "Инфо"
 
 #: src/ButtonEditDlg.cpp:627
 msgid ""
 "Click on image to select an SVG\n"
 " element for a new parameter"
-msgstr ""
+msgstr "Нажмите на изображение, чтобы выбрать элемент SVG для нового параметра"
 
 #: src/Cache.cpp:238 src/Cache.cpp:263 src/Process.cpp:25 src/ProcessMenuTransitions.cpp:121
 #: src/ProcessTranscode.cpp:159 src/ProcessTranscode.cpp:174
@@ -644,7 +627,7 @@ msgstr[2] "В кэше транскодирования %d файлов (%0.1f �
 msgid "Do you want to clear the cache?"
 msgstr "Вы хотите очистить кэш?"
 
-#: src/Cache.cpp:376 src/MainWin.cpp:1005
+#: src/Cache.cpp:376 src/MainWin.cpp:1009
 msgid "Confirm"
 msgstr "Подтверждение"
 
@@ -694,7 +677,7 @@ msgstr "Пользовательское"
 msgid "Pause:"
 msgstr "Пауза:"
 
-#: src/ChaptersDlg.cpp:174 src/MainWin.cpp:617 src/MenuPropDlg.cpp:171 src/SettingsDlg.cpp:163
+#: src/ChaptersDlg.cpp:174 src/MainWin.cpp:621 src/MenuPropDlg.cpp:171 src/SettingsDlg.cpp:163
 #: src/SettingsDlg.cpp:165 src/TitlePropDlg.cpp:150 src/TitlePropDlg.cpp:196 src/VideoFrameDlg.cpp:82
 #: src/VideoPropDlg.cpp:188 src/VideoPropDlg.cpp:193
 msgid "sec"
@@ -777,19 +760,19 @@ msgstr "PCM 48 кГц"
 
 #: src/DVD.cpp:974
 msgid "SD (standard)"
-msgstr ""
+msgstr "SD (стандарт)"
 
 #: src/DVD.cpp:975
 msgid "Half HD (1280 x 720)"
-msgstr ""
+msgstr "Half HD (1280 x 720)"
 
 #: src/DVD.cpp:976
 msgid "HDV (1440 x 1080)"
-msgstr ""
+msgstr "HDV (1440 x 1080)"
 
 #: src/DVD.cpp:977
 msgid "Full HD (1920 x 1080)"
-msgstr ""
+msgstr "Full HD (1920 x 1080)"
 
 #: src/DVD.cpp:983
 msgid "CD (700 MB)"
@@ -1082,8 +1065,8 @@ msgstr "не возможно вызвать (call) меню из другого
 #: src/DVDAction.cpp:476
 msgid "cannot call to a specific menu PGC, only an entry"
 msgstr ""
-"не возможно вызвать (call) меню по номеру, а только меню помеченное как корневое, аудио меню и т.п., к "
-"примеру call menu entry audio;"
+"не возможно вызвать (call) меню по номеру, а только \"entry\" меню, к примеру call menu entry audio; для "
+"вызова аудио меню"
 
 #: src/DVDAction.cpp:504
 #, c-format
@@ -1126,7 +1109,7 @@ msgstr "каталог вывода"
 
 #: src/dvdstyler.cpp:194
 msgid "output ISO file name"
-msgstr "ISO-файл вывода"
+msgstr "имя ISO-файла"
 
 #: src/dvdstyler.cpp:195
 msgid "DVD device to burn"
@@ -1235,7 +1218,7 @@ msgstr "&Параметры..."
 
 #: src/MainWin.cpp:203
 msgid "&Create button from SVG..."
-msgstr ""
+msgstr "&Создать кнопку из SVG..."
 
 #: src/MainWin.cpp:204
 msgid "&Configuration"
@@ -1270,14 +1253,12 @@ msgid "&Delete"
 msgstr "&Удалить"
 
 #: src/MainWin.cpp:280
-#, fuzzy
 msgid "&Edit button"
-msgstr "кнопка"
+msgstr "&Редактировать кнопку"
 
-#: src/MainWin.cpp:281
-#, fuzzy
+#: src/MainWin.cpp:281 src/MainWin.cpp:1412
 msgid "&Reset button"
-msgstr "Кнопка по умолчанию:"
+msgstr "&Сбросить кнопку"
 
 #: src/MainWin.cpp:306
 msgid "DVDStyler"
@@ -1311,100 +1292,100 @@ msgstr "Менеджер файлов"
 msgid "Backgrounds"
 msgstr "Фоновые изображения"
 
-#: src/MainWin.cpp:358 src/MainWin.cpp:367 src/MainWin.cpp:526 src/MenuPropDlg.cpp:182
+#: src/MainWin.cpp:358 src/MainWin.cpp:367 src/MainWin.cpp:530 src/MenuPropDlg.cpp:182
 msgid "Buttons"
 msgstr "Кнопки"
 
-#: src/MainWin.cpp:520 src/MainWin.cpp:1367 src/MainWin.cpp:1385 src/MenuObject.cpp:265
+#: src/MainWin.cpp:522 src/MainWin.cpp:1371 src/MainWin.cpp:1393 src/MenuObject.cpp:265
 #: src/MenuObjectPropDlg.cpp:265 src/MenuObjectPropDlg.cpp:280 buttons/text-circle-v2.xml:13
 #: buttons/text-square-v2.xml:14 buttons/text-underlined-v3.xml:12 buttons/text-v3.xml:13
 msgid "button"
 msgstr "кнопка"
 
-#: src/MainWin.cpp:577
+#: src/MainWin.cpp:581
 msgid "Double click to set the background."
 msgstr "Двойной щелчок для установки фона."
 
-#: src/MainWin.cpp:584
+#: src/MainWin.cpp:588
 #, c-format
 msgid "%s (%.1f KB)"
 msgstr "%s (%.1f КБ)"
 
-#: src/MainWin.cpp:586
+#: src/MainWin.cpp:590
 #, c-format
 msgid "%s (%.1f MB)"
 msgstr "%s (%.1f МБ)"
 
-#: src/MainWin.cpp:589
+#: src/MainWin.cpp:593
 #, c-format
 msgid "%s (%.1f GB)"
 msgstr "%s (%.1f ГБ)"
 
-#: src/MainWin.cpp:609
+#: src/MainWin.cpp:613
 #, c-format
 msgid "%d slides"
 msgstr "%d слайдов"
 
-#: src/MainWin.cpp:621 src/SettingsDlg.cpp:126
+#: src/MainWin.cpp:625 src/SettingsDlg.cpp:126
 msgid "min"
 msgstr "мин"
 
-#: src/MainWin.cpp:696
+#: src/MainWin.cpp:700
 #, c-format
 msgid "Are you sure you want to delete '%s' from the file system?"
 msgstr "Вы действительно хотите безвозвратно удалить «%s»?"
 
-#: src/MainWin.cpp:797
+#: src/MainWin.cpp:801
 msgid "Select chapter"
 msgstr "Выбрать эпизод"
 
-#: src/MainWin.cpp:824
+#: src/MainWin.cpp:828
 msgid "Play all"
 msgstr "Воспроизвести"
 
-#: src/MainWin.cpp:826
+#: src/MainWin.cpp:830
 msgid "Select title"
 msgstr "Выбрать раздел"
 
-#: src/MainWin.cpp:828 src/TitlesetManager.cpp:1001
+#: src/MainWin.cpp:832 src/TitlesetManager.cpp:1001
 msgid "Back"
 msgstr "Назад"
 
-#: src/MainWin.cpp:830
+#: src/MainWin.cpp:834
 msgid "Previous"
 msgstr "Предыдущий"
 
-#: src/MainWin.cpp:832
+#: src/MainWin.cpp:836
 msgid "Next"
 msgstr "Следующий"
 
-#: src/MainWin.cpp:879
+#: src/MainWin.cpp:883
 #, c-format
 msgid "Error opening '%s'"
 msgstr "Ошибка открытия файла '%s'"
 
-#: src/MainWin.cpp:899
+#: src/MainWin.cpp:903
 msgid "Open a DVDStyler project file"
 msgstr "Загрузка файла проекта"
 
-#: src/MainWin.cpp:900 src/MainWin.cpp:1047
+#: src/MainWin.cpp:904 src/MainWin.cpp:1051
 msgid "Project files"
 msgstr "Проектные файлы"
 
-#: src/MainWin.cpp:931 src/MainWin.cpp:1003
+#: src/MainWin.cpp:935 src/MainWin.cpp:1007
 msgid "Untitled"
 msgstr "Без названия"
 
-#: src/MainWin.cpp:1004
+#: src/MainWin.cpp:1008
 #, c-format
 msgid "The file '%s' was modified, save changes?"
 msgstr "Файл '%s' изменён, сохранить изменения?"
 
-#: src/MainWin.cpp:1046
+#: src/MainWin.cpp:1050
 msgid "Save a DVDStyler project file"
 msgstr "Сохранение файла проекта"
 
-#: src/MainWin.cpp:1068
+#: src/MainWin.cpp:1072
 msgid ""
 "The selected video files don't fit on DVD. Please reduce\n"
 "video quality (bitrate) or remove some titles."
@@ -1413,7 +1394,7 @@ msgstr ""
 "Пожалуйста уменьшите качество видео (битрэйт)\n"
 "или удалите некоторые разделы."
 
-#: src/MainWin.cpp:1089
+#: src/MainWin.cpp:1093
 msgid ""
 "Project doesn't contain any video title. To add a title please\n"
 "drag a video file into the bottom section of the window."
@@ -1421,7 +1402,7 @@ msgstr ""
 "Проект не содержит ни одного видео раздела. Чтобы добавить\n"
 "раздел нужно перетянуть видео файл в нижнюю часть окна."
 
-#: src/MainWin.cpp:1094
+#: src/MainWin.cpp:1098
 #, c-format
 msgid ""
 "Titleset %d doesn't contain any video title. To add a title\n"
@@ -1430,42 +1411,53 @@ msgstr ""
 "Набор разделов %d не содержит ни одного видео раздела. Чтобы добавить раздел нужно перетянуть видео файл в "
 "нижнюю часть окна."
 
-#: src/MainWin.cpp:1203
+#: src/MainWin.cpp:1207
 msgid "Audio/Video/Subtitle Files"
 msgstr "Аудио/Видео/Субтитры"
 
-#: src/MainWin.cpp:1205 src/MenuPropDlg.cpp:154 src/TitlePropDlg.cpp:234 src/TitlePropDlg.cpp:441
+#: src/MainWin.cpp:1209 src/MenuPropDlg.cpp:154 src/TitlePropDlg.cpp:234 src/TitlePropDlg.cpp:441
 msgid "Audio Files"
 msgstr "Аудио файлы"
 
-#: src/MainWin.cpp:1206 src/MainWin.cpp:1211 src/MenuPropDlg.cpp:139
+#: src/MainWin.cpp:1210 src/MainWin.cpp:1215 src/MenuPropDlg.cpp:139
 msgid "Video Files"
 msgstr "Видео файлы"
 
-#: src/MainWin.cpp:1207 src/TitlePropDlg.cpp:442
+#: src/MainWin.cpp:1211 src/TitlePropDlg.cpp:442
 msgid "Subtitle Files"
 msgstr "Файлы субтитров"
 
-#: src/MainWin.cpp:1208 src/MainWin.cpp:1212
+#: src/MainWin.cpp:1212 src/MainWin.cpp:1216
 msgid "Image Files"
 msgstr "Файлы изображений"
 
-#: src/MainWin.cpp:1240
+#: src/MainWin.cpp:1244
 msgid "Choose DVD device or directory"
 msgstr "Выберите DVD привод или каталог"
 
-#: src/MainWin.cpp:1292
+#: src/MainWin.cpp:1296
 msgid "Choose a titleset to add:"
 msgstr "Выберите набор разделов для добавления:"
 
-#: src/MainWin.cpp:1348
+#: src/MainWin.cpp:1352
 msgid "Open a SVG file"
-msgstr ""
+msgstr "Открыть файл SVG"
 
-#: src/MainWin.cpp:1349
-#, fuzzy
+#: src/MainWin.cpp:1353
 msgid "SVG files"
-msgstr "Видео файлы"
+msgstr "SVG файлы"
+
+#: src/MainWin.cpp:1383
+msgid "Do you really want to reset this button?"
+msgstr "Вы действительно хотите сбросить эту кнопку?"
+
+#: src/MainWin.cpp:1401
+msgid "Do you really want to delete this button?"
+msgstr "Вы действительно хотите удалить эту кнопку?"
+
+#: src/MainWin.cpp:1412
+msgid "&Delete button"
+msgstr "&Удалить кнопку"
 
 #: src/Menu.cpp:839
 #, c-format
@@ -1667,7 +1659,7 @@ msgstr "Графические файлы "
 
 #: src/MenuObject.cpp:265
 msgid "object"
-msgstr "Объект"
+msgstr "объект"
 
 #: src/MenuObject.cpp:816 src/MenuObject.cpp:825
 #, c-format
@@ -1711,13 +1703,12 @@ msgid "Audio"
 msgstr "Аудио"
 
 #: src/MenuObjectPropDlg.cpp:183 src/MenuObjectPropDlg.cpp:200 src/NewProjectDlg.cpp:134
-#, fuzzy
 msgid "Warning"
-msgstr "Прожиг"
+msgstr "Предупреждение"
 
 #: src/MenuObjectPropDlg.cpp:183
 msgid "Please use titleset menu to select audio tracks."
-msgstr ""
+msgstr "Для выбора звуковых дорожек используйте меню наборов."
 
 #: src/MenuObjectPropDlg.cpp:188
 msgid "off"
@@ -1729,7 +1720,7 @@ msgstr "субтитры"
 
 #: src/MenuObjectPropDlg.cpp:200
 msgid "Please use titleset menu to select subtitle tracks."
-msgstr ""
+msgstr "Чтобы выбрать дорожки субтитров, используйте меню наборов."
 
 #: src/MenuObjectPropDlg.cpp:205
 msgid "Auto execute command by select"
@@ -1767,8 +1758,7 @@ msgstr "Выделенный"
 msgid "Font..."
 msgstr "Шрифт..."
 
-#: src/MenuObjectPropDlg.cpp:404 src/MenuObjectPropDlg.cpp:564 src/MenuPropDlg.cpp:81
-#: src/VideoPropDlg.cpp:138
+#: src/MenuObjectPropDlg.cpp:404 src/MenuObjectPropDlg.cpp:564 src/MenuPropDlg.cpp:81 src/VideoPropDlg.cpp:138
 msgid "Keep Aspect Ratio"
 msgstr "Сохранять соотношение сторон"
 
@@ -1979,7 +1969,7 @@ msgstr "&Не показывать больше это сообщение"
 #: src/MPEG.cpp:17 src/MPEG.cpp:47
 #, c-format
 msgid "Can't open file %s"
-msgstr "Невозможно открыть файл '%s'"
+msgstr "Невозможно открыть файл %s"
 
 #: src/NewProjectDlg.cpp:27
 msgid "Create a new DVD"
@@ -1991,7 +1981,7 @@ msgstr "Имя диска:"
 
 #: src/NewProjectDlg.cpp:49
 msgid "DVD Resolution:"
-msgstr ""
+msgstr "Разрешение DVD:"
 
 #: src/NewProjectDlg.cpp:56
 msgid "Disc capacity:"
@@ -2040,7 +2030,7 @@ msgstr "Не удается загрузить vob"
 
 #: src/Process.cpp:19
 msgid "Executing command: "
-msgstr "Выполнении команды:"
+msgstr "Выполнении команды: "
 
 #: src/ProcessBurn.cpp:60
 msgid "Burning"
@@ -2427,7 +2417,7 @@ msgstr "Рисовать кнопки на фоне"
 
 #: src/SettingsDlg.cpp:242
 msgid "Allow HD menus"
-msgstr ""
+msgstr "Разрешить HD меню"
 
 #: src/SettingsDlg.cpp:244
 msgid "Menu video bitrate:"
@@ -2506,18 +2496,16 @@ msgid "NTSC film:"
 msgstr "NTSC фильм:"
 
 #: src/SettingsDlg.cpp:309
-#, fuzzy
 msgid "re-encode by default"
 msgstr "переконвертировать по умолчанию"
 
 #: src/SettingsDlg.cpp:310
-#, fuzzy
 msgid "HD video:"
-msgstr "Видео:"
+msgstr "HD Видео:"
 
 #: src/SettingsDlg.cpp:311
 msgid "allow (experimental)"
-msgstr ""
+msgstr "разрешить (экспериментально)"
 
 #: src/SettingsDlg.cpp:313
 msgid "Debug"
@@ -2776,7 +2764,7 @@ msgstr "&Переместить"
 
 #: src/TitlesetManager.cpp:359
 msgid "Drag your video files from the File Browser to here."
-msgstr "Перетащите сюда ваши видео файлы из менеджера файлов"
+msgstr "Перетащите сюда ваши видео файлы из менеджера файлов."
 
 #: src/TitlesetManager.cpp:410
 #, c-format
@@ -2870,11 +2858,11 @@ msgstr "TFF"
 
 #: src/VideoPropDlg.cpp:142
 msgid "border"
-msgstr "Рамка"
+msgstr "рамка"
 
 #: src/VideoPropDlg.cpp:143
 msgid "crop"
-msgstr "Обрезать"
+msgstr "обрезать"
 
 #: src/VideoPropDlg.cpp:147
 msgid "Border"
@@ -3161,13 +3149,12 @@ msgid "X color"
 msgstr "Цвет X"
 
 #: buttons/circle-outline.xml:3
-#, fuzzy
 msgid "Circle outline"
-msgstr "Цвет круга"
+msgstr "Цвет окружности"
 
 #: buttons/circle-outline.xml:8 buttons/circle.xml:7
 msgid "01"
-msgstr ""
+msgstr "01"
 
 #: buttons/circle-outline.xml:22 buttons/circle.xml:21 buttons/text-circle-v2.xml:39
 msgid "Circle colour"
@@ -3180,9 +3167,8 @@ msgid "Text colour"
 msgstr "Цвет текста"
 
 #: buttons/circle.xml:3
-#, fuzzy
 msgid "Circle"
-msgstr "Стрелка в круге"
+msgstr "Круг"
 
 #: buttons/ellipse-v2.xml:3 objects/ellipse-v3.xml:3
 msgid "Ellipse"
@@ -3205,11 +3191,11 @@ msgstr "Эллипс 45°"
 
 #: buttons/frame-text.xml:4
 msgid "Frame and Text"
-msgstr ""
+msgstr "Рамка и текст"
 
 #: buttons/frame-text.xml:25
 msgid "T"
-msgstr ""
+msgstr "T"
 
 #: buttons/frame-text.xml:37 buttons/frame-v2.xml:46 buttons/frame45.xml:56
 msgid "Border width"
@@ -3217,16 +3203,15 @@ msgstr "Толщина рамки"
 
 #: buttons/frame-text.xml:44
 msgid "Corner round"
-msgstr ""
+msgstr "Радиус угола"
 
 #: buttons/frame-text.xml:51 buttons/frame-v2.xml:60 buttons/frame45.xml:70 buttons/movie.xml:40
 msgid "Border colour"
 msgstr "Цвет рамки"
 
 #: buttons/frame-text.xml:90
-#, fuzzy
 msgid "Text offset"
-msgstr "Стрелка с текстом влево"
+msgstr "Смещение текста"
 
 #: buttons/frame-v2.xml:3 objects/frame-v3.xml:3
 msgid "Frame"
@@ -3247,18 +3232,16 @@ msgid "Frame 45°"
 msgstr "Рамка 45°"
 
 #: buttons/glow_arrow.xml:5
-#, fuzzy
 msgid "Glow Arrow"
-msgstr "Золотая стрелка"
+msgstr "Светящаяся стрелка"
 
 #: buttons/glow_arrow.xml:26
 msgid "Invert (a,e)"
-msgstr ""
+msgstr "Инвертировать (a,e)"
 
 #: buttons/glow_arrow.xml:40
-#, fuzzy
 msgid "Glow colour"
-msgstr "Цвет стрелки"
+msgstr "Цвет светящения"
 
 #: buttons/hand-left.xml:4
 msgid "Hand Left"
@@ -3294,12 +3277,11 @@ msgstr "Цвет V"
 
 #: buttons/painting_frame.xml:4
 msgid "Painting Frame"
-msgstr ""
+msgstr "Картинная рама"
 
 #: buttons/painting_frame.xml:47
-#, fuzzy
 msgid "Frame colour"
-msgstr "Цвет круга"
+msgstr "Цвет рамки"
 
 #: buttons/pill.xml:3
 msgid "Pill"
@@ -3327,17 +3309,15 @@ msgstr "Пилюля 3"
 
 #: buttons/sticky_note.xml:4 objects/sticky_note.xml:4
 msgid "Sticky note"
-msgstr ""
+msgstr "Заметка"
 
 #: buttons/sticky_note.xml:52 objects/sticky_note.xml:56
-#, fuzzy
 msgid "Pin"
-msgstr "мин"
+msgstr "Штифт"
 
 #: buttons/sticky_note.xml:59
-#, fuzzy
 msgid "Selection colour"
-msgstr "Цвет отражения 1"
+msgstr "Цвет выбранного"
 
 #: buttons/text-circle-v2.xml:3
 msgid "Text with circle"
@@ -3389,7 +3369,7 @@ msgstr "Прямоугольник"
 
 #: objects/sticky_note.xml:49
 msgid "Note"
-msgstr ""
+msgstr "Заметка"
 
 #: objects/text-v2.xml:13
 msgid "text"

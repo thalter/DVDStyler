@@ -493,6 +493,7 @@ void MainWin::OnButtonsBt(wxCommandEvent& event) {
 	}
 	
 	set<wxString> canBeReseted;
+	set<wxString> canBeDeleted;
 	wxString btDir = wxStandardPaths::Get().GetUserDataDir() + wxFILE_SEP_PATH + wxT("buttons") + wxFILE_SEP_PATH;
 	if (wxDirExists(btDir)) {
 		fname = wxFindFirstFile(btDir + wxT("*.xml"));
@@ -507,6 +508,7 @@ void MainWin::OnButtonsBt(wxCommandEvent& event) {
 				canBeReseted.insert(fname);
 			} else {
 				buttons.Add(fname);
+				canBeDeleted.insert(fname);
 			}
 			fname = wxFindNextFile();
 		}
@@ -521,6 +523,8 @@ void MainWin::OnButtonsBt(wxCommandEvent& event) {
 		thumb->SetImage(bt.GetImage(m_thumbnails->GetThumbImageWidth(), m_thumbnails->GetThumbImageHeight()));
 		if (canBeReseted.find(buttons[i]) != canBeReseted.end())
 			thumb->SetId(1);
+		if (canBeDeleted.find(buttons[i]) != canBeDeleted.end())
+			thumb->SetId(2);
 		m_thumbnails->InsertItem(thumb);
 	}
 	m_thumbnails->SetCaption(_("Buttons"));
@@ -1374,24 +1378,39 @@ void MainWin::OnEditButton(wxCommandEvent& event) {
 }
 
 void MainWin::OnResetButton(wxCommandEvent& event) {
-	if (m_thumbnails->GetSelectedItem()->GetId() != 1)
-		return; // button cannot be reseted
-	wxRemoveFile(m_thumbnails->GetSelectedItem()->GetFilename());
-	wxFileName fileName(m_thumbnails->GetSelectedItem()->GetFilename());
-	fileName = wxFileName(fileName.GetFullName());
-	fileName.MakeAbsolute(BUTTONS_DIR);
-	m_thumbnails->GetSelectedItem()->SetFilename(fileName.GetFullPath());
-	wxLogNull log;	
-	MenuObject bt(NULL, false, fileName.GetFullPath(), 0, 0, _("button"));
-	m_thumbnails->GetSelectedItem()->SetImage(
-			bt.GetImage(m_thumbnails->GetThumbImageWidth(), m_thumbnails->GetThumbImageHeight()));
-	m_thumbnails->GetSelectedItem()->SetId(1);
-	m_thumbnails->GetSelectedItem()->Update();
-	m_thumbnails->Refresh();
+	if (m_thumbnails->GetSelectedItem()->GetId() == 1) {
+		// Reset button
+		if (wxMessageBox(_("Do you really want to reset this button?"),
+				"DVDStyler", wxYES_NO|wxICON_QUESTION, this) != wxYES)
+			return;
+				
+		wxRemoveFile(m_thumbnails->GetSelectedItem()->GetFilename());
+		wxFileName fileName(m_thumbnails->GetSelectedItem()->GetFilename());
+		fileName = wxFileName(fileName.GetFullName());
+		fileName.MakeAbsolute(BUTTONS_DIR);
+		m_thumbnails->GetSelectedItem()->SetFilename(fileName.GetFullPath());
+		wxLogNull log;	
+		MenuObject bt(NULL, false, fileName.GetFullPath(), 0, 0, _("button"));
+		m_thumbnails->GetSelectedItem()->SetImage(
+				bt.GetImage(m_thumbnails->GetThumbImageWidth(), m_thumbnails->GetThumbImageHeight()));
+		m_thumbnails->GetSelectedItem()->SetId(1);
+		m_thumbnails->GetSelectedItem()->Update();
+		m_thumbnails->Refresh();
+	} else if (m_thumbnails->GetSelectedItem()->GetId() == 2) {
+		// Delete button
+		if (wxMessageBox(_("Do you really want to delete this button?"),
+				"DVDStyler", wxYES_NO|wxICON_QUESTION, this) != wxYES)
+			return;
+		wxRemoveFile(m_thumbnails->GetSelectedItem()->GetFilename());
+		OnButtonsBt(event);
+	}
 }
 
 void MainWin::OnResetButtonUI(wxUpdateUIEvent &event) {
-	event.Enable(m_thumbnails->GetSelectedItem() && m_thumbnails->GetSelectedItem()->GetId() == 1);
+	bool canBeReseted = m_thumbnails->GetSelectedItem()->GetId() == 1;
+	bool canBeDeleted = m_thumbnails->GetSelectedItem()->GetId() == 2;
+	event.SetText(canBeDeleted ? _("&Delete button") : _("&Reset button"));
+	event.Enable(m_thumbnails->GetSelectedItem() && (canBeReseted || canBeDeleted));
 }
 
 void MainWin::OnHelpContents(wxCommandEvent& event) {

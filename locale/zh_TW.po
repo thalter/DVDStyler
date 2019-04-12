@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DVDStyler 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-11 14:31+0200\n"
+"POT-Creation-Date: 2019-04-12 13:15+0200\n"
 "PO-Revision-Date: 2016-06-24 21:46+0800\n"
 "Last-Translator: 風逸蘭 <stchen0214 at gmail.com>\n"
 "Language-Team: 風逸蘭 <stchen0214 at gmail.com>\n"
@@ -253,14 +253,14 @@ msgstr "無效的音量數值 '%s'"
 msgid "Analysis of audio"
 msgstr "音頻分析"
 
-#: src/AudioPropDlg.cpp:389 src/MainWin.cpp:868 src/SysUtils.cpp:303 src/VobListBox.cpp:611
+#: src/AudioPropDlg.cpp:389 src/MainWin.cpp:872 src/SysUtils.cpp:303 src/VobListBox.cpp:611
 msgid "Please wait..."
 msgstr "請稍侯..."
 
 #: src/BurnDlg.cpp:104 src/BurnDlg.cpp:459 src/BurnDlg.cpp:466 src/BurnDlg.cpp:588 src/BurnDlg.cpp:595
 #: src/BurnDlg.cpp:601 src/BurnDlg.cpp:608 src/BurnDlg.cpp:615 src/BurnDlg.cpp:620 src/BurnDlg.cpp:627
 #: src/BurnDlg.cpp:632 src/BurnDlg.cpp:638 src/BurnDlg.cpp:644 src/BurnDlg.cpp:657 src/BurnDlg.cpp:660
-#: src/MainWin.cpp:1069 src/MainWin.cpp:1090 src/MainWin.cpp:1095 src/ProcessBurn.cpp:68
+#: src/MainWin.cpp:1073 src/MainWin.cpp:1094 src/MainWin.cpp:1099 src/ProcessBurn.cpp:68
 #: src/ProcessBurn.cpp:86 src/ProcessBurn.cpp:128 src/ProcessFormatDvd.cpp:44 src/ProcessFormatDvd.cpp:53
 #: src/ProcessPreview.cpp:45 src/ProcessPreview.cpp:53 src/ProcessPreview.cpp:61 src/ProcessPreview.cpp:82
 #: src/ProcessPreview.cpp:87 src/TitlesetManager.cpp:467
@@ -364,7 +364,7 @@ msgstr "暫存目錄沒有足夠空間"
 msgid "Choose a directory"
 msgstr "選擇一個目錄"
 
-#: src/BurnDlg.cpp:536 src/MainWin.cpp:1214 src/TitlePropDlg.cpp:423 src/TitlePropDlg.cpp:439
+#: src/BurnDlg.cpp:536 src/MainWin.cpp:1218 src/TitlePropDlg.cpp:423 src/TitlePropDlg.cpp:439
 #: wxVillaLib/PropDlg.cpp:788
 msgid "Choose a file"
 msgstr "選擇一個文件"
@@ -373,7 +373,7 @@ msgstr "選擇一個文件"
 msgid "Programs"
 msgstr "程序"
 
-#: src/BurnDlg.cpp:538 src/MainWin.cpp:1048 src/MainWin.cpp:1209 src/MainWin.cpp:1213
+#: src/BurnDlg.cpp:538 src/MainWin.cpp:1052 src/MainWin.cpp:1213 src/MainWin.cpp:1217
 #: src/MenuObjectPropDlg.cpp:458 src/MenuPropDlg.cpp:141 src/MenuPropDlg.cpp:155 src/TitlePropDlg.cpp:235
 #: src/TitlePropDlg.cpp:425
 msgid "All Files"
@@ -632,7 +632,7 @@ msgstr[0] "轉碼緩存區共有%d個文件（%0.1f MB）。"
 msgid "Do you want to clear the cache?"
 msgstr "您真的想要清空緩存嗎?"
 
-#: src/Cache.cpp:376 src/MainWin.cpp:1005
+#: src/Cache.cpp:376 src/MainWin.cpp:1009
 msgid "Confirm"
 msgstr "確認"
 
@@ -682,7 +682,7 @@ msgstr "自定義"
 msgid "Pause:"
 msgstr "暫停:"
 
-#: src/ChaptersDlg.cpp:174 src/MainWin.cpp:617 src/MenuPropDlg.cpp:171 src/SettingsDlg.cpp:163
+#: src/ChaptersDlg.cpp:174 src/MainWin.cpp:621 src/MenuPropDlg.cpp:171 src/SettingsDlg.cpp:163
 #: src/SettingsDlg.cpp:165 src/TitlePropDlg.cpp:150 src/TitlePropDlg.cpp:196 src/VideoFrameDlg.cpp:82
 #: src/VideoPropDlg.cpp:188 src/VideoPropDlg.cpp:193
 msgid "sec"
@@ -1257,7 +1257,7 @@ msgstr "刪除(&D)"
 msgid "&Edit button"
 msgstr "按鈕"
 
-#: src/MainWin.cpp:281
+#: src/MainWin.cpp:281 src/MainWin.cpp:1412
 #, fuzzy
 msgid "&Reset button"
 msgstr "默認按鈕："
@@ -1294,100 +1294,100 @@ msgstr "文件瀏覽器"
 msgid "Backgrounds"
 msgstr "背景"
 
-#: src/MainWin.cpp:358 src/MainWin.cpp:367 src/MainWin.cpp:526 src/MenuPropDlg.cpp:182
+#: src/MainWin.cpp:358 src/MainWin.cpp:367 src/MainWin.cpp:530 src/MenuPropDlg.cpp:182
 msgid "Buttons"
 msgstr "按鈕"
 
-#: src/MainWin.cpp:520 src/MainWin.cpp:1367 src/MainWin.cpp:1385 src/MenuObject.cpp:265
+#: src/MainWin.cpp:522 src/MainWin.cpp:1371 src/MainWin.cpp:1393 src/MenuObject.cpp:265
 #: src/MenuObjectPropDlg.cpp:265 src/MenuObjectPropDlg.cpp:280 buttons/text-circle-v2.xml:13
 #: buttons/text-square-v2.xml:14 buttons/text-underlined-v3.xml:12 buttons/text-v3.xml:13
 msgid "button"
 msgstr "按鈕"
 
-#: src/MainWin.cpp:577
+#: src/MainWin.cpp:581
 msgid "Double click to set the background."
 msgstr "連按兩下便可設定為背景。"
 
-#: src/MainWin.cpp:584
+#: src/MainWin.cpp:588
 #, c-format
 msgid "%s (%.1f KB)"
 msgstr "%s (%.1f KB)"
 
-#: src/MainWin.cpp:586
+#: src/MainWin.cpp:590
 #, c-format
 msgid "%s (%.1f MB)"
 msgstr "%s (%.1f MB)"
 
-#: src/MainWin.cpp:589
+#: src/MainWin.cpp:593
 #, c-format
 msgid "%s (%.1f GB)"
 msgstr "%s (%.1f GB)"
 
-#: src/MainWin.cpp:609
+#: src/MainWin.cpp:613
 #, c-format
 msgid "%d slides"
 msgstr "%d 個幻燈片"
 
-#: src/MainWin.cpp:621 src/SettingsDlg.cpp:126
+#: src/MainWin.cpp:625 src/SettingsDlg.cpp:126
 msgid "min"
 msgstr "分鐘"
 
-#: src/MainWin.cpp:696
+#: src/MainWin.cpp:700
 #, c-format
 msgid "Are you sure you want to delete '%s' from the file system?"
 msgstr "您確定想要從文件系統中刪除 '%s'"
 
-#: src/MainWin.cpp:797
+#: src/MainWin.cpp:801
 msgid "Select chapter"
 msgstr "選擇章節"
 
-#: src/MainWin.cpp:824
+#: src/MainWin.cpp:828
 msgid "Play all"
 msgstr "播放全部"
 
-#: src/MainWin.cpp:826
+#: src/MainWin.cpp:830
 msgid "Select title"
 msgstr "選擇標題"
 
-#: src/MainWin.cpp:828 src/TitlesetManager.cpp:1001
+#: src/MainWin.cpp:832 src/TitlesetManager.cpp:1001
 msgid "Back"
 msgstr "返回"
 
-#: src/MainWin.cpp:830
+#: src/MainWin.cpp:834
 msgid "Previous"
 msgstr "上一個"
 
-#: src/MainWin.cpp:832
+#: src/MainWin.cpp:836
 msgid "Next"
 msgstr "下一個"
 
-#: src/MainWin.cpp:879
+#: src/MainWin.cpp:883
 #, c-format
 msgid "Error opening '%s'"
 msgstr "打開 '%s' 錯誤"
 
-#: src/MainWin.cpp:899
+#: src/MainWin.cpp:903
 msgid "Open a DVDStyler project file"
 msgstr "打開DVDStyler工程文件"
 
-#: src/MainWin.cpp:900 src/MainWin.cpp:1047
+#: src/MainWin.cpp:904 src/MainWin.cpp:1051
 msgid "Project files"
 msgstr "工程文件"
 
-#: src/MainWin.cpp:931 src/MainWin.cpp:1003
+#: src/MainWin.cpp:935 src/MainWin.cpp:1007
 msgid "Untitled"
 msgstr "未命名"
 
-#: src/MainWin.cpp:1004
+#: src/MainWin.cpp:1008
 #, c-format
 msgid "The file '%s' was modified, save changes?"
 msgstr "文件 '%s' 已被修改，要保存嗎？"
 
-#: src/MainWin.cpp:1046
+#: src/MainWin.cpp:1050
 msgid "Save a DVDStyler project file"
 msgstr "保存DVDStyler工程文件"
 
-#: src/MainWin.cpp:1068
+#: src/MainWin.cpp:1072
 msgid ""
 "The selected video files don't fit on DVD. Please reduce\n"
 "video quality (bitrate) or remove some titles."
@@ -1395,7 +1395,7 @@ msgstr ""
 "選擇的視頻文件不符合 DVD 的容量，\n"
 "請降低視頻品質(比特率)或移除一些標題。"
 
-#: src/MainWin.cpp:1089
+#: src/MainWin.cpp:1093
 msgid ""
 "Project doesn't contain any video title. To add a title please\n"
 "drag a video file into the bottom section of the window."
@@ -1403,7 +1403,7 @@ msgstr ""
 "工程內并無任何視頻標題。若要加入標題，\n"
 "請拖拽一個視頻文件到視窗底部區域。"
 
-#: src/MainWin.cpp:1094
+#: src/MainWin.cpp:1098
 #, c-format
 msgid ""
 "Titleset %d doesn't contain any video title. To add a title\n"
@@ -1412,42 +1412,57 @@ msgstr ""
 "標題集 %d 內并無任何視頻標題。若要加入標題，\n"
 "請拖曳一個視頻文件到視窗底部區域。"
 
-#: src/MainWin.cpp:1203
+#: src/MainWin.cpp:1207
 msgid "Audio/Video/Subtitle Files"
 msgstr "音頻/視頻/字幕文件"
 
-#: src/MainWin.cpp:1205 src/MenuPropDlg.cpp:154 src/TitlePropDlg.cpp:234 src/TitlePropDlg.cpp:441
+#: src/MainWin.cpp:1209 src/MenuPropDlg.cpp:154 src/TitlePropDlg.cpp:234 src/TitlePropDlg.cpp:441
 msgid "Audio Files"
 msgstr "音頻文件"
 
-#: src/MainWin.cpp:1206 src/MainWin.cpp:1211 src/MenuPropDlg.cpp:139
+#: src/MainWin.cpp:1210 src/MainWin.cpp:1215 src/MenuPropDlg.cpp:139
 msgid "Video Files"
 msgstr "視頻文件"
 
-#: src/MainWin.cpp:1207 src/TitlePropDlg.cpp:442
+#: src/MainWin.cpp:1211 src/TitlePropDlg.cpp:442
 msgid "Subtitle Files"
 msgstr "字幕文件"
 
-#: src/MainWin.cpp:1208 src/MainWin.cpp:1212
+#: src/MainWin.cpp:1212 src/MainWin.cpp:1216
 msgid "Image Files"
 msgstr "影像文件"
 
-#: src/MainWin.cpp:1240
+#: src/MainWin.cpp:1244
 msgid "Choose DVD device or directory"
 msgstr "選擇 DVD 設備或目錄"
 
-#: src/MainWin.cpp:1292
+#: src/MainWin.cpp:1296
 msgid "Choose a titleset to add:"
 msgstr "選擇一個要加入的標題集:"
 
-#: src/MainWin.cpp:1348
+#: src/MainWin.cpp:1352
 msgid "Open a SVG file"
 msgstr ""
 
-#: src/MainWin.cpp:1349
+#: src/MainWin.cpp:1353
 #, fuzzy
 msgid "SVG files"
 msgstr "視頻文件"
+
+#: src/MainWin.cpp:1383
+#, fuzzy
+msgid "Do you really want to reset this button?"
+msgstr "您真的想要刪除 %s 嗎?"
+
+#: src/MainWin.cpp:1401
+#, fuzzy
+msgid "Do you really want to delete this button?"
+msgstr "您真的想要刪除 %s 嗎?"
+
+#: src/MainWin.cpp:1412
+#, fuzzy
+msgid "&Delete button"
+msgstr "默認按鈕："
 
 #: src/Menu.cpp:839
 #, c-format

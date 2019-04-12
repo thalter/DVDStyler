@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dvdstyler 1.8.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-11 14:31+0200\n"
+"POT-Creation-Date: 2019-04-12 13:15+0200\n"
 "PO-Revision-Date: 2011-06-26 19:41+0100\n"
 "Last-Translator: Damjan Dimitrioski <damjandimitrioski at gmail.com>\n"
 "Language-Team: Macedonian <ufo at linux.net.mk>\n"
@@ -271,14 +271,14 @@ msgstr ""
 msgid "Analysis of audio"
 msgstr ""
 
-#: src/AudioPropDlg.cpp:389 src/MainWin.cpp:868 src/SysUtils.cpp:303 src/VobListBox.cpp:611
+#: src/AudioPropDlg.cpp:389 src/MainWin.cpp:872 src/SysUtils.cpp:303 src/VobListBox.cpp:611
 msgid "Please wait..."
 msgstr "Ве молам почекајте..."
 
 #: src/BurnDlg.cpp:104 src/BurnDlg.cpp:459 src/BurnDlg.cpp:466 src/BurnDlg.cpp:588 src/BurnDlg.cpp:595
 #: src/BurnDlg.cpp:601 src/BurnDlg.cpp:608 src/BurnDlg.cpp:615 src/BurnDlg.cpp:620 src/BurnDlg.cpp:627
 #: src/BurnDlg.cpp:632 src/BurnDlg.cpp:638 src/BurnDlg.cpp:644 src/BurnDlg.cpp:657 src/BurnDlg.cpp:660
-#: src/MainWin.cpp:1069 src/MainWin.cpp:1090 src/MainWin.cpp:1095 src/ProcessBurn.cpp:68
+#: src/MainWin.cpp:1073 src/MainWin.cpp:1094 src/MainWin.cpp:1099 src/ProcessBurn.cpp:68
 #: src/ProcessBurn.cpp:86 src/ProcessBurn.cpp:128 src/ProcessFormatDvd.cpp:44 src/ProcessFormatDvd.cpp:53
 #: src/ProcessPreview.cpp:45 src/ProcessPreview.cpp:53 src/ProcessPreview.cpp:61 src/ProcessPreview.cpp:82
 #: src/ProcessPreview.cpp:87 src/TitlesetManager.cpp:467
@@ -382,7 +382,7 @@ msgstr "Нема повеќе место кај привремениот дир�
 msgid "Choose a directory"
 msgstr "Избери папка"
 
-#: src/BurnDlg.cpp:536 src/MainWin.cpp:1214 src/TitlePropDlg.cpp:423 src/TitlePropDlg.cpp:439
+#: src/BurnDlg.cpp:536 src/MainWin.cpp:1218 src/TitlePropDlg.cpp:423 src/TitlePropDlg.cpp:439
 #: wxVillaLib/PropDlg.cpp:788
 msgid "Choose a file"
 msgstr "Одбери датотека"
@@ -392,7 +392,7 @@ msgstr "Одбери датотека"
 msgid "Programs"
 msgstr "Програма"
 
-#: src/BurnDlg.cpp:538 src/MainWin.cpp:1048 src/MainWin.cpp:1209 src/MainWin.cpp:1213
+#: src/BurnDlg.cpp:538 src/MainWin.cpp:1052 src/MainWin.cpp:1213 src/MainWin.cpp:1217
 #: src/MenuObjectPropDlg.cpp:458 src/MenuPropDlg.cpp:141 src/MenuPropDlg.cpp:155 src/TitlePropDlg.cpp:235
 #: src/TitlePropDlg.cpp:425
 msgid "All Files"
@@ -656,7 +656,7 @@ msgstr[1] ""
 msgid "Do you want to clear the cache?"
 msgstr "Дали сте сигурни дека ќе го бришете %s?\""
 
-#: src/Cache.cpp:376 src/MainWin.cpp:1005
+#: src/Cache.cpp:376 src/MainWin.cpp:1009
 msgid "Confirm"
 msgstr "Потврди"
 
@@ -707,7 +707,7 @@ msgstr "Своерачно"
 msgid "Pause:"
 msgstr "Запри"
 
-#: src/ChaptersDlg.cpp:174 src/MainWin.cpp:617 src/MenuPropDlg.cpp:171 src/SettingsDlg.cpp:163
+#: src/ChaptersDlg.cpp:174 src/MainWin.cpp:621 src/MenuPropDlg.cpp:171 src/SettingsDlg.cpp:163
 #: src/SettingsDlg.cpp:165 src/TitlePropDlg.cpp:150 src/TitlePropDlg.cpp:196 src/VideoFrameDlg.cpp:82
 #: src/VideoPropDlg.cpp:188 src/VideoPropDlg.cpp:193
 msgid "sec"
@@ -1300,7 +1300,7 @@ msgstr "&Бриши"
 msgid "&Edit button"
 msgstr "копче"
 
-#: src/MainWin.cpp:281
+#: src/MainWin.cpp:281 src/MainWin.cpp:1412
 #, fuzzy
 msgid "&Reset button"
 msgstr "Основно копче:"
@@ -1337,102 +1337,102 @@ msgstr "Барач"
 msgid "Backgrounds"
 msgstr "Позадини"
 
-#: src/MainWin.cpp:358 src/MainWin.cpp:367 src/MainWin.cpp:526 src/MenuPropDlg.cpp:182
+#: src/MainWin.cpp:358 src/MainWin.cpp:367 src/MainWin.cpp:530 src/MenuPropDlg.cpp:182
 msgid "Buttons"
 msgstr "Дела"
 
-#: src/MainWin.cpp:520 src/MainWin.cpp:1367 src/MainWin.cpp:1385 src/MenuObject.cpp:265
+#: src/MainWin.cpp:522 src/MainWin.cpp:1371 src/MainWin.cpp:1393 src/MenuObject.cpp:265
 #: src/MenuObjectPropDlg.cpp:265 src/MenuObjectPropDlg.cpp:280 buttons/text-circle-v2.xml:13
 #: buttons/text-square-v2.xml:14 buttons/text-underlined-v3.xml:12 buttons/text-v3.xml:13
 msgid "button"
 msgstr "копче"
 
-#: src/MainWin.cpp:577
+#: src/MainWin.cpp:581
 msgid "Double click to set the background."
 msgstr "Двоек клик за да смените позадина."
 
-#: src/MainWin.cpp:584
+#: src/MainWin.cpp:588
 #, c-format
 msgid "%s (%.1f KB)"
 msgstr "%s (%.1f КБ)"
 
-#: src/MainWin.cpp:586
+#: src/MainWin.cpp:590
 #, c-format
 msgid "%s (%.1f MB)"
 msgstr "%s (%.1f МБ)"
 
-#: src/MainWin.cpp:589
+#: src/MainWin.cpp:593
 #, c-format
 msgid "%s (%.1f GB)"
 msgstr "%s (%.1f ГБ)"
 
-#: src/MainWin.cpp:609
+#: src/MainWin.cpp:613
 #, c-format
 msgid "%d slides"
 msgstr ""
 
-#: src/MainWin.cpp:621 src/SettingsDlg.cpp:126
+#: src/MainWin.cpp:625 src/SettingsDlg.cpp:126
 msgid "min"
 msgstr "мин"
 
-#: src/MainWin.cpp:696
+#: src/MainWin.cpp:700
 #, c-format
 msgid "Are you sure you want to delete '%s' from the file system?"
 msgstr "Дали сте сигурни дека ќе го бришете '%s' од вашиот датотечен систем?"
 
-#: src/MainWin.cpp:797
+#: src/MainWin.cpp:801
 #, fuzzy
 msgid "Select chapter"
 msgstr "Избери наслов"
 
-#: src/MainWin.cpp:824
+#: src/MainWin.cpp:828
 msgid "Play all"
 msgstr "Пушти сѐ"
 
-#: src/MainWin.cpp:826
+#: src/MainWin.cpp:830
 msgid "Select title"
 msgstr "Избери наслов"
 
-#: src/MainWin.cpp:828 src/TitlesetManager.cpp:1001
+#: src/MainWin.cpp:832 src/TitlesetManager.cpp:1001
 msgid "Back"
 msgstr "Назад"
 
-#: src/MainWin.cpp:830
+#: src/MainWin.cpp:834
 #, fuzzy
 msgid "Previous"
 msgstr "Преглед"
 
-#: src/MainWin.cpp:832
+#: src/MainWin.cpp:836
 msgid "Next"
 msgstr ""
 
-#: src/MainWin.cpp:879
+#: src/MainWin.cpp:883
 #, c-format
 msgid "Error opening '%s'"
 msgstr "Грешка при отворање '%s'"
 
-#: src/MainWin.cpp:899
+#: src/MainWin.cpp:903
 msgid "Open a DVDStyler project file"
 msgstr "Отвори ДВДСтајлер проектна датотека"
 
-#: src/MainWin.cpp:900 src/MainWin.cpp:1047
+#: src/MainWin.cpp:904 src/MainWin.cpp:1051
 msgid "Project files"
 msgstr "Датотеки на проект"
 
-#: src/MainWin.cpp:931 src/MainWin.cpp:1003
+#: src/MainWin.cpp:935 src/MainWin.cpp:1007
 msgid "Untitled"
 msgstr "Без наслов"
 
-#: src/MainWin.cpp:1004
+#: src/MainWin.cpp:1008
 #, c-format
 msgid "The file '%s' was modified, save changes?"
 msgstr "Датотека '%s' е изменета, да снимам промени?"
 
-#: src/MainWin.cpp:1046
+#: src/MainWin.cpp:1050
 msgid "Save a DVDStyler project file"
 msgstr "Сними како ДВДСтајлер проектна датотека"
 
-#: src/MainWin.cpp:1068
+#: src/MainWin.cpp:1072
 msgid ""
 "The selected video files don't fit on DVD. Please reduce\n"
 "video quality (bitrate) or remove some titles."
@@ -1440,7 +1440,7 @@ msgstr ""
 "Избраните видео датотеки не ги собира на ДВД. Ве молам\n"
 "намалете го видео квалитетот (битрејт) или отстранете некои наслови."
 
-#: src/MainWin.cpp:1089
+#: src/MainWin.cpp:1093
 msgid ""
 "Project doesn't contain any video title. To add a title please\n"
 "drag a video file into the bottom section of the window."
@@ -1448,7 +1448,7 @@ msgstr ""
 "Проектот не содржи ниеден видео наслов. За да додадеш\n"
 "наслов ве молам влечете видео датотека на дното од овој прозорец."
 
-#: src/MainWin.cpp:1094
+#: src/MainWin.cpp:1098
 #, c-format
 msgid ""
 "Titleset %d doesn't contain any video title. To add a title\n"
@@ -1457,44 +1457,59 @@ msgstr ""
 "Насловната група %d не содржи ниеден наслов. За додате наслов\n"
 "ве молам влечете видео датотека на дното од овој прозорец."
 
-#: src/MainWin.cpp:1203
+#: src/MainWin.cpp:1207
 msgid "Audio/Video/Subtitle Files"
 msgstr "Звучни/Видео/Превод Датотеки"
 
-#: src/MainWin.cpp:1205 src/MenuPropDlg.cpp:154 src/TitlePropDlg.cpp:234 src/TitlePropDlg.cpp:441
+#: src/MainWin.cpp:1209 src/MenuPropDlg.cpp:154 src/TitlePropDlg.cpp:234 src/TitlePropDlg.cpp:441
 msgid "Audio Files"
 msgstr "Звучни Датотеки"
 
-#: src/MainWin.cpp:1206 src/MainWin.cpp:1211 src/MenuPropDlg.cpp:139
+#: src/MainWin.cpp:1210 src/MainWin.cpp:1215 src/MenuPropDlg.cpp:139
 msgid "Video Files"
 msgstr "Видео Датотеки"
 
-#: src/MainWin.cpp:1207 src/TitlePropDlg.cpp:442
+#: src/MainWin.cpp:1211 src/TitlePropDlg.cpp:442
 msgid "Subtitle Files"
 msgstr "Датотеки со Превод"
 
-#: src/MainWin.cpp:1208 src/MainWin.cpp:1212
+#: src/MainWin.cpp:1212 src/MainWin.cpp:1216
 msgid "Image Files"
 msgstr "Датотеки со слики"
 
-#: src/MainWin.cpp:1240
+#: src/MainWin.cpp:1244
 #, fuzzy
 msgid "Choose DVD device or directory"
 msgstr "Избери папка"
 
-#: src/MainWin.cpp:1292
+#: src/MainWin.cpp:1296
 #, fuzzy
 msgid "Choose a titleset to add:"
 msgstr "Избери датотека за да ја снимиш iso сликата"
 
-#: src/MainWin.cpp:1348
+#: src/MainWin.cpp:1352
 msgid "Open a SVG file"
 msgstr ""
 
-#: src/MainWin.cpp:1349
+#: src/MainWin.cpp:1353
 #, fuzzy
 msgid "SVG files"
 msgstr "Видео Датотеки"
+
+#: src/MainWin.cpp:1383
+#, fuzzy
+msgid "Do you really want to reset this button?"
+msgstr "Дали сте сигурни дека ќе го бришете %s?\""
+
+#: src/MainWin.cpp:1401
+#, fuzzy
+msgid "Do you really want to delete this button?"
+msgstr "Дали сте сигурни дека ќе го бришете %s?\""
+
+#: src/MainWin.cpp:1412
+#, fuzzy
+msgid "&Delete button"
+msgstr "Основно копче:"
 
 #: src/Menu.cpp:839
 #, c-format

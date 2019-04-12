@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DVDStyler 1.7.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-11 14:31+0200\n"
+"POT-Creation-Date: 2019-04-12 13:15+0200\n"
 "PO-Revision-Date: 2011-07-31 05:42+0900\n"
 "Last-Translator: jinhwan-Jeong <yongdoria at gmail.com>\n"
 "Language-Team: dokdo@korea.land\n"
@@ -261,14 +261,14 @@ msgstr ""
 msgid "Analysis of audio"
 msgstr ""
 
-#: src/AudioPropDlg.cpp:389 src/MainWin.cpp:868 src/SysUtils.cpp:303 src/VobListBox.cpp:611
+#: src/AudioPropDlg.cpp:389 src/MainWin.cpp:872 src/SysUtils.cpp:303 src/VobListBox.cpp:611
 msgid "Please wait..."
 msgstr "잠시 대기...."
 
 #: src/BurnDlg.cpp:104 src/BurnDlg.cpp:459 src/BurnDlg.cpp:466 src/BurnDlg.cpp:588 src/BurnDlg.cpp:595
 #: src/BurnDlg.cpp:601 src/BurnDlg.cpp:608 src/BurnDlg.cpp:615 src/BurnDlg.cpp:620 src/BurnDlg.cpp:627
 #: src/BurnDlg.cpp:632 src/BurnDlg.cpp:638 src/BurnDlg.cpp:644 src/BurnDlg.cpp:657 src/BurnDlg.cpp:660
-#: src/MainWin.cpp:1069 src/MainWin.cpp:1090 src/MainWin.cpp:1095 src/ProcessBurn.cpp:68
+#: src/MainWin.cpp:1073 src/MainWin.cpp:1094 src/MainWin.cpp:1099 src/ProcessBurn.cpp:68
 #: src/ProcessBurn.cpp:86 src/ProcessBurn.cpp:128 src/ProcessFormatDvd.cpp:44 src/ProcessFormatDvd.cpp:53
 #: src/ProcessPreview.cpp:45 src/ProcessPreview.cpp:53 src/ProcessPreview.cpp:61 src/ProcessPreview.cpp:82
 #: src/ProcessPreview.cpp:87 src/TitlesetManager.cpp:467
@@ -372,7 +372,7 @@ msgstr "임시 폴더에 충분한 공간이 없습니다."
 msgid "Choose a directory"
 msgstr "폴더 선택"
 
-#: src/BurnDlg.cpp:536 src/MainWin.cpp:1214 src/TitlePropDlg.cpp:423 src/TitlePropDlg.cpp:439
+#: src/BurnDlg.cpp:536 src/MainWin.cpp:1218 src/TitlePropDlg.cpp:423 src/TitlePropDlg.cpp:439
 #: wxVillaLib/PropDlg.cpp:788
 msgid "Choose a file"
 msgstr "파일 선택"
@@ -382,7 +382,7 @@ msgstr "파일 선택"
 msgid "Programs"
 msgstr "프로그램"
 
-#: src/BurnDlg.cpp:538 src/MainWin.cpp:1048 src/MainWin.cpp:1209 src/MainWin.cpp:1213
+#: src/BurnDlg.cpp:538 src/MainWin.cpp:1052 src/MainWin.cpp:1213 src/MainWin.cpp:1217
 #: src/MenuObjectPropDlg.cpp:458 src/MenuPropDlg.cpp:141 src/MenuPropDlg.cpp:155 src/TitlePropDlg.cpp:235
 #: src/TitlePropDlg.cpp:425
 msgid "All Files"
@@ -646,7 +646,7 @@ msgstr[1] ""
 msgid "Do you want to clear the cache?"
 msgstr "%s을 정말 삭제하겠습니까?"
 
-#: src/Cache.cpp:376 src/MainWin.cpp:1005
+#: src/Cache.cpp:376 src/MainWin.cpp:1009
 msgid "Confirm"
 msgstr "예"
 
@@ -697,7 +697,7 @@ msgstr "사용자"
 msgid "Pause:"
 msgstr "잠시 중지:"
 
-#: src/ChaptersDlg.cpp:174 src/MainWin.cpp:617 src/MenuPropDlg.cpp:171 src/SettingsDlg.cpp:163
+#: src/ChaptersDlg.cpp:174 src/MainWin.cpp:621 src/MenuPropDlg.cpp:171 src/SettingsDlg.cpp:163
 #: src/SettingsDlg.cpp:165 src/TitlePropDlg.cpp:150 src/TitlePropDlg.cpp:196 src/VideoFrameDlg.cpp:82
 #: src/VideoPropDlg.cpp:188 src/VideoPropDlg.cpp:193
 msgid "sec"
@@ -1288,7 +1288,7 @@ msgstr "삭제(&D)"
 msgid "&Edit button"
 msgstr "버튼"
 
-#: src/MainWin.cpp:281
+#: src/MainWin.cpp:281 src/MainWin.cpp:1412
 #, fuzzy
 msgid "&Reset button"
 msgstr "기본 버튼:"
@@ -1325,102 +1325,102 @@ msgstr "파일 탐색"
 msgid "Backgrounds"
 msgstr "배경"
 
-#: src/MainWin.cpp:358 src/MainWin.cpp:367 src/MainWin.cpp:526 src/MenuPropDlg.cpp:182
+#: src/MainWin.cpp:358 src/MainWin.cpp:367 src/MainWin.cpp:530 src/MenuPropDlg.cpp:182
 msgid "Buttons"
 msgstr "버튼"
 
-#: src/MainWin.cpp:520 src/MainWin.cpp:1367 src/MainWin.cpp:1385 src/MenuObject.cpp:265
+#: src/MainWin.cpp:522 src/MainWin.cpp:1371 src/MainWin.cpp:1393 src/MenuObject.cpp:265
 #: src/MenuObjectPropDlg.cpp:265 src/MenuObjectPropDlg.cpp:280 buttons/text-circle-v2.xml:13
 #: buttons/text-square-v2.xml:14 buttons/text-underlined-v3.xml:12 buttons/text-v3.xml:13
 msgid "button"
 msgstr "버튼"
 
-#: src/MainWin.cpp:577
+#: src/MainWin.cpp:581
 msgid "Double click to set the background."
 msgstr "배경을 설정하기 위하여 이중 클릭"
 
-#: src/MainWin.cpp:584
+#: src/MainWin.cpp:588
 #, c-format
 msgid "%s (%.1f KB)"
 msgstr "%s (%.1f 킬로바이트)"
 
-#: src/MainWin.cpp:586
+#: src/MainWin.cpp:590
 #, c-format
 msgid "%s (%.1f MB)"
 msgstr "%s (%.1f 메가바이트)"
 
-#: src/MainWin.cpp:589
+#: src/MainWin.cpp:593
 #, c-format
 msgid "%s (%.1f GB)"
 msgstr "%s (%.1f 기가바이트)"
 
-#: src/MainWin.cpp:609
+#: src/MainWin.cpp:613
 #, c-format
 msgid "%d slides"
 msgstr ""
 
-#: src/MainWin.cpp:621 src/SettingsDlg.cpp:126
+#: src/MainWin.cpp:625 src/SettingsDlg.cpp:126
 msgid "min"
 msgstr "분"
 
-#: src/MainWin.cpp:696
+#: src/MainWin.cpp:700
 #, c-format
 msgid "Are you sure you want to delete '%s' from the file system?"
 msgstr "파일 시스템에서 %s을 정말 삭제하겠습니까?"
 
-#: src/MainWin.cpp:797
+#: src/MainWin.cpp:801
 #, fuzzy
 msgid "Select chapter"
 msgstr "타이틀 선택"
 
-#: src/MainWin.cpp:824
+#: src/MainWin.cpp:828
 msgid "Play all"
 msgstr "전체 재생"
 
-#: src/MainWin.cpp:826
+#: src/MainWin.cpp:830
 msgid "Select title"
 msgstr "타이틀 선택"
 
-#: src/MainWin.cpp:828 src/TitlesetManager.cpp:1001
+#: src/MainWin.cpp:832 src/TitlesetManager.cpp:1001
 msgid "Back"
 msgstr "뒤로"
 
-#: src/MainWin.cpp:830
+#: src/MainWin.cpp:834
 #, fuzzy
 msgid "Previous"
 msgstr "미리보기:"
 
-#: src/MainWin.cpp:832
+#: src/MainWin.cpp:836
 msgid "Next"
 msgstr ""
 
-#: src/MainWin.cpp:879
+#: src/MainWin.cpp:883
 #, c-format
 msgid "Error opening '%s'"
 msgstr "'%s' 여는 중 오류"
 
-#: src/MainWin.cpp:899
+#: src/MainWin.cpp:903
 msgid "Open a DVDStyler project file"
 msgstr "DVDStyler 프로젝트 파일 열기"
 
-#: src/MainWin.cpp:900 src/MainWin.cpp:1047
+#: src/MainWin.cpp:904 src/MainWin.cpp:1051
 msgid "Project files"
 msgstr "프로젝트 파일"
 
-#: src/MainWin.cpp:931 src/MainWin.cpp:1003
+#: src/MainWin.cpp:935 src/MainWin.cpp:1007
 msgid "Untitled"
 msgstr "타이틀 없음"
 
-#: src/MainWin.cpp:1004
+#: src/MainWin.cpp:1008
 #, c-format
 msgid "The file '%s' was modified, save changes?"
 msgstr "파일 \"%s\" 가 변경되었습니다. 저장할까요?"
 
-#: src/MainWin.cpp:1046
+#: src/MainWin.cpp:1050
 msgid "Save a DVDStyler project file"
 msgstr "DVDStyler 프로젝트 파일 저장하기"
 
-#: src/MainWin.cpp:1068
+#: src/MainWin.cpp:1072
 msgid ""
 "The selected video files don't fit on DVD. Please reduce\n"
 "video quality (bitrate) or remove some titles."
@@ -1428,7 +1428,7 @@ msgstr ""
 "선택된 비디오 파일이 DVD에 적합하지 않습니다.\n"
 "비디오 품질을 낮추거나 몇몇 타이틀을 제거하여 주십시오."
 
-#: src/MainWin.cpp:1089
+#: src/MainWin.cpp:1093
 msgid ""
 "Project doesn't contain any video title. To add a title please\n"
 "drag a video file into the bottom section of the window."
@@ -1436,7 +1436,7 @@ msgstr ""
 "프로젝트가 비디오 타이틀이 없습니다. 타이틀을 더하기 위하여\n"
 "비디오 파일을 작업창 영역으로 끌기 하시오"
 
-#: src/MainWin.cpp:1094
+#: src/MainWin.cpp:1098
 #, c-format
 msgid ""
 "Titleset %d doesn't contain any video title. To add a title\n"
@@ -1445,44 +1445,59 @@ msgstr ""
 "타이틀모음 %d 은 비디오 타이틀이 없습니다.  타이틀을 더하기 위해\n"
 "비디오 파일을 작업창 영역으로 끌기를 하시오."
 
-#: src/MainWin.cpp:1203
+#: src/MainWin.cpp:1207
 msgid "Audio/Video/Subtitle Files"
 msgstr "오디오/비디오/하위타이틀 파일"
 
-#: src/MainWin.cpp:1205 src/MenuPropDlg.cpp:154 src/TitlePropDlg.cpp:234 src/TitlePropDlg.cpp:441
+#: src/MainWin.cpp:1209 src/MenuPropDlg.cpp:154 src/TitlePropDlg.cpp:234 src/TitlePropDlg.cpp:441
 msgid "Audio Files"
 msgstr "오디오 파일"
 
-#: src/MainWin.cpp:1206 src/MainWin.cpp:1211 src/MenuPropDlg.cpp:139
+#: src/MainWin.cpp:1210 src/MainWin.cpp:1215 src/MenuPropDlg.cpp:139
 msgid "Video Files"
 msgstr "비디오 파일"
 
-#: src/MainWin.cpp:1207 src/TitlePropDlg.cpp:442
+#: src/MainWin.cpp:1211 src/TitlePropDlg.cpp:442
 msgid "Subtitle Files"
 msgstr "하위타이틀 파일"
 
-#: src/MainWin.cpp:1208 src/MainWin.cpp:1212
+#: src/MainWin.cpp:1212 src/MainWin.cpp:1216
 msgid "Image Files"
 msgstr "이미지 파일 "
 
-#: src/MainWin.cpp:1240
+#: src/MainWin.cpp:1244
 #, fuzzy
 msgid "Choose DVD device or directory"
 msgstr "폴더 선택"
 
-#: src/MainWin.cpp:1292
+#: src/MainWin.cpp:1296
 #, fuzzy
 msgid "Choose a titleset to add:"
 msgstr "ISO 이미지를 저장하기 위하여 파일 선택"
 
-#: src/MainWin.cpp:1348
+#: src/MainWin.cpp:1352
 msgid "Open a SVG file"
 msgstr ""
 
-#: src/MainWin.cpp:1349
+#: src/MainWin.cpp:1353
 #, fuzzy
 msgid "SVG files"
 msgstr "비디오 파일"
+
+#: src/MainWin.cpp:1383
+#, fuzzy
+msgid "Do you really want to reset this button?"
+msgstr "%s을 정말 삭제하겠습니까?"
+
+#: src/MainWin.cpp:1401
+#, fuzzy
+msgid "Do you really want to delete this button?"
+msgstr "%s을 정말 삭제하겠습니까?"
+
+#: src/MainWin.cpp:1412
+#, fuzzy
+msgid "&Delete button"
+msgstr "기본 버튼:"
 
 #: src/Menu.cpp:839
 #, c-format
