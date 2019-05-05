@@ -3,8 +3,8 @@
 	<title>Circle outline</title>
 	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 			width="50" height="50" viewBox="0 0 28 28">
-	    <circle id="circle" r="13" cy="14" cx="14" style="fill:#ffff00;" />
-	    <circle id="circleOutline" r="13" cy="14" cx="14" style="fill:none" stroke-width="1" />
+	    <circle id="circle" r="12" cy="14" cx="14" style="fill:#ffff00;" />
+	    <circle id="circleOutline" r="12" cy="14" cx="14" style="fill:none; stroke-width: 2;" />
 	    <text
 	       id="text" y="14" x="14"
 	       style="font-size:10px;fill:#000080"
