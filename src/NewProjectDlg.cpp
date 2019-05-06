@@ -132,8 +132,8 @@ bool NewProjectDlg::SetValues() {
 
 void NewProjectDlg::UpdateResolutionIcon(int sel) {
 	UpdateIcon(0, sel > 0 ? _("Warning") : _("Info"),
-				sel > 0 ? wxT("DVD with HD resolution doesn't comply with the standard and\ncan be played only in some blue-ray or software players.")
-						: wxT("DVD standard officially supports only video data\nwith resolution up to 720x576 pixels (SD)."),
+				sel > 0 ? _("DVD with HD resolution doesn't comply with the standard and\ncan be played only in some blue-ray or software players.")
+						: _("DVD standard officially supports only video data\nwith resolution up to 720x576 pixels (SD)."),
 				sel > 0 ? wxART_WARNING : wxART_INFORMATION);
 }
 

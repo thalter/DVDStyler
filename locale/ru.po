@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DVDStyler v3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-12 13:15+0200\n"
-"PO-Revision-Date: 2019-04-12 14:00+0200\n"
+"POT-Creation-Date: 2019-05-06 07:57+0200\n"
+"PO-Revision-Date: 2019-05-06 22:00+0200\n"
 "Last-Translator: Alex Thuering <alex at thuering.biz>\n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -1796,7 +1796,7 @@ msgstr "Срез"
 
 #: src/MenuObjectPropDlg.cpp:455 buttons/ellipse-v2.xml:23 buttons/ellipse45.xml:26 buttons/frame-text.xml:30
 #: buttons/frame-v2.xml:18 buttons/frame45.xml:21 buttons/movie.xml:26 buttons/painting_frame.xml:40
-#: buttons/sticky_note.xml:45 objects/ellipse-v3.xml:22 objects/ellipse45.xml:24 objects/frame-v3.xml:18
+#: buttons/sticky_note.xml:43 objects/ellipse-v3.xml:22 objects/ellipse45.xml:24 objects/frame-v3.xml:18
 #: objects/frame45.xml:20 objects/gold-frame.xml:45 objects/image.xml:3 objects/image.xml:9
 #: objects/sticky_note.xml:42
 msgid "Image"
@@ -2023,6 +2023,22 @@ msgstr "Введите, пожалуйста, имя диска."
 #: src/NewProjectDlg.cpp:123
 msgid "Volume name can only be a maximum of 32 characters."
 msgstr "Название диска может быть из максимально 32 символов."
+
+#: src/NewProjectDlg.cpp:135
+msgid ""
+"DVD with HD resolution doesn't comply with the standard and\n"
+"can be played only in some blue-ray or software players."
+msgstr ""
+"DVD с разрешением HD не соответствует стандарту и\n"
+"можно проигрывать только на некоторых blue-ray проигрывателях или на ПК."
+
+#: src/NewProjectDlg.cpp:136
+msgid ""
+"DVD standard officially supports only video data\n"
+"with resolution up to 720x576 pixels (SD)."
+msgstr ""
+"Стандарт DVD официально поддерживает только видео-данные\n"
+"с разрешением до 720 x576 пикселей (SD)."
 
 #: src/Pgc.cpp:274
 msgid "Can't load vob"
@@ -3311,11 +3327,15 @@ msgstr "Пилюля 3"
 msgid "Sticky note"
 msgstr "Заметка"
 
-#: buttons/sticky_note.xml:52 objects/sticky_note.xml:56
+#: buttons/sticky_note.xml:50 objects/sticky_note.xml:49
+msgid "Note"
+msgstr "Заметка"
+
+#: buttons/sticky_note.xml:57 objects/sticky_note.xml:56
 msgid "Pin"
 msgstr "Штифт"
 
-#: buttons/sticky_note.xml:59
+#: buttons/sticky_note.xml:64
 msgid "Selection colour"
 msgstr "Цвет выбранного"
 
@@ -3366,10 +3386,6 @@ msgstr "Прозрачность"
 #: objects/rectangle-v2.xml:3
 msgid "Rectangle"
 msgstr "Прямоугольник"
-
-#: objects/sticky_note.xml:49
-msgid "Note"
-msgstr "Заметка"
 
 #: objects/text-v2.xml:13
 msgid "text"

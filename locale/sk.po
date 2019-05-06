@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DVDStyler 3.0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-12 13:15+0200\n"
+"POT-Creation-Date: 2019-05-06 07:57+0200\n"
 "PO-Revision-Date: 2016-12-11 19:09+0100\n"
 "Last-Translator: martinco78 <martinco78 at azet.sk>\n"
 "Language-Team: martinco78 <martinco78 at azet.sk>\n"
@@ -1819,7 +1819,7 @@ msgstr "Prispôsobiť na výšku"
 
 #: src/MenuObjectPropDlg.cpp:455 buttons/ellipse-v2.xml:23 buttons/ellipse45.xml:26 buttons/frame-text.xml:30
 #: buttons/frame-v2.xml:18 buttons/frame45.xml:21 buttons/movie.xml:26 buttons/painting_frame.xml:40
-#: buttons/sticky_note.xml:45 objects/ellipse-v3.xml:22 objects/ellipse45.xml:24 objects/frame-v3.xml:18
+#: buttons/sticky_note.xml:43 objects/ellipse-v3.xml:22 objects/ellipse45.xml:24 objects/frame-v3.xml:18
 #: objects/frame45.xml:20 objects/gold-frame.xml:45 objects/image.xml:3 objects/image.xml:9
 #: objects/sticky_note.xml:42
 msgid "Image"
@@ -2046,6 +2046,18 @@ msgstr "Zadajte názov disku."
 #: src/NewProjectDlg.cpp:123
 msgid "Volume name can only be a maximum of 32 characters."
 msgstr "Názov disku môže mať najviac 32 znakov."
+
+#: src/NewProjectDlg.cpp:135
+msgid ""
+"DVD with HD resolution doesn't comply with the standard and\n"
+"can be played only in some blue-ray or software players."
+msgstr ""
+
+#: src/NewProjectDlg.cpp:136
+msgid ""
+"DVD standard officially supports only video data\n"
+"with resolution up to 720x576 pixels (SD)."
+msgstr ""
 
 #: src/Pgc.cpp:274
 msgid "Can't load vob"
@@ -3346,12 +3358,16 @@ msgstr "Pilulka 3"
 msgid "Sticky note"
 msgstr ""
 
-#: buttons/sticky_note.xml:52 objects/sticky_note.xml:56
+#: buttons/sticky_note.xml:50 objects/sticky_note.xml:49
+msgid "Note"
+msgstr ""
+
+#: buttons/sticky_note.xml:57 objects/sticky_note.xml:56
 #, fuzzy
 msgid "Pin"
 msgstr "min"
 
-#: buttons/sticky_note.xml:59
+#: buttons/sticky_note.xml:64
 #, fuzzy
 msgid "Selection colour"
 msgstr "1. farba odrazu"
@@ -3403,10 +3419,6 @@ msgstr "Priehľadnosť"
 #: objects/rectangle-v2.xml:3
 msgid "Rectangle"
 msgstr "Obdĺžnik"
-
-#: objects/sticky_note.xml:49
-msgid "Note"
-msgstr ""
 
 #: objects/text-v2.xml:13
 msgid "text"
