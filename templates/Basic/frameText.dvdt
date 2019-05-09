@@ -8,7 +8,7 @@
       <!--************** MENU 1 **************-->
       <pgc entry="title">
         <vob pause="inf">
-          <menu aspectRatio="1">
+          <menu aspectRatio="1" rememberLastButton="-1">
             <svg width="720" height="540">
               <image width="720" height="540" id="background" xlink:href="13_ocean.jpg"/>
               <defs id="defs">
@@ -72,12 +72,11 @@
             </button>
           </menu>
         </vob>
-        <pre>button=1k;</pre>
       </pgc>
       <!--************** MENU 2 **************-->
       <pgc>
         <vob pause="inf">
-          <menu aspectRatio="1">
+          <menu aspectRatio="1" rememberLastButton="-1">
             <svg width="720" height="540">
               <image width="720" height="540" id="background" xlink:href="13_ocean.jpg"/>
               <defs id="defs">
@@ -328,7 +327,6 @@
             </button>
           </menu>
         </vob>
-        <pre>button=1k;</pre>
       </pgc>
     </menus>
   </vmgm>

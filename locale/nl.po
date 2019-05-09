@@ -3,17 +3,19 @@ msgstr ""
 "Project-Id-Version: DVDstyler 2.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-06 07:57+0200\n"
-"PO-Revision-Date: 2013-11-07 20:28+0100\n"
-"Last-Translator: Frank Meijer<fajmmeijer at hotmail.com>\n"
+"PO-Revision-Date: 2019-05-06 22:23+0200\n"
+"Last-Translator: Een blije DVDStyler-gebruiker <anoniem at geenemailadres.nl>\n"
 "Language-Team: Dutch\n"
-"Language: \n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.1.1\n"
 
 #: src/About.cpp:35
 msgid "About ..."
-msgstr "Over.."
+msgstr "Over..."
 
 #: src/About.cpp:39
 msgid "About"
@@ -125,7 +127,7 @@ msgstr ""
 "WAARBIJ GEEN WETSOVERTREDING WORDT BEGAAN. IN GEEN ENKEL GEVAL KUNNEN DE AUTEURS OF COPYRIGHTHOUDERS "
 "VERANTWOORDELIJK WORDEN GEHOUDEN VOOR CLAIMS, SCHADEVERGOEDINGEN OF ANDERE AANSPRAKELIJKHEDEN, ZOWEL "
 "CONTRACTUEEL OF DOOR WELKE ANDERE ONRECHTMATIGHEID DAN OOK IN RELATIE TOT HET PROGRAMMA OF DOOR TOEDOEN VAN "
-"HET GEBRUIK VAN HET PROGRAMMA. "
+"HET GEBRUIK VAN HET PROGRAMMA."
 
 #: src/About.cpp:157
 msgid "Licence"
@@ -136,45 +138,40 @@ msgid "OK"
 msgstr "Oké"
 
 #: src/AnimationDlg.cpp:29
-#, fuzzy
 msgid "width"
-msgstr "Breedte:"
+msgstr "breedte"
 
 #: src/AnimationDlg.cpp:29
-#, fuzzy
 msgid "height"
-msgstr "Hoogte:"
+msgstr "hoogte"
 
 #: src/AnimationDlg.cpp:29
-#, fuzzy
 msgid "opacity"
-msgstr "Doorzichtigheid"
+msgstr "doorzichtigheid"
 
 #: src/AnimationDlg.cpp:46
 msgid "font size"
-msgstr ""
+msgstr "tekengrote"
 
 #: src/AnimationDlg.cpp:157
 msgid "Attribute"
-msgstr ""
+msgstr "Attribuut"
 
 #: src/AnimationDlg.cpp:157
 msgid "Values (separated by semicolon)"
-msgstr ""
+msgstr "Waarden (gescheiden door dubbel punt)"
 
 #: src/AnimationDlg.cpp:157
 msgid "Begin"
-msgstr ""
+msgstr "Begin"
 
 #: src/AnimationDlg.cpp:157
-#, fuzzy
 msgid "Duration (sec)"
-msgstr "Tijdsduur:"
+msgstr "Tijdsduur (sec)"
 
 #: src/AnimationDlg.cpp:208
-#, fuzzy
 msgid "Animations"
-msgstr "Acties:"
+msgstr "Acties"
 
 #: src/AudioPropDlg.cpp:79
 msgid "Audio properties"
@@ -219,25 +216,23 @@ msgstr "Filters:"
 
 #: src/AudioPropDlg.cpp:125
 msgid "Volume adjustment"
-msgstr ""
+msgstr "Volume aanpassing"
 
 #: src/AudioPropDlg.cpp:128 src/SettingsDlg.cpp:203 src/SettingsDlg.cpp:302
-#, fuzzy
 msgid "No"
 msgstr "Geen"
 
 #: src/AudioPropDlg.cpp:130
 msgid "Change (%)"
-msgstr ""
+msgstr "Verander (%)"
 
 #: src/AudioPropDlg.cpp:135 src/SettingsDlg.cpp:121
-#, fuzzy
 msgid "Normalize"
-msgstr "Normaal"
+msgstr "Normaliseer"
 
 #: src/AudioPropDlg.cpp:137
 msgid "Change (dB)"
-msgstr ""
+msgstr "Verander (dB)"
 
 #: src/AudioPropDlg.cpp:206 src/Stream.cpp:114
 msgid "stereo"
@@ -245,7 +240,7 @@ msgstr "stereo"
 
 #: src/AudioPropDlg.cpp:244 src/AudioPropDlg.cpp:426
 msgid "Track gain:"
-msgstr ""
+msgstr "Versterk:"
 
 #: src/AudioPropDlg.cpp:348
 #, c-format
@@ -259,7 +254,7 @@ msgstr "Ongeldige volumewaarde '%s'"
 
 #: src/AudioPropDlg.cpp:389
 msgid "Analysis of audio"
-msgstr ""
+msgstr "Audio analyse"
 
 #: src/AudioPropDlg.cpp:389 src/MainWin.cpp:872 src/SysUtils.cpp:303 src/VobListBox.cpp:611
 msgid "Please wait..."
@@ -279,10 +274,10 @@ msgstr "Branden"
 msgid "Temp directory:"
 msgstr "Tijdelijke map:"
 
-#: src/BurnDlg.cpp:114 src/BurnDlg.cpp:138 src/BurnDlg.cpp:160 src/BurnDlg.cpp:186
-#: src/SubtitlePropDlg.cpp:148 src/SubtitlePropDlg.cpp:161 src/SubtitlePropDlg.cpp:179
+#: src/BurnDlg.cpp:114 src/BurnDlg.cpp:138 src/BurnDlg.cpp:160 src/BurnDlg.cpp:186 src/SubtitlePropDlg.cpp:148
+#: src/SubtitlePropDlg.cpp:161 src/SubtitlePropDlg.cpp:179
 msgid "..."
-msgstr ".."
+msgstr "..."
 
 #: src/BurnDlg.cpp:119 src/BurnDlg.cpp:166 src/BurnDlg.cpp:192
 msgid "Free:"
@@ -294,11 +289,11 @@ msgstr "Benodigd:"
 
 #: src/BurnDlg.cpp:129
 msgid "preview"
-msgstr "voorbeeldweergave"
+msgstr "voorbeeld"
 
 #: src/BurnDlg.cpp:146
 msgid "Download"
-msgstr ""
+msgstr "Downloaden"
 
 #: src/BurnDlg.cpp:150
 msgid "just generate"
@@ -310,7 +305,7 @@ msgstr "Opslaan in:"
 
 #: src/BurnDlg.cpp:176
 msgid "create iso image"
-msgstr "maak iso-image aan"
+msgstr "maak iso-image"
 
 #: src/BurnDlg.cpp:202
 msgid "burn"
@@ -342,19 +337,19 @@ msgstr "Reset"
 
 #: src/BurnDlg.cpp:341
 msgid "VLC media player"
-msgstr ""
+msgstr "VLC media speler"
 
 #: src/BurnDlg.cpp:343
 msgid "MPC-HC player"
-msgstr ""
+msgstr "MPC-HC speler"
 
 #: src/BurnDlg.cpp:345
 msgid "Custom video player"
-msgstr ""
+msgstr "Aangepaste video speler"
 
 #: src/BurnDlg.cpp:396
 msgid "N/A"
-msgstr "nvt"
+msgstr "Nvt"
 
 #: src/BurnDlg.cpp:401 src/BurnDlg.cpp:436 src/BurnDlg.cpp:437 src/BurnDlg.cpp:438
 msgid "GB"
@@ -378,9 +373,8 @@ msgid "Choose a file"
 msgstr "Kies een bestand"
 
 #: src/BurnDlg.cpp:537
-#, fuzzy
 msgid "Programs"
-msgstr "Programma"
+msgstr "Programma's"
 
 #: src/BurnDlg.cpp:538 src/MainWin.cpp:1052 src/MainWin.cpp:1213 src/MainWin.cpp:1217
 #: src/MenuObjectPropDlg.cpp:458 src/MenuPropDlg.cpp:141 src/MenuPropDlg.cpp:155 src/TitlePropDlg.cpp:235
@@ -390,11 +384,11 @@ msgstr "Alle Bestanden"
 
 #: src/BurnDlg.cpp:569
 msgid "Choose a file to save iso image"
-msgstr "Kies een bestand om de ISO-image op te slaan"
+msgstr "Kies een bestand om fet ISO-beeld op te slaan"
 
 #: src/BurnDlg.cpp:588
 msgid "Please enter output directory"
-msgstr "Voer aub de uitvoermap in."
+msgstr "Voer aub de uitvoermap in"
 
 #: src/BurnDlg.cpp:594
 msgid "Output directory contains files. Please choose another output directory."
@@ -403,22 +397,21 @@ msgstr "De uitvoermap bevat bestanden. Kies aub een andere uitvoermap."
 #: src/BurnDlg.cpp:600
 #, c-format
 msgid "Directory '%s' already exist. Do you want to overwrite it?"
-msgstr "Map '%s' bestaat al. Wil je het overschrijven?"
+msgstr "Map '%s' bestaat al. Wilt U het overschrijven?"
 
 #: src/BurnDlg.cpp:608 src/BurnDlg.cpp:660 src/ProcessCleanTemp.cpp:43 src/ProcessCleanTemp.cpp:47
 #: src/ProcessCleanTemp.cpp:51
 #, c-format
 msgid "Can't create directory '%s'"
-msgstr "Kan map '%s' niet aanmaken"
+msgstr "Kan map '%s' niet aanmaken."
 
 #: src/BurnDlg.cpp:615
-#, fuzzy
 msgid "Please select a video player"
-msgstr "Voer aub de apparaatnaam in"
+msgstr "Kies aub een video speler"
 
 #: src/BurnDlg.cpp:620
 msgid "Please select path to video player"
-msgstr ""
+msgstr "Selecteer het pad naar de video speler"
 
 #: src/BurnDlg.cpp:627
 msgid "Please enter file name to save ISO"
@@ -448,14 +441,15 @@ msgstr ""
 
 #: src/ButtonAddParamDlg.cpp:47
 msgid "Add parameter"
-msgstr ""
+msgstr "Voeg parameter toe"
 
 #: src/ButtonAddParamDlg.cpp:55
-#, fuzzy
 msgid ""
 "Please select an SVG element\n"
 "for new parameter:"
-msgstr "Voer aub de apparaatnaam in"
+msgstr ""
+"Selecteer een SVG-element\n"
+"voor nieuwe parameter:"
 
 #: src/ButtonAddParamDlg.cpp:60 src/SubtitlePropDlg.cpp:143
 msgid "Fill:"
@@ -470,68 +464,61 @@ msgid "Text"
 msgstr "Tekst"
 
 #: src/ButtonAddParamDlg.cpp:65
-#, fuzzy
 msgid "Stroke:"
-msgstr "Slagkleur"
+msgstr "Slagkleur:"
 
 #: src/ButtonEditDlg.cpp:170
 msgid "name"
-msgstr ""
+msgstr "naam"
 
-#: src/ButtonEditDlg.cpp:170 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:439
-#: src/MenuObjectPropDlg.cpp:677 src/MenuObjectPropDlg.cpp:686 src/MenuObjectPropDlg.cpp:698
+#: src/ButtonEditDlg.cpp:170 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:439 src/MenuObjectPropDlg.cpp:677
+#: src/MenuObjectPropDlg.cpp:686 src/MenuObjectPropDlg.cpp:698
 msgid "title"
 msgstr "titel"
 
 #: src/ButtonEditDlg.cpp:170
 msgid "type"
-msgstr ""
+msgstr "type"
 
 #: src/ButtonEditDlg.cpp:170
 msgid "ID of element"
-msgstr ""
+msgstr "ID van het element"
 
 #: src/ButtonEditDlg.cpp:170
 msgid "attribute name"
-msgstr ""
+msgstr "geef een naam"
 
 #: src/ButtonEditDlg.cpp:170
 msgid "dynamic"
-msgstr ""
+msgstr "dynamisch"
 
 #: src/ButtonEditDlg.cpp:171
 msgid "value"
-msgstr ""
+msgstr "waarde"
 
 #: src/ButtonEditDlg.cpp:171 src/ButtonEditDlg.cpp:261
-#, fuzzy
 msgid "highlighted"
-msgstr "Oplichtend"
+msgstr "oplichtend"
 
 #: src/ButtonEditDlg.cpp:171 src/ButtonEditDlg.cpp:262
-#, fuzzy
 msgid "selected"
-msgstr "Geselecteerd"
+msgstr "geselecteerd"
 
 #: src/ButtonEditDlg.cpp:251
-#, fuzzy
 msgid "Create button"
-msgstr "Standaard knop:"
+msgstr "Maak knop"
 
 #: src/ButtonEditDlg.cpp:260
-#, fuzzy
 msgid "normal"
-msgstr "Normaal"
+msgstr "normaal"
 
 #: src/ButtonEditDlg.cpp:264
-#, fuzzy
 msgid "Button state"
-msgstr "Knoppen"
+msgstr "Knop satus"
 
 #: src/ButtonEditDlg.cpp:271
-#, fuzzy
 msgid "Directory:"
-msgstr "Map"
+msgstr "Map:"
 
 #: src/ButtonEditDlg.cpp:273 buttons/circle-outline.xml:16 buttons/circle.xml:15 buttons/pill.xml:44
 #: buttons/text-circle-v2.xml:19 buttons/text-square-v2.xml:20 buttons/text-underlined-v3.xml:19
@@ -540,33 +527,31 @@ msgid "Label"
 msgstr "Label"
 
 #: src/ButtonEditDlg.cpp:275 src/SlideDlg.cpp:48
-#, fuzzy
 msgid "File name:"
 msgstr "Bestandsnaam:"
 
 #: src/ButtonEditDlg.cpp:280
 msgid ".xml"
 msgstr ""
+".\n"
+"xml"
 
 #: src/ButtonEditDlg.cpp:283
-#, fuzzy
 msgid "Title:"
-msgstr "Titel"
+msgstr "Titel:"
 
 #: src/ButtonEditDlg.cpp:287
-#, fuzzy
 msgid "Default width:"
-msgstr "Standaard knop:"
+msgstr "Standaard breedte:"
 
 #: src/ButtonEditDlg.cpp:293 src/ButtonEditDlg.cpp:316 src/ButtonEditDlg.cpp:340 src/ButtonEditDlg.cpp:363
-#, fuzzy
 msgid "or"
-msgstr "Basis"
+msgstr "of"
 
 #: src/ButtonEditDlg.cpp:297 src/ButtonEditDlg.cpp:302 src/ButtonEditDlg.cpp:320 src/ButtonEditDlg.cpp:325
 #: src/ButtonEditDlg.cpp:344 src/ButtonEditDlg.cpp:349 src/ButtonEditDlg.cpp:367 src/ButtonEditDlg.cpp:372
 msgid "+"
-msgstr ""
+msgstr "+"
 
 #: src/ButtonEditDlg.cpp:307 src/ButtonEditDlg.cpp:330 src/ButtonEditDlg.cpp:354 src/ButtonEditDlg.cpp:377
 #: src/SubtitlePropDlg.cpp:153 src/SubtitlePropDlg.cpp:167 src/SubtitlePropDlg.cpp:184
@@ -574,75 +559,69 @@ msgid "%"
 msgstr "%"
 
 #: src/ButtonEditDlg.cpp:310
-#, fuzzy
 msgid "Min width:"
-msgstr "Omtrekbreedte"
+msgstr "Minimum breedte:"
 
 #: src/ButtonEditDlg.cpp:334
-#, fuzzy
 msgid "Default height:"
-msgstr "Standaard hoofdstuklengte:"
+msgstr "Standaard hoogte:"
 
 #: src/ButtonEditDlg.cpp:357
-#, fuzzy
 msgid "Min height:"
-msgstr "Hoogte:"
+msgstr "Minimum hoogte:"
 
 #: src/ButtonEditDlg.cpp:382
-#, fuzzy
 msgid "Parameters:"
-msgstr "Hoofdstukken:"
+msgstr "Parameters:"
 
 #: src/ButtonEditDlg.cpp:391 src/MainWin.cpp:321
 msgid "Save"
 msgstr "Opslaan"
 
 #: src/ButtonEditDlg.cpp:456
-#, fuzzy
 msgid "Edit button"
-msgstr "knop"
+msgstr "Bewerken knop"
 
 #: src/ButtonEditDlg.cpp:500
-#, fuzzy
 msgid "Add"
-msgstr "&Toevoegen"
+msgstr "Toevoegen"
 
 #: src/ButtonEditDlg.cpp:502
-#, fuzzy
 msgid "Remove selected"
-msgstr "Verwijder bestand"
+msgstr "Verwijder het geselecteerde"
 
 #: src/ButtonEditDlg.cpp:546
 msgid "No SVG element is selected"
-msgstr ""
+msgstr "Er is geen SVG element geselecteerd"
 
 #: src/ButtonEditDlg.cpp:627 src/NewProjectDlg.cpp:51 src/NewProjectDlg.cpp:134
 msgid "Info"
-msgstr ""
+msgstr "Informatie"
 
 #: src/ButtonEditDlg.cpp:627
 msgid ""
 "Click on image to select an SVG\n"
 " element for a new parameter"
 msgstr ""
+"Klik op de afbeelding om een ​​SVG te selecteren\n"
+" element voor een nieuwe parameter"
 
 #: src/Cache.cpp:238 src/Cache.cpp:263 src/Process.cpp:25 src/ProcessMenuTransitions.cpp:121
 #: src/ProcessTranscode.cpp:159 src/ProcessTranscode.cpp:174
 #, c-format
 msgid "Can't remove file '%s'"
-msgstr "Kan bestand '%s' niet verwijderen"
+msgstr "Kan bestand :niet verwijderen:  '%s'"
 
 #: src/Cache.cpp:372
 #, c-format
 msgid "There is %d file (%0.1f MB) in the transcoding cache."
 msgid_plural "There are %d files (%0.1f MB) in the transcoding cache."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "In de transcode cache is er %d bestand (%0.1f MB)"
+msgstr[1] "In de transcode cache zijn er %d bestand (%0.1f MB)"
 
 #: src/Cache.cpp:375
-#, fuzzy
 msgid "Do you want to clear the cache?"
-msgstr "Wil je %s echt verwijderen?"
+msgstr "Wil je de buffer ledigen?"
 
 #: src/Cache.cpp:376 src/MainWin.cpp:1009
 msgid "Confirm"
@@ -698,7 +677,7 @@ msgstr "Pauze:"
 #: src/SettingsDlg.cpp:165 src/TitlePropDlg.cpp:150 src/TitlePropDlg.cpp:196 src/VideoFrameDlg.cpp:82
 #: src/VideoPropDlg.cpp:188 src/VideoPropDlg.cpp:193
 msgid "sec"
-msgstr "sec."
+msgstr "sec"
 
 #: src/ChaptersDlg.cpp:177
 msgid "Commands:"
@@ -757,7 +736,7 @@ msgstr "Kan titelset niet laden"
 
 #: src/DVD.cpp:917 src/DVD.cpp:944 src/DVD.cpp:957
 msgid "Omit"
-msgstr ""
+msgstr "Negeer"
 
 #: src/DVD.cpp:919 src/DVD.cpp:946 src/DVD.cpp:959 src/ProgressDlg.cpp:227
 msgid "Copy"
@@ -777,19 +756,19 @@ msgstr "PCM 48 kHz"
 
 #: src/DVD.cpp:974
 msgid "SD (standard)"
-msgstr ""
+msgstr "SD (standaard)"
 
 #: src/DVD.cpp:975
 msgid "Half HD (1280 x 720)"
-msgstr ""
+msgstr "Half HD (1280 x 720)"
 
 #: src/DVD.cpp:976
 msgid "HDV (1440 x 1080)"
-msgstr ""
+msgstr "HDV (1440 x 1080)"
 
 #: src/DVD.cpp:977
 msgid "Full HD (1920 x 1080)"
-msgstr ""
+msgstr "Full HD (1920 x 1080)"
 
 #: src/DVD.cpp:983
 msgid "CD (700 MB)"
@@ -840,7 +819,7 @@ msgstr "selecteer audiotrack %d en "
 #: src/DVDAction.cpp:46
 #, c-format
 msgid "select subtitle track %d and "
-msgstr "selecteer ondertitelingtrack %d en "
+msgstr "selecteer ondertiteling %d en "
 
 #: src/DVDAction.cpp:54
 msgid "jump to start of current menu"
@@ -852,9 +831,8 @@ msgid "from titleset %d"
 msgstr "vanuit titelset %d"
 
 #: src/DVDAction.cpp:69
-#, fuzzy
 msgid "jump to title menu"
-msgstr "spring naar titel vmMenu"
+msgstr "spring naar titel menu"
 
 #: src/DVDAction.cpp:69
 msgid "jump to root menu"
@@ -885,9 +863,8 @@ msgid "jump to menu"
 msgstr "spring naar menu"
 
 #: src/DVDAction.cpp:92
-#, fuzzy
 msgid "jump to VMGM menu"
-msgstr "spring naar menu"
+msgstr "spring naar VMGM menu"
 
 #: src/DVDAction.cpp:100
 #, c-format
@@ -905,9 +882,8 @@ msgid "titleset"
 msgstr "titelset"
 
 #: src/DVDAction.cpp:186 src/MenuObjectPropDlg.cpp:636 src/MenuPropDlg.cpp:55
-#, fuzzy
 msgid "VMGM menu"
-msgstr "menu"
+msgstr "VMGM menu"
 
 #: src/DVDAction.cpp:196
 #, c-format
@@ -915,13 +891,12 @@ msgid "cannot jump to titleset %d, only %d exist"
 msgstr "kan niet naar titelset %d springen, alleen %d bestaat"
 
 #: src/DVDAction.cpp:204
-#, fuzzy
 msgid "cannot jump to VMGM menu; none exist"
-msgstr "naar menu springen is niet mogelijk; bestaat niet"
+msgstr "onmogelijk om naar VMGM menu te springen; onbestaand"
 
 #: src/DVDAction.cpp:206 src/DVDAction.cpp:441
 msgid "cannot jump to menu; none exist"
-msgstr "naar menu springen is niet mogelijk; bestaat niet"
+msgstr "onmogelijk om naar menu te springen; onbestaand"
 
 #: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:653
 msgid "title menu"
@@ -953,9 +928,9 @@ msgid "cannot find %s"
 msgstr "kan %s niet vinden"
 
 #: src/DVDAction.cpp:220
-#, fuzzy, c-format
+#, c-format
 msgid "cannot jump to VMGM menu %d, only %d exist"
-msgstr "kan niet naar menu %d springen, alleen %d bestaat"
+msgstr "kan niet naar VMGM menu %d springen, alleen %d bestaat"
 
 #: src/DVDAction.cpp:222
 #, c-format
@@ -983,9 +958,9 @@ msgstr ""
 "ondertitel-/(camera)hoek menu"
 
 #: src/DVDAction.cpp:256
-#, fuzzy
 msgid "cannot jump from regular menu to a title in another titleset, use VMGM menu instead"
-msgstr "kan niet van regulier menu naar titel in andere titelset springen, gebruik in plaats daarvan vnMenu"
+msgstr ""
+"kan niet van regulier menu naar titel in andere titel set springen, gebruik in plaats daarvan  het VMGM menu"
 
 #: src/DVDAction.cpp:258
 msgid "cannot jump to a title in another titleset"
@@ -997,7 +972,7 @@ msgstr "ongeldige actie"
 
 #: src/DVDAction.cpp:280 src/DVDAction.cpp:371
 msgid "cannot jump to a menu from a title, use 'call' instead"
-msgstr "kan niet naar een menu vanuit een titel springen, gebruik in plaats daarvan 'aanroepen'"
+msgstr "kan niet naar een menu vanuit een titel springen, gebruik  'aanroepen' in  de plaats"
 
 #: src/DVDAction.cpp:287 src/DVDAction.cpp:403
 msgid "chapter"
@@ -1012,9 +987,9 @@ msgid "cell"
 msgstr "cel"
 
 #: src/DVDAction.cpp:288 src/DVDAction.cpp:404
-#, fuzzy, c-format
+#, c-format
 msgid "jumping from VMGM menu to %s is not allowed"
-msgstr "van vmMenu naar %s springen is niet toegestaan"
+msgstr "van VMGM menu naar %s springen is niet toegestaan"
 
 #: src/DVDAction.cpp:320
 #, c-format
@@ -1076,7 +1051,7 @@ msgstr "kan niet nog een titel 'aanroepen', gebruik 'spring' in plaats daarvan"
 
 #: src/DVDAction.cpp:463
 msgid "cannot 'call' a chapter within a menu"
-msgstr "kan geen hoofdstuk 'aanroepen' binnen een menu "
+msgstr "kan geen hoofdstuk 'aanroepen' binnen een menu"
 
 #: src/DVDAction.cpp:473
 msgid "cannot call to a menu in another titleset"
@@ -1110,9 +1085,8 @@ msgid "Create jumppads"
 msgstr "Maak springlokaties aan"
 
 #: src/DVDPropDlg.cpp:32
-#, fuzzy
 msgid "Create empty VMGM/titleset menus if it doesn't exist"
-msgstr "Maak een leeg menu/vmMenu aan als deze niet bestaat"
+msgstr "Maak een leeg VMGM / titel set aan als deze niet bestaat"
 
 #: src/dvdstyler.cpp:191
 msgid "automatically starts the generation and burning"
@@ -1207,13 +1181,12 @@ msgid "&Menu"
 msgstr "&Menu"
 
 #: src/MainWin.cpp:194 src/TitlesetManager.cpp:150 src/TitlesetManager.cpp:171
-#, fuzzy
 msgid "&Chapter menu"
-msgstr "hoofdstukmenu"
+msgstr "hoofdstuk menu"
 
 #: src/MainWin.cpp:195
 msgid "&VMGM menu"
-msgstr ""
+msgstr "&VMGM menu"
 
 #: src/MainWin.cpp:196 src/TitlesetManager.cpp:152 src/TitlesetManager.cpp:173
 msgid "&Titleset"
@@ -1238,7 +1211,7 @@ msgstr "&Instellingen.."
 
 #: src/MainWin.cpp:203
 msgid "&Create button from SVG..."
-msgstr ""
+msgstr "&Maak een knop vanuit SVG..."
 
 #: src/MainWin.cpp:204
 msgid "&Configuration"
@@ -1265,23 +1238,20 @@ msgid "&Assign to background"
 msgstr "Gebruik als &achtergrond"
 
 #: src/MainWin.cpp:273
-#, fuzzy
 msgid "&Play"
-msgstr "Speel alles af"
+msgstr "S&peel af"
 
 #: src/MainWin.cpp:274 src/MenuEditor.cpp:374 src/TitlesetManager.cpp:184 wxVillaLib/PropDlg.cpp:648
 msgid "&Delete"
 msgstr "&Verwijderen"
 
 #: src/MainWin.cpp:280
-#, fuzzy
 msgid "&Edit button"
-msgstr "knop"
+msgstr "&Bewerk knop"
 
 #: src/MainWin.cpp:281 src/MainWin.cpp:1412
-#, fuzzy
 msgid "&Reset button"
-msgstr "Standaard knop:"
+msgstr "Herstel knop"
 
 #: src/MainWin.cpp:306
 msgid "DVDStyler"
@@ -1327,7 +1297,7 @@ msgstr "knop"
 
 #: src/MainWin.cpp:581
 msgid "Double click to set the background."
-msgstr "Dubbelklik om de achtergrond in te stellen"
+msgstr "Dubbelklik om de achtergrond in te stellen."
 
 #: src/MainWin.cpp:588
 #, c-format
@@ -1351,7 +1321,7 @@ msgstr "%d dia's"
 
 #: src/MainWin.cpp:625 src/SettingsDlg.cpp:126
 msgid "min"
-msgstr "min."
+msgstr "min"
 
 #: src/MainWin.cpp:700
 #, c-format
@@ -1359,9 +1329,8 @@ msgid "Are you sure you want to delete '%s' from the file system?"
 msgstr "Wil je '%s' echt verwijderen van het bestandssysteem?"
 
 #: src/MainWin.cpp:801
-#, fuzzy
 msgid "Select chapter"
-msgstr "Selecteer titel"
+msgstr "Selecteer hoofdstuk"
 
 #: src/MainWin.cpp:828
 msgid "Play all"
@@ -1431,66 +1400,61 @@ msgid ""
 "Titleset %d doesn't contain any video title. To add a title\n"
 "please drag a video file into the bottom section of the window."
 msgstr ""
-"Titelset %d bevat geen videotitels. Sleep aub een videobestand\n"
+"Titel set %d bevat geen videotitels. Sleep aub een videobestand\n"
 "naar het onderste deel van het scherm om een titel toe te voegen."
 
 #: src/MainWin.cpp:1207
 msgid "Audio/Video/Subtitle Files"
-msgstr "Audio-/Video-/Ondertitelingbestanden"
+msgstr "Audio-/Video-/Ondertiteling bestanden"
 
 #: src/MainWin.cpp:1209 src/MenuPropDlg.cpp:154 src/TitlePropDlg.cpp:234 src/TitlePropDlg.cpp:441
 msgid "Audio Files"
-msgstr "Audiobestanden"
+msgstr "Audio bestanden"
 
 #: src/MainWin.cpp:1210 src/MainWin.cpp:1215 src/MenuPropDlg.cpp:139
 msgid "Video Files"
-msgstr "Videobestanden"
+msgstr "Video bestanden"
 
 #: src/MainWin.cpp:1211 src/TitlePropDlg.cpp:442
 msgid "Subtitle Files"
-msgstr "Ondertitelingbestanden"
+msgstr "Ondertiteling bestanden"
 
 #: src/MainWin.cpp:1212 src/MainWin.cpp:1216
 msgid "Image Files"
-msgstr "Afbeeldingbestanden"
+msgstr "Afbeelding bestanden"
 
 #: src/MainWin.cpp:1244
 msgid "Choose DVD device or directory"
 msgstr "Kies DVD-apparaat of map"
 
 #: src/MainWin.cpp:1296
-#, fuzzy
 msgid "Choose a titleset to add:"
-msgstr "Kies een bestand om de ISO-image op te slaan"
+msgstr "Kies een bestand om de ISO-image op te slaan:"
 
 #: src/MainWin.cpp:1352
 msgid "Open a SVG file"
-msgstr ""
+msgstr "Open een SVG bestand"
 
 #: src/MainWin.cpp:1353
-#, fuzzy
 msgid "SVG files"
-msgstr "Videobestanden"
+msgstr "SVG bestanden"
 
 #: src/MainWin.cpp:1383
-#, fuzzy
 msgid "Do you really want to reset this button?"
-msgstr "Wil je %s echt verwijderen?"
+msgstr "Wil je echt deze knop bewerken ?"
 
 #: src/MainWin.cpp:1401
-#, fuzzy
 msgid "Do you really want to delete this button?"
-msgstr "Wil je %s echt verwijderen?"
+msgstr "Wil je echt deze knop verwijderen?"
 
 #: src/MainWin.cpp:1412
-#, fuzzy
 msgid "&Delete button"
-msgstr "Standaard knop:"
+msgstr "Verwijder knop"
 
 #: src/Menu.cpp:839
-#, fuzzy, c-format
+#, c-format
 msgid "%s and %s are overlapping"
-msgstr "Sommige knoppen overlappen"
+msgstr "%s en %s overlappen"
 
 #: src/MenuActionsDlg.cpp:103
 msgid "ID"
@@ -1519,19 +1483,19 @@ msgstr "Regulier"
 
 #: src/MenuCellsDlg.cpp:108
 msgid "Type"
-msgstr "Type:"
+msgstr "Type"
 
 #: src/MenuCellsDlg.cpp:108
 msgid "End"
-msgstr "Einde:"
+msgstr "Einde"
 
 #: src/MenuCellsDlg.cpp:108
 msgid "Pause"
-msgstr "Pauze:"
+msgstr "Pauze"
 
 #: src/MenuCellsDlg.cpp:108
 msgid "Commands"
-msgstr "Opdrachten:"
+msgstr "Opdrachten"
 
 #: src/MenuCellsDlg.cpp:140
 msgid "Menu cells"
@@ -1542,9 +1506,9 @@ msgid "Cells:"
 msgstr "Cellen:"
 
 #: src/MenuCellsDlg.cpp:238 src/MenuCellsDlg.cpp:242
-#, fuzzy, c-format
+#, c-format
 msgid "The cells %d and %d are overlapping"
-msgstr "Sommige knoppen overlappen"
+msgstr "Cellen %d en %d overlappen"
 
 #: src/MenuEditor.cpp:93 src/MenuEditor.cpp:417
 msgid ": unknown format"
@@ -1567,42 +1531,36 @@ msgid "&Send to Back"
 msgstr "Breng naar Ach&tergrond"
 
 #: src/MenuEditor.cpp:315
-#, fuzzy
 msgid "To &Left"
-msgstr "&Links"
+msgstr "Naar &Links"
 
 #: src/MenuEditor.cpp:316
-#, fuzzy
 msgid "To &Right"
-msgstr "&Rechts"
+msgstr "Naar &Rechts"
 
 #: src/MenuEditor.cpp:317
 msgid "To &Top"
-msgstr ""
+msgstr "Ga naar &Boven"
 
 #: src/MenuEditor.cpp:318
 msgid "To &Bottom"
-msgstr ""
+msgstr "Ga naar &Beneden"
 
 #: src/MenuEditor.cpp:319
-#, fuzzy
 msgid "To Center &horizontally"
 msgstr "Centreer &Horizontaal"
 
 #: src/MenuEditor.cpp:320
-#, fuzzy
 msgid "To Center &vertically"
 msgstr "Centreer &Vertikaal"
 
 #: src/MenuEditor.cpp:321
-#, fuzzy
 msgid "To &Center of Menu horizontally"
-msgstr "Centreer &Horizontaal"
+msgstr "Centreer Menu &Horizontaal"
 
 #: src/MenuEditor.cpp:322
-#, fuzzy
 msgid "To Center of &Menu vertically"
-msgstr "Centreer &Vertikaal"
+msgstr "Centreer Menu &Vertikaal"
 
 #: src/MenuEditor.cpp:340
 msgid "&Show Safe TV area"
@@ -1661,9 +1619,9 @@ msgid "&Grid"
 msgstr "&Raster"
 
 #: src/MenuEditor.cpp:498 src/ProcessMenuTransitions.cpp:178
-#, fuzzy, c-format
+#, c-format
 msgid "VMGM menu %d"
-msgstr "Menu %d"
+msgstr "VMGM Menu %d"
 
 #: src/MenuEditor.cpp:498
 #, c-format
@@ -1677,7 +1635,7 @@ msgstr "knop%d"
 
 #: src/MenuEditor.cpp:543
 msgid "Please type in text to insert"
-msgstr "Voer aub tekst in om in te voegen"
+msgstr "Voeg aub tekst toe"
 
 #: src/MenuEditor.cpp:543
 msgid "Input text"
@@ -1698,7 +1656,7 @@ msgstr "object"
 #: src/MenuObject.cpp:816 src/MenuObject.cpp:825
 #, c-format
 msgid "can't open file '%s'"
-msgstr "kan bestand '%s' niet openen"
+msgstr "kan bestand '%s' niet openen."
 
 #: src/MenuObjectPropDlg.cpp:65 src/MenuPropDlg.cpp:49 src/TitlePropDlg.cpp:68
 msgid "Properties"
@@ -1717,14 +1675,12 @@ msgid "Play all titles"
 msgstr "Speel alle titels af"
 
 #: src/MenuObjectPropDlg.cpp:145
-#, fuzzy
 msgid "single titleset"
-msgstr "titelset"
+msgstr "enkelvoudige titelset"
 
 #: src/MenuObjectPropDlg.cpp:146
-#, fuzzy
 msgid "all titlesets"
-msgstr "titelset"
+msgstr "alle titelset"
 
 #: src/MenuObjectPropDlg.cpp:173 src/MenuObjectPropDlg.cpp:187
 msgid "last selected"
@@ -1739,13 +1695,12 @@ msgid "Audio"
 msgstr "Audio"
 
 #: src/MenuObjectPropDlg.cpp:183 src/MenuObjectPropDlg.cpp:200 src/NewProjectDlg.cpp:134
-#, fuzzy
 msgid "Warning"
-msgstr "Branden"
+msgstr "Waarschuwing"
 
 #: src/MenuObjectPropDlg.cpp:183
 msgid "Please use titleset menu to select audio tracks."
-msgstr ""
+msgstr "Gebruik aub de titelset menu om een audio track te selecteren."
 
 #: src/MenuObjectPropDlg.cpp:188
 msgid "off"
@@ -1757,11 +1712,11 @@ msgstr "ondertiteling"
 
 #: src/MenuObjectPropDlg.cpp:200
 msgid "Please use titleset menu to select subtitle tracks."
-msgstr ""
+msgstr "Gebruik aub de titelset menu om een ondertitel te selecteren."
 
 #: src/MenuObjectPropDlg.cpp:205
 msgid "Auto execute command by select"
-msgstr ""
+msgstr "Automatisch commando uitvoeren bij selectie"
 
 #: src/MenuObjectPropDlg.cpp:208
 msgid "Navigation"
@@ -1795,8 +1750,7 @@ msgstr "Geselecteerd"
 msgid "Font..."
 msgstr "Lettertype.."
 
-#: src/MenuObjectPropDlg.cpp:404 src/MenuObjectPropDlg.cpp:564 src/MenuPropDlg.cpp:81
-#: src/VideoPropDlg.cpp:138
+#: src/MenuObjectPropDlg.cpp:404 src/MenuObjectPropDlg.cpp:564 src/MenuPropDlg.cpp:81 src/VideoPropDlg.cpp:138
 msgid "Keep Aspect Ratio"
 msgstr "Behoud Aspect Ratio"
 
@@ -1842,7 +1796,7 @@ msgstr "Afbeelding"
 
 #: src/MenuObjectPropDlg.cpp:463
 msgid "Video"
-msgstr "Video:"
+msgstr "Video"
 
 #: src/MenuObjectPropDlg.cpp:516 src/SubtitlePropDlg.cpp:186
 msgid "Offset:"
@@ -1873,9 +1827,8 @@ msgid "Rotation"
 msgstr "Rotatie"
 
 #: src/MenuObjectPropDlg.cpp:551
-#, fuzzy
 msgid "Angle:"
-msgstr "Hoek"
+msgstr "Hoek:"
 
 #: src/MenuObjectPropDlg.cpp:557
 msgid "Size"
@@ -1890,9 +1843,8 @@ msgid "Height:"
 msgstr "Hoogte:"
 
 #: src/MenuObjectPropDlg.cpp:576
-#, fuzzy
 msgid "Animations..."
-msgstr "Acties:"
+msgstr "Acties..."
 
 #: src/MenuObjectPropDlg.cpp:627
 msgid "start of current menu"
@@ -1925,14 +1877,12 @@ msgid "Format:"
 msgstr "Formaat:"
 
 #: src/MenuPropDlg.cpp:137
-#, fuzzy
 msgid "Background:"
-msgstr "Achtergrond"
+msgstr "Achtergrond:"
 
 #: src/MenuPropDlg.cpp:138
-#, fuzzy
 msgid "Image and Video Files"
-msgstr "Videobestanden"
+msgstr "Beeld- en Videobestanden"
 
 #: src/MenuPropDlg.cpp:153 src/VobListBox.cpp:146
 msgid "Audio:"
@@ -1944,7 +1894,7 @@ msgstr "Lus"
 
 #: src/MenuPropDlg.cpp:186
 msgid "Subpicture start/end:"
-msgstr ""
+msgstr "Subafbeelding start/einde:"
 
 #: src/MenuPropDlg.cpp:192
 msgid "Remember last selected button"
@@ -1979,18 +1929,16 @@ msgid "Post commands:"
 msgstr "Post opdrachten:"
 
 #: src/MenuPropDlg.cpp:241
-#, fuzzy
 msgid "Cells..."
-msgstr "Cellen:"
+msgstr "Cellen..."
 
 #: src/MenuPropDlg.cpp:242
-#, fuzzy
 msgid "Actions..."
-msgstr "Acties:"
+msgstr "Acties..."
 
 #: src/MenuPropDlg.cpp:276
 msgid "Subpicture end must be greater than start or empty"
-msgstr ""
+msgstr "Subafbeeldingen einde moet groter zijn dan start of leeg"
 
 #: src/MenuPropDlg.cpp:283 src/TitlePropDlg.cpp:320
 #, c-format
@@ -2004,7 +1952,7 @@ msgstr "Bestand %s is geen audiobestand."
 
 #: src/MenuPropDlg.cpp:309
 msgid "Post commands will not be executed if pause is set to -1"
-msgstr ""
+msgstr "Post commando wordt niet uitgevoerd indien pause = -1"
 
 #: src/MessageDlg.cpp:76
 msgid "&Don't show this message again"
@@ -2025,7 +1973,7 @@ msgstr "Disklabel:"
 
 #: src/NewProjectDlg.cpp:49
 msgid "DVD Resolution:"
-msgstr ""
+msgstr "DVD Resolutie:"
 
 #: src/NewProjectDlg.cpp:56
 msgid "Disc capacity:"
@@ -2066,19 +2014,23 @@ msgstr "Voer aub de volumenaam in."
 
 #: src/NewProjectDlg.cpp:123
 msgid "Volume name can only be a maximum of 32 characters."
-msgstr "Volumenaam mag maximaal 32 tekens bevatten"
+msgstr "Volumenaam mag maximaal 32 tekens bevatten."
 
 #: src/NewProjectDlg.cpp:135
 msgid ""
 "DVD with HD resolution doesn't comply with the standard and\n"
 "can be played only in some blue-ray or software players."
 msgstr ""
+"DVD met HD-resolutie voldoet niet aan de norm en\n"
+"kan alleen in sommige blue-ray- of softwarespelers worden gespeeld."
 
 #: src/NewProjectDlg.cpp:136
 msgid ""
 "DVD standard officially supports only video data\n"
 "with resolution up to 720x576 pixels (SD)."
 msgstr ""
+"DVD-standaard ondersteunt officieel alleen videogegevens\n"
+"met een resolutie tot 720x576 pixels (SD)."
 
 #: src/Pgc.cpp:274
 msgid "Can't load vob"
@@ -2093,9 +2045,9 @@ msgid "Burning"
 msgstr "Branden"
 
 #: src/ProcessBurn.cpp:67 src/ProcessBurn.cpp:85
-#, fuzzy, c-format
+#, c-format
 msgid "Please insert a blank or rewritable DVD into the device %s."
-msgstr "Aub lege herschrijfbare DVD in brander %s leggen."
+msgstr "Aub lege of herschrijfbare DVD in brander %s leggen."
 
 #: src/ProcessBurn.cpp:69 src/ProcessBurn.cpp:87 src/ProcessBurn.cpp:129 src/ProcessFormatDvd.cpp:45
 #: src/ProcessPreview.cpp:88 src/ProgressDlg.cpp:291
@@ -2114,7 +2066,7 @@ msgstr "Tijdelijke map wordt geschoond"
 #: src/ProcessCleanTemp.cpp:74 src/ProcessCleanTemp.cpp:85
 #, c-format
 msgid "Cannot remove directory '%s'"
-msgstr "Kan map '%s' niet verwijderen"
+msgstr "Kan map '%s' niet verwijderen."
 
 #: src/ProcessDvdFilesystem.cpp:80
 msgid "Generating DVD"
@@ -2127,19 +2079,19 @@ msgstr "ECC-data wordt toegevoegd"
 #: src/ProcessEncode.cpp:39 src/ProcessSubtitles.cpp:32
 #, c-format
 msgid "Found transcoded file in cache for '%s'"
-msgstr "Getranscodeerd bestand voor '%s' gevonden in cache"
+msgstr "Getranscodeerd bestand voor '%s' gevonden in cache."
 
 #: src/ProcessEncode.cpp:78
-#, fuzzy, c-format
+#, c-format
 msgid "Transcode video %u of %lu"
-msgstr "Transcoderen videobestand: "
+msgstr "Transcoderen video %u van  %lu"
 
 #: src/ProcessFormatDvd.cpp:33
 msgid "Formatting DVD-RW"
 msgstr "DVD-RW wordt geformatteerd"
 
 #: src/ProcessFormatDvd.cpp:43
-#, fuzzy, c-format
+#, c-format
 msgid "Please insert a rewritable DVD into the device %s."
 msgstr "Aub lege herschrijfbare DVD in brander %s leggen."
 
@@ -2217,36 +2169,31 @@ msgstr "Kan bestand '%s' niet henoemen naar '%s'"
 
 #: src/ProcessMenuTransitions.cpp:104 src/ProcessMenuTransitions.cpp:161 src/ProcessMenuTransitions.cpp:242
 #: src/ProcessMenuTransitions.cpp:254
-#, fuzzy
 msgid "Error creation of transition"
-msgstr "Fout bij genereren diapresentatie"
+msgstr "Fout bij genereren overgang"
 
 #: src/ProcessMenuTransitions.cpp:179
-#, fuzzy, c-format
+#, c-format
 msgid "Generate transition from %s"
-msgstr "Standaardduur overgang:"
+msgstr "Genereer overgang van %s"
 
 #: src/ProcessPreview.cpp:36
 msgid "Start preview"
 msgstr "Start voorbeeldweergave"
 
 #: src/ProcessPreview.cpp:42 src/ProcessPreview.cpp:58 src/ProcessPreview.cpp:79
-#, fuzzy
 msgid ""
 "Starting of selected DVD player is failed. Please open the following directory with your favorite DVD "
 "player: "
-msgstr ""
-"De DVD-speler kon niet worden gestart. Controleer aub het DVD-speler-pad via 'Instellingen/Basis/"
-"Voorbeeldweergave met' of open de volgende map met jouw DVD-speler: "
+msgstr "De DVD-speler kon niet worden gestart. Open aub de map met de DVD-speler van uw voorkeur: "
 
 #: src/ProcessPreview.cpp:49
-#, fuzzy
 msgid ""
 "VLC player is not found. Please install VLC player (http://www.videolan.org) in Applications directory or "
 "open the following directory with your favorite DVD player: "
 msgstr ""
-"De DVD-speler kon niet worden gestart. Controleer aub het DVD-speler-pad via 'Instellingen/Basis/"
-"Voorbeeldweergave met' of open de volgende map met jouw DVD-speler: "
+"Het programma VLC werd niet gevonden. Installeer VLC (http://www.videolan.org) of open de map met de DVD-"
+"speler van uw voorkeur: "
 
 #: src/ProcessPreview.cpp:86
 msgid "Do you want to burn this video to DVD?"
@@ -2290,7 +2237,7 @@ msgstr "Mutiplexen van ondertiteling %u van %lu"
 #: src/ProcessSubtitles.cpp:93
 #, c-format
 msgid "Can't rename temporary file '%s'"
-msgstr "Kan tijdelijk bestand '%s' niet hernoemen"
+msgstr "Kan tijdelijk bestand '%s' niet hernoemen."
 
 #: src/ProcessTranscode.cpp:23
 msgid "Transcode video file: "
@@ -2301,14 +2248,14 @@ msgid "Multiplexing video and audio streams"
 msgstr "Multiplexen van video- en audiostreams"
 
 #: src/ProcessTranscode.cpp:244
-#, fuzzy, c-format
+#, c-format
 msgid "Analysis of audio track %d"
-msgstr "selecteer audiotrack %d en "
+msgstr "Analyse van audiotrack %d"
 
 #: src/ProcessTranscode.cpp:248 src/ProcessTranscode.cpp:262 wxVillaLib/ProgramProcess.cpp:84
 #, c-format
 msgid "Execution of '%s' failed."
-msgstr ""
+msgstr "Het uitvoeren van %s is mislukt."
 
 #: src/ProgressDlg.cpp:75
 msgid "Generate DVD"
@@ -2328,7 +2275,7 @@ msgstr "Verberg details"
 
 #: src/ProgressDlg.cpp:93
 msgid "Turn off PC when finished"
-msgstr ""
+msgstr "Sluit de PC af bij beêindiging"
 
 #: src/ProgressDlg.cpp:97
 msgid "Minimize"
@@ -2343,9 +2290,8 @@ msgid "Show details"
 msgstr "Toon details"
 
 #: src/ProgressDlg.cpp:228 src/ProgressDlg.cpp:232
-#, fuzzy
 msgid "Encoding Mode"
-msgstr "Coderen van frame %d van %d"
+msgstr "Codering mode"
 
 #: src/ProgressDlg.cpp:274 wxVillaLib/ProgramProcess.cpp:30
 msgid "Failed"
@@ -2405,7 +2351,7 @@ msgstr "Standaard hoofdstuklengte:"
 
 #: src/SettingsDlg.cpp:128
 msgid "Add chapter at title end"
-msgstr ""
+msgstr "Voeg hoofdstuk toe aan het titel einde"
 
 #: src/SettingsDlg.cpp:155
 msgid "Default button:"
@@ -2444,22 +2390,20 @@ msgid "Undo history size:"
 msgstr "Maak geschiedenisgrootte ongedaan:"
 
 #: src/SettingsDlg.cpp:198
-#, fuzzy
 msgid "Clear transcoding cache:"
-msgstr "Zoeken naar getranscodeerde bestanden in cache"
+msgstr "Zoeken naar getranscodeerde bestanden in cache:"
 
 #: src/SettingsDlg.cpp:201
-#, fuzzy
 msgid "Prompt"
-msgstr "Eigenschappen"
+msgstr "Prompt"
 
 #: src/SettingsDlg.cpp:202 src/SettingsDlg.cpp:301
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
 #: src/SettingsDlg.cpp:207
 msgid "Clear cache now"
-msgstr ""
+msgstr "Verwijder cache nu"
 
 #: src/SettingsDlg.cpp:211
 msgid "\"Don't show again\" flags:"
@@ -2479,7 +2423,7 @@ msgstr "Teken knoppen op achtergrond"
 
 #: src/SettingsDlg.cpp:242
 msgid "Allow HD menus"
-msgstr ""
+msgstr "Sta HD menu's toe"
 
 #: src/SettingsDlg.cpp:244
 msgid "Menu video bitrate:"
@@ -2506,25 +2450,24 @@ msgid "KB"
 msgstr "KB"
 
 #: src/SettingsDlg.cpp:260
-#, fuzzy
 msgid "internal"
-msgstr "interlace"
+msgstr "intern"
 
 #: src/SettingsDlg.cpp:265
 msgid "Encoder:"
-msgstr ""
+msgstr "Encoder:"
 
 #: src/SettingsDlg.cpp:275
 msgid "CBR"
-msgstr ""
+msgstr "CBR"
 
 #: src/SettingsDlg.cpp:276
 msgid "1-pass VBR"
-msgstr ""
+msgstr "1 maal VBR"
 
 #: src/SettingsDlg.cpp:277
 msgid "2-pass VBR"
-msgstr ""
+msgstr "2 maal VBR"
 
 #: src/SettingsDlg.cpp:292
 msgid "Create ISO command:"
@@ -2552,24 +2495,23 @@ msgstr "Gebruik mplex:"
 
 #: src/SettingsDlg.cpp:303
 msgid "For menus only"
-msgstr ""
+msgstr "Enkel voor menu's"
 
 #: src/SettingsDlg.cpp:308
 msgid "NTSC film:"
-msgstr ""
+msgstr "NTSC film:"
 
 #: src/SettingsDlg.cpp:309
 msgid "re-encode by default"
-msgstr ""
+msgstr "opnieuw coderen als basis instelling"
 
 #: src/SettingsDlg.cpp:310
-#, fuzzy
 msgid "HD video:"
-msgstr "Video:"
+msgstr "HD video:"
 
 #: src/SettingsDlg.cpp:311
 msgid "allow (experimental)"
-msgstr ""
+msgstr "sta toe (experimenteel)"
 
 #: src/SettingsDlg.cpp:313
 msgid "Debug"
@@ -2589,21 +2531,19 @@ msgstr "Alle \"Niet meer tonen\" vlaggen zijn gereset."
 
 #: src/SettingsDlg.cpp:419
 msgid "The transcoding cache is successfully cleared."
-msgstr ""
+msgstr "De transcode cache met succes verwijderd."
 
 #: src/SlideDlg.cpp:44
-#, fuzzy
 msgid "Slide properties"
-msgstr "Video-eigenschappen"
+msgstr "Dia-eigenschappen"
 
 #: src/SlideDlg.cpp:53 src/TitlePropDlg.cpp:207
 msgid "Transition:"
 msgstr "Overgang:"
 
 #: src/SlideDlg.cpp:72
-#, fuzzy
 msgid "Default"
-msgstr "Standaard knop:"
+msgstr "Standaard"
 
 #: src/Slideshow.cpp:243
 msgid "None"
@@ -2611,7 +2551,7 @@ msgstr "Geen"
 
 #: src/Slideshow.cpp:244
 msgid "Random"
-msgstr "Onwillekeurig"
+msgstr "Willekeurig"
 
 #: src/StatusBar.cpp:60
 #, c-format
@@ -2653,11 +2593,11 @@ msgstr "Ondertiteling Instellingen"
 
 #: src/SubtitlePropDlg.cpp:112
 msgid "Force display"
-msgstr ""
+msgstr "Forceer tonen"
 
 #: src/SubtitlePropDlg.cpp:116
 msgid "Charset:"
-msgstr "Karakterset:"
+msgstr "Tekenset:"
 
 #: src/SubtitlePropDlg.cpp:120
 msgid "Font:"
@@ -2693,7 +2633,7 @@ msgstr "Marge"
 
 #: src/SubtitlePropDlg.cpp:242
 msgid "&Use as defaults"
-msgstr ""
+msgstr "&Gebruik als standaard"
 
 #: src/SubtitlePropDlg.cpp:385
 msgid "slant"
@@ -2720,28 +2660,24 @@ msgid "Select template for DVD menus"
 msgstr "Selecteer een sjabloon voor DVD menu's"
 
 #: src/TemplateDlg.cpp:61
-#, fuzzy
 msgid "Caption:"
-msgstr "Tijdsduur:"
+msgstr "Onderschrift:"
 
 #: src/TemplateDlg.cpp:63
 msgid "Disc Title"
 msgstr "Disktitel"
 
 #: src/TemplateDlg.cpp:69
-#, fuzzy
 msgid "Title selection"
-msgstr "Titelset"
+msgstr "Titel selectie"
 
 #: src/TemplateDlg.cpp:71
-#, fuzzy
 msgid "Chapter selection"
-msgstr "Hoofdstukken"
+msgstr "Hoofdstuk selectie"
 
 #: src/TemplateDlg.cpp:77
-#, fuzzy
 msgid "Category"
-msgstr "Categorie:"
+msgstr "Categorie"
 
 #: src/TemplateDlg.cpp:80
 msgid "All"
@@ -2757,7 +2693,7 @@ msgstr "Sjablonen"
 
 #: src/TemplateDlg.cpp:115 templates/category.xml:5
 msgid "Christmas & New Year's Eve"
-msgstr ""
+msgstr "Vooravond Kerstmis en Nieuwjaar"
 
 #: src/TitlePropDlg.cpp:118
 msgid "Add file..."
@@ -2769,7 +2705,7 @@ msgstr "Verwijder bestand"
 
 #: src/TitlePropDlg.cpp:126 src/TitlePropDlg.cpp:183
 msgid "Properties..."
-msgstr "Eigenschappen.."
+msgstr "Eigenschappen..."
 
 #: src/TitlePropDlg.cpp:134
 msgid "do not remultiplex/transcode"
@@ -2788,9 +2724,8 @@ msgid "Remove image"
 msgstr "Afbeelding verwijderen"
 
 #: src/TitlePropDlg.cpp:233
-#, fuzzy
 msgid "Audio file:"
-msgstr "Audiobestanden"
+msgstr "Audio bestand:"
 
 #: src/TitlePropDlg.cpp:267
 msgid "Palette:"
@@ -2818,9 +2753,8 @@ msgid "Can't load titles"
 msgstr "Kan titels niet laden"
 
 #: src/TitlesetManager.cpp:151 src/TitlesetManager.cpp:172
-#, fuzzy
 msgid "&VMGM Menu"
-msgstr "&Menu"
+msgstr "&VMGM Menu"
 
 #: src/TitlesetManager.cpp:163
 msgid "&Left"
@@ -2836,7 +2770,7 @@ msgstr "&Verplaats"
 
 #: src/TitlesetManager.cpp:359
 msgid "Drag your video files from the File Browser to here."
-msgstr "Sleep jouw videobestanden naar hier vanuit bestandsverkenner"
+msgstr "Sleep jouw videobestanden naar hier vanuit bestandsverkenner."
 
 #: src/TitlesetManager.cpp:410
 #, c-format
@@ -2856,7 +2790,7 @@ msgstr ""
 "Wil je hercodering aanzetten?"
 
 #: src/TitlesetManager.cpp:488
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Adding file %s.\n"
 "Please wait..."
@@ -2865,7 +2799,7 @@ msgstr "Toevoegen bestand %s. Even geduld aub.."
 #: src/TitlesetManager.cpp:503
 #, c-format
 msgid "File '%s' doesn't contain any audio or video streams."
-msgstr "Bestand '%s' bevat geen audio- of videostreams"
+msgstr "Bestand '%s' bevat geen audio- of video streams."
 
 #: src/TitlesetManager.cpp:572
 msgid "This file contains video in PAL format. Do you want to change DVD format to PAL too?"
@@ -2906,7 +2840,7 @@ msgstr "Titelset Beheer"
 
 #: src/VideoFrameDlg.cpp:52
 msgid "Video frame"
-msgstr "Videoframe"
+msgstr "Video frame"
 
 #: src/VideoPropDlg.cpp:102
 msgid "Video properties"
@@ -2929,14 +2863,12 @@ msgid "TFF"
 msgstr "TFF"
 
 #: src/VideoPropDlg.cpp:142
-#, fuzzy
 msgid "border"
-msgstr "Rand"
+msgstr "rand"
 
 #: src/VideoPropDlg.cpp:143
-#, fuzzy
 msgid "crop"
-msgstr "Inkorten"
+msgstr "inkorten"
 
 #: src/VideoPropDlg.cpp:147
 msgid "Border"
@@ -2948,7 +2880,7 @@ msgstr "Inkorten"
 
 #: src/VideoPropDlg.cpp:180
 msgid "Fade-In/Out:"
-msgstr "Fade In/Out:"
+msgstr "Fade In/Uit:"
 
 #: src/VideoPropDlg.cpp:219
 msgid "Start:"
@@ -2956,11 +2888,11 @@ msgstr "Start:"
 
 #: src/VideoPropDlg.cpp:233
 msgid "Cut beginning"
-msgstr ""
+msgstr "Knip het begin"
 
 #: src/VideoPropDlg.cpp:249
 msgid "Cut ending"
-msgstr ""
+msgstr "Knip het einde"
 
 #: src/VideoPropDlg.cpp:702 src/VideoPropDlg.cpp:707
 msgid "Invalid time"
@@ -3223,28 +3155,26 @@ msgid "X color"
 msgstr "X-kleur"
 
 #: buttons/circle-outline.xml:3
-#, fuzzy
 msgid "Circle outline"
-msgstr "Cirkelkleur"
+msgstr "Cirkel omtrek"
 
 #: buttons/circle-outline.xml:8 buttons/circle.xml:7
 msgid "01"
-msgstr ""
+msgstr "01"
 
 #: buttons/circle-outline.xml:22 buttons/circle.xml:21 buttons/text-circle-v2.xml:39
 msgid "Circle colour"
-msgstr "Cirkelkleur"
+msgstr "Cirkel kleur"
 
 #: buttons/circle-outline.xml:29 buttons/circle.xml:42 buttons/frame-text.xml:76 buttons/pill.xml:50
 #: buttons/text-circle-v2.xml:25 buttons/text-square-v2.xml:26 buttons/text-underlined-v3.xml:25
 #: buttons/text-v3.xml:25
 msgid "Text colour"
-msgstr "Tekstkleur"
+msgstr "Tekst kleur"
 
 #: buttons/circle.xml:3
-#, fuzzy
 msgid "Circle"
-msgstr "Cirkel Pijl"
+msgstr "Cirkel"
 
 #: buttons/ellipse-v2.xml:3 objects/ellipse-v3.xml:3
 msgid "Ellipse"
@@ -3259,7 +3189,7 @@ msgstr "Doorzichtigheid afbeelding"
 #: buttons/ellipse-v2.xml:63 buttons/ellipse45.xml:66 buttons/frame-v2.xml:72 buttons/frame45.xml:82
 #: objects/ellipse-v3.xml:50 objects/ellipse45.xml:52 objects/frame-v3.xml:60 objects/frame45.xml:69
 msgid "Inner colour"
-msgstr "Binnenkantkleur"
+msgstr "Binnenkant kleur"
 
 #: buttons/ellipse45.xml:3 objects/ellipse45.xml:3
 msgid "Ellipse 45°"
@@ -3267,11 +3197,11 @@ msgstr "Ellips 45°"
 
 #: buttons/frame-text.xml:4
 msgid "Frame and Text"
-msgstr ""
+msgstr "Frame en tekst"
 
 #: buttons/frame-text.xml:25
 msgid "T"
-msgstr ""
+msgstr "T"
 
 #: buttons/frame-text.xml:37 buttons/frame-v2.xml:46 buttons/frame45.xml:56
 msgid "Border width"
@@ -3279,16 +3209,15 @@ msgstr "Randbreedte"
 
 #: buttons/frame-text.xml:44
 msgid "Corner round"
-msgstr ""
+msgstr "Hoek afgerond"
 
 #: buttons/frame-text.xml:51 buttons/frame-v2.xml:60 buttons/frame45.xml:70 buttons/movie.xml:40
 msgid "Border colour"
 msgstr "Randkleur"
 
 #: buttons/frame-text.xml:90
-#, fuzzy
 msgid "Text offset"
-msgstr "Tekst Pijl Links"
+msgstr "Tekst plaats"
 
 #: buttons/frame-v2.xml:3 objects/frame-v3.xml:3
 msgid "Frame"
@@ -3309,18 +3238,16 @@ msgid "Frame 45°"
 msgstr "Frame 45°"
 
 #: buttons/glow_arrow.xml:5
-#, fuzzy
 msgid "Glow Arrow"
-msgstr "Gouden Pijl"
+msgstr "Glanzende Pijl"
 
 #: buttons/glow_arrow.xml:26
 msgid "Invert (a,e)"
-msgstr ""
+msgstr "Keer om (a,e)"
 
 #: buttons/glow_arrow.xml:40
-#, fuzzy
 msgid "Glow colour"
-msgstr "Pijlkleur"
+msgstr "Glanzend"
 
 #: buttons/hand-left.xml:4
 msgid "Hand Left"
@@ -3344,7 +3271,7 @@ msgstr "Kleur"
 
 #: buttons/movie.xml:3
 msgid "Movie"
-msgstr ""
+msgstr "Film"
 
 #: buttons/ok2.xml:4
 msgid "Ok"
@@ -3356,12 +3283,11 @@ msgstr "V-kleur"
 
 #: buttons/painting_frame.xml:4
 msgid "Painting Frame"
-msgstr ""
+msgstr "Kader"
 
 #: buttons/painting_frame.xml:47
-#, fuzzy
 msgid "Frame colour"
-msgstr "Cirkelkleur"
+msgstr "Kader kleur"
 
 #: buttons/pill.xml:3
 msgid "Pill"
@@ -3389,21 +3315,19 @@ msgstr "Pil 3"
 
 #: buttons/sticky_note.xml:4 objects/sticky_note.xml:4
 msgid "Sticky note"
-msgstr ""
+msgstr "Notities"
 
 #: buttons/sticky_note.xml:50 objects/sticky_note.xml:49
 msgid "Note"
-msgstr ""
+msgstr "Notities"
 
 #: buttons/sticky_note.xml:57 objects/sticky_note.xml:56
-#, fuzzy
 msgid "Pin"
-msgstr "min."
+msgstr "Pin"
 
 #: buttons/sticky_note.xml:64
-#, fuzzy
 msgid "Selection colour"
-msgstr "Reflectiekleur 1"
+msgstr "Kleur selectie"
 
 #: buttons/text-circle-v2.xml:3
 msgid "Text with circle"
@@ -3442,9 +3366,8 @@ msgid "Background colour"
 msgstr "Achtergrondkleur"
 
 #: objects/gold-frame.xml:3
-#, fuzzy
 msgid "Gold frame"
-msgstr "Videoframe"
+msgstr "Gouden frame"
 
 #: objects/image.xml:16
 msgid "Opacity"
@@ -3464,11 +3387,11 @@ msgstr "Basaal"
 
 #: templates/category.xml:4
 msgid "Birthday"
-msgstr ""
+msgstr "Verjaardag"
 
 #: templates/category.xml:6
 msgid "Love"
-msgstr ""
+msgstr "Liefs"
 
 #: templates/category.xml:7
 msgid "Miscellaneous"
@@ -3492,7 +3415,7 @@ msgstr "Bruiloft"
 
 #: transitions/fade.xml:4
 msgid "Fade-In/Out"
-msgstr "Fade In/Uit:"
+msgstr "Fade In/Uit"
 
 #: transitions/wipeBottomToTop.xml:4
 msgid "Wipe bottom to top"
