@@ -2,6 +2,7 @@ Version 3.1 beta 4 <2019-04-12>
 -------------------------------
 
   * added some new buttons
+  * win32/win64: updated ffmpeg to version 4.1.1
 
 Version 3.1 beta 3 <2019-03-24>
 -------------------------------

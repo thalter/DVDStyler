@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DVDStyler 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-12 13:15+0200\n"
-"PO-Revision-Date: 2016-06-26 16:53+0200\n"
+"POT-Creation-Date: 2019-05-06 07:57+0200\n"
+"PO-Revision-Date: 2019-05-07 15:28+0200\n"
 "Last-Translator: Jørgen Rasmussen <joergenr at stofanet.dk>\n"
 "Language-Team: \n"
 "Language: da\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Basepath: ..\n"
-"X-Generator: Poedit 1.8.8\n"
+"X-Generator: Poedit 2.2.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: src\n"
 "X-Poedit-SearchPath-1: wxVillaLib\n"
@@ -143,23 +143,20 @@ msgid "OK"
 msgstr "OK"
 
 #: src/AnimationDlg.cpp:29
-#, fuzzy
 msgid "width"
-msgstr "Bredde:"
+msgstr "bredde"
 
 #: src/AnimationDlg.cpp:29
-#, fuzzy
 msgid "height"
-msgstr "Højde:"
+msgstr "højde"
 
 #: src/AnimationDlg.cpp:29
-#, fuzzy
 msgid "opacity"
-msgstr "Gennemsigtighed"
+msgstr "gennemsigtighed"
 
 #: src/AnimationDlg.cpp:46
 msgid "font size"
-msgstr "Skriftstørrelse"
+msgstr "skriftstørrelse"
 
 #: src/AnimationDlg.cpp:157
 msgid "Attribute"
@@ -282,8 +279,8 @@ msgstr "Brænd"
 msgid "Temp directory:"
 msgstr "Temp-mappe:"
 
-#: src/BurnDlg.cpp:114 src/BurnDlg.cpp:138 src/BurnDlg.cpp:160 src/BurnDlg.cpp:186
-#: src/SubtitlePropDlg.cpp:148 src/SubtitlePropDlg.cpp:161 src/SubtitlePropDlg.cpp:179
+#: src/BurnDlg.cpp:114 src/BurnDlg.cpp:138 src/BurnDlg.cpp:160 src/BurnDlg.cpp:186 src/SubtitlePropDlg.cpp:148
+#: src/SubtitlePropDlg.cpp:161 src/SubtitlePropDlg.cpp:179
 msgid "..."
 msgstr "..."
 
@@ -305,7 +302,7 @@ msgstr "Download"
 
 #: src/BurnDlg.cpp:150
 msgid "just generate"
-msgstr "bare generer"
+msgstr "bare generér"
 
 #: src/BurnDlg.cpp:155 src/BurnDlg.cpp:181
 msgid "Save to:"
@@ -449,14 +446,15 @@ msgstr ""
 
 #: src/ButtonAddParamDlg.cpp:47
 msgid "Add parameter"
-msgstr ""
+msgstr "Tilføj parameter"
 
 #: src/ButtonAddParamDlg.cpp:55
-#, fuzzy
 msgid ""
 "Please select an SVG element\n"
 "for new parameter:"
-msgstr "Vælg en sti til videoafspiller"
+msgstr ""
+"Vælg et SVG-element\n"
+"til nyt parameter:"
 
 #: src/ButtonAddParamDlg.cpp:60 src/SubtitlePropDlg.cpp:143
 msgid "Fill:"
@@ -471,69 +469,61 @@ msgid "Text"
 msgstr "Tekst"
 
 #: src/ButtonAddParamDlg.cpp:65
-#, fuzzy
 msgid "Stroke:"
-msgstr "Stregfarve"
+msgstr "Stregfarve:"
 
 #: src/ButtonEditDlg.cpp:170
 msgid "name"
-msgstr ""
+msgstr "navn"
 
-#: src/ButtonEditDlg.cpp:170 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:439
-#: src/MenuObjectPropDlg.cpp:677 src/MenuObjectPropDlg.cpp:686 src/MenuObjectPropDlg.cpp:698
+#: src/ButtonEditDlg.cpp:170 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:439 src/MenuObjectPropDlg.cpp:677
+#: src/MenuObjectPropDlg.cpp:686 src/MenuObjectPropDlg.cpp:698
 msgid "title"
 msgstr "titel"
 
 #: src/ButtonEditDlg.cpp:170
 msgid "type"
-msgstr ""
+msgstr "type"
 
 #: src/ButtonEditDlg.cpp:170
 msgid "ID of element"
-msgstr ""
+msgstr "Elementets ID"
 
 #: src/ButtonEditDlg.cpp:170
-#, fuzzy
 msgid "attribute name"
-msgstr "Attribut"
+msgstr "attributnavn"
 
 #: src/ButtonEditDlg.cpp:170
 msgid "dynamic"
-msgstr ""
+msgstr "dynamisk"
 
 #: src/ButtonEditDlg.cpp:171
 msgid "value"
-msgstr ""
+msgstr "værdi"
 
 #: src/ButtonEditDlg.cpp:171 src/ButtonEditDlg.cpp:261
-#, fuzzy
 msgid "highlighted"
-msgstr "Fremhævet"
+msgstr "fremhævet"
 
 #: src/ButtonEditDlg.cpp:171 src/ButtonEditDlg.cpp:262
-#, fuzzy
 msgid "selected"
-msgstr "Markeret"
+msgstr "valgt"
 
 #: src/ButtonEditDlg.cpp:251
-#, fuzzy
 msgid "Create button"
-msgstr "Standardknap:"
+msgstr "Opret knap"
 
 #: src/ButtonEditDlg.cpp:260
-#, fuzzy
 msgid "normal"
-msgstr "Normal"
+msgstr "normal"
 
 #: src/ButtonEditDlg.cpp:264
-#, fuzzy
 msgid "Button state"
-msgstr "Knapper"
+msgstr "Knaptilstand"
 
 #: src/ButtonEditDlg.cpp:271
-#, fuzzy
 msgid "Directory:"
-msgstr "Mappe"
+msgstr "Mappe:"
 
 #: src/ButtonEditDlg.cpp:273 buttons/circle-outline.xml:16 buttons/circle.xml:15 buttons/pill.xml:44
 #: buttons/text-circle-v2.xml:19 buttons/text-square-v2.xml:20 buttons/text-underlined-v3.xml:19
@@ -547,27 +537,24 @@ msgstr "Filnavn:"
 
 #: src/ButtonEditDlg.cpp:280
 msgid ".xml"
-msgstr ""
+msgstr ".xml"
 
 #: src/ButtonEditDlg.cpp:283
-#, fuzzy
 msgid "Title:"
-msgstr "Titel"
+msgstr "Titel:"
 
 #: src/ButtonEditDlg.cpp:287
-#, fuzzy
 msgid "Default width:"
-msgstr "Standardknap:"
+msgstr "Standardbredde:"
 
 #: src/ButtonEditDlg.cpp:293 src/ButtonEditDlg.cpp:316 src/ButtonEditDlg.cpp:340 src/ButtonEditDlg.cpp:363
-#, fuzzy
 msgid "or"
-msgstr "Kerne"
+msgstr "eller"
 
 #: src/ButtonEditDlg.cpp:297 src/ButtonEditDlg.cpp:302 src/ButtonEditDlg.cpp:320 src/ButtonEditDlg.cpp:325
 #: src/ButtonEditDlg.cpp:344 src/ButtonEditDlg.cpp:349 src/ButtonEditDlg.cpp:367 src/ButtonEditDlg.cpp:372
 msgid "+"
-msgstr ""
+msgstr "+"
 
 #: src/ButtonEditDlg.cpp:307 src/ButtonEditDlg.cpp:330 src/ButtonEditDlg.cpp:354 src/ButtonEditDlg.cpp:377
 #: src/SubtitlePropDlg.cpp:153 src/SubtitlePropDlg.cpp:167 src/SubtitlePropDlg.cpp:184
@@ -575,57 +562,52 @@ msgid "%"
 msgstr "%"
 
 #: src/ButtonEditDlg.cpp:310
-#, fuzzy
 msgid "Min width:"
-msgstr "Ydre kantbredde"
+msgstr "Min. bredde:"
 
 #: src/ButtonEditDlg.cpp:334
-#, fuzzy
 msgid "Default height:"
-msgstr "Forvalgt kapitellængde:"
+msgstr "Standardhøjde:"
 
 #: src/ButtonEditDlg.cpp:357
-#, fuzzy
 msgid "Min height:"
-msgstr "Højde:"
+msgstr "Min. højde:"
 
 #: src/ButtonEditDlg.cpp:382
-#, fuzzy
 msgid "Parameters:"
-msgstr "Kapitler:"
+msgstr "Parametre:"
 
 #: src/ButtonEditDlg.cpp:391 src/MainWin.cpp:321
 msgid "Save"
 msgstr "Gem"
 
 #: src/ButtonEditDlg.cpp:456
-#, fuzzy
 msgid "Edit button"
-msgstr "knap"
+msgstr "Rediger knap"
 
 #: src/ButtonEditDlg.cpp:500
-#, fuzzy
 msgid "Add"
-msgstr "&Tilføj"
+msgstr "Tilføj"
 
 #: src/ButtonEditDlg.cpp:502
-#, fuzzy
 msgid "Remove selected"
-msgstr "Fjern fil"
+msgstr "Fjern valgte"
 
 #: src/ButtonEditDlg.cpp:546
 msgid "No SVG element is selected"
-msgstr ""
+msgstr "Intet SVG-element er valgt"
 
 #: src/ButtonEditDlg.cpp:627 src/NewProjectDlg.cpp:51 src/NewProjectDlg.cpp:134
 msgid "Info"
-msgstr ""
+msgstr "Info"
 
 #: src/ButtonEditDlg.cpp:627
 msgid ""
 "Click on image to select an SVG\n"
 " element for a new parameter"
 msgstr ""
+"Klik på billede for at vælge et\n"
+" SVG-element til et nyt parameter"
 
 #: src/Cache.cpp:238 src/Cache.cpp:263 src/Process.cpp:25 src/ProcessMenuTransitions.cpp:121
 #: src/ProcessTranscode.cpp:159 src/ProcessTranscode.cpp:174
@@ -777,19 +759,19 @@ msgstr "PCM 48 kHz"
 
 #: src/DVD.cpp:974
 msgid "SD (standard)"
-msgstr ""
+msgstr "SD (standard)"
 
 #: src/DVD.cpp:975
 msgid "Half HD (1280 x 720)"
-msgstr ""
+msgstr "Halv HD (1280 x 720)"
 
 #: src/DVD.cpp:976
 msgid "HDV (1440 x 1080)"
-msgstr ""
+msgstr "HDV (1440 x 1080)"
 
 #: src/DVD.cpp:977
 msgid "Full HD (1920 x 1080)"
-msgstr ""
+msgstr "Full HD (1920 x 1080)"
 
 #: src/DVD.cpp:983
 msgid "CD (700 MB)"
@@ -840,7 +822,7 @@ msgstr "vælg lydspor %d og "
 #: src/DVDAction.cpp:46
 #, c-format
 msgid "select subtitle track %d and "
-msgstr "vælg undertekstspor %d og"
+msgstr "vælg undertekstspor %d og "
 
 #: src/DVDAction.cpp:54
 msgid "jump to start of current menu"
@@ -861,7 +843,7 @@ msgstr "hop til rodmenu"
 
 #: src/DVDAction.cpp:69
 msgid "jump to subtitle menu"
-msgstr "hop til undertitelmenu"
+msgstr "hop til undertekstmenu"
 
 #: src/DVDAction.cpp:70
 msgid "jump to audio menu"
@@ -929,7 +911,7 @@ msgstr "rodmenu"
 
 #: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:653
 msgid "subtitle menu"
-msgstr "undertitelmenu"
+msgstr "undertekstmenu"
 
 #: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:654
 msgid "audio menu"
@@ -1229,7 +1211,7 @@ msgstr "&Indstillinger…"
 
 #: src/MainWin.cpp:203
 msgid "&Create button from SVG..."
-msgstr ""
+msgstr "&Opret knap fra SVG..."
 
 #: src/MainWin.cpp:204
 msgid "&Configuration"
@@ -1256,23 +1238,20 @@ msgid "&Assign to background"
 msgstr "&Anvend som baggrund"
 
 #: src/MainWin.cpp:273
-#, fuzzy
 msgid "&Play"
-msgstr "Afspil alle"
+msgstr "A&fspil"
 
 #: src/MainWin.cpp:274 src/MenuEditor.cpp:374 src/TitlesetManager.cpp:184 wxVillaLib/PropDlg.cpp:648
 msgid "&Delete"
 msgstr "&Slet"
 
 #: src/MainWin.cpp:280
-#, fuzzy
 msgid "&Edit button"
-msgstr "knap"
+msgstr "&Rediger knap"
 
 #: src/MainWin.cpp:281 src/MainWin.cpp:1412
-#, fuzzy
 msgid "&Reset button"
-msgstr "Standardknap:"
+msgstr "&Nulstil knap"
 
 #: src/MainWin.cpp:306
 msgid "DVDStyler"
@@ -1454,27 +1433,23 @@ msgstr "Vælg et titelsæt at tilføje:"
 
 #: src/MainWin.cpp:1352
 msgid "Open a SVG file"
-msgstr ""
+msgstr "Åbn en SVG-fil"
 
 #: src/MainWin.cpp:1353
-#, fuzzy
 msgid "SVG files"
-msgstr "Videofiler"
+msgstr "SVG-filer"
 
 #: src/MainWin.cpp:1383
-#, fuzzy
 msgid "Do you really want to reset this button?"
-msgstr "Vil du virkelig slette %s?"
+msgstr "Vil du virkelig nulstille denne knap?"
 
 #: src/MainWin.cpp:1401
-#, fuzzy
 msgid "Do you really want to delete this button?"
-msgstr "Vil du virkelig slette %s?"
+msgstr "Vil du virkelig slette denne knap?"
 
 #: src/MainWin.cpp:1412
-#, fuzzy
 msgid "&Delete button"
-msgstr "Standardknap:"
+msgstr "&Slet knap"
 
 #: src/Menu.cpp:839
 #, c-format
@@ -1491,7 +1466,7 @@ msgstr "Kommandoer"
 
 #: src/MenuActionsDlg.cpp:136
 msgid "Menu Actions"
-msgstr "Menuhandlinger:"
+msgstr "Menuhandlinger"
 
 #: src/MenuActionsDlg.cpp:138
 msgid "Actions:"
@@ -1720,13 +1695,12 @@ msgid "Audio"
 msgstr "Lyd"
 
 #: src/MenuObjectPropDlg.cpp:183 src/MenuObjectPropDlg.cpp:200 src/NewProjectDlg.cpp:134
-#, fuzzy
 msgid "Warning"
-msgstr "Brænder"
+msgstr "Advarsel"
 
 #: src/MenuObjectPropDlg.cpp:183
 msgid "Please use titleset menu to select audio tracks."
-msgstr ""
+msgstr "Brug titelsæt-menu til at vælge lydspor."
 
 #: src/MenuObjectPropDlg.cpp:188
 msgid "off"
@@ -1738,7 +1712,7 @@ msgstr "undertekst"
 
 #: src/MenuObjectPropDlg.cpp:200
 msgid "Please use titleset menu to select subtitle tracks."
-msgstr ""
+msgstr "Brug titelsæt-menu til at vælge undertekstspor."
 
 #: src/MenuObjectPropDlg.cpp:205
 msgid "Auto execute command by select"
@@ -1770,40 +1744,39 @@ msgstr "Fremhævet"
 
 #: src/MenuObjectPropDlg.cpp:313
 msgid "Selected"
-msgstr "Markeret"
+msgstr "Valgt"
 
 #: src/MenuObjectPropDlg.cpp:340
 msgid "Font..."
 msgstr "Skrifttype…"
 
-#: src/MenuObjectPropDlg.cpp:404 src/MenuObjectPropDlg.cpp:564 src/MenuPropDlg.cpp:81
-#: src/VideoPropDlg.cpp:138
+#: src/MenuObjectPropDlg.cpp:404 src/MenuObjectPropDlg.cpp:564 src/MenuPropDlg.cpp:81 src/VideoPropDlg.cpp:138
 msgid "Keep Aspect Ratio"
 msgstr "Bevar størrelsesforhold"
 
 #: src/MenuObjectPropDlg.cpp:407 src/MenuPropDlg.cpp:84
 msgid "X Min"
-msgstr "X Min."
+msgstr "X min."
 
 #: src/MenuObjectPropDlg.cpp:408 src/MenuPropDlg.cpp:85
 msgid "X Mid"
-msgstr "X Mid."
+msgstr "X mid."
 
 #: src/MenuObjectPropDlg.cpp:409 src/MenuPropDlg.cpp:86
 msgid "X Max"
-msgstr "X Maks."
+msgstr "X maks."
 
 #: src/MenuObjectPropDlg.cpp:413 src/MenuPropDlg.cpp:90
 msgid "Y Min"
-msgstr "Y Min."
+msgstr "Y min."
 
 #: src/MenuObjectPropDlg.cpp:414 src/MenuPropDlg.cpp:91
 msgid "Y Mid"
-msgstr "Y Mid."
+msgstr "Y mid."
 
 #: src/MenuObjectPropDlg.cpp:415 src/MenuPropDlg.cpp:92
 msgid "Y Max"
-msgstr "Y Maks."
+msgstr "Y maks."
 
 #: src/MenuObjectPropDlg.cpp:419 src/MenuPropDlg.cpp:96
 msgid "Meet"
@@ -1815,7 +1788,7 @@ msgstr "Beskær"
 
 #: src/MenuObjectPropDlg.cpp:455 buttons/ellipse-v2.xml:23 buttons/ellipse45.xml:26 buttons/frame-text.xml:30
 #: buttons/frame-v2.xml:18 buttons/frame45.xml:21 buttons/movie.xml:26 buttons/painting_frame.xml:40
-#: buttons/sticky_note.xml:45 objects/ellipse-v3.xml:22 objects/ellipse45.xml:24 objects/frame-v3.xml:18
+#: buttons/sticky_note.xml:43 objects/ellipse-v3.xml:22 objects/ellipse45.xml:24 objects/frame-v3.xml:18
 #: objects/frame45.xml:20 objects/gold-frame.xml:45 objects/image.xml:3 objects/image.xml:9
 #: objects/sticky_note.xml:42
 msgid "Image"
@@ -2000,7 +1973,7 @@ msgstr "Disketiket:"
 
 #: src/NewProjectDlg.cpp:49
 msgid "DVD Resolution:"
-msgstr ""
+msgstr "DVD-opløsning:"
 
 #: src/NewProjectDlg.cpp:56
 msgid "Disc capacity:"
@@ -2042,6 +2015,22 @@ msgstr "Indtast navn på diskenhed."
 #: src/NewProjectDlg.cpp:123
 msgid "Volume name can only be a maximum of 32 characters."
 msgstr "Navnet på diskenheden kan maksimalt bestå af 32 tegn."
+
+#: src/NewProjectDlg.cpp:135
+msgid ""
+"DVD with HD resolution doesn't comply with the standard and\n"
+"can be played only in some blue-ray or software players."
+msgstr ""
+"DVD med HD-opløsning overholder ikke standarderne og\n"
+"kan kun afspilles i nogle blue-ray eller software-afspillere."
+
+#: src/NewProjectDlg.cpp:136
+msgid ""
+"DVD standard officially supports only video data\n"
+"with resolution up to 720x576 pixels (SD)."
+msgstr ""
+"DVD-standarden understøtter officielt kun videodata\n"
+"med opløsning op til 720x576 pixels (SD)."
 
 #: src/Pgc.cpp:274
 msgid "Can't load vob"
@@ -2093,9 +2082,9 @@ msgid "Found transcoded file in cache for '%s'"
 msgstr "Fandt omkodede filer i cache til  '%s'"
 
 #: src/ProcessEncode.cpp:78
-#, fuzzy, c-format
+#, c-format
 msgid "Transcode video %u of %lu"
-msgstr "Omkoder videofil:"
+msgstr "Omkoder video %u af %lu"
 
 #: src/ProcessFormatDvd.cpp:33
 msgid "Formatting DVD-RW"
@@ -2134,7 +2123,7 @@ msgstr "Opretter menu MPEG"
 #: src/ProcessMenu.cpp:150 src/ProcessMenu.cpp:174 src/ProcessMenu.cpp:188 src/ProcessMenu.cpp:249
 #: src/ProcessMenu.cpp:279 src/ProcessMenu.cpp:293
 msgid "Error creation of menu"
-msgstr "Fejl ved oprettelse af menu "
+msgstr "Fejl ved oprettelse af menu"
 
 #: src/ProcessMenu.cpp:156
 #, c-format
@@ -2154,7 +2143,7 @@ msgstr "Omkode lyd fra"
 #: src/ProcessMenuTransitions.cpp:136 src/ProcessSlideshow.cpp:198 src/ProcessTranscode.cpp:153
 #: src/ProcessTranscode.cpp:164 src/ProcessTranscode.cpp:189 src/ProcessTranscode.cpp:201
 msgid "Error transcoding of "
-msgstr "Fejl ved omkodning af"
+msgstr "Fejl ved omkodning af "
 
 #: src/ProcessMenu.cpp:222 src/ProcessMenu.cpp:302 src/ProcessSlideshow.cpp:203
 msgid "Multiplexing audio and video"
@@ -2193,13 +2182,11 @@ msgid "Start preview"
 msgstr "Starter forhåndsvisning"
 
 #: src/ProcessPreview.cpp:42 src/ProcessPreview.cpp:58 src/ProcessPreview.cpp:79
-#, fuzzy
 msgid ""
 "Starting of selected DVD player is failed. Please open the following directory with your favorite DVD "
 "player: "
 msgstr ""
-"Opstart af DVD-afspilleren mislykkedes. Undersøg stien til DVD-afspilleren i 'Indstillinger/Kerne/Kommando "
-"til forhåndsvisning' eller åbn følgende mappe via din DVD-afspiller: "
+"Opstart af den valgte DVD-afspiller mislykkedes. Åbn følgende mappe med din foretrukne DVD-afspiller: "
 
 #: src/ProcessPreview.cpp:49
 msgid ""
@@ -2255,7 +2242,7 @@ msgstr "Kan ikke omdøbe den midlertidige fil '%s'"
 
 #: src/ProcessTranscode.cpp:23
 msgid "Transcode video file: "
-msgstr "Omkoder videofil:"
+msgstr "Omkoder videofil: "
 
 #: src/ProcessTranscode.cpp:224
 msgid "Multiplexing video and audio streams"
@@ -2304,9 +2291,8 @@ msgid "Show details"
 msgstr "Vis detaljer"
 
 #: src/ProgressDlg.cpp:228 src/ProgressDlg.cpp:232
-#, fuzzy
 msgid "Encoding Mode"
-msgstr "Indkoder billede %d af %d"
+msgstr "Indkodningstilstand"
 
 #: src/ProgressDlg.cpp:274 wxVillaLib/ProgramProcess.cpp:30
 msgid "Failed"
@@ -2438,7 +2424,7 @@ msgstr "Tegn knapper på baggrunden"
 
 #: src/SettingsDlg.cpp:242
 msgid "Allow HD menus"
-msgstr ""
+msgstr "Tillad HD-menuer"
 
 #: src/SettingsDlg.cpp:244
 msgid "Menu video bitrate:"
@@ -2517,18 +2503,16 @@ msgid "NTSC film:"
 msgstr "NTSC-film:"
 
 #: src/SettingsDlg.cpp:309
-#, fuzzy
 msgid "re-encode by default"
 msgstr "genindkod som standard"
 
 #: src/SettingsDlg.cpp:310
-#, fuzzy
 msgid "HD video:"
-msgstr "Video:"
+msgstr "HD-video:"
 
 #: src/SettingsDlg.cpp:311
 msgid "allow (experimental)"
-msgstr ""
+msgstr "tillad (eksperimentel)"
 
 #: src/SettingsDlg.cpp:313
 msgid "Debug"
@@ -2682,7 +2666,7 @@ msgstr "Overskrift:"
 
 #: src/TemplateDlg.cpp:63
 msgid "Disc Title"
-msgstr "Disktitel:"
+msgstr "Disktitel"
 
 #: src/TemplateDlg.cpp:69
 msgid "Title selection"
@@ -2787,7 +2771,7 @@ msgstr "&Flyt"
 
 #: src/TitlesetManager.cpp:359
 msgid "Drag your video files from the File Browser to here."
-msgstr "Træk dine videofiler fra stifinder hertil"
+msgstr "Træk dine videofiler fra stifinder hertil."
 
 #: src/TitlesetManager.cpp:410
 #, c-format
@@ -3174,13 +3158,12 @@ msgid "X color"
 msgstr "X-farve"
 
 #: buttons/circle-outline.xml:3
-#, fuzzy
 msgid "Circle outline"
-msgstr "Cirkelfarve"
+msgstr "Cirkelomrids"
 
 #: buttons/circle-outline.xml:8 buttons/circle.xml:7
 msgid "01"
-msgstr ""
+msgstr "01"
 
 #: buttons/circle-outline.xml:22 buttons/circle.xml:21 buttons/text-circle-v2.xml:39
 msgid "Circle colour"
@@ -3193,9 +3176,8 @@ msgid "Text colour"
 msgstr "Tekstfarve"
 
 #: buttons/circle.xml:3
-#, fuzzy
 msgid "Circle"
-msgstr "Cirkulær pil"
+msgstr "Cirkel"
 
 #: buttons/ellipse-v2.xml:3 objects/ellipse-v3.xml:3
 msgid "Ellipse"
@@ -3218,11 +3200,11 @@ msgstr "Ellipse 45°"
 
 #: buttons/frame-text.xml:4
 msgid "Frame and Text"
-msgstr ""
+msgstr "Ramme og tekst"
 
 #: buttons/frame-text.xml:25
 msgid "T"
-msgstr ""
+msgstr "T"
 
 #: buttons/frame-text.xml:37 buttons/frame-v2.xml:46 buttons/frame45.xml:56
 msgid "Border width"
@@ -3230,16 +3212,15 @@ msgstr "Kantbredde"
 
 #: buttons/frame-text.xml:44
 msgid "Corner round"
-msgstr ""
+msgstr "Hjørnerunding"
 
 #: buttons/frame-text.xml:51 buttons/frame-v2.xml:60 buttons/frame45.xml:70 buttons/movie.xml:40
 msgid "Border colour"
 msgstr "Kantfarve"
 
 #: buttons/frame-text.xml:90
-#, fuzzy
 msgid "Text offset"
-msgstr "Tekstpil venstre"
+msgstr "Tekstforskydning"
 
 #: buttons/frame-v2.xml:3 objects/frame-v3.xml:3
 msgid "Frame"
@@ -3260,18 +3241,16 @@ msgid "Frame 45°"
 msgstr "Ramme 45°"
 
 #: buttons/glow_arrow.xml:5
-#, fuzzy
 msgid "Glow Arrow"
-msgstr "Gylden pil"
+msgstr "Glødende pil"
 
 #: buttons/glow_arrow.xml:26
 msgid "Invert (a,e)"
-msgstr ""
+msgstr "Invertér (a,e)"
 
 #: buttons/glow_arrow.xml:40
-#, fuzzy
 msgid "Glow colour"
-msgstr "Pilfarve"
+msgstr "Glødfarve"
 
 #: buttons/hand-left.xml:4
 msgid "Hand Left"
@@ -3307,12 +3286,11 @@ msgstr "V-farve"
 
 #: buttons/painting_frame.xml:4
 msgid "Painting Frame"
-msgstr ""
+msgstr "Maleriramme"
 
 #: buttons/painting_frame.xml:47
-#, fuzzy
 msgid "Frame colour"
-msgstr "Cirkelfarve"
+msgstr "Rammefarve"
 
 #: buttons/pill.xml:3
 msgid "Pill"
@@ -3340,17 +3318,19 @@ msgstr "Pille 3"
 
 #: buttons/sticky_note.xml:4 objects/sticky_note.xml:4
 msgid "Sticky note"
-msgstr ""
+msgstr "Sticky note"
 
-#: buttons/sticky_note.xml:52 objects/sticky_note.xml:56
-#, fuzzy
+#: buttons/sticky_note.xml:50 objects/sticky_note.xml:49
+msgid "Note"
+msgstr "Note"
+
+#: buttons/sticky_note.xml:57 objects/sticky_note.xml:56
 msgid "Pin"
-msgstr "min"
+msgstr "Knappenål"
 
-#: buttons/sticky_note.xml:59
-#, fuzzy
+#: buttons/sticky_note.xml:64
 msgid "Selection colour"
-msgstr "Refleksionsfarve 1"
+msgstr "Valgt-farve"
 
 #: buttons/text-circle-v2.xml:3
 msgid "Text with circle"
@@ -3399,10 +3379,6 @@ msgstr "Gennemsigtighed"
 #: objects/rectangle-v2.xml:3
 msgid "Rectangle"
 msgstr "Rektangel"
-
-#: objects/sticky_note.xml:49
-msgid "Note"
-msgstr ""
 
 #: objects/text-v2.xml:13
 msgid "text"

@@ -124,8 +124,8 @@ bool DVDStyler::OnInit() {
 	if (lang != wxLANGUAGE_ENGLISH) {
 		m_locale.Init(lang);
 		m_locale.AddCatalogLookupPathPrefix(LOCALE_DIR);
-		m_locale.AddCatalog(wxT("dvdstyler"));
 		m_locale.AddCatalog(wxT("wxstd"));
+		m_locale.AddCatalog(wxT("dvdstyler"));
 	}
 	
 	// set default video format

@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: DVDStyler 3.1 beta 3\n"
+"Project-Id-Version: DVDStyler 3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-12 13:15+0200\n"
-"PO-Revision-Date: 2019-03-07 22:56+0900\n"
+"POT-Creation-Date: 2019-05-06 07:57+0200\n"
+"PO-Revision-Date: 2019-05-08 23:51+0900\n"
 "Last-Translator: ecodrv <ecodrv at yahoo.co.jp>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -278,8 +278,8 @@ msgstr "書込み"
 msgid "Temp directory:"
 msgstr "一時保存用ディレクトリ:"
 
-#: src/BurnDlg.cpp:114 src/BurnDlg.cpp:138 src/BurnDlg.cpp:160 src/BurnDlg.cpp:186
-#: src/SubtitlePropDlg.cpp:148 src/SubtitlePropDlg.cpp:161 src/SubtitlePropDlg.cpp:179
+#: src/BurnDlg.cpp:114 src/BurnDlg.cpp:138 src/BurnDlg.cpp:160 src/BurnDlg.cpp:186 src/SubtitlePropDlg.cpp:148
+#: src/SubtitlePropDlg.cpp:161 src/SubtitlePropDlg.cpp:179
 msgid "..."
 msgstr "..."
 
@@ -446,9 +446,8 @@ msgstr ""
 "一時保存用ディレクトリを変更すると、これらは削除されます。"
 
 #: src/ButtonAddParamDlg.cpp:47
-#, fuzzy
 msgid "Add parameter"
-msgstr "パラメーター:"
+msgstr "パラメーター追加"
 
 #: src/ButtonAddParamDlg.cpp:55
 msgid ""
@@ -471,16 +470,15 @@ msgid "Text"
 msgstr "テキスト"
 
 #: src/ButtonAddParamDlg.cpp:65
-#, fuzzy
 msgid "Stroke:"
-msgstr "縁取りの色"
+msgstr "縁取り:"
 
 #: src/ButtonEditDlg.cpp:170
 msgid "name"
 msgstr "名前"
 
-#: src/ButtonEditDlg.cpp:170 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:439
-#: src/MenuObjectPropDlg.cpp:677 src/MenuObjectPropDlg.cpp:686 src/MenuObjectPropDlg.cpp:698
+#: src/ButtonEditDlg.cpp:170 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:439 src/MenuObjectPropDlg.cpp:677
+#: src/MenuObjectPropDlg.cpp:686 src/MenuObjectPropDlg.cpp:698
 msgid "title"
 msgstr "タイトル"
 
@@ -605,13 +603,12 @@ msgid "Info"
 msgstr "情報"
 
 #: src/ButtonEditDlg.cpp:627
-#, fuzzy
 msgid ""
 "Click on image to select an SVG\n"
 " element for a new parameter"
 msgstr ""
-"新しいパラメーター用に\n"
-"SVG要素を選択して下さい:"
+"新しいパラメーター用に画像上で\n"
+"SVG要素をクリックして下さい"
 
 #: src/Cache.cpp:238 src/Cache.cpp:263 src/Process.cpp:25 src/ProcessMenuTransitions.cpp:121
 #: src/ProcessTranscode.cpp:159 src/ProcessTranscode.cpp:174
@@ -1447,19 +1444,16 @@ msgid "SVG files"
 msgstr "SVGファイル"
 
 #: src/MainWin.cpp:1383
-#, fuzzy
 msgid "Do you really want to reset this button?"
-msgstr "本当に %s を削除しますか?"
+msgstr "本当にこのボタンをリセットしますか？"
 
 #: src/MainWin.cpp:1401
-#, fuzzy
 msgid "Do you really want to delete this button?"
-msgstr "本当に %s を削除しますか?"
+msgstr "本当にこのボタンを削除しますか？"
 
 #: src/MainWin.cpp:1412
-#, fuzzy
 msgid "&Delete button"
-msgstr "ボタンをリセット(&R)"
+msgstr "ボタンを削除(&D)"
 
 #: src/Menu.cpp:839
 #, c-format
@@ -1760,8 +1754,7 @@ msgstr "実行時"
 msgid "Font..."
 msgstr "フォント設定..."
 
-#: src/MenuObjectPropDlg.cpp:404 src/MenuObjectPropDlg.cpp:564 src/MenuPropDlg.cpp:81
-#: src/VideoPropDlg.cpp:138
+#: src/MenuObjectPropDlg.cpp:404 src/MenuObjectPropDlg.cpp:564 src/MenuPropDlg.cpp:81 src/VideoPropDlg.cpp:138
 msgid "Keep Aspect Ratio"
 msgstr "横縦比を保持する"
 
@@ -1799,7 +1792,7 @@ msgstr "画面に合わせて切り取り"
 
 #: src/MenuObjectPropDlg.cpp:455 buttons/ellipse-v2.xml:23 buttons/ellipse45.xml:26 buttons/frame-text.xml:30
 #: buttons/frame-v2.xml:18 buttons/frame45.xml:21 buttons/movie.xml:26 buttons/painting_frame.xml:40
-#: buttons/sticky_note.xml:45 objects/ellipse-v3.xml:22 objects/ellipse45.xml:24 objects/frame-v3.xml:18
+#: buttons/sticky_note.xml:43 objects/ellipse-v3.xml:22 objects/ellipse45.xml:24 objects/frame-v3.xml:18
 #: objects/frame45.xml:20 objects/gold-frame.xml:45 objects/image.xml:3 objects/image.xml:9
 #: objects/sticky_note.xml:42
 msgid "Image"
@@ -2026,6 +2019,22 @@ msgstr "ボリューム名を入力してください。"
 #: src/NewProjectDlg.cpp:123
 msgid "Volume name can only be a maximum of 32 characters."
 msgstr "ボリューム名の長さは最大で 32 文字までです。"
+
+#: src/NewProjectDlg.cpp:135
+msgid ""
+"DVD with HD resolution doesn't comply with the standard and\n"
+"can be played only in some blue-ray or software players."
+msgstr ""
+"HD解像度のDVDは、標準的な規格に準拠しないため、\n"
+"一部のBlu-rayプレイヤーとプレイヤーソフトでのみ再生が可能です。"
+
+#: src/NewProjectDlg.cpp:136
+msgid ""
+"DVD standard officially supports only video data\n"
+"with resolution up to 720x576 pixels (SD)."
+msgstr ""
+"DVDの標準的な規格は、公式には720x480ピクセル(SD)の\n"
+"解像度の映像データのみに対応しています。"
 
 #: src/Pgc.cpp:274
 msgid "Can't load vob"
@@ -3156,9 +3165,8 @@ msgid "X color"
 msgstr "×印の色"
 
 #: buttons/circle-outline.xml:3
-#, fuzzy
 msgid "Circle outline"
-msgstr "丸印の色"
+msgstr "円(縁取り)"
 
 #: buttons/circle-outline.xml:8 buttons/circle.xml:7
 msgid "01"
@@ -3199,11 +3207,11 @@ msgstr "楕円 45°"
 
 #: buttons/frame-text.xml:4
 msgid "Frame and Text"
-msgstr ""
+msgstr "テキスト付フレーム"
 
 #: buttons/frame-text.xml:25
 msgid "T"
-msgstr ""
+msgstr "T"
 
 #: buttons/frame-text.xml:37 buttons/frame-v2.xml:46 buttons/frame45.xml:56
 msgid "Border width"
@@ -3211,16 +3219,15 @@ msgstr "枠線の幅"
 
 #: buttons/frame-text.xml:44
 msgid "Corner round"
-msgstr ""
+msgstr "角丸め"
 
 #: buttons/frame-text.xml:51 buttons/frame-v2.xml:60 buttons/frame45.xml:70 buttons/movie.xml:40
 msgid "Border colour"
 msgstr "枠線の色"
 
 #: buttons/frame-text.xml:90
-#, fuzzy
 msgid "Text offset"
-msgstr "文字入り左矢印"
+msgstr "テキストのずれ"
 
 #: buttons/frame-v2.xml:3 objects/frame-v3.xml:3
 msgid "Frame"
@@ -3318,17 +3325,19 @@ msgstr "砲弾形 3"
 
 #: buttons/sticky_note.xml:4 objects/sticky_note.xml:4
 msgid "Sticky note"
-msgstr ""
+msgstr "ピン留めのメモ"
 
-#: buttons/sticky_note.xml:52 objects/sticky_note.xml:56
-#, fuzzy
+#: buttons/sticky_note.xml:50 objects/sticky_note.xml:49
+msgid "Note"
+msgstr "メモ"
+
+#: buttons/sticky_note.xml:57 objects/sticky_note.xml:56
 msgid "Pin"
-msgstr "分"
+msgstr "ピン"
 
-#: buttons/sticky_note.xml:59
-#, fuzzy
+#: buttons/sticky_note.xml:64
 msgid "Selection colour"
-msgstr "反射の色 1"
+msgstr "選択を示す色"
 
 #: buttons/text-circle-v2.xml:3
 msgid "Text with circle"
@@ -3377,10 +3386,6 @@ msgstr "不透明度"
 #: objects/rectangle-v2.xml:3
 msgid "Rectangle"
 msgstr "矩形"
-
-#: objects/sticky_note.xml:49
-msgid "Note"
-msgstr ""
 
 #: objects/text-v2.xml:13
 msgid "text"
