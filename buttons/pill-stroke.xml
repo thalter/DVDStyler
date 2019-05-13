@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- Created by Gustavo Rezende -->
+	<!-- Changed by ecodrv -->
+<button>
+	<title>Pill stroke</title>
+	<svg width="176" height="41" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<defs>
+			<linearGradient id="lg" x1="0.5" y1="0" x2="0.5" y2="1">
+				<stop id="st1" offset="0%" style="stop-color:#909090;stop-opacity:0.3;"/>
+				<stop id="st2" offset="30%" style="stop-color:#f0f0f0;stop-opacity:0.3;"/>
+				<stop id="st3" offset="100%" style="stop-color:#101010;stop-opacity:0.6;"/>
+			</linearGradient>
+			<rect id="def_box" x="8%" y="8%" rx="18" width="84%" height="84%" />
+			<text id="text" x="50%" y="50%" style="text-anchor:middle;dominant-baseline:middle;">Text</text>
+		</defs>
+		<use xlink:href="#def_box" id="box1" style="fill:#0080ff;stroke:#202020;stroke-width:2;"/>
+		<use xlink:href="#def_box" fill="url(#lg)"/>
+		<use xlink:href="#def_box" id="box3" style="fill:none;stroke:none;stroke-width:5;"/>
+		<g id="text_whole" transform="translate(0,0)" style="stroke-width:2;">
+			<use xlink:href="#text" id="text_stroke" style="fill:none;stroke:#000000;stroke-opacity:0.5"/>
+			<use xlink:href="#text" id="text_fill" style="fill:#ffffff;stroke:none;"/>
+		</g>
+	</svg>
+	<parameters>
+		<parameter>
+			<title>Button color</title>
+			<name>box_color</name>
+			<type>colour</type>
+			<element>box1</element>
+			<attribute>fill</attribute>
+		</parameter>
+		<parameter>
+			<title>Corner round</title>
+			<name>box_rx</name>
+			<type>integer</type>
+			<element>def_box</element>
+			<attribute>rx</attribute>
+		</parameter>
+		<parameter>
+			<title>Border width</title>
+			<name>box_stroke_width</name>
+			<type>integer(3,30)</type>
+			<element>box3</element>
+			<attribute>stroke-width</attribute>
+		</parameter>
+		<parameter>
+			<title>Border colour</title>
+			<name>box_stroke_colour</name>
+			<type>colour</type>
+			<element>box3</element>
+			<attribute>stroke</attribute>
+			<changeable />
+			<default-value>
+				<highlighted>#ff0000</highlighted>
+				<selected>#ffff00</selected>
+			</default-value>
+		</parameter>
+		<parameter>
+			<title>Text</title>
+			<name>text</name>
+			<type>text</type>
+			<element>text</element>
+		</parameter>
+		<parameter>
+			<title>Text color</title>
+			<name>text_fill_color</name>
+			<type>colour</type>
+			<element>text_fill</element>
+			<attribute>fill</attribute>
+		</parameter>
+		<parameter>
+			<title>Stroke color</title>
+			<name>text_stroke_color</name>
+			<type>colour</type>
+			<element>text_stroke</element>
+			<attribute>stroke</attribute>
+		</parameter>
+		<parameter>
+			<title>Outline width</title>
+			<name>text_stroke_width</name>
+			<type>integer(0,30)</type>
+			<element>text_whole</element>
+			<attribute>stroke-width</attribute>
+		</parameter>
+		<parameter>
+			<title>Text offset</title>
+			<name>text_offset</name>
+			<type>integer(-100,100)</type>
+			<element>text_whole</element>
+			<attribute>transform#1</attribute>
+		</parameter>
+	</parameters>
+	<init-parameter>text</init-parameter>
+	<text-offset>10%</text-offset>
+	<default-size>
+		<width>176|text+26%</width>
+		<height>41|text+36%</height>
+	</default-size>
+	<min-size>
+		<width>12|text+20%</width>
+		<height>12|text+20%</height>
+	</min-size>
+</button>
