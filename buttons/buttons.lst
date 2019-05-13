@@ -15,7 +15,7 @@ movie.xml
 pill.xml
 pill2.xml
 pill3.xml
-glow_arrow.xml
+pill-stroke.xml
 arrow-mirror-left.xml
 arrow-mirror-right.xml
 arrow-text-left.xml
@@ -42,3 +42,4 @@ ok.xml
 cancel.xml
 ok2.xml
 cancel2.xml
+glow_arrow.xml
