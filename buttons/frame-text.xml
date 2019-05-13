@@ -22,7 +22,7 @@
 		</g>
 		<use id="textshadow" xlink:href="#text" x="2" y="2" style="fill:#202020;fill-opacity:1;filter:url(#textshadowFilter);visibility:hidden;"/>
 		<g id="body_text" style="fill:#ffffff;fill-opacity:1;stroke:none;">
-			<text id="text" transform="translate(0,0)" x="50%" y="83%" xml:space="preserve" style="dominant-baseline:text-after-edge;text-anchor:middle;font-size:20;font-style:normal;font-weight:normal;">T</text>
+			<text id="text" transform="translate(0,0)" x="50%" y="83%" xml:space="preserve" style="dominant-baseline:text-after-edge;text-anchor:middle;font-size:20;">Text</text>
 		</g>
 	</svg>
 	<parameters>
@@ -98,7 +98,7 @@
 	<init-parameter>text</init-parameter>
 	<default-size>
 		<width>188</width>
-		<height>131</height>
+		<height>132</height>
 	</default-size>
 	<min-size>
 		<width>8</width>
