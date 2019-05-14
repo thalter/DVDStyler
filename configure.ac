@@ -183,6 +183,7 @@ if test "x$ZIP" = x; then
     Please check that zip is in path.
 ])
 fi
+ZIP="$ZIP -X"
 
 dnl check dvdauthor
 AC_PATH_PROG(DVDAUTHOR_PATH, dvdauthor, "")
