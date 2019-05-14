@@ -17,6 +17,7 @@
 #include <wx/mstream.h>
 #include <wx/filename.h>
 #include <wx/regex.h>
+#include <wx/stdpaths.h>
 #include <wx/log.h>
 
 #define BUTTONS_DIR wxFindDataDirectory(_T("buttons"))
@@ -806,10 +807,13 @@ bool MenuObject::PutXML(wxSvgXmlNode* node) {
 	wxFileName fn(fileName);
 	wxString dir = IsButton() ? BUTTONS_DIR : OBJECTS_DIR;
 	if (fn.IsRelative()) {
+		wxString btDir = wxStandardPaths::Get().GetUserDataDir() + wxFILE_SEP_PATH + wxT("buttons") + wxFILE_SEP_PATH;
 		if (wxFileName::FileExists(dir + fileName))
 			fileName = dir + fileName;
 		else if (wxFileName::FileExists(dir + wxT("deprecated") + wxFILE_SEP_PATH + fileName))
 			fileName = dir + wxT("deprecated") + wxFILE_SEP_PATH + fileName;
+		else if (wxFileName::FileExists(btDir + fileName))
+			fileName = btDir + fileName;
 		else if (wxFileName::FileExists(dir + fn.GetFullName()))
 			fileName = dir + fn.GetFullName();
 		else {
