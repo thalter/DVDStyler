@@ -1,35 +1,15 @@
-Version 3.1 beta 4 <2019-04-12>
--------------------------------
+Version 3.1 <2019-05-19>
+------------------------
 
-  * added some new buttons
-  * win32/win64: updated ffmpeg to version 4.1.1
-
-Version 3.1 beta 3 <2019-03-24>
--------------------------------
-
-  * fixed create a new button from SVG file
-
-Version 3.1 beta 3 <2018-11-04>
--------------------------------
-
+  * added some new buttons (movie, settings, etc.)
   * added possibility to create a new button from SVG file
   * added possibility to edit buttons
   * added frame-text button and template (thanks to ecodrv)
-  * win32: fixed starting VLC player 
-  * win32/win64: updated ffmpeg to version 4.0.2
-
-Version 3.1 beta 2 <2018-01-24>
--------------------------------
-
   * fixed functionality of command "call last menu;" if specified for a chapter
-
-Version 3.1 beta 1 <2018-01-14>
--------------------------------
-
-  * added two new buttons: movie and settings
   * added support of HD videos (experimental, can be activated in settings)
   * fixed some bugs
-  * win32/win64: updated ffmpeg to version 3.4.1
+  * win32: fixed starting VLC player 
+  * win32/win64: updated ffmpeg to version 4.1.1
 
 Version 3.0.4 <2017-11-25>
 --------------------------
