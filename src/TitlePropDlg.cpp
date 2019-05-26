@@ -453,14 +453,14 @@ void TitlePropDlg::OnAddBt(wxCommandEvent& event) {
 	}
 }
 
-inline int cmpIntRev(_wxArraywxArrayInt* i1, _wxArraywxArrayInt* i2)  {
+int cmpIntRev(int* i1, int* i2)  {
 	return *i1 < *i2 ? 1 : (*i1 > *i2 ? -1 : 0);
 }
 
 void TitlePropDlg::OnRemoveBt(wxCommandEvent& event) {
 	if (m_slideShowBox != NULL) {
 		wxArrayInt selected = m_slideShowBox->GetSelectedArray();
-		selected.Sort(&cmpIntRev);
+		selected.Sort(cmpIntRev);
 		for (unsigned int i = 0; i < selected.GetCount(); i++) {
 			m_vob->GetSlideshow()->RemoveSlide(selected[i]);
 			m_slideShowBox->RemoveItemAt(selected[i]);
