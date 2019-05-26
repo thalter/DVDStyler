@@ -21,7 +21,7 @@ class wxProgressDialog;
 class Pgc {
 public:
 	Pgc() { }
-	~Pgc() { WX_CLEAR_ARRAY(m_vobs) }
+	~Pgc() { WX_CLEAR_ARRAY(m_vobs); }
 	
 	wxString GetEntriesAsString(bool vmgm = false);
 	StringSet& GetEntries() { return m_entries; }

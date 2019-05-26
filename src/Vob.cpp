@@ -98,9 +98,9 @@ Vob::~Vob() {
 		delete m_menu;
 	if (m_slideshow)
 		delete m_slideshow;
-	WX_CLEAR_ARRAY(m_subtitles)
-	WX_CLEAR_ARRAY(m_streams)
-	VECTOR_CLEAR(m_cells, Cell)
+	WX_CLEAR_ARRAY(m_subtitles);
+	WX_CLEAR_ARRAY(m_streams);
+	VECTOR_CLEAR(m_cells, Cell);
 }
 
 bool Vob::SetFilename(const wxString& filename) {

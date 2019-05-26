@@ -378,7 +378,7 @@ void TitlesetManager::UpdateItems(wxProgressDialog* progressDlg) {
 	int selectedMenuId = -1; // to update m_selectedMenu
 	if (m_selectedMenu>=0 && m_selectedMenu<(int)m_items.Count())
 		selectedMenuId = m_items[m_selectedMenu]->GetId();
-	WX_CLEAR_ARRAY(m_items)
+	WX_CLEAR_ARRAY(m_items);
 	Menus* menus = &m_dvd->GetVmgm();
 	for (int pgci = 0; pgci<(int)menus->Count(); pgci++) {
 		Pgc* pgc = (*menus)[pgci];
