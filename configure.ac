@@ -1,7 +1,7 @@
 dnl Process this file with autoconf to produce a configure script.
 
 dnl initialization
-AC_INIT([DVDStyler], [3.1], [http://www.dvdstyler.org])
+AC_INIT([DVDStyler], [3.1.1], [http://www.dvdstyler.org])
 AC_CANONICAL_SYSTEM
 AM_INIT_AUTOMAKE
 AM_MAINTAINER_MODE
@@ -98,7 +98,7 @@ AC_CHECK_HEADER([libavformat/avformat.h],[],[AC_MSG_ERROR([*** missing ffmpeg li
 #include <stdint.h>])
 
 dnl check for wxSVG
-PKG_CHECK_MODULES(wxSVG, [libwxsvg >= 1.5.17], [LIBS="$LIBS $wxSVG_LIBS"], [AC_MSG_ERROR([*** missing wxSVG library >= 1.5.17 ***])])
+PKG_CHECK_MODULES(wxSVG, [libwxsvg >= 1.5.18], [LIBS="$LIBS $wxSVG_LIBS"], [AC_MSG_ERROR([*** missing wxSVG library >= 1.5.18 ***])])
 AC_MSG_CHECKING([for wxSVG library with ffmpeg/libav support])
 WXSVGLIBAV=no
 AC_TRY_LINK(

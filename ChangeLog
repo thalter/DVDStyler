@@ -1,3 +1,8 @@
+Version 3.1.1 <2019-06-12>
+--------------------------
+
+  * updated some translation 
+
 Version 3.1 <2019-05-19>
 ------------------------
 
@@ -217,7 +222,7 @@ Version 2.5 <2013-07-12>
   * fixed displaying of start and recording time
   * updated ffmpeg to version 1.2
   * added Spanish (Argentina) translation (thanks to Eduardo Quinteros)
-  * added Hungarian translation of DVDStyler Guide (thanks to Gábor Demecs)
+  * added Hungarian translation of DVDStyler Guide (thanks to Gï¿½bor Demecs)
   
 Version 2.4.3 <2013-04-07>
 --------------------------
@@ -236,8 +241,8 @@ Version 2.4.1 <2013-02-17>
 --------------------------
 
   * added some new templates
-  * added frame 45° button and object
-  * added ellipse 45° button and object
+  * added frame 45ï¿½ button and object
+  * added ellipse 45ï¿½ button and object
   * frame object: added possibility to display image
   * fixed some of templates: pause of menu is set to -1
   * fixed handling of subtitle streams
@@ -260,8 +265,8 @@ Version 2.3.5 "Christmas Edition" <2012-12-25>
 
   * added new menu templates: Christmas, Winter and SnowField
   * fixed calculation of DVD size if start/end time is set
-  * added Finnish translation (thanks to Matti Leppälä) 
-  * added Portuguese translation of DVDStyler Guide (thanks to João Frade)
+  * added Finnish translation (thanks to Matti Leppï¿½lï¿½) 
+  * added Portuguese translation of DVDStyler Guide (thanks to Joï¿½o Frade)
   * updated libav to snapshot 2012-12-25
   
 Version 2.3.4 <2012-11-06>
