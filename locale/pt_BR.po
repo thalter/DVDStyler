@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: DVDStyler 3.1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-06 07:57+0200\n"
-"PO-Revision-Date: 2018-02-06 20:35-0200\n"
+"PO-Revision-Date: 2019-05-19 22:36-0300\n"
 "Last-Translator: RAZEC INC\n"
 "Language-Team: RAZEC CORP (pauloedu55 at hotmail.com)\n"
 "Language: pt_BR\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.2.2\n"
 
 #: src/About.cpp:35
 msgid "About ..."
@@ -139,23 +139,20 @@ msgid "OK"
 msgstr "Ok"
 
 #: src/AnimationDlg.cpp:29
-#, fuzzy
 msgid "width"
-msgstr "Largura:"
+msgstr "largura"
 
 #: src/AnimationDlg.cpp:29
-#, fuzzy
 msgid "height"
-msgstr "Altura:"
+msgstr "altura"
 
 #: src/AnimationDlg.cpp:29
-#, fuzzy
 msgid "opacity"
-msgstr "Opacidade"
+msgstr "opacidade"
 
 #: src/AnimationDlg.cpp:46
 msgid "font size"
-msgstr "Tamanho da fonte"
+msgstr "tamanho da fonte"
 
 #: src/AnimationDlg.cpp:157
 msgid "Attribute"
@@ -278,8 +275,8 @@ msgstr "Gravar"
 msgid "Temp directory:"
 msgstr "Diretório temporário:"
 
-#: src/BurnDlg.cpp:114 src/BurnDlg.cpp:138 src/BurnDlg.cpp:160 src/BurnDlg.cpp:186
-#: src/SubtitlePropDlg.cpp:148 src/SubtitlePropDlg.cpp:161 src/SubtitlePropDlg.cpp:179
+#: src/BurnDlg.cpp:114 src/BurnDlg.cpp:138 src/BurnDlg.cpp:160 src/BurnDlg.cpp:186 src/SubtitlePropDlg.cpp:148
+#: src/SubtitlePropDlg.cpp:161 src/SubtitlePropDlg.cpp:179
 msgid "..."
 msgstr "..."
 
@@ -293,7 +290,7 @@ msgstr "Necessário:"
 
 #: src/BurnDlg.cpp:129
 msgid "preview"
-msgstr "Visualizar"
+msgstr "prévia"
 
 #: src/BurnDlg.cpp:146
 msgid "Download"
@@ -301,7 +298,7 @@ msgstr "Baixar"
 
 #: src/BurnDlg.cpp:150
 msgid "just generate"
-msgstr "Apenas gerar"
+msgstr "apenas gerar"
 
 #: src/BurnDlg.cpp:155 src/BurnDlg.cpp:181
 msgid "Save to:"
@@ -309,15 +306,15 @@ msgstr "Salvar em:"
 
 #: src/BurnDlg.cpp:176
 msgid "create iso image"
-msgstr "Criar imagem ISO"
+msgstr "criar imagem ISO"
 
 #: src/BurnDlg.cpp:202
 msgid "burn"
-msgstr "Gravar"
+msgstr "gravar"
 
 #: src/BurnDlg.cpp:207
 msgid "format DVD-RW"
-msgstr "Formato DVD-RW"
+msgstr "formato DVD-RW"
 
 #: src/BurnDlg.cpp:212
 msgid "Device:"
@@ -329,7 +326,7 @@ msgstr "Velocidade:"
 
 #: src/BurnDlg.cpp:222
 msgid "add error correction data"
-msgstr "Adicionar correção de erro para dados"
+msgstr "adicionar dados de correção de erro"
 
 #: src/BurnDlg.cpp:227 src/MenuCellsDlg.cpp:108
 msgid "Start"
@@ -445,14 +442,15 @@ msgstr ""
 
 #: src/ButtonAddParamDlg.cpp:47
 msgid "Add parameter"
-msgstr ""
+msgstr "Adicionar parâmetro"
 
 #: src/ButtonAddParamDlg.cpp:55
-#, fuzzy
 msgid ""
 "Please select an SVG element\n"
 "for new parameter:"
-msgstr "Por favor, selecione o caminho para o player"
+msgstr ""
+"Por favor, selecione um elemento\n"
+"SVG para o novo parâmetro:"
 
 #: src/ButtonAddParamDlg.cpp:60 src/SubtitlePropDlg.cpp:143
 msgid "Fill:"
@@ -467,69 +465,61 @@ msgid "Text"
 msgstr "Texto"
 
 #: src/ButtonAddParamDlg.cpp:65
-#, fuzzy
 msgid "Stroke:"
-msgstr "Cor do traçado"
+msgstr "Traçado:"
 
 #: src/ButtonEditDlg.cpp:170
 msgid "name"
-msgstr ""
+msgstr "nome"
 
-#: src/ButtonEditDlg.cpp:170 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:439
-#: src/MenuObjectPropDlg.cpp:677 src/MenuObjectPropDlg.cpp:686 src/MenuObjectPropDlg.cpp:698
+#: src/ButtonEditDlg.cpp:170 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:439 src/MenuObjectPropDlg.cpp:677
+#: src/MenuObjectPropDlg.cpp:686 src/MenuObjectPropDlg.cpp:698
 msgid "title"
-msgstr "Título"
+msgstr "título"
 
 #: src/ButtonEditDlg.cpp:170
 msgid "type"
-msgstr ""
+msgstr "tipo"
 
 #: src/ButtonEditDlg.cpp:170
 msgid "ID of element"
-msgstr ""
+msgstr "ID do elemento"
 
 #: src/ButtonEditDlg.cpp:170
-#, fuzzy
 msgid "attribute name"
-msgstr "Atributo"
+msgstr "nome do atributo"
 
 #: src/ButtonEditDlg.cpp:170
 msgid "dynamic"
-msgstr ""
+msgstr "dinâmico"
 
 #: src/ButtonEditDlg.cpp:171
 msgid "value"
-msgstr ""
+msgstr "valor"
 
 #: src/ButtonEditDlg.cpp:171 src/ButtonEditDlg.cpp:261
-#, fuzzy
 msgid "highlighted"
-msgstr "Destaque"
+msgstr "destacado"
 
 #: src/ButtonEditDlg.cpp:171 src/ButtonEditDlg.cpp:262
-#, fuzzy
 msgid "selected"
-msgstr "Selecionado"
+msgstr "selecionado"
 
 #: src/ButtonEditDlg.cpp:251
-#, fuzzy
 msgid "Create button"
-msgstr "Botão padrão:"
+msgstr "Criar botão"
 
 #: src/ButtonEditDlg.cpp:260
-#, fuzzy
 msgid "normal"
-msgstr "Normal"
+msgstr "normal"
 
 #: src/ButtonEditDlg.cpp:264
-#, fuzzy
 msgid "Button state"
-msgstr "Botões"
+msgstr "Estado do botão"
 
 #: src/ButtonEditDlg.cpp:271
-#, fuzzy
 msgid "Directory:"
-msgstr "Diretório"
+msgstr "Pasta:"
 
 #: src/ButtonEditDlg.cpp:273 buttons/circle-outline.xml:16 buttons/circle.xml:15 buttons/pill.xml:44
 #: buttons/text-circle-v2.xml:19 buttons/text-square-v2.xml:20 buttons/text-underlined-v3.xml:19
@@ -543,27 +533,24 @@ msgstr "Nome do arquivo:"
 
 #: src/ButtonEditDlg.cpp:280
 msgid ".xml"
-msgstr ""
+msgstr ".xml"
 
 #: src/ButtonEditDlg.cpp:283
-#, fuzzy
 msgid "Title:"
-msgstr "Título"
+msgstr "Título:"
 
 #: src/ButtonEditDlg.cpp:287
-#, fuzzy
 msgid "Default width:"
-msgstr "Botão padrão:"
+msgstr "Largura padrão:"
 
 #: src/ButtonEditDlg.cpp:293 src/ButtonEditDlg.cpp:316 src/ButtonEditDlg.cpp:340 src/ButtonEditDlg.cpp:363
-#, fuzzy
 msgid "or"
-msgstr "Núcleo"
+msgstr "ou"
 
 #: src/ButtonEditDlg.cpp:297 src/ButtonEditDlg.cpp:302 src/ButtonEditDlg.cpp:320 src/ButtonEditDlg.cpp:325
 #: src/ButtonEditDlg.cpp:344 src/ButtonEditDlg.cpp:349 src/ButtonEditDlg.cpp:367 src/ButtonEditDlg.cpp:372
 msgid "+"
-msgstr ""
+msgstr "+"
 
 #: src/ButtonEditDlg.cpp:307 src/ButtonEditDlg.cpp:330 src/ButtonEditDlg.cpp:354 src/ButtonEditDlg.cpp:377
 #: src/SubtitlePropDlg.cpp:153 src/SubtitlePropDlg.cpp:167 src/SubtitlePropDlg.cpp:184
@@ -571,57 +558,52 @@ msgid "%"
 msgstr "%"
 
 #: src/ButtonEditDlg.cpp:310
-#, fuzzy
 msgid "Min width:"
-msgstr "Largura do contorno"
+msgstr "Largura mínima:"
 
 #: src/ButtonEditDlg.cpp:334
-#, fuzzy
 msgid "Default height:"
-msgstr "Comprimento padrão do capítulo:"
+msgstr "Altura padrão:"
 
 #: src/ButtonEditDlg.cpp:357
-#, fuzzy
 msgid "Min height:"
-msgstr "Altura:"
+msgstr "Altura mínima:"
 
 #: src/ButtonEditDlg.cpp:382
-#, fuzzy
 msgid "Parameters:"
-msgstr "Capítulos:"
+msgstr "Parâmetros:"
 
 #: src/ButtonEditDlg.cpp:391 src/MainWin.cpp:321
 msgid "Save"
 msgstr "Salvar"
 
 #: src/ButtonEditDlg.cpp:456
-#, fuzzy
 msgid "Edit button"
-msgstr "botão"
+msgstr "Editar botão"
 
 #: src/ButtonEditDlg.cpp:500
-#, fuzzy
 msgid "Add"
-msgstr "&Adicionar"
+msgstr "Adicionar"
 
 #: src/ButtonEditDlg.cpp:502
-#, fuzzy
 msgid "Remove selected"
-msgstr "Remover arquivo"
+msgstr "Remover selecionado(s)"
 
 #: src/ButtonEditDlg.cpp:546
 msgid "No SVG element is selected"
-msgstr ""
+msgstr "Nenhum elemento SVG selecionado"
 
 #: src/ButtonEditDlg.cpp:627 src/NewProjectDlg.cpp:51 src/NewProjectDlg.cpp:134
 msgid "Info"
-msgstr ""
+msgstr "Informações"
 
 #: src/ButtonEditDlg.cpp:627
 msgid ""
 "Click on image to select an SVG\n"
 " element for a new parameter"
 msgstr ""
+"Clique na imagem para selecionar um\n"
+"elemento SVG para o novo parâmetro"
 
 #: src/Cache.cpp:238 src/Cache.cpp:263 src/Process.cpp:25 src/ProcessMenuTransitions.cpp:121
 #: src/ProcessTranscode.cpp:159 src/ProcessTranscode.cpp:174
@@ -773,19 +755,19 @@ msgstr "PCM 48 kHz"
 
 #: src/DVD.cpp:974
 msgid "SD (standard)"
-msgstr ""
+msgstr "SD (padrão)"
 
 #: src/DVD.cpp:975
 msgid "Half HD (1280 x 720)"
-msgstr ""
+msgstr "Half HD (1280 x 720)"
 
 #: src/DVD.cpp:976
 msgid "HDV (1440 x 1080)"
-msgstr ""
+msgstr "HDV (1440 x 1080)"
 
 #: src/DVD.cpp:977
 msgid "Full HD (1920 x 1080)"
-msgstr ""
+msgstr "Full HD (1920 x 1080)"
 
 #: src/DVD.cpp:983
 msgid "CD (700 MB)"
@@ -831,72 +813,72 @@ msgstr "%d MB/s"
 #: src/DVDAction.cpp:43
 #, c-format
 msgid "select audio track %d and "
-msgstr "Selecionar faixa de áudio %d e "
+msgstr "selecionar faixa de áudio %d e "
 
 #: src/DVDAction.cpp:46
 #, c-format
 msgid "select subtitle track %d and "
-msgstr "Selecionar faixa de legenda %d e "
+msgstr "selecionar faixa de legenda %d e "
 
 #: src/DVDAction.cpp:54
 msgid "jump to start of current menu"
-msgstr "Pular para iniciar o menu atual"
+msgstr "pular para iniciar o menu atual"
 
 #: src/DVDAction.cpp:63
 #, c-format
 msgid "from titleset %d"
-msgstr "Para conjunto de título %d"
+msgstr "para conjunto de título %d"
 
 #: src/DVDAction.cpp:69
 msgid "jump to title menu"
-msgstr "Pular para o menu de título"
+msgstr "pular para o menu de título"
 
 #: src/DVDAction.cpp:69
 msgid "jump to root menu"
-msgstr "Pular para menu raiz"
+msgstr "pular para menu raiz"
 
 #: src/DVDAction.cpp:69
 msgid "jump to subtitle menu"
-msgstr "Pular para menu de legendas"
+msgstr "pular para menu de legendas"
 
 #: src/DVDAction.cpp:70
 msgid "jump to audio menu"
-msgstr "Pular para menu de áudio"
+msgstr "pular para menu de áudio"
 
 #: src/DVDAction.cpp:70
 msgid "jump to angle menu"
-msgstr "Pular para menu de ângulo"
+msgstr "pular para menu de ângulo"
 
 #: src/DVDAction.cpp:70
 msgid "jump to chapter menu"
-msgstr "Pular para menu de capítulo"
+msgstr "pular para menu de capítulo"
 
 #: src/DVDAction.cpp:75 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:647 src/MenuObjectPropDlg.cpp:667
 msgid "menu"
-msgstr "Menu"
+msgstr "menu"
 
 #: src/DVDAction.cpp:77 src/DVDAction.cpp:94
 msgid "jump to menu"
-msgstr "Pular para o menu"
+msgstr "pular para o menu"
 
 #: src/DVDAction.cpp:92
 msgid "jump to VMGM menu"
-msgstr "Pular para o menu VMGM"
+msgstr "pular para o menu VMGM"
 
 #: src/DVDAction.cpp:100
 #, c-format
 msgid "jump to title %d chapter %d"
-msgstr "Pular para título %d, capítulo %d"
+msgstr "pular para título %d, capítulo %d"
 
 #: src/DVDAction.cpp:105
 msgid "jump to title"
-msgstr "Pular para o título"
+msgstr "pular para o título"
 
 #: src/DVDAction.cpp:183 src/MenuObjectPropDlg.cpp:441 src/MenuObjectPropDlg.cpp:660
 #: src/MenuObjectPropDlg.cpp:669 src/MenuObjectPropDlg.cpp:679 src/MenuObjectPropDlg.cpp:688
 #: src/MenuObjectPropDlg.cpp:697
 msgid "titleset"
-msgstr "Conjunto de título"
+msgstr "conjunto de título"
 
 #: src/DVDAction.cpp:186 src/MenuObjectPropDlg.cpp:636 src/MenuPropDlg.cpp:55
 msgid "VMGM menu"
@@ -905,39 +887,39 @@ msgstr "Menu VMGM"
 #: src/DVDAction.cpp:196
 #, c-format
 msgid "cannot jump to titleset %d, only %d exist"
-msgstr "Impossível ir para o conjunto de título %d,  apenas %d existe"
+msgstr "impossível ir para o conjunto de título %d,  apenas %d existe"
 
 #: src/DVDAction.cpp:204
 msgid "cannot jump to VMGM menu; none exist"
-msgstr "Impossível ir para o menu VMGM; não existe"
+msgstr "impossível ir para o menu VMGM; não existe"
 
 #: src/DVDAction.cpp:206 src/DVDAction.cpp:441
 msgid "cannot jump to menu; none exist"
-msgstr "Impossível pular para o menu; não existe"
+msgstr "impossível pular para o menu; não existe"
 
 #: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:653
 msgid "title menu"
-msgstr "Título do menu"
+msgstr "menu de título"
 
 #: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:653
 msgid "root menu"
-msgstr "Menu raiz"
+msgstr "menu raiz"
 
 #: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:653
 msgid "subtitle menu"
-msgstr "Menu de legenda"
+msgstr "menu de legenda"
 
 #: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:654
 msgid "audio menu"
-msgstr "Menu de áudio"
+msgstr "menu de áudio"
 
 #: src/DVDAction.cpp:212 src/MenuObjectPropDlg.cpp:654
 msgid "angle menu"
-msgstr "Menu de ângulo"
+msgstr "menu de ângulo"
 
 #: src/DVDAction.cpp:212 src/MenuObjectPropDlg.cpp:654
 msgid "chapter menu"
-msgstr "Menu de capítulo"
+msgstr "menu de capítulo"
 
 #: src/DVDAction.cpp:215
 #, c-format
@@ -1135,7 +1117,7 @@ msgstr "mostrar versão do programa"
 
 #: src/dvdstyler.cpp:198
 msgid "show summary of options"
-msgstr "Mostrar resumo das opções"
+msgstr "mostrar resumo das opções"
 
 #: src/dvdstyler.cpp:199
 msgid "input file"
@@ -1228,7 +1210,7 @@ msgstr "&Configurações..."
 
 #: src/MainWin.cpp:203
 msgid "&Create button from SVG..."
-msgstr ""
+msgstr "&Criar botão do arquivo SVG..."
 
 #: src/MainWin.cpp:204
 msgid "&Configuration"
@@ -1263,14 +1245,12 @@ msgid "&Delete"
 msgstr "&Excluir"
 
 #: src/MainWin.cpp:280
-#, fuzzy
 msgid "&Edit button"
-msgstr "botão"
+msgstr "&Editar botão"
 
 #: src/MainWin.cpp:281 src/MainWin.cpp:1412
-#, fuzzy
 msgid "&Reset button"
-msgstr "Botão padrão:"
+msgstr "&Redefinir botão"
 
 #: src/MainWin.cpp:306
 msgid "DVDStyler"
@@ -1452,27 +1432,23 @@ msgstr "Escolha um conjunto de título para adicionar:"
 
 #: src/MainWin.cpp:1352
 msgid "Open a SVG file"
-msgstr ""
+msgstr "Abrir um arquivo SVG"
 
 #: src/MainWin.cpp:1353
-#, fuzzy
 msgid "SVG files"
-msgstr "Arquivos de vídeo"
+msgstr "Arquivos SVG"
 
 #: src/MainWin.cpp:1383
-#, fuzzy
 msgid "Do you really want to reset this button?"
-msgstr "Deseja realmente excluir %s?"
+msgstr "Deseja realmente redefinir este botão?"
 
 #: src/MainWin.cpp:1401
-#, fuzzy
 msgid "Do you really want to delete this button?"
-msgstr "Deseja realmente excluir %s?"
+msgstr "Deseja realmente excluir este botão?"
 
 #: src/MainWin.cpp:1412
-#, fuzzy
 msgid "&Delete button"
-msgstr "Botão padrão:"
+msgstr "E&xcluir botão"
 
 #: src/Menu.cpp:839
 #, c-format
@@ -1718,13 +1694,12 @@ msgid "Audio"
 msgstr "Áudio"
 
 #: src/MenuObjectPropDlg.cpp:183 src/MenuObjectPropDlg.cpp:200 src/NewProjectDlg.cpp:134
-#, fuzzy
 msgid "Warning"
-msgstr "Gravando"
+msgstr "Aviso"
 
 #: src/MenuObjectPropDlg.cpp:183
 msgid "Please use titleset menu to select audio tracks."
-msgstr ""
+msgstr "Por favor, use o menu de títulos para selecionar as faixas de áudio."
 
 #: src/MenuObjectPropDlg.cpp:188
 msgid "off"
@@ -1736,7 +1711,7 @@ msgstr "legenda"
 
 #: src/MenuObjectPropDlg.cpp:200
 msgid "Please use titleset menu to select subtitle tracks."
-msgstr ""
+msgstr "Por favor, use o menu de títulos para selecionar as legendas."
 
 #: src/MenuObjectPropDlg.cpp:205
 msgid "Auto execute command by select"
@@ -1774,8 +1749,7 @@ msgstr "Selecionado"
 msgid "Font..."
 msgstr "Fonte..."
 
-#: src/MenuObjectPropDlg.cpp:404 src/MenuObjectPropDlg.cpp:564 src/MenuPropDlg.cpp:81
-#: src/VideoPropDlg.cpp:138
+#: src/MenuObjectPropDlg.cpp:404 src/MenuObjectPropDlg.cpp:564 src/MenuPropDlg.cpp:81 src/VideoPropDlg.cpp:138
 msgid "Keep Aspect Ratio"
 msgstr "Manter proporção"
 
@@ -1998,7 +1972,7 @@ msgstr "Etiqueta:"
 
 #: src/NewProjectDlg.cpp:49
 msgid "DVD Resolution:"
-msgstr ""
+msgstr "Resolução do DVD:"
 
 #: src/NewProjectDlg.cpp:56
 msgid "Disc capacity:"
@@ -2046,21 +2020,24 @@ msgid ""
 "DVD with HD resolution doesn't comply with the standard and\n"
 "can be played only in some blue-ray or software players."
 msgstr ""
+"DVD com resolução HD não é compatível com os padrões e pode\n"
+"ser reproduzido somente em alguns aparelhos de Blu-ray ou software."
 
 #: src/NewProjectDlg.cpp:136
 msgid ""
 "DVD standard officially supports only video data\n"
 "with resolution up to 720x576 pixels (SD)."
 msgstr ""
+"O padrão de DVD oficialmente suporta somente dados\n"
+"de vídeo com resolução até 720x576 pixels (SD)."
 
 #: src/Pgc.cpp:274
 msgid "Can't load vob"
 msgstr "Impossível carregar o vob"
 
 #: src/Process.cpp:19
-#, fuzzy
 msgid "Executing command: "
-msgstr "Comando de gravação:"
+msgstr "Executando comando: "
 
 #: src/ProcessBurn.cpp:60
 msgid "Burning"
@@ -2445,7 +2422,7 @@ msgstr "Desenhar os botões no fundo"
 
 #: src/SettingsDlg.cpp:242
 msgid "Allow HD menus"
-msgstr ""
+msgstr "Permitir menus em HD"
 
 #: src/SettingsDlg.cpp:244
 msgid "Menu video bitrate:"
@@ -2524,18 +2501,16 @@ msgid "NTSC film:"
 msgstr "Filme NTSC:"
 
 #: src/SettingsDlg.cpp:309
-#, fuzzy
 msgid "re-encode by default"
-msgstr "Recodificar por padrão"
+msgstr "recodificar por padrão"
 
 #: src/SettingsDlg.cpp:310
-#, fuzzy
 msgid "HD video:"
-msgstr "Vídeo:"
+msgstr "Vídeo em HD:"
 
 #: src/SettingsDlg.cpp:311
 msgid "allow (experimental)"
-msgstr ""
+msgstr "permitir (experimental)"
 
 #: src/SettingsDlg.cpp:313
 msgid "Debug"
@@ -3181,13 +3156,12 @@ msgid "X color"
 msgstr "Cor X"
 
 #: buttons/circle-outline.xml:3
-#, fuzzy
 msgid "Circle outline"
-msgstr "Cor do círculo"
+msgstr "Contorno do círculo"
 
 #: buttons/circle-outline.xml:8 buttons/circle.xml:7
 msgid "01"
-msgstr ""
+msgstr "01"
 
 #: buttons/circle-outline.xml:22 buttons/circle.xml:21 buttons/text-circle-v2.xml:39
 msgid "Circle colour"
@@ -3200,9 +3174,8 @@ msgid "Text colour"
 msgstr "Cor do texto"
 
 #: buttons/circle.xml:3
-#, fuzzy
 msgid "Circle"
-msgstr "Seta círculo"
+msgstr "Círculo"
 
 #: buttons/ellipse-v2.xml:3 objects/ellipse-v3.xml:3
 msgid "Ellipse"
@@ -3225,11 +3198,11 @@ msgstr "Elipse 45°"
 
 #: buttons/frame-text.xml:4
 msgid "Frame and Text"
-msgstr ""
+msgstr "Frame e Texto"
 
 #: buttons/frame-text.xml:25
 msgid "T"
-msgstr ""
+msgstr "T"
 
 #: buttons/frame-text.xml:37 buttons/frame-v2.xml:46 buttons/frame45.xml:56
 msgid "Border width"
@@ -3237,16 +3210,15 @@ msgstr "Largura da borda"
 
 #: buttons/frame-text.xml:44
 msgid "Corner round"
-msgstr ""
+msgstr "Canto redondo"
 
 #: buttons/frame-text.xml:51 buttons/frame-v2.xml:60 buttons/frame45.xml:70 buttons/movie.xml:40
 msgid "Border colour"
 msgstr "Cor da borda"
 
 #: buttons/frame-text.xml:90
-#, fuzzy
 msgid "Text offset"
-msgstr "Texto da Seta Esquerda"
+msgstr "Deslocar texto"
 
 #: buttons/frame-v2.xml:3 objects/frame-v3.xml:3
 msgid "Frame"
@@ -3267,18 +3239,16 @@ msgid "Frame 45°"
 msgstr "Quadro 45°"
 
 #: buttons/glow_arrow.xml:5
-#, fuzzy
 msgid "Glow Arrow"
-msgstr "Seta de Ouro"
+msgstr "Seta Brilhante"
 
 #: buttons/glow_arrow.xml:26
 msgid "Invert (a,e)"
-msgstr ""
+msgstr "Inverter (a,e)"
 
 #: buttons/glow_arrow.xml:40
-#, fuzzy
 msgid "Glow colour"
-msgstr "Cor da Seta"
+msgstr "Cor do brilho"
 
 #: buttons/hand-left.xml:4
 msgid "Hand Left"
@@ -3314,12 +3284,11 @@ msgstr "Cor V"
 
 #: buttons/painting_frame.xml:4
 msgid "Painting Frame"
-msgstr ""
+msgstr "Frame da Pintura"
 
 #: buttons/painting_frame.xml:47
-#, fuzzy
 msgid "Frame colour"
-msgstr "Cor do círculo"
+msgstr "Cor do frame"
 
 #: buttons/pill.xml:3
 msgid "Pill"
@@ -3347,21 +3316,19 @@ msgstr "Pílula 3"
 
 #: buttons/sticky_note.xml:4 objects/sticky_note.xml:4
 msgid "Sticky note"
-msgstr ""
+msgstr "Nota adesiva"
 
 #: buttons/sticky_note.xml:50 objects/sticky_note.xml:49
 msgid "Note"
-msgstr ""
+msgstr "Nota"
 
 #: buttons/sticky_note.xml:57 objects/sticky_note.xml:56
-#, fuzzy
 msgid "Pin"
-msgstr "min"
+msgstr "Fixar"
 
 #: buttons/sticky_note.xml:64
-#, fuzzy
 msgid "Selection colour"
-msgstr "Cor de reflexão 1"
+msgstr "Cor de seleção"
 
 #: buttons/text-circle-v2.xml:3
 msgid "Text with circle"

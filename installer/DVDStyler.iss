@@ -1,13 +1,13 @@
 ﻿[Setup]
 AppName=DVDStyler
-AppVerName=DVDStyler v3.0.4
+AppVerName=DVDStyler v3.1.1
 AppPublisher=Thüring IT-Consulting
 AppPublisherURL=http://www.dvdstyler.org
 AppSupportURL=http://www.dvdstyler.org
 AppUpdatesURL=http://www.dvdstyler.org
 DefaultDirName={pf}\DVDStyler
 DefaultGroupName=DVDStyler
-OutputBaseFilename=DVDStyler-3.0.4-win32
+OutputBaseFilename=DVDStyler-3.1.1-win32
 Compression=lzma
 SolidCompression=yes
 UninstallDisplayIcon={app}\bin\DVDStyler.exe  
@@ -45,13 +45,14 @@ Name: "pt"; MessagesFile: "compiler:Languages\Portuguese.isl"
 Name: "pt_BR"; MessagesFile: "compiler:Languages\BrazilianPortuguese.isl"
 Name: "ro"; MessagesFile: "Languages\Romanian.isl"
 Name: "ru"; MessagesFile: "compiler:Languages\Russian.isl"
+Name: "si"; MessagesFile: "Languages\Sinhala.islu"
 Name: "sk"; MessagesFile: "Languages\Slovak.isl"
 Name: "sl"; MessagesFile: "compiler:Languages\Slovenian.isl"
 Name: "sr"; MessagesFile: "compiler:Languages\SerbianLatin.isl"
 Name: "sv"; MessagesFile: "Languages\Swedish.isl"
 Name: "tr"; MessagesFile: "compiler:Languages\Turkish.isl"
 Name: "uk"; MessagesFile: "compiler:Languages\Ukrainian.isl"
-Name: "vi"; MessagesFile: "Languages\Vietnamese.islu"
+Name: "vi"; MessagesFile: "Languages\Vietnamese.isl"
 Name: "zh_CN"; MessagesFile: "Languages\ChineseSimp.isl"
 Name: "zh_TW"; MessagesFile: "Languages\ChineseTrad.isl"
 
@@ -127,6 +128,7 @@ Source: "..\locale\pt\*"; DestDir: "{app}\locale\pt"; Flags: ignoreversion
 Source: "..\locale\pt_BR\*"; DestDir: "{app}\locale\pt_BR"; Flags: ignoreversion
 Source: "..\locale\ro\*"; DestDir: "{app}\locale\ro"; Flags: ignoreversion
 Source: "..\locale\ru\*"; DestDir: "{app}\locale\ru"; Flags: ignoreversion
+Source: "..\locale\si\*"; DestDir: "{app}\locale\si"; Flags: ignoreversion
 Source: "..\locale\sk\*"; DestDir: "{app}\locale\sk"; Flags: ignoreversion
 Source: "..\locale\sl\*"; DestDir: "{app}\locale\sl"; Flags: ignoreversion
 Source: "..\locale\sr\*"; DestDir: "{app}\locale\sr"; Flags: ignoreversion
