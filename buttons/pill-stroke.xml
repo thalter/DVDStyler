@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 	<!-- Created by Gustavo Rezende -->
 	<!-- Changed by ecodrv -->
-<button>
+<button previewHighlighted="true">
 	<title>Pill stroke</title>
 	<svg width="176" height="41" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 		<defs>
@@ -30,6 +30,13 @@
 			<attribute>fill</attribute>
 		</parameter>
 		<parameter>
+			<title>Border colour</title>
+			<name>box_border_colour</name>
+			<type>colour</type>
+			<element>box1</element>
+			<attribute>stroke</attribute>
+		</parameter>
+		<parameter>
 			<title>Corner round</title>
 			<name>box_rx</name>
 			<type>integer</type>
@@ -37,14 +44,7 @@
 			<attribute>rx</attribute>
 		</parameter>
 		<parameter>
-			<title>Border width</title>
-			<name>box_stroke_width</name>
-			<type>integer(3,30)</type>
-			<element>box3</element>
-			<attribute>stroke-width</attribute>
-		</parameter>
-		<parameter>
-			<title>Border colour</title>
+			<title>Selection colour</title>
 			<name>box_stroke_colour</name>
 			<type>colour</type>
 			<element>box3</element>
@@ -54,6 +54,13 @@
 				<highlighted>#ff0000</highlighted>
 				<selected>#ffff00</selected>
 			</default-value>
+		</parameter>
+		<parameter>
+			<title>Border width</title>
+			<name>box_stroke_width</name>
+			<type>integer(3,30)</type>
+			<element>box3</element>
+			<attribute>stroke-width</attribute>
 		</parameter>
 		<parameter>
 			<title>Text</title>
