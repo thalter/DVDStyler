@@ -44,7 +44,7 @@ Menu::Menu(DVD* dvd, int tsi, int pgci, VideoFormat videoFormat, AspectRatio asp
 
 Menu::~Menu() {
 	delete m_svg;
-	WX_CLEAR_ARRAY(m_objects)
+	WX_CLEAR_ARRAY(m_objects);
 	VECTOR_CLEAR(m_actions, DVDAction)
 }
 

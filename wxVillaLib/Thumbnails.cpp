@@ -140,7 +140,7 @@ wxThumbnails::wxThumbnails(wxWindow* parent, int id, long style):
 }
 
 wxThumbnails::~wxThumbnails() {
-	WX_CLEAR_ARRAY(m_items)
+	WX_CLEAR_ARRAY(m_items);
 }
 
 void wxThumbnails::SetThumbSize(int width, int height, int border) {
@@ -173,7 +173,7 @@ int wxThumbnails::GetThumbImageHeight() {
 }
 
 void wxThumbnails::Clear() {
-	WX_CLEAR_ARRAY(m_items)
+	WX_CLEAR_ARRAY(m_items);
 	m_selectedArray.Clear();
 	wxThumbnailFactory::ClearQueue(this);
 	UpdateProp();
