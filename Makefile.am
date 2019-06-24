@@ -48,12 +48,6 @@ libs:
 	dylibbundler -of -b -x ./DVDStyler.app/Contents/MacOS/mplex -d ./DVDStyler.app/Contents/libs/
 	dylibbundler -of -b -x ./DVDStyler.app/Contents/MacOS/mkisofs -d ./DVDStyler.app/Contents/libs/
 	dylibbundler -of -b -x ./DVDStyler.app/Contents/MacOS/ffmpeg -d ./DVDStyler.app/Contents/libs/
-	cp -r /opt/local/Library/Frameworks/wxWidgets.framework/Versions/wxWidgets/3.1/lib/*3.1.dylib DVDStyler.app/Contents/libs/
-	install_name_tool -change /opt/local/Library/Frameworks/wxWidgets.framework/Versions/wxWidgets/3.1/lib/libwx_baseu-3.1.dylib @executable_path/../libs/libwx_baseu-3.1.dylib ./DVDStyler.app/Contents/MacOS/DVDStyler
-	install_name_tool -change /opt/local/Library/Frameworks/wxWidgets.framework/Versions/wxWidgets/3.1/lib/libwx_baseu_net-3.1.dylib @executable_path/../libs/libwx_baseu_net-3.1.dylib ./DVDStyler.app/Contents/MacOS/DVDStyler
-	install_name_tool -change /opt/local/Library/Frameworks/wxWidgets.framework/Versions/wxWidgets/3.1/lib/libwx_osx_cocoau_core-3.1.dylib @executable_path/../libs/libwx_osx_cocoau_core-3.1.dylib ./DVDStyler.app/Contents/MacOS/DVDStyler
-	install_name_tool -change /opt/local/Library/Frameworks/wxWidgets.framework/Versions/wxWidgets/3.1/lib/libwx_osx_cocoau_html-3.1.dylib @executable_path/../libs/libwx_osx_cocoau_html-3.1.dylib ./DVDStyler.app/Contents/MacOS/DVDStyler
-	install_name_tool -change /opt/local/Library/Frameworks/wxWidgets.framework/Versions/wxWidgets/3.1/lib/libwx_osx_cocoau_media-3.1.dylib @executable_path/../libs/libwx_osx_cocoau_media-3.1.dylib ./DVDStyler.app/Contents/MacOS/DVDStyler
 	
 dmg:
 	rm -f DVDStyler.dmg DVDStyler-@VERSION@-MacOSX.dmg
