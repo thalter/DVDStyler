@@ -1,3 +1,8 @@
+Version 3.1.2 <2019-08-02>
+--------------------------
+
+  * unix: changed to use configuration file .dvdstyler/dvdstyler
+
 Version 3.1.1 <2019-06-24>
 --------------------------
 
