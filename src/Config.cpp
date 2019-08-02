@@ -10,9 +10,8 @@
 
 #include "Config.h"
 #include <wxVillaLib/utils.h>
-#ifdef __WXMSW__
 #include <wx/fileconf.h>
-#endif
+#include <wx/stdpaths.h>
 
 Config s_config;
 
@@ -27,8 +26,19 @@ void Config::Init() {
 		} else
 			wxConfig::Set(new wxFileConfig(wxT(""), wxT(""), fileName));
 	}
-#endif
+#elif defined(__WXMAC__)
 	cfg = wxConfig::Get();
+#else
+	// check if .dvdstyler exist and move it
+	wxString dataDir = wxStandardPaths::Get().GetUserLocalDataDir();
+	if (wxFileExists(dataDir)) {
+		wxRenameFile(dataDir, dataDir + ".tmp");
+		wxMkdir(dataDir);
+		wxRenameFile(dataDir + ".tmp", dataDir + wxFILE_SEP_PATH + "dvdstyler");
+	}
+	cfg = new wxFileConfig("", "", dataDir + wxFILE_SEP_PATH + "dvdstyler");
+	wxConfig::Set(cfg);
+#endif
 }
 
 bool Config::IsMainWinMaximized() {
