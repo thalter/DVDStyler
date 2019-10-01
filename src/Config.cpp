@@ -26,6 +26,7 @@ void Config::Init() {
 		} else
 			wxConfig::Set(new wxFileConfig(wxT(""), wxT(""), fileName));
 	}
+	cfg = wxConfig::Get();
 #elif defined(__WXMAC__)
 	cfg = wxConfig::Get();
 #else
