@@ -2,7 +2,7 @@
 // Name:        Menu.cpp
 // Purpose:     The class to store a DVD Menu
 // Author:      Alex Thuering
-// Created:	04.11.2003
+// Created:	    04.11.2003
 // RCS-ID:      $Id: Menu.cpp,v 1.127 2016/12/28 20:10:20 ntalex Exp $
 // Copyright:   (c) Alex Thuering
 // Licence:     GPL
@@ -302,7 +302,7 @@ bool Menu::HasVideoBackground() {
 bool Menu::IsDefElement(wxSVGElement* element) {
 	if (!element || element->GetDtd() == wxSVG_SVG_ELEMENT)
 		return false;
-	if (element->GetDtd() == wxSVG_DEFS_ELEMENT)
+	if (element->GetDtd() == wxSVG_DEFS_ELEMENT || element->GetDtd() == wxSVG_SYMBOL_ELEMENT)
 		return true;
 	return IsDefElement((wxSVGElement*) element->GetParent());
 }
@@ -350,7 +350,7 @@ bool Menu::RemoveNotChangeable(wxSVGElement* element, MenuObject* obj) {
 			elem->GetParent()->RemoveChild(elem);
 			continue;
 		}
-		// don't remove def elements
+		// don't remove def and symbol elements
 		if (IsDefElement(elem))
 			continue;
 		// check if child changeable
