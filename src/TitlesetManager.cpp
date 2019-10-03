@@ -590,13 +590,17 @@ bool TitlesetManager::AddVideo(const wxString& fname, bool createTitle, int tsi,
 	for (unsigned int i=0; i<vob->GetStreams().size(); i++) {
 		Stream* stream = vob->GetStreams()[i];
 		if (stream->GetType() == stVIDEO) {
-			// set destination format (default COPY) if codec is not mpeg2
-			if (m_reEncodingByDefault
+			// disable png and mjpeg streams
+			if (stream->GetSourceCodecName() == "png" || stream->GetSourceCodecName() == "mjpeg") {
+				// ignore png and mjpeg stream
+				stream->SetDestinationFormat(vfNONE);
+			} else if (m_reEncodingByDefault
 					|| vob->GetStreams().size() == 1 // only video is available
 					|| !stream->IsDvdCompliant(m_dvd->IsHD())
 					|| stream->GetSourceVideoFormat() != pgcs.GetVideo().GetFormat()
 					|| (s_config.GetDefRencodeNtscFilm() && lround(stream->GetSourceFps()) == 24)
 					|| fabs(stream->GetSourceAspectRatio() - GetFrameAspectRatio(pgcs.GetVideo().GetAspect())) >= 0.1) {
+				// set destination format (default COPY) if codec is not mpeg2
 				stream->SetDestinationFormat(pgcs.GetVideo().GetFormat());
 				vob->SetKeepAspectRatio(s_config.GetDefKeepAspectRatio());
 			} else if (vob->GetAudioFilenames().Count() == 0 && MPEG::HasNavPacks(vob->GetFilename())) {

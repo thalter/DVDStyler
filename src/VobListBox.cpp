@@ -133,7 +133,7 @@ void VobListBox::RefreshInfo() {
 				int top = rect.GetTop();
 				int x = rect.GetRight() + 4;
 				bool copyEnabled = stream->IsCopyPossible();
-				AddChoiceCtrl(DVD::GetVideoFormatLabels(copyEnabled, false, false, m_dvd->IsHD()),
+				AddChoiceCtrl(DVD::GetVideoFormatLabels(copyEnabled, true, false, m_dvd->IsHD()),
 						GetVideoFormatIdx(stream, stream->GetVideoFormat()),
 						x, itemY + top, choiceIdx, !m_vob->GetDoNotTranscode());
 				y += UpdateRect(rect, m_choiceList[choiceIdx-1]);
@@ -430,20 +430,22 @@ void VobListBox::SetValues() {
 			int vf = m_choiceList[choiceIdx++]->GetSelection();
 			if (m_dvd->IsHD()) {
 				if (stream->IsCopyPossible()) {
-					if (vf == 0) {
-						vf = vfCOPY;
-					} else if (vf <= 6) {
-						vf += vfPAL_HALF_HD - 1;
-					} else
-						vf -= 5;
+					if (vf > 1) {
+						if (vf <= 7) {
+							vf += vfPAL_HALF_HD - 2;
+						} else
+							vf -= 6;
+					}
 				} else {
-					if (vf <= 5) {
-						vf += vfPAL_HALF_HD;
-					} else
-						vf -= 4;
+					if (vf > 0) {
+						if (vf <= 6) {
+							vf += vfPAL_HALF_HD - 1;
+						} else
+							vf -= 5;
+					}
 				}
-			} else {
-				vf += (stream->IsCopyPossible() ? 1 : 2);
+			} else if (!stream->IsCopyPossible()) {
+				vf += 1;
 			}
 			stream->SetDestinationFormat(vf);
 			if (stream->GetVideoFormat() != vfCOPY)
@@ -530,11 +532,11 @@ int VobListBox::GetVideoFormatIdx(Stream* stream, VideoFormat videoFormat) {
 	int vf = videoFormat;
 	if (m_dvd->IsHD()) {
 		if (vf >= vfPAL_HALF_HD) {
-			vf = vf - vfPAL_HALF_HD + (copyEnabled ? 1 : 0);
+			vf = vf - vfPAL_HALF_HD + (copyEnabled ? 2 : 1);
 		} else
-			vf =  vf >= vfPAL && vf < vfPAL_HALF_HD ? vf + (copyEnabled ? 5 : 4) : 0;
-	} else {
-		vf -= (copyEnabled ? 1 : 2);
+			vf = vf >= vfPAL && vf < vfPAL_HALF_HD ? vf + (copyEnabled ? 6 : 5) : 1;
+	} else if (!copyEnabled && vf > 0) {
+		vf -= 1;
 	}
 	return vf;
 }

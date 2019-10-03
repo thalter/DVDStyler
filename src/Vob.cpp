@@ -775,7 +775,7 @@ int Vob::GetOutputFileSize(DVD* dvd, int fileIdx) {
 					case stVIDEO:
 						if (stream->GetVideoFormat() == vfCOPY)
 							copyVideo = true;
-						else
+						else if (stream->GetVideoFormat() != vfNONE)
 							size += (long) (GetResultDuration()*dvd->GetVideoBitrate()/8);
 						break;
 					case stAUDIO: {
