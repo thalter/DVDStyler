@@ -38,7 +38,7 @@ void ProcessProjectInfo::PrintInfoLine(const wxString& info, unsigned int inputS
 	text.Append(str).Append(wxT("| "));
 	// output duration
 	str = outputDuration > 0 ? Time2String(outputDuration*1000) + wxT(" sec") : wxT("");
-	str.Append(wxT(' '), 16 - str.length());
+	str.Append(wxT(' '), 17 - str.length());
 	text.Append(str).Append(wxT("| "));
 	// output bitrate
 	if (bitrate >= 1000)
@@ -55,8 +55,8 @@ void ProcessProjectInfo::PrintInfoLine(const wxString& info, unsigned int inputS
 
 /** Executes process */
 bool ProcessProjectInfo::Execute() {
-	progressDlg->AddDetailMsg(wxT("============================================================================="));
-	progressDlg->AddDetailMsg(wxT("            | Input size | Output duration | Bitrate  | Estimated output size"));
+	progressDlg->AddDetailMsg(wxT("=============================================================================="));
+	progressDlg->AddDetailMsg(wxT("            | Input size | Output duration  | Bitrate  | Estimated output size"));
 	double totalDuration = 0;
 	for (int tsi = -1; tsi < (int) dvd->GetTitlesets().Count(); tsi++) {
 		PgcArray& pgcArray = dvd->GetPgcArray(tsi, true);
