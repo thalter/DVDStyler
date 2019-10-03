@@ -43,9 +43,9 @@ Menu::Menu(DVD* dvd, int tsi, int pgci, VideoFormat videoFormat, AspectRatio asp
 }
 
 Menu::~Menu() {
-	delete m_svg;
 	WX_CLEAR_ARRAY(m_objects);
 	VECTOR_CLEAR(m_actions, DVDAction)
+	delete m_svg;
 }
 
 wxSVGDocument* Menu::CreateSVG(int width, int height) {
