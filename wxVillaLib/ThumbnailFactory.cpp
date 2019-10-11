@@ -230,7 +230,7 @@ ThumbInfo* wxThumbnailFactory::GetThumbInfo(wxString filename, wxWindow* parent,
 	ThumbInfo* info = new ThumbInfo(filename, parent, width, height);
 	if (filename.StartsWith(wxT("concat:")))
 		info->mimeType = _T("concat");
-	else if (wxImage::FindHandler(filename.AfterLast('.').Lower(), BITMAP_TYPE_ANY))
+	else if (wxImage::FindHandler(filename.AfterLast('.').Lower(), wxBITMAP_TYPE_ANY))
 		info->mimeType = _T("image");
 	else if (wxThumbnails::IsVideo(filename))
 		info->mimeType = _T("video/mpeg");

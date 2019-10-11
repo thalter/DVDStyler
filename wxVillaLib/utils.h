@@ -15,19 +15,6 @@
 #include <wx/log.h>
 #include <wx/mstream.h>
 
-#if defined(DEBUG) || defined(__WXDEBUG__)
-#define wxLogTraceE(msg)\
- wxLogMessage(wxString(_T("%s:%d: trace: ")) + msg, __TFILE__, __LINE__)
-#else
-#define wxLogTraceE
-#endif
-
-#if wxCHECK_VERSION(2,9,0)
-#define BITMAP_TYPE_ANY wxBITMAP_TYPE_ANY
-#else
-#define BITMAP_TYPE_ANY  -1
-#endif
-
 wxString wxGetAppPath();
 void wxSetAppPath(wxString value);
 

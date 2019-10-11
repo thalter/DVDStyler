@@ -78,7 +78,7 @@ public:
 	}
 	
 	bool AddFile(wxString filename, bool first, bool last, wxDragResult def) {
-		if (wxImage::FindHandler(filename.AfterLast('.').Lower(), BITMAP_TYPE_ANY)) {
+		if (wxImage::FindHandler(filename.AfterLast('.').Lower(), wxBITMAP_TYPE_ANY)) {
 			m_pOwner->AddImage(filename, def == wxDragMove && first, last);
 			return true;
 		} else if (wxThumbnails::IsVideo(filename)) {

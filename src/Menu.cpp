@@ -182,7 +182,7 @@ void Menu::SetBackground(wxString fileName) {
 }
 
 void Menu::SetBackground(wxSVGSVGElement* root, wxString fileName) {
-	bool image = wxImage::FindHandler(fileName.AfterLast(wxT('.')).Lower(), BITMAP_TYPE_ANY) != NULL;
+	bool image = wxImage::FindHandler(fileName.AfterLast(wxT('.')).Lower(), wxBITMAP_TYPE_ANY) != NULL;
 	// test if element exists
 	wxSVGElement* bgElement = (wxSVGElement*) root->GetElementById(wxT("background"));
 	if (fileName.length() == 0) {
@@ -362,8 +362,7 @@ bool Menu::RemoveNotChangeable(wxSVGElement* element, MenuObject* obj) {
 				for (vector<wxString>::const_iterator elemIt = param->element.begin();
 						elemIt != param->element.end(); elemIt++) {
 					if (*elemIt == elem->GetId() && param->changeable) {
-						if (param->normalColour == param->highlightedColour
-								&& param->normalColour == param->selectedColour)
+						if (!param->isChangeable()) // normalColor == highlightedColour
 							elem->SetAttribute(param->attribute, wxT("none"));
 						else
 							isChangeable = true;

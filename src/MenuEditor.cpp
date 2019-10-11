@@ -85,7 +85,7 @@ public:
 		wxString ext = filename.AfterLast('.').Lower();
 		if (ext == _T("xml"))
 			m_menuEditor->AddButton(filename, (int) (x/m_menuEditor->GetScaleX()), (int) (y/m_menuEditor->GetScaleY()));
-		else if (wxImage::FindHandler(ext, BITMAP_TYPE_ANY))
+		else if (wxImage::FindHandler(ext, wxBITMAP_TYPE_ANY))
 			m_menuEditor->AddImage(filename, (int) (x/m_menuEditor->GetScaleX()), (int) (y/m_menuEditor->GetScaleY()));
 		else if (wxThumbnails::IsVideo(filename)) {
 			wxFfmpegMediaDecoder decoder;
@@ -407,7 +407,7 @@ bool MenuEditor::SetBackground(wxString fname) {
 	if (!m_menu)
 		return false;
 
-	if (wxImage::FindHandler(fname.AfterLast(wxT('.')).Lower(), BITMAP_TYPE_ANY)) {
+	if (wxImage::FindHandler(fname.AfterLast(wxT('.')).Lower(), wxBITMAP_TYPE_ANY)) {
 		wxImage img;
 		if (!img.LoadFile(fname))
 			return false;

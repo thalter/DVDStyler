@@ -197,7 +197,7 @@ void wxThumbnails::ShowDir(wxString dir, int filter) {
 				|| ((m_filter & wxTHUMB_FILTER_AUDIOS) && IsAudio(fname))
 				|| ((m_filter & wxTHUMB_FILTER_AUDIOS) && IsSubtitle(fname))
 				|| ((m_filter & wxTHUMB_FILTER_IMAGES)
-						&& wxImage::FindHandler(fname.AfterLast('.').Lower(), BITMAP_TYPE_ANY))
+						&& wxImage::FindHandler(fname.AfterLast('.').Lower(), wxBITMAP_TYPE_ANY))
 				|| ((m_filter & wxTHUMB_FILTER_CUSTOM) && IsCustomFile(fname)))
 			m_items.Add(new wxThumb(fname, caption));
 		fname = wxFindNextFile();

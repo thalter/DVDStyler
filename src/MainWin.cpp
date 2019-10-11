@@ -454,7 +454,7 @@ void MainWin::OnBackgroundsBt(wxCommandEvent& event) {
 	m_thumbnails->Clear();
 	wxString fname = wxFindFirstFile(BACKGROUNDS_DIR + wxT("*"));
 	while (!fname.IsEmpty()) {
-		if (wxImage::FindHandler(fname.AfterLast('.').Lower(), BITMAP_TYPE_ANY))
+		if (wxImage::FindHandler(fname.AfterLast('.').Lower(), wxBITMAP_TYPE_ANY))
 			m_thumbnails->InsertItem(new wxThumb(fname));
 		fname = wxFindNextFile();
 	}
@@ -462,7 +462,7 @@ void MainWin::OnBackgroundsBt(wxCommandEvent& event) {
 	if (wxDirExists(bgDir)) {
 		fname = wxFindFirstFile(bgDir + wxT("*"));
 		while (!fname.IsEmpty()) {
-			if (wxImage::FindHandler(fname.AfterLast('.').Lower(), BITMAP_TYPE_ANY))
+			if (wxImage::FindHandler(fname.AfterLast('.').Lower(), wxBITMAP_TYPE_ANY))
 				m_thumbnails->InsertItem(new wxThumb(fname));
 			fname = wxFindNextFile();
 		}
@@ -650,7 +650,7 @@ void MainWin::OnThumbDoubleClick(wxCommandEvent& event) {
 	if (m_thumbnails->GetSelected() == -1)
 		return;
 	wxString filename = m_thumbnails->GetSelectedItem()->GetFilename();
-	if (wxImage::FindHandler(filename.AfterLast(wxT('.')).Lower(), BITMAP_TYPE_ANY))
+	if (wxImage::FindHandler(filename.AfterLast(wxT('.')).Lower(), wxBITMAP_TYPE_ANY))
 		m_menuEditor->SetBackground(filename);
 	else if (wxThumbnails::IsVideo(filename))
 		wxExecute(s_config.GetPlayCmd() + " \"" + filename + "\"");
@@ -664,7 +664,7 @@ void MainWin::OnSetBackground(wxCommandEvent& event) {
 void MainWin::OnSetBackgroundUI(wxUpdateUIEvent& event) {
 	if (m_thumbnails->GetSelected() >= 0) {
 		wxString filename = m_thumbnails->GetSelectedItem()->GetFilename();
-		event.Enable(wxImage::FindHandler(filename.AfterLast(wxT('.')).Lower(), BITMAP_TYPE_ANY)
+		event.Enable(wxImage::FindHandler(filename.AfterLast(wxT('.')).Lower(), wxBITMAP_TYPE_ANY)
 				|| wxThumbnails::IsVideo(filename));
 	} else
 		event.Enable(false);
@@ -1229,7 +1229,7 @@ void MainWin::AddFileDialog(bool asChapter) {
 				m_titlesetManager->AddAudio(filename);
 			} else if (wxThumbnails::IsSubtitle(filename)) {
 				m_titlesetManager->AddSubtitles(filename);
-			} else if (wxImage::FindHandler(filename.AfterLast('.').Lower(), BITMAP_TYPE_ANY)) {
+			} else if (wxImage::FindHandler(filename.AfterLast('.').Lower(), wxBITMAP_TYPE_ANY)) {
 				m_titlesetManager->AddImage(filename, !asChapter && i == 0, i == paths.GetCount() - 1);
 			} else {
 				// try to load it as video
