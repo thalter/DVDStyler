@@ -20,13 +20,17 @@ inline unsigned char getG(unsigned int c) {
 inline unsigned char getB(unsigned int c) {
 	return (unsigned char) c;
 }
+inline unsigned char getA(unsigned int c) {
+	unsigned char a = c >> 24;
+	return a < 127 ? a*2 : 255;
+}
 
 inline int Colour2Int(const wxColour& colour) {
-	return colour.Ok() ? (colour.Red() << 16) + (colour.Green() << 8) + colour.Blue() : -1;
+	return colour.Ok() ? (colour.Alpha()/2 << 24) + (colour.Red() << 16) + (colour.Green() << 8) + colour.Blue() : -1;
 }
 
 inline wxColour Int2Colour(int colour) {
-	return colour != -1 ? wxColour(getR(colour), getG(colour), getB(colour)) : wxColour();
+	return colour != -1 ? wxColour(getR(colour), getG(colour), getB(colour), getA(colour)) : wxColour();
 }
 
 inline double getDinstance(int c1, int c2) {
@@ -34,7 +38,8 @@ inline double getDinstance(int c1, int c2) {
 		return 0;
 	else if (c1 == -1 || c2 == -1)
 		return 768;
-	return 0.299 * abs(getR(c1) - getR(c2)) + 0.587 * abs(getG(c1) - getG(c2)) + 0.114 * abs(getB(c1) - getB(c2));
+	return 0.299 * abs(getR(c1) - getR(c2)) + 0.587 * abs(getG(c1) - getG(c2)) + 0.114 * abs(getB(c1) - getB(c2)) +
+			abs(getA(c1) - getA(c2));
 }
 
 void Palette3D::Add(const wxColour& colour1, const wxColour& colour2, const wxColour& colour3) {

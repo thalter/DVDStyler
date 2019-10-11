@@ -12,6 +12,7 @@
 #include "utils.h"
 #include <wx/fontdlg.h>
 #include <wx/colordlg.h>
+#include <wx/generic/colrdlgg.h>
 #include <wx/filedlg.h>
 #include <wx/dirdlg.h>
 #include <wx/grid.h>
@@ -45,9 +46,9 @@ ColourPanel::ColourPanel(wxWindow* parent, wxWindowID id, const wxPoint& pos, co
 }
 
 void ColourPanel::SetColour(wxColour colour) {
-	m_colour = colour;
-	if (colour.Ok())
-		SetBackgroundColour(colour);
+	m_colour = colour.Ok() && colour.Alpha() == 0 ? wxColour() : colour;
+	if (m_colour.Ok())
+		SetBackgroundColour(m_colour);
 	else
 		SetBackgroundColour(m_bgColour);
 	Refresh();
@@ -55,6 +56,20 @@ void ColourPanel::SetColour(wxColour colour) {
 
 wxColour ColourPanel::GetColour() {
 	return m_colour;
+}
+
+/**
+ * Alpha blending
+ * Destination background is white
+ */
+unsigned char alphaBlending(unsigned char c, unsigned char alpha) {
+	return (unsigned int) c*alpha/255 + (255 - alpha);
+}
+
+wxColour alphaBlending(wxColour colour) {
+	return wxColour(alphaBlending(colour.Red(), colour.Alpha()),
+			alphaBlending(colour.Green(), colour.Alpha()),
+			alphaBlending(colour.Blue(), colour.Alpha()));
 }
 
 void ColourPanel::OnPaint(wxPaintEvent &event) {
@@ -67,6 +82,13 @@ void ColourPanel::OnPaint(wxPaintEvent &event) {
 		int h = GetClientSize().GetHeight();
 		dc.DrawLine(0, 0, w, h);
 		dc.DrawLine(w, 0, 0, h);
+	} else if (m_colour.Alpha() < 255) {
+		dc.SetPen(*wxTRANSPARENT_PEN);
+		dc.SetBrush(wxBrush(alphaBlending(m_colour), wxBRUSHSTYLE_SOLID));
+		int w = GetClientSize().GetWidth();
+		int h = GetClientSize().GetHeight();
+		dc.DrawRectangle(0, 0, w/2, h/2);
+		dc.DrawRectangle(w/2, h/2, w/2, h/2);
 	}
 }
 
@@ -738,7 +760,12 @@ void wxPropDlg::OnSelectColour(wxCommandEvent& event) {
 	((wxButton*) event.GetEventObject())->GetName().Mid(12).ToLong(&index);
 	ColourPanel* panel = ((ColourPanel*) m_controls[index]);
 	m_colourData.SetColour(panel->GetColour());
+	m_colourData.SetChooseAlpha(true);
+#ifdef __WXMSW__
+	wxGenericColourDialog dialog(propWindow, &m_colourData);
+#else
 	wxColourDialog dialog(propWindow, &m_colourData);
+#endif
 	if (dialog.ShowModal() == wxID_OK) {
 		panel->SetColour(dialog.GetColourData().GetColour());
 		m_colourData = dialog.GetColourData();

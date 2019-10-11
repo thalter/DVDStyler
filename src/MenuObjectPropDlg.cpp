@@ -382,14 +382,14 @@ void MenuObjectPropDlg::CreateLook(wxBoxSizer* mainSizer) {
 			} else if (param->type == _T("image") && !m_multObjects) {
 				CreateImageCrtls(grid, title, param);
 			} else if (param->type == _T("colour")) {
-				int opacity = 100;
+				wxColour colour = m_object->GetParamColour(param->name);
 				wxString opacityStr = m_object->GetParam(param->name, wxT("-opacity"));
 				if (opacityStr.length() > 0) {
 					double dval;
-					opacityStr.ToDouble(&dval);
-					opacity = (int) (dval*100);
+					if (opacityStr.ToDouble(&dval))
+						colour = wxColour(colour.Red(), colour.Green(), colour.Blue(), lround(dval*255));
 				}
-				AddColourProp(grid, title, m_object->GetParamColour(param->name), opacity);
+				AddColourProp(grid, title, colour);
 			} else if (param->type == wxT("shadow")) {
 				CreateShadowCtrls(grid, title, param);
 			}
@@ -997,8 +997,9 @@ bool MenuObjectPropDlg::SetValues() {
 			} else if (param->type == _T("percent")) {
 				m_object->SetParamDouble(param->name, ((double)GetInt(n++))/100);
 			} else if (param->type == _T("colour")) {
-				m_object->SetParamColour(param->name, GetColour(n++));
-				wxString opacity = wxString::Format(wxT("%g"), (double) GetInt(n++) / 100);
+				wxColour colour = GetColour(n++);
+				m_object->SetParamColour(param->name, wxColour(colour.Red(), colour.Green(), colour.Blue()));
+				wxString opacity = wxString::Format(wxT("%.3f"), (double) colour.Alpha() / 255);
 				m_object->SetParam(param->name, opacity, wxT("-opacity"));
 			} else if (param->type == _T("image") && !m_multObjects) {
 				m_object->SetDisplayVideoFrame(m_displayVideoFrame);
