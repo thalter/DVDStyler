@@ -1,3 +1,11 @@
+Version 3.2 beta 1 <2019-10-11>
+-------------------------------
+
+  * added initial support of transparent highlighted colors
+  * ignore mjpeg streams (preview images)
+  * fixed creation of dvd with more than 100 hours
+  * fixed movie-button
+
 Version 3.1.2 <2019-08-02>
 --------------------------
 
