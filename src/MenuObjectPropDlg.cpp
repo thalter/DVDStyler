@@ -384,7 +384,7 @@ void MenuObjectPropDlg::CreateLook(wxBoxSizer* mainSizer) {
 			} else if (param->type == _T("colour")) {
 				wxColour colour = m_object->GetParamColour(param->name);
 				wxString opacityStr = m_object->GetParam(param->name, wxT("-opacity"));
-				if (opacityStr.length() > 0) {
+				if (colour.IsOk() && opacityStr.length() > 0) {
 					double dval;
 					if (opacityStr.ToDouble(&dval))
 						colour = wxColour(colour.Red(), colour.Green(), colour.Blue(), lround(dval*255));
