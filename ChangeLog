@@ -1,3 +1,10 @@
+Version 3.2 beta 2 <2019-10-27>
+-------------------------------
+  
+  * disabled format selection for mjpeg streams (preview images)
+  * fixed selection of transparent highlighted colors
+  * added maroon-frame button (thanks to ecodrv)
+
 Version 3.2 beta 1 <2019-10-11>
 -------------------------------
 
