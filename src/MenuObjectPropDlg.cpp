@@ -504,14 +504,16 @@ void MenuObjectPropDlg::CreateShadowCtrls(wxFlexGridSizer* grid, const wxString&
 	BeginCheckGroup(grid, title, shadow, false);
 	wxSizer* shadowSizer = new wxBoxSizer(wxHORIZONTAL);
 	grid->Add(shadowSizer);
-	int opacity = 100;
+	
+	wxColour colour = m_object->GetParamColour(param->name);
 	wxString opacityStr = m_object->GetParam(param->name, wxT("-opacity"));
-	if (opacityStr.length() > 0) {
+	if (colour.IsOk() && opacityStr.length() > 0) {
 		double dval;
-		opacityStr.ToDouble(&dval);
-		opacity = (int) (dval*100);
+		if (opacityStr.ToDouble(&dval))
+			colour = wxColour(colour.Red(), colour.Green(), colour.Blue(), lround(dval*255));
 	}
-	AddColourProp(shadowSizer, wxT(""), m_object->GetParamColour(param->name), opacity);
+	AddColourProp(shadowSizer, wxT(""), colour);
+	
 	shadowSizer->AddSpacer(8);
 	AddText(shadowSizer, _("Offset:"));
 	shadowSizer->AddSpacer(4);
@@ -1032,8 +1034,9 @@ bool MenuObjectPropDlg::SetValues() {
 				}
 			} else if (param->type == wxT("shadow")) {
 				m_object->SetParam(param->name, GetBool(n++) ? wxT("visible") : wxT("hidden"), wxT("visibility"));
-				m_object->SetParamColour(param->name, GetColour(n++));
-				wxString opacity = wxString::Format(wxT("%g"), (double) GetInt(n++) / 100);
+				wxColour colour = GetColour(n++);
+				m_object->SetParamColour(param->name, wxColour(colour.Red(), colour.Green(), colour.Blue()));
+				wxString opacity = wxString::Format(wxT("%.3f"), (double) colour.Alpha() / 255);
 				m_object->SetParam(param->name, opacity, wxT("-opacity"));
 				m_object->SetParamInt(param->name, GetInt(n++), wxT("x"));
 				m_object->SetParamInt(param->name, GetInt(n++), wxT("y"));
