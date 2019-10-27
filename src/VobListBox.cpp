@@ -127,7 +127,8 @@ void VobListBox::RefreshInfo() {
 			wxString srcFormat = stream->GetSourceFormat();
 			switch (stream->GetType()) {
 			case stVIDEO: {
-				m_videoChoiceIdx = choiceIdx;
+				if (stream->GetVideoFormat() != vfNONE)
+					m_videoChoiceIdx = choiceIdx;
 				y = AddInfo(_("Video:") + wxString(wxT(" ")) + srcFormat, n, dc, x, y);
 				wxRect& rect = m_infoRect[n][m_infoRect[n].size()-1];
 				int top = rect.GetTop();
@@ -135,11 +136,12 @@ void VobListBox::RefreshInfo() {
 				bool copyEnabled = stream->IsCopyPossible();
 				AddChoiceCtrl(DVD::GetVideoFormatLabels(copyEnabled, true, false, m_dvd->IsHD()),
 						GetVideoFormatIdx(stream, stream->GetVideoFormat()),
-						x, itemY + top, choiceIdx, !m_vob->GetDoNotTranscode());
+						x, itemY + top, choiceIdx, stream->GetVideoFormat() != vfNONE);
 				y += UpdateRect(rect, m_choiceList[choiceIdx-1]);
 				x += m_choiceList[choiceIdx-1]->GetSize().GetWidth() + 2;
 				// button
-				AddButton(x, itemY + top, buttonIdx, true, stIdx + stN);
+				if (stream->GetVideoFormat() != vfNONE)
+					AddButton(x, itemY + top, buttonIdx, true, stIdx + stN);
 				break;
 			}
 			case stAUDIO: {
@@ -148,7 +150,7 @@ void VobListBox::RefreshInfo() {
 				int top = rect.GetTop();
 				int x = rect.GetRight() + 4;
 				AddChoiceCtrl(DVD::GetAudioFormatLabels(true, true), stream->GetAudioFormat(), x, itemY + top,
-						choiceIdx, !m_vob->GetDoNotTranscode());
+						choiceIdx, true);
 				y += UpdateRect(rect, m_choiceList[choiceIdx-1]);
 				x += m_choiceList[choiceIdx-1]->GetSize().GetWidth() + 2;
 				// langCode
@@ -174,7 +176,7 @@ void VobListBox::RefreshInfo() {
 				int top = rect.GetTop();
 				int x = rect.GetRight() + 4;
 				AddChoiceCtrl(DVD::GetSubtitleFormatLabels(true, true), stream->GetSubtitleFormat(), rect.GetRight() + 4,
-						itemY + top, choiceIdx, !m_vob->GetDoNotTranscode());
+						itemY + top, choiceIdx, true);
 				y += UpdateRect(rect, m_choiceList[choiceIdx-1]);
 				x += m_choiceList[choiceIdx-1]->GetSize().GetWidth() + 2;
 				// lang code
@@ -257,7 +259,7 @@ void VobListBox::AddChoiceCtrl(wxArrayString formats, int selection, int x, int 
 	} else
 		ctrl = m_choiceList[choiceIdx];
 	choiceIdx++;
-	//ctrl->Enable(enabled);
+	ctrl->Enable(enabled);
 	ctrl->SetPosition(wxPoint(x, y));
 }
 
@@ -393,8 +395,8 @@ void VobListBox::SetDoNotTranscode(bool value) {
 		Stream* stream = m_vob->GetStreams()[stIdx];
 		switch (stream->GetType()) {
 		case stVIDEO:
-			if (value)
-				m_choiceList[choiceIdx]->SetSelection(vfCOPY-1); // vfNONE is not in the selection list
+			if (value && stream->GetVideoFormat() != vfNONE)
+				m_choiceList[choiceIdx]->SetSelection(vfCOPY);
 			choiceIdx++;
 			break;
 		case stAUDIO:
