@@ -45,8 +45,8 @@ public:
 	}
 protected:
 	/** Print the message into progress dialog details window. */
-	void DoLog(wxLogLevel level, const wxChar* szString, time_t t) {
-		m_progressDlg->AddDetailMsg(szString, level <= wxLOG_Error ? *wxRED : wxColour(64,64,64));
+	void DoLogRecord(wxLogLevel level, const wxString& msg, const wxLogRecordInfo& info) {
+		m_progressDlg->AddDetailMsg(msg, level <= wxLOG_Error ? *wxRED : wxColour(64,64,64));
 	}
 private:
 	ProgressDlg* m_progressDlg;
