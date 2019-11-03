@@ -587,11 +587,12 @@ bool TitlesetManager::AddVideo(const wxString& fname, bool createTitle, int tsi,
 	// check if reencoding is needed
 	unsigned int audioStreamIdx = 0;
 	unsigned int subtitleStreamIdx = 0;
+	bool hasVideo = false;
 	for (unsigned int i=0; i<vob->GetStreams().size(); i++) {
 		Stream* stream = vob->GetStreams()[i];
 		if (stream->GetType() == stVIDEO) {
-			// disable png and mjpeg streams
-			if (stream->GetSourceCodecName() == "png" || stream->GetSourceCodecName() == "mjpeg") {
+			// disable png strema and mjpeg stream, if it not the first one
+			if (stream->GetSourceCodecName() == "png" || (stream->GetSourceCodecName() == "mjpeg" && hasVideo)) {
 				// ignore png and mjpeg stream
 				stream->SetDestinationFormat(vfNONE);
 			} else if (m_reEncodingByDefault
@@ -603,8 +604,10 @@ bool TitlesetManager::AddVideo(const wxString& fname, bool createTitle, int tsi,
 				// set destination format (default COPY) if codec is not mpeg2
 				stream->SetDestinationFormat(pgcs.GetVideo().GetFormat());
 				vob->SetKeepAspectRatio(s_config.GetDefKeepAspectRatio());
+				hasVideo = true;
 			} else if (vob->GetAudioFilenames().Count() == 0 && MPEG::HasNavPacks(vob->GetFilename())) {
 				vob->SetDoNotTranscode(true);  // do not remultiplex/transcode if the video is already a VOB
+				hasVideo = true;
 			}
 		} else if (stream->GetType() == stAUDIO) {
 			// set destination format (default COPY) if codec is not mp2/ac3 or sample rate is not 48 kHz

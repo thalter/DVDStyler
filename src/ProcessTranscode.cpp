@@ -34,9 +34,11 @@ bool ProcessTranscode::Transcode(Vob* vob, AspectRatio aspect, int videoBitrate,
 		Stream* stream = vob->GetStreams()[stIdx];
 		switch (stream->GetType()) {
 		case stVIDEO:
-			videoFormat = stream->GetVideoFormat();
-			if (!s_config.GetDefRencodeNtscFilm())
-				ntscFilm = lround(stream->GetSourceFps()) == 24;
+			if (stream->GetVideoFormat() != vfNONE) {
+				videoFormat = stream->GetVideoFormat();
+				if (!s_config.GetDefRencodeNtscFilm())
+					ntscFilm = lround(stream->GetSourceFps()) == 24;
+			}
 			needEncode = needEncode || stream->GetVideoFormat() != vfCOPY;
 			break;
 		case stAUDIO:
