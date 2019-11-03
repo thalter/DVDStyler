@@ -1,7 +1,7 @@
 dnl Process this file with autoconf to produce a configure script.
 
 dnl initialization
-AC_INIT([DVDStyler], [3.2b2], [http://www.dvdstyler.org])
+AC_INIT([DVDStyler], [3.2b3], [http://www.dvdstyler.org])
 AC_CANONICAL_SYSTEM
 AM_INIT_AUTOMAKE
 AM_MAINTAINER_MODE
