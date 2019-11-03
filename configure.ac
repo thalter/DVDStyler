@@ -1,7 +1,7 @@
 dnl Process this file with autoconf to produce a configure script.
 
 dnl initialization
-AC_INIT([DVDStyler], [3.2b2], [http://www.dvdstyler.org])
+AC_INIT([DVDStyler], [3.2b3], [http://www.dvdstyler.org])
 AC_CANONICAL_SYSTEM
 AM_INIT_AUTOMAKE
 AM_MAINTAINER_MODE
@@ -120,6 +120,14 @@ if test x"$GTK_USEDVERSION" = x"2" ; then
 fi
 CXXFLAGS="$CXXFLAGS $GNOME2"
 LIBS="$LIBS $GNOMEUI2_LIBS "
+
+dnl CHECK_WX_BUILT_WITH_GTK3()
+dnl if test x"$GTK_USEDVERSION" = x"3" ; then  
+dnl  PKG_CHECK_MODULES(GNOME_DESKTOP_3, gnome-desktop-3.0, GNOME3="-DGNOME3",
+dnl    AC_MSG_WARN([gnome-desktop will not be used for rendering of thumbnails]))
+dnl  CXXFLAGS="$CXXFLAGS $GNOME3 $GNOME_DESKTOP_3_CFLAGS"
+dnl  LIBS="$LIBS $GNOME_DESKTOP_3_LIBS"
+dnl fi
 
 dnl check libexif
 PKG_CHECK_MODULES(LIBEXIF, libexif, [LIBS="$LIBS $LIBEXIF_LIBS"], [AC_MSG_ERROR([*** missing libexif ***])])
