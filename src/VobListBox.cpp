@@ -127,8 +127,6 @@ void VobListBox::RefreshInfo() {
 			wxString srcFormat = stream->GetSourceFormat();
 			switch (stream->GetType()) {
 			case stVIDEO: {
-				if (stream->GetVideoFormat() != vfNONE)
-					m_videoChoiceIdx = choiceIdx;
 				y = AddInfo(_("Video:") + wxString(wxT(" ")) + srcFormat, n, dc, x, y);
 				wxRect& rect = m_infoRect[n][m_infoRect[n].size()-1];
 				int top = rect.GetTop();
@@ -136,12 +134,11 @@ void VobListBox::RefreshInfo() {
 				bool copyEnabled = stream->IsCopyPossible();
 				AddChoiceCtrl(DVD::GetVideoFormatLabels(copyEnabled, true, false, m_dvd->IsHD()),
 						GetVideoFormatIdx(stream, stream->GetVideoFormat()),
-						x, itemY + top, choiceIdx, stream->GetVideoFormat() != vfNONE);
+						x, itemY + top, choiceIdx, true);
 				y += UpdateRect(rect, m_choiceList[choiceIdx-1]);
 				x += m_choiceList[choiceIdx-1]->GetSize().GetWidth() + 2;
 				// button
-				if (stream->GetVideoFormat() != vfNONE)
-					AddButton(x, itemY + top, buttonIdx, true, stIdx + stN);
+				AddButton(x, itemY + top, buttonIdx, stream->GetVideoFormat() != vfNONE, stIdx + stN);
 				break;
 			}
 			case stAUDIO: {
@@ -446,7 +443,7 @@ void VobListBox::SetValues() {
 							vf -= 5;
 					}
 				}
-			} else if (!stream->IsCopyPossible()) {
+			} else if (vf != 0 && !stream->IsCopyPossible()) {
 				vf += 1;
 			}
 			stream->SetDestinationFormat(vf);
@@ -513,6 +510,28 @@ int VobListBox::GetChoiceIdx(unsigned int streamIdx) {
 	return choiceIdx;
 }
 
+/** Returns index of stream for given choice control */
+int VobListBox::GetStreamIdx(wxChoice* choice) {
+	int choiceIdx = 0;
+	for (unsigned int stIdx = 0; stIdx < m_vob->GetStreams().size(); stIdx++) {
+		if ((int) m_choiceList.size() > choiceIdx && m_choiceList[choiceIdx] == choice)
+			return stIdx;
+		Stream* stream = m_vob->GetStreams()[stIdx];
+		switch (stream->GetType()) {
+		case stVIDEO:
+			choiceIdx++;
+			break;
+		case stAUDIO:
+		case stSUBTITLE:
+			choiceIdx += 2;
+			break;
+		default:
+			break;
+		}
+	}
+	return -1;
+}
+
 /** Returns index of button for given stream */
 int VobListBox::GetButtonIdx(unsigned int streamIdx) {
 	for (unsigned int btIdx = 0; btIdx < m_buttonStreamList.size(); btIdx++) {
@@ -524,8 +543,8 @@ int VobListBox::GetButtonIdx(unsigned int streamIdx) {
 }
 
 /** Get video format */
-int VobListBox::GetVideoFormat() {
-	return m_choiceList[m_videoChoiceIdx]->GetSelection();
+int VobListBox::GetVideoFormat(unsigned int streamIdx) {
+	return m_choiceList[streamIdx]->GetSelection();
 }
 
 /** Gets video format index */
@@ -544,8 +563,8 @@ int VobListBox::GetVideoFormatIdx(Stream* stream, VideoFormat videoFormat) {
 }
 
 /** Sets audio format */
-void VobListBox::SetVideoFormat(int videoFormat) {
-	m_choiceList[m_videoChoiceIdx]->SetSelection(videoFormat);
+void VobListBox::SetVideoFormat(unsigned int streamIdx, int videoFormat) {
+	m_choiceList[GetChoiceIdx(streamIdx)]->SetSelection(videoFormat);
 }
 
 /** Get audio format */
@@ -587,8 +606,10 @@ void VobListBox::SetSubtitleLangCode(int subtitleIndex, wxString langCode) {
  */
 void VobListBox::ShowPropDialog() {
 	if (GetSelection() == 0) {
+		SetValues(); // update destination format
 		for (unsigned int i = 0; i < m_vob->GetStreams().size(); i++)
-			if (m_vob->GetStreams()[i]->GetType() == stVIDEO)
+			if (m_vob->GetStreams()[i]->GetType() == stVIDEO
+					&& m_vob->GetStreams()[i]->GetDestinationFormat() != vfNONE)
 				ShowPropDialog(i);
 	} else if (GetSelection() < 1 + (int) m_vob->GetAudioFilenames().GetCount()) {
 		// audio
@@ -632,9 +653,9 @@ void VobListBox::ShowPropDialog(unsigned int streamIdx) {
 			SetValues(); // update destination format
 			if (!m_titlePropDlg->ApplyChaptersCtrl())
 				return;
-			VideoPropDlg dialog(this, m_dvd, m_vob, m_aspectRatio);
+			VideoPropDlg dialog(this, m_dvd, m_vob, stream, m_aspectRatio);
 			if (dialog.ShowModal() == wxID_OK) {
-				SetVideoFormat(GetVideoFormatIdx(stream, dialog.GetVideoFormat()));
+				SetVideoFormat(streamIdx, GetVideoFormatIdx(stream, dialog.GetVideoFormat()));
 				m_aspectRatio = dialog.GetAspectRatio();
 				UpdateDoNotTranscodeCheck();
 				m_titlePropDlg->UpdateChaptersCtrl();
@@ -680,5 +701,12 @@ void VobListBox::UpdateDoNotTranscodeCheck() {
 
 /** Processes a format change event */
 void VobListBox::OnFormatChange(wxCommandEvent& event) {
+	int stIdx = GetStreamIdx((wxChoice*) event.GetEventObject());
+	if (stIdx >= 0 && m_vob->GetStreams()[stIdx]->GetType() == stVIDEO) {
+		int buttonIdx = GetButtonIdx(stIdx);
+		if (buttonIdx >= 0) {
+			m_buttonList[buttonIdx]->Enable(event.GetInt() != 0);
+		}
+	}
 	UpdateDoNotTranscodeCheck();
 }

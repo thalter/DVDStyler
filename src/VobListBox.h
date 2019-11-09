@@ -110,8 +110,6 @@ private:
 	/** The list of stream indexes for buttons */
 	vector<int> m_buttonStreamList;
 	/** Index of first choice for audio file */
-	int m_videoChoiceIdx;
-	/** Index of first choice for audio file */
 	int m_audioChoiceIdx;
 	/** Index of first choice for subtitle */
 	int m_subtitleChoiceIdx;
@@ -143,14 +141,16 @@ private:
 	void AddButton(int x, int y, int& buttonIdx, bool enabled, int streamIdx);
 	/** Returns index of choice control for given stream */
 	int GetChoiceIdx(unsigned int streamIdx);
+	/** Returns index of stream for given choice control */
+	int GetStreamIdx(wxChoice* choice);
 	/** Returns index of button for given stream */
 	int GetButtonIdx(unsigned int streamIdx);
 	/** Gets video format index */
 	int GetVideoFormatIdx(Stream* stream, VideoFormat videoFormat);
 	/** Sets video format */
-	void SetVideoFormat(int videoFormat);
+	void SetVideoFormat(unsigned int streamIdx, int videoFormat);
 	/** Get video format */
-	int GetVideoFormat();
+	int GetVideoFormat(unsigned int streamIdx);
 	/** Get audio format */
 	int GetAudioFormat(unsigned int streamIdx);
 	/** Sets audio format */

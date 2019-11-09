@@ -30,7 +30,7 @@
 class VideoPropDlg: public wxDialog {
 public:
 	/** Constructor */
-	VideoPropDlg(wxWindow* parent, DVD* dvd, Vob* vob, AspectRatio aspectRatio);
+	VideoPropDlg(wxWindow* parent, DVD* dvd, Vob* vob, Stream* stream, AspectRatio aspectRatio);
 	virtual ~VideoPropDlg();
 
     /** Displays dialog */

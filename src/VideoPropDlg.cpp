@@ -67,10 +67,10 @@ BEGIN_EVENT_TABLE(VideoPropDlg,wxDialog)
 	EVT_COMMAND_SCROLL(ID_SLIDER, VideoPropDlg::OnSliderScroll)
 END_EVENT_TABLE()
 
-VideoPropDlg::VideoPropDlg(wxWindow* parent, DVD* dvd, Vob* vob, AspectRatio aspectRatio) {
+VideoPropDlg::VideoPropDlg(wxWindow* parent, DVD* dvd, Vob* vob, Stream* stream, AspectRatio aspectRatio) {
 	m_dvd = dvd;
 	m_vob = vob;
-	m_stream = vob->GetVideoStream();
+	m_stream = stream;
 	m_aspectRatio = aspectRatio;
 	m_videoPos = 0;
 
