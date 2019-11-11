@@ -58,13 +58,15 @@ bool ProcessCleanTemp::DeleteDir(wxString dir) {
 	if (dir.Last() != wxFILE_SEP_PATH)
 		dir += wxFILE_SEP_PATH;
 	wxDir d(dir);
-	wxString fname;
-	while (d.GetFirst(&fname, wxEmptyString, wxDIR_FILES | wxDIR_HIDDEN))
-		if (!DeleteFile(dir + fname))
-			return false;
-	d.Open(wxGetHomeDir());
-	wxLogNull log;
-	wxRmdir(dir);
+	if (d.IsOpened()) {
+		wxString fname;
+		while (d.GetFirst(&fname, wxEmptyString, wxDIR_FILES | wxDIR_HIDDEN))
+			if (!DeleteFile(dir + fname))
+				return false;
+		d.Close();
+		wxLogNull log;
+		wxRmdir(dir);
+	}
 	return true;
 }
 

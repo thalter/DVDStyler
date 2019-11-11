@@ -15,6 +15,7 @@
 #include <stdint.h>
 
 struct AVFormatContext;
+struct AVCodecContext;
 struct AVStream;
 struct AVFrame;
 struct SwsContext;
@@ -40,6 +41,8 @@ private:
     AVFormatContext* m_outputCtx;
     AVStream* m_videoStm;
     AVStream* m_audioStm;
+    AVCodecContext* m_videoCodec;
+    AVCodecContext* m_audioCodec;
     int64_t m_nextVideoPts;
     int64_t m_nextAudioPts;
     bool addVideoStream(int codecId, VideoFormat videoFormat, AspectRatio aspectRatio, int videoBitrate, bool cbr);
@@ -47,13 +50,11 @@ private:
     
     int16_t* m_samples;
     AVFrame* m_audioFrame;
-    bool OpenAudioEncoder();
     void CloseAudioEncoder();
     
     AVFrame* m_picture;
     SwsContext* m_imgConvertCtx;
     uint8_t* m_videoOutbuf;
-    bool OpenVideoEncoder();
     void CloseVideoEncoder();
     
     void getAudioFrame(int nbChannels);

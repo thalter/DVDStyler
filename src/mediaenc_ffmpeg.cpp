@@ -41,6 +41,8 @@ wxFfmpegMediaEncoder::wxFfmpegMediaEncoder(int threadCount) {
 	m_outputCtx = NULL;
 	m_videoStm = NULL;
 	m_audioStm = NULL;
+	m_videoCodec = NULL;
+	m_audioCodec = NULL;
     m_nextVideoPts = 0;
     m_nextAudioPts = 0;
 	m_samples = NULL;
@@ -89,30 +91,19 @@ bool wxFfmpegMediaEncoder::BeginEncode(const wxString& fileName, VideoFormat vid
 	else
 		outputFormat->audio_codec = AV_CODEC_ID_MP2;
 	
-	m_outputCtx = avformat_alloc_context();
-	m_outputCtx->pb = NULL;
+	m_outputCtx = NULL;
+	avformat_alloc_output_context2(&m_outputCtx, outputFormat, NULL, (const char*) fileName.ToUTF8());
 	if (!m_outputCtx) {
 		wxLogError(wxT("memory allocation error"));
 		return false;
 	}
-
-	m_outputCtx->oformat = outputFormat;
-	av_strlcpy(m_outputCtx->filename, (const char*) fileName.ToUTF8(), sizeof(m_outputCtx->filename));
 	
+	m_outputCtx->packet_size = 2048;
+
 	// add video and audio streams
 	if (!addVideoStream(outputFormat->video_codec, videoFormat, aspectRatio, videoBitrate, cbr))
 		return false;
 	if (!addAudioStream(outputFormat->audio_codec))
-		return false;
-
-	av_dump_format(m_outputCtx, 0, (const char*) fileName.ToUTF8(), 1);
-	m_outputCtx->packet_size = 2048;
-	
-	
-	// open the audio and video codecs
-	if (m_videoStm && !OpenVideoEncoder())
-		return false;
-	if (m_audioStm && !OpenAudioEncoder())
 		return false;
 
 	// open the output file
@@ -141,138 +132,6 @@ bool wxFfmpegMediaEncoder::BeginEncode(const wxString& fileName, VideoFormat vid
 	return true;
 }
 
-bool wxFfmpegMediaEncoder::addVideoStream(int codecId, VideoFormat videoFormat, AspectRatio aspectRatio,
-		int videoBitrate, bool cbr) {
-	if (codecId == AV_CODEC_ID_NONE) {
-		m_videoStm = NULL;
-		return true;
-	}
-	m_videoStm = avformat_new_stream(m_outputCtx, NULL);
-	if (!m_videoStm) {
-		wxLogError(wxT("Could not alloc stream"));
-		return false;
-	}
-	m_videoStm->id = 0;
-
-	AVCodecContext* c = m_videoStm->codec;
-	c->thread_count = m_threadCount;
-	c->codec_id = (AVCodecID) codecId;
-	c->codec_type = AVMEDIA_TYPE_VIDEO;
-	c->bit_rate = videoBitrate * 1000;
-	wxSize frameSize = GetFrameSize(videoFormat);
-	c->width = frameSize.GetWidth();
-	c->height = frameSize.GetHeight();
-	c->time_base.den = isNTSC(videoFormat) ? 30000 : 25;
-	c->time_base.num = isNTSC(videoFormat) ? 1001 : 1;
-	c->gop_size = m_gopSize > 0 ? m_gopSize : (isNTSC(videoFormat) ? 15 : 12);
-	c->pix_fmt = AV_PIX_FMT_YUV420P;
-	c->rc_buffer_size = VIDEO_BUF_SIZE;
-	c->rc_max_rate = cbr ? videoBitrate * 1000 : 9000000;
-	c->rc_min_rate = cbr ? videoBitrate * 1000 : 0;
-	
-//	int qscale = 0;
-//	if (qscale >= 0) {
-//		c->flags |= AV_CODEC_FLAG_QSCALE;
-//		c->global_quality = FF_QP2LAMBDA * qscale;
-//	} 
-	
-	double ar = aspectRatio == ar16_9 ? (double) 16 / 9 : (double) 4 / 3;
-	c->sample_aspect_ratio = av_d2q(ar * c->height / c->width, 255);
-	m_videoStm->sample_aspect_ratio = c->sample_aspect_ratio;
-	return true;
-}
-
-bool wxFfmpegMediaEncoder::addAudioStream(int codecId) {
-	if (codecId == AV_CODEC_ID_NONE) {
-		m_audioStm = NULL;
-		return true;
-	}
-	m_audioStm = avformat_new_stream(m_outputCtx, NULL);
-	if (!m_audioStm) {
-		wxLogError(wxT("Could not alloc stream"));
-		return false;
-	}
-	m_audioStm->id = 1;
-
-	AVCodecContext* c = m_audioStm->codec;
-	c->thread_count = m_threadCount;
-	c->codec_id = (AVCodecID) codecId;
-	c->codec_type = AVMEDIA_TYPE_AUDIO;
-	c->bit_rate = 64000;
-	c->sample_rate = 48000;
-	c->sample_fmt = AV_SAMPLE_FMT_S16;
-	c->channels = 2;
-	c->time_base = (AVRational){ 1, c->sample_rate };
-	// some formats want stream headers to be separate
-	if(m_outputCtx->oformat->flags & AVFMT_GLOBALHEADER)
-	    c->flags |= AV_CODEC_FLAG_GLOBAL_HEADER;
-	
-	return true;
-}
-
-bool hasSampleFmt(AVCodec* codec, AVSampleFormat sample_fmt) {
-	if (codec != NULL && codec->sample_fmts != NULL) {
-		int fIdx = 0;
-		while (codec->sample_fmts[fIdx] >= 0) {
-			if (codec->sample_fmts[fIdx] == sample_fmt)
-				return true;
-			fIdx++;
-		}
-	}
-	return false;
-}
-
-bool wxFfmpegMediaEncoder::OpenAudioEncoder() {
-	AVCodecContext* c = m_audioStm->codec;
-	
-	// find the audio encoder and open it
-	AVCodec* codec = NULL;
-	if (c->codec_id == AV_CODEC_ID_AC3) {
-		// There are 2 ac3 encoders (float and integer). Depending on libav implementation/version/fork,
-		// one or the other may work. So we try both.
-		codec = avcodec_find_encoder_by_name("ac3_fixed");
-		if (!hasSampleFmt(codec, c->sample_fmt)) {
-			// Try the encoding from float format
-			c->sample_fmt = AV_SAMPLE_FMT_FLTP;
-			codec = avcodec_find_encoder(c->codec_id);
-		}
-	} else {
- 		c->sample_fmt = AV_SAMPLE_FMT_S16;
- 		codec = avcodec_find_encoder(c->codec_id);
-	}
-
-	if (!codec) {
-		wxLogError(wxT("Audio codec not found"));
-		return false;
-	}
-	if (avcodec_open2(c, codec, NULL) < 0) {
-		wxLogError(wxT("Could not open audio codec"));
-		return false;
-	}
-
-    m_samples = (int16_t*) av_malloc(c->frame_size * av_get_bytes_per_sample(c->sample_fmt) * c->channels);
-	memset(m_samples, 0, c->frame_size * av_get_bytes_per_sample(c->sample_fmt) * c->channels);
-	
-	m_audioFrame = av_frame_alloc();
-	m_audioFrame->nb_samples = c->frame_size;
-	avcodec_fill_audio_frame(m_audioFrame, c->channels, c->sample_fmt, (uint8_t *) m_samples, c->frame_size
-			* av_get_bytes_per_sample(c->sample_fmt) * c->channels, 1);
-	return true;
-}
-
-void wxFfmpegMediaEncoder::CloseAudioEncoder() {
-	if (!m_audioStm)
-		return;
-	if (m_samples) {
-		av_freep(&m_samples);
-	}
-	if (m_audioFrame) {
-		av_frame_free(&m_audioFrame);
-	}
-	avcodec_close(m_audioStm->codec);
-	m_audioStm = NULL;
-}
-
 AVFrame* allocPicture(AVPixelFormat pix_fmt, int width, int height) {
 	AVFrame* frame = av_frame_alloc();
 	if (!frame)
@@ -297,24 +156,68 @@ AVFrame* allocPicture(AVPixelFormat pix_fmt, int width, int height) {
 	return frame;
 }
 
-bool wxFfmpegMediaEncoder::OpenVideoEncoder() {
-	AVCodecContext* c = m_videoStm->codec;
-	
-	
+bool wxFfmpegMediaEncoder::addVideoStream(int codecId, VideoFormat videoFormat, AspectRatio aspectRatio,
+		int videoBitrate, bool cbr) {
+	if (codecId == AV_CODEC_ID_NONE) {
+		m_videoStm = NULL;
+		return true;
+	}
+	m_videoStm = avformat_new_stream(m_outputCtx, NULL);
+	if (!m_videoStm) {
+		wxLogError(wxT("Could not alloc stream"));
+		return false;
+	}
+	m_videoStm->id = 0;
+
 	// find the video encoder and open it
-	AVCodec* codec = avcodec_find_encoder(c->codec_id);
-	if (!codec) {
+	AVCodec* encoder = avcodec_find_encoder((AVCodecID) codecId);
+	if (!encoder) {
 		wxLogError(wxT("Video codec not found"));
 		return false;
 	}
-	if (avcodec_open2(c, codec, NULL) < 0) {
+
+	m_videoCodec = avcodec_alloc_context3(encoder);
+
+	AVCodecContext* c = m_videoCodec;
+	c->thread_count = m_threadCount;
+	c->codec_id = (AVCodecID) codecId;
+	c->codec_type = AVMEDIA_TYPE_VIDEO;
+	c->bit_rate = videoBitrate * 1000;
+	wxSize frameSize = GetFrameSize(videoFormat);
+	c->width = frameSize.GetWidth();
+	c->height = frameSize.GetHeight();
+	c->time_base.den = isNTSC(videoFormat) ? 30000 : 25;
+	c->time_base.num = isNTSC(videoFormat) ? 1001 : 1;
+	c->gop_size = m_gopSize > 0 ? m_gopSize : (isNTSC(videoFormat) ? 15 : 12);
+	c->pix_fmt = AV_PIX_FMT_YUV420P;
+	c->rc_buffer_size = VIDEO_BUF_SIZE;
+	c->rc_max_rate = cbr ? videoBitrate * 1000 : 9000000;
+	c->rc_min_rate = cbr ? videoBitrate * 1000 : 0;
+	
+	double ar = aspectRatio == ar16_9 ? (double) 16 / 9 : (double) 4 / 3;
+	c->sample_aspect_ratio = av_d2q(ar * c->height / c->width, 255);
+	m_videoStm->sample_aspect_ratio = c->sample_aspect_ratio;
+
+	if (avcodec_open2(c, encoder, NULL) < 0) {
 		wxLogError(wxT("Could not open video codec"));
 		return false;
 	}
+	if (avcodec_parameters_from_context(m_videoStm->codecpar, c) < 0) {
+		wxLogError("Failed to copy encoder parameters to output video stream");
+		return false;
+	}
+	m_videoStm->time_base = c->time_base;
 
 	m_videoOutbuf = (uint8_t*) av_malloc(VIDEO_BUF_SIZE);
-	
-	
+
+	AVCPBProperties *props;
+	props = (AVCPBProperties*) av_stream_new_side_data(m_videoStm, AV_PKT_DATA_CPB_PROPERTIES, sizeof(*props));
+	props->buffer_size = VIDEO_BUF_SIZE;
+	props->max_bitrate = 0;
+	props->min_bitrate = 0;
+	props->avg_bitrate = 0;
+	props->vbv_delay = UINT64_MAX;
+
 	// allocate the encoded raw picture
 	m_picture = allocPicture(c->pix_fmt, c->width, c->height);
 	if (!m_picture) {
@@ -328,13 +231,113 @@ bool wxFfmpegMediaEncoder::OpenVideoEncoder() {
 		wxLogError(wxT("Cannot initialize the conversion context"));
 		return false;
 	}
+
 	return true;
+}
+
+bool hasSampleFmt(AVCodec* codec, AVSampleFormat sample_fmt) {
+	if (codec != NULL && codec->sample_fmts != NULL) {
+		int fIdx = 0;
+		while (codec->sample_fmts[fIdx] >= 0) {
+			if (codec->sample_fmts[fIdx] == sample_fmt)
+				return true;
+			fIdx++;
+		}
+	}
+	return false;
+}
+
+bool wxFfmpegMediaEncoder::addAudioStream(int codecId) {
+	if (codecId == AV_CODEC_ID_NONE) {
+		m_audioStm = NULL;
+		return true;
+	}
+	m_audioStm = avformat_new_stream(m_outputCtx, NULL);
+	if (!m_audioStm) {
+		wxLogError(wxT("Could not alloc stream"));
+		return false;
+	}
+	m_audioStm->id = 1;
+
+	// find the audio encoder and open it
+	AVCodec* encoder = NULL;
+	AVSampleFormat sampleFmt = AV_SAMPLE_FMT_S16;
+	if ((AVCodecID) codecId == AV_CODEC_ID_AC3) {
+		// There are 2 ac3 encoders (float and integer). Depending on libav implementation/version/fork,
+		// one or the other may work. So we try both.
+		encoder = avcodec_find_encoder_by_name("ac3_fixed");
+		if (!hasSampleFmt(encoder, sampleFmt)) {
+			// Try the encoding from float format
+			sampleFmt = AV_SAMPLE_FMT_FLTP;
+			encoder = avcodec_find_encoder((AVCodecID) codecId );
+		}
+	} else {
+		sampleFmt = AV_SAMPLE_FMT_S16;
+ 		encoder = avcodec_find_encoder((AVCodecID) codecId );
+	}
+
+	if (!encoder) {
+		wxLogError(wxT("Audio codec not found"));
+		return false;
+	}
+
+	m_audioCodec = avcodec_alloc_context3(encoder);
+
+	AVCodecContext* c = m_audioCodec;
+	c->thread_count = m_threadCount;
+	c->codec_id = (AVCodecID) codecId;
+	c->codec_type = AVMEDIA_TYPE_AUDIO;
+	c->bit_rate = 64000;
+	c->sample_rate = 48000;
+	c->sample_fmt = sampleFmt;
+	c->channels = 2;
+	c->channel_layout = AV_CH_LAYOUT_STEREO;
+	c->time_base = (AVRational){ 1, c->sample_rate };
+	// some formats want stream headers to be separate
+	if(m_outputCtx->oformat->flags & AVFMT_GLOBALHEADER)
+	    c->flags |= AV_CODEC_FLAG_GLOBAL_HEADER;
+
+	m_audioStm->time_base = c->time_base;
+
+	
+	if (avcodec_open2(c, encoder, NULL) < 0) {
+		wxLogError(wxT("Could not open audio codec"));
+		return false;
+	}
+	if (avcodec_parameters_from_context(m_audioStm->codecpar, c) < 0) {
+		wxLogError("Failed to copy encoder parameters to output audio stream");
+		return false;
+	}
+
+    m_samples = (int16_t*) av_malloc(c->frame_size * av_get_bytes_per_sample(c->sample_fmt) * c->channels);
+	memset(m_samples, 0, c->frame_size * av_get_bytes_per_sample(c->sample_fmt) * c->channels);
+	
+	m_audioFrame = av_frame_alloc();
+	m_audioFrame->nb_samples = c->frame_size;
+	avcodec_fill_audio_frame(m_audioFrame, c->channels, c->sample_fmt, (uint8_t *) m_samples, c->frame_size
+			* av_get_bytes_per_sample(c->sample_fmt) * c->channels, 1);
+
+	return true;
+}
+
+void wxFfmpegMediaEncoder::CloseAudioEncoder() {
+	if (!m_audioStm)
+		return;
+	if (m_samples) {
+		av_freep(&m_samples);
+	}
+	if (m_audioFrame) {
+		av_frame_free(&m_audioFrame);
+	}
+	m_audioStm = NULL;
+	if (m_audioCodec != NULL) {
+		avcodec_close(m_audioCodec);
+	}
 }
 
 void wxFfmpegMediaEncoder::CloseVideoEncoder() {
 	if (!m_videoStm)
 		return;
-	avcodec_close(m_videoStm->codec);
 	if (m_imgConvertCtx)
 		sws_freeContext(m_imgConvertCtx);
 	if (m_picture) {
@@ -343,12 +346,15 @@ void wxFfmpegMediaEncoder::CloseVideoEncoder() {
 	}
 	av_freep(&m_videoOutbuf);
 	m_videoStm = NULL;
+	if (m_videoCodec != NULL) {
+		avcodec_close(m_videoCodec);
+	}
 }
 
 bool wxFfmpegMediaEncoder::EncodeImage(wxImage image, int frames, AbstractProgressDialog* progressDialog) {
 	if (!image.Ok())
 		return false;
-	AVCodecContext *c = m_videoStm->codec;
+	AVCodecContext *c = m_videoCodec;
 	if (image.GetWidth() != c->width || image.GetHeight() != c->height) {
 		wxLogError(wxT("Image size (%dx%d) doesn't match frame size (%dx%d)."),
 				image.GetWidth(), image.GetHeight(), c->width, c->height);
@@ -359,11 +365,11 @@ bool wxFfmpegMediaEncoder::EncodeImage(wxImage image, int frames, AbstractProgre
 	int rgbStride[3] = { 3 * image.GetWidth(), 0, 0 };
 	sws_scale(m_imgConvertCtx, rgbSrc, rgbStride, 0, c->height, m_picture->data, m_picture->linesize);
 	// encode audio and video
-	double duration = ((double) m_nextVideoPts + frames) * m_videoStm->codec->time_base.num / m_videoStm->codec->time_base.den;
+	double duration = ((double) m_nextVideoPts + frames) * m_videoCodec->time_base.num / m_videoCodec->time_base.den;
 	while (true) {
-		double audioPts = m_audioStm ? ((double) m_nextAudioPts) * m_audioStm->codec->time_base.num
-				/ m_audioStm->codec->time_base.den : 0.0;
-		double videoPts = ((double) m_nextVideoPts) * m_videoStm->codec->time_base.num / m_videoStm->codec->time_base.den;
+		double audioPts = m_audioStm ? ((double) m_nextAudioPts) * m_audioCodec->time_base.num
+				/ m_audioCodec->time_base.den : 0.0;
+		double videoPts = ((double) m_nextVideoPts) * m_videoCodec->time_base.num / m_videoCodec->time_base.den;
 		if (progressDialog->WasCanceled())
 			return false;
 
@@ -387,8 +393,8 @@ bool wxFfmpegMediaEncoder::EncodeImage(wxImage image, int frames, AbstractProgre
 bool wxFfmpegMediaEncoder::EncodeAudio(double duration, AbstractProgressDialog* progressDialog) {
 	// encode audio
 	while (true) {
-		double audioPts = m_audioStm ? ((double) m_nextAudioPts) * m_audioStm->codec->time_base.num
-				/ m_audioStm->codec->time_base.den : 0.0;
+		double audioPts = m_audioStm ? ((double) m_nextAudioPts) * m_audioCodec->time_base.num
+				/ m_audioCodec->time_base.den : 0.0;
 		if (progressDialog->WasCanceled())
 			return false;
 
@@ -402,16 +408,38 @@ bool wxFfmpegMediaEncoder::EncodeAudio(double duration, AbstractProgressDialog* 
 	return true;
 }
 
+// return 0 on success, negative on error
+typedef int (*process_packet_cb)(void *ctx, AVPacket *pkt);
+
+int encode(AVCodecContext *avctx, AVPacket *pkt, AVFrame *frame, int *got_packet) {
+	int ret;
+
+	*got_packet = 0;
+
+	ret = avcodec_send_frame(avctx, frame);
+	if (ret < 0)
+		return ret;
+
+	ret = avcodec_receive_packet(avctx, pkt);
+	if (!ret)
+		*got_packet = 1;
+	if (ret == AVERROR(EAGAIN))
+		return 0;
+
+	return ret;
+}
+
+
 bool wxFfmpegMediaEncoder::writeAudioFrame() {
 	AVPacket pkt = { 0 }; // data and size must be 0;
 	int got_packet;
 
 	av_init_packet(&pkt);
-	AVCodecContext *c = m_audioStm->codec;
+	AVCodecContext *c = m_audioCodec;
 	
 	m_audioFrame->pts = m_nextAudioPts;
 	m_nextAudioPts += m_audioFrame->nb_samples;
-	avcodec_encode_audio2(c, &pkt, m_audioFrame, &got_packet);
+	encode(c, &pkt, m_audioFrame, &got_packet);
 	if (!got_packet) {
 		av_packet_unref(&pkt);
 		return true;
@@ -431,7 +459,7 @@ bool wxFfmpegMediaEncoder::writeAudioFrame() {
 }
 
 bool wxFfmpegMediaEncoder::writeVideoFrame() {
-	AVCodecContext *c = m_videoStm->codec;
+	AVCodecContext *c = m_videoCodec;
 	
 	// encode the image
 	m_picture->pts = m_nextVideoPts++;
@@ -441,7 +469,7 @@ bool wxFfmpegMediaEncoder::writeVideoFrame() {
 	pkt.size = VIDEO_BUF_SIZE;
 	
 	int got_packet = 0;
-	int ret = avcodec_encode_video2(c, &pkt, m_picture, &got_packet);
+	int ret = encode(c, &pkt, m_picture, &got_packet);
 	if (ret < 0) {
 		av_packet_unref(&pkt);
 		print_error("Error while writing video frame", ret);
@@ -486,7 +514,6 @@ void wxFfmpegMediaEncoder::CloseEncoder() {
 	
 	// free the streams
 	for (unsigned int i = 0; i < m_outputCtx->nb_streams; i++) {
-		av_freep(&m_outputCtx->streams[i]->codec);
 		av_freep(&m_outputCtx->streams[i]);
 	}
 
