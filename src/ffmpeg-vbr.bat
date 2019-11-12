@@ -26,7 +26,7 @@ SET size=
 SET HQ=NO
 SET height=
 SET CQM=
-SET maxrate=8500000
+SET maxrate=8200000
 
 
 REM -----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -118,7 +118,7 @@ SET /A twopass_threshold=%twopass_threshold% * 1000
 SET /A MediumBitrate_threshold=%MediumBitrate_threshold% * 1000
 SET /A LowBitrate_threshold=%LowBitrate_threshold% * 1000
 IF EXIST "%Matrix_High%.txt" SET /P CQM=<"%Matrix_High%.txt" & SET Matrix=%Matrix_High%
-IF %bitrate% GTR 8000000 SET maxrate=9500000
+IF %bitrate% GTR 8000000 SET maxrate=9200000
 IF %bitrate% LSS %MediumBitrate_threshold% IF EXIST "%Matrix_Medium%.txt" SET /P CQM=<"%Matrix_Medium%.txt" & SET Matrix=%Matrix_Medium%
 IF %bitrate% LSS %LowBitrate_threshold% IF EXIST "%Matrix_Low%.txt" SET /P CQM=<"%Matrix_Low%.txt" & SET Matrix=%Matrix_Low%
 IF %bitrate% LEQ %twopass_threshold% GOTO 2pass
