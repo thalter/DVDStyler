@@ -26,6 +26,8 @@ enum {
 	RESET_DONT_SHOW_FLAGS_BT_ID,
 	CLEAR_CACHE_BT,
 	MODE_CHOICE_ID,
+	HQ_CHECK_ID,
+	XHQ_CHECK_ID
 };
 
 BEGIN_EVENT_TABLE(SettingsDlg, wxPropDlg)
@@ -33,6 +35,8 @@ BEGIN_EVENT_TABLE(SettingsDlg, wxPropDlg)
 	EVT_BUTTON(RESET_DONT_SHOW_FLAGS_BT_ID, SettingsDlg::OnResetDontShowFlags)
 	EVT_BUTTON(CLEAR_CACHE_BT, SettingsDlg::OnClearCache)
 	EVT_CHOICE(MODE_CHOICE_ID, SettingsDlg::OnChangeEncoderMode)
+	EVT_CHECKBOX(HQ_CHECK_ID, SettingsDlg::OnCheckHQ)
+	EVT_CHECKBOX(XHQ_CHECK_ID, SettingsDlg::OnCheckXHQ)
 END_EVENT_TABLE()
 
 SettingsDlg::SettingsDlg(wxWindow* parent, Cache* cache): wxPropDlg(parent), m_cache(cache), m_directoryEdit(NULL),
@@ -281,10 +285,10 @@ void SettingsDlg::CreatePropPanel(wxSizer* sizer) {
 		SetLastControlCustom(GetLastControlIndex() - 1, s_config.GetEncoder(def) == s_config.GetEncoder(true));
 	modeCtrl = (wxChoice*) GetLastControl();
 	AddSpacer(encoderSizer, 4);
-	AddCheckProp(encoderSizer, wxT("HQ"), s_config.GetEncoderMode(def).AfterFirst(wxT('_')) == wxT("hq"));
+	AddCheckProp(encoderSizer, wxT("HQ"), s_config.GetEncoderMode(def).AfterFirst('_') == "hq", false, HQ_CHECK_ID);
 	hqCtrl = (wxCheckBox*) GetLastControl();
 	AddSpacer(encoderSizer, 4);
-	AddCheckProp(encoderSizer, wxT("XHQ"), s_config.GetEncoderMode(def).AfterFirst(wxT('_')) == wxT("xhq"));
+	AddCheckProp(encoderSizer, wxT("XHQ"), s_config.GetEncoderMode(def).AfterFirst('_') == "xhq", false, XHQ_CHECK_ID);
 	xhqCtrl = (wxCheckBox*) GetLastControl();
 	wxCommandEvent evt;
 	OnChangeEncoderMode(evt);
@@ -379,9 +383,9 @@ bool SettingsDlg::SetValues() {
 	s_config.SetEncoder(encoder);
 	wxString mode = encoder.length() == 0 || GetInt(i) == 0 ? wxT("") : modes[GetInt(i) - 1];
 	if (GetBool(i+1) && mode.length())
-		mode += wxT("_hq");
+		mode += "_hq";
 	else if (GetBool(i+2) && mode.length())
-		mode += wxT("_xhq");
+		mode += "_xhq";
 	s_config.SetEncoderMode(mode);
 	i += 3;
 	s_config.SetIsoCmd(GetString(i++));
@@ -427,6 +431,16 @@ void SettingsDlg::OnChangeEncoderMode(wxCommandEvent& evt) {
 	xhqCtrl->Enable(modeCtrl->GetSelection() == 3);
 	if (!xhqCtrl->IsEnabled())
 		xhqCtrl->SetValue(false);
+}
+
+void SettingsDlg::OnCheckHQ(wxCommandEvent& evt) {
+	if (evt.IsChecked())
+		xhqCtrl->SetValue(false);
+}
+
+void SettingsDlg::OnCheckXHQ(wxCommandEvent& evt) {
+	if (evt.IsChecked())
+		hqCtrl->SetValue(false);
 }
 
 void SettingsDlg::AddSpacer(wxSizer* sizer, int size) {

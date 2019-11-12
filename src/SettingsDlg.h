@@ -39,6 +39,8 @@ private:
 	void OnResetDontShowFlags(wxCommandEvent& evt);
 	void OnClearCache(wxCommandEvent& evt);
 	void OnChangeEncoderMode(wxCommandEvent& evt);
+	void OnCheckHQ(wxCommandEvent& evt);
+	void OnCheckXHQ(wxCommandEvent& evt);
 	void AddSpacer(wxSizer* sizer, int size);
 	void AddStretchSpacer(wxSizer* sizer, int prop);
 	DECLARE_EVENT_TABLE()
