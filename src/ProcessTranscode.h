@@ -26,7 +26,8 @@ protected:
 	bool Transcode(Vob* vob, AspectRatio aspect, int videoBitrate, int audioBitrate, bool useMplex,
 				AudioFormat defAudioFormat = afAC3);
 	/** Multiplex video with audio */
-	bool Multiplex(const wxString& videoFile, const wxArrayString& audioFiles, const wxString& vobFile);
+	bool Multiplex(const wxString& videoFile, const wxArrayString& audioFiles, const wxString& vobFile,
+			const wxString& lpcmParams = "");
 	/** Calculate replay gain values */
 	bool CalculateReplayGain(const wxString& fileName, int audioStreamIdx, Stream* stream);
 	/** Executes given command */

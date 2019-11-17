@@ -67,8 +67,13 @@ bool wxFfmpegMediaTranscoder::AddInputFile(const wxString& fileName, const wxStr
 	if (fileName == wxT("/dev/zero")) {
 		m_cmd += wxT(" -ac 2 -ar 48000 -f s16le -i /dev/zero");
 	} else {
-		if (format.length())
-			AddOption(wxT("f"), format);
+		if (format.length()) {
+			if (format.Index(':') > 0) {
+				AddOption(wxT("f"), format.BeforeFirst(':'));
+				AddOption(wxT("ac"), format.AfterFirst(':'));
+			} else
+				AddOption(wxT("f"), format);
+		}
 		m_cmd += wxString::Format(wxT(" -i \"%s\""), fileName.c_str());
 	}
 	

@@ -185,6 +185,15 @@ bool Vob::AddAudioFile(wxString filename) {
 		m_streams.push_back(new Stream(stAUDIO, wxT("concat")));
 		return true;
 	}
+	if (filename.EndsWith(wxT(".pcm")) || filename.EndsWith(wxT(".lpcm"))) {
+		// PCM Raw format
+		m_audioFilenames.Add(filename);
+		Stream* stream = new Stream(stAUDIO, filename.EndsWith(wxT(".lpcm")) ? wxT("lpcm") : wxT("pcm"));
+		stream->SetSourceChannelNumber(filename.EndsWith(wxT(".lpcm")) ? 6 : 2);
+		stream->SetSourceSampleRate(48000);
+		m_streams.push_back(stream);
+		return true;
+	}
 	wxFfmpegMediaDecoder ffmpeg;
 	if (!ffmpeg.Load(filename))
 		return false;

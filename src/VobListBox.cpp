@@ -361,6 +361,9 @@ void VobListBox::RemoveItem(int index) {
 
 void VobListBox::AddAudio(wxString filename) {
 	m_vob->AddAudioFile(filename);
+	if (filename.EndsWith(wxT(".pcm")) || filename.EndsWith(wxT(".lpcm"))) {
+		wxLogWarning("Only s16be 2-channel PCM and 6-channel LPCM audio files are supported now (experimental)");
+	}
 	m_vob->SetDoNotTranscode(false);
 	// check if reencoding is needed
 	Stream* stream = m_vob->GetStreams()[m_vob->GetStreams().size() - 1];

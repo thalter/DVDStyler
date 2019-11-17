@@ -29,7 +29,9 @@ bool ProcessTranscode::Transcode(Vob* vob, AspectRatio aspect, int videoBitrate,
 	VideoFormat videoFormat = vfCOPY;
 	bool ntscFilm = false;
 	wxArrayInt audioFormats;
+	wxArrayInt audioSrcFormat;
 	wxArrayInt subtitleFormats;
+	wxString lpcmParams;
 	for (unsigned int stIdx = 0; stIdx < vob->GetStreams().size(); stIdx++) {
 		Stream* stream = vob->GetStreams()[stIdx];
 		switch (stream->GetType()) {
@@ -43,6 +45,16 @@ bool ProcessTranscode::Transcode(Vob* vob, AspectRatio aspect, int videoBitrate,
 			break;
 		case stAUDIO:
 			audioFormats.Add(stream->GetAudioFormat());
+			audioSrcFormat.Add(stream->GetSourceAudioFormat());
+			if (stream->GetDestinationFormat() == afPCM) {
+				lpcmParams = wxString::Format("%d:%d:16", stream->GetSourceSampleRate(),
+										stream->GetSourceChannelNumber());
+			} else if (stream->GetSourceCodecName().StartsWith("pcm_s")) {
+				lpcmParams = wxString::Format("%d:%d:", stream->GetSourceSampleRate(),
+						stream->GetSourceChannelNumber()) + stream->GetSourceCodecName().substr(5, 2);//"48000:6:24";
+			} else if (stream->GetSourceCodecName().StartsWith("pcm") || stream->GetSourceCodecName().StartsWith("lpcm")) {
+				lpcmParams = wxString::Format("%d:%d:16", stream->GetSourceSampleRate(), stream->GetSourceChannelNumber());
+			}
 			needEncode = needEncode || stream->GetAudioFormat() != afCOPY;
 			break;
 		case stSUBTITLE:
@@ -70,7 +82,14 @@ bool ProcessTranscode::Transcode(Vob* vob, AspectRatio aspect, int videoBitrate,
 		for (int i = 0; i < (int)vob->GetAudioFilenames().size(); i++) {
 			int stIdx = vob->GetStreams().size() - vob->GetAudioFilenames().size() + i;
 			long tsOffset = vob->GetStreams()[stIdx]->GetTsOffset();
-			if (!transcoder.AddInputFile(vob->GetAudioFilenames()[i], wxT(""), tsOffset)) {
+			wxString audioFilename = vob->GetAudioFilenames()[i];
+			wxString audioFormatStr;
+			if (audioFilename.EndsWith(wxT(".pcm"))) {
+				audioFormatStr = "s16be:2";
+			} else if (audioFilename.EndsWith(wxT(".lpcm"))) {
+				audioFormatStr = "s16be:6";
+			}
+			if (!transcoder.AddInputFile(audioFilename, audioFormatStr, tsOffset)) {
 				progressDlg->Failed(wxT("Error by transcoding of ") + vob->GetAudioFilenames()[i]);
 				return false;
 			}
@@ -88,6 +107,7 @@ bool ProcessTranscode::Transcode(Vob* vob, AspectRatio aspect, int videoBitrate,
 				return false;
 			}
 			audioFormats.Add(defAudioFormat);
+			audioSrcFormat.Add(afNONE);
 			if (recordingTime <= 0)
 				recordingTime = vob->GetDuration() > 0 ? vob->GetDuration() : 1.0;
 		}
@@ -171,6 +191,9 @@ bool ProcessTranscode::Transcode(Vob* vob, AspectRatio aspect, int videoBitrate,
 				if (audioFormats[audioIdx] == afNONE)
 					continue;
 				wxString audioFile = vob->GetTmpFilename() + wxString::Format(wxT(".audio%u"), audioIdx);
+				if (audioSrcFormat[audioIdx] == afPCM) {
+					audioFile = vob->GetTmpFilename() + wxString::Format(wxT("-%u.lpcm"), audioIdx);
+				}
 				audioFiles.Add(audioFile);
 				if (wxFileExists(audioFile) && !wxRemoveFile(audioFile)) {
 					wxLogError(wxString::Format(_("Can't remove file '%s'"), audioFile.c_str()));
@@ -204,7 +227,7 @@ bool ProcessTranscode::Transcode(Vob* vob, AspectRatio aspect, int videoBitrate,
 				return false;
 			}
 			progressDlg->SetSubStep(subStep+150);
-			if (!Multiplex(videoFile, audioFiles, vob->GetTmpFilename())) {
+			if (!Multiplex(videoFile, audioFiles, vob->GetTmpFilename(), lpcmParams)) {
 				return false;
 			}
 			// remove temp files
@@ -220,17 +243,18 @@ bool ProcessTranscode::Transcode(Vob* vob, AspectRatio aspect, int videoBitrate,
 }
 
 bool ProcessTranscode::Multiplex(const wxString& videoFile, const wxArrayString& audioFiles,
-		const wxString& vobFile) {
+		const wxString& vobFile, const wxString& lpcmParams) {
 	if (progressDlg->WasCanceled())
 		return false;
 	progressDlg->AddDetailMsg(_("Multiplexing video and audio streams"));
 	wxString cmd = s_config.GetMplexCmd();
-	cmd.Replace(_T("$FILE_VIDEO"), videoFile);
+	cmd.Replace("$PARAMS", lpcmParams.length() ? "-L " + lpcmParams : lpcmParams);
+	cmd.Replace("$FILE_VIDEO", videoFile);
 	wxString audio;
 	for (unsigned int i = 0; i < audioFiles.Count(); i++)
 		audio += (i > 0 ? wxT("\" \"") : wxT("")) + audioFiles[i];
-	cmd.Replace(_T("$FILE_AUDIO"), audio);
-	cmd.Replace(_T("$FILE_OUT"), vobFile);
+	cmd.Replace("$FILE_AUDIO", audio);
+	cmd.Replace("$FILE_OUT", vobFile);
 	if (!Exec(cmd)) {
 		progressDlg->Failed();
 		return false;

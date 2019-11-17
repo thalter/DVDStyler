@@ -75,6 +75,8 @@ AudioFormat Stream::GetSourceAudioFormat() {
 	else if (m_sourceCodecName == wxT("liba52") || m_sourceCodecName == wxT("ac3")
 			|| m_sourceCodecName == wxT("ac-3"))
 		return afAC3;
+	else if (m_sourceCodecName.StartsWith("pcm") || m_sourceCodecName.StartsWith("lpcm"))
+		return afPCM;
 	return afNONE;
 }
 

@@ -79,7 +79,7 @@ const wxString DEF_PLAY_CMD    = _T("avplay");
 #else
 	const wxString DEF_ENCODER   = _T("");
 #endif
-const wxString DEF_MPLEX_CMD     = _T("mplex -f 8 -S 0 -M -V -o \"$FILE_OUT\" \"$FILE_VIDEO\" \"$FILE_AUDIO\"");
+const wxString DEF_MPLEX_CMD     = _T("mplex -f 8 -S 0 -M -V $PARAMS -o \"$FILE_OUT\" \"$FILE_VIDEO\" \"$FILE_AUDIO\"");
 const wxString DEF_SPUMUX_CMD    = _T("spumux -P -s $STREAM \"$FILE_CONF\"");
 const wxString DEF_DVDAUTHOR_CMD = _T("dvdauthor -o \"$DIR\" -x \"$FILE_CONF\"");
 const wxString DEF_ISO_CMD       = _T("mkisofs -V \"$VOL_ID\" -o \"$FILE\" -dvd-video \"$DIR\"");
