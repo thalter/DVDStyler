@@ -32,6 +32,10 @@ protected:
 	bool CalculateReplayGain(const wxString& fileName, int audioStreamIdx, Stream* stream);
 	/** Executes given command */
 	bool Exec(wxString command, wxString inputFile = wxEmptyString, wxString outputFile = wxEmptyString);
+
+private:
+	/** Returns audio extenstion */
+	wxString GetAudioExt(AudioFormat srcFormat, AudioFormat dstFormat);
 };
 
 #endif // DS_PROCESS_TRANSCODE_H

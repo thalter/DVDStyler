@@ -15,6 +15,18 @@
 #include "mediatrc_ffmpeg.h"
 #include <wx/progdlg.h>
 
+/** Returns audio extenstion */
+wxString ProcessTranscode::GetAudioExt(AudioFormat srcFormat, AudioFormat dstFormat) {
+	AudioFormat format = dstFormat != afCOPY ? dstFormat : srcFormat;
+	if (format == afMP2)
+		return ".mp2";
+	else if (format == afAC3)
+		return ".ac3";
+	else if (format == afPCM)
+		return ".lpcm";
+	return ".audio";
+}
+
 bool ProcessTranscode::Transcode(Vob* vob, AspectRatio aspect, int videoBitrate, int audioBitrate, bool useMplex,
 				AudioFormat defAudioFormat) {
 	if (progressDlg->WasCanceled())
@@ -48,12 +60,14 @@ bool ProcessTranscode::Transcode(Vob* vob, AspectRatio aspect, int videoBitrate,
 			audioSrcFormat.Add(stream->GetSourceAudioFormat());
 			if (stream->GetDestinationFormat() == afPCM) {
 				lpcmParams = wxString::Format("%d:%d:16", stream->GetSourceSampleRate(),
-										stream->GetSourceChannelNumber());
-			} else if (stream->GetSourceCodecName().StartsWith("pcm_s")) {
-				lpcmParams = wxString::Format("%d:%d:", stream->GetSourceSampleRate(),
-						stream->GetSourceChannelNumber()) + stream->GetSourceCodecName().substr(5, 2);//"48000:6:24";
-			} else if (stream->GetSourceCodecName().StartsWith("pcm") || stream->GetSourceCodecName().StartsWith("lpcm")) {
-				lpcmParams = wxString::Format("%d:%d:16", stream->GetSourceSampleRate(), stream->GetSourceChannelNumber());
+					stream->GetChannelNumber() < 0 ? stream->GetSourceChannelNumber() : stream->GetChannelNumber());
+			} else if (stream->GetDestinationFormat() == afCOPY) { 
+				if (stream->GetSourceCodecName().StartsWith("pcm_s")) {
+					lpcmParams = wxString::Format("%d:%d:", stream->GetSourceSampleRate(),
+							stream->GetSourceChannelNumber()) + stream->GetSourceCodecName().substr(5, 2);//"48000:6:24";
+				} else if (stream->GetSourceCodecName().StartsWith("pcm") || stream->GetSourceCodecName().StartsWith("lpcm")) {
+					lpcmParams = wxString::Format("%d:%d:16", stream->GetSourceSampleRate(), stream->GetSourceChannelNumber());
+				}
 			}
 			needEncode = needEncode || stream->GetAudioFormat() != afCOPY;
 			break;
@@ -190,10 +204,8 @@ bool ProcessTranscode::Transcode(Vob* vob, AspectRatio aspect, int videoBitrate,
 			for (unsigned int audioIdx = 0; audioIdx < audioFormats.size(); audioIdx++) {
 				if (audioFormats[audioIdx] == afNONE)
 					continue;
-				wxString audioFile = vob->GetTmpFilename() + wxString::Format(wxT(".audio%u"), audioIdx);
-				if (audioSrcFormat[audioIdx] == afPCM) {
-					audioFile = vob->GetTmpFilename() + wxString::Format(wxT("-%u.lpcm"), audioIdx);
-				}
+				wxString audioFile = vob->GetTmpFilename() + wxString::Format(wxT("-%u"), audioIdx) +
+						GetAudioExt((AudioFormat) audioSrcFormat[audioIdx], (AudioFormat) audioFormats[audioIdx]);;
 				audioFiles.Add(audioFile);
 				if (wxFileExists(audioFile) && !wxRemoveFile(audioFile)) {
 					wxLogError(wxString::Format(_("Can't remove file '%s'"), audioFile.c_str()));
