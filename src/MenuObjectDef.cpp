@@ -416,8 +416,6 @@ void MenuObjectDef::SetParam(wxString name, wxString value, wxString attribute) 
 				elem->SetAttribute(attribute.length() && attribute[0] != wxT('-') ?
 						attribute : param->attribute + attribute, value);
 			}
-			if (elem->GetDtd() == wxSVG_IMAGE_ELEMENT && param->attribute == wxT("xlink:href"))
-				((wxSVGImageElement*) elem)->SetCanvasItem(NULL);
 		} else if (elem->GetDtd() == wxSVG_TEXT_ELEMENT) {
 			if (attribute.length()) {
 				elem->SetAttribute(attribute, value);
@@ -448,7 +446,6 @@ void MenuObjectDef::SetParam(wxString name, wxString value, wxString attribute) 
 				elem->RemoveChild(child);
 				child = nextChild;
 			}
-			((wxSVGTextElement*) elem)->SetCanvasItem(NULL);
 		}
 	}
 }

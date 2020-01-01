@@ -48,7 +48,7 @@ msgstr "Forum"
 #: src/About.cpp:86
 #, c-format
 msgid "Please use %sDVDStyler forum%s to get support, ask questions, or discuss this software."
-msgstr "Bezoek %sDVDStyler forum%s voor ondersteuning, vragenstellen of discusieren over dit programma."
+msgstr "Bezoek %sDVDStyler forum%s voor ondersteuning, vragen of om te discussiëren over dit programma."
 
 #: src/About.cpp:88
 msgid "WIKI"
@@ -313,7 +313,7 @@ msgstr "branden"
 
 #: src/BurnDlg.cpp:207
 msgid "format DVD-RW"
-msgstr "formaat DVD-RW"
+msgstr "wis DVD-RW"
 
 #: src/BurnDlg.cpp:212
 msgid "Device:"
@@ -384,7 +384,7 @@ msgstr "Alle Bestanden"
 
 #: src/BurnDlg.cpp:569
 msgid "Choose a file to save iso image"
-msgstr "Kies een bestand om fet ISO-beeld op te slaan"
+msgstr "Kies een bestand om het ISO-beeld op te slaan"
 
 #: src/BurnDlg.cpp:588
 msgid "Please enter output directory"
@@ -397,7 +397,7 @@ msgstr "De uitvoermap bevat bestanden. Kies aub een andere uitvoermap."
 #: src/BurnDlg.cpp:600
 #, c-format
 msgid "Directory '%s' already exist. Do you want to overwrite it?"
-msgstr "Map '%s' bestaat al. Wilt U het overschrijven?"
+msgstr "Map '%s' bestaat al. Wilt u het overschrijven?"
 
 #: src/BurnDlg.cpp:608 src/BurnDlg.cpp:660 src/ProcessCleanTemp.cpp:43 src/ProcessCleanTemp.cpp:47
 #: src/ProcessCleanTemp.cpp:51
@@ -407,11 +407,11 @@ msgstr "Kan map '%s' niet aanmaken."
 
 #: src/BurnDlg.cpp:615
 msgid "Please select a video player"
-msgstr "Kies aub een video speler"
+msgstr "Kies aub een videospeler"
 
 #: src/BurnDlg.cpp:620
 msgid "Please select path to video player"
-msgstr "Selecteer het pad naar de video speler"
+msgstr "Selecteer het pad naar de videospeler"
 
 #: src/BurnDlg.cpp:627
 msgid "Please enter file name to save ISO"
@@ -621,7 +621,7 @@ msgstr[1] "In de transcode cache zijn er %d bestand (%0.1f MB)"
 
 #: src/Cache.cpp:375
 msgid "Do you want to clear the cache?"
-msgstr "Wil je de buffer ledigen?"
+msgstr "Wil je de buffer legen?"
 
 #: src/Cache.cpp:376 src/MainWin.cpp:1009
 msgid "Confirm"
@@ -892,11 +892,11 @@ msgstr "kan niet naar titelset %d springen, alleen %d bestaat"
 
 #: src/DVDAction.cpp:204
 msgid "cannot jump to VMGM menu; none exist"
-msgstr "onmogelijk om naar VMGM menu te springen; onbestaand"
+msgstr "niet mogelijk om naar VMGM menu te springen; bestaat niet"
 
 #: src/DVDAction.cpp:206 src/DVDAction.cpp:441
 msgid "cannot jump to menu; none exist"
-msgstr "onmogelijk om naar menu te springen; onbestaand"
+msgstr "niet mogelijk om naar menu te springen; bestaat niet"
 
 #: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:653
 msgid "title menu"
@@ -960,7 +960,7 @@ msgstr ""
 #: src/DVDAction.cpp:256
 msgid "cannot jump from regular menu to a title in another titleset, use VMGM menu instead"
 msgstr ""
-"kan niet van regulier menu naar titel in andere titel set springen, gebruik in plaats daarvan  het VMGM menu"
+"kan niet van regulier menu naar titel in andere titel set springen, gebruik in plaats daarvan het VMGM menu"
 
 #: src/DVDAction.cpp:258
 msgid "cannot jump to a title in another titleset"
@@ -1441,7 +1441,7 @@ msgstr "SVG bestanden"
 
 #: src/MainWin.cpp:1383
 msgid "Do you really want to reset this button?"
-msgstr "Wil je echt deze knop bewerken ?"
+msgstr "Wil je echt deze knop resetten?"
 
 #: src/MainWin.cpp:1401
 msgid "Do you really want to delete this button?"
@@ -1552,7 +1552,7 @@ msgstr "Centreer &Horizontaal"
 
 #: src/MenuEditor.cpp:320
 msgid "To Center &vertically"
-msgstr "Centreer &Vertikaal"
+msgstr "Centreer &Verticaal"
 
 #: src/MenuEditor.cpp:321
 msgid "To &Center of Menu horizontally"
@@ -1560,7 +1560,7 @@ msgstr "Centreer Menu &Horizontaal"
 
 #: src/MenuEditor.cpp:322
 msgid "To Center of &Menu vertically"
-msgstr "Centreer Menu &Vertikaal"
+msgstr "Centreer Menu &Verticaal"
 
 #: src/MenuEditor.cpp:340
 msgid "&Show Safe TV area"
@@ -2275,7 +2275,7 @@ msgstr "Verberg details"
 
 #: src/ProgressDlg.cpp:93
 msgid "Turn off PC when finished"
-msgstr "Sluit de PC af bij beêindiging"
+msgstr "Sluit de PC af bij beëindiging"
 
 #: src/ProgressDlg.cpp:97
 msgid "Minimize"
@@ -2383,7 +2383,7 @@ msgstr "Bestandsverkenner startmap:"
 
 #: src/SettingsDlg.cpp:193
 msgid "Clear thumbnail cache after exit"
-msgstr "Schoon miniaturencache na afsluiten"
+msgstr "Leeg miniaturencache na afsluiten"
 
 #: src/SettingsDlg.cpp:197
 msgid "Undo history size:"
@@ -2403,7 +2403,7 @@ msgstr "Ja"
 
 #: src/SettingsDlg.cpp:207
 msgid "Clear cache now"
-msgstr "Verwijder cache nu"
+msgstr "Leeg cache nu"
 
 #: src/SettingsDlg.cpp:211
 msgid "\"Don't show again\" flags:"
@@ -2523,15 +2523,15 @@ msgstr "Tijdelijke bestanden niet verwijderen"
 
 #: src/SettingsDlg.cpp:338
 msgid "Language change will not take effect until DVDStyler is restarted"
-msgstr "De taal wijzigen heeft pas effect als DVDStyler opnieuw wordt opgestart"
+msgstr "De taal wijzigen heeft pas effect als DVDStyler opnieuw wordt gestart"
 
 #: src/SettingsDlg.cpp:413
-msgid "All \"don't show again\" flags are reseted."
+msgid "All \"don't show again\" flags are resetted."
 msgstr "Alle \"Niet meer tonen\" vlaggen zijn gereset."
 
 #: src/SettingsDlg.cpp:419
 msgid "The transcoding cache is successfully cleared."
-msgstr "De transcode cache met succes verwijderd."
+msgstr "De transcode cache met succes geleegd."
 
 #: src/SlideDlg.cpp:44
 msgid "Slide properties"
@@ -2770,7 +2770,7 @@ msgstr "&Verplaats"
 
 #: src/TitlesetManager.cpp:359
 msgid "Drag your video files from the File Browser to here."
-msgstr "Sleep jouw videobestanden naar hier vanuit bestandsverkenner."
+msgstr "Sleep uw videobestanden naar hier vanuit de bestandsverkenner."
 
 #: src/TitlesetManager.cpp:410
 #, c-format

@@ -1,9 +1,16 @@
+Version 3.2 beta 6 <2020-01-01>
+-------------------------------
+  
+  * fixed slow loading of project files
+  * fixed PCM support (experemental)
+
 Version 3.2 beta 5 <2019-11-17>
 -------------------------------
   
   * settings core: only one of checkboxes hq or xhq can be selected
   * some improvements of PCM support (experemental)
   * win32/win64: updated Manolito's VBR plug-in
+  * win32/win64: updated ffmpeg to version 4.2.1
 
 Version 3.2 beta 4 <2019-11-09>
 -------------------------------
