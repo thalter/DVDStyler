@@ -58,17 +58,17 @@ bool ProcessTranscode::Transcode(Vob* vob, AspectRatio aspect, int videoBitrate,
 		case stAUDIO:
 			audioFormats.Add(stream->GetAudioFormat());
 			audioSrcFormat.Add(stream->GetSourceAudioFormat());
-			if (stream->GetDestinationFormat() == afPCM) {
-				lpcmParams = wxString::Format("%d:%d:16", stream->GetSourceSampleRate(),
-					stream->GetChannelNumber() < 0 ? stream->GetSourceChannelNumber() : stream->GetChannelNumber());
-			} else if (stream->GetDestinationFormat() == afCOPY) { 
-				if (stream->GetSourceCodecName().StartsWith("pcm_s")) {
-					lpcmParams = wxString::Format("%d:%d:", stream->GetSourceSampleRate(),
-							stream->GetSourceChannelNumber()) + stream->GetSourceCodecName().substr(5, 2);//"48000:6:24";
-				} else if (stream->GetSourceCodecName().StartsWith("pcm") || stream->GetSourceCodecName().StartsWith("lpcm")) {
-					lpcmParams = wxString::Format("%d:%d:16", stream->GetSourceSampleRate(), stream->GetSourceChannelNumber());
-				}
-			}
+//			if (stream->GetDestinationFormat() == afPCM) {
+//				lpcmParams = wxString::Format("48000:%d:16",
+//						stream->GetChannelNumber() < 0 ? stream->GetSourceChannelNumber() : stream->GetChannelNumber());
+//			} else if (stream->GetDestinationFormat() == afCOPY) { 
+//				if (stream->GetSourceCodecName().StartsWith("pcm_s")) {
+//					lpcmParams = wxString::Format("48000:%d:", stream->GetSourceChannelNumber())
+//							+ stream->GetSourceCodecName().substr(5, 2);//"48000:6:24";
+//				} else if (stream->GetSourceCodecName().StartsWith("pcm") || stream->GetSourceCodecName().StartsWith("lpcm")) {
+//					lpcmParams = wxString::Format("48000:%d:16", stream->GetSourceChannelNumber());
+//				}
+//			}
 			needEncode = needEncode || stream->GetAudioFormat() != afCOPY;
 			break;
 		case stSUBTITLE:
