@@ -728,9 +728,6 @@ bool TitlesetManager::AddAudio(const wxString& fname) {
 	Vob* vob = pgcs.Last()->GetVobs().Last();
 	if (!vob->AddAudioFile(fname))
 		return false;
-	if (fname.EndsWith(wxT(".pcm")) || fname.EndsWith(wxT(".lpcm"))) {
-		wxLogWarning("Only s16be 2-channel PCM and 6-channel LPCM audio files are supported now (experimental)");
-	}
 	vob->SetDoNotTranscode(false);
 	// check if reencoding is needed
 	Stream* stream = vob->GetStreams()[vob->GetStreams().size()-1];
