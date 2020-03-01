@@ -446,6 +446,7 @@ void MenuObjectDef::SetParam(wxString name, wxString value, wxString attribute) 
 				elem->RemoveChild(child);
 				child = nextChild;
 			}
+			((wxSVGTextElement*) elem)->SetCanvasItem(NULL); // update element
 		}
 	}
 }
