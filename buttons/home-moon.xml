@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- Created by ecodrv -->
+<button previewHighlighted="true">
+	<title>Home and moon</title>
+	<svg viewBox="0 2 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<defs>
+			<filter id="shadowFilter">
+				<feGaussianBlur stdDeviation="3" />
+			</filter>
+		</defs>
+		<use id="shadow" xlink:href="#home2" x="2" y="2" style="visibility:hidden;fill:#404040;filter:url(#shadowFilter)" />
+		<circle id="moon" cx="84" cy="18" r="8" style="fill:#f0d090;stroke:none;"/>
+		<g id="home1" style="fill:#0080c0;stroke:#004060;stroke-width:3;stroke-linejoin:round">
+			<g id="home2">
+				<path d="M21 38  L21 22  L20 21  L20 17    L32 17  L32 21  L31 22  L31 28  z"/>
+				<path d="M19 50  L48 21  A2.8284 2.8284 0 0 1 52 21  L81 50  L81 96  L70 96  L68 94  L32 94  L30 96  L19 96  z"/>
+				<path d="M13 56  C 11 58 6 53 8 51  L43 16  A 9.8995 9.8995 0 0 1 57 16  L92 51  C 94 53 89 58 87 56  L52 21  A2.8284 2.8284 0 0 0 48 21  z"/>
+			</g>
+		</g>
+		<g id="window" style="fill:#00c0c0;stroke:none;">
+			<rect x="29" y="52" width="19" height="15"/>
+			<rect x="52" y="52" width="19" height="15"/>
+			<rect x="29" y="71" width="19" height="15"/>
+			<rect x="52" y="71" width="19" height="15"/>
+		</g>
+	</svg>
+	<parameters>
+		<parameter>
+			<title>Home</title>
+			<name>home_fill_colour</name>
+			<type>colour</type>
+			<element>home1</element>
+			<attribute>fill</attribute>
+		</parameter>
+		<parameter>
+			<title>Stroke color</title>
+			<name>home_stroke_colour</name>
+			<type>colour</type>
+			<element>home1</element>
+			<attribute>stroke</attribute>
+		</parameter>
+		<parameter>
+			<title>Stroke width</title>
+			<name>Home_stroke_width</name>
+			<type>integer</type>
+			<element>home1</element>
+			<attribute>stroke-width</attribute>
+		</parameter>
+		<parameter>
+			<title>Window</title>
+			<name>window_colour</name>
+			<type>colour</type>
+			<element>window</element>
+			<attribute>fill</attribute>
+			<changeable/>
+			<default-value>
+				<highlighted>#ffff00</highlighted>
+				<selected>#ff8000</selected>
+			</default-value>
+		</parameter>
+		<parameter>
+			<title>Shadow</title>
+			<name>shadow</name>
+			<type>shadow</type>
+			<element>shadow</element>
+			<attribute>fill</attribute>
+		</parameter>
+		<parameter>
+			<title>Moon</title>
+			<name>moon_colour</name>
+			<type>colour</type>
+			<element>moon</element>
+			<attribute>fill</attribute>
+		</parameter>
+		<parameter>
+			<title>Radius</title>
+			<name>moon_radius</name>
+			<type>integer(0,15)</type>
+			<element>moon</element>
+			<attribute>r</attribute>
+		</parameter>
+	</parameters>
+	<default-size>
+		<width>50</width>
+		<height>50</height>
+	</default-size>
+	<min-size>
+		<width>20</width>
+		<height>20</height>
+	</min-size>
+</button>
