@@ -8,14 +8,14 @@
 				<feGaussianBlur stdDeviation="3" />
 			</filter>
 		</defs>
-		<use id="shadow" xlink:href="#home2" x="2" y="2" style="visibility:hidden;fill:#404040;filter:url(#shadowFilter)" />
+		<use id="shadow" xlink:href="#home2" x="2" y="2" style="visibility:hidden;fill:none;stroke:#404040;filter:url(#shadowFilter)"/>
 		<circle id="moon" cx="84" cy="18" r="8" style="fill:#f0d090;stroke:none;"/>
-		<g id="home1" style="fill:#0080c0;stroke:#004060;stroke-width:3;stroke-linejoin:round">
-			<g id="home2">
-				<path d="M21 38  L21 22  L20 21  L20 17    L32 17  L32 21  L31 22  L31 28  z"/>
-				<path d="M19 50  L48 21  A2.8284 2.8284 0 0 1 52 21  L81 50  L81 96  L70 96  L68 94  L32 94  L30 96  L19 96  z"/>
-				<path d="M13 56  C 11 58 6 53 8 51  L43 16  A 9.8995 9.8995 0 0 1 57 16  L92 51  C 94 53 89 58 87 56  L52 21  A2.8284 2.8284 0 0 0 48 21  z"/>
-			</g>
+		<g id="home1" style="fill:#0080c0;stroke:#004060;stroke-linejoin:round;">
+			<path id="home2" style="stroke-width:3;" d="
+				M21 38  L21 22  L20 21  L20 17    L32 17  L32 21  L31 22  L31 28  z
+				M19 50  L48 21  A2.8284 2.8284 0 0 1 52 21  L81 50  L81 96  L70 96  L68 94  L32 94  L30 96  L19 96  z
+				M13 56  C 11 58 6 53 8 51  L43 16  A 9.8995 9.8995 0 0 1 57 16  L92 51  C 94 53 89 58 87 56  L52 21  A2.8284 2.8284 0 0 0 48 21  z
+			"/>
 		</g>
 		<g id="window" style="fill:#00c0c0;stroke:none;">
 			<rect x="29" y="52" width="19" height="15"/>
@@ -43,7 +43,7 @@
 			<title>Stroke width</title>
 			<name>Home_stroke_width</name>
 			<type>integer</type>
-			<element>home1</element>
+			<element>home2</element>
 			<attribute>stroke-width</attribute>
 		</parameter>
 		<parameter>
@@ -63,7 +63,7 @@
 			<name>shadow</name>
 			<type>shadow</type>
 			<element>shadow</element>
-			<attribute>fill</attribute>
+			<attribute>stroke</attribute>
 		</parameter>
 		<parameter>
 			<title>Moon</title>
