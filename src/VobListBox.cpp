@@ -146,7 +146,8 @@ void VobListBox::RefreshInfo() {
 				wxRect& rect = m_infoRect[n][m_infoRect[n].size()-1];
 				int top = rect.GetTop();
 				int x = rect.GetRight() + 4;
-				AddChoiceCtrl(DVD::GetAudioFormatLabels(true, true), stream->GetAudioFormat(), x, itemY + top,
+				bool copyEnabled = stream->IsCopyPossible();
+				AddChoiceCtrl(DVD::GetAudioFormatLabels(copyEnabled, true), stream->GetAudioFormat(), x, itemY + top,
 						choiceIdx, true);
 				y += UpdateRect(rect, m_choiceList[choiceIdx-1]);
 				x += m_choiceList[choiceIdx-1]->GetSize().GetWidth() + 2;
@@ -172,7 +173,8 @@ void VobListBox::RefreshInfo() {
 				wxRect& rect = m_infoRect[n][m_infoRect[n].size()-1];
 				int top = rect.GetTop();
 				int x = rect.GetRight() + 4;
-				AddChoiceCtrl(DVD::GetSubtitleFormatLabels(true, true), stream->GetSubtitleFormat(), rect.GetRight() + 4,
+				bool copyEnabled = stream->IsCopyPossible();
+				AddChoiceCtrl(DVD::GetSubtitleFormatLabels(copyEnabled, true), stream->GetSubtitleFormat(), rect.GetRight() + 4,
 						itemY + top, choiceIdx, true);
 				y += UpdateRect(rect, m_choiceList[choiceIdx-1]);
 				x += m_choiceList[choiceIdx-1]->GetSize().GetWidth() + 2;
@@ -454,8 +456,11 @@ void VobListBox::SetValues() {
 				m_vob->SetDoNotTranscode(false);
 			break;
 		}
-		case stAUDIO:
-			stream->SetDestinationFormat(m_choiceList[choiceIdx++]->GetSelection());
+		case stAUDIO: {
+			int af = m_choiceList[choiceIdx++]->GetSelection();
+			if (af != 0 && !stream->IsCopyPossible())
+				af += 1;
+			stream->SetDestinationFormat(af);
 			if (stream->GetAudioFormat() != afCOPY)
 				m_vob->SetDoNotTranscode(false);
 			if (stream->GetAudioFormat() != afNONE) {
@@ -467,8 +472,12 @@ void VobListBox::SetValues() {
 			}
 			choiceIdx++;
 			break;
-		case stSUBTITLE:
-			stream->SetDestinationFormat(m_choiceList[choiceIdx++]->GetSelection());
+		}
+		case stSUBTITLE: {
+			int sf = m_choiceList[choiceIdx++]->GetSelection();
+			if (sf != 0 && !stream->IsCopyPossible())
+				sf += 1;
+			stream->SetDestinationFormat(sf);
 			if (stream->GetSubtitleFormat() != sfCOPY)
 				m_vob->SetDoNotTranscode(false);
 			if (stream->GetSubtitleFormat() != sfNONE) {
@@ -480,6 +489,7 @@ void VobListBox::SetValues() {
 			}
 			choiceIdx++;
 			break;
+		}
 		default:
 			break;
 		}

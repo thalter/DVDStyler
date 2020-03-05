@@ -1,3 +1,8 @@
+git
+---
+
+  * disabled "Copy" option for PCM (because PCM need to be repacked to big endian)
+
 Version 3.2 beta 7 <2020-03-01>
 -------------------------------
   
