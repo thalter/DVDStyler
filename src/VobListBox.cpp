@@ -147,8 +147,10 @@ void VobListBox::RefreshInfo() {
 				int top = rect.GetTop();
 				int x = rect.GetRight() + 4;
 				bool copyEnabled = stream->IsCopyPossible();
-				AddChoiceCtrl(DVD::GetAudioFormatLabels(copyEnabled, true), stream->GetAudioFormat(), x, itemY + top,
-						choiceIdx, true);
+				int afIdx = stream->GetAudioFormat();
+				if (!copyEnabled && afIdx > 0)
+					afIdx -= 1;
+				AddChoiceCtrl(DVD::GetAudioFormatLabels(copyEnabled, true), afIdx, x, itemY + top, choiceIdx, true);
 				y += UpdateRect(rect, m_choiceList[choiceIdx-1]);
 				x += m_choiceList[choiceIdx-1]->GetSize().GetWidth() + 2;
 				// langCode
@@ -174,7 +176,10 @@ void VobListBox::RefreshInfo() {
 				int top = rect.GetTop();
 				int x = rect.GetRight() + 4;
 				bool copyEnabled = stream->IsCopyPossible();
-				AddChoiceCtrl(DVD::GetSubtitleFormatLabels(copyEnabled, true), stream->GetSubtitleFormat(), rect.GetRight() + 4,
+				int sfIdx = stream->GetSubtitleFormat();
+				if (!copyEnabled && sfIdx > 0)
+					sfIdx -= 1;
+				AddChoiceCtrl(DVD::GetSubtitleFormatLabels(copyEnabled, true), sfIdx, rect.GetRight() + 4,
 						itemY + top, choiceIdx, true);
 				y += UpdateRect(rect, m_choiceList[choiceIdx-1]);
 				x += m_choiceList[choiceIdx-1]->GetSize().GetWidth() + 2;

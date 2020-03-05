@@ -226,7 +226,8 @@ bool Stream::IsCopyPossible() {
 	if (GetType() == stVIDEO) {
 		return m_sourceCodecName.StartsWith(wxT("mpeg2video"));
 	} else if (GetType() == stAUDIO) {
-		return !m_sourceCodecName.StartsWith("pcm"); // if not PCM, because PCM needs to be repacked to big endian
+		// if not MP3 and if not PCM (because PCM needs to be repacked to big endian)
+		return !m_sourceCodecName.StartsWith("mp3") && !m_sourceCodecName.StartsWith("pcm");
 	}
 	return true;
 }
