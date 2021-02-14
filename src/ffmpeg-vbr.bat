@@ -14,13 +14,10 @@ FOR /F "tokens=1,2 delims==" %%a IN (ff_vbr.ini) DO IF %%a==XHQ_threshold SET /A
 FOR /F "tokens=1,2 delims==" %%a IN (ff_vbr.ini) DO IF %%a==MediumBitrate_threshold SET /A MediumBitrate_threshold=%%b
 FOR /F "tokens=1,2 delims==" %%a IN (ff_vbr.ini) DO IF %%a==LowBitrate_threshold SET /A LowBitrate_threshold=%%b
 FOR /F "tokens=1,2 delims==" %%a IN (ff_vbr.ini) DO IF %%a==HQ_params SET HQ_params=%%b
-FOR /F "tokens=1,2 delims==" %%a IN (ff_vbr.ini) DO IF %%a==Interlaced SET Interlaced=%%b
+FOR /F "tokens=1,2 delims==" %%a IN (ff_vbr.ini) DO IF %%a==Auto_Deint SET Auto_Deint=%%b
 
 
 SET ORIGINAL=%*
-IF "%Interlaced%"=="1" SET ORIGINAL=%ORIGINAL: -f mpeg2video = -flags:v:0 +ilme+ildct -alternate_scan:v:0 1 -f mpeg2video %
-IF "%Interlaced%"=="2" SET ORIGINAL=%ORIGINAL: -f mpeg2video = -vf bwdif=mode=0 -f mpeg2video %
-REM IF "%Interlaced%"=="2" SET ORIGINAL=%ORIGINAL: -f mpeg2video = -vf yadif -f mpeg2video %
 SET bitrate=
 SET size=
 SET HQ=NO
@@ -45,7 +42,7 @@ IF %2==vbr2pass_hq SET /A VBR_threshold=1 & SET /A twopass_threshold=1 & SET /A 
 IF %2==vbr2pass_xhq SET /A VBR_threshold=1 & SET /A twopass_threshold=1 & SET /A HQ_threshold=1 & SET /A XHQ_threshold=1
 
 :assemble
-IF [%1==[ GOTO branch
+IF [%1==[ GOTO telecine
 IF %1==-b:v:0 GOTO bitrate
 IF %1==-s GOTO size
 IF "[%~x1"=="[.vob" GOTO out
@@ -83,13 +80,30 @@ GOTO assemble
 
 REM -----------------------------------------------------------------------------------------------------------------------------------------------------
 
+:telecine
+IF DEFINED out_m2v IF EXIST DGPulldown.exe GOTO deint
+SET ORIGINAL=%ORIGINAL: -r 24000/1001 = -r 30000/1001 -vf telecine -flags +ilme+ildct -alternate_scan 1 -top 1 %
 
-:branch
+:deint
 SET ORIGINAL=%ORIGINAL:!=_$$§§$$_%
 IF DEFINED out SET out=%out:!=_$$§§$$_%
 IF DEFINED out_path SET out_path=%out_path:!=_$$§§$$_%
 IF DEFINED out_m2v SET out_m2v=%out_m2v:!=_$$§§$$_%
 SETLOCAL EnableDelayedExpansion
+IF "%Auto_Deint%"=="0" GOTO branch
+IF NOT "!ORIGINAL!"=="!ORIGINAL:-c:v:0 copy=!" GOTO branch
+MediaInfo.exe "--Inform=Video;%%ScanType%%" "%infile%" >"%temp%\type.txt"
+SET /P type=<"%temp%\type.txt"
+IF EXIST "%temp%\type.txt" DEL "%temp%\type.txt"
+IF NOT DEFINED type SET type=p
+IF "%type%"=="Progressive" SET type=p
+IF "%type%"=="Interlaced" SET type=i
+IF "%type%"=="MBAFF" SET type=i
+IF "%type%"=="PAFF" SET type=i
+IF "%type%"=="i" IF "%Auto_Deint%"=="1" SET ORIGINAL=%ORIGINAL: -c:v:0 mpeg2video = -vf bwdif=mode=0 -c:v:0 mpeg2video %
+IF "%type%"=="i" IF "%Auto_Deint%"=="2" SET ORIGINAL=%ORIGINAL: -c:v:0 mpeg2video = -vf yadif -c:v:0 mpeg2video %
+
+:branch
 IF [%force_mode%==[-mode SET ORIGINAL=!ORIGINAL:%force_mode% %mode_value% =!
 
 IF %VBR_threshold%==1 SET /A VBR_threshold=9000
@@ -134,10 +148,22 @@ SET ORIGINAL=!ORIGINAL: -g 15 = -g 12 !
 SET ORIGINAL=!ORIGINAL: -g 18 = -g 12 !
 SET ORIGINAL=!ORIGINAL:-maxrate:v:0 %bitrate%=-maxrate:v:0 %maxrate% -dc 10 -bf 2 -qmin 1 -lmin 0.75 -mblmin 50!
 SET ORIGINAL=!ORIGINAL:-minrate:v:0 %bitrate% =!
-SET ORIGINAL=!ORIGINAL:-c:v:0 mpeg2video=-c:v:0 mpeg2video %CQM%!
+SET ORIGINAL=!ORIGINAL:-c:v:0 mpeg2video=-c:v:0 mpeg2video -max_muxing_queue_size 9999 %CQM%!
 SET HQ_params=%HQ_params:-bf 2=%
 IF %bitrate% LEQ %HQ_threshold% SET ORIGINAL=!ORIGINAL:-c:v:0 mpeg2video=-c:v:0 mpeg2video %HQ_params%! & SET HQ=YES
 IF "%HQ%"=="NO" IF %bitrate% LEQ %XHQ_threshold% SET ORIGINAL=!ORIGINAL:-c:v:0 mpeg2video=-c:v:0 mpeg2video %HQ_params%! & SET HQ=YES
+IF "%size:~0,4%"=="1280" GOTO HD
+IF "%size:~0,4%"=="1440" GOTO HD
+IF "%size:~0,4%"=="1920" GOTO HD
+GOTO dont_touch
+
+:HD
+SET ORIGINAL=%ORIGINAL:-bufsize:v:0 1835008 -packetsize 2048 -muxrate 10080000 =%
+IF %bitrate% LSS 9000000 GOTO dont_touch
+IF "%size:~0,4%"=="1280" SET ORIGINAL=%ORIGINAL:-b:v:0 9000000=-b:v:0 13500000%
+IF "%size:~0,4%"=="1440" SET ORIGINAL=%ORIGINAL:-b:v:0 9000000=-b:v:0 22500000%
+IF "%size:~0,4%"=="1920" SET ORIGINAL=%ORIGINAL:-b:v:0 9000000=-b:v:0 25000000%
+SET ORIGINAL=%ORIGINAL:-maxrate:v:0 9200000=-maxrate:v:0 26000000%
 GOTO dont_touch
 
 
@@ -153,7 +179,7 @@ SET ORIGINAL=!ORIGINAL:minrate:v:0 %bitrate%=minrate:v:0 %Fixed_Rate%!
 SET ORIGINAL=!ORIGINAL:maxrate:v:0 %bitrate%=maxrate:v:0 %Fixed_Rate%!
 
 :NoFix
-SET ORIGINAL=!ORIGINAL:-c:v:0 mpeg2video=-c:v:0 mpeg2video -dc 10 %CQM%!
+SET ORIGINAL=!ORIGINAL:-c:v:0 mpeg2video=-c:v:0 mpeg2video -dc 10 -max_muxing_queue_size 9999 %CQM%!
 IF %bitrate% LEQ %HQ_threshold% SET ORIGINAL=!ORIGINAL:-c:v:0 mpeg2video=-c:v:0 mpeg2video %HQ_params%! & SET HQ=YES
 IF "%HQ%"=="NO" IF %bitrate% LEQ %XHQ_threshold% SET ORIGINAL=!ORIGINAL:-c:v:0 mpeg2video=-c:v:0 mpeg2video %HQ_params%! & SET HQ=YES
 
@@ -182,7 +208,7 @@ SET FIRST=!FIRST:-minrate:v:0 %bitrate% =!
 IF %bitrate% LEQ %XHQ_threshold% IF EXIST "Fox New.txt" SET /P CQM=<"Fox New.txt" & SET Matrix=Fox New
 IF %bitrate% LEQ %HQ_threshold% SET HQ_params=-b_strategy 2 -brd_scale 2 -profile:v 4
 IF %bitrate% LEQ %XHQ_threshold% SET HQ_params=-b_strategy 2 -brd_scale 2 -profile:v 4
-SET FIRST=!FIRST:-c:v:0 mpeg2video=-c:v:0 mpeg2video %CQM%!
+SET FIRST=!FIRST:-c:v:0 mpeg2video=-c:v:0 mpeg2video -max_muxing_queue_size 9999 %CQM%!
 IF %bitrate% LEQ %HQ_threshold% SET FIRST=!FIRST:-c:v:0 mpeg2video=-c:v:0 mpeg2video %HQ_params%! & SET HQ=YES
 IF "%HQ%"=="NO" IF %bitrate% LEQ %XHQ_threshold% SET FIRST=!FIRST:-c:v:0 mpeg2video=-c:v:0 mpeg2video %HQ_params%!
 IF %bitrate% LEQ %XHQ_threshold% SET HQ=YES (extreme)
@@ -205,7 +231,7 @@ SET SECOND=!SECOND:-minrate:v:0 %bitrate% =!
 FOR /F "tokens=1,2 delims==" %%a IN (ff_vbr.ini) DO IF %%a==HQ_params SET HQ_params=%%b
 SET HQ_params=%HQ_params:-bf 2=%
 IF %bitrate% LEQ %XHQ_threshold% SET HQ_params=-pre_dia_size 5 -dia_size 5 -qcomp 0.7 -qblur 0 -preme 2 -me_method dia -sc_threshold 0 -bidir_refine 4 -profile:v 4 -mbd rd -mbcmp satd -precmp satd -cmp satd -subcmp satd -skipcmp satd
-SET SECOND=!SECOND:-c:v:0 mpeg2video=-c:v:0 mpeg2video %CQM%!
+SET SECOND=!SECOND:-c:v:0 mpeg2video=-c:v:0 mpeg2video -max_muxing_queue_size 9999 %CQM%!
 IF NOT "%HQ%"=="NO" SET SECOND=!SECOND:-c:v:0 mpeg2video=-c:v:0 mpeg2video %HQ_params%!
 IF NOT DEFINED out_m2v SET SECOND=!SECOND:%out%=-passlogfile "%out_path%ffmpeg" -pass 2 %out%! & GOTO twopasslog
 SET SECOND=!SECOND:%out_m2v%=-passlogfile "%out_path%ffmpeg" -pass 2 %out_m2v%!

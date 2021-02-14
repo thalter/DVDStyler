@@ -1,7 +1,9 @@
-git
----
+Version 3.2 beta 8 <2021-02-14>
+-------------------------------
 
   * disabled "Copy" option for MP3 and PCM (because PCM need to be repacked to big endian)
+  * video properties: added possiblity to add video filters before pad/scale filters
+  * added some new buttons (thanks to ecodrv)
 
 Version 3.2 beta 7 <2020-03-01>
 -------------------------------

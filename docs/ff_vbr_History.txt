@@ -1,0 +1,139 @@
+<2020-06-17>
+------------
+Fixed a couple of important bugs.
+
+
+<2020-06-13>
+------------
+Added two small fixes:
+1. The plugin no longer tries to write to the DVDStyler\bin folder.
+     This should avoid permission problems under Win10,
+2. Added a workaround for the "Too many packets buffered for output
+     stream 0:1. Conversion failed!" error. Now the plugin increases 
+     the muxing queue size to the highest supported value by default. 
+     I have been using this for quite some time without ever noticing
+     any adverse effect, so I made it the default.
+
+
+<2020-06-11>
+------------
+This update prevents DVDStyler from creating NTSC DVDs which do not 
+comply to the DVD standard. It does so by forcing a HARD telecined 
+encode for NTSC film content under these conditions:
+- The frame rate is 23.976 fps
+- My Soft Telecine Plugin is not installed (checks for the presence 
+  of DGPulldown.exe).
+- Soft Telecine is installed, but Mplex is not forced for muxing 
+  (setting under DVDStyler Core settings).
+- "Reencode by default for NTSC Film" is also not checked under Core 
+   settings.
+Of course SOFT Pulldown is preferable over HARD Pulldown, but there were 
+some reports that the Soft Telecine plugin does not work under Win10. 
+Since FFMpeg is unable to add pulldown flags, the only way is to use 
+the "Telecine" video filter from FFmpeg, and this video filter only 
+does HARD telecining.
+
+
+<2020-03-15>
+------------
+This time I added support for DVDStyler's experimental HD converions. 
+The plugin overrides the usual max bitrate limit of 9000 kbps and instead 
+allows bitrates of up to 25000 kbps for Full HD target sizes.
+
+For more details see here:
+https://sourceforge.net/p/dvdstyler/discussion/318795/thread/10066d9817/#4e0f
+
+
+<2019-11-30>
+------------
+Background:
+I never liked the way how DVDStyler treats interlaced source files. It 
+does not even analyze source files if they are progressive or interlaced, and 
+the default encoding mode is always progressive. For interlaced sources 
+it really destroys the quality when they are encoded with progressive 
+encoder settings.
+
+Of course users can specify to encode the source with interlaced encoder 
+settings in the properties window. But this has another problem: 
+Interlaced sources cannot be resized vertically with the standard 
+resize methods. There are special "interlaced resize" methods, but 
+DVDStyler does not use them (The "scale" filter has an interlaced mode, 
+but the basic "-s" parameter which is used by DVDStyler has not). And 
+since most conversions do need some vertical resizing to comply 
+with the DVD specs this method also results in bad quality encodes.
+
+So I use a different method. First the source is anylyzed by "MediaInfo" 
+if it is interlaced or not. If it is interlaced and the "Auto_Deint" 
+parameter is set to 1 or 2 then the source will be automatically 
+deinterlaced using either "bwdif" or "yadif". No need to specify interlaced 
+encoding in the properties window. I do not really have an opinion if 
+bwdif or yadif result in better quality, you need to check this out 
+for yourselves.
+
+
+<2019-05-01>
+------------
+FFmpeg still has the habit to overshoot the specified max bitrate quite a bit 
+which often causes Mplex to abort the muxing operation with a buffer underrun 
+error. This seems to happen more often for NTSC conversions than for PAL. To 
+fix this I decided to reduce the max bitrate settings in the plugin slightly 
+(8500 -> 8200 and 9500 -> 9200). For the 9200 setting, this only applies if 
+the average bitrate has been set maually to a value bigger than 8000 (only 
+makes sense for HD target frame sizes). And here you still can get Mplex causing 
+errors quite often, probably better to use FFmpeg for muxing in such cases.
+
+
+<2018-11-10>
+------------
+For the new FFmpeg version which comes with 3.1 Beta3 I had to remove the 
+"-sc_factor 4" parameter because it has been removed from FFmpeg. I also added 
+some changes to support the experimental HD modes at the highest supported 
+bitrate of 9Mb/s.
+
+Only the file "ffmpeg-vbr.bat" is affected. The new version is backwards 
+compatible.
+
+
+<2017-11-23>
+------------
+Published a new bug fix release...
+
+When the DVDStyler TEMP folder contained an exclamation mark in its name, the
+plugin would crash in 2-pass VBR mode. Thanks to Data Diner for finding it.
+
+For the bug fix only the file "ffmpeg-vbr.bat" needs to be replaced.
+
+
+<2017-01-29>
+------------
+Just made a small addition to the VBR plugin...
+It adds the possibility to force interlaced modes for all titles in a project 
+simultaneously without the need to edit each title separately. Thanks to Arnout 
+Ponsioen for pointing it out.
+
+Background:
+DVDStyler does not analyze source files if they are interlaced or progressive. 
+For interlaced sources the user needs to edit the video properties and specify 
+interlaced encoding (or deinterlacing) for each of the titles in a project. Now 
+if you have a large project with many titles which are all interlaced it would 
+be nice to force interlaced encoding or deinterlacing all at once for the whole 
+project.
+
+This is exactly what the plugin can do now. At the bottom of the "ff_vbr.ini" 
+file there is an option to force the FFmpeg behavior for interlaced sources. 
+You can either force interlaced encoding or deinterlacing (default for 
+deinterlacing is bwdif, you can specify Yadif by editing "ffmpeg-vbr.bat"). 
+For both modes I use the automatic field order detection, in a couple of tests 
+using different sources this worked quite well.
+
+
+<2016-12-21>
+------------
+Just fixed an extremely stupid bug for 2-pass VBR mode when a file or folder 
+name has an exclamation mark in it. Thanks to DavidC for discovering it.
+
+
+---------------------------------------------------------------------------------
+
+All previous changes were made before the plugin was halfway stable...
+
