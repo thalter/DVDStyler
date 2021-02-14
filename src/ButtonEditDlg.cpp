@@ -105,17 +105,31 @@ public:
 			param->changeable = (value == "1");
 			break;
 		case 6:
+			if (param->changeable)
+				param->normalColour = wxCSSStyleDeclaration::ParseColor(value);
 			if (param->name.length()) {
-				if (param->changeable)
+				if (param->changeable && m_objectDef.GetButtonState() == mbsNORMAL)
 					m_objectDef.SetParamColour(param->name, wxCSSStyleDeclaration::ParseColor(value));
 				m_objectDef.SetParam(param->name, value);
 			}
 			break;
 		case 7:
 			param->highlightedColour = param->changeable ? wxCSSStyleDeclaration::ParseColor(value) : wxColour();
+			// update image
+			if (param->changeable && m_objectDef.GetButtonState() == mbsHIGHLIGHTED && param->name.length()) {
+				param->changeable = false;
+				m_objectDef.SetParamColour(param->name, param->highlightedColour);
+				param->changeable = true;
+			}
 			break;
 		case 8:
 			param->selectedColour = param->changeable ? wxCSSStyleDeclaration::ParseColor(value) : wxColour();
+			// update image
+			if (param->changeable && m_objectDef.GetButtonState() == mbsSELECTED && param->name.length()) {
+				param->changeable = false;
+				m_objectDef.SetParamColour(param->name, param->selectedColour);
+				param->changeable = true;
+			}
 			break;
 		default:
 			break;
@@ -547,8 +561,6 @@ void ButtonEditDlg::OnSvgLeftClick(wxMouseEvent & event) {
 		return;
 	}
 	ButtonAddParamDlg dlg(this, rootElem, nodeList, elements);
-//	wxSingleChoiceDialog dlg(this, "Please select an SVG element for new parameter", "Add parameter", elements);
-//	dlg.SetSelection(elements.size() - 1);
 	if (dlg.ShowModal() != wxID_OK)
 		return;
 	wxSVGElement* element = nodeList[dlg.GetSelection() + 1];
@@ -570,11 +582,15 @@ void ButtonEditDlg::OnSvgLeftClick(wxMouseEvent & event) {
 	m_grid->AppendRows(1);
 	MenuObjectParam* param = m_objectDef.GetParams().back();
 	param->element.push_back(id);
+	param->attribute = dlg.GetAttribute();
+	param->type = dlg.GetType();
+	param->changeable = dlg.IsChangeable();
 	if (param->changeable) {
 		param->changeable = false;
 		param->normalColour = m_objectDef.GetParamColour(param->name);
 		param->changeable = true;
 	}
+	param->title = dlg.GetTitle();
 
 	SetCellEditors(m_grid->GetNumberRows() - 1);
 	m_grid->SelectRow(m_grid->GetGridCursorRow(), false);

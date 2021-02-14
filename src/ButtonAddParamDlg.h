@@ -14,6 +14,7 @@
 #include <wx/dialog.h>
 #include <wx/listbox.h>
 #include <wx/panel.h>
+#include <wx/radiobut.h>
 #include <wx/sizer.h>
 #include <wx/splitter.h>
 #include <wx/stattext.h>
@@ -31,19 +32,31 @@ public:
 	virtual ~ButtonAddParamDlg();
 	//(*Declarations(ButtonAddParamDlg)
 	wxListBox* m_elementsListBox;
+	wxRadioButton* m_fillRadio;
+	wxRadioButton* m_strokeRadio;
+	wxRadioButton* m_strokeWidthRadio;
 	wxSVGCtrl* m_svgCtrl;
 	wxSplitterWindow* m_splitterWindow;
 	wxTextCtrl* m_fillCtrl;
 	wxTextCtrl* m_strokeCtrl;
+	wxTextCtrl* m_strokeWidthCtrl;
 	//*)
 	
 	int GetSelection() const;
+	wxString GetAttribute() const;
+	wxString GetType() const;
+	wxString GetTitle() const;
+	bool IsChangeable() const;
 
 protected:
 	//(*Identifiers(ButtonAddParamDlg)
 	static const long ID_LISTBOX1;
+	static const long ID_RADIOBUTTON1;
 	static const long ID_TEXTCTRL1;
+	static const long ID_RADIOBUTTON2;
 	static const long ID_TEXTCTRL2;
+	static const long ID_RADIOBUTTON3;
+	static const long ID_TEXTCTRL3;
 	static const long ID_PANEL1;
 	static const long ID_SVG_CTRL;
 	static const long ID_SPLITTERWINDOW1;

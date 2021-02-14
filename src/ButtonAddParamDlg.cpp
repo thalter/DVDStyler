@@ -20,8 +20,12 @@
 
 //(*IdInit(ButtonAddParamDlg)
 const long ButtonAddParamDlg::ID_LISTBOX1 = wxNewId();
+const long ButtonAddParamDlg::ID_RADIOBUTTON1 = wxNewId();
 const long ButtonAddParamDlg::ID_TEXTCTRL1 = wxNewId();
+const long ButtonAddParamDlg::ID_RADIOBUTTON2 = wxNewId();
 const long ButtonAddParamDlg::ID_TEXTCTRL2 = wxNewId();
+const long ButtonAddParamDlg::ID_RADIOBUTTON3 = wxNewId();
+const long ButtonAddParamDlg::ID_TEXTCTRL3 = wxNewId();
 const long ButtonAddParamDlg::ID_PANEL1 = wxNewId();
 const long ButtonAddParamDlg::ID_SVG_CTRL = wxNewId();
 const long ButtonAddParamDlg::ID_SPLITTERWINDOW1 = wxNewId();
@@ -40,8 +44,7 @@ ButtonAddParamDlg::ButtonAddParamDlg(wxWindow* parent, wxSVGSVGElement* rootElem
 	wxFlexGridSizer* FlexGridSizer1;
 	wxPanel* panel1;
 	wxStaticText* StaticText1;
-	wxStaticText* StaticText2;
-	wxStaticText* StaticText3;
+	wxStaticText* attributeLabel;
 	wxStdDialogButtonSizer* StdDialogButtonSizer1;
 
 	Create(parent, wxID_ANY, _("Add parameter"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER, _T("wxID_ANY"));
@@ -56,17 +59,24 @@ ButtonAddParamDlg::ButtonAddParamDlg(wxWindow* parent, wxSVGSVGElement* rootElem
 	BoxSizer1->Add(StaticText1, 0, wxBOTTOM|wxEXPAND, 5);
 	m_elementsListBox = new wxListBox(panel1, ID_LISTBOX1, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_LISTBOX1"));
 	BoxSizer1->Add(m_elementsListBox, 1, wxEXPAND, 5);
+	attributeLabel = new wxStaticText(panel1, wxID_ANY, _("Attribute:"), wxDefaultPosition, wxDefaultSize, 0, _T("wxID_ANY"));
+	BoxSizer1->Add(attributeLabel, 0, wxTOP|wxALIGN_LEFT, 5);
 	FlexGridSizer1 = new wxFlexGridSizer(0, 2, 2, 2);
-	StaticText2 = new wxStaticText(panel1, wxID_ANY, _("Fill:"), wxDefaultPosition, wxDefaultSize, 0, _T("wxID_ANY"));
-	FlexGridSizer1->Add(StaticText2, 0, wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
+	m_fillRadio = new wxRadioButton(panel1, ID_RADIOBUTTON1, _("fill"), wxDefaultPosition, wxDefaultSize, wxRB_GROUP, wxDefaultValidator, _T("ID_RADIOBUTTON1"));
+	FlexGridSizer1->Add(m_fillRadio, 1, wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
 	m_fillCtrl = new wxTextCtrl(panel1, ID_TEXTCTRL1, _("Text"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_TEXTCTRL1"));
 	m_fillCtrl->Disable();
 	FlexGridSizer1->Add(m_fillCtrl, 1, wxLEFT|wxEXPAND, 5);
-	StaticText3 = new wxStaticText(panel1, wxID_ANY, _("Stroke:"), wxDefaultPosition, wxDefaultSize, 0, _T("wxID_ANY"));
-	FlexGridSizer1->Add(StaticText3, 1, wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
+	m_strokeRadio = new wxRadioButton(panel1, ID_RADIOBUTTON2, _("stroke"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_RADIOBUTTON2"));
+	FlexGridSizer1->Add(m_strokeRadio, 1, wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
 	m_strokeCtrl = new wxTextCtrl(panel1, ID_TEXTCTRL2, _("Text"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_TEXTCTRL2"));
 	m_strokeCtrl->Disable();
 	FlexGridSizer1->Add(m_strokeCtrl, 1, wxLEFT|wxEXPAND, 5);
+	m_strokeWidthRadio = new wxRadioButton(panel1, ID_RADIOBUTTON3, _("stroke-width"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_RADIOBUTTON3"));
+	FlexGridSizer1->Add(m_strokeWidthRadio, 1, wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
+	m_strokeWidthCtrl = new wxTextCtrl(panel1, ID_TEXTCTRL3, _("Text"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_TEXTCTRL3"));
+	m_strokeWidthCtrl->Disable();
+	FlexGridSizer1->Add(m_strokeWidthCtrl, 1, wxLEFT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	BoxSizer1->Add(FlexGridSizer1, 0, wxEXPAND, 5);
 	panel1->SetSizer(BoxSizer1);
 	BoxSizer1->Fit(panel1);
@@ -107,6 +117,34 @@ ButtonAddParamDlg::~ButtonAddParamDlg() {
 
 int ButtonAddParamDlg::GetSelection() const {
 	return m_elementsListBox->GetSelection();
+}
+
+wxString ButtonAddParamDlg::GetAttribute() const {
+	if (m_fillRadio->GetValue())
+		return "fill";
+	if (m_strokeRadio->GetValue())
+		return "stroke";
+	return "stroke-width";
+}
+
+wxString ButtonAddParamDlg::GetType() const {
+	if (m_fillRadio->GetValue())
+		return "colour";
+	if (m_strokeRadio->GetValue())
+		return "colour";
+	return "integer";
+}
+
+wxString ButtonAddParamDlg::GetTitle() const {
+	if (m_fillRadio->GetValue())
+		return "Fill colour";
+	if (m_strokeRadio->GetValue())
+		return "Stroke colour";
+	return "Stroke width";
+}
+
+bool ButtonAddParamDlg::IsChangeable() const {
+	return m_fillRadio->GetValue() || m_strokeRadio->GetValue();
 }
 
 wxSVGSVGElement* ButtonAddParamDlg::CreateSvgDoc(double width, double height, const wxSVGRect& viewBox) {
@@ -182,4 +220,5 @@ void ButtonAddParamDlg::OnSelectSvgElement(wxCommandEvent& event) {
 	}
 	m_fillCtrl->SetValue(fill.GetCSSText());
 	m_strokeCtrl->SetValue(stroke.GetCSSText());
+	m_strokeWidthCtrl->SetValue(wxString::Format("%f", strokeWidth));
 }
