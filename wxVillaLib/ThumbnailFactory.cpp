@@ -26,12 +26,21 @@
 #include <libgnomeui/gnome-ui-init.h>
 #include <libgnomeui/gnome-thumbnail.h>
 static GnomeThumbnailFactory* thumbnail_factory = NULL;
-#include <wxSVG/mediadec_ffmpeg.h>
-#include <wxSVG/ExifHandler.h>
-#elif defined(WX_SVG)
-#include <wxSVG/mediadec_ffmpeg.h>
-#include <wxSVG/ExifHandler.h>
+#elif defined(GNOME3)
+  #define GNOME_DESKTOP_USE_UNSTABLE_API
+  #include <libgnome-desktop/gnome-desktop-thumbnail.h>
+  static GnomeDesktopThumbnailFactory* thumbnail_factory = NULL;
+  #define gnome_thumbnail_factory_lookup gnome_desktop_thumbnail_factory_lookup
+  #define gnome_thumbnail_path_for_uri gnome_desktop_thumbnail_path_for_uri
+  #define gnome_thumbnail_is_valid gnome_desktop_thumbnail_is_valid
+  #define gnome_thumbnail_factory_can_thumbnail gnome_desktop_thumbnail_factory_can_thumbnail
+  #define gnome_thumbnail_factory_generate_thumbnail gnome_desktop_thumbnail_factory_generate_thumbnail
+  #define gnome_thumbnail_factory_save_thumbnail gnome_desktop_thumbnail_factory_save_thumbnail
+  #define gnome_thumbnail_factory_create_failed_thumbnail gnome_desktop_thumbnail_factory_create_failed_thumbnail
+  #define GNOME_THUMBNAIL_SIZE_NORMAL GNOME_DESKTOP_THUMBNAIL_SIZE_NORMAL
 #endif
+#include <wxSVG/mediadec_ffmpeg.h>
+#include <wxSVG/ExifHandler.h>
 #define THUMBNAILS_DIR wxGetHomeDir() + wxFILE_SEP_PATH + _T(".thumb")
 
 #include "rc/loading.png.h"
@@ -47,16 +56,13 @@ public:
 		this->parent = parent;
 		this->width = width;
 		this->height = height;
-#ifdef GNOME2
-		uri = NULL;
-		mime_type = NULL;
+#if defined(GNOME2) || defined(GNOME3)
 		pixbuf = NULL;
-		mtime = 0;
 #endif
 	}
 
 	~ThumbInfo() {
-#ifdef GNOME2
+#if defined(GNOME2) || defined(GNOME3)
 		if (pixbuf)
 			g_object_unref(pixbuf);
 #endif
@@ -67,14 +73,10 @@ public:
 	int width;
 	int height;
 	wxString mimeType;
-#ifdef GNOME2
-	const char* uri;
-	const char* mime_type;
-	GdkPixbuf* pixbuf;
-	time_t mtime;
-#else
 	wxString uri;
 	wxDateTime mtime;
+#if defined(GNOME2) || defined(GNOME3)
+	GdkPixbuf* pixbuf;
 #endif
 };
 
@@ -84,7 +86,7 @@ wxThumbnailFactory* wxThumbnailFactory::thread = NULL;
 int wxThumbnailFactory::maxFileSize = 102400; // immediately render files with size < 100K
 
 void wxThumbnailFactory::Init() {
-#ifndef GNOME2
+#if defined(GNOME2) || defined(GNOME3)
 	wxLogNull log;
 	wxMkdir(THUMBNAILS_DIR);
 	wxMkdir(THUMBNAILS_DIR + wxFILE_SEP_PATH + wxT("normal"));
@@ -93,11 +95,13 @@ void wxThumbnailFactory::Init() {
 }
 
 void wxThumbnailFactory::InitGnome(const char* appName, const char* appVersion, int argc, char** argv) {
-#ifdef GNOME2
+#if defined(GNOME2)
 	gnome_init(appName, appVersion, argc, argv);
 	gnome_vfs_init();
 	thumbnail_factory
 			= gnome_thumbnail_factory_new(GNOME_THUMBNAIL_SIZE_NORMAL);
+#elif defined(GNOME3)
+	thumbnail_factory = gnome_desktop_thumbnail_factory_new(GNOME_THUMBNAIL_SIZE_NORMAL);
 #endif
 }
 
@@ -215,7 +219,7 @@ wxImage wxThumbnailFactory::AddToQueue(ThumbInfo* info) {
 	return img;
 }
 
-#ifdef GNOME2
+#if defined(GNOME2) || defined(GNOME3)
 /*wxImage pixbuf2image(GdkPixbuf* pixbuf) {
 	 wxBitmap bitmap(gdk_pixbuf_get_width(pixbuf), gdk_pixbuf_get_height(pixbuf));
 	 GdkBitmap* gbitmap = bitmap.GetPixmap();
@@ -236,32 +240,20 @@ ThumbInfo* wxThumbnailFactory::GetThumbInfo(wxString filename, wxWindow* parent,
 		info->mimeType = _T("video/mpeg");
 	else
 		info->mimeType = _T("unknown");
-#ifdef GNOME2
-	info->uri = gnome_vfs_get_uri_from_local_path(info->filename.mb_str());
-	// get mtime & mime_type
-	info->mtime = 0;
-	GnomeVFSFileInfo *file_info = gnome_vfs_file_info_new();
-	gnome_vfs_get_file_info(info->uri, file_info, (GnomeVFSFileInfoOptions) (GNOME_VFS_FILE_INFO_FOLLOW_LINKS));
-	if (file_info->valid_fields & GNOME_VFS_FILE_INFO_FIELDS_MTIME)
-		info->mtime = file_info->mtime;
-	info->mime_type = "video/mpeg";
-	gnome_vfs_file_info_unref(file_info);
-#else
 	info->uri = info->mimeType == _T("concat") ? _T("concat://") : _T("file://");
 	info->uri += filename;
 	wxString fname = filename;
 	if (info->mimeType == _T("concat"))
 		fname = filename.Mid(7).BeforeFirst(wxT('|'));
 	info->mtime = wxFileName(fname).GetModificationTime();
-#endif
 	return info;
 }
 
 wxString wxThumbnailFactory::GetThumbPath(ThumbInfo& info, ThumbType type) {
-#ifdef GNOME2
+#if defined(GNOME2) || defined(GNOME3)
 	char* thumbnail_path = NULL;
-	if (info.uri != NULL) {
-		thumbnail_path = gnome_thumbnail_factory_lookup(thumbnail_factory, info.uri, info.mtime);
+	if (info.uri.length()) {
+		thumbnail_path = gnome_thumbnail_factory_lookup(thumbnail_factory, info.uri.c_str(), info.mtime.GetTicks());
 		if (thumbnail_path == NULL)
 			thumbnail_path = gnome_thumbnail_path_for_uri(info.uri, GNOME_THUMBNAIL_SIZE_NORMAL);
 	}
@@ -301,12 +293,12 @@ wxImage wxThumbnailFactory::LoadThumbnail(ThumbInfo& info, ThumbType type) {
 
 	// load thumbnail for video
 	wxString thumbPath = GetThumbPath(info, type);
-#ifdef GNOME2
+#if defined(GNOME2) || defined(GNOME3)
 	GdkPixbuf* pixbuf = NULL;
 	if (thumbPath.Length())
 		pixbuf = gdk_pixbuf_new_from_file(thumbPath.mb_str(), NULL);
 	if (pixbuf) {
-		if (gnome_thumbnail_is_valid(pixbuf, info.uri, info.mtime)) {
+		if (gnome_thumbnail_is_valid(pixbuf, info.uri.c_str(), info.mtime.GetTicks())) {
 			wxLogNull log;
 			if (wxFileExists(thumbPath))
 				img.LoadFile(thumbPath); // img = pixbuf2image(pixbuf); failed on some systems
@@ -323,10 +315,11 @@ wxImage wxThumbnailFactory::LoadThumbnail(ThumbInfo& info, ThumbType type) {
 bool wxThumbnailFactory::CanThumbnail(ThumbInfo& info) {
 	if (info.mimeType == _T("unknown"))
 		return false;
-#ifdef GNOME2
+#if defined(GNOME2) || defined(GNOME3)
 	if (info.mimeType != _T("image") && info.mimeType != _T("concat") && !info.mimeType.StartsWith(wxT("video/")))
-		return info.uri
-			&& gnome_thumbnail_factory_can_thumbnail(thumbnail_factory, info.uri, info.mime_type, info.mtime);
+		return info.uri.length() > 0
+			&& gnome_thumbnail_factory_can_thumbnail(thumbnail_factory,
+					info.uri.c_str(), info.mimeType.c_str(), info.mtime.GetTicks());
 #endif
 	// check if we already tried to generate this thumbnail and it fails
 	wxString thumbPath = GetThumbPath(info, THUMBNAIL_FAILED);
@@ -415,10 +408,10 @@ wxImage wxThumbnailFactory::GenerateThumbnail(ThumbInfo& info, bool save) {
 	} else if (info.mimeType == _T("concat")) {
 		img = GenerateThumbnailFromVideo(info.filename);
 	} else {
-#ifdef GNOME2
-		info.pixbuf = gnome_thumbnail_factory_generate_thumbnail(thumbnail_factory, info.uri, info.mime_type);
+#if defined(GNOME2) || defined(GNOME3)
+		info.pixbuf = gnome_thumbnail_factory_generate_thumbnail(thumbnail_factory, info.uri.c_str(), info.mimeType.c_str());
 		if (info.pixbuf) {
-			gnome_thumbnail_factory_save_thumbnail(thumbnail_factory, info.pixbuf, info.uri, info.mtime);
+			gnome_thumbnail_factory_save_thumbnail(thumbnail_factory, info.pixbuf, info.uri.c_str(), info.mtime.GetTicks());
 			wxLogNull log;
 			if (wxFileExists(thumbPath))
 				img.LoadFile(thumbPath);
@@ -428,7 +421,7 @@ wxImage wxThumbnailFactory::GenerateThumbnail(ThumbInfo& info, bool save) {
 				img = GenerateThumbnailFromVideo(info.filename);
 			}
 			if (!img.Ok()) {
-				gnome_thumbnail_factory_create_failed_thumbnail(thumbnail_factory, info.uri, info.mtime);
+				gnome_thumbnail_factory_create_failed_thumbnail(thumbnail_factory, info.uri.c_str(), info.mtime.GetTicks());
 				return img;
 			}
 		}
@@ -451,8 +444,8 @@ wxImage wxThumbnailFactory::GenerateThumbnail(ThumbInfo& info, bool save) {
 				scale = (float) info.height / img.GetHeight();
 			img.Rescale((int) (img.GetWidth() * scale), (int) (img.GetHeight() * scale));
 		}
-#ifdef GNOME2
-		if (info.uri != NULL) {
+#if defined(GNOME2) || defined(GNOME3)
+		if (info.uri.length() > 0) {
 			// create gdk pixbuf
 			int width = img.GetWidth();
 			int height = img.GetHeight();
@@ -469,7 +462,7 @@ wxImage wxThumbnailFactory::GenerateThumbnail(ThumbInfo& info, bool save) {
 				}
 			}
 			// save
-			gnome_thumbnail_factory_save_thumbnail(thumbnail_factory, pixbuf, info.uri, info.mtime);
+			gnome_thumbnail_factory_save_thumbnail(thumbnail_factory, pixbuf, info.uri.c_str(), info.mtime.GetTicks());
 		}
 #else
 		wxLogNull log;
