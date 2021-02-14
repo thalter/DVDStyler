@@ -1536,6 +1536,12 @@ void MenuEditor::OnProperties(wxCommandEvent& event) {
 						obj->SetParam(param->name, actionObj->GetParam(param->name, wxT("-opacity")), wxT("-opacity"));
 					} else if (param->type == wxT("text")) {
 						obj->SetParamFont(param->name, actionObj->GetParamFont(param->name));
+					} else if (param->type == wxT("shadow")) {
+						obj->SetParam(param->name, actionObj->GetParam(param->name, wxT("visibility")), wxT("visibility"));
+						obj->SetParam(param->name, actionObj->GetParam(param->name));
+						obj->SetParam(param->name, actionObj->GetParam(param->name, wxT("-opacity")), wxT("-opacity"));
+						obj->SetParamInt(param->name, actionObj->GetParamInt(param->name, wxT("x")), wxT("x"));
+						obj->SetParamInt(param->name, actionObj->GetParamInt(param->name, wxT("y")), wxT("y"));
 					} else if (param->type != _T("image") && param->attribute.Find(wxT('#')) == wxNOT_FOUND) {
 						obj->SetParam(param->name, actionObj->GetParam(param->name));
 					}

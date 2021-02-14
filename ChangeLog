@@ -1,3 +1,14 @@
+git
+---
+
+  * disabled "Copy" option for MP3 and PCM (because PCM need to be repacked to big endian)
+
+Version 3.2 beta 7 <2020-03-01>
+-------------------------------
+  
+  * fixed setting shadow if multiple objects are selected
+  * added button home-moon (thanks to ecodrv)
+
 Version 3.2 beta 6 <2020-01-01>
 -------------------------------
   

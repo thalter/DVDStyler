@@ -223,9 +223,13 @@ wxSvgXmlNode* Stream::GetXML(DVDFileType type, Vob* vob) {
 
 /** Returns true if copy of video stream is possible */
 bool Stream::IsCopyPossible() {
-	if (GetType() != stVIDEO)
-		return true;
-	return m_sourceCodecName.StartsWith(wxT("mpeg2video"));
+	if (GetType() == stVIDEO) {
+		return m_sourceCodecName.StartsWith(wxT("mpeg2video"));
+	} else if (GetType() == stAUDIO) {
+		// if not MP3 and if not PCM (because PCM needs to be repacked to big endian)
+		return !m_sourceCodecName.StartsWith("mp3") && !m_sourceCodecName.StartsWith("pcm");
+	}
+	return true;
 }
 
 /** Returns true if video stream is DVD compliant */
