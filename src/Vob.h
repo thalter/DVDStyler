@@ -130,11 +130,15 @@ public:
     /** Returns fade-out duration (sec) */
 	double GetFadeOut() { return m_fadeOut; }
 	
-    /** Sets video filters */
-	void SetVideoFilters(const wxString& value) { m_videoFilters = value; }
-    /** Returns video filters */
-	const wxString& GetVideoFilters() { return m_videoFilters; }
-    /** Returns all video filters (incl. crop, pad, fade-in and fade-out) */
+    /** Sets custom video filters (before pad/scale) */
+	void SetVideoBeforeFilters(const wxString& value) { m_videoBeforeFilters = value; }
+    /** Returns custom video filters (before pad/scale) */
+	const wxString& GetVideoBeforeFilters() { return m_videoBeforeFilters; }
+	/** Sets custom video filters (after pad/scale) */
+	void SetVideoAfterFilters(const wxString& value) { m_videoAfterFilters = value; }
+	/** Returns custom video filters (after pad/scale) */
+	const wxString& GetVideoAfterFilters() { return m_videoAfterFilters; }
+	/** Returns all video filters (incl. crop, pad, fade-in and fade-out) */
 	wxString GetAllVideoFilters();
 	
 	void SetMenu(Menu* menu) { m_menu = menu; }
@@ -221,7 +225,8 @@ private:
 	vector<int> m_crop;
 	double m_fadeIn; // fade-in duration (sec)
 	double m_fadeOut; // fade-out duration (sec)
-	wxString m_videoFilters;
+	wxString m_videoBeforeFilters; // filteres before pad/scale
+	wxString m_videoAfterFilters; // filters after pad/scale
 	void Init(Menu* menu = NULL, Slideshow* slideshow = NULL);
 };
 

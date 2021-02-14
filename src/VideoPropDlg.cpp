@@ -18,9 +18,9 @@
 //(*InternalHeaders(VideoPropDlg)
 #include <wx/artprov.h>
 #include <wx/bitmap.h>
-#include <wx/intl.h>
 #include <wx/button.h>
 #include <wx/image.h>
+#include <wx/intl.h>
 #include <wx/string.h>
 //*)
 
@@ -45,6 +45,7 @@ const long VideoPropDlg::ID_SPINCTRL8 = wxNewId();
 const long VideoPropDlg::ID_SPINCTRL9 = wxNewId();
 const long VideoPropDlg::ID_SPINCTRL10 = wxNewId();
 const long VideoPropDlg::ID_TEXTCTRL1 = wxNewId();
+const long VideoPropDlg::ID_TEXTCTRL4 = wxNewId();
 const long VideoPropDlg::ID_CUSTOM1 = wxNewId();
 const long VideoPropDlg::ID_SLIDER = wxNewId();
 const long VideoPropDlg::ID_TIME_CTRL = wxNewId();
@@ -75,29 +76,30 @@ VideoPropDlg::VideoPropDlg(wxWindow* parent, DVD* dvd, Vob* vob, Stream* stream,
 	m_videoPos = 0;
 
 	//(*Initialize(VideoPropDlg)
-	wxGridBagSizer* gridBagSizer;
-	wxStaticText* srcLabel;
-	wxGridBagSizer* cropBagSizer;
 	wxBoxSizer* aspectSizer;
-	wxBoxSizer* fadeSizer;
-	wxStaticText* StaticText6;
-	wxStaticText* filterLabel;
-	wxStaticText* StaticText8;
-	wxBoxSizer* padCropSizer;
-	wxStaticText* durLabel;
-	wxBoxSizer* mediaSizer;
-	wxStdDialogButtonSizer* stdDialogButtonSizer;
-	wxStaticText* staticText1;
-	wxStaticText* dstLabel;
-	wxGridBagSizer* borderSizer;
-	wxStaticText* startLabel;
 	wxBoxSizer* dstSizer;
-	wxStaticText* fadeLabel;
-	wxStaticText* endLabel;
-	wxBoxSizer* timeSizer;
-	wxStaticText* fileNameLabel;
-	wxBoxSizer* mainSizer;
+	wxBoxSizer* fadeSizer;
 	wxBoxSizer* hSizer;
+	wxBoxSizer* mainSizer;
+	wxBoxSizer* mediaSizer;
+	wxBoxSizer* padCropSizer;
+	wxBoxSizer* timeSizer;
+	wxGridBagSizer* borderSizer;
+	wxGridBagSizer* cropBagSizer;
+	wxGridBagSizer* gridBagSizer;
+	wxStaticText* StaticText6;
+	wxStaticText* StaticText8;
+	wxStaticText* dstLabel;
+	wxStaticText* durLabel;
+	wxStaticText* endLabel;
+	wxStaticText* fadeLabel;
+	wxStaticText* fileNameLabel;
+	wxStaticText* filter2Label;
+	wxStaticText* filterLabel;
+	wxStaticText* srcLabel;
+	wxStaticText* startLabel;
+	wxStaticText* staticText1;
+	wxStdDialogButtonSizer* stdDialogButtonSizer;
 
 	Create(parent, wxID_ANY, _("Video properties"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER, _T("wxID_ANY"));
 	SetClientSize(wxSize(1024,500));
@@ -179,7 +181,7 @@ VideoPropDlg::VideoPropDlg(wxWindow* parent, DVD* dvd, Vob* vob, Stream* stream,
 	gridBagSizer->Add(padCropSizer, wxGBPosition(5, 0), wxGBSpan(1, 2), wxEXPAND, 5);
 	fadeLabel = new wxStaticText(this, wxID_ANY, _("Fade-In/Out:"), wxDefaultPosition, wxDefaultSize, 0, _T("wxID_ANY"));
 	gridBagSizer->Add(fadeLabel, wxGBPosition(6, 0), wxDefaultSpan, wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
-	filterLabel = new wxStaticText(this, wxID_ANY, _("Filters:"), wxDefaultPosition, wxDefaultSize, 0, _T("wxID_ANY"));
+	filterLabel = new wxStaticText(this, wxID_ANY, _("Filters before scale:"), wxDefaultPosition, wxDefaultSize, 0, _T("wxID_ANY"));
 	gridBagSizer->Add(filterLabel, wxGBPosition(7, 0), wxDefaultSpan, wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
 	fadeSizer = new wxBoxSizer(wxHORIZONTAL);
 	m_fadeInCtrl = new wxSpinCtrl(this, ID_SPINCTRL9, _T("0"), wxDefaultPosition, wxSize(58,-1), 0, 0, 999, 0, _T("ID_SPINCTRL9"));
@@ -193,8 +195,12 @@ VideoPropDlg::VideoPropDlg(wxWindow* parent, DVD* dvd, Vob* vob, Stream* stream,
 	StaticText8 = new wxStaticText(this, wxID_ANY, _("sec"), wxDefaultPosition, wxDefaultSize, 0, _T("wxID_ANY"));
 	fadeSizer->Add(StaticText8, 0, wxLEFT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 2);
 	gridBagSizer->Add(fadeSizer, wxGBPosition(6, 1), wxDefaultSpan, wxEXPAND, 5);
-	m_filtersCtrl = new wxTextCtrl(this, ID_TEXTCTRL1, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_TEXTCTRL1"));
-	gridBagSizer->Add(m_filtersCtrl, wxGBPosition(7, 1), wxDefaultSpan, wxEXPAND, 5);
+	m_filtersBeforeCtrl = new wxTextCtrl(this, ID_TEXTCTRL1, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_TEXTCTRL1"));
+	gridBagSizer->Add(m_filtersBeforeCtrl, wxGBPosition(7, 1), wxDefaultSpan, wxEXPAND, 5);
+	filter2Label = new wxStaticText(this, wxID_ANY, _("Filter after scale:"), wxDefaultPosition, wxDefaultSize, 0, _T("wxID_ANY"));
+	gridBagSizer->Add(filter2Label, wxGBPosition(8, 0), wxDefaultSpan, wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
+	m_filtersAfterCtrl = new wxTextCtrl(this, ID_TEXTCTRL4, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_TEXTCTRL4"));
+	gridBagSizer->Add(m_filtersAfterCtrl, wxGBPosition(8, 1), wxDefaultSpan, wxEXPAND, 5);
 	hSizer->Add(gridBagSizer, 0, wxALL|wxEXPAND, 5);
 	mediaSizer = new wxBoxSizer(wxVERTICAL);
 	m_mediaCtrl = new MediaCtrlFF(this, ID_CUSTOM1, wxT(""), wxDefaultPosition,wxDefaultSize, 0, wxDefaultValidator, _T("ID_CUSTOM1"));
@@ -347,7 +353,8 @@ VideoPropDlg::VideoPropDlg(wxWindow* parent, DVD* dvd, Vob* vob, Stream* stream,
     // fade-in / fade-out
     m_fadeInCtrl->SetValue(m_vob->GetFadeIn());
     m_fadeOutCtrl->SetValue(m_vob->GetFadeOut());
-    m_filtersCtrl->SetValue(m_vob->GetVideoFilters());
+    m_filtersBeforeCtrl->SetValue(m_vob->GetVideoBeforeFilters());
+    m_filtersAfterCtrl->SetValue(m_vob->GetVideoAfterFilters());
 
     // start time
     int ms = lround(m_vob->GetStartTime() * 1000);
@@ -452,8 +459,9 @@ int VideoPropDlg::ShowModal() {
 		m_vob->SetKeepAspectCrop(m_keepAspectChoice->GetSelection() == 1);
 		m_vob->SetFadeIn(m_fadeInCtrl->GetValue());
 		m_vob->SetFadeOut(m_fadeOutCtrl->GetValue());
-		m_vob->SetVideoFilters(m_filtersCtrl->GetValue());
-		
+		m_vob->SetVideoBeforeFilters(m_filtersBeforeCtrl->GetValue());
+		m_vob->SetVideoAfterFilters(m_filtersAfterCtrl->GetValue());
+				
 		double durationOld = m_vob->GetResultDuration();
 		double time = TimeToDouble(m_startCtrl->GetValue());
 		m_vob->SetStartTime(time >= 0 ? time : 0);
@@ -622,7 +630,8 @@ void VideoPropDlg::OnChangeFormat(wxCommandEvent& event) {
 	m_cropBottom->Enable(enable);
 	m_fadeInCtrl->Enable(enable);
 	m_fadeOutCtrl->Enable(enable);
-	m_filtersCtrl->Enable(enable);
+	m_filtersBeforeCtrl->Enable(enable);
+	m_filtersAfterCtrl->Enable(enable);
 	wxCommandEvent evt;
 	OnInterlaced(evt);
 	UpdatePadCrop();

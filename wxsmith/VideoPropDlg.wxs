@@ -302,7 +302,7 @@
 							</object>
 							<object class="sizeritem">
 								<object class="wxStaticText" name="wxID_ANY" variable="filterLabel" member="no">
-									<label>Filters:</label>
+									<label>Filters before scale:</label>
 								</object>
 								<col>0</col>
 								<row>7</row>
@@ -349,9 +349,26 @@
 								<border>5</border>
 							</object>
 							<object class="sizeritem">
-								<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="m_filtersCtrl" member="yes" />
+								<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="m_filtersBeforeCtrl" member="yes" />
 								<col>1</col>
 								<row>7</row>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+							</object>
+							<object class="sizeritem">
+								<object class="wxStaticText" name="wxID_ANY" variable="filter2Label" member="no">
+									<label>Filter after scale:</label>
+								</object>
+								<col>0</col>
+								<row>8</row>
+								<flag>wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+								<option>1</option>
+							</object>
+							<object class="sizeritem">
+								<object class="wxTextCtrl" name="ID_TEXTCTRL4" variable="m_filtersAfterCtrl" member="yes" />
+								<col>1</col>
+								<row>8</row>
 								<flag>wxEXPAND</flag>
 								<border>5</border>
 							</object>

@@ -90,7 +90,8 @@ Vob::Vob(const Vob& vob): m_pad(vob.m_pad), m_crop(vob.m_crop) {
 	m_doNotTranscode = vob.m_doNotTranscode;
 	m_fadeIn = vob.m_fadeIn;
 	m_fadeOut = vob.m_fadeOut;
-	m_videoFilters = vob.m_videoFilters;
+	m_videoBeforeFilters = vob.m_videoBeforeFilters;
+	m_videoAfterFilters = vob.m_videoAfterFilters;
 }
 
 Vob::~Vob() {
@@ -154,11 +155,9 @@ bool Vob::HasAudio() {
 /** Returns count of audio streams */
 unsigned int Vob::GetAudioStreamCount() {
 	unsigned int cnt = 0;
-	for (vector<Stream*>::iterator it = m_streams.begin(); it != m_streams.end(); it++) {
-		Stream* st = *it;
+	for (Stream* st : m_streams)
 		if (st->GetType() == stAUDIO && st->GetAudioFormat() != afNONE)
 			cnt++;
-	}
 	return cnt;
 }
 
@@ -166,11 +165,9 @@ unsigned int Vob::GetAudioStreamCount() {
 unsigned int Vob::GetSubtitleStreamsCount() {
 	unsigned int cnt = 0;
 	if (!m_menu) {
-		for (vector<Stream*>::iterator it = m_streams.begin(); it != m_streams.end(); it++) {
-			Stream* st = *it;
+		for (Stream* st : m_streams)
 			if (st->GetType() == stSUBTITLE && st->GetSubtitleFormat() != sfNONE)
 				cnt++;
-		}
 		cnt += GetSubtitles().size();
 	} else
 		cnt = 1;
@@ -286,11 +283,11 @@ void Vob::SetChapters(const wxString& value, bool firstVob) {
 /** Returns chapter list */
 wxString Vob::GetChapters() {
 	wxString result;
-	for (vector<Cell*>::iterator it = m_cells.begin(); it != m_cells.end(); it++)
-		if ((*it)->IsChapter()) {
+	for (Cell* cell : m_cells)
+		if (cell->IsChapter()) {
 			if (result.length())
 				result += wxT(",");
-			result += (*it)->GetStartStr();
+			result += cell->GetStartStr();
 		}
 	return result;
 }
@@ -298,8 +295,8 @@ wxString Vob::GetChapters() {
 /** Returns count of chapters */
 int Vob::GetChapterCount() {
 	int result = 0;
-	for (vector<Cell*>::iterator it = m_cells.begin(); it != m_cells.end(); it++)
-		if ((*it)->IsChapter())
+	for (Cell* cell : m_cells)
+		if (cell->IsChapter())
 			result++;
 	return result;
 }
@@ -424,10 +421,15 @@ wxString Vob::GetAllVideoFilters() {
 	}
 	
 	// add custom filters 
-	if (GetVideoFilters().length()) {
+	if (GetVideoBeforeFilters().length()) {
+		if (result.length())
+			result = wxT(',') + result;
+		result = GetVideoBeforeFilters() + result;
+	}
+	if (GetVideoAfterFilters().length()) {
 		if (result.length())
 			result += wxT(',');
-		result += GetVideoFilters();
+		result += GetVideoAfterFilters();
 	}
 	return result;
 }
@@ -524,8 +526,10 @@ wxSvgXmlNode* Vob::GetXML(DVDFileType type, DVD* dvd, int nextTitle) {
 			node->AddProperty(wxT("fadeIn"), wxString::Format(wxT("%g"), GetFadeIn()));
 		if (GetFadeOut() > 0)
 			node->AddProperty(wxT("fadeOut"), wxString::Format(wxT("%g"), GetFadeOut()));
-		if (GetVideoFilters().length() > 0)
-			node->AddProperty(wxT("videoFilters"), GetVideoFilters());
+		if (GetVideoBeforeFilters().length() > 0)
+			node->AddProperty(wxT("videoBeforeFilters"), GetVideoBeforeFilters());
+		if (GetVideoAfterFilters().length() > 0)
+			node->AddProperty(wxT("videoFilters"), GetVideoAfterFilters());
 	}
 	
 	// chapters/cells
@@ -536,9 +540,9 @@ wxSvgXmlNode* Vob::GetXML(DVDFileType type, DVD* dvd, int nextTitle) {
 		else if ((*(m_cells.end()-1))->GetEnd() != -1)
 			cells = true;
 	}
-	for (vector<Cell*>::iterator it = m_cells.begin(); it != m_cells.end(); it++) {
-		if ((!(*it)->IsChapter() && m_cells.size() > 0) || (*it)->GetEnd() != -1
-				|| (*it)->GetPause() != 0 || (*it)->GetCommands().length() > 0) {
+	for (Cell* cell : m_cells) {
+		if ((!cell->IsChapter() && m_cells.size() > 0) || cell->GetEnd() != -1
+				|| cell->GetPause() != 0 || cell->GetCommands().length() > 0) {
 			cells = true;
 			break;
 		}
@@ -704,8 +708,9 @@ bool Vob::PutXML(wxSvgXmlNode* node, DVD* dvd, int tsi, int pgci, bool menu, boo
 	m_recordingTime = node->GetPropVal(wxT("recordingTime"), &val) && val.ToDouble(&dval) ? dval : -1;
 	m_fadeIn = node->GetPropVal(wxT("fadeIn"), &val) && val.ToDouble(&dval) ? dval : 0;
 	m_fadeOut = node->GetPropVal(wxT("fadeOut"), &val) && val.ToDouble(&dval) ? dval : 0;
-	m_videoFilters = node->GetPropVal(wxT("videoFilters"), wxT(""));
-		
+	m_videoBeforeFilters = node->GetPropVal(wxT("videoBeforeFilters"), wxT(""));
+	m_videoAfterFilters = node->GetPropVal(wxT("videoFilters"), wxT(""));
+			
 	if (node->GetPropVal(wxT("doNotTranscode"), &val) && val == wxT("1"))
 		SetDoNotTranscode(true);
 	if (node->GetPropVal(wxT("chapters"), &val))

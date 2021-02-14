@@ -14,17 +14,17 @@
 #include "mediactrl_ffmpeg.h"
 
 //(*Headers(VideoPropDlg)
+#include <wx/bmpbuttn.h>
+#include <wx/checkbox.h>
+#include <wx/choice.h>
+#include <wx/dialog.h>
+#include <wx/gbsizer.h>
 #include <wx/sizer.h>
+#include <wx/slider.h>
+#include <wx/spinbutt.h>
+#include <wx/spinctrl.h>
 #include <wx/stattext.h>
 #include <wx/textctrl.h>
-#include <wx/checkbox.h>
-#include <wx/spinctrl.h>
-#include <wx/slider.h>
-#include <wx/choice.h>
-#include <wx/bmpbuttn.h>
-#include <wx/gbsizer.h>
-#include <wx/dialog.h>
-#include <wx/spinbutt.h>
 //*)
 
 class VideoPropDlg: public wxDialog {
@@ -44,41 +44,42 @@ public:
 
 private:
 	//(*Declarations(VideoPropDlg)
-	wxTextCtrl* m_filtersCtrl;
-	wxStaticText* m_durText;
-	wxCheckBox* m_keepAspectCtrl;
-	wxChoice* m_interlacedChoice;
-	wxSlider* m_slider;
-	wxSpinButton* m_frameSpinBt;
-	wxSpinCtrl* m_cropBottom;
-	wxStaticBoxSizer* m_padBox;
-	wxSpinCtrl* m_padLeft;
-	wxSpinButton* m_startFrameSpin;
-	wxTextCtrl* m_startCtrl;
-	wxSpinCtrl* m_cropTop;
 	MediaCtrlFF* m_mediaCtrl;
-	wxSpinButton* m_endSpin;
-	wxSpinCtrl* m_fadeOutCtrl;
-	wxSpinCtrl* m_fadeInCtrl;
-	wxChoice* m_dstChoice;
-	wxTextCtrl* m_timeCtrl;
-	wxBitmapButton* m_startBt;
-	wxTextCtrl* m_endCtrl;
-	wxStaticText* m_fileNameText;
-	wxChoice* m_ffChoice;
 	wxBitmapButton* m_endBt;
+	wxBitmapButton* m_startBt;
+	wxCheckBox* m_keepAspectCtrl;
 	wxChoice* m_aspectChoice;
-	wxStaticBoxSizer* m_cropBox;
-	wxSpinCtrl* m_padTop;
-	wxSpinCtrl* m_padBottom;
+	wxChoice* m_dstChoice;
+	wxChoice* m_ffChoice;
+	wxChoice* m_interlacedChoice;
 	wxChoice* m_keepAspectChoice;
-	wxStaticText* m_srcText;
+	wxSlider* m_slider;
 	wxSpinButton* m_endFrameSpin;
-	wxSpinCtrl* m_cropRight;
-	wxSpinButton* m_timeSpinBt;
-	wxSpinCtrl* m_cropLeft;
-	wxSpinCtrl* m_padRight;
+	wxSpinButton* m_endSpin;
+	wxSpinButton* m_frameSpinBt;
+	wxSpinButton* m_startFrameSpin;
 	wxSpinButton* m_startSpin;
+	wxSpinButton* m_timeSpinBt;
+	wxSpinCtrl* m_cropBottom;
+	wxSpinCtrl* m_cropLeft;
+	wxSpinCtrl* m_cropRight;
+	wxSpinCtrl* m_cropTop;
+	wxSpinCtrl* m_fadeInCtrl;
+	wxSpinCtrl* m_fadeOutCtrl;
+	wxSpinCtrl* m_padBottom;
+	wxSpinCtrl* m_padLeft;
+	wxSpinCtrl* m_padRight;
+	wxSpinCtrl* m_padTop;
+	wxStaticBoxSizer* m_cropBox;
+	wxStaticBoxSizer* m_padBox;
+	wxStaticText* m_durText;
+	wxStaticText* m_fileNameText;
+	wxStaticText* m_srcText;
+	wxTextCtrl* m_endCtrl;
+	wxTextCtrl* m_filtersAfterCtrl;
+	wxTextCtrl* m_filtersBeforeCtrl;
+	wxTextCtrl* m_startCtrl;
+	wxTextCtrl* m_timeCtrl;
 	//*)
 
 	//(*Identifiers(VideoPropDlg)
@@ -102,6 +103,7 @@ private:
 	static const long ID_SPINCTRL9;
 	static const long ID_SPINCTRL10;
 	static const long ID_TEXTCTRL1;
+	static const long ID_TEXTCTRL4;
 	static const long ID_CUSTOM1;
 	static const long ID_SLIDER;
 	static const long ID_TIME_CTRL;
