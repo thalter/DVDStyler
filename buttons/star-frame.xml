@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- Created by ecodrv -->
+<button previewHighlighted="true">
+	<title>Star frame</title>
+	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="8 8 184 184">
+		<defs>
+			<filter id="shadowFilter">
+				<feGaussianBlur stdDeviation="10"/>
+			</filter>
+			<clipPath id="cp">
+				<path id="def_frame" style="stroke-width:10;"
+					 d="M100,18 L128.8,60.4 L178,74.7 L146.6,115.1 L148.2,166.3 L100,149 L51.8,166.3 L53.4,115.1 L22,74.7 L71.2,60.4 z"/>
+			</clipPath>
+		</defs>
+		<g id="whole" transform="rotate(0,100,100)">
+			<use id="shadow" xlink:href="#frame_stroke" x="0" y="0" style="fill:none;filter:url(#shadowFilter);stroke:#ffff00;visibility:visible;"/>
+			<g id="base" style="stroke:#ffe000;stroke-opacity:0.376;">
+				<use xlink:href="#def_frame" style="fill:none;stroke-opacity:1;"/>
+				<use id="frame_fill" xlink:href="#def_frame" style="fill:#101010;stroke:none;"/>
+				<image id="image" x="22" y="18" width="156" height="149" preserveAspectRatio="xmidymid slice" style="clip-path:url(#cp);opacity:1;"/>
+				<use id="frame_stroke" xlink:href="#def_frame" style="fill:none;"/>
+			</g>
+			<use id="sel" xlink:href="#def_frame" style="fill:none;stroke:none;"/>
+		</g>
+	</svg>
+	<parameters>
+		<parameter>
+			<title>Rotation</title>
+			<name>rotation</name>
+			<type>integer(0,360)</type>
+			<element>whole</element>
+			<attribute>transform#1</attribute>
+		</parameter>
+		<parameter>
+			<title>Image</title>
+			<name>href</name>
+			<type>image</type>
+			<element>image</element>
+			<attribute>xlink:href</attribute>
+		</parameter>
+		<parameter>
+			<title>Image opacity</title>
+			<name>image_opacity</name>
+			<type>percent</type>
+			<element>image</element>
+			<attribute>opacity</attribute>
+		</parameter>
+		<parameter>
+			<title>Border colour</title>
+			<name>border_colour</name>
+			<type>colour</type>
+			<element>base</element>
+			<attribute>stroke</attribute>
+		</parameter>
+		<parameter>
+			<title>Border width</title>
+			<name>border_width</name>
+			<type>integer</type>
+			<element>def_frame</element>
+			<attribute>stroke-width</attribute>
+		</parameter>
+		<parameter>
+			<title>Inner colour</title>
+			<name>inner_colour</name>
+			<type>colour</type>
+			<element>frame_fill</element>
+			<attribute>fill</attribute>
+		</parameter>
+		<parameter>
+			<title>Shadow</title>
+			<name>shadow</name>
+			<type>shadow</type>
+			<element>shadow</element>
+			<attribute>stroke</attribute>
+		</parameter>
+		<parameter>
+			<title>Selection colour</title>
+			<name>sel_fill_colour</name>
+			<type>colour</type>
+			<element>sel</element>
+			<attribute>fill</attribute>
+			<changeable/>
+			<default-value>
+				<highlighted>#ff000050</highlighted>
+				<selected>#ffff0050</selected>
+			</default-value>
+		</parameter>
+		<parameter>
+			<title>Image offset x</title>
+			<name>image_offset_x</name>
+			<type>integer(-200,200)</type>
+			<element>image</element>
+			<attribute>x</attribute>
+		</parameter>
+		<parameter>
+			<title>Image offset y</title>
+			<name>image_offset_y</name>
+			<type>integer(-200,200)</type>
+			<element>image</element>
+			<attribute>y</attribute>
+		</parameter>
+		<parameter>
+			<title>Image width</title>
+			<name>image_width</name>
+			<type>integer(156,999)</type>
+			<element>image</element>
+			<attribute>width</attribute>
+		</parameter>
+		<parameter>
+			<title>Image height</title>
+			<name>image_height</name>
+			<type>integer(149,999)</type>
+			<element>image</element>
+			<attribute>height</attribute>
+		</parameter>
+	</parameters>
+	<init-parameter>href</init-parameter>
+	<default-size>
+		<width>180</width>
+		<height>180</height>
+	</default-size>
+	<min-size>
+		<width>20</width>
+		<height>20</height>
+	</min-size>
+</button>

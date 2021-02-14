@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- Created by ecodrv -->
+<button>
+	<title>Dotted frame</title>
+	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<defs>
+			<clipPath id="cp">
+				<rect id="def_frame" x="7%" y="7%" width="86%" height="86%" rx="500"/>
+			</clipPath>
+			<filter id="shadowFilter">
+				<feGaussianBlur stdDeviation="3"/>
+			</filter>
+		</defs>
+		<use id="frame_fill" xlink:href="#def_frame" style="fill:#101010;stroke:none;"/>
+		<image id="image" x="7%" y="7%" width="86%" height="86%" preserveAspectRatio="xmidymid slice" style="clip-path:url(#cp);opacity:1;"/>
+		<use id="shadow" xlink:href="#frame_stroke" x="2" y="2" style="fill:none;filter:url(#shadowFilter);stroke:#404040;stroke-opacity:1;visibility:hidden;"/>
+		<g id="body_frame" style="fill:none;stroke:#00c030;">
+			<use id="frame_stroke" xlink:href="#def_frame" style="stroke-width:10;"/>
+		</g>
+		<use id="line" xlink:href="#def_frame" style="fill:none;stroke:#00ff40;stroke-width:6;"/>
+		<use id="dotted_line" xlink:href="#def_frame" style="fill:none;stroke:#ffff00;stroke-width:4;stroke-linecap:round;stroke-dasharray:0 7;"/>
+	</svg>
+	<parameters>
+		<parameter>
+			<title>Image</title>
+			<name>href</name>
+			<type>image</type>
+			<element>image</element>
+			<attribute>xlink:href</attribute>
+		</parameter>
+		<parameter>
+			<title>Image opacity</title>
+			<name>image_opacity</name>
+			<type>percent</type>
+			<element>image</element>
+			<attribute>opacity</attribute>
+		</parameter>
+		<parameter>
+			<title>Border colour</title>
+			<name>frame_stroke_colour</name>
+			<type>colour</type>
+			<element>body_frame</element>
+			<attribute>stroke</attribute>
+		</parameter>
+		<parameter>
+			<title>Border width</title>
+			<name>frame_stroke_width</name>
+			<type>integer</type>
+			<element>frame_stroke</element>
+			<attribute>stroke-width</attribute>
+		</parameter>
+		<parameter>
+			<title>Corner round</title>
+			<name>rx</name>
+			<type>integer</type>
+			<element>def_frame</element>
+			<attribute>rx</attribute>
+		</parameter>
+		<parameter>
+			<title>Inner colour</title>
+			<name>frame_fill</name>
+			<type>colour</type>
+			<element>frame_fill</element>
+			<attribute>fill</attribute>
+		</parameter>
+		<parameter>
+			<title>Line</title>
+			<name>line_colour</name>
+			<type>colour</type>
+			<element>line</element>
+			<attribute>stroke</attribute>
+			<changeable/>
+			<default-value>
+				<highlighted>#ff0000</highlighted>
+				<selected>#ffff00</selected>
+			</default-value>
+		</parameter>
+		<parameter>
+			<title>Line width</title>
+			<name>line_width</name>
+			<type>integer</type>
+			<element>line</element>
+			<attribute>stroke-width</attribute>
+		</parameter>
+		<parameter>
+			<title>Dotted line</title>
+			<name>dotted_line_colour</name>
+			<type>colour</type>
+			<element>dotted_line</element>
+			<attribute>stroke</attribute>
+		</parameter>
+		<parameter>
+			<title>Line width</title>
+			<name>dotted_line_width</name>
+			<type>integer</type>
+			<element>dotted_line</element>
+			<attribute>stroke-width</attribute>
+		</parameter>
+		<parameter>
+			<title>Shadow</title>
+			<name>shadow</name>
+			<type>shadow</type>
+			<element>shadow</element>
+			<attribute>stroke</attribute>
+		</parameter>
+	</parameters>
+	<init-parameter>href</init-parameter>
+	<default-size>
+		<width>192</width>
+		<height>108</height>
+	</default-size>
+	<min-size>
+		<width>8</width>
+		<height>8</height>
+	</min-size>
+</button>

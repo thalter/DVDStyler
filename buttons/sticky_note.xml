@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!-- Created by Gustavo Rezende-->
-<button>
+<button previewHighlighted="true">
   <title>Sticky note</title>
   <svg width="150" height="150" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
   	viewBox="0 0 300 300">
@@ -71,6 +71,13 @@
         <highlighted>#FF0000</highlighted>
         <selected>#FFFFFF</selected>
       </default-value>
+    </parameter>
+    <parameter>
+      <title>Selection width</title>
+      <name>selWidth</name>
+      <type>integer</type>
+	  <element>sel</element>
+      <attribute>stroke-width</attribute>
     </parameter>
   </parameters>
   <init-parameter>href</init-parameter>
