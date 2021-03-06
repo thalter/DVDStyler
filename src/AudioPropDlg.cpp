@@ -198,8 +198,12 @@ AudioPropDlg::AudioPropDlg(wxWindow* parent,Vob* vob, const wxString& audioFile,
 	m_durText->SetLabel(s);
 	m_srcText->SetLabel(m_stream->GetSourceFormat());
 
-	m_dstChoice->Append(DVD::GetAudioFormatLabels(true, true));
-	m_dstChoice->SetSelection(m_stream->GetAudioFormat());
+	bool copyEnabled = m_stream->IsCopyPossible();
+	int afIdx = m_stream->GetAudioFormat();
+	if (!copyEnabled && afIdx > 0)
+		afIdx -= 1;
+	m_dstChoice->Append(DVD::GetAudioFormatLabels(copyEnabled, true));
+	m_dstChoice->SetSelection(afIdx);
 
 	// upmix to 5.1 oder donwmix to stereo
 	if (m_stream->GetSourceChannelNumber() >= 6) {
@@ -291,7 +295,9 @@ void AudioPropDlg::OnChangeFormat(wxCommandEvent& event) {
 }
 
 AudioFormat AudioPropDlg::GetAudioFormat() {
-	return (AudioFormat) m_dstChoice->GetSelection();
+	bool copyEnabled = m_stream->IsCopyPossible();
+	int afIdx = m_dstChoice->GetSelection();
+	return (AudioFormat) (copyEnabled || afIdx == 0 ? afIdx : afIdx + 1);
 }
 
 wxString AudioPropDlg::GetLangCode() {

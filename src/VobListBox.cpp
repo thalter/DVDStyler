@@ -592,7 +592,8 @@ int VobListBox::GetAudioFormat(unsigned int streamIdx) {
 
 /** Sets audio format */
 void VobListBox::SetAudioFormat(unsigned int streamIdx, int audioFormat) {
-	m_choiceList[GetChoiceIdx(streamIdx)]->SetSelection(audioFormat);
+	bool copyEnabled = m_vob->GetStreams()[streamIdx]->IsCopyPossible();
+	m_choiceList[GetChoiceIdx(streamIdx)]->SetSelection(audioFormat + (copyEnabled || audioFormat == 0 ? 0 : -1));
 }
 
 /** Get audio language code */
