@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DVDStyler 3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-06 07:57+0200\n"
+"POT-Creation-Date: 2021-03-06 14:45+0100\n"
 "PO-Revision-Date: 2019-05-08 23:51+0900\n"
 "Last-Translator: ecodrv <ecodrv at yahoo.co.jp>\n"
 "Language-Team: \n"
@@ -181,20 +181,20 @@ msgstr "アニメーション"
 msgid "Audio properties"
 msgstr "音声プロパティ"
 
-#: src/AudioPropDlg.cpp:83 src/VideoPropDlg.cpp:107
+#: src/AudioPropDlg.cpp:83 src/VideoPropDlg.cpp:109
 msgid "File Name:"
 msgstr "ファイル名:"
 
-#: src/AudioPropDlg.cpp:87 src/TitlePropDlg.cpp:196 src/VideoFrameDlg.cpp:77 src/VideoPropDlg.cpp:112
+#: src/AudioPropDlg.cpp:87 src/TitlePropDlg.cpp:196 src/VideoFrameDlg.cpp:77 src/VideoPropDlg.cpp:114
 #: src/VobListBox.cpp:109
 msgid "Duration:"
 msgstr "再生時間:"
 
-#: src/AudioPropDlg.cpp:91 src/VideoPropDlg.cpp:116
+#: src/AudioPropDlg.cpp:91 src/VideoPropDlg.cpp:118
 msgid "Source Format:"
 msgstr "元の形式:"
 
-#: src/AudioPropDlg.cpp:95 src/VideoPropDlg.cpp:120
+#: src/AudioPropDlg.cpp:95 src/VideoPropDlg.cpp:122
 msgid "Destination Format:"
 msgstr "変換後の形式:"
 
@@ -202,7 +202,7 @@ msgstr "変換後の形式:"
 msgid "5.1"
 msgstr "5.1"
 
-#: src/AudioPropDlg.cpp:104 src/SettingsDlg.cpp:73 src/SubtitlePropDlg.cpp:107
+#: src/AudioPropDlg.cpp:104 src/SettingsDlg.cpp:77 src/SubtitlePropDlg.cpp:107
 msgid "Language:"
 msgstr "表示言語:"
 
@@ -214,7 +214,7 @@ msgstr "遅延時間:"
 msgid "ms"
 msgstr "ミリ秒"
 
-#: src/AudioPropDlg.cpp:120 src/VideoPropDlg.cpp:182
+#: src/AudioPropDlg.cpp:120
 msgid "Filters:"
 msgstr "フィルター:"
 
@@ -222,7 +222,7 @@ msgstr "フィルター:"
 msgid "Volume adjustment"
 msgstr "音量調整"
 
-#: src/AudioPropDlg.cpp:128 src/SettingsDlg.cpp:203 src/SettingsDlg.cpp:302
+#: src/AudioPropDlg.cpp:128 src/SettingsDlg.cpp:207 src/SettingsDlg.cpp:306
 msgid "No"
 msgstr "いいえ"
 
@@ -230,7 +230,7 @@ msgstr "いいえ"
 msgid "Change (%)"
 msgstr "変更 (%)"
 
-#: src/AudioPropDlg.cpp:135 src/SettingsDlg.cpp:121
+#: src/AudioPropDlg.cpp:135 src/SettingsDlg.cpp:125
 msgid "Normalize"
 msgstr "ノーマライズ"
 
@@ -238,29 +238,29 @@ msgstr "ノーマライズ"
 msgid "Change (dB)"
 msgstr "変更 (dB)"
 
-#: src/AudioPropDlg.cpp:206 src/Stream.cpp:114
+#: src/AudioPropDlg.cpp:210 src/Stream.cpp:116
 msgid "stereo"
 msgstr "ステレオ"
 
-#: src/AudioPropDlg.cpp:244 src/AudioPropDlg.cpp:426
+#: src/AudioPropDlg.cpp:248 src/AudioPropDlg.cpp:432
 msgid "Track gain:"
 msgstr "トラックゲイン:"
 
-#: src/AudioPropDlg.cpp:348
+#: src/AudioPropDlg.cpp:354
 #, c-format
 msgid "Invalid time value '%s'"
 msgstr "時間の値 '%s' が正しくありません"
 
-#: src/AudioPropDlg.cpp:354
+#: src/AudioPropDlg.cpp:360
 #, c-format
 msgid "Invalid volume value '%s'"
 msgstr "音量の値 '%s' が正しくありません"
 
-#: src/AudioPropDlg.cpp:389
+#: src/AudioPropDlg.cpp:395
 msgid "Analysis of audio"
 msgstr "音声解析"
 
-#: src/AudioPropDlg.cpp:389 src/MainWin.cpp:872 src/SysUtils.cpp:303 src/VobListBox.cpp:611
+#: src/AudioPropDlg.cpp:395 src/MainWin.cpp:872 src/SysUtils.cpp:303 src/VobListBox.cpp:655
 msgid "Please wait..."
 msgstr "お待ちください..."
 
@@ -278,8 +278,8 @@ msgstr "書込み"
 msgid "Temp directory:"
 msgstr "一時保存用ディレクトリ:"
 
-#: src/BurnDlg.cpp:114 src/BurnDlg.cpp:138 src/BurnDlg.cpp:160 src/BurnDlg.cpp:186 src/SubtitlePropDlg.cpp:148
-#: src/SubtitlePropDlg.cpp:161 src/SubtitlePropDlg.cpp:179
+#: src/BurnDlg.cpp:114 src/BurnDlg.cpp:138 src/BurnDlg.cpp:160 src/BurnDlg.cpp:186
+#: src/SubtitlePropDlg.cpp:148 src/SubtitlePropDlg.cpp:161 src/SubtitlePropDlg.cpp:179
 msgid "..."
 msgstr "..."
 
@@ -335,7 +335,7 @@ msgstr "エラー補正用のデータを含める"
 msgid "Start"
 msgstr "開始"
 
-#: src/BurnDlg.cpp:229 src/SubtitlePropDlg.cpp:244 src/VideoFrameDlg.cpp:75 wxVillaLib/PropDlg.cpp:207
+#: src/BurnDlg.cpp:229 src/SubtitlePropDlg.cpp:244 src/VideoFrameDlg.cpp:75 wxVillaLib/PropDlg.cpp:229
 msgid "Reset"
 msgstr "リセット"
 
@@ -367,12 +367,12 @@ msgstr "ISO ファイル置き場の容量が足りません。"
 msgid "There is not enough space on temporary directory."
 msgstr "一時保存用ディレクトリの容量が足りません。"
 
-#: src/BurnDlg.cpp:507 src/BurnDlg.cpp:517 wxVillaLib/PropDlg.cpp:830
+#: src/BurnDlg.cpp:507 src/BurnDlg.cpp:517 wxVillaLib/PropDlg.cpp:857
 msgid "Choose a directory"
 msgstr "ディレクトリの選択"
 
 #: src/BurnDlg.cpp:536 src/MainWin.cpp:1218 src/TitlePropDlg.cpp:423 src/TitlePropDlg.cpp:439
-#: wxVillaLib/PropDlg.cpp:788
+#: wxVillaLib/PropDlg.cpp:815
 msgid "Choose a file"
 msgstr "ファイル選択"
 
@@ -423,7 +423,7 @@ msgstr "DVD プレイヤーのパスを指定して下さい"
 msgid "Please enter file name to save ISO"
 msgstr "保存する ISO ファイル名を入力してください"
 
-#: src/BurnDlg.cpp:631 src/ButtonEditDlg.cpp:611
+#: src/BurnDlg.cpp:631 src/ButtonEditDlg.cpp:627
 #, c-format
 msgid "File '%s' already exist. Do you want to overwrite it?"
 msgstr "'%s' というファイルは既に存在します。上書きしてよいですか?"
@@ -445,11 +445,11 @@ msgstr ""
 "トランスコード済みのファイルが %d 個キャッシュされています。\n"
 "一時保存用ディレクトリを変更すると、これらは削除されます。"
 
-#: src/ButtonAddParamDlg.cpp:47
+#: src/ButtonAddParamDlg.cpp:50
 msgid "Add parameter"
 msgstr "パラメーター追加"
 
-#: src/ButtonAddParamDlg.cpp:55
+#: src/ButtonAddParamDlg.cpp:58
 msgid ""
 "Please select an SVG element\n"
 "for new parameter:"
@@ -457,152 +457,164 @@ msgstr ""
 "新しいパラメーター用に\n"
 "SVG要素を選択して下さい:"
 
-#: src/ButtonAddParamDlg.cpp:60 src/SubtitlePropDlg.cpp:143
-msgid "Fill:"
-msgstr "塗りつぶし:"
+#: src/ButtonAddParamDlg.cpp:62
+#, fuzzy
+msgid "Attribute:"
+msgstr "属性"
 
-#: src/ButtonAddParamDlg.cpp:62 src/ButtonAddParamDlg.cpp:67 src/MenuEditor.cpp:548
-#: buttons/arrow-text-left.xml:8 buttons/arrow-text-left.xml:12 buttons/arrow-text-right.xml:8
-#: buttons/arrow-text-right.xml:13 buttons/frame-text.xml:70 buttons/pill2.xml:24 buttons/pill2.xml:36
+#: src/ButtonAddParamDlg.cpp:65
+msgid "fill"
+msgstr ""
+
+#: src/ButtonAddParamDlg.cpp:67 src/ButtonAddParamDlg.cpp:72 src/ButtonAddParamDlg.cpp:77
+#: src/MenuEditor.cpp:548 buttons/arrow-text-left.xml:8 buttons/arrow-text-left.xml:12
+#: buttons/arrow-text-right.xml:8 buttons/arrow-text-right.xml:13 buttons/frame-text.xml:25
+#: buttons/frame-text.xml:70 buttons/pill-opacity.xml:14 buttons/pill-opacity.xml:64
+#: buttons/pill-stroke.xml:14 buttons/pill-stroke.xml:73 buttons/pill2.xml:24 buttons/pill2.xml:36
 #: buttons/pill3.xml:17 buttons/pill3.xml:29 buttons/text-v3.xml:3 objects/text-v2.xml:3
 #: objects/text-v2.xml:19
 msgid "Text"
 msgstr "テキスト"
 
-#: src/ButtonAddParamDlg.cpp:65
-msgid "Stroke:"
+#: src/ButtonAddParamDlg.cpp:70
+#, fuzzy
+msgid "stroke"
 msgstr "縁取り:"
 
-#: src/ButtonEditDlg.cpp:170
+#: src/ButtonAddParamDlg.cpp:75
+msgid "stroke-width"
+msgstr ""
+
+#: src/ButtonEditDlg.cpp:184
 msgid "name"
 msgstr "名前"
 
-#: src/ButtonEditDlg.cpp:170 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:439 src/MenuObjectPropDlg.cpp:677
-#: src/MenuObjectPropDlg.cpp:686 src/MenuObjectPropDlg.cpp:698
+#: src/ButtonEditDlg.cpp:184 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:439
+#: src/MenuObjectPropDlg.cpp:679 src/MenuObjectPropDlg.cpp:688 src/MenuObjectPropDlg.cpp:700
 msgid "title"
 msgstr "タイトル"
 
-#: src/ButtonEditDlg.cpp:170
+#: src/ButtonEditDlg.cpp:184
 msgid "type"
 msgstr "タイプ"
 
-#: src/ButtonEditDlg.cpp:170
+#: src/ButtonEditDlg.cpp:184
 msgid "ID of element"
 msgstr "要素のID"
 
-#: src/ButtonEditDlg.cpp:170
+#: src/ButtonEditDlg.cpp:184
 msgid "attribute name"
 msgstr "属性名"
 
-#: src/ButtonEditDlg.cpp:170
+#: src/ButtonEditDlg.cpp:184
 msgid "dynamic"
 msgstr "動的"
 
-#: src/ButtonEditDlg.cpp:171
+#: src/ButtonEditDlg.cpp:185
 msgid "value"
 msgstr "値"
 
-#: src/ButtonEditDlg.cpp:171 src/ButtonEditDlg.cpp:261
+#: src/ButtonEditDlg.cpp:185 src/ButtonEditDlg.cpp:275
 msgid "highlighted"
 msgstr "選択時"
 
-#: src/ButtonEditDlg.cpp:171 src/ButtonEditDlg.cpp:262
+#: src/ButtonEditDlg.cpp:185 src/ButtonEditDlg.cpp:276
 msgid "selected"
 msgstr "実行時"
 
-#: src/ButtonEditDlg.cpp:251
+#: src/ButtonEditDlg.cpp:265
 msgid "Create button"
 msgstr "ボタン作成"
 
-#: src/ButtonEditDlg.cpp:260
+#: src/ButtonEditDlg.cpp:274
 msgid "normal"
 msgstr "通常時"
 
-#: src/ButtonEditDlg.cpp:264
+#: src/ButtonEditDlg.cpp:278
 msgid "Button state"
 msgstr "ボタンの状態"
 
-#: src/ButtonEditDlg.cpp:271
+#: src/ButtonEditDlg.cpp:285
 msgid "Directory:"
 msgstr "ディレクトリ:"
 
-#: src/ButtonEditDlg.cpp:273 buttons/circle-outline.xml:16 buttons/circle.xml:15 buttons/pill.xml:44
+#: src/ButtonEditDlg.cpp:287 buttons/circle-outline.xml:16 buttons/circle.xml:15 buttons/pill.xml:44
 #: buttons/text-circle-v2.xml:19 buttons/text-square-v2.xml:20 buttons/text-underlined-v3.xml:19
 #: buttons/text-v3.xml:19
 msgid "Label"
 msgstr "ラベル"
 
-#: src/ButtonEditDlg.cpp:275 src/SlideDlg.cpp:48
+#: src/ButtonEditDlg.cpp:289 src/SlideDlg.cpp:48
 msgid "File name:"
 msgstr "ファイル名:"
 
-#: src/ButtonEditDlg.cpp:280
+#: src/ButtonEditDlg.cpp:294
 msgid ".xml"
 msgstr ".xml"
 
-#: src/ButtonEditDlg.cpp:283
+#: src/ButtonEditDlg.cpp:297
 msgid "Title:"
 msgstr "タイトル:"
 
-#: src/ButtonEditDlg.cpp:287
+#: src/ButtonEditDlg.cpp:301
 msgid "Default width:"
 msgstr "既定の幅:"
 
-#: src/ButtonEditDlg.cpp:293 src/ButtonEditDlg.cpp:316 src/ButtonEditDlg.cpp:340 src/ButtonEditDlg.cpp:363
+#: src/ButtonEditDlg.cpp:307 src/ButtonEditDlg.cpp:330 src/ButtonEditDlg.cpp:354 src/ButtonEditDlg.cpp:377
 msgid "or"
 msgstr "または"
 
-#: src/ButtonEditDlg.cpp:297 src/ButtonEditDlg.cpp:302 src/ButtonEditDlg.cpp:320 src/ButtonEditDlg.cpp:325
-#: src/ButtonEditDlg.cpp:344 src/ButtonEditDlg.cpp:349 src/ButtonEditDlg.cpp:367 src/ButtonEditDlg.cpp:372
+#: src/ButtonEditDlg.cpp:311 src/ButtonEditDlg.cpp:316 src/ButtonEditDlg.cpp:334 src/ButtonEditDlg.cpp:339
+#: src/ButtonEditDlg.cpp:358 src/ButtonEditDlg.cpp:363 src/ButtonEditDlg.cpp:381 src/ButtonEditDlg.cpp:386
 msgid "+"
 msgstr "+"
 
-#: src/ButtonEditDlg.cpp:307 src/ButtonEditDlg.cpp:330 src/ButtonEditDlg.cpp:354 src/ButtonEditDlg.cpp:377
+#: src/ButtonEditDlg.cpp:321 src/ButtonEditDlg.cpp:344 src/ButtonEditDlg.cpp:368 src/ButtonEditDlg.cpp:391
 #: src/SubtitlePropDlg.cpp:153 src/SubtitlePropDlg.cpp:167 src/SubtitlePropDlg.cpp:184
 msgid "%"
 msgstr "%"
 
-#: src/ButtonEditDlg.cpp:310
+#: src/ButtonEditDlg.cpp:324
 msgid "Min width:"
 msgstr "最小の幅:"
 
-#: src/ButtonEditDlg.cpp:334
+#: src/ButtonEditDlg.cpp:348
 msgid "Default height:"
 msgstr "既定の高さ:"
 
-#: src/ButtonEditDlg.cpp:357
+#: src/ButtonEditDlg.cpp:371
 msgid "Min height:"
 msgstr "最小の高さ:"
 
-#: src/ButtonEditDlg.cpp:382
+#: src/ButtonEditDlg.cpp:396
 msgid "Parameters:"
 msgstr "パラメーター:"
 
-#: src/ButtonEditDlg.cpp:391 src/MainWin.cpp:321
+#: src/ButtonEditDlg.cpp:405 src/MainWin.cpp:321
 msgid "Save"
 msgstr "上書き保存"
 
-#: src/ButtonEditDlg.cpp:456
+#: src/ButtonEditDlg.cpp:470
 msgid "Edit button"
 msgstr "ボタン修正"
 
-#: src/ButtonEditDlg.cpp:500
+#: src/ButtonEditDlg.cpp:514
 msgid "Add"
 msgstr "追加"
 
-#: src/ButtonEditDlg.cpp:502
+#: src/ButtonEditDlg.cpp:516
 msgid "Remove selected"
 msgstr "選択された項目を削除"
 
-#: src/ButtonEditDlg.cpp:546
+#: src/ButtonEditDlg.cpp:560
 msgid "No SVG element is selected"
 msgstr "SVGの要素が選択されていません"
 
-#: src/ButtonEditDlg.cpp:627 src/NewProjectDlg.cpp:51 src/NewProjectDlg.cpp:134
+#: src/ButtonEditDlg.cpp:643 src/NewProjectDlg.cpp:51 src/NewProjectDlg.cpp:134
 msgid "Info"
 msgstr "情報"
 
-#: src/ButtonEditDlg.cpp:627
+#: src/ButtonEditDlg.cpp:643
 msgid ""
 "Click on image to select an SVG\n"
 " element for a new parameter"
@@ -611,7 +623,7 @@ msgstr ""
 "SVG要素をクリックして下さい"
 
 #: src/Cache.cpp:238 src/Cache.cpp:263 src/Process.cpp:25 src/ProcessMenuTransitions.cpp:121
-#: src/ProcessTranscode.cpp:159 src/ProcessTranscode.cpp:174
+#: src/ProcessTranscode.cpp:195 src/ProcessTranscode.cpp:211
 #, c-format
 msgid "Can't remove file '%s'"
 msgstr "ファイル '%s' を削除できません"
@@ -638,7 +650,7 @@ msgstr "チャプター"
 msgid "Chapters:"
 msgstr "チャプター位置:"
 
-#: src/ChaptersDlg.cpp:128 src/VideoFrameDlg.cpp:61 src/VideoPropDlg.cpp:207
+#: src/ChaptersDlg.cpp:128 src/VideoFrameDlg.cpp:61 src/VideoPropDlg.cpp:213
 msgid "Time:"
 msgstr "時間:"
 
@@ -659,7 +671,7 @@ msgstr "プログラム"
 msgid "Regular cell"
 msgstr "通常のセル"
 
-#: src/ChaptersDlg.cpp:152 src/VideoPropDlg.cpp:235
+#: src/ChaptersDlg.cpp:152 src/VideoPropDlg.cpp:241
 msgid "End:"
 msgstr "終了:"
 
@@ -667,8 +679,8 @@ msgstr "終了:"
 msgid "Auto"
 msgstr "自動"
 
-#: src/ChaptersDlg.cpp:157 src/DVD.cpp:1006 src/MenuObjectPropDlg.cpp:161 src/MenuObjectPropDlg.cpp:557
-#: src/SettingsDlg.cpp:177
+#: src/ChaptersDlg.cpp:157 src/DVD.cpp:1006 src/MenuObjectPropDlg.cpp:161 src/MenuObjectPropDlg.cpp:559
+#: src/SettingsDlg.cpp:181
 msgid "Custom"
 msgstr "カスタム"
 
@@ -676,9 +688,9 @@ msgstr "カスタム"
 msgid "Pause:"
 msgstr "停止時間:"
 
-#: src/ChaptersDlg.cpp:174 src/MainWin.cpp:621 src/MenuPropDlg.cpp:171 src/SettingsDlg.cpp:163
-#: src/SettingsDlg.cpp:165 src/TitlePropDlg.cpp:150 src/TitlePropDlg.cpp:196 src/VideoFrameDlg.cpp:82
-#: src/VideoPropDlg.cpp:188 src/VideoPropDlg.cpp:193
+#: src/ChaptersDlg.cpp:174 src/MainWin.cpp:621 src/MenuPropDlg.cpp:171 src/SettingsDlg.cpp:167
+#: src/SettingsDlg.cpp:169 src/TitlePropDlg.cpp:150 src/TitlePropDlg.cpp:196 src/VideoFrameDlg.cpp:82
+#: src/VideoPropDlg.cpp:190 src/VideoPropDlg.cpp:195
 msgid "sec"
 msgstr "秒"
 
@@ -703,15 +715,15 @@ msgstr "開始時刻を終了時刻より後にすることはできません"
 msgid "&Refresh"
 msgstr "最新の情報に更新(&R)"
 
-#: src/DVD.cpp:270 src/Menu.cpp:1141 src/MenuEditor.cpp:464
+#: src/DVD.cpp:270 src/Menu.cpp:1140 src/MenuEditor.cpp:464
 msgid "Wide screen DVD menu can contain maximal 12 buttons"
 msgstr "ワイド画面の DVD メニューに、ボタンは 12 個までしか配置できません"
 
-#: src/DVD.cpp:273 src/Menu.cpp:1144 src/MenuEditor.cpp:467
+#: src/DVD.cpp:273 src/Menu.cpp:1143 src/MenuEditor.cpp:467
 msgid "Wide screen DVD menu (nopanscan/noletterbox) can contain maximal 18 buttons"
 msgstr "ワイド画面の DVD メニュー (nopanscan/noletterbox) に、ボタンは 18 個までしか配置できません"
 
-#: src/DVD.cpp:277 src/Menu.cpp:1148 src/MenuEditor.cpp:471
+#: src/DVD.cpp:277 src/Menu.cpp:1147 src/MenuEditor.cpp:471
 msgid "DVD menu can contain maximal 34 buttons"
 msgstr "DVD メニューに、ボタンは 34 個までしか配置できません"
 
@@ -857,7 +869,7 @@ msgstr "jump to 'angle' titleset menu"
 msgid "jump to chapter menu"
 msgstr "jump to 'chapter' titleset menu"
 
-#: src/DVDAction.cpp:75 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:647 src/MenuObjectPropDlg.cpp:667
+#: src/DVDAction.cpp:75 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:649 src/MenuObjectPropDlg.cpp:669
 msgid "menu"
 msgstr "メニュー"
 
@@ -878,13 +890,13 @@ msgstr "jump to title %d chapter %d"
 msgid "jump to title"
 msgstr "jump to title"
 
-#: src/DVDAction.cpp:183 src/MenuObjectPropDlg.cpp:441 src/MenuObjectPropDlg.cpp:660
-#: src/MenuObjectPropDlg.cpp:669 src/MenuObjectPropDlg.cpp:679 src/MenuObjectPropDlg.cpp:688
-#: src/MenuObjectPropDlg.cpp:697
+#: src/DVDAction.cpp:183 src/MenuObjectPropDlg.cpp:441 src/MenuObjectPropDlg.cpp:662
+#: src/MenuObjectPropDlg.cpp:671 src/MenuObjectPropDlg.cpp:681 src/MenuObjectPropDlg.cpp:690
+#: src/MenuObjectPropDlg.cpp:699
 msgid "titleset"
 msgstr "タイトルセット"
 
-#: src/DVDAction.cpp:186 src/MenuObjectPropDlg.cpp:636 src/MenuPropDlg.cpp:55
+#: src/DVDAction.cpp:186 src/MenuObjectPropDlg.cpp:638 src/MenuPropDlg.cpp:55
 msgid "VMGM menu"
 msgstr "VMGMメニュー"
 
@@ -901,27 +913,27 @@ msgstr "VMGMメニューがないのでジャンプできません"
 msgid "cannot jump to menu; none exist"
 msgstr "メニューがないのでジャンプできません"
 
-#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:653
+#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:655
 msgid "title menu"
 msgstr "タイトルメニュー"
 
-#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:653
+#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:655
 msgid "root menu"
 msgstr "ルートメニュー"
 
-#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:653
+#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:655
 msgid "subtitle menu"
 msgstr "字幕メニュー"
 
-#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:654
+#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:656
 msgid "audio menu"
 msgstr "音声メニュー"
 
-#: src/DVDAction.cpp:212 src/MenuObjectPropDlg.cpp:654
+#: src/DVDAction.cpp:212 src/MenuObjectPropDlg.cpp:656
 msgid "angle menu"
 msgstr "アングルメニュー"
 
-#: src/DVDAction.cpp:212 src/MenuObjectPropDlg.cpp:654
+#: src/DVDAction.cpp:212 src/MenuObjectPropDlg.cpp:656
 msgid "chapter menu"
 msgstr "チャプターメニュー"
 
@@ -1245,7 +1257,7 @@ msgstr "背景に設定する(&A)"
 msgid "&Play"
 msgstr "再生(&P)"
 
-#: src/MainWin.cpp:274 src/MenuEditor.cpp:374 src/TitlesetManager.cpp:184 wxVillaLib/PropDlg.cpp:648
+#: src/MainWin.cpp:274 src/MenuEditor.cpp:374 src/TitlesetManager.cpp:184 wxVillaLib/PropDlg.cpp:670
 msgid "&Delete"
 msgstr "削除(&D)"
 
@@ -1293,7 +1305,7 @@ msgstr "背景画像"
 msgid "Buttons"
 msgstr "ボタン"
 
-#: src/MainWin.cpp:522 src/MainWin.cpp:1371 src/MainWin.cpp:1393 src/MenuObject.cpp:265
+#: src/MainWin.cpp:522 src/MainWin.cpp:1371 src/MainWin.cpp:1393 src/MenuObject.cpp:266
 #: src/MenuObjectPropDlg.cpp:265 src/MenuObjectPropDlg.cpp:280 buttons/text-circle-v2.xml:13
 #: buttons/text-square-v2.xml:14 buttons/text-underlined-v3.xml:12 buttons/text-v3.xml:13
 msgid "button"
@@ -1323,7 +1335,7 @@ msgstr "%s (%.1f GB)"
 msgid "%d slides"
 msgstr "画像 %d 枚"
 
-#: src/MainWin.cpp:625 src/SettingsDlg.cpp:126
+#: src/MainWin.cpp:625 src/SettingsDlg.cpp:130
 msgid "min"
 msgstr "分"
 
@@ -1344,7 +1356,7 @@ msgstr "すべて再生"
 msgid "Select title"
 msgstr "タイトル選択"
 
-#: src/MainWin.cpp:832 src/TitlesetManager.cpp:1001
+#: src/MainWin.cpp:832 src/TitlesetManager.cpp:1008
 msgid "Back"
 msgstr "戻る"
 
@@ -1455,7 +1467,7 @@ msgstr "本当にこのボタンを削除しますか？"
 msgid "&Delete button"
 msgstr "ボタンを削除(&D)"
 
-#: src/Menu.cpp:839
+#: src/Menu.cpp:838
 #, c-format
 msgid "%s and %s are overlapping"
 msgstr "%s と %s が重なっています"
@@ -1653,11 +1665,11 @@ msgstr "挿入する画像を選んでください"
 msgid "Image Files "
 msgstr "画像ファイル "
 
-#: src/MenuObject.cpp:265
+#: src/MenuObject.cpp:266
 msgid "object"
 msgstr "オブジェクト"
 
-#: src/MenuObject.cpp:816 src/MenuObject.cpp:825
+#: src/MenuObject.cpp:820 src/MenuObject.cpp:829
 #, c-format
 msgid "can't open file '%s'"
 msgstr "ファイル '%s' を開くことができません。"
@@ -1734,7 +1746,7 @@ msgstr "外観"
 msgid "none"
 msgstr "なし"
 
-#: src/MenuObjectPropDlg.cpp:267 src/MenuPropDlg.cpp:126 src/SettingsDlg.cpp:274 src/VideoPropDlg.cpp:132
+#: src/MenuObjectPropDlg.cpp:267 src/MenuPropDlg.cpp:126 src/SettingsDlg.cpp:278 src/VideoPropDlg.cpp:134
 msgid "auto"
 msgstr "自動"
 
@@ -1754,7 +1766,8 @@ msgstr "実行時"
 msgid "Font..."
 msgstr "フォント設定..."
 
-#: src/MenuObjectPropDlg.cpp:404 src/MenuObjectPropDlg.cpp:564 src/MenuPropDlg.cpp:81 src/VideoPropDlg.cpp:138
+#: src/MenuObjectPropDlg.cpp:404 src/MenuObjectPropDlg.cpp:566 src/MenuPropDlg.cpp:81
+#: src/VideoPropDlg.cpp:140
 msgid "Keep Aspect Ratio"
 msgstr "横縦比を保持する"
 
@@ -1790,11 +1803,11 @@ msgstr "画像全体を表示"
 msgid "Slice"
 msgstr "画面に合わせて切り取り"
 
-#: src/MenuObjectPropDlg.cpp:455 buttons/ellipse-v2.xml:23 buttons/ellipse45.xml:26 buttons/frame-text.xml:30
-#: buttons/frame-v2.xml:18 buttons/frame45.xml:21 buttons/movie.xml:26 buttons/painting_frame.xml:40
-#: buttons/sticky_note.xml:43 objects/ellipse-v3.xml:22 objects/ellipse45.xml:24 objects/frame-v3.xml:18
-#: objects/frame45.xml:20 objects/gold-frame.xml:45 objects/image.xml:3 objects/image.xml:9
-#: objects/sticky_note.xml:42
+#: src/MenuObjectPropDlg.cpp:455 buttons/dotted-frame.xml:25 buttons/ellipse-v2.xml:23
+#: buttons/frame-text.xml:30 buttons/frame-v2.xml:18 buttons/gold-frame.xml:49 buttons/maroon-frame.xml:50
+#: buttons/movie.xml:27 buttons/painting_frame.xml:40 buttons/star-frame.xml:35 buttons/sticky_note.xml:43
+#: objects/ellipse-v3.xml:22 objects/ellipse45.xml:24 objects/frame-v3.xml:18 objects/frame45.xml:20
+#: objects/gold-frame.xml:45 objects/image.xml:3 objects/image.xml:9 objects/sticky_note.xml:42
 msgid "Image"
 msgstr "画像"
 
@@ -1802,64 +1815,64 @@ msgstr "画像"
 msgid "Video"
 msgstr "映像"
 
-#: src/MenuObjectPropDlg.cpp:516 src/SubtitlePropDlg.cpp:186
+#: src/MenuObjectPropDlg.cpp:518 src/SubtitlePropDlg.cpp:186
 msgid "Offset:"
 msgstr "ずれ:"
 
-#: src/MenuObjectPropDlg.cpp:524
+#: src/MenuObjectPropDlg.cpp:526
 msgid "Deviation:"
 msgstr "ぼかし:"
 
-#: src/MenuObjectPropDlg.cpp:539
+#: src/MenuObjectPropDlg.cpp:541
 msgid "Location"
 msgstr "位置"
 
-#: src/MenuObjectPropDlg.cpp:542
+#: src/MenuObjectPropDlg.cpp:544
 msgid "X:"
 msgstr "X:"
 
-#: src/MenuObjectPropDlg.cpp:543
+#: src/MenuObjectPropDlg.cpp:545
 msgid "Y:"
 msgstr "Y:"
 
-#: src/MenuObjectPropDlg.cpp:549 buttons/arrow-blue.xml:26 buttons/arrow-cool.xml:17
+#: src/MenuObjectPropDlg.cpp:551 buttons/arrow-blue.xml:26 buttons/arrow-cool.xml:17
 #: buttons/arrow-double.xml:13 buttons/arrow-gold.xml:26 buttons/arrow-green-double.xml:383
 #: buttons/arrow-green.xml:375 buttons/arrow-red.xml:29 buttons/arrow-simple-v2.xml:43
 #: buttons/arrow-star.xml:21 buttons/arrow.xml:42 buttons/arrow2.xml:25 buttons/arrow3.xml:19
-#: buttons/frame45.xml:35 objects/frame45.xml:34
+#: buttons/gear.xml:86 buttons/star-frame.xml:28 objects/frame45.xml:34
 msgid "Rotation"
 msgstr "回転"
 
-#: src/MenuObjectPropDlg.cpp:551
+#: src/MenuObjectPropDlg.cpp:553
 msgid "Angle:"
 msgstr "角度:"
 
-#: src/MenuObjectPropDlg.cpp:557
+#: src/MenuObjectPropDlg.cpp:559
 msgid "Size"
 msgstr "大きさ"
 
-#: src/MenuObjectPropDlg.cpp:559
+#: src/MenuObjectPropDlg.cpp:561
 msgid "Width:"
 msgstr "幅:"
 
-#: src/MenuObjectPropDlg.cpp:561
+#: src/MenuObjectPropDlg.cpp:563
 msgid "Height:"
 msgstr "高さ:"
 
-#: src/MenuObjectPropDlg.cpp:576
+#: src/MenuObjectPropDlg.cpp:578
 msgid "Animations..."
 msgstr "アニメーション..."
 
-#: src/MenuObjectPropDlg.cpp:627
+#: src/MenuObjectPropDlg.cpp:629
 msgid "start of current menu"
 msgstr "現在のメニューから開始"
 
-#: src/MenuObjectPropDlg.cpp:712 src/MenuObjectPropDlg.cpp:716
+#: src/MenuObjectPropDlg.cpp:714 src/MenuObjectPropDlg.cpp:718
 #, c-format
 msgid "chapter %d"
 msgstr "チャプター %d"
 
-#: src/MenuObjectPropDlg.cpp:894
+#: src/MenuObjectPropDlg.cpp:896
 msgid "Please enter the action command."
 msgstr "アクション コマンドを入力してください。"
 
@@ -1867,7 +1880,7 @@ msgstr "アクション コマンドを入力してください。"
 msgid "Titleset"
 msgstr "タイトルセット"
 
-#: src/MenuPropDlg.cpp:53 src/MenuPropDlg.cpp:206 src/TitlesetManager.cpp:331 src/TitlesetManager.cpp:1213
+#: src/MenuPropDlg.cpp:53 src/MenuPropDlg.cpp:206 src/TitlesetManager.cpp:331 src/TitlesetManager.cpp:1220
 #: buttons/pill.xml:26
 msgid "Menu"
 msgstr "メニュー"
@@ -1888,7 +1901,7 @@ msgstr "背景:"
 msgid "Image and Video Files"
 msgstr "画像/映像ファイル"
 
-#: src/MenuPropDlg.cpp:153 src/VobListBox.cpp:146
+#: src/MenuPropDlg.cpp:153 src/VobListBox.cpp:145
 msgid "Audio:"
 msgstr "音声:"
 
@@ -1987,8 +2000,8 @@ msgstr "ディスク容量:"
 msgid "Video bitrate:"
 msgstr "映像のビットレート:"
 
-#: src/NewProjectDlg.cpp:65 src/NewProjectDlg.cpp:71 src/SettingsDlg.cpp:245 src/SettingsDlg.cpp:250
-#: src/SettingsDlg.cpp:254
+#: src/NewProjectDlg.cpp:65 src/NewProjectDlg.cpp:71 src/SettingsDlg.cpp:249 src/SettingsDlg.cpp:254
+#: src/SettingsDlg.cpp:258
 msgid "KBit/s"
 msgstr "KBit/s"
 
@@ -2008,7 +2021,7 @@ msgstr "横縦比"
 msgid "Audio Format"
 msgstr "音声形式"
 
-#: src/NewProjectDlg.cpp:113 src/SettingsDlg.cpp:132
+#: src/NewProjectDlg.cpp:113 src/SettingsDlg.cpp:136
 msgid "Default title post command:"
 msgstr "タイトルの既定のポストコマンド:"
 
@@ -2063,11 +2076,11 @@ msgstr "中止"
 msgid "Size of Disc Image > %.2f GB. Do you want to continue?"
 msgstr "ディスクイメージ容量が %.2f GB を超えています。それでも続けますか?"
 
-#: src/ProcessCleanTemp.cpp:72
+#: src/ProcessCleanTemp.cpp:74
 msgid "Cleaning temporary directory"
 msgstr "一時保存用ディレクトリ内を削除中"
 
-#: src/ProcessCleanTemp.cpp:74 src/ProcessCleanTemp.cpp:85
+#: src/ProcessCleanTemp.cpp:76 src/ProcessCleanTemp.cpp:87
 #, c-format
 msgid "Cannot remove directory '%s'"
 msgstr "Cannot remove directory '%s'"
@@ -2144,8 +2157,8 @@ msgid "Transcode audio from"
 msgstr "音声のトランスコード: "
 
 #: src/ProcessMenu.cpp:211 src/ProcessMenu.cpp:217 src/ProcessMenuTransitions.cpp:126
-#: src/ProcessMenuTransitions.cpp:136 src/ProcessSlideshow.cpp:198 src/ProcessTranscode.cpp:153
-#: src/ProcessTranscode.cpp:164 src/ProcessTranscode.cpp:189 src/ProcessTranscode.cpp:201
+#: src/ProcessMenuTransitions.cpp:136 src/ProcessSlideshow.cpp:198 src/ProcessTranscode.cpp:189
+#: src/ProcessTranscode.cpp:200 src/ProcessTranscode.cpp:226 src/ProcessTranscode.cpp:238
 msgid "Error transcoding of "
 msgstr "トランスコード中のエラー: "
 
@@ -2158,7 +2171,7 @@ msgstr "音声と映像を多重化中"
 msgid "Audio duration: %f sec"
 msgstr "音声の長さ: %f 秒"
 
-#: src/ProcessMenu.cpp:275 src/SettingsDlg.cpp:238
+#: src/ProcessMenu.cpp:275 src/SettingsDlg.cpp:242
 msgid "Frame count of menu:"
 msgstr "メニューのフレーム数:"
 
@@ -2245,20 +2258,20 @@ msgstr "字幕を附加中 (%u / %lu)"
 msgid "Can't rename temporary file '%s'"
 msgstr "一時作成ファイル '%s' を削除できません"
 
-#: src/ProcessTranscode.cpp:23
+#: src/ProcessTranscode.cpp:35
 msgid "Transcode video file: "
 msgstr "映像ファイルのトランスコード: "
 
-#: src/ProcessTranscode.cpp:224
+#: src/ProcessTranscode.cpp:261
 msgid "Multiplexing video and audio streams"
 msgstr "音声と映像ストリームを多重化中"
 
-#: src/ProcessTranscode.cpp:244
+#: src/ProcessTranscode.cpp:282
 #, c-format
 msgid "Analysis of audio track %d"
 msgstr "音声トラック %d の解析"
 
-#: src/ProcessTranscode.cpp:248 src/ProcessTranscode.cpp:262 wxVillaLib/ProgramProcess.cpp:84
+#: src/ProcessTranscode.cpp:286 src/ProcessTranscode.cpp:300 wxVillaLib/ProgramProcess.cpp:84
 #, c-format
 msgid "Execution of '%s' failed."
 msgstr "Execution of '%s' failed."
@@ -2323,219 +2336,219 @@ msgstr "書き込みが正常に終了しました。"
 msgid "Generating was successful."
 msgstr "生成が正常に終了しました。"
 
-#: src/SettingsDlg.cpp:41 src/SettingsDlg.cpp:413 src/SettingsDlg.cpp:419 buttons/settings.xml:3
+#: src/SettingsDlg.cpp:45 src/SettingsDlg.cpp:417 src/SettingsDlg.cpp:423 buttons/settings.xml:3
 msgid "Settings"
 msgstr "設定"
 
-#: src/SettingsDlg.cpp:59
+#: src/SettingsDlg.cpp:63
 msgid "Interface"
 msgstr "インターフェース"
 
-#: src/SettingsDlg.cpp:74
+#: src/SettingsDlg.cpp:78
 msgid "Default disc label:"
 msgstr "既定のディスクラベル:"
 
-#: src/SettingsDlg.cpp:76
+#: src/SettingsDlg.cpp:80
 msgid "Default disc capacity:"
 msgstr "既定のディスク容量:"
 
-#: src/SettingsDlg.cpp:80
+#: src/SettingsDlg.cpp:84
 msgid "Default video format:"
 msgstr "既定の映像形式:"
 
-#: src/SettingsDlg.cpp:98
+#: src/SettingsDlg.cpp:102
 msgid "Keep aspect ratio"
 msgstr "横縦比を保持する"
 
-#: src/SettingsDlg.cpp:102
+#: src/SettingsDlg.cpp:106
 msgid "Default audio format:"
 msgstr "既定の音声形式:"
 
-#: src/SettingsDlg.cpp:125
+#: src/SettingsDlg.cpp:129
 msgid "Default chapter length:"
 msgstr "既定のチャプター長:"
 
-#: src/SettingsDlg.cpp:128
+#: src/SettingsDlg.cpp:132
 msgid "Add chapter at title end"
 msgstr "タイトルの最後にチャプターを追加する"
 
-#: src/SettingsDlg.cpp:155
+#: src/SettingsDlg.cpp:159
 msgid "Default button:"
 msgstr "既定のボタン:"
 
-#: src/SettingsDlg.cpp:160
+#: src/SettingsDlg.cpp:164
 msgid "Accept invalid actions"
 msgstr "不適切な操作を許容する"
 
-#: src/SettingsDlg.cpp:163
+#: src/SettingsDlg.cpp:167
 msgid "Default slide duration:"
 msgstr "既定のスライドショーの再生時間:"
 
-#: src/SettingsDlg.cpp:164
+#: src/SettingsDlg.cpp:168
 msgid "Default transition duration:"
 msgstr "スライドショーの切替効果の再生時間:"
 
-#: src/SettingsDlg.cpp:171
+#: src/SettingsDlg.cpp:175
 msgid "Default slide transition:"
 msgstr "既定のスライドショーの切替効果:"
 
-#: src/SettingsDlg.cpp:177
+#: src/SettingsDlg.cpp:181
 msgid "Last directory"
 msgstr "最後に使ったディレクトリ"
 
-#: src/SettingsDlg.cpp:178
+#: src/SettingsDlg.cpp:182
 msgid "File Browser start directory:"
 msgstr "ファイルブラウザーの起点ディレクトリ:"
 
-#: src/SettingsDlg.cpp:193
+#: src/SettingsDlg.cpp:197
 msgid "Clear thumbnail cache after exit"
 msgstr "終了時にサムネイルのキャッシュを消去する"
 
-#: src/SettingsDlg.cpp:197
+#: src/SettingsDlg.cpp:201
 msgid "Undo history size:"
 msgstr "取り消し用の履歴記憶数:"
 
-#: src/SettingsDlg.cpp:198
+#: src/SettingsDlg.cpp:202
 msgid "Clear transcoding cache:"
 msgstr "トランスコード用キャッシュ消去:"
 
-#: src/SettingsDlg.cpp:201
+#: src/SettingsDlg.cpp:205
 msgid "Prompt"
 msgstr "毎回選択する"
 
-#: src/SettingsDlg.cpp:202 src/SettingsDlg.cpp:301
+#: src/SettingsDlg.cpp:206 src/SettingsDlg.cpp:305
 msgid "Yes"
 msgstr "はい"
 
-#: src/SettingsDlg.cpp:207
+#: src/SettingsDlg.cpp:211
 msgid "Clear cache now"
 msgstr "キャッシュを今すぐ消去する"
 
-#: src/SettingsDlg.cpp:211
+#: src/SettingsDlg.cpp:215
 msgid "\"Don't show again\" flags:"
 msgstr "「次回から表示しない」設定:"
 
-#: src/SettingsDlg.cpp:213
+#: src/SettingsDlg.cpp:217
 msgid "Reset All"
 msgstr "すべてリセット"
 
-#: src/SettingsDlg.cpp:222
+#: src/SettingsDlg.cpp:226
 msgid "Core"
 msgstr "内部"
 
-#: src/SettingsDlg.cpp:241
+#: src/SettingsDlg.cpp:245
 msgid "Draw buttons on background"
 msgstr "ボタンを背景上に描く"
 
-#: src/SettingsDlg.cpp:242
+#: src/SettingsDlg.cpp:246
 msgid "Allow HD menus"
 msgstr "HDメニューを選択可能にする"
 
-#: src/SettingsDlg.cpp:244
+#: src/SettingsDlg.cpp:248
 msgid "Menu video bitrate:"
 msgstr "メニュー映像のビットレート:"
 
-#: src/SettingsDlg.cpp:249
+#: src/SettingsDlg.cpp:253
 msgid "Slideshow video bitrate:"
 msgstr "スライドショー映像のビットレート:"
 
-#: src/SettingsDlg.cpp:254
+#: src/SettingsDlg.cpp:258
 msgid "Default audio bitrate:"
 msgstr "既定の音声のビットレート:"
 
-#: src/SettingsDlg.cpp:255
+#: src/SettingsDlg.cpp:259
 msgid "Thread count:"
 msgstr "スレッド数:"
 
-#: src/SettingsDlg.cpp:256
+#: src/SettingsDlg.cpp:260
 msgid "DVD reserved space:"
 msgstr "DVD 保留容量:"
 
-#: src/SettingsDlg.cpp:256
+#: src/SettingsDlg.cpp:260
 msgid "KB"
 msgstr "KB"
 
-#: src/SettingsDlg.cpp:260
+#: src/SettingsDlg.cpp:264
 msgid "internal"
 msgstr "内部(CBR)"
 
-#: src/SettingsDlg.cpp:265
+#: src/SettingsDlg.cpp:269
 msgid "Encoder:"
 msgstr "エンコーダー:"
 
-#: src/SettingsDlg.cpp:275
+#: src/SettingsDlg.cpp:279
 msgid "CBR"
 msgstr "CBR"
 
-#: src/SettingsDlg.cpp:276
+#: src/SettingsDlg.cpp:280
 msgid "1-pass VBR"
 msgstr "1-pass VBR"
 
-#: src/SettingsDlg.cpp:277
+#: src/SettingsDlg.cpp:281
 msgid "2-pass VBR"
 msgstr "2-pass VBR"
 
-#: src/SettingsDlg.cpp:292
+#: src/SettingsDlg.cpp:296
 msgid "Create ISO command:"
 msgstr "ISOファイル作成 コマンド:"
 
-#: src/SettingsDlg.cpp:293
+#: src/SettingsDlg.cpp:297
 msgid "Burn command:"
 msgstr "DVD書き込み コマンド:"
 
-#: src/SettingsDlg.cpp:294
+#: src/SettingsDlg.cpp:298
 msgid "Burn ISO command:"
 msgstr "ISO 焼きつけコマンド:"
 
-#: src/SettingsDlg.cpp:295
+#: src/SettingsDlg.cpp:299
 msgid "Add ECC command:"
 msgstr "ECC 追加コマンド:"
 
-#: src/SettingsDlg.cpp:296
+#: src/SettingsDlg.cpp:300
 msgid "Format command:"
 msgstr "フォーマット コマンド:"
 
-#: src/SettingsDlg.cpp:298
+#: src/SettingsDlg.cpp:302
 msgid "Use mplex:"
 msgstr "mplex を使う:"
 
-#: src/SettingsDlg.cpp:303
+#: src/SettingsDlg.cpp:307
 msgid "For menus only"
 msgstr "メニューのみ"
 
-#: src/SettingsDlg.cpp:308
+#: src/SettingsDlg.cpp:312
 msgid "NTSC film:"
 msgstr "NTSC フィルム:"
 
-#: src/SettingsDlg.cpp:309
+#: src/SettingsDlg.cpp:313
 msgid "re-encode by default"
 msgstr "既定は再エンコード"
 
-#: src/SettingsDlg.cpp:310
+#: src/SettingsDlg.cpp:314
 msgid "HD video:"
 msgstr "HDビデオ:"
 
-#: src/SettingsDlg.cpp:311
+#: src/SettingsDlg.cpp:315
 msgid "allow (experimental)"
 msgstr "選択可能にする (実験的)"
 
-#: src/SettingsDlg.cpp:313
+#: src/SettingsDlg.cpp:317
 msgid "Debug"
 msgstr "デバッグ"
 
-#: src/SettingsDlg.cpp:314
+#: src/SettingsDlg.cpp:318
 msgid "Don't remove temp files"
 msgstr "一時作成ファイル (dvdauthor.xml 等) を削除しない"
 
-#: src/SettingsDlg.cpp:338
+#: src/SettingsDlg.cpp:342
 msgid "Language change will not take effect until DVDStyler is restarted"
 msgstr "表示言語の変更を有効にするには DVDStyler を再起動させてください。"
 
-#: src/SettingsDlg.cpp:413
+#: src/SettingsDlg.cpp:417
 msgid "All \"don't show again\" flags are reseted."
 msgstr "「次回から表示しない」設定を、すべてリセットしました。"
 
-#: src/SettingsDlg.cpp:419
+#: src/SettingsDlg.cpp:423
 msgid "The transcoding cache is successfully cleared."
 msgstr "トランスコード用キャッシュは消去されました。"
 
@@ -2579,16 +2592,16 @@ msgstr "%d Mb/s"
 msgid "%.1f Mb/s"
 msgstr "%.1f Mb/s"
 
-#: src/Stream.cpp:112
+#: src/Stream.cpp:114
 msgid "mono"
 msgstr "モノラル"
 
-#: src/Stream.cpp:118
+#: src/Stream.cpp:120
 #, c-format
 msgid "%d channels"
 msgstr "%d チャンネル"
 
-#: src/Stream.cpp:121
+#: src/Stream.cpp:123
 #, c-format
 msgid "%d Hz"
 msgstr "%d Hz"
@@ -2616,6 +2629,10 @@ msgstr "プレビュー:"
 #: src/SubtitlePropDlg.cpp:139
 msgid "ABCabcXYZxyz"
 msgstr "ABCabcXYZxyz"
+
+#: src/SubtitlePropDlg.cpp:143
+msgid "Fill:"
+msgstr "塗りつぶし:"
 
 #: src/SubtitlePropDlg.cpp:156
 msgid "Outline:"
@@ -2823,7 +2840,7 @@ msgstr ""
 msgid "Maximal 99 titles are allowed for one titleset."
 msgstr "1 タイトルセットに含められるタイトルは最大 99 までです。"
 
-#: src/TitlesetManager.cpp:705
+#: src/TitlesetManager.cpp:712
 msgid ""
 "The video bitrate is reduced below 2 Mb/s to fit your video on DVD. This can produce DVD with bad video "
 "quality."
@@ -2831,20 +2848,20 @@ msgstr ""
 "DVD に映像が収まるよう、映像ビットレートを 2 Mb/s 未満に落としました。映像品質の悪い DVD ができあがるかもし"
 "れません。"
 
-#: src/TitlesetManager.cpp:718 src/TitlesetManager.cpp:755
+#: src/TitlesetManager.cpp:725 src/TitlesetManager.cpp:762
 msgid "Please add a video track first."
 msgstr "先に映像トラックを追加してください。"
 
-#: src/TitlesetManager.cpp:880
+#: src/TitlesetManager.cpp:887
 msgid "Maximal 99 menus are allowed for one titleset."
 msgstr "1 タイトルセットに含められるメニューは最大 99 までです。"
 
-#: src/TitlesetManager.cpp:1217
+#: src/TitlesetManager.cpp:1224
 #, c-format
 msgid "Do you really want to delete %s?"
 msgstr "本当に %s を削除しますか?"
 
-#: src/TitlesetManager.cpp:1218
+#: src/TitlesetManager.cpp:1225
 msgid "Titleset Manager"
 msgstr "タイトルセットマネージャー"
 
@@ -2852,67 +2869,75 @@ msgstr "タイトルセットマネージャー"
 msgid "Video frame"
 msgstr "映像フレーム"
 
-#: src/VideoPropDlg.cpp:102
+#: src/VideoPropDlg.cpp:104
 msgid "Video properties"
 msgstr "映像プロパティ"
 
-#: src/VideoPropDlg.cpp:128
+#: src/VideoPropDlg.cpp:130
 msgid "progressive"
 msgstr "プログレッシブ"
 
-#: src/VideoPropDlg.cpp:129
+#: src/VideoPropDlg.cpp:131
 msgid "interlace"
 msgstr "インターレース"
 
-#: src/VideoPropDlg.cpp:133
+#: src/VideoPropDlg.cpp:135
 msgid "BFF"
 msgstr "BFF"
 
-#: src/VideoPropDlg.cpp:134
+#: src/VideoPropDlg.cpp:136
 msgid "TFF"
 msgstr "TFF"
 
-#: src/VideoPropDlg.cpp:142
+#: src/VideoPropDlg.cpp:144
 msgid "border"
 msgstr "枠線"
 
-#: src/VideoPropDlg.cpp:143
+#: src/VideoPropDlg.cpp:145
 msgid "crop"
 msgstr "切り取り"
 
-#: src/VideoPropDlg.cpp:147
+#: src/VideoPropDlg.cpp:149
 msgid "Border"
 msgstr "枠線"
 
-#: src/VideoPropDlg.cpp:163
+#: src/VideoPropDlg.cpp:165
 msgid "Crop"
 msgstr "切り取り"
 
-#: src/VideoPropDlg.cpp:180
+#: src/VideoPropDlg.cpp:182
 msgid "Fade-In/Out:"
 msgstr "フェード イン/アウト:"
 
-#: src/VideoPropDlg.cpp:219
+#: src/VideoPropDlg.cpp:184
+msgid "Filters before scale:"
+msgstr ""
+
+#: src/VideoPropDlg.cpp:200
+msgid "Filters after scale:"
+msgstr ""
+
+#: src/VideoPropDlg.cpp:225
 msgid "Start:"
 msgstr "開始:"
 
-#: src/VideoPropDlg.cpp:233
+#: src/VideoPropDlg.cpp:239
 msgid "Cut beginning"
 msgstr "時間欄を開始欄に反映"
 
-#: src/VideoPropDlg.cpp:249
+#: src/VideoPropDlg.cpp:255
 msgid "Cut ending"
 msgstr "時間欄を終了欄に反映"
 
-#: src/VideoPropDlg.cpp:702 src/VideoPropDlg.cpp:707
+#: src/VideoPropDlg.cpp:711 src/VideoPropDlg.cpp:716
 msgid "Invalid time"
 msgstr "時間が正しくありません"
 
-#: src/VobListBox.cpp:131
+#: src/VobListBox.cpp:130
 msgid "Video:"
 msgstr "映像:"
 
-#: src/VobListBox.cpp:172 src/VobListBox.cpp:218
+#: src/VobListBox.cpp:174 src/VobListBox.cpp:224
 msgid "Subtitle:"
 msgstr "字幕:"
 
@@ -2962,7 +2987,7 @@ msgstr "%d という種類の画像は扱えません。"
 msgid "Can't load image from file '%s': file does not exist."
 msgstr "ファイル '%s' から画像を読み込めません: ファイルがありません。"
 
-#: wxVillaLib/PropDlg.cpp:201
+#: wxVillaLib/PropDlg.cpp:223
 msgid "&Don't show this dialog again"
 msgstr "次回からこのダイアログを表示しない (&D)"
 
@@ -2976,7 +3001,8 @@ msgstr "丸の色"
 
 #: buttons/arrow-blue.xml:40 buttons/arrow-red.xml:43 buttons/arrow-simple-v2.xml:19
 #: buttons/arrow-text-left.xml:32 buttons/arrow-text-right.xml:33 buttons/arrow3d-left.xml:29
-#: buttons/arrow3d-right.xml:29
+#: buttons/arrow3d-right.xml:29 buttons/gear.xml:105 buttons/gold-frame.xml:70 buttons/home-moon.xml:36
+#: buttons/pill-opacity.xml:77 buttons/pill-stroke.xml:86
 msgid "Stroke color"
 msgstr "縁取りの色"
 
@@ -3055,7 +3081,7 @@ msgstr "反射付き右矢印"
 msgid "Red Arrow"
 msgstr "赤い矢印"
 
-#: buttons/arrow-red.xml:36 buttons/pill3.xml:22
+#: buttons/arrow-red.xml:36 buttons/pill-opacity.xml:24 buttons/pill-stroke.xml:26 buttons/pill3.xml:22
 msgid "Button color"
 msgstr "ボタンの色"
 
@@ -3064,11 +3090,12 @@ msgid "Simple Arrow"
 msgstr "簡素な矢印"
 
 #: buttons/arrow-simple-v2.xml:50 buttons/arrow3d-left.xml:41 buttons/arrow3d-right.xml:41
-#: buttons/ellipse-v2.xml:44 buttons/ellipse45.xml:47 buttons/frame-text.xml:63 buttons/frame-text.xml:83
-#: buttons/frame-v2.xml:53 buttons/frame45.xml:63 buttons/home-v2.xml:35 buttons/settings.xml:30
-#: buttons/text-circle-v2.xml:32 buttons/text-square-v2.xml:33 buttons/text-underlined-v3.xml:32
-#: buttons/text-v3.xml:58 objects/ellipse-v3.xml:57 objects/ellipse45.xml:59 objects/frame-v3.xml:67
-#: objects/frame45.xml:76 objects/rectangle-v2.xml:38 objects/text-v2.xml:53
+#: buttons/dotted-frame.xml:100 buttons/ellipse-v2.xml:44 buttons/frame-text.xml:63 buttons/frame-text.xml:83
+#: buttons/frame-v2.xml:53 buttons/gear.xml:119 buttons/home-moon.xml:62 buttons/home-v2.xml:35
+#: buttons/settings.xml:30 buttons/star-frame.xml:70 buttons/text-circle-v2.xml:32
+#: buttons/text-square-v2.xml:33 buttons/text-underlined-v3.xml:32 buttons/text-v3.xml:58
+#: objects/ellipse-v3.xml:57 objects/ellipse45.xml:59 objects/frame-v3.xml:67 objects/frame45.xml:76
+#: objects/rectangle-v2.xml:38 objects/text-v2.xml:53
 msgid "Shadow"
 msgstr "影"
 
@@ -3088,7 +3115,8 @@ msgstr "三角形部分の色"
 msgid "Text Arrow Left"
 msgstr "文字入り左矢印"
 
-#: buttons/arrow-text-left.xml:18 buttons/arrow-text-right.xml:19 buttons/pill2.xml:42 buttons/pill3.xml:35
+#: buttons/arrow-text-left.xml:18 buttons/arrow-text-right.xml:19 buttons/pill-opacity.xml:70
+#: buttons/pill-stroke.xml:79 buttons/pill2.xml:42 buttons/pill3.xml:35
 msgid "Text color"
 msgstr "文字の色"
 
@@ -3101,14 +3129,14 @@ msgid "Arrow"
 msgstr "矢印"
 
 #: buttons/arrow.xml:23 buttons/cancel.xml:28 buttons/circle-outline.xml:36 buttons/circle.xml:28
-#: buttons/ellipse-v2.xml:51 buttons/ellipse45.xml:54 buttons/ok.xml:27 objects/ellipse-v3.xml:43
-#: objects/ellipse45.xml:45 objects/frame-v3.xml:53 objects/frame45.xml:62 objects/text-v2.xml:32
+#: buttons/ellipse-v2.xml:51 buttons/ok.xml:27 objects/ellipse-v3.xml:43 objects/ellipse45.xml:45
+#: objects/frame-v3.xml:53 objects/frame45.xml:62 objects/text-v2.xml:32
 msgid "Outline colour"
 msgstr "枠線の色"
 
 #: buttons/arrow.xml:35 buttons/circle-outline.xml:48 buttons/circle.xml:35 buttons/ellipse-v2.xml:37
-#: buttons/ellipse45.xml:40 objects/ellipse-v3.xml:36 objects/ellipse45.xml:38 objects/frame-v3.xml:46
-#: objects/frame45.xml:55 objects/text-v2.xml:39
+#: objects/ellipse-v3.xml:36 objects/ellipse45.xml:38 objects/frame-v3.xml:46 objects/frame45.xml:55
+#: objects/text-v2.xml:39
 msgid "Outline width"
 msgstr "枠線の幅"
 
@@ -3186,46 +3214,60 @@ msgstr "文字の色"
 msgid "Circle"
 msgstr "円"
 
-#: buttons/ellipse-v2.xml:3 objects/ellipse-v3.xml:3
-msgid "Ellipse"
-msgstr "楕円"
+#: buttons/dotted-frame.xml:4
+#, fuzzy
+msgid "Dotted frame"
+msgstr "金色のフレーム枠"
 
-#: buttons/ellipse-v2.xml:30 buttons/ellipse45.xml:33 buttons/frame-v2.xml:25 buttons/frame45.xml:28
-#: buttons/movie.xml:33 objects/ellipse-v3.xml:29 objects/ellipse45.xml:31 objects/frame-v3.xml:25
-#: objects/frame45.xml:27
+#: buttons/dotted-frame.xml:32 buttons/ellipse-v2.xml:30 buttons/frame-v2.xml:25 buttons/gold-frame.xml:56
+#: buttons/maroon-frame.xml:57 buttons/movie.xml:34 buttons/star-frame.xml:42 objects/ellipse-v3.xml:29
+#: objects/ellipse45.xml:31 objects/frame-v3.xml:25 objects/frame45.xml:27
 msgid "Image opacity"
 msgstr "画像の不透明度"
 
-#: buttons/ellipse-v2.xml:63 buttons/ellipse45.xml:66 buttons/frame-v2.xml:72 buttons/frame45.xml:82
-#: objects/ellipse-v3.xml:50 objects/ellipse45.xml:52 objects/frame-v3.xml:60 objects/frame45.xml:69
+#: buttons/dotted-frame.xml:39 buttons/frame-text.xml:51 buttons/frame-v2.xml:60 buttons/movie.xml:41
+#: buttons/pill-opacity.xml:31 buttons/pill-stroke.xml:33 buttons/star-frame.xml:49
+msgid "Border colour"
+msgstr "枠線の色"
+
+#: buttons/dotted-frame.xml:46 buttons/frame-text.xml:37 buttons/frame-v2.xml:46 buttons/pill-opacity.xml:38
+#: buttons/pill-stroke.xml:40 buttons/star-frame.xml:56
+msgid "Border width"
+msgstr "枠線の幅"
+
+#: buttons/dotted-frame.xml:53 buttons/frame-text.xml:44 buttons/pill-opacity.xml:45
+#: buttons/pill-stroke.xml:47
+msgid "Corner round"
+msgstr "角丸め"
+
+#: buttons/dotted-frame.xml:60 buttons/ellipse-v2.xml:63 buttons/frame-v2.xml:72 buttons/gold-frame.xml:77
+#: buttons/maroon-frame.xml:85 buttons/star-frame.xml:63 objects/ellipse-v3.xml:50 objects/ellipse45.xml:52
+#: objects/frame-v3.xml:60 objects/frame45.xml:69
 msgid "Inner colour"
 msgstr "内側の色"
 
-#: buttons/ellipse45.xml:3 objects/ellipse45.xml:3
-msgid "Ellipse 45°"
-msgstr "楕円 45°"
+#: buttons/dotted-frame.xml:67
+msgid "Line"
+msgstr ""
+
+#: buttons/dotted-frame.xml:79 buttons/dotted-frame.xml:93
+#, fuzzy
+msgid "Line width"
+msgstr "最小の幅:"
+
+#: buttons/dotted-frame.xml:86
+msgid "Dotted line"
+msgstr ""
+
+#: buttons/ellipse-v2.xml:3 objects/ellipse-v3.xml:3
+msgid "Ellipse"
+msgstr "楕円"
 
 #: buttons/frame-text.xml:4
 msgid "Frame and Text"
 msgstr "テキスト付フレーム"
 
-#: buttons/frame-text.xml:25
-msgid "T"
-msgstr "T"
-
-#: buttons/frame-text.xml:37 buttons/frame-v2.xml:46 buttons/frame45.xml:56
-msgid "Border width"
-msgstr "枠線の幅"
-
-#: buttons/frame-text.xml:44
-msgid "Corner round"
-msgstr "角丸め"
-
-#: buttons/frame-text.xml:51 buttons/frame-v2.xml:60 buttons/frame45.xml:70 buttons/movie.xml:40
-msgid "Border colour"
-msgstr "枠線の色"
-
-#: buttons/frame-text.xml:90
+#: buttons/frame-text.xml:90 buttons/pill-opacity.xml:91 buttons/pill-stroke.xml:100
 msgid "Text offset"
 msgstr "テキストのずれ"
 
@@ -3233,19 +3275,24 @@ msgstr "テキストのずれ"
 msgid "Frame"
 msgstr "フレーム枠"
 
-#: buttons/frame-v2.xml:32 buttons/frame45.xml:42 buttons/text-v3.xml:44 objects/frame-v3.xml:32
-#: objects/frame45.xml:41 objects/rectangle-v2.xml:17
+#: buttons/frame-v2.xml:32 buttons/text-v3.xml:44 objects/frame-v3.xml:32 objects/frame45.xml:41
+#: objects/rectangle-v2.xml:17
 msgid "Rx"
 msgstr "角丸め(x方向)"
 
-#: buttons/frame-v2.xml:39 buttons/frame45.xml:49 buttons/text-v3.xml:51 objects/frame-v3.xml:39
-#: objects/frame45.xml:48 objects/rectangle-v2.xml:24
+#: buttons/frame-v2.xml:39 buttons/text-v3.xml:51 objects/frame-v3.xml:39 objects/frame45.xml:48
+#: objects/rectangle-v2.xml:24
 msgid "Ry"
 msgstr "角丸め(y方向)"
 
-#: buttons/frame45.xml:3 objects/frame45.xml:3
-msgid "Frame 45°"
-msgstr "フレーム枠 45°"
+#: buttons/gear.xml:4 buttons/gear.xml:93
+msgid "Gear"
+msgstr ""
+
+#: buttons/gear.xml:112 buttons/home-moon.xml:43 buttons/pill-opacity.xml:84 buttons/pill-stroke.xml:93
+#, fuzzy
+msgid "Stroke width"
+msgstr "枠線の幅"
 
 #: buttons/glow_arrow.xml:5
 msgid "Glow Arrow"
@@ -3259,6 +3306,24 @@ msgstr "反転 (a,e)"
 msgid "Glow colour"
 msgstr "輝く色"
 
+#: buttons/gold-frame.xml:4 objects/gold-frame.xml:3
+msgid "Gold frame"
+msgstr "金色のフレーム枠"
+
+#: buttons/gold-frame.xml:63 buttons/maroon-frame.xml:64 buttons/painting_frame.xml:47
+msgid "Frame colour"
+msgstr "フレームの色"
+
+#: buttons/gold-frame.xml:84 buttons/maroon-frame.xml:92 buttons/pill-opacity.xml:52
+#: buttons/pill-stroke.xml:54 buttons/star-frame.xml:77 buttons/sticky_note.xml:64
+msgid "Selection colour"
+msgstr "選択を示す色"
+
+#: buttons/gold-frame.xml:96 buttons/pill-stroke.xml:66 buttons/sticky_note.xml:76
+#, fuzzy
+msgid "Selection width"
+msgstr "タイトル選択"
+
 #: buttons/hand-left.xml:4
 msgid "Hand Left"
 msgstr "左を指す手"
@@ -3271,13 +3336,39 @@ msgstr "手の色"
 msgid "Hand Right"
 msgstr "右を指す手"
 
-#: buttons/home-v2.xml:4
+#: buttons/home-moon.xml:4
+#, fuzzy
+msgid "Home and moon"
+msgstr "手の色"
+
+#: buttons/home-moon.xml:29 buttons/home-v2.xml:4
 msgid "Home"
 msgstr "ホーム"
+
+#: buttons/home-moon.xml:50
+msgid "Window"
+msgstr ""
+
+#: buttons/home-moon.xml:69
+msgid "Moon"
+msgstr ""
+
+#: buttons/home-moon.xml:76
+msgid "Radius"
+msgstr ""
 
 #: buttons/home-v2.xml:23 buttons/settings.xml:18 objects/rectangle-v2.xml:31
 msgid "Colour"
 msgstr "色"
+
+#: buttons/maroon-frame.xml:4
+#, fuzzy
+msgid "Maroon frame"
+msgstr "金色のフレーム枠"
+
+#: buttons/maroon-frame.xml:71 buttons/maroon-frame.xml:78
+msgid "Gradient"
+msgstr ""
 
 #: buttons/movie.xml:3
 msgid "Movie"
@@ -3295,9 +3386,14 @@ msgstr "チェックマークの色"
 msgid "Painting Frame"
 msgstr "絵画フレーム"
 
-#: buttons/painting_frame.xml:47
-msgid "Frame colour"
-msgstr "フレームの色"
+#: buttons/pill-opacity.xml:5
+#, fuzzy
+msgid "Pill opacity"
+msgstr "不透明度"
+
+#: buttons/pill-stroke.xml:5
+msgid "Pill stroke"
+msgstr ""
 
 #: buttons/pill.xml:3
 msgid "Pill"
@@ -3323,6 +3419,31 @@ msgstr "砲弾形の色"
 msgid "Pill 3"
 msgstr "砲弾形 3"
 
+#: buttons/star-frame.xml:4
+#, fuzzy
+msgid "Star frame"
+msgstr "プレビュー開始"
+
+#: buttons/star-frame.xml:89
+#, fuzzy
+msgid "Image offset x"
+msgstr "テキストのずれ"
+
+#: buttons/star-frame.xml:96
+#, fuzzy
+msgid "Image offset y"
+msgstr "画像の不透明度"
+
+#: buttons/star-frame.xml:103
+#, fuzzy
+msgid "Image width"
+msgstr "画像の不透明度"
+
+#: buttons/star-frame.xml:110
+#, fuzzy
+msgid "Image height"
+msgstr "高さ"
+
 #: buttons/sticky_note.xml:4 objects/sticky_note.xml:4
 msgid "Sticky note"
 msgstr "ピン留めのメモ"
@@ -3334,10 +3455,6 @@ msgstr "メモ"
 #: buttons/sticky_note.xml:57 objects/sticky_note.xml:56
 msgid "Pin"
 msgstr "ピン"
-
-#: buttons/sticky_note.xml:64
-msgid "Selection colour"
-msgstr "選択を示す色"
 
 #: buttons/text-circle-v2.xml:3
 msgid "Text with circle"
@@ -3375,9 +3492,13 @@ msgstr "下線のずれ"
 msgid "Background colour"
 msgstr "背景の色"
 
-#: objects/gold-frame.xml:3
-msgid "Gold frame"
-msgstr "金色のフレーム枠"
+#: objects/ellipse45.xml:3
+msgid "Ellipse 45°"
+msgstr "楕円 45°"
+
+#: objects/frame45.xml:3
+msgid "Frame 45°"
+msgstr "フレーム枠 45°"
 
 #: objects/image.xml:16
 msgid "Opacity"
@@ -3442,6 +3563,9 @@ msgstr "ワイプ 右から左"
 #: transitions/wipeTopToBottom.xml:4
 msgid "Wipe top to bottom"
 msgstr "ワイプ 上から下"
+
+#~ msgid "T"
+#~ msgstr "T"
 
 #~ msgid "Cor do alfinete"
 #~ msgstr "ピンの色"

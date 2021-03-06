@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DVDStyler 2.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-06 07:57+0200\n"
+"POT-Creation-Date: 2021-03-06 14:45+0100\n"
 "PO-Revision-Date: 2012-04-08 22:51+0500\n"
 "Last-Translator: Umidjon Almasov <u.almasov at gmail.com>\n"
 "Language-Team: Uzbek Translations Team <u.almasov at gmail.com>\n"
@@ -169,20 +169,20 @@ msgstr "Amallar:"
 msgid "Audio properties"
 msgstr "Audio xossalari"
 
-#: src/AudioPropDlg.cpp:83 src/VideoPropDlg.cpp:107
+#: src/AudioPropDlg.cpp:83 src/VideoPropDlg.cpp:109
 msgid "File Name:"
 msgstr "Fayl nomi:"
 
-#: src/AudioPropDlg.cpp:87 src/TitlePropDlg.cpp:196 src/VideoFrameDlg.cpp:77 src/VideoPropDlg.cpp:112
+#: src/AudioPropDlg.cpp:87 src/TitlePropDlg.cpp:196 src/VideoFrameDlg.cpp:77 src/VideoPropDlg.cpp:114
 #: src/VobListBox.cpp:109
 msgid "Duration:"
 msgstr "Uzunligi:"
 
-#: src/AudioPropDlg.cpp:91 src/VideoPropDlg.cpp:116
+#: src/AudioPropDlg.cpp:91 src/VideoPropDlg.cpp:118
 msgid "Source Format:"
 msgstr "Manba formati:"
 
-#: src/AudioPropDlg.cpp:95 src/VideoPropDlg.cpp:120
+#: src/AudioPropDlg.cpp:95 src/VideoPropDlg.cpp:122
 msgid "Destination Format:"
 msgstr "Natija formati:"
 
@@ -190,7 +190,7 @@ msgstr "Natija formati:"
 msgid "5.1"
 msgstr ""
 
-#: src/AudioPropDlg.cpp:104 src/SettingsDlg.cpp:73 src/SubtitlePropDlg.cpp:107
+#: src/AudioPropDlg.cpp:104 src/SettingsDlg.cpp:77 src/SubtitlePropDlg.cpp:107
 msgid "Language:"
 msgstr "Til:"
 
@@ -203,7 +203,7 @@ msgstr "Vaqt:"
 msgid "ms"
 msgstr "ms"
 
-#: src/AudioPropDlg.cpp:120 src/VideoPropDlg.cpp:182
+#: src/AudioPropDlg.cpp:120
 msgid "Filters:"
 msgstr ""
 
@@ -211,7 +211,7 @@ msgstr ""
 msgid "Volume adjustment"
 msgstr ""
 
-#: src/AudioPropDlg.cpp:128 src/SettingsDlg.cpp:203 src/SettingsDlg.cpp:302
+#: src/AudioPropDlg.cpp:128 src/SettingsDlg.cpp:207 src/SettingsDlg.cpp:306
 msgid "No"
 msgstr ""
 
@@ -219,7 +219,7 @@ msgstr ""
 msgid "Change (%)"
 msgstr ""
 
-#: src/AudioPropDlg.cpp:135 src/SettingsDlg.cpp:121
+#: src/AudioPropDlg.cpp:135 src/SettingsDlg.cpp:125
 #, fuzzy
 msgid "Normalize"
 msgstr "Oddiy"
@@ -228,29 +228,29 @@ msgstr "Oddiy"
 msgid "Change (dB)"
 msgstr ""
 
-#: src/AudioPropDlg.cpp:206 src/Stream.cpp:114
+#: src/AudioPropDlg.cpp:210 src/Stream.cpp:116
 msgid "stereo"
 msgstr "stereo"
 
-#: src/AudioPropDlg.cpp:244 src/AudioPropDlg.cpp:426
+#: src/AudioPropDlg.cpp:248 src/AudioPropDlg.cpp:432
 msgid "Track gain:"
 msgstr ""
 
-#: src/AudioPropDlg.cpp:348
+#: src/AudioPropDlg.cpp:354
 #, c-format
 msgid "Invalid time value '%s'"
 msgstr "Vaqt qiymati noto'g'ri '%s'"
 
-#: src/AudioPropDlg.cpp:354
+#: src/AudioPropDlg.cpp:360
 #, c-format
 msgid "Invalid volume value '%s'"
 msgstr "Ovoz balandligining qiymati noto'g'ri '%s'"
 
-#: src/AudioPropDlg.cpp:389
+#: src/AudioPropDlg.cpp:395
 msgid "Analysis of audio"
 msgstr ""
 
-#: src/AudioPropDlg.cpp:389 src/MainWin.cpp:872 src/SysUtils.cpp:303 src/VobListBox.cpp:611
+#: src/AudioPropDlg.cpp:395 src/MainWin.cpp:872 src/SysUtils.cpp:303 src/VobListBox.cpp:655
 msgid "Please wait..."
 msgstr "Iltimos kutib turing"
 
@@ -325,7 +325,7 @@ msgstr "xatolarni tuzatish uchun ma'lumot qo'shish"
 msgid "Start"
 msgstr "Boshlash"
 
-#: src/BurnDlg.cpp:229 src/SubtitlePropDlg.cpp:244 src/VideoFrameDlg.cpp:75 wxVillaLib/PropDlg.cpp:207
+#: src/BurnDlg.cpp:229 src/SubtitlePropDlg.cpp:244 src/VideoFrameDlg.cpp:75 wxVillaLib/PropDlg.cpp:229
 msgid "Reset"
 msgstr "Qaytarish"
 
@@ -357,12 +357,12 @@ msgstr "ISO fayli uchun hajm yetarli emas."
 msgid "There is not enough space on temporary directory."
 msgstr "Vaqtinchalik direktoriyada joy yetarli emas."
 
-#: src/BurnDlg.cpp:507 src/BurnDlg.cpp:517 wxVillaLib/PropDlg.cpp:830
+#: src/BurnDlg.cpp:507 src/BurnDlg.cpp:517 wxVillaLib/PropDlg.cpp:857
 msgid "Choose a directory"
 msgstr "Direktoriyani tanlang"
 
 #: src/BurnDlg.cpp:536 src/MainWin.cpp:1218 src/TitlePropDlg.cpp:423 src/TitlePropDlg.cpp:439
-#: wxVillaLib/PropDlg.cpp:788
+#: wxVillaLib/PropDlg.cpp:815
 msgid "Choose a file"
 msgstr "Fayl tanlang"
 
@@ -414,7 +414,7 @@ msgstr ""
 msgid "Please enter file name to save ISO"
 msgstr ""
 
-#: src/BurnDlg.cpp:631 src/ButtonEditDlg.cpp:611
+#: src/BurnDlg.cpp:631 src/ButtonEditDlg.cpp:627
 #, c-format
 msgid "File '%s' already exist. Do you want to overwrite it?"
 msgstr ""
@@ -436,183 +436,193 @@ msgstr ""
 "Keshda %d fayl mavjud. Vaqtinchalik direktoriyani\n"
 "o'zgartirsangiz, ular o'chiriladi."
 
-#: src/ButtonAddParamDlg.cpp:47
+#: src/ButtonAddParamDlg.cpp:50
 msgid "Add parameter"
 msgstr ""
 
-#: src/ButtonAddParamDlg.cpp:55
+#: src/ButtonAddParamDlg.cpp:58
 #, fuzzy
 msgid ""
 "Please select an SVG element\n"
 "for new parameter:"
 msgstr "Iltimos uskuna nomini kiriting"
 
-#: src/ButtonAddParamDlg.cpp:60 src/SubtitlePropDlg.cpp:143
-msgid "Fill:"
+#: src/ButtonAddParamDlg.cpp:62
+msgid "Attribute:"
 msgstr ""
 
-#: src/ButtonAddParamDlg.cpp:62 src/ButtonAddParamDlg.cpp:67 src/MenuEditor.cpp:548
-#: buttons/arrow-text-left.xml:8 buttons/arrow-text-left.xml:12 buttons/arrow-text-right.xml:8
-#: buttons/arrow-text-right.xml:13 buttons/frame-text.xml:70 buttons/pill2.xml:24 buttons/pill2.xml:36
+#: src/ButtonAddParamDlg.cpp:65
+msgid "fill"
+msgstr ""
+
+#: src/ButtonAddParamDlg.cpp:67 src/ButtonAddParamDlg.cpp:72 src/ButtonAddParamDlg.cpp:77
+#: src/MenuEditor.cpp:548 buttons/arrow-text-left.xml:8 buttons/arrow-text-left.xml:12
+#: buttons/arrow-text-right.xml:8 buttons/arrow-text-right.xml:13 buttons/frame-text.xml:25
+#: buttons/frame-text.xml:70 buttons/pill-opacity.xml:14 buttons/pill-opacity.xml:64
+#: buttons/pill-stroke.xml:14 buttons/pill-stroke.xml:73 buttons/pill2.xml:24 buttons/pill2.xml:36
 #: buttons/pill3.xml:17 buttons/pill3.xml:29 buttons/text-v3.xml:3 objects/text-v2.xml:3
 #: objects/text-v2.xml:19
 msgid "Text"
 msgstr "Matn"
 
-#: src/ButtonAddParamDlg.cpp:65
-msgid "Stroke:"
+#: src/ButtonAddParamDlg.cpp:70
+msgid "stroke"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:170
+#: src/ButtonAddParamDlg.cpp:75
+msgid "stroke-width"
+msgstr ""
+
+#: src/ButtonEditDlg.cpp:184
 msgid "name"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:170 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:439
-#: src/MenuObjectPropDlg.cpp:677 src/MenuObjectPropDlg.cpp:686 src/MenuObjectPropDlg.cpp:698
+#: src/ButtonEditDlg.cpp:184 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:439
+#: src/MenuObjectPropDlg.cpp:679 src/MenuObjectPropDlg.cpp:688 src/MenuObjectPropDlg.cpp:700
 msgid "title"
 msgstr "bo'lim"
 
-#: src/ButtonEditDlg.cpp:170
+#: src/ButtonEditDlg.cpp:184
 msgid "type"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:170
+#: src/ButtonEditDlg.cpp:184
 msgid "ID of element"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:170
+#: src/ButtonEditDlg.cpp:184
 msgid "attribute name"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:170
+#: src/ButtonEditDlg.cpp:184
 msgid "dynamic"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:171
+#: src/ButtonEditDlg.cpp:185
 msgid "value"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:171 src/ButtonEditDlg.cpp:261
+#: src/ButtonEditDlg.cpp:185 src/ButtonEditDlg.cpp:275
 #, fuzzy
 msgid "highlighted"
 msgstr "Yoritilgan"
 
-#: src/ButtonEditDlg.cpp:171 src/ButtonEditDlg.cpp:262
+#: src/ButtonEditDlg.cpp:185 src/ButtonEditDlg.cpp:276
 #, fuzzy
 msgid "selected"
 msgstr "Tanlangan"
 
-#: src/ButtonEditDlg.cpp:251
+#: src/ButtonEditDlg.cpp:265
 #, fuzzy
 msgid "Create button"
 msgstr "tugma"
 
-#: src/ButtonEditDlg.cpp:260
+#: src/ButtonEditDlg.cpp:274
 #, fuzzy
 msgid "normal"
 msgstr "Oddiy"
 
-#: src/ButtonEditDlg.cpp:264
+#: src/ButtonEditDlg.cpp:278
 #, fuzzy
 msgid "Button state"
 msgstr "Tugmalar"
 
-#: src/ButtonEditDlg.cpp:271
+#: src/ButtonEditDlg.cpp:285
 #, fuzzy
 msgid "Directory:"
 msgstr "Direktoriya"
 
-#: src/ButtonEditDlg.cpp:273 buttons/circle-outline.xml:16 buttons/circle.xml:15 buttons/pill.xml:44
+#: src/ButtonEditDlg.cpp:287 buttons/circle-outline.xml:16 buttons/circle.xml:15 buttons/pill.xml:44
 #: buttons/text-circle-v2.xml:19 buttons/text-square-v2.xml:20 buttons/text-underlined-v3.xml:19
 #: buttons/text-v3.xml:19
 msgid "Label"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:275 src/SlideDlg.cpp:48
+#: src/ButtonEditDlg.cpp:289 src/SlideDlg.cpp:48
 #, fuzzy
 msgid "File name:"
 msgstr "Fayl nomi:"
 
-#: src/ButtonEditDlg.cpp:280
+#: src/ButtonEditDlg.cpp:294
 msgid ".xml"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:283
+#: src/ButtonEditDlg.cpp:297
 #, fuzzy
 msgid "Title:"
 msgstr "Bo'lim"
 
-#: src/ButtonEditDlg.cpp:287
+#: src/ButtonEditDlg.cpp:301
 msgid "Default width:"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:293 src/ButtonEditDlg.cpp:316 src/ButtonEditDlg.cpp:340 src/ButtonEditDlg.cpp:363
+#: src/ButtonEditDlg.cpp:307 src/ButtonEditDlg.cpp:330 src/ButtonEditDlg.cpp:354 src/ButtonEditDlg.cpp:377
 msgid "or"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:297 src/ButtonEditDlg.cpp:302 src/ButtonEditDlg.cpp:320 src/ButtonEditDlg.cpp:325
-#: src/ButtonEditDlg.cpp:344 src/ButtonEditDlg.cpp:349 src/ButtonEditDlg.cpp:367 src/ButtonEditDlg.cpp:372
+#: src/ButtonEditDlg.cpp:311 src/ButtonEditDlg.cpp:316 src/ButtonEditDlg.cpp:334 src/ButtonEditDlg.cpp:339
+#: src/ButtonEditDlg.cpp:358 src/ButtonEditDlg.cpp:363 src/ButtonEditDlg.cpp:381 src/ButtonEditDlg.cpp:386
 msgid "+"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:307 src/ButtonEditDlg.cpp:330 src/ButtonEditDlg.cpp:354 src/ButtonEditDlg.cpp:377
+#: src/ButtonEditDlg.cpp:321 src/ButtonEditDlg.cpp:344 src/ButtonEditDlg.cpp:368 src/ButtonEditDlg.cpp:391
 #: src/SubtitlePropDlg.cpp:153 src/SubtitlePropDlg.cpp:167 src/SubtitlePropDlg.cpp:184
 msgid "%"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:310
+#: src/ButtonEditDlg.cpp:324
 #, fuzzy
 msgid "Min width:"
 msgstr "Eni:"
 
-#: src/ButtonEditDlg.cpp:334
+#: src/ButtonEditDlg.cpp:348
 msgid "Default height:"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:357
+#: src/ButtonEditDlg.cpp:371
 #, fuzzy
 msgid "Min height:"
 msgstr "Balandligi:"
 
-#: src/ButtonEditDlg.cpp:382
+#: src/ButtonEditDlg.cpp:396
 msgid "Parameters:"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:391 src/MainWin.cpp:321
+#: src/ButtonEditDlg.cpp:405 src/MainWin.cpp:321
 msgid "Save"
 msgstr "Saqlash"
 
-#: src/ButtonEditDlg.cpp:456
+#: src/ButtonEditDlg.cpp:470
 #, fuzzy
 msgid "Edit button"
 msgstr "tugma"
 
-#: src/ButtonEditDlg.cpp:500
+#: src/ButtonEditDlg.cpp:514
 #, fuzzy
 msgid "Add"
 msgstr "&Qo'shish"
 
-#: src/ButtonEditDlg.cpp:502
+#: src/ButtonEditDlg.cpp:516
 #, fuzzy
 msgid "Remove selected"
 msgstr "oxirgi tanlangan"
 
-#: src/ButtonEditDlg.cpp:546
+#: src/ButtonEditDlg.cpp:560
 msgid "No SVG element is selected"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:627 src/NewProjectDlg.cpp:51 src/NewProjectDlg.cpp:134
+#: src/ButtonEditDlg.cpp:643 src/NewProjectDlg.cpp:51 src/NewProjectDlg.cpp:134
 msgid "Info"
 msgstr ""
 
-#: src/ButtonEditDlg.cpp:627
+#: src/ButtonEditDlg.cpp:643
 msgid ""
 "Click on image to select an SVG\n"
 " element for a new parameter"
 msgstr ""
 
 #: src/Cache.cpp:238 src/Cache.cpp:263 src/Process.cpp:25 src/ProcessMenuTransitions.cpp:121
-#: src/ProcessTranscode.cpp:159 src/ProcessTranscode.cpp:174
+#: src/ProcessTranscode.cpp:195 src/ProcessTranscode.cpp:211
 #, c-format
 msgid "Can't remove file '%s'"
 msgstr ""
@@ -640,7 +650,7 @@ msgstr ""
 msgid "Chapters:"
 msgstr ""
 
-#: src/ChaptersDlg.cpp:128 src/VideoFrameDlg.cpp:61 src/VideoPropDlg.cpp:207
+#: src/ChaptersDlg.cpp:128 src/VideoFrameDlg.cpp:61 src/VideoPropDlg.cpp:213
 msgid "Time:"
 msgstr "Vaqt:"
 
@@ -662,7 +672,7 @@ msgstr "Dastur"
 msgid "Regular cell"
 msgstr "Oddiy"
 
-#: src/ChaptersDlg.cpp:152 src/VideoPropDlg.cpp:235
+#: src/ChaptersDlg.cpp:152 src/VideoPropDlg.cpp:241
 msgid "End:"
 msgstr "Tugashi:"
 
@@ -670,8 +680,8 @@ msgstr "Tugashi:"
 msgid "Auto"
 msgstr "Avto"
 
-#: src/ChaptersDlg.cpp:157 src/DVD.cpp:1006 src/MenuObjectPropDlg.cpp:161 src/MenuObjectPropDlg.cpp:557
-#: src/SettingsDlg.cpp:177
+#: src/ChaptersDlg.cpp:157 src/DVD.cpp:1006 src/MenuObjectPropDlg.cpp:161 src/MenuObjectPropDlg.cpp:559
+#: src/SettingsDlg.cpp:181
 msgid "Custom"
 msgstr "Boshqa"
 
@@ -679,9 +689,9 @@ msgstr "Boshqa"
 msgid "Pause:"
 msgstr "Pauza:"
 
-#: src/ChaptersDlg.cpp:174 src/MainWin.cpp:621 src/MenuPropDlg.cpp:171 src/SettingsDlg.cpp:163
-#: src/SettingsDlg.cpp:165 src/TitlePropDlg.cpp:150 src/TitlePropDlg.cpp:196 src/VideoFrameDlg.cpp:82
-#: src/VideoPropDlg.cpp:188 src/VideoPropDlg.cpp:193
+#: src/ChaptersDlg.cpp:174 src/MainWin.cpp:621 src/MenuPropDlg.cpp:171 src/SettingsDlg.cpp:167
+#: src/SettingsDlg.cpp:169 src/TitlePropDlg.cpp:150 src/TitlePropDlg.cpp:196 src/VideoFrameDlg.cpp:82
+#: src/VideoPropDlg.cpp:190 src/VideoPropDlg.cpp:195
 msgid "sec"
 msgstr "soniya"
 
@@ -706,15 +716,15 @@ msgstr "Boshlanish vaqti tugash vaqtidan keyin bo'lish mumkin emas"
 msgid "&Refresh"
 msgstr "&Yangilash"
 
-#: src/DVD.cpp:270 src/Menu.cpp:1141 src/MenuEditor.cpp:464
+#: src/DVD.cpp:270 src/Menu.cpp:1140 src/MenuEditor.cpp:464
 msgid "Wide screen DVD menu can contain maximal 12 buttons"
 msgstr ""
 
-#: src/DVD.cpp:273 src/Menu.cpp:1144 src/MenuEditor.cpp:467
+#: src/DVD.cpp:273 src/Menu.cpp:1143 src/MenuEditor.cpp:467
 msgid "Wide screen DVD menu (nopanscan/noletterbox) can contain maximal 18 buttons"
 msgstr ""
 
-#: src/DVD.cpp:277 src/Menu.cpp:1148 src/MenuEditor.cpp:471
+#: src/DVD.cpp:277 src/Menu.cpp:1147 src/MenuEditor.cpp:471
 msgid "DVD menu can contain maximal 34 buttons"
 msgstr ""
 
@@ -864,7 +874,7 @@ msgstr "ko'rinish bo'rchagi menyusiga o'tish"
 msgid "jump to chapter menu"
 msgstr "epizodlar menyusiga o'tish"
 
-#: src/DVDAction.cpp:75 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:647 src/MenuObjectPropDlg.cpp:667
+#: src/DVDAction.cpp:75 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:649 src/MenuObjectPropDlg.cpp:669
 msgid "menu"
 msgstr "menyu"
 
@@ -886,13 +896,13 @@ msgstr "%d bo'limining %d epizodiga o'tish"
 msgid "jump to title"
 msgstr "bo'limga o'tish"
 
-#: src/DVDAction.cpp:183 src/MenuObjectPropDlg.cpp:441 src/MenuObjectPropDlg.cpp:660
-#: src/MenuObjectPropDlg.cpp:669 src/MenuObjectPropDlg.cpp:679 src/MenuObjectPropDlg.cpp:688
-#: src/MenuObjectPropDlg.cpp:697
+#: src/DVDAction.cpp:183 src/MenuObjectPropDlg.cpp:441 src/MenuObjectPropDlg.cpp:662
+#: src/MenuObjectPropDlg.cpp:671 src/MenuObjectPropDlg.cpp:681 src/MenuObjectPropDlg.cpp:690
+#: src/MenuObjectPropDlg.cpp:699
 msgid "titleset"
 msgstr "to'plam"
 
-#: src/DVDAction.cpp:186 src/MenuObjectPropDlg.cpp:636 src/MenuPropDlg.cpp:55
+#: src/DVDAction.cpp:186 src/MenuObjectPropDlg.cpp:638 src/MenuPropDlg.cpp:55
 #, fuzzy
 msgid "VMGM menu"
 msgstr "menyu"
@@ -911,27 +921,27 @@ msgstr "menyuga o'tib bo'lmadi; mavjud emas"
 msgid "cannot jump to menu; none exist"
 msgstr "menyuga o'tib bo'lmadi; mavjud emas"
 
-#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:653
+#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:655
 msgid "title menu"
 msgstr "bo'lim menyusi"
 
-#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:653
+#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:655
 msgid "root menu"
 msgstr "ildiz menyusi"
 
-#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:653
+#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:655
 msgid "subtitle menu"
 msgstr "subtitr menyusi"
 
-#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:654
+#: src/DVDAction.cpp:211 src/MenuObjectPropDlg.cpp:656
 msgid "audio menu"
 msgstr "audio menyusi"
 
-#: src/DVDAction.cpp:212 src/MenuObjectPropDlg.cpp:654
+#: src/DVDAction.cpp:212 src/MenuObjectPropDlg.cpp:656
 msgid "angle menu"
 msgstr "ko'rinish bo'rchagi menyusi"
 
-#: src/DVDAction.cpp:212 src/MenuObjectPropDlg.cpp:654
+#: src/DVDAction.cpp:212 src/MenuObjectPropDlg.cpp:656
 msgid "chapter menu"
 msgstr "epizodlar menyusi"
 
@@ -1258,7 +1268,7 @@ msgstr "&Orqa fonga qo'yish"
 msgid "&Play"
 msgstr "Hammasini ijro ettirish"
 
-#: src/MainWin.cpp:274 src/MenuEditor.cpp:374 src/TitlesetManager.cpp:184 wxVillaLib/PropDlg.cpp:648
+#: src/MainWin.cpp:274 src/MenuEditor.cpp:374 src/TitlesetManager.cpp:184 wxVillaLib/PropDlg.cpp:670
 msgid "&Delete"
 msgstr "&O'chirish"
 
@@ -1308,7 +1318,7 @@ msgstr "Fon rasmlari"
 msgid "Buttons"
 msgstr "Tugmalar"
 
-#: src/MainWin.cpp:522 src/MainWin.cpp:1371 src/MainWin.cpp:1393 src/MenuObject.cpp:265
+#: src/MainWin.cpp:522 src/MainWin.cpp:1371 src/MainWin.cpp:1393 src/MenuObject.cpp:266
 #: src/MenuObjectPropDlg.cpp:265 src/MenuObjectPropDlg.cpp:280 buttons/text-circle-v2.xml:13
 #: buttons/text-square-v2.xml:14 buttons/text-underlined-v3.xml:12 buttons/text-v3.xml:13
 msgid "button"
@@ -1338,7 +1348,7 @@ msgstr "%s (%.1f GB)"
 msgid "%d slides"
 msgstr ""
 
-#: src/MainWin.cpp:625 src/SettingsDlg.cpp:126
+#: src/MainWin.cpp:625 src/SettingsDlg.cpp:130
 msgid "min"
 msgstr "daq"
 
@@ -1360,7 +1370,7 @@ msgstr "Hammasini ijro ettirish"
 msgid "Select title"
 msgstr "Bo'limni tanlash"
 
-#: src/MainWin.cpp:832 src/TitlesetManager.cpp:1001
+#: src/MainWin.cpp:832 src/TitlesetManager.cpp:1008
 msgid "Back"
 msgstr "Orqaga"
 
@@ -1476,7 +1486,7 @@ msgstr " '%s' fayl tizimidan o'chirishga ishonchingiz komilmi?"
 msgid "&Delete button"
 msgstr "tugma"
 
-#: src/Menu.cpp:839
+#: src/Menu.cpp:838
 #, c-format
 msgid "%s and %s are overlapping"
 msgstr ""
@@ -1677,11 +1687,11 @@ msgstr ""
 msgid "Image Files "
 msgstr "Rasm fayllari"
 
-#: src/MenuObject.cpp:265
+#: src/MenuObject.cpp:266
 msgid "object"
 msgstr ""
 
-#: src/MenuObject.cpp:816 src/MenuObject.cpp:825
+#: src/MenuObject.cpp:820 src/MenuObject.cpp:829
 #, c-format
 msgid "can't open file '%s'"
 msgstr ""
@@ -1760,7 +1770,7 @@ msgstr "Ko'rinishi"
 msgid "none"
 msgstr ""
 
-#: src/MenuObjectPropDlg.cpp:267 src/MenuPropDlg.cpp:126 src/SettingsDlg.cpp:274 src/VideoPropDlg.cpp:132
+#: src/MenuObjectPropDlg.cpp:267 src/MenuPropDlg.cpp:126 src/SettingsDlg.cpp:278 src/VideoPropDlg.cpp:134
 msgid "auto"
 msgstr "avto"
 
@@ -1780,8 +1790,8 @@ msgstr "Tanlangan"
 msgid "Font..."
 msgstr "Shrift..."
 
-#: src/MenuObjectPropDlg.cpp:404 src/MenuObjectPropDlg.cpp:564 src/MenuPropDlg.cpp:81
-#: src/VideoPropDlg.cpp:138
+#: src/MenuObjectPropDlg.cpp:404 src/MenuObjectPropDlg.cpp:566 src/MenuPropDlg.cpp:81
+#: src/VideoPropDlg.cpp:140
 msgid "Keep Aspect Ratio"
 msgstr "Tomonlarning o'zaro nisbatini saqlash"
 
@@ -1817,11 +1827,11 @@ msgstr ""
 msgid "Slice"
 msgstr ""
 
-#: src/MenuObjectPropDlg.cpp:455 buttons/ellipse-v2.xml:23 buttons/ellipse45.xml:26 buttons/frame-text.xml:30
-#: buttons/frame-v2.xml:18 buttons/frame45.xml:21 buttons/movie.xml:26 buttons/painting_frame.xml:40
-#: buttons/sticky_note.xml:43 objects/ellipse-v3.xml:22 objects/ellipse45.xml:24 objects/frame-v3.xml:18
-#: objects/frame45.xml:20 objects/gold-frame.xml:45 objects/image.xml:3 objects/image.xml:9
-#: objects/sticky_note.xml:42
+#: src/MenuObjectPropDlg.cpp:455 buttons/dotted-frame.xml:25 buttons/ellipse-v2.xml:23
+#: buttons/frame-text.xml:30 buttons/frame-v2.xml:18 buttons/gold-frame.xml:49 buttons/maroon-frame.xml:50
+#: buttons/movie.xml:27 buttons/painting_frame.xml:40 buttons/star-frame.xml:35 buttons/sticky_note.xml:43
+#: objects/ellipse-v3.xml:22 objects/ellipse45.xml:24 objects/frame-v3.xml:18 objects/frame45.xml:20
+#: objects/gold-frame.xml:45 objects/image.xml:3 objects/image.xml:9 objects/sticky_note.xml:42
 msgid "Image"
 msgstr "Rasm"
 
@@ -1829,65 +1839,65 @@ msgstr "Rasm"
 msgid "Video"
 msgstr "Video"
 
-#: src/MenuObjectPropDlg.cpp:516 src/SubtitlePropDlg.cpp:186
+#: src/MenuObjectPropDlg.cpp:518 src/SubtitlePropDlg.cpp:186
 msgid "Offset:"
 msgstr "Siljish:"
 
-#: src/MenuObjectPropDlg.cpp:524
+#: src/MenuObjectPropDlg.cpp:526
 msgid "Deviation:"
 msgstr ""
 
-#: src/MenuObjectPropDlg.cpp:539
+#: src/MenuObjectPropDlg.cpp:541
 msgid "Location"
 msgstr "Joylashuvi"
 
-#: src/MenuObjectPropDlg.cpp:542
+#: src/MenuObjectPropDlg.cpp:544
 msgid "X:"
 msgstr "X:"
 
-#: src/MenuObjectPropDlg.cpp:543
+#: src/MenuObjectPropDlg.cpp:545
 msgid "Y:"
 msgstr "Y:"
 
-#: src/MenuObjectPropDlg.cpp:549 buttons/arrow-blue.xml:26 buttons/arrow-cool.xml:17
+#: src/MenuObjectPropDlg.cpp:551 buttons/arrow-blue.xml:26 buttons/arrow-cool.xml:17
 #: buttons/arrow-double.xml:13 buttons/arrow-gold.xml:26 buttons/arrow-green-double.xml:383
 #: buttons/arrow-green.xml:375 buttons/arrow-red.xml:29 buttons/arrow-simple-v2.xml:43
 #: buttons/arrow-star.xml:21 buttons/arrow.xml:42 buttons/arrow2.xml:25 buttons/arrow3.xml:19
-#: buttons/frame45.xml:35 objects/frame45.xml:34
+#: buttons/gear.xml:86 buttons/star-frame.xml:28 objects/frame45.xml:34
 msgid "Rotation"
 msgstr ""
 
-#: src/MenuObjectPropDlg.cpp:551
+#: src/MenuObjectPropDlg.cpp:553
 msgid "Angle:"
 msgstr ""
 
-#: src/MenuObjectPropDlg.cpp:557
+#: src/MenuObjectPropDlg.cpp:559
 msgid "Size"
 msgstr "O'lchami"
 
-#: src/MenuObjectPropDlg.cpp:559
+#: src/MenuObjectPropDlg.cpp:561
 msgid "Width:"
 msgstr "Eni:"
 
-#: src/MenuObjectPropDlg.cpp:561
+#: src/MenuObjectPropDlg.cpp:563
 msgid "Height:"
 msgstr "Balandligi:"
 
-#: src/MenuObjectPropDlg.cpp:576
+#: src/MenuObjectPropDlg.cpp:578
 #, fuzzy
 msgid "Animations..."
 msgstr "Amallar:"
 
-#: src/MenuObjectPropDlg.cpp:627
+#: src/MenuObjectPropDlg.cpp:629
 msgid "start of current menu"
 msgstr "joriy menyuning boshi"
 
-#: src/MenuObjectPropDlg.cpp:712 src/MenuObjectPropDlg.cpp:716
+#: src/MenuObjectPropDlg.cpp:714 src/MenuObjectPropDlg.cpp:718
 #, c-format
 msgid "chapter %d"
 msgstr "epizod %d"
 
-#: src/MenuObjectPropDlg.cpp:894
+#: src/MenuObjectPropDlg.cpp:896
 msgid "Please enter the action command."
 msgstr "Amal buyrig'ini kiriting."
 
@@ -1895,7 +1905,7 @@ msgstr "Amal buyrig'ini kiriting."
 msgid "Titleset"
 msgstr "To'plam"
 
-#: src/MenuPropDlg.cpp:53 src/MenuPropDlg.cpp:206 src/TitlesetManager.cpp:331 src/TitlesetManager.cpp:1213
+#: src/MenuPropDlg.cpp:53 src/MenuPropDlg.cpp:206 src/TitlesetManager.cpp:331 src/TitlesetManager.cpp:1220
 #: buttons/pill.xml:26
 msgid "Menu"
 msgstr "Menyu"
@@ -1918,7 +1928,7 @@ msgstr "Fon rasmlari"
 msgid "Image and Video Files"
 msgstr "Video fayllar"
 
-#: src/MenuPropDlg.cpp:153 src/VobListBox.cpp:146
+#: src/MenuPropDlg.cpp:153 src/VobListBox.cpp:145
 msgid "Audio:"
 msgstr "Audio:"
 
@@ -2019,8 +2029,8 @@ msgstr ""
 msgid "Video bitrate:"
 msgstr "Video kadr"
 
-#: src/NewProjectDlg.cpp:65 src/NewProjectDlg.cpp:71 src/SettingsDlg.cpp:245 src/SettingsDlg.cpp:250
-#: src/SettingsDlg.cpp:254
+#: src/NewProjectDlg.cpp:65 src/NewProjectDlg.cpp:71 src/SettingsDlg.cpp:249 src/SettingsDlg.cpp:254
+#: src/SettingsDlg.cpp:258
 msgid "KBit/s"
 msgstr "KBit/s"
 
@@ -2040,7 +2050,7 @@ msgstr ""
 msgid "Audio Format"
 msgstr ""
 
-#: src/NewProjectDlg.cpp:113 src/SettingsDlg.cpp:132
+#: src/NewProjectDlg.cpp:113 src/SettingsDlg.cpp:136
 msgid "Default title post command:"
 msgstr ""
 
@@ -2091,11 +2101,11 @@ msgstr ""
 msgid "Size of Disc Image > %.2f GB. Do you want to continue?"
 msgstr ""
 
-#: src/ProcessCleanTemp.cpp:72
+#: src/ProcessCleanTemp.cpp:74
 msgid "Cleaning temporary directory"
 msgstr ""
 
-#: src/ProcessCleanTemp.cpp:74 src/ProcessCleanTemp.cpp:85
+#: src/ProcessCleanTemp.cpp:76 src/ProcessCleanTemp.cpp:87
 #, fuzzy, c-format
 msgid "Cannot remove directory '%s'"
 msgstr "'%s' direktoriyani yaratib bo'lmadi"
@@ -2172,8 +2182,8 @@ msgid "Transcode audio from"
 msgstr ""
 
 #: src/ProcessMenu.cpp:211 src/ProcessMenu.cpp:217 src/ProcessMenuTransitions.cpp:126
-#: src/ProcessMenuTransitions.cpp:136 src/ProcessSlideshow.cpp:198 src/ProcessTranscode.cpp:153
-#: src/ProcessTranscode.cpp:164 src/ProcessTranscode.cpp:189 src/ProcessTranscode.cpp:201
+#: src/ProcessMenuTransitions.cpp:136 src/ProcessSlideshow.cpp:198 src/ProcessTranscode.cpp:189
+#: src/ProcessTranscode.cpp:200 src/ProcessTranscode.cpp:226 src/ProcessTranscode.cpp:238
 msgid "Error transcoding of "
 msgstr ""
 
@@ -2186,7 +2196,7 @@ msgstr ""
 msgid "Audio duration: %f sec"
 msgstr ""
 
-#: src/ProcessMenu.cpp:275 src/SettingsDlg.cpp:238
+#: src/ProcessMenu.cpp:275 src/SettingsDlg.cpp:242
 msgid "Frame count of menu:"
 msgstr ""
 
@@ -2270,20 +2280,20 @@ msgstr ""
 msgid "Can't rename temporary file '%s'"
 msgstr ""
 
-#: src/ProcessTranscode.cpp:23
+#: src/ProcessTranscode.cpp:35
 msgid "Transcode video file: "
 msgstr ""
 
-#: src/ProcessTranscode.cpp:224
+#: src/ProcessTranscode.cpp:261
 msgid "Multiplexing video and audio streams"
 msgstr ""
 
-#: src/ProcessTranscode.cpp:244
+#: src/ProcessTranscode.cpp:282
 #, fuzzy, c-format
 msgid "Analysis of audio track %d"
 msgstr "%d audio trek tanlash va"
 
-#: src/ProcessTranscode.cpp:248 src/ProcessTranscode.cpp:262 wxVillaLib/ProgramProcess.cpp:84
+#: src/ProcessTranscode.cpp:286 src/ProcessTranscode.cpp:300 wxVillaLib/ProgramProcess.cpp:84
 #, c-format
 msgid "Execution of '%s' failed."
 msgstr ""
@@ -2348,222 +2358,222 @@ msgstr ""
 msgid "Generating was successful."
 msgstr ""
 
-#: src/SettingsDlg.cpp:41 src/SettingsDlg.cpp:413 src/SettingsDlg.cpp:419 buttons/settings.xml:3
+#: src/SettingsDlg.cpp:45 src/SettingsDlg.cpp:417 src/SettingsDlg.cpp:423 buttons/settings.xml:3
 msgid "Settings"
 msgstr "Moslamalar"
 
-#: src/SettingsDlg.cpp:59
+#: src/SettingsDlg.cpp:63
 msgid "Interface"
 msgstr "Interfeys"
 
-#: src/SettingsDlg.cpp:74
+#: src/SettingsDlg.cpp:78
 msgid "Default disc label:"
 msgstr ""
 
-#: src/SettingsDlg.cpp:76
+#: src/SettingsDlg.cpp:80
 msgid "Default disc capacity:"
 msgstr ""
 
-#: src/SettingsDlg.cpp:80
+#: src/SettingsDlg.cpp:84
 msgid "Default video format:"
 msgstr ""
 
-#: src/SettingsDlg.cpp:98
+#: src/SettingsDlg.cpp:102
 #, fuzzy
 msgid "Keep aspect ratio"
 msgstr "Tomonlarning o'zaro nisbatini saqlash"
 
-#: src/SettingsDlg.cpp:102
+#: src/SettingsDlg.cpp:106
 msgid "Default audio format:"
 msgstr ""
 
-#: src/SettingsDlg.cpp:125
+#: src/SettingsDlg.cpp:129
 msgid "Default chapter length:"
 msgstr ""
 
-#: src/SettingsDlg.cpp:128
+#: src/SettingsDlg.cpp:132
 msgid "Add chapter at title end"
 msgstr ""
 
-#: src/SettingsDlg.cpp:155
+#: src/SettingsDlg.cpp:159
 msgid "Default button:"
 msgstr ""
 
-#: src/SettingsDlg.cpp:160
+#: src/SettingsDlg.cpp:164
 msgid "Accept invalid actions"
 msgstr ""
 
-#: src/SettingsDlg.cpp:163
+#: src/SettingsDlg.cpp:167
 msgid "Default slide duration:"
 msgstr ""
 
-#: src/SettingsDlg.cpp:164
+#: src/SettingsDlg.cpp:168
 msgid "Default transition duration:"
 msgstr ""
 
-#: src/SettingsDlg.cpp:171
+#: src/SettingsDlg.cpp:175
 msgid "Default slide transition:"
 msgstr ""
 
-#: src/SettingsDlg.cpp:177
+#: src/SettingsDlg.cpp:181
 msgid "Last directory"
 msgstr ""
 
-#: src/SettingsDlg.cpp:178
+#: src/SettingsDlg.cpp:182
 msgid "File Browser start directory:"
 msgstr ""
 
-#: src/SettingsDlg.cpp:193
+#: src/SettingsDlg.cpp:197
 msgid "Clear thumbnail cache after exit"
 msgstr ""
 
-#: src/SettingsDlg.cpp:197
+#: src/SettingsDlg.cpp:201
 msgid "Undo history size:"
 msgstr ""
 
-#: src/SettingsDlg.cpp:198
+#: src/SettingsDlg.cpp:202
 msgid "Clear transcoding cache:"
 msgstr ""
 
-#: src/SettingsDlg.cpp:201
+#: src/SettingsDlg.cpp:205
 #, fuzzy
 msgid "Prompt"
 msgstr "Xossalari"
 
-#: src/SettingsDlg.cpp:202 src/SettingsDlg.cpp:301
+#: src/SettingsDlg.cpp:206 src/SettingsDlg.cpp:305
 msgid "Yes"
 msgstr ""
 
-#: src/SettingsDlg.cpp:207
+#: src/SettingsDlg.cpp:211
 msgid "Clear cache now"
 msgstr ""
 
-#: src/SettingsDlg.cpp:211
+#: src/SettingsDlg.cpp:215
 msgid "\"Don't show again\" flags:"
 msgstr ""
 
-#: src/SettingsDlg.cpp:213
+#: src/SettingsDlg.cpp:217
 msgid "Reset All"
 msgstr ""
 
-#: src/SettingsDlg.cpp:222
+#: src/SettingsDlg.cpp:226
 msgid "Core"
 msgstr ""
 
-#: src/SettingsDlg.cpp:241
+#: src/SettingsDlg.cpp:245
 msgid "Draw buttons on background"
 msgstr ""
 
-#: src/SettingsDlg.cpp:242
+#: src/SettingsDlg.cpp:246
 msgid "Allow HD menus"
 msgstr ""
 
-#: src/SettingsDlg.cpp:244
+#: src/SettingsDlg.cpp:248
 msgid "Menu video bitrate:"
 msgstr ""
 
-#: src/SettingsDlg.cpp:249
+#: src/SettingsDlg.cpp:253
 msgid "Slideshow video bitrate:"
 msgstr ""
 
-#: src/SettingsDlg.cpp:254
+#: src/SettingsDlg.cpp:258
 msgid "Default audio bitrate:"
 msgstr ""
 
-#: src/SettingsDlg.cpp:255
+#: src/SettingsDlg.cpp:259
 msgid "Thread count:"
 msgstr ""
 
-#: src/SettingsDlg.cpp:256
+#: src/SettingsDlg.cpp:260
 msgid "DVD reserved space:"
 msgstr ""
 
-#: src/SettingsDlg.cpp:256
+#: src/SettingsDlg.cpp:260
 msgid "KB"
 msgstr ""
 
-#: src/SettingsDlg.cpp:260
+#: src/SettingsDlg.cpp:264
 #, fuzzy
 msgid "internal"
 msgstr "Interfeys"
 
-#: src/SettingsDlg.cpp:265
+#: src/SettingsDlg.cpp:269
 msgid "Encoder:"
 msgstr ""
 
-#: src/SettingsDlg.cpp:275
+#: src/SettingsDlg.cpp:279
 msgid "CBR"
 msgstr ""
 
-#: src/SettingsDlg.cpp:276
+#: src/SettingsDlg.cpp:280
 msgid "1-pass VBR"
 msgstr ""
 
-#: src/SettingsDlg.cpp:277
+#: src/SettingsDlg.cpp:281
 msgid "2-pass VBR"
 msgstr ""
 
-#: src/SettingsDlg.cpp:292
+#: src/SettingsDlg.cpp:296
 msgid "Create ISO command:"
 msgstr ""
 
-#: src/SettingsDlg.cpp:293
+#: src/SettingsDlg.cpp:297
 msgid "Burn command:"
 msgstr ""
 
-#: src/SettingsDlg.cpp:294
+#: src/SettingsDlg.cpp:298
 msgid "Burn ISO command:"
 msgstr ""
 
-#: src/SettingsDlg.cpp:295
+#: src/SettingsDlg.cpp:299
 msgid "Add ECC command:"
 msgstr ""
 
-#: src/SettingsDlg.cpp:296
+#: src/SettingsDlg.cpp:300
 msgid "Format command:"
 msgstr ""
 
-#: src/SettingsDlg.cpp:298
+#: src/SettingsDlg.cpp:302
 msgid "Use mplex:"
 msgstr ""
 
-#: src/SettingsDlg.cpp:303
+#: src/SettingsDlg.cpp:307
 msgid "For menus only"
 msgstr ""
 
-#: src/SettingsDlg.cpp:308
+#: src/SettingsDlg.cpp:312
 msgid "NTSC film:"
 msgstr ""
 
-#: src/SettingsDlg.cpp:309
+#: src/SettingsDlg.cpp:313
 msgid "re-encode by default"
 msgstr ""
 
-#: src/SettingsDlg.cpp:310
+#: src/SettingsDlg.cpp:314
 msgid "HD video:"
 msgstr ""
 
-#: src/SettingsDlg.cpp:311
+#: src/SettingsDlg.cpp:315
 msgid "allow (experimental)"
 msgstr ""
 
-#: src/SettingsDlg.cpp:313
+#: src/SettingsDlg.cpp:317
 msgid "Debug"
 msgstr ""
 
-#: src/SettingsDlg.cpp:314
+#: src/SettingsDlg.cpp:318
 msgid "Don't remove temp files"
 msgstr ""
 
-#: src/SettingsDlg.cpp:338
+#: src/SettingsDlg.cpp:342
 msgid "Language change will not take effect until DVDStyler is restarted"
 msgstr ""
 
-#: src/SettingsDlg.cpp:413
+#: src/SettingsDlg.cpp:417
 msgid "All \"don't show again\" flags are reseted."
 msgstr ""
 
-#: src/SettingsDlg.cpp:419
+#: src/SettingsDlg.cpp:423
 msgid "The transcoding cache is successfully cleared."
 msgstr ""
 
@@ -2609,16 +2619,16 @@ msgstr "%d Mb/s"
 msgid "%.1f Mb/s"
 msgstr "%.1f Mb/s"
 
-#: src/Stream.cpp:112
+#: src/Stream.cpp:114
 msgid "mono"
 msgstr "mono"
 
-#: src/Stream.cpp:118
+#: src/Stream.cpp:120
 #, c-format
 msgid "%d channels"
 msgstr "%d kanal"
 
-#: src/Stream.cpp:121
+#: src/Stream.cpp:123
 #, c-format
 msgid "%d Hz"
 msgstr "%d Hz"
@@ -2646,6 +2656,10 @@ msgstr ""
 #: src/SubtitlePropDlg.cpp:139
 msgid "ABCabcXYZxyz"
 msgstr "ABCabcXYZxyz"
+
+#: src/SubtitlePropDlg.cpp:143
+msgid "Fill:"
+msgstr ""
 
 #: src/SubtitlePropDlg.cpp:156
 msgid "Outline:"
@@ -2856,26 +2870,26 @@ msgstr ""
 msgid "Maximal 99 titles are allowed for one titleset."
 msgstr ""
 
-#: src/TitlesetManager.cpp:705
+#: src/TitlesetManager.cpp:712
 msgid ""
 "The video bitrate is reduced below 2 Mb/s to fit your video on DVD. This can produce DVD with bad video "
 "quality."
 msgstr ""
 
-#: src/TitlesetManager.cpp:718 src/TitlesetManager.cpp:755
+#: src/TitlesetManager.cpp:725 src/TitlesetManager.cpp:762
 msgid "Please add a video track first."
 msgstr ""
 
-#: src/TitlesetManager.cpp:880
+#: src/TitlesetManager.cpp:887
 msgid "Maximal 99 menus are allowed for one titleset."
 msgstr ""
 
-#: src/TitlesetManager.cpp:1217
+#: src/TitlesetManager.cpp:1224
 #, c-format
 msgid "Do you really want to delete %s?"
 msgstr ""
 
-#: src/TitlesetManager.cpp:1218
+#: src/TitlesetManager.cpp:1225
 msgid "Titleset Manager"
 msgstr ""
 
@@ -2883,68 +2897,76 @@ msgstr ""
 msgid "Video frame"
 msgstr ""
 
-#: src/VideoPropDlg.cpp:102
+#: src/VideoPropDlg.cpp:104
 msgid "Video properties"
 msgstr ""
 
-#: src/VideoPropDlg.cpp:128
+#: src/VideoPropDlg.cpp:130
 msgid "progressive"
 msgstr ""
 
-#: src/VideoPropDlg.cpp:129
+#: src/VideoPropDlg.cpp:131
 #, fuzzy
 msgid "interlace"
 msgstr "Interfeys"
 
-#: src/VideoPropDlg.cpp:133
+#: src/VideoPropDlg.cpp:135
 msgid "BFF"
 msgstr ""
 
-#: src/VideoPropDlg.cpp:134
+#: src/VideoPropDlg.cpp:136
 msgid "TFF"
 msgstr ""
 
-#: src/VideoPropDlg.cpp:142
+#: src/VideoPropDlg.cpp:144
 msgid "border"
 msgstr ""
 
-#: src/VideoPropDlg.cpp:143
+#: src/VideoPropDlg.cpp:145
 msgid "crop"
 msgstr ""
 
-#: src/VideoPropDlg.cpp:147
+#: src/VideoPropDlg.cpp:149
 msgid "Border"
 msgstr ""
 
-#: src/VideoPropDlg.cpp:163
+#: src/VideoPropDlg.cpp:165
 msgid "Crop"
 msgstr ""
 
-#: src/VideoPropDlg.cpp:180
+#: src/VideoPropDlg.cpp:182
 msgid "Fade-In/Out:"
 msgstr ""
 
-#: src/VideoPropDlg.cpp:219
+#: src/VideoPropDlg.cpp:184
+msgid "Filters before scale:"
+msgstr ""
+
+#: src/VideoPropDlg.cpp:200
+msgid "Filters after scale:"
+msgstr ""
+
+#: src/VideoPropDlg.cpp:225
 msgid "Start:"
 msgstr "Boshlanishi:"
 
-#: src/VideoPropDlg.cpp:233
+#: src/VideoPropDlg.cpp:239
 msgid "Cut beginning"
 msgstr ""
 
-#: src/VideoPropDlg.cpp:249
+#: src/VideoPropDlg.cpp:255
 msgid "Cut ending"
 msgstr ""
 
-#: src/VideoPropDlg.cpp:702 src/VideoPropDlg.cpp:707
+#: src/VideoPropDlg.cpp:711 src/VideoPropDlg.cpp:716
 msgid "Invalid time"
 msgstr ""
 
-#: src/VobListBox.cpp:131
+#: src/VobListBox.cpp:130
 msgid "Video:"
 msgstr ""
 
-#: src/VobListBox.cpp:172 src/VobListBox.cpp:218
+#: src/VobListBox.cpp:174 src/VobListBox.cpp:224
 msgid "Subtitle:"
 msgstr ""
 
@@ -2994,7 +3016,7 @@ msgstr ""
 msgid "Can't load image from file '%s': file does not exist."
 msgstr ""
 
-#: wxVillaLib/PropDlg.cpp:201
+#: wxVillaLib/PropDlg.cpp:223
 msgid "&Don't show this dialog again"
 msgstr ""
 
@@ -3008,7 +3030,8 @@ msgstr ""
 
 #: buttons/arrow-blue.xml:40 buttons/arrow-red.xml:43 buttons/arrow-simple-v2.xml:19
 #: buttons/arrow-text-left.xml:32 buttons/arrow-text-right.xml:33 buttons/arrow3d-left.xml:29
-#: buttons/arrow3d-right.xml:29
+#: buttons/arrow3d-right.xml:29 buttons/gear.xml:105 buttons/gold-frame.xml:70 buttons/home-moon.xml:36
+#: buttons/pill-opacity.xml:77 buttons/pill-stroke.xml:86
 msgid "Stroke color"
 msgstr ""
 
@@ -3087,7 +3110,7 @@ msgstr ""
 msgid "Red Arrow"
 msgstr ""
 
-#: buttons/arrow-red.xml:36 buttons/pill3.xml:22
+#: buttons/arrow-red.xml:36 buttons/pill-opacity.xml:24 buttons/pill-stroke.xml:26 buttons/pill3.xml:22
 msgid "Button color"
 msgstr ""
 
@@ -3096,11 +3119,12 @@ msgid "Simple Arrow"
 msgstr ""
 
 #: buttons/arrow-simple-v2.xml:50 buttons/arrow3d-left.xml:41 buttons/arrow3d-right.xml:41
-#: buttons/ellipse-v2.xml:44 buttons/ellipse45.xml:47 buttons/frame-text.xml:63 buttons/frame-text.xml:83
-#: buttons/frame-v2.xml:53 buttons/frame45.xml:63 buttons/home-v2.xml:35 buttons/settings.xml:30
-#: buttons/text-circle-v2.xml:32 buttons/text-square-v2.xml:33 buttons/text-underlined-v3.xml:32
-#: buttons/text-v3.xml:58 objects/ellipse-v3.xml:57 objects/ellipse45.xml:59 objects/frame-v3.xml:67
-#: objects/frame45.xml:76 objects/rectangle-v2.xml:38 objects/text-v2.xml:53
+#: buttons/dotted-frame.xml:100 buttons/ellipse-v2.xml:44 buttons/frame-text.xml:63 buttons/frame-text.xml:83
+#: buttons/frame-v2.xml:53 buttons/gear.xml:119 buttons/home-moon.xml:62 buttons/home-v2.xml:35
+#: buttons/settings.xml:30 buttons/star-frame.xml:70 buttons/text-circle-v2.xml:32
+#: buttons/text-square-v2.xml:33 buttons/text-underlined-v3.xml:32 buttons/text-v3.xml:58
+#: objects/ellipse-v3.xml:57 objects/ellipse45.xml:59 objects/frame-v3.xml:67 objects/frame45.xml:76
+#: objects/rectangle-v2.xml:38 objects/text-v2.xml:53
 msgid "Shadow"
 msgstr ""
 
@@ -3120,7 +3144,8 @@ msgstr ""
 msgid "Text Arrow Left"
 msgstr ""
 
-#: buttons/arrow-text-left.xml:18 buttons/arrow-text-right.xml:19 buttons/pill2.xml:42 buttons/pill3.xml:35
+#: buttons/arrow-text-left.xml:18 buttons/arrow-text-right.xml:19 buttons/pill-opacity.xml:70
+#: buttons/pill-stroke.xml:79 buttons/pill2.xml:42 buttons/pill3.xml:35
 msgid "Text color"
 msgstr ""
 
@@ -3133,14 +3158,14 @@ msgid "Arrow"
 msgstr ""
 
 #: buttons/arrow.xml:23 buttons/cancel.xml:28 buttons/circle-outline.xml:36 buttons/circle.xml:28
-#: buttons/ellipse-v2.xml:51 buttons/ellipse45.xml:54 buttons/ok.xml:27 objects/ellipse-v3.xml:43
-#: objects/ellipse45.xml:45 objects/frame-v3.xml:53 objects/frame45.xml:62 objects/text-v2.xml:32
+#: buttons/ellipse-v2.xml:51 buttons/ok.xml:27 objects/ellipse-v3.xml:43 objects/ellipse45.xml:45
+#: objects/frame-v3.xml:53 objects/frame45.xml:62 objects/text-v2.xml:32
 msgid "Outline colour"
 msgstr ""
 
 #: buttons/arrow.xml:35 buttons/circle-outline.xml:48 buttons/circle.xml:35 buttons/ellipse-v2.xml:37
-#: buttons/ellipse45.xml:40 objects/ellipse-v3.xml:36 objects/ellipse45.xml:38 objects/frame-v3.xml:46
-#: objects/frame45.xml:55 objects/text-v2.xml:39
+#: objects/ellipse-v3.xml:36 objects/ellipse45.xml:38 objects/frame-v3.xml:46 objects/frame45.xml:55
+#: objects/text-v2.xml:39
 msgid "Outline width"
 msgstr ""
 
@@ -3218,46 +3243,59 @@ msgstr ""
 msgid "Circle"
 msgstr ""
 
-#: buttons/ellipse-v2.xml:3 objects/ellipse-v3.xml:3
-msgid "Ellipse"
+#: buttons/dotted-frame.xml:4
+msgid "Dotted frame"
 msgstr ""
 
-#: buttons/ellipse-v2.xml:30 buttons/ellipse45.xml:33 buttons/frame-v2.xml:25 buttons/frame45.xml:28
-#: buttons/movie.xml:33 objects/ellipse-v3.xml:29 objects/ellipse45.xml:31 objects/frame-v3.xml:25
-#: objects/frame45.xml:27
+#: buttons/dotted-frame.xml:32 buttons/ellipse-v2.xml:30 buttons/frame-v2.xml:25 buttons/gold-frame.xml:56
+#: buttons/maroon-frame.xml:57 buttons/movie.xml:34 buttons/star-frame.xml:42 objects/ellipse-v3.xml:29
+#: objects/ellipse45.xml:31 objects/frame-v3.xml:25 objects/frame45.xml:27
 msgid "Image opacity"
 msgstr ""
 
-#: buttons/ellipse-v2.xml:63 buttons/ellipse45.xml:66 buttons/frame-v2.xml:72 buttons/frame45.xml:82
-#: objects/ellipse-v3.xml:50 objects/ellipse45.xml:52 objects/frame-v3.xml:60 objects/frame45.xml:69
+#: buttons/dotted-frame.xml:39 buttons/frame-text.xml:51 buttons/frame-v2.xml:60 buttons/movie.xml:41
+#: buttons/pill-opacity.xml:31 buttons/pill-stroke.xml:33 buttons/star-frame.xml:49
+msgid "Border colour"
+msgstr ""
+
+#: buttons/dotted-frame.xml:46 buttons/frame-text.xml:37 buttons/frame-v2.xml:46 buttons/pill-opacity.xml:38
+#: buttons/pill-stroke.xml:40 buttons/star-frame.xml:56
+msgid "Border width"
+msgstr ""
+
+#: buttons/dotted-frame.xml:53 buttons/frame-text.xml:44 buttons/pill-opacity.xml:45
+#: buttons/pill-stroke.xml:47
+msgid "Corner round"
+msgstr ""
+
+#: buttons/dotted-frame.xml:60 buttons/ellipse-v2.xml:63 buttons/frame-v2.xml:72 buttons/gold-frame.xml:77
+#: buttons/maroon-frame.xml:85 buttons/star-frame.xml:63 objects/ellipse-v3.xml:50 objects/ellipse45.xml:52
+#: objects/frame-v3.xml:60 objects/frame45.xml:69
 msgid "Inner colour"
 msgstr ""
 
-#: buttons/ellipse45.xml:3 objects/ellipse45.xml:3
-msgid "Ellipse 45°"
+#: buttons/dotted-frame.xml:67
+msgid "Line"
+msgstr ""
+
+#: buttons/dotted-frame.xml:79 buttons/dotted-frame.xml:93
+#, fuzzy
+msgid "Line width"
+msgstr "Eni:"
+
+#: buttons/dotted-frame.xml:86
+msgid "Dotted line"
+msgstr ""
+
+#: buttons/ellipse-v2.xml:3 objects/ellipse-v3.xml:3
+msgid "Ellipse"
 msgstr ""
 
 #: buttons/frame-text.xml:4
 msgid "Frame and Text"
 msgstr ""
 
-#: buttons/frame-text.xml:25
-msgid "T"
-msgstr ""
-
-#: buttons/frame-text.xml:37 buttons/frame-v2.xml:46 buttons/frame45.xml:56
-msgid "Border width"
-msgstr ""
-
-#: buttons/frame-text.xml:44
-msgid "Corner round"
-msgstr ""
-
-#: buttons/frame-text.xml:51 buttons/frame-v2.xml:60 buttons/frame45.xml:70 buttons/movie.xml:40
-msgid "Border colour"
-msgstr ""
-
-#: buttons/frame-text.xml:90
+#: buttons/frame-text.xml:90 buttons/pill-opacity.xml:91 buttons/pill-stroke.xml:100
 msgid "Text offset"
 msgstr ""
 
@@ -3265,18 +3303,22 @@ msgstr ""
 msgid "Frame"
 msgstr ""
 
-#: buttons/frame-v2.xml:32 buttons/frame45.xml:42 buttons/text-v3.xml:44 objects/frame-v3.xml:32
-#: objects/frame45.xml:41 objects/rectangle-v2.xml:17
+#: buttons/frame-v2.xml:32 buttons/text-v3.xml:44 objects/frame-v3.xml:32 objects/frame45.xml:41
+#: objects/rectangle-v2.xml:17
 msgid "Rx"
 msgstr "Rx"
 
-#: buttons/frame-v2.xml:39 buttons/frame45.xml:49 buttons/text-v3.xml:51 objects/frame-v3.xml:39
-#: objects/frame45.xml:48 objects/rectangle-v2.xml:24
+#: buttons/frame-v2.xml:39 buttons/text-v3.xml:51 objects/frame-v3.xml:39 objects/frame45.xml:48
+#: objects/rectangle-v2.xml:24
 msgid "Ry"
 msgstr "Ry"
 
-#: buttons/frame45.xml:3 objects/frame45.xml:3
-msgid "Frame 45°"
+#: buttons/gear.xml:4 buttons/gear.xml:93
+msgid "Gear"
+msgstr ""
+
+#: buttons/gear.xml:112 buttons/home-moon.xml:43 buttons/pill-opacity.xml:84 buttons/pill-stroke.xml:93
+msgid "Stroke width"
 msgstr ""
 
 #: buttons/glow_arrow.xml:5
@@ -3291,6 +3333,25 @@ msgstr ""
 msgid "Glow colour"
 msgstr ""
 
+#: buttons/gold-frame.xml:4 objects/gold-frame.xml:3
+msgid "Gold frame"
+msgstr ""
+
+#: buttons/gold-frame.xml:63 buttons/maroon-frame.xml:64 buttons/painting_frame.xml:47
+msgid "Frame colour"
+msgstr ""
+
+#: buttons/gold-frame.xml:84 buttons/maroon-frame.xml:92 buttons/pill-opacity.xml:52
+#: buttons/pill-stroke.xml:54 buttons/star-frame.xml:77 buttons/sticky_note.xml:64
+#, fuzzy
+msgid "Selection colour"
+msgstr "Orqa fon rangi"
+
+#: buttons/gold-frame.xml:96 buttons/pill-stroke.xml:66 buttons/sticky_note.xml:76
+#, fuzzy
+msgid "Selection width"
+msgstr "Bo'limni tanlash"
+
 #: buttons/hand-left.xml:4
 msgid "Hand Left"
 msgstr ""
@@ -3303,13 +3364,37 @@ msgstr ""
 msgid "Hand Right"
 msgstr ""
 
-#: buttons/home-v2.xml:4
+#: buttons/home-moon.xml:4
+msgid "Home and moon"
+msgstr ""
+
+#: buttons/home-moon.xml:29 buttons/home-v2.xml:4
 msgid "Home"
+msgstr ""
+
+#: buttons/home-moon.xml:50
+msgid "Window"
+msgstr ""
+
+#: buttons/home-moon.xml:69
+msgid "Moon"
+msgstr ""
+
+#: buttons/home-moon.xml:76
+msgid "Radius"
 msgstr ""
 
 #: buttons/home-v2.xml:23 buttons/settings.xml:18 objects/rectangle-v2.xml:31
 msgid "Colour"
 msgstr "Rang"
+
+#: buttons/maroon-frame.xml:4
+msgid "Maroon frame"
+msgstr ""
+
+#: buttons/maroon-frame.xml:71 buttons/maroon-frame.xml:78
+msgid "Gradient"
+msgstr ""
 
 #: buttons/movie.xml:3
 msgid "Movie"
@@ -3327,8 +3412,13 @@ msgstr ""
 msgid "Painting Frame"
 msgstr ""
 
-#: buttons/painting_frame.xml:47
-msgid "Frame colour"
+#: buttons/pill-opacity.xml:5
+#, fuzzy
+msgid "Pill opacity"
+msgstr "Tiniqlik"
+
+#: buttons/pill-stroke.xml:5
+msgid "Pill stroke"
 msgstr ""
 
 #: buttons/pill.xml:3
@@ -3355,6 +3445,30 @@ msgstr ""
 msgid "Pill 3"
 msgstr ""
 
+#: buttons/star-frame.xml:4
+msgid "Star frame"
+msgstr ""
+
+#: buttons/star-frame.xml:89
+#, fuzzy
+msgid "Image offset x"
+msgstr "Rasm fayllari"
+
+#: buttons/star-frame.xml:96
+#, fuzzy
+msgid "Image offset y"
+msgstr "Rasm fayllari"
+
+#: buttons/star-frame.xml:103
+#, fuzzy
+msgid "Image width"
+msgstr "Rasm fayllari"
+
+#: buttons/star-frame.xml:110
+#, fuzzy
+msgid "Image height"
+msgstr "Balandligi:"
+
 #: buttons/sticky_note.xml:4 objects/sticky_note.xml:4
 msgid "Sticky note"
 msgstr ""
@@ -3367,11 +3481,6 @@ msgstr ""
 #, fuzzy
 msgid "Pin"
 msgstr "daq"
-
-#: buttons/sticky_note.xml:64
-#, fuzzy
-msgid "Selection colour"
-msgstr "Orqa fon rangi"
 
 #: buttons/text-circle-v2.xml:3
 msgid "Text with circle"
@@ -3409,8 +3518,12 @@ msgstr ""
 msgid "Background colour"
 msgstr "Orqa fon rangi"
 
-#: objects/gold-frame.xml:3
-msgid "Gold frame"
+#: objects/ellipse45.xml:3
+msgid "Ellipse 45°"
+msgstr ""
+
+#: objects/frame45.xml:3
+msgid "Frame 45°"
 msgstr ""
 
 #: objects/image.xml:16
