@@ -197,7 +197,7 @@ VideoPropDlg::VideoPropDlg(wxWindow* parent, DVD* dvd, Vob* vob, Stream* stream,
 	gridBagSizer->Add(fadeSizer, wxGBPosition(6, 1), wxDefaultSpan, wxEXPAND, 5);
 	m_filtersBeforeCtrl = new wxTextCtrl(this, ID_TEXTCTRL1, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_TEXTCTRL1"));
 	gridBagSizer->Add(m_filtersBeforeCtrl, wxGBPosition(7, 1), wxDefaultSpan, wxEXPAND, 5);
-	filter2Label = new wxStaticText(this, wxID_ANY, _("Filter after scale:"), wxDefaultPosition, wxDefaultSize, 0, _T("wxID_ANY"));
+	filter2Label = new wxStaticText(this, wxID_ANY, _("Filters after scale:"), wxDefaultPosition, wxDefaultSize, 0, _T("wxID_ANY"));
 	gridBagSizer->Add(filter2Label, wxGBPosition(8, 0), wxDefaultSpan, wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
 	m_filtersAfterCtrl = new wxTextCtrl(this, ID_TEXTCTRL4, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_TEXTCTRL4"));
 	gridBagSizer->Add(m_filtersAfterCtrl, wxGBPosition(8, 1), wxDefaultSpan, wxEXPAND, 5);
