@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: DVDStyler v3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-06 14:45+0100\n"
-"PO-Revision-Date: 2019-05-06 21:57+0200\n"
+"PO-Revision-Date: 2021-03-07 18:36+0100\n"
 "Last-Translator: Alex Thuering <alex at thuering.biz>\n"
 "Language-Team: German <translation-team-de at lists.sourceforge.net>\n"
 "Language: de\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Basepath: ..\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Poedit-SearchPath-0: src\n"
 "X-Poedit-SearchPath-1: wxVillaLib\n"
 "X-Poedit-SearchPath-2: buttons\n"
@@ -288,8 +288,8 @@ msgstr "Brennen"
 msgid "Temp directory:"
 msgstr "Temp-Verzeichnis:"
 
-#: src/BurnDlg.cpp:114 src/BurnDlg.cpp:138 src/BurnDlg.cpp:160 src/BurnDlg.cpp:186
-#: src/SubtitlePropDlg.cpp:148 src/SubtitlePropDlg.cpp:161 src/SubtitlePropDlg.cpp:179
+#: src/BurnDlg.cpp:114 src/BurnDlg.cpp:138 src/BurnDlg.cpp:160 src/BurnDlg.cpp:186 src/SubtitlePropDlg.cpp:148
+#: src/SubtitlePropDlg.cpp:161 src/SubtitlePropDlg.cpp:179
 msgid "..."
 msgstr "…"
 
@@ -464,13 +464,12 @@ msgid ""
 msgstr "Bitte wählen Sie ein SVG-Element für neue Parameter:"
 
 #: src/ButtonAddParamDlg.cpp:62
-#, fuzzy
 msgid "Attribute:"
-msgstr "Attribut"
+msgstr "Attribut:"
 
 #: src/ButtonAddParamDlg.cpp:65
 msgid "fill"
-msgstr ""
+msgstr "Füllfarbe"
 
 #: src/ButtonAddParamDlg.cpp:67 src/ButtonAddParamDlg.cpp:72 src/ButtonAddParamDlg.cpp:77
 #: src/MenuEditor.cpp:548 buttons/arrow-text-left.xml:8 buttons/arrow-text-left.xml:12
@@ -483,20 +482,19 @@ msgid "Text"
 msgstr "Text"
 
 #: src/ButtonAddParamDlg.cpp:70
-#, fuzzy
 msgid "stroke"
-msgstr "Strichfarbe:"
+msgstr "Strichfarbe"
 
 #: src/ButtonAddParamDlg.cpp:75
 msgid "stroke-width"
-msgstr ""
+msgstr "Strichbreite"
 
 #: src/ButtonEditDlg.cpp:184
 msgid "name"
 msgstr "Name"
 
-#: src/ButtonEditDlg.cpp:184 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:439
-#: src/MenuObjectPropDlg.cpp:679 src/MenuObjectPropDlg.cpp:688 src/MenuObjectPropDlg.cpp:700
+#: src/ButtonEditDlg.cpp:184 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:439 src/MenuObjectPropDlg.cpp:679
+#: src/MenuObjectPropDlg.cpp:688 src/MenuObjectPropDlg.cpp:700
 msgid "title"
 msgstr "Titel"
 
@@ -699,7 +697,7 @@ msgstr "Pause:"
 #: src/SettingsDlg.cpp:169 src/TitlePropDlg.cpp:150 src/TitlePropDlg.cpp:196 src/VideoFrameDlg.cpp:82
 #: src/VideoPropDlg.cpp:190 src/VideoPropDlg.cpp:195
 msgid "sec"
-msgstr "Sek. "
+msgstr "sek"
 
 #: src/ChaptersDlg.cpp:177
 msgid "Commands:"
@@ -1236,7 +1234,7 @@ msgstr "&Einstellungen …"
 
 #: src/MainWin.cpp:203
 msgid "&Create button from SVG..."
-msgstr "Button aus SVG erstellen"
+msgstr "Button aus SVG erstellen..."
 
 #: src/MainWin.cpp:204
 msgid "&Configuration"
@@ -1346,7 +1344,7 @@ msgstr "%d Dias"
 
 #: src/MainWin.cpp:625 src/SettingsDlg.cpp:130
 msgid "min"
-msgstr "Min. "
+msgstr "min"
 
 #: src/MainWin.cpp:700
 #, c-format
@@ -1776,8 +1774,7 @@ msgstr "Ausgewählt"
 msgid "Font..."
 msgstr "Schrift …"
 
-#: src/MenuObjectPropDlg.cpp:404 src/MenuObjectPropDlg.cpp:566 src/MenuPropDlg.cpp:81
-#: src/VideoPropDlg.cpp:140
+#: src/MenuObjectPropDlg.cpp:404 src/MenuObjectPropDlg.cpp:566 src/MenuPropDlg.cpp:81 src/VideoPropDlg.cpp:140
 msgid "Keep Aspect Ratio"
 msgstr "Seitenverhältnis erhalten"
 
@@ -1795,7 +1792,7 @@ msgstr "Max. X"
 
 #: src/MenuObjectPropDlg.cpp:413 src/MenuPropDlg.cpp:90
 msgid "Y Min"
-msgstr "Y Min. "
+msgstr "Y Min"
 
 #: src/MenuObjectPropDlg.cpp:414 src/MenuPropDlg.cpp:91
 msgid "Y Mid"
@@ -2155,7 +2152,7 @@ msgstr "Fehler bei Erstellung von Menü"
 #: src/ProcessMenu.cpp:156
 #, c-format
 msgid "Video duration: %f sec"
-msgstr "Video-Zeitdauer: %f Sek. "
+msgstr "Video-Zeitdauer: %f sek"
 
 #: src/ProcessMenu.cpp:164 src/ProcessMenuTransitions.cpp:251
 #, c-format
@@ -2179,7 +2176,7 @@ msgstr "Multiplexing von Audio und Video"
 #: src/ProcessMenu.cpp:261
 #, c-format
 msgid "Audio duration: %f sec"
-msgstr "Audio-Zeitdauer: %f Sek. "
+msgstr "Audio-Zeitdauer: %f Sek"
 
 #: src/ProcessMenu.cpp:275 src/SettingsDlg.cpp:242
 msgid "Frame count of menu:"
@@ -2599,12 +2596,12 @@ msgstr "%d Minuten"
 #: src/StatusBar.cpp:65
 #, c-format
 msgid "%d Mb/s"
-msgstr "%d MB/Sek. "
+msgstr "%d MB/Sek"
 
 #: src/StatusBar.cpp:66
 #, c-format
 msgid "%.1f Mb/s"
-msgstr "%.1f MB/Sek. "
+msgstr "%.1f MB/Sek"
 
 #: src/Stream.cpp:114
 msgid "mono"
@@ -2924,11 +2921,11 @@ msgstr "Fade-in/-out:"
 
 #: src/VideoPropDlg.cpp:184
 msgid "Filters before scale:"
-msgstr ""
+msgstr "Filters vor Skalierung:"
 
 #: src/VideoPropDlg.cpp:200
 msgid "Filters after scale:"
-msgstr ""
+msgstr "Filters nach Skalierung:"
 
 #: src/VideoPropDlg.cpp:225
 msgid "Start:"
@@ -3207,7 +3204,7 @@ msgstr "Farbe X"
 
 #: buttons/circle-outline.xml:3
 msgid "Circle outline"
-msgstr "Kreisumriss:"
+msgstr "Kreisumriss"
 
 #: buttons/circle-outline.xml:8 buttons/circle.xml:7
 msgid "01"
@@ -3228,9 +3225,8 @@ msgid "Circle"
 msgstr "Kreis"
 
 #: buttons/dotted-frame.xml:4
-#, fuzzy
 msgid "Dotted frame"
-msgstr "Goldrahmen"
+msgstr "Punktierter Rahmen"
 
 #: buttons/dotted-frame.xml:32 buttons/ellipse-v2.xml:30 buttons/frame-v2.xml:25 buttons/gold-frame.xml:56
 #: buttons/maroon-frame.xml:57 buttons/movie.xml:34 buttons/star-frame.xml:42 objects/ellipse-v3.xml:29
@@ -3251,7 +3247,7 @@ msgstr "Randbreite"
 #: buttons/dotted-frame.xml:53 buttons/frame-text.xml:44 buttons/pill-opacity.xml:45
 #: buttons/pill-stroke.xml:47
 msgid "Corner round"
-msgstr "Eckradius:"
+msgstr "Eckradius"
 
 #: buttons/dotted-frame.xml:60 buttons/ellipse-v2.xml:63 buttons/frame-v2.xml:72 buttons/gold-frame.xml:77
 #: buttons/maroon-frame.xml:85 buttons/star-frame.xml:63 objects/ellipse-v3.xml:50 objects/ellipse45.xml:52
@@ -3261,16 +3257,15 @@ msgstr "Innenfarbe"
 
 #: buttons/dotted-frame.xml:67
 msgid "Line"
-msgstr ""
+msgstr "Linie"
 
 #: buttons/dotted-frame.xml:79 buttons/dotted-frame.xml:93
-#, fuzzy
 msgid "Line width"
-msgstr "Minimale Breite:"
+msgstr "Breite der Linie"
 
 #: buttons/dotted-frame.xml:86
 msgid "Dotted line"
-msgstr ""
+msgstr "Punktierte Linie"
 
 #: buttons/ellipse-v2.xml:3 objects/ellipse-v3.xml:3
 msgid "Ellipse"
@@ -3282,7 +3277,7 @@ msgstr "Rahmen und Text"
 
 #: buttons/frame-text.xml:90 buttons/pill-opacity.xml:91 buttons/pill-stroke.xml:100
 msgid "Text offset"
-msgstr "Text-Versatz:"
+msgstr "Text-Versatz"
 
 #: buttons/frame-v2.xml:3 objects/frame-v3.xml:3
 msgid "Frame"
@@ -3300,12 +3295,11 @@ msgstr "Ry"
 
 #: buttons/gear.xml:4 buttons/gear.xml:93
 msgid "Gear"
-msgstr ""
+msgstr "Zahnrad"
 
 #: buttons/gear.xml:112 buttons/home-moon.xml:43 buttons/pill-opacity.xml:84 buttons/pill-stroke.xml:93
-#, fuzzy
 msgid "Stroke width"
-msgstr "Randbreite"
+msgstr "Strichbreite"
 
 #: buttons/glow_arrow.xml:5
 msgid "Glow Arrow"
@@ -3333,9 +3327,8 @@ msgid "Selection colour"
 msgstr "Auswahlfarbe"
 
 #: buttons/gold-frame.xml:96 buttons/pill-stroke.xml:66 buttons/sticky_note.xml:76
-#, fuzzy
 msgid "Selection width"
-msgstr "Titel auswählen"
+msgstr "Breite der Selektion"
 
 #: buttons/hand-left.xml:4
 msgid "Hand Left"
@@ -3350,9 +3343,8 @@ msgid "Hand Right"
 msgstr "Hand rechts"
 
 #: buttons/home-moon.xml:4
-#, fuzzy
 msgid "Home and moon"
-msgstr "Handfarbe"
+msgstr "Haus und Mond"
 
 #: buttons/home-moon.xml:29 buttons/home-v2.xml:4
 msgid "Home"
@@ -3360,28 +3352,27 @@ msgstr "Heim"
 
 #: buttons/home-moon.xml:50
 msgid "Window"
-msgstr ""
+msgstr "Fenster"
 
 #: buttons/home-moon.xml:69
 msgid "Moon"
-msgstr ""
+msgstr "Mond"
 
 #: buttons/home-moon.xml:76
 msgid "Radius"
-msgstr ""
+msgstr "Radius"
 
 #: buttons/home-v2.xml:23 buttons/settings.xml:18 objects/rectangle-v2.xml:31
 msgid "Colour"
 msgstr "Farbe"
 
 #: buttons/maroon-frame.xml:4
-#, fuzzy
 msgid "Maroon frame"
-msgstr "Goldrahmen"
+msgstr "Kastanienrahmen"
 
 #: buttons/maroon-frame.xml:71 buttons/maroon-frame.xml:78
 msgid "Gradient"
-msgstr ""
+msgstr "Gradient"
 
 #: buttons/movie.xml:3
 msgid "Movie"
@@ -3400,13 +3391,12 @@ msgid "Painting Frame"
 msgstr "Gemälderahmen"
 
 #: buttons/pill-opacity.xml:5
-#, fuzzy
 msgid "Pill opacity"
-msgstr "Opazität"
+msgstr "Transparente Pille"
 
 #: buttons/pill-stroke.xml:5
 msgid "Pill stroke"
-msgstr ""
+msgstr "Strich Pille"
 
 #: buttons/pill.xml:3
 msgid "Pill"
@@ -3433,29 +3423,24 @@ msgid "Pill 3"
 msgstr "Pille 3"
 
 #: buttons/star-frame.xml:4
-#, fuzzy
 msgid "Star frame"
-msgstr "Vorschau starten"
+msgstr "Sternrahmen"
 
 #: buttons/star-frame.xml:89
-#, fuzzy
 msgid "Image offset x"
-msgstr "Text-Versatz:"
+msgstr "Bild Y-Versatz"
 
 #: buttons/star-frame.xml:96
-#, fuzzy
 msgid "Image offset y"
-msgstr "Bildopazität"
+msgstr "Bild Y-Versatz"
 
 #: buttons/star-frame.xml:103
-#, fuzzy
 msgid "Image width"
-msgstr "Bildopazität"
+msgstr "Bildbreite"
 
 #: buttons/star-frame.xml:110
-#, fuzzy
 msgid "Image height"
-msgstr "Höhe"
+msgstr "Bildhöhe"
 
 #: buttons/sticky_note.xml:4 objects/sticky_note.xml:4
 msgid "Sticky note"

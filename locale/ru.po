@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: DVDStyler v3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-06 14:45+0100\n"
-"PO-Revision-Date: 2019-05-06 22:00+0200\n"
+"PO-Revision-Date: 2021-03-07 18:37+0100\n"
 "Last-Translator: Alex Thuering <alex at thuering.biz>\n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Basepath: ..\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.4.2\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n"
 "%100>=20) ? 1 : 2);\n"
 "X-Poedit-SearchPath-0: src\n"
@@ -281,8 +281,8 @@ msgstr "Прожиг"
 msgid "Temp directory:"
 msgstr "Каталог для временных файлов:"
 
-#: src/BurnDlg.cpp:114 src/BurnDlg.cpp:138 src/BurnDlg.cpp:160 src/BurnDlg.cpp:186
-#: src/SubtitlePropDlg.cpp:148 src/SubtitlePropDlg.cpp:161 src/SubtitlePropDlg.cpp:179
+#: src/BurnDlg.cpp:114 src/BurnDlg.cpp:138 src/BurnDlg.cpp:160 src/BurnDlg.cpp:186 src/SubtitlePropDlg.cpp:148
+#: src/SubtitlePropDlg.cpp:161 src/SubtitlePropDlg.cpp:179
 msgid "..."
 msgstr "..."
 
@@ -459,13 +459,12 @@ msgstr ""
 "для нового параметра:"
 
 #: src/ButtonAddParamDlg.cpp:62
-#, fuzzy
 msgid "Attribute:"
-msgstr "Атрибут"
+msgstr "Атрибут:"
 
 #: src/ButtonAddParamDlg.cpp:65
 msgid "fill"
-msgstr ""
+msgstr "Цвет заливки"
 
 #: src/ButtonAddParamDlg.cpp:67 src/ButtonAddParamDlg.cpp:72 src/ButtonAddParamDlg.cpp:77
 #: src/MenuEditor.cpp:548 buttons/arrow-text-left.xml:8 buttons/arrow-text-left.xml:12
@@ -478,20 +477,19 @@ msgid "Text"
 msgstr "Текст"
 
 #: src/ButtonAddParamDlg.cpp:70
-#, fuzzy
 msgid "stroke"
-msgstr "Цвет контура:"
+msgstr "Цвет контура"
 
 #: src/ButtonAddParamDlg.cpp:75
 msgid "stroke-width"
-msgstr ""
+msgstr "Толщина контура"
 
 #: src/ButtonEditDlg.cpp:184
 msgid "name"
 msgstr "имя"
 
-#: src/ButtonEditDlg.cpp:184 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:439
-#: src/MenuObjectPropDlg.cpp:679 src/MenuObjectPropDlg.cpp:688 src/MenuObjectPropDlg.cpp:700
+#: src/ButtonEditDlg.cpp:184 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:439 src/MenuObjectPropDlg.cpp:679
+#: src/MenuObjectPropDlg.cpp:688 src/MenuObjectPropDlg.cpp:700
 msgid "title"
 msgstr "раздел"
 
@@ -1770,8 +1768,7 @@ msgstr "Выделенный"
 msgid "Font..."
 msgstr "Шрифт..."
 
-#: src/MenuObjectPropDlg.cpp:404 src/MenuObjectPropDlg.cpp:566 src/MenuPropDlg.cpp:81
-#: src/VideoPropDlg.cpp:140
+#: src/MenuObjectPropDlg.cpp:404 src/MenuObjectPropDlg.cpp:566 src/MenuPropDlg.cpp:81 src/VideoPropDlg.cpp:140
 msgid "Keep Aspect Ratio"
 msgstr "Сохранять соотношение сторон"
 
@@ -2911,11 +2908,11 @@ msgstr "Появление/затемнение:"
 
 #: src/VideoPropDlg.cpp:184
 msgid "Filters before scale:"
-msgstr ""
+msgstr "Фильтры перед масштабированием:"
 
 #: src/VideoPropDlg.cpp:200
 msgid "Filters after scale:"
-msgstr ""
+msgstr "Фильтры после масштабированием:"
 
 #: src/VideoPropDlg.cpp:225
 msgid "Start:"
@@ -3215,9 +3212,8 @@ msgid "Circle"
 msgstr "Круг"
 
 #: buttons/dotted-frame.xml:4
-#, fuzzy
 msgid "Dotted frame"
-msgstr "Золотая рамка"
+msgstr "Пунктирная рамка"
 
 #: buttons/dotted-frame.xml:32 buttons/ellipse-v2.xml:30 buttons/frame-v2.xml:25 buttons/gold-frame.xml:56
 #: buttons/maroon-frame.xml:57 buttons/movie.xml:34 buttons/star-frame.xml:42 objects/ellipse-v3.xml:29
@@ -3248,16 +3244,15 @@ msgstr "Цвет заливки"
 
 #: buttons/dotted-frame.xml:67
 msgid "Line"
-msgstr ""
+msgstr "Линия"
 
 #: buttons/dotted-frame.xml:79 buttons/dotted-frame.xml:93
-#, fuzzy
 msgid "Line width"
-msgstr "Мин. ширина:"
+msgstr "Ширина линии"
 
 #: buttons/dotted-frame.xml:86
 msgid "Dotted line"
-msgstr ""
+msgstr "Пунктирная линия"
 
 #: buttons/ellipse-v2.xml:3 objects/ellipse-v3.xml:3
 msgid "Ellipse"
@@ -3287,12 +3282,11 @@ msgstr "Ry"
 
 #: buttons/gear.xml:4 buttons/gear.xml:93
 msgid "Gear"
-msgstr ""
+msgstr "Шестерёнка"
 
 #: buttons/gear.xml:112 buttons/home-moon.xml:43 buttons/pill-opacity.xml:84 buttons/pill-stroke.xml:93
-#, fuzzy
 msgid "Stroke width"
-msgstr "Толщина рамки"
+msgstr "Толщина контура"
 
 #: buttons/glow_arrow.xml:5
 msgid "Glow Arrow"
@@ -3320,9 +3314,8 @@ msgid "Selection colour"
 msgstr "Цвет выбранного"
 
 #: buttons/gold-frame.xml:96 buttons/pill-stroke.xml:66 buttons/sticky_note.xml:76
-#, fuzzy
 msgid "Selection width"
-msgstr "Выбрать раздел"
+msgstr "Ширина выбранного"
 
 #: buttons/hand-left.xml:4
 msgid "Hand Left"
@@ -3337,9 +3330,8 @@ msgid "Hand Right"
 msgstr "Рука вправо"
 
 #: buttons/home-moon.xml:4
-#, fuzzy
 msgid "Home and moon"
-msgstr "Цвет руки"
+msgstr "Дом и луна"
 
 #: buttons/home-moon.xml:29 buttons/home-v2.xml:4
 msgid "Home"
@@ -3347,28 +3339,27 @@ msgstr "Дом"
 
 #: buttons/home-moon.xml:50
 msgid "Window"
-msgstr ""
+msgstr "Окно"
 
 #: buttons/home-moon.xml:69
 msgid "Moon"
-msgstr ""
+msgstr "Луна"
 
 #: buttons/home-moon.xml:76
 msgid "Radius"
-msgstr ""
+msgstr "Радиус"
 
 #: buttons/home-v2.xml:23 buttons/settings.xml:18 objects/rectangle-v2.xml:31
 msgid "Colour"
 msgstr "Цвет"
 
 #: buttons/maroon-frame.xml:4
-#, fuzzy
 msgid "Maroon frame"
-msgstr "Золотая рамка"
+msgstr "Бордовая рамка"
 
 #: buttons/maroon-frame.xml:71 buttons/maroon-frame.xml:78
 msgid "Gradient"
-msgstr ""
+msgstr "Градиент "
 
 #: buttons/movie.xml:3
 msgid "Movie"
@@ -3387,13 +3378,12 @@ msgid "Painting Frame"
 msgstr "Картинная рама"
 
 #: buttons/pill-opacity.xml:5
-#, fuzzy
 msgid "Pill opacity"
-msgstr "непрозрачность"
+msgstr "Прозрачная пилюля"
 
 #: buttons/pill-stroke.xml:5
 msgid "Pill stroke"
-msgstr ""
+msgstr "Пилюля с контуром"
 
 #: buttons/pill.xml:3
 msgid "Pill"
@@ -3420,29 +3410,24 @@ msgid "Pill 3"
 msgstr "Пилюля 3"
 
 #: buttons/star-frame.xml:4
-#, fuzzy
 msgid "Star frame"
-msgstr "Запуск предварительного просмотра"
+msgstr "Звезда рамка"
 
 #: buttons/star-frame.xml:89
-#, fuzzy
 msgid "Image offset x"
-msgstr "Смещение текста"
+msgstr "X-cмещение изображения"
 
 #: buttons/star-frame.xml:96
-#, fuzzy
 msgid "Image offset y"
-msgstr "Прозрачность изображения"
+msgstr "X-cмещение изображения"
 
 #: buttons/star-frame.xml:103
-#, fuzzy
 msgid "Image width"
-msgstr "Прозрачность изображения"
+msgstr "Ширина изображения"
 
 #: buttons/star-frame.xml:110
-#, fuzzy
 msgid "Image height"
-msgstr "высота"
+msgstr "Высота изображения"
 
 #: buttons/sticky_note.xml:4 objects/sticky_note.xml:4
 msgid "Sticky note"
