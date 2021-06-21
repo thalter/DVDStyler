@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- Created by ecodrv -->
+<button>
+	<title>Stone</title>
+	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" version="1.1">
+		<symbol id="def_symbol" viewBox="0 0 200 200" preserveAspectRatio="none">
+			<defs>
+				<radialGradient id="rg" gradientUnits="userSpaceOnUse" cx="100" cy="95" r="90" fx="100" fy="100">
+					<stop id="rgstop1" offset="0.1" stop-color="#fff000"/>
+					<stop id="rgstop2" offset="1" stop-color="#00b000"/>
+				</radialGradient>
+				<linearGradient id="lg" x1="0.5" y1="0" x2="0.5" y2="1">
+					<stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.1;"/>
+					<stop offset="50%" style="stop-color:#ffffff;stop-opacity:0.2;"/>
+					<stop offset="60%" style="stop-color:#ffffff;stop-opacity:0.2;"/>
+					<stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.02;"/>
+				</linearGradient>
+			</defs>
+			<ellipse cx="100" cy="100" rx="90" ry="90" style="fill:url(#rg);stroke:none;"/>
+			<ellipse cx="100" cy="50" rx="50" ry="30" style="fill:url(#lg);stroke:none;"/>
+		</symbol>
+		<defs>
+			<ellipse id="def_ellipse" cx="50%" cy="50%" rx="45%" ry="45%"/>
+			<text id="text" transform="translate(1,0)" x="50%" y="50%" style="text-anchor:middle;dominant-baseline:middle;stroke-width:4;stroke-linejoin:round;">Text</text>
+		</defs>
+		<use xlink:href="#def_symbol" x="0" y="0" width="100%" height="100%"/>
+		<use xlink:href="#def_ellipse" id="ellipse1" style="fill:none;stroke:#00a000;stroke-width:2;"/>
+		<use xlink:href="#text" id="text_stroke" style="fill:none;stroke:#00000080;"/>
+		<use xlink:href="#text" id="text_fill" style="fill:#ffffff;stroke:none;"/>
+		<use xlink:href="#def_ellipse" id="sel" style="fill:none;stroke:none;"/>
+	</svg>
+	<parameters>
+		<parameter>
+			<title>Border colour</title>
+			<name>border_color</name>
+			<type>colour</type>
+			<element>ellipse1</element>
+			<attribute>stroke</attribute>
+		</parameter>
+		<parameter>
+			<title>Border width</title>
+			<name>border_width</name>
+			<type>integer</type>
+			<element>ellipse1</element>
+			<attribute>stroke-width</attribute>
+		</parameter>
+		<parameter>
+			<title>Gradient</title>
+			<name>rg_sc1</name>
+			<type>colour</type>
+			<element>rgstop1</element>
+			<attribute>stop-color</attribute>
+		</parameter>
+		<parameter>
+			<title>Gradient</title>
+			<name>rg_sc2</name>
+			<type>colour</type>
+			<element>rgstop2</element>
+			<attribute>stop-color</attribute>
+		</parameter>
+		<parameter>
+			<title>Selection colour</title>
+			<name>sel_colour</name>
+			<type>colour</type>
+			<element>sel</element>
+			<attribute>fill</attribute>
+			<changeable/>
+			<default-value>
+				<highlighted>#ff0000a0</highlighted>
+				<selected>#ffff00a0</selected>
+			</default-value>
+		</parameter>
+		<parameter>
+			<title>Text</title>
+			<name>text</name>
+			<type>text</type>
+			<element>text</element>
+		</parameter>
+		<parameter>
+			<title>Text color</title>
+			<name>text_fill_color</name>
+			<type>colour</type>
+			<element>text_fill</element>
+			<attribute>fill</attribute>
+		</parameter>
+		<parameter>
+			<title>Stroke color</title>
+			<name>text_stroke_color</name>
+			<type>colour</type>
+			<element>text_stroke</element>
+			<attribute>stroke</attribute>
+		</parameter>
+		<parameter>
+			<title>Stroke width</title>
+			<name>text_stroke_width</name>
+			<type>integer(0,30)</type>
+			<element>text</element>
+			<attribute>stroke-width</attribute>
+		</parameter>
+		<parameter>
+			<title>Text offset</title>
+			<name>text_offset</name>
+			<type>integer(-100,100)</type>
+			<element>text</element>
+			<attribute>transform#1</attribute>
+		</parameter>
+	</parameters>
+	<init-parameter>text</init-parameter>
+	<text-offset>6%</text-offset>
+	<default-size>
+		<width>100</width>
+		<height>100</height>
+	</default-size>
+	<min-size>
+		<width>12|text+25%</width>
+		<height>12|text+25%</height>
+	</min-size>
+</button>
