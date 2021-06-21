@@ -63,12 +63,12 @@ void wxFfmpegMediaTranscoder::AddSubtitleOption(const wxString& name, int stream
 
 bool wxFfmpegMediaTranscoder::AddInputFile(const wxString& fileName, const wxString& format, long tsOffset) {
 	if (tsOffset > 0)
-		AddOption(wxT("itsoffset"), Time2String(tsOffset));
-	if (fileName == wxT("/dev/zero")) {
-		m_cmd += wxT(" -ac 2 -ar 48000 -f s16le -i /dev/zero");
+		AddOption("itsoffset", Time2String(tsOffset));
+	if (fileName == "/dev/zero") {
+		m_cmd += " -ac 2 -ar 48000 -f s16le -i /dev/zero";
 	} else {
 		if (format.length()) {
-			if (format.Index(':') > 0) {
+			if ((int) format.Index(':') > 0) {
 				AddOption(wxT("f"), format.BeforeFirst(':'));
 				AddOption(wxT("ac"), format.AfterFirst(':'));
 			} else
