@@ -216,7 +216,7 @@ void wxThumbnails::SetSelected(int value) {
 }
 
 wxString wxThumbnails::GetAudioVideoExtWildcard() {
-	return wxT("*.asf;*.avi;*.avs;*.dv;*.flv;*.m2p;*.m2ts;*.mkv;*.mov;*.mp4;*.mpeg;*.mpg;*.mts;*.ogg;*.ogm;*.vob;*.vro;*.webm;*.wmv;");
+	return wxT("*.asf;*.avi;*.avs;*.dv;*.flv;*.m2p;*.m2ts;*.mkv;*.mov;*.mp4;*.mpeg;*.mpg;*.mts;*.ogg;*.ogm;*.ts;*.vob;*.vro;*.webm;*.wmv;");
 }
 
 wxString wxThumbnails::GetVideoExtWildcard() {
