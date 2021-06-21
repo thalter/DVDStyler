@@ -1,59 +1,19 @@
-Version 3.2 beta 9 <2021-03-06>
--------------------------------
+Version 3.2 <2021-06-21>
+------------------------
 
-  * disabled "Copy" option for MP3 and PCM in "audio properties" dialog too
-
-Version 3.2 beta 8 <2021-02-14>
--------------------------------
-
-  * disabled "Copy" option for MP3 and PCM (because PCM need to be repacked to big endian)
   * video properties: added possiblity to add video filters before pad/scale filters
-  * added some new buttons (thanks to ecodrv)
-
-Version 3.2 beta 7 <2020-03-01>
--------------------------------
-  
-  * fixed setting shadow if multiple objects are selected
-  * added button home-moon (thanks to ecodrv)
-
-Version 3.2 beta 6 <2020-01-01>
--------------------------------
-  
-  * fixed slow loading of project files
-  * fixed PCM support (experemental)
-
-Version 3.2 beta 5 <2019-11-17>
--------------------------------
-  
-  * settings core: only one of checkboxes hq or xhq can be selected
   * some improvements of PCM support (experemental)
-  * win32/win64: updated Manolito's VBR plug-in
-  * win32/win64: updated ffmpeg to version 4.2.1
-
-Version 3.2 beta 4 <2019-11-09>
--------------------------------
-  
-  * disable properties button by omitted video streams in title properties dialog
-
-Version 3.2 beta 3 <2019-11-03>
--------------------------------
-  
-  * fixed generation of DVD if some video streams are omitted
-
-Version 3.2 beta 2 <2019-10-27>
--------------------------------
-  
-  * disabled format selection for mjpeg streams (preview images)
-  * fixed selection of transparent highlighted colors
-  * added maroon-frame button (thanks to ecodrv)
-
-Version 3.2 beta 1 <2019-10-11>
--------------------------------
-
   * added initial support of transparent highlighted colors
+  * disabled format selection for mjpeg streams (preview images)
+  * disabled "Copy" option for MP3 and PCM (because PCM need to be repacked to big endian)
   * ignore mjpeg streams (preview images)
   * fixed creation of dvd with more than 100 hours
-  * fixed movie-button
+  * fixed generation of DVD if some video streams are omitted
+  * fixed setting shadow if multiple objects are selected
+  * fixed slow loading of project files
+  * added some new buttons (thanks to ecodrv)
+  * win32/win64: updated Manolito's VBR plug-in
+  * win32/win64: updated ffmpeg to version 4.2.1
 
 Version 3.1.2 <2019-08-02>
 --------------------------
