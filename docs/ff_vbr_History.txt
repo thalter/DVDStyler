@@ -1,3 +1,47 @@
+<2021-04-10>
+------------
+Changed the MP2 audio encoder from MP2 to libtwolame.
+Delivers better quality, needs an FFmpeg build with the
+libtwolame library enabled. Win XP users need to
+download and install the latest Win XP package from
+this link:
+https://files.videohelp.com/u/172211/manolito_s%20DVDStyler%20Plugins.zip
+
+
+<2021-03-31>
+------------
+It turned out that my implementation of Hard Telecine
+which was introduced in June 2020 was thoroughly broken.
+Should be fixed now...
+
+
+<2021-03-27>
+------------
+Tweaked the hard-coded HD bitrates slightly for better
+quality. Also added the possibility to use custom HD
+bitrates. Useful if the HD encoding result should be
+burned on a BD blank and the bitrate must be calculated
+with a bitrate calculator.
+
+
+<2021-03-18>
+------------
+Another change for the HD High Bitrate extension. Playback
+of authored High Bitrate clips was fixed by concatenating
+VOB files as necessary to avoid going above the VOB limit 
+of 9 VOB files per title. The size of the authored result
+is not limited any longer, so now fixed HD bitrates are used
+again.
+
+
+<2021-03-09>
+------------
+Changed the High Bitrate extension for HD frame sizes. Since
+DVDAuthor.exe limits the size of any conversion to about 9 GB
+the plugin now sets the HD bitrate to the maximum value which 
+will still work with DVDAuthor.exe.
+
+
 <2020-06-17>
 ------------
 Fixed a couple of important bugs.
@@ -62,7 +106,7 @@ but the basic "-s" parameter which is used by DVDStyler has not). And
 since most conversions do need some vertical resizing to comply 
 with the DVD specs this method also results in bad quality encodes.
 
-So I use a different method. First the source is anylyzed by "MediaInfo" 
+So I use a different method. First the source is analyzed by "MediaInfo" 
 if it is interlaced or not. If it is interlaced and the "Auto_Deint" 
 parameter is set to 1 or 2 then the source will be automatically 
 deinterlaced using either "bwdif" or "yadif". No need to specify interlaced 

@@ -45,6 +45,7 @@ IF %2==vbr2pass_xhq SET /A VBR_threshold=1 & SET /A twopass_threshold=1 & SET /A
 IF [%1==[ GOTO telecine
 IF %1==-b:v:0 GOTO bitrate
 IF %1==-s GOTO size
+IF [%1==[-vf SET vfilter=true
 IF "[%~x1"=="[.vob" GOTO out
 IF "[%~x1"=="[.m2v" SET out_m2v=%1 & SET out_path=%~dp1
 IF %1==-i GOTO infile
@@ -59,7 +60,7 @@ GOTO assemble
 
 :size
 SHIFT
-set size=%1
+SET size=%1
 SHIFT
 GOTO assemble
 
@@ -81,15 +82,19 @@ GOTO assemble
 REM -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 :telecine
-IF DEFINED out_m2v IF EXIST DGPulldown.exe GOTO deint
-SET ORIGINAL=%ORIGINAL: -r 24000/1001 = -r 30000/1001 -vf telecine -flags +ilme+ildct -alternate_scan 1 -top 1 %
-
-:deint
 SET ORIGINAL=%ORIGINAL:!=_$$§§$$_%
 IF DEFINED out SET out=%out:!=_$$§§$$_%
 IF DEFINED out_path SET out_path=%out_path:!=_$$§§$$_%
 IF DEFINED out_m2v SET out_m2v=%out_m2v:!=_$$§§$$_%
 SETLOCAL EnableDelayedExpansion
+IF DEFINED out_m2v IF EXIST DGPulldown.exe GOTO deint
+IF "!ORIGINAL!"=="!ORIGINAL:-r 24000/1001=!" GOTO deint
+IF NOT DEFINED vfilter SET ORIGINAL=!ORIGINAL: -r 24000/1001 = -r 30000/1001 -vf scale=%size%,telecine -flags +ilme+ildct -alternate_scan 1 -top 1 !& GOTO branch
+SET ORIGINAL=!ORIGINAL: -r 24000/1001 = -r 30000/1001 -flags +ilme+ildct -alternate_scan 1 -top 1 !
+SET ORIGINAL=!ORIGINAL: -vf = -vf scale=%size%,telecine,!
+GOTO branch
+
+:deint
 IF "%Auto_Deint%"=="0" GOTO branch
 IF NOT "!ORIGINAL!"=="!ORIGINAL:-c:v:0 copy=!" GOTO branch
 MediaInfo.exe "--Inform=Video;%%ScanType%%" "%infile%" >"%temp%\type.txt"
@@ -125,6 +130,7 @@ ECHO -----------------------------------------------------
 ECHO. 
 
 IF [%bitrate%==[ GOTO dont_touch
+FOR /L %%a in (0,1,9) DO SET ORIGINAL=!ORIGINAL: -c:a:%%a mp2 -= -c:a:%%a libtwolame -!
 SET /A VBR_threshold=%VBR_threshold% * 1000
 SET /A HQ_threshold=%HQ_threshold% * 1000
 SET /A XHQ_threshold=%XHQ_threshold% * 1000
@@ -160,10 +166,21 @@ GOTO dont_touch
 :HD
 SET ORIGINAL=%ORIGINAL:-bufsize:v:0 1835008 -packetsize 2048 -muxrate 10080000 =%
 IF %bitrate% LSS 9000000 GOTO dont_touch
-IF "%size:~0,4%"=="1280" SET ORIGINAL=%ORIGINAL:-b:v:0 9000000=-b:v:0 13500000%
-IF "%size:~0,4%"=="1440" SET ORIGINAL=%ORIGINAL:-b:v:0 9000000=-b:v:0 22500000%
-IF "%size:~0,4%"=="1920" SET ORIGINAL=%ORIGINAL:-b:v:0 9000000=-b:v:0 25000000%
-SET ORIGINAL=%ORIGINAL:-maxrate:v:0 9200000=-maxrate:v:0 26000000%
+SET ORIGINAL=%ORIGINAL:-maxrate:v:0 9200000=-maxrate:v:0 38000000%
+IF NOT EXIST hd_bitrate.txt GOTO hardcoded
+SET /P hd_bitrate=<hd_bitrate.txt
+IF NOT DEFINED hd_bitrate GOTO hardcoded
+SET /A hd_bitrate=%hd_bitrate%
+SET /A hd_bitrate=%hd_bitrate% * 1000
+IF %hd_bitrate%==0 GOTO hardcoded
+IF %hd_bitrate% LSS 9000000 SET hd_bitrate=9000000
+IF %hd_bitrate% GTR 37000000 SET hd_bitrate=37000000
+SET ORIGINAL=!ORIGINAL:-b:v:0 9000000=-b:v:0 %hd_bitrate%!
+GOTO dont_touch
+:hardcoded
+IF "%size:~0,4%"=="1280" SET ORIGINAL=%ORIGINAL:-b:v:0 9000000=-b:v:0 16000000%
+IF "%size:~0,4%"=="1440" SET ORIGINAL=%ORIGINAL:-b:v:0 9000000=-b:v:0 27000000%
+IF "%size:~0,4%"=="1920" SET ORIGINAL=%ORIGINAL:-b:v:0 9000000=-b:v:0 36000000%
 GOTO dont_touch
 
 
