@@ -11,12 +11,12 @@
 				<stop id="st3" offset="100%" style="stop-color:#101010;stop-opacity:0.6;"/>
 			</linearGradient>
 			<rect id="def_box" x="8%" y="8%" rx="18" width="84%" height="84%" />
-			<text id="text" x="50%" y="50%" style="text-anchor:middle;dominant-baseline:middle;">Text</text>
+			<text id="text" x="50%" y="50%" style="text-anchor:middle;dominant-baseline:middle;stroke-linejoin:round;">Text</text>
 		</defs>
 		<use xlink:href="#def_box" id="box1" style="fill:#0080ff;stroke:#202020;stroke-width:2;"/>
 		<use xlink:href="#def_box" fill="url(#lg)"/>
-		<use xlink:href="#def_box" id="box3" style="fill:none;stroke:none;stroke-width:5;"/>
-		<g id="text_whole" transform="translate(0,0)" style="stroke-width:2;">
+		<use xlink:href="#def_box" id="box3" style="fill:none;stroke:none;stroke-width:4;"/>
+		<g id="text_whole" transform="translate(1,0)" style="stroke-width:4;">
 			<use xlink:href="#text" id="text_stroke" style="fill:none;stroke:#000000;stroke-opacity:0.5"/>
 			<use xlink:href="#text" id="text_fill" style="fill:#ffffff;stroke:none;"/>
 		</g>
