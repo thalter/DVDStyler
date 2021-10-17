@@ -535,6 +535,11 @@ void MenuObjectDef::SetParamFont(wxString name, wxFont value) {
 	
 		elem->SetAttribute(wxT("font-family"), value.GetFaceName());
 		
+		if (value.GetUnderlined())
+			elem->SetAttribute("text-decoration", "underline");
+		else
+			elem->RemoveAttribute("text-decoration");
+		
 		if (elem->GetDtd() == wxSVG_TEXT_ELEMENT)
 			((wxSVGTextElement*) elem)->SetCanvasItem(NULL);
 	}
