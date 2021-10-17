@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: DVDStyler 3.1\n"
+"Project-Id-Version: DVDStyler 3.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-06 14:45+0100\n"
-"PO-Revision-Date: 2019-05-08 23:51+0900\n"
+"PO-Revision-Date: 2021-05-03 23:45+0900\n"
 "Last-Translator: ecodrv <ecodrv at yahoo.co.jp>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -11,7 +11,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Basepath: ..\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.4.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-SearchPath-0: src\n"
 "X-Poedit-SearchPath-1: wxVillaLib\n"
 "X-Poedit-SearchPath-2: buttons\n"
@@ -278,8 +279,8 @@ msgstr "書込み"
 msgid "Temp directory:"
 msgstr "一時保存用ディレクトリ:"
 
-#: src/BurnDlg.cpp:114 src/BurnDlg.cpp:138 src/BurnDlg.cpp:160 src/BurnDlg.cpp:186
-#: src/SubtitlePropDlg.cpp:148 src/SubtitlePropDlg.cpp:161 src/SubtitlePropDlg.cpp:179
+#: src/BurnDlg.cpp:114 src/BurnDlg.cpp:138 src/BurnDlg.cpp:160 src/BurnDlg.cpp:186 src/SubtitlePropDlg.cpp:148
+#: src/SubtitlePropDlg.cpp:161 src/SubtitlePropDlg.cpp:179
 msgid "..."
 msgstr "..."
 
@@ -458,13 +459,12 @@ msgstr ""
 "SVG要素を選択して下さい:"
 
 #: src/ButtonAddParamDlg.cpp:62
-#, fuzzy
 msgid "Attribute:"
-msgstr "属性"
+msgstr "属性:"
 
 #: src/ButtonAddParamDlg.cpp:65
 msgid "fill"
-msgstr ""
+msgstr "塗りつぶし"
 
 #: src/ButtonAddParamDlg.cpp:67 src/ButtonAddParamDlg.cpp:72 src/ButtonAddParamDlg.cpp:77
 #: src/MenuEditor.cpp:548 buttons/arrow-text-left.xml:8 buttons/arrow-text-left.xml:12
@@ -477,20 +477,19 @@ msgid "Text"
 msgstr "テキスト"
 
 #: src/ButtonAddParamDlg.cpp:70
-#, fuzzy
 msgid "stroke"
-msgstr "縁取り:"
+msgstr "縁取り"
 
 #: src/ButtonAddParamDlg.cpp:75
 msgid "stroke-width"
-msgstr ""
+msgstr "縁取りの太さ"
 
 #: src/ButtonEditDlg.cpp:184
 msgid "name"
 msgstr "名前"
 
-#: src/ButtonEditDlg.cpp:184 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:439
-#: src/MenuObjectPropDlg.cpp:679 src/MenuObjectPropDlg.cpp:688 src/MenuObjectPropDlg.cpp:700
+#: src/ButtonEditDlg.cpp:184 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:439 src/MenuObjectPropDlg.cpp:679
+#: src/MenuObjectPropDlg.cpp:688 src/MenuObjectPropDlg.cpp:700
 msgid "title"
 msgstr "タイトル"
 
@@ -542,7 +541,7 @@ msgstr "ディレクトリ:"
 #: buttons/text-circle-v2.xml:19 buttons/text-square-v2.xml:20 buttons/text-underlined-v3.xml:19
 #: buttons/text-v3.xml:19
 msgid "Label"
-msgstr "ラベル"
+msgstr "テキスト"
 
 #: src/ButtonEditDlg.cpp:289 src/SlideDlg.cpp:48
 msgid "File name:"
@@ -686,7 +685,7 @@ msgstr "カスタム"
 
 #: src/ChaptersDlg.cpp:169 src/MenuPropDlg.cpp:171 src/TitlePropDlg.cpp:150
 msgid "Pause:"
-msgstr "停止時間:"
+msgstr "一時停止時間:"
 
 #: src/ChaptersDlg.cpp:174 src/MainWin.cpp:621 src/MenuPropDlg.cpp:171 src/SettingsDlg.cpp:167
 #: src/SettingsDlg.cpp:169 src/TitlePropDlg.cpp:150 src/TitlePropDlg.cpp:196 src/VideoFrameDlg.cpp:82
@@ -1102,7 +1101,7 @@ msgstr "jumppad を作成"
 
 #: src/DVDPropDlg.cpp:32
 msgid "Create empty VMGM/titleset menus if it doesn't exist"
-msgstr "メニューが存在しない場合は、空のメニューを作成する"
+msgstr "各領域にメニューが存在しない場合は、空のメニューを作成する"
 
 #: src/dvdstyler.cpp:191
 msgid "automatically starts the generation and burning"
@@ -1507,7 +1506,7 @@ msgstr "終了"
 
 #: src/MenuCellsDlg.cpp:108
 msgid "Pause"
-msgstr "停止時間"
+msgstr "一時停止時間"
 
 #: src/MenuCellsDlg.cpp:108
 msgid "Commands"
@@ -1766,8 +1765,7 @@ msgstr "実行時"
 msgid "Font..."
 msgstr "フォント設定..."
 
-#: src/MenuObjectPropDlg.cpp:404 src/MenuObjectPropDlg.cpp:566 src/MenuPropDlg.cpp:81
-#: src/VideoPropDlg.cpp:140
+#: src/MenuObjectPropDlg.cpp:404 src/MenuObjectPropDlg.cpp:566 src/MenuPropDlg.cpp:81 src/VideoPropDlg.cpp:140
 msgid "Keep Aspect Ratio"
 msgstr "横縦比を保持する"
 
@@ -1915,7 +1913,7 @@ msgstr "サブピクチャー 開始/終了:"
 
 #: src/MenuPropDlg.cpp:192
 msgid "Remember last selected button"
-msgstr "最後に選んだボタンを記憶する"
+msgstr "最後に実行したボタンを記憶する"
 
 #: src/MenuPropDlg.cpp:211
 msgid "Entry"
@@ -1969,7 +1967,7 @@ msgstr "ファイル %s は音声ファイルではありません。"
 
 #: src/MenuPropDlg.cpp:309
 msgid "Post commands will not be executed if pause is set to -1"
-msgstr "ポスト・コマンドを入力する時は、停止時間を 0 以上にして下さい"
+msgstr "ポスト・コマンドを入力する時は、一時停止時間欄を 0 以上にして下さい"
 
 #: src/MessageDlg.cpp:76
 msgid "&Don't show this message again"
@@ -2470,7 +2468,7 @@ msgstr "KB"
 
 #: src/SettingsDlg.cpp:264
 msgid "internal"
-msgstr "内部(CBR)"
+msgstr "内蔵(CBR)"
 
 #: src/SettingsDlg.cpp:269
 msgid "Encoder:"
@@ -2911,11 +2909,11 @@ msgstr "フェード イン/アウト:"
 
 #: src/VideoPropDlg.cpp:184
 msgid "Filters before scale:"
-msgstr ""
+msgstr "フィルター(枠線・切り取りの前):"
 
 #: src/VideoPropDlg.cpp:200
 msgid "Filters after scale:"
-msgstr ""
+msgstr "フィルター(枠線・切り取りの後):"
 
 #: src/VideoPropDlg.cpp:225
 msgid "Start:"
@@ -2989,7 +2987,7 @@ msgstr "ファイル '%s' から画像を読み込めません: ファイルが�
 
 #: wxVillaLib/PropDlg.cpp:223
 msgid "&Don't show this dialog again"
-msgstr "次回からこのダイアログを表示しない (&D)"
+msgstr "次回からこのダイアログを表示しない(&D) "
 
 #: buttons/arrow-blue.xml:4
 msgid "Blue Arrow"
@@ -3138,7 +3136,7 @@ msgstr "枠線の色"
 #: objects/ellipse-v3.xml:36 objects/ellipse45.xml:38 objects/frame-v3.xml:46 objects/frame45.xml:55
 #: objects/text-v2.xml:39
 msgid "Outline width"
-msgstr "枠線の幅"
+msgstr "枠線の太さ"
 
 #: buttons/arrow2.xml:3
 msgid "Circle Arrow 3D"
@@ -3215,9 +3213,8 @@ msgid "Circle"
 msgstr "円"
 
 #: buttons/dotted-frame.xml:4
-#, fuzzy
 msgid "Dotted frame"
-msgstr "金色のフレーム枠"
+msgstr "点線のフレーム"
 
 #: buttons/dotted-frame.xml:32 buttons/ellipse-v2.xml:30 buttons/frame-v2.xml:25 buttons/gold-frame.xml:56
 #: buttons/maroon-frame.xml:57 buttons/movie.xml:34 buttons/star-frame.xml:42 objects/ellipse-v3.xml:29
@@ -3233,7 +3230,7 @@ msgstr "枠線の色"
 #: buttons/dotted-frame.xml:46 buttons/frame-text.xml:37 buttons/frame-v2.xml:46 buttons/pill-opacity.xml:38
 #: buttons/pill-stroke.xml:40 buttons/star-frame.xml:56
 msgid "Border width"
-msgstr "枠線の幅"
+msgstr "枠線の太さ"
 
 #: buttons/dotted-frame.xml:53 buttons/frame-text.xml:44 buttons/pill-opacity.xml:45
 #: buttons/pill-stroke.xml:47
@@ -3248,16 +3245,15 @@ msgstr "内側の色"
 
 #: buttons/dotted-frame.xml:67
 msgid "Line"
-msgstr ""
+msgstr "直線"
 
 #: buttons/dotted-frame.xml:79 buttons/dotted-frame.xml:93
-#, fuzzy
 msgid "Line width"
-msgstr "最小の幅:"
+msgstr "線の太さ"
 
 #: buttons/dotted-frame.xml:86
 msgid "Dotted line"
-msgstr ""
+msgstr "点線"
 
 #: buttons/ellipse-v2.xml:3 objects/ellipse-v3.xml:3
 msgid "Ellipse"
@@ -3287,12 +3283,11 @@ msgstr "角丸め(y方向)"
 
 #: buttons/gear.xml:4 buttons/gear.xml:93
 msgid "Gear"
-msgstr ""
+msgstr "歯車"
 
 #: buttons/gear.xml:112 buttons/home-moon.xml:43 buttons/pill-opacity.xml:84 buttons/pill-stroke.xml:93
-#, fuzzy
 msgid "Stroke width"
-msgstr "枠線の幅"
+msgstr "縁取りの太さ"
 
 #: buttons/glow_arrow.xml:5
 msgid "Glow Arrow"
@@ -3308,7 +3303,7 @@ msgstr "輝く色"
 
 #: buttons/gold-frame.xml:4 objects/gold-frame.xml:3
 msgid "Gold frame"
-msgstr "金色のフレーム枠"
+msgstr "金色のフレーム"
 
 #: buttons/gold-frame.xml:63 buttons/maroon-frame.xml:64 buttons/painting_frame.xml:47
 msgid "Frame colour"
@@ -3317,12 +3312,11 @@ msgstr "フレームの色"
 #: buttons/gold-frame.xml:84 buttons/maroon-frame.xml:92 buttons/pill-opacity.xml:52
 #: buttons/pill-stroke.xml:54 buttons/star-frame.xml:77 buttons/sticky_note.xml:64
 msgid "Selection colour"
-msgstr "選択を示す色"
+msgstr "選択部分の色"
 
 #: buttons/gold-frame.xml:96 buttons/pill-stroke.xml:66 buttons/sticky_note.xml:76
-#, fuzzy
 msgid "Selection width"
-msgstr "タイトル選択"
+msgstr "選択部分の太さ"
 
 #: buttons/hand-left.xml:4
 msgid "Hand Left"
@@ -3337,9 +3331,8 @@ msgid "Hand Right"
 msgstr "右を指す手"
 
 #: buttons/home-moon.xml:4
-#, fuzzy
 msgid "Home and moon"
-msgstr "手の色"
+msgstr "ホームと月"
 
 #: buttons/home-moon.xml:29 buttons/home-v2.xml:4
 msgid "Home"
@@ -3347,28 +3340,27 @@ msgstr "ホーム"
 
 #: buttons/home-moon.xml:50
 msgid "Window"
-msgstr ""
+msgstr "窓"
 
 #: buttons/home-moon.xml:69
 msgid "Moon"
-msgstr ""
+msgstr "月"
 
 #: buttons/home-moon.xml:76
 msgid "Radius"
-msgstr ""
+msgstr "半径"
 
 #: buttons/home-v2.xml:23 buttons/settings.xml:18 objects/rectangle-v2.xml:31
 msgid "Colour"
 msgstr "色"
 
 #: buttons/maroon-frame.xml:4
-#, fuzzy
 msgid "Maroon frame"
-msgstr "金色のフレーム枠"
+msgstr "栗色のフレーム"
 
 #: buttons/maroon-frame.xml:71 buttons/maroon-frame.xml:78
 msgid "Gradient"
-msgstr ""
+msgstr "色の変化"
 
 #: buttons/movie.xml:3
 msgid "Movie"
@@ -3387,17 +3379,16 @@ msgid "Painting Frame"
 msgstr "絵画フレーム"
 
 #: buttons/pill-opacity.xml:5
-#, fuzzy
 msgid "Pill opacity"
-msgstr "不透明度"
+msgstr "錠剤型(半透明)"
 
 #: buttons/pill-stroke.xml:5
 msgid "Pill stroke"
-msgstr ""
+msgstr "錠剤型(縁取り)"
 
 #: buttons/pill.xml:3
 msgid "Pill"
-msgstr "砲弾形"
+msgstr "錠剤型１"
 
 #: buttons/pill.xml:30
 msgid "C1"
@@ -3409,40 +3400,35 @@ msgstr "色2"
 
 #: buttons/pill2.xml:4
 msgid "Pill 2"
-msgstr "砲弾形 2"
+msgstr "錠剤型２"
 
 #: buttons/pill2.xml:29
 msgid "Pill color"
-msgstr "砲弾形の色"
+msgstr "錠剤型の色"
 
 #: buttons/pill3.xml:4
 msgid "Pill 3"
-msgstr "砲弾形 3"
+msgstr "錠剤型３"
 
 #: buttons/star-frame.xml:4
-#, fuzzy
 msgid "Star frame"
-msgstr "プレビュー開始"
+msgstr "星形フレーム"
 
 #: buttons/star-frame.xml:89
-#, fuzzy
 msgid "Image offset x"
-msgstr "テキストのずれ"
+msgstr "画像のずれ X"
 
 #: buttons/star-frame.xml:96
-#, fuzzy
 msgid "Image offset y"
-msgstr "画像の不透明度"
+msgstr "画像のずれ Y"
 
 #: buttons/star-frame.xml:103
-#, fuzzy
 msgid "Image width"
-msgstr "画像の不透明度"
+msgstr "画像の幅"
 
 #: buttons/star-frame.xml:110
-#, fuzzy
 msgid "Image height"
-msgstr "高さ"
+msgstr "画像の高さ"
 
 #: buttons/sticky_note.xml:4 objects/sticky_note.xml:4
 msgid "Sticky note"
