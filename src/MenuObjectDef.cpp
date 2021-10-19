@@ -502,8 +502,13 @@ wxFont MenuObjectDef::GetParamFont(wxString name) const {
 		weight = wxFONTWEIGHT_LIGHT;
 
 	wxString faceName = elem->GetAttribute(wxT("font-family"));
+	
+	bool underline = elem->GetAttribute("text-decoration") == "underline";
+	bool lineThrough = elem->GetAttribute("text-decoration") == "line-through";
 
-	return wxFont(size, wxFONTFAMILY_DEFAULT, style, weight, false, faceName);
+	wxFont font(size, wxFONTFAMILY_DEFAULT, style, weight, underline, faceName);
+	font.SetStrikethrough(lineThrough);
+	return font;
 }
 
 void MenuObjectDef::SetParamFont(wxString name, wxFont value) {
@@ -537,8 +542,10 @@ void MenuObjectDef::SetParamFont(wxString name, wxFont value) {
 		
 		if (value.GetUnderlined())
 			elem->SetAttribute("text-decoration", "underline");
+		else if (value.GetStrikethrough())
+			elem->SetAttribute("text-decoration", "line-through");
 		else
-			elem->RemoveAttribute("text-decoration");
+			elem->SetAttribute("text-decoration", "none"); //elem->RemoveAttribute("text-decoration");
 		
 		if (elem->GetDtd() == wxSVG_TEXT_ELEMENT)
 			((wxSVGTextElement*) elem)->SetCanvasItem(NULL);
