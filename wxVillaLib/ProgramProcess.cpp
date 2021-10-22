@@ -70,11 +70,7 @@ void ProgramProcess::DoGetFromStream(wxInputStream& in, wxString& line, bool err
 
 /** Checks if user canceled the execution */
 bool ProgramProcess::IsCanceled() {
-#if wxCHECK_VERSION(2, 9, 0)
 	return progDlg != NULL && progDlg->WasCancelled();
-#else
-	return false;
-#endif
 }
 
 /** Executes a given command */
@@ -85,7 +81,7 @@ bool ProgramProcess::Execute(const wxString& command) {
 		return false;
 	}
 	
-	while (!terminated && (progDlg == NULL || progDlg->IsVisible())) {
+	while (!terminated) {
 		if (IsCanceled() && wxProcess::Exists(GetPid())) {
 			wxProcess::Kill(GetPid(), wxSIGTERM);
 			wxMilliSleep(500);
@@ -100,22 +96,16 @@ bool ProgramProcess::Execute(const wxString& command) {
 
 /** Updates progress message */
 bool ProgramProcess::Update(const wxString& msg) {
-	if (msg.length())
-		cerr << msg << endl;
-#if wxCHECK_VERSION(2,9,0)
+	if (progDlg == NULL)
+		return true;
 	return progDlg->Update(progDlg->GetValue(), msg);
-#else
-	return progDlg->Pulse(msg);
-#endif
 }
 
 /** Updates progress value and message */
 bool ProgramProcess::Update(int value, const wxString& msg) {
-#if wxCHECK_VERSION(2,9,0)
+	if (progDlg == NULL)
+		return true;
 	if (value == -1)
 		value = progDlg->GetRange();
-#endif
-	if (msg.length())
-		cerr << msg << endl;
 	return progDlg->Update(value, msg);
 }
