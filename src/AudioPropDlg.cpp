@@ -399,12 +399,11 @@ void AudioPropDlg::OnCalculateGain(wxCommandEvent& event) {
 	pDlg.Pulse();
 	
 	AVConvTimeProgExecute prog(&pDlg);
-	if (!prog.Execute(transcoder.GetCmd(true)) || !prog.IsOk()) {
+	wxString cmd = transcoder.GetCmd(true);
+	if (!prog.Execute(cmd) || !prog.IsOk()) {
 		pDlg.Hide();
-#if wxCHECK_VERSION(2,9,0)
 		if (!pDlg.WasCancelled())
 			wxLogError(wxT("Failed calculation of replay gain"));
-#endif
 		return;
 	}
 	
@@ -416,10 +415,8 @@ void AudioPropDlg::OnCalculateGain(wxCommandEvent& event) {
 		AVConvTimeProgExecute prog2(&pDlg);
 		if (!prog2.Execute(transcoder2.GetCmd(true)) || !prog2.IsOk()) {
 			pDlg.Hide();
-#if wxCHECK_VERSION(2,9,0)
 			if (!pDlg.WasCancelled())
 				wxLogError(wxT("Failed calculation of replay gain"));
-#endif
 			return;
 		}
 		if (trackGain > -prog2.GetMaxVolume())

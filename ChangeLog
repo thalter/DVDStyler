@@ -1,7 +1,8 @@
-Snapshot
---------
+Version 3.2.1 <2021-11-02>
+--------------------------
    
    * added support of font attribute 'underline' and "line-through"
+   * win64: fixed audio normalize 
 
 Version 3.2 <2021-06-21>
 ------------------------
