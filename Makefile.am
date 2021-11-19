@@ -51,11 +51,11 @@ libs:
 	
 dmg:
 	rm -f DVDStyler.dmg DVDStyler-@VERSION@-MacOSX.dmg
-	hdiutil eject /dev/disk1 || echo
-	hdiutil create -megabytes 150 -layout NONE DVDStyler.dmg
+	hdiutil eject /dev/disk2 || echo
+	hdiutil create -megabytes 200 -layout NONE DVDStyler.dmg
 	hdid -nomount DVDStyler.dmg
-	newfs_hfs -v DVDStyler /dev/disk1
-	hdiutil eject /dev/disk1
+	newfs_hfs -v DVDStyler /dev/disk2
+	hdiutil eject /dev/disk2
 	hdid DVDStyler.dmg
 	rsync -rlv --exclude "CVS" --exclude "Makefile*" --exclude ".*" DVDStyler.app /Volumes/DVDStyler/
 	cp ChangeLog /Volumes/DVDStyler/
