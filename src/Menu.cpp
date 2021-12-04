@@ -754,16 +754,14 @@ bool Menu::UpdateButtonImageFor(int actionTsi, int actionPgci, DVD* dvd) {
 	bool result = false;
 	for (unsigned int obji = 0; obji < m_objects.size(); obji++) {
 		MenuObject* obj = m_objects[obji];
-		MenuObjectParam* param = obj->GetImageParam();
-		if (param == NULL)
-			continue;
 		DVDAction& action = obj->GetAction();
-		bool isUpdateButton = obj->IsButton() && !action.IsCustom() && obj->IsDisplayVideoFrame()
+		bool isUpdateButtonAction = obj->IsButton() && !action.IsCustom()
 				&& action.GetTsi() == actionTsi && action.GetPgci() == actionPgci && !action.IsMenu();
-		MenuObjectParam* imgParam = obj->GetImageParam();
-		bool isUpdateObject = !obj->IsButton() && imgParam != NULL && obj->IsDisplayVideoFrame()
+		bool isUpdateButton = isUpdateButtonAction && obj->IsDisplayVideoFrame();
+		bool isUpdateObject = !obj->IsButton() && obj->GetImageParam() != NULL && obj->IsDisplayVideoFrame()
 				&& obj->GetDisplayVobId() == vobId;
-		if (isUpdateButton || isUpdateObject) {
+		MenuObjectParam* param = obj->GetImageParam();
+		if (param != NULL && (isUpdateButton || isUpdateObject)) {
 			result = true; // button/object is found
 			wxString uri;
 			long int pos = 0;
@@ -786,6 +784,18 @@ bool Menu::UpdateButtonImageFor(int actionTsi, int actionPgci, DVD* dvd) {
 				double dur = obj->GetParamVideoDuration(param->name);
 				obj->SetParamImageVideo(param->name, uri, pos, (int) lround(dur));
 				obj->UpdateSize();
+			}
+		}
+		// change button text (e.g. <title>) to filename
+		bool isUpdateButtonText = isUpdateButtonAction && !action.IsPlayAll() && obj->GetInitParam() != NULL
+				&& obj->GetInitParam()->type == "text";
+		if (isUpdateButtonText && pgc && pgc->GetVobs().size() > 0) {
+			bool centered = obj->GetParam(obj->GetInitParameter(), wxT("text-anchor")) == wxT("middle");
+			int width = obj->GetWidth();
+			obj->SetParam(obj->GetInitParameter(), wxFileName(pgc->GetVobs()[0]->GetFilename()).GetName());
+			obj->UpdateSize();
+			if (centered) {
+				obj->SetX(obj->GetX() + (width - obj->GetWidth())/2);
 			}
 		}
 	}

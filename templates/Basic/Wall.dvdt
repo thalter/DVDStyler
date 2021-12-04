@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dvdstyler format="4" videoFormat="2" audioFormat="3" aspectRatio="1">
+  <colours colour0="#545414"/>
+  <!--************** VMGM **************-->
+  <vmgm>
+    <menus>
+      <video format="pal" aspect="4:3" widescreen="nopanscan"/>
+      <audio lang="DE"/>
+      <subpicture lang="DE"/>
+      <!--************** MENU 1 **************-->
+      <pgc entry="title">
+        <vob pause="inf">
+          <menu videoFormat="PAL" aspectRatio="1">
+            <svg width="720" height="540">
+              <image width="720" height="540" id="background" xlink:href="wall.jpg"/>
+              <defs id="defs">
+                <svg id="s_obj01">
+                  <rect x="0" y="0" width="100%" height="100%" id="background" style="fill:#000000;fill-opacity:0;"/>
+                  <text x="50%" y="50%" id="text" xml:space="preserve" style="dominant-baseline:middle;fill:#545414;fill-opacity:1;font-family:Tahoma;font-size:36;font-style:normal;font-weight:bold;stroke:#000000;stroke-opacity:0;stroke-width:1;text-anchor:middle;text-decoration:none;">$DiscTitle</text>
+                </svg>
+                <svg id="s_button01">
+                  <defs>
+                    <filter id="shadowFilter">
+                      <feGaussianBlur stdDeviation="3"/>
+                    </filter>
+                  </defs>
+                  <use x="2" y="2" id="shadow" xlink:href="#text" style="fill:#404040;fill-opacity:1;filter:url(#shadowFilter);visibility:hidden;"/>
+                  <text x="50%" y="78%" id="text" xml:space="preserve" style="fill:#545414;fill-opacity:1;font-family:Arial;font-size:26;font-style:normal;font-weight:bold;text-anchor:middle;text-decoration:none;">&lt;title&gt;</text>
+                  <rect x="0" y="78%" width="100%" height="2" id="underline" style="fill:none;" transform="translate(0,2)"/>
+                </svg>
+                <svg id="s_button02">
+                  <defs>
+                    <filter id="shadowFilter">
+                      <feGaussianBlur stdDeviation="3"/>
+                    </filter>
+                  </defs>
+                  <use x="2" y="2" id="shadow" xlink:href="#text" style="fill:#404040;fill-opacity:1;filter:url(#shadowFilter);visibility:hidden;"/>
+                  <text x="50%" y="78%" id="text" xml:space="preserve" style="fill:#545414;fill-opacity:1;font-family:Arial;font-size:26;font-style:normal;font-weight:bold;text-anchor:middle;text-decoration:none;">&lt;title&gt;</text>
+                  <rect x="0" y="78%" width="100%" height="2" id="underline" style="fill:none;" transform="translate(0,2)"/>
+                </svg>
+                <svg id="s_button03">
+                  <defs>
+                    <filter id="shadowFilter">
+                      <feGaussianBlur stdDeviation="3"/>
+                    </filter>
+                  </defs>
+                  <use x="2" y="2" id="shadow" xlink:href="#text" style="fill:#404040;fill-opacity:1;filter:url(#shadowFilter);visibility:hidden;"/>
+                  <text x="50%" y="78%" id="text" xml:space="preserve" style="fill:#545414;fill-opacity:1;font-family:Arial;font-size:26;font-style:normal;font-weight:bold;text-anchor:middle;text-decoration:none;">&lt;title&gt;</text>
+                  <rect x="0" y="78%" width="100%" height="2" id="underline" style="fill:none;" transform="translate(0,2)"/>
+                </svg>
+                <svg id="s_button04">
+                  <defs>
+                    <filter id="shadowFilter">
+                      <feGaussianBlur stdDeviation="3"/>
+                    </filter>
+                  </defs>
+                  <use x="2" y="2" id="shadow" xlink:href="#text" style="fill:#404040;fill-opacity:1;filter:url(#shadowFilter);visibility:hidden;"/>
+                  <text x="50%" y="78%" id="text" xml:space="preserve" style="fill:#545414;fill-opacity:1;font-family:Arial;font-size:26;font-style:normal;font-weight:bold;text-anchor:middle;text-decoration:none;">&lt;title&gt;</text>
+                  <rect x="0" y="78%" width="100%" height="2" id="underline" style="fill:none;" transform="translate(0,2)"/>
+                </svg>
+                <svg id="s_button05">
+                  <defs>
+                    <filter id="shadowFilter">
+                      <feGaussianBlur stdDeviation="3"/>
+                    </filter>
+                  </defs>
+                  <use x="2" y="2" id="shadow" xlink:href="#text" style="fill:#404040;fill-opacity:1;filter:url(#shadowFilter);visibility:hidden;"/>
+                  <text x="50%" y="78%" id="text" xml:space="preserve" style="fill:#545414;fill-opacity:1;font-family:Arial;font-size:26;font-style:normal;font-weight:bold;text-anchor:middle;text-decoration:none;">&lt;title&gt;</text>
+                  <rect x="0" y="78%" width="100%" height="2" id="underline" style="fill:none;" transform="translate(0,2)"/>
+                </svg>
+                <svg id="s_button06">
+                  <defs>
+                    <filter id="shadowFilter">
+                      <feGaussianBlur stdDeviation="3"/>
+                    </filter>
+                  </defs>
+                  <use x="2" y="2" id="shadow" xlink:href="#text" style="fill:#404040;fill-opacity:1;filter:url(#shadowFilter);visibility:hidden;"/>
+                  <text x="50%" y="78%" id="text" xml:space="preserve" style="fill:#545414;fill-opacity:1;font-family:Arial;font-size:26;font-style:normal;font-weight:bold;text-anchor:middle;text-decoration:none;">&lt;title&gt;</text>
+                  <rect x="0" y="78%" width="100%" height="2" id="underline" style="fill:none;" transform="translate(0,2)"/>
+                </svg>
+                <svg id="s_button07">
+                  <defs>
+                    <filter id="shadowFilter">
+                      <feGaussianBlur stdDeviation="3"/>
+                    </filter>
+                  </defs>
+                  <use x="2" y="2" id="shadow" xlink:href="#text" style="fill:#404040;fill-opacity:1;filter:url(#shadowFilter);visibility:hidden;"/>
+                  <text x="50%" y="78%" id="text" xml:space="preserve" style="fill:#545414;fill-opacity:1;font-family:Arial;font-size:26;font-style:normal;font-weight:bold;text-anchor:middle;text-decoration:none;">&lt;title&gt;</text>
+                  <rect x="0" y="78%" width="100%" height="2" id="underline" style="fill:none;" transform="translate(0,2)"/>
+                </svg>
+                <svg id="s_button08">
+                  <defs>
+                    <filter id="shadowFilter">
+                      <feGaussianBlur stdDeviation="3"/>
+                    </filter>
+                  </defs>
+                  <use x="2" y="2" id="shadow" xlink:href="#text" style="fill:#404040;fill-opacity:1;filter:url(#shadowFilter);visibility:hidden;"/>
+                  <text x="50%" y="78%" id="text" xml:space="preserve" style="fill:#545414;fill-opacity:1;font-family:Arial;font-size:26;font-style:normal;font-weight:bold;text-anchor:middle;text-decoration:none;">&lt;title&gt;</text>
+                  <rect x="0" y="78%" width="100%" height="2" id="underline" style="fill:none;" transform="translate(0,2)"/>
+                </svg>
+                <svg id="s_button09">
+                  <defs>
+                    <filter id="shadowFilter">
+                      <feGaussianBlur stdDeviation="3"/>
+                    </filter>
+                  </defs>
+                  <use x="2" y="2" id="shadow" xlink:href="#text" style="fill:#404040;fill-opacity:1;filter:url(#shadowFilter);visibility:hidden;"/>
+                  <text x="50%" y="78%" id="text" xml:space="preserve" style="fill:#545414;fill-opacity:1;font-family:Arial;font-size:26;font-style:normal;font-weight:bold;text-anchor:middle;text-decoration:none;">&lt;title&gt;</text>
+                  <rect x="0" y="78%" width="100%" height="2" id="underline" style="fill:none;" transform="translate(0,2)"/>
+                </svg>
+                <svg id="s_button10">
+                  <defs>
+                    <filter id="shadowFilter">
+                      <feGaussianBlur stdDeviation="3"/>
+                    </filter>
+                  </defs>
+                  <use x="2" y="2" id="shadow" xlink:href="#text" style="fill:#404040;fill-opacity:1;filter:url(#shadowFilter);visibility:hidden;"/>
+                  <text x="50%" y="78%" id="text" xml:space="preserve" style="fill:#545414;fill-opacity:1;font-family:Arial;font-size:26;font-style:normal;font-weight:bold;text-anchor:middle;text-decoration:none;">&lt;title&gt;</text>
+                  <rect x="0" y="78%" width="100%" height="2" id="underline" style="fill:none;" transform="translate(0,2)"/>
+                </svg>
+                <svg id="s_button11">
+                  <defs>
+                    <filter id="shadowFilter">
+                      <feGaussianBlur stdDeviation="3"/>
+                    </filter>
+                  </defs>
+                  <use x="2" y="2" id="shadow" xlink:href="#text" style="fill:#404040;fill-opacity:1;filter:url(#shadowFilter);visibility:hidden;"/>
+                  <text x="50%" y="78%" id="text" xml:space="preserve" style="fill:#545414;fill-opacity:1;font-family:Arial;font-size:26;font-style:normal;font-weight:bold;text-anchor:middle;text-decoration:none;">&lt;title&gt;</text>
+                  <rect x="0" y="78%" width="100%" height="2" id="underline" style="fill:none;" transform="translate(0,2)"/>
+                </svg>
+                <svg id="s_button12">
+                  <defs>
+                    <filter id="shadowFilter">
+                      <feGaussianBlur stdDeviation="3"/>
+                    </filter>
+                  </defs>
+                  <use x="2" y="2" id="shadow" xlink:href="#text" style="fill:#404040;fill-opacity:1;filter:url(#shadowFilter);visibility:hidden;"/>
+                  <text x="50%" y="78%" id="text" xml:space="preserve" style="fill:#545414;fill-opacity:1;font-family:Arial;font-size:26;font-style:normal;font-weight:bold;text-anchor:middle;text-decoration:none;">&lt;title&gt;</text>
+                  <rect x="0" y="78%" width="100%" height="2" id="underline" style="fill:none;" transform="translate(0,2)"/>
+                </svg>
+                <svg id="s_button13">
+                  <defs>
+                    <filter id="shadowFilter">
+                      <feGaussianBlur stdDeviation="3"/>
+                    </filter>
+                  </defs>
+                  <use x="2" y="2" id="shadow" xlink:href="#text" style="fill:#404040;fill-opacity:1;filter:url(#shadowFilter);visibility:hidden;"/>
+                  <text x="50%" y="78%" id="text" xml:space="preserve" style="fill:#545414;fill-opacity:1;font-family:Arial;font-size:26;font-style:normal;font-weight:bold;text-anchor:middle;text-decoration:none;">Play all</text>
+                  <rect x="0" y="78%" width="100%" height="2" id="underline" style="fill:none;" transform="translate(0,2)"/>
+                </svg>
+              </defs>
+              <g id="objects">
+                <use x="48" y="40" width="622" height="34" id="obj01" xlink:href="#s_obj01"/>
+              </g>
+              <g id="buttons">
+                <use x="316" y="100" width="84" height="25" id="button01" xlink:href="#s_button01"/>
+                <use x="316" y="130" width="84" height="25" id="button02" xlink:href="#s_button02"/>
+                <use x="316" y="160" width="84" height="25" id="button03" xlink:href="#s_button03"/>
+                <use x="316" y="190" width="84" height="25" id="button04" xlink:href="#s_button04"/>
+                <use x="316" y="220" width="84" height="25" id="button05" xlink:href="#s_button05"/>
+                <use x="316" y="250" width="84" height="25" id="button06" xlink:href="#s_button06"/>
+                <use x="316" y="280" width="84" height="25" id="button07" xlink:href="#s_button07"/>
+                <use x="316" y="310" width="84" height="25" id="button08" xlink:href="#s_button08"/>
+                <use x="316" y="340" width="84" height="25" id="button09" xlink:href="#s_button09"/>
+                <use x="316" y="370" width="84" height="25" id="button10" xlink:href="#s_button10"/>
+                <use x="316" y="400" width="84" height="25" id="button11" xlink:href="#s_button11"/>
+                <use x="316" y="430" width="84" height="25" id="button12" xlink:href="#s_button12"/>
+                <use x="500" y="470" width="86" height="33" id="button13" xlink:href="#s_button13"/>
+              </g>
+            </svg>
+            <object id="obj01">
+              <filename>text.xml</filename>
+            </object>
+            <button id="button01" defSize="true">
+              <action tsi="0" pgci="1"/>
+              <filename>text-underlined-v3.xml</filename>
+              <parameter name="underlineFill" normal="none" highlighted="#ff0000" selected="#640000"/>
+            </button>
+            <button id="button02" defSize="true">
+              <action tsi="0" pgci="3"/>
+              <filename>text-underlined-v3.xml</filename>
+              <parameter name="underlineFill" normal="none" highlighted="#ff0000" selected="#640000"/>
+            </button>
+            <button id="button03" defSize="true">
+              <action tsi="0" pgci="5"/>
+              <filename>text-underlined-v3.xml</filename>
+              <parameter name="underlineFill" normal="none" highlighted="#ff0000" selected="#640000"/>
+            </button>
+            <button id="button04" defSize="true">
+              <action tsi="0" pgci="7"/>
+              <filename>text-underlined-v3.xml</filename>
+              <parameter name="underlineFill" normal="none" highlighted="#ff0000" selected="#640000"/>
+            </button>
+            <button id="button05" defSize="true">
+              <action tsi="0" pgci="9"/>
+              <filename>text-underlined-v3.xml</filename>
+              <parameter name="underlineFill" normal="none" highlighted="#ff0000" selected="#640000"/>
+            </button>
+            <button id="button06" defSize="true">
+              <action tsi="0" pgci="11"/>
+              <filename>text-underlined-v3.xml</filename>
+              <parameter name="underlineFill" normal="none" highlighted="#ff0000" selected="#640000"/>
+            </button>
+            <button id="button07" defSize="true">
+              <action tsi="0" pgci="13"/>
+              <filename>text-underlined-v3.xml</filename>
+              <parameter name="underlineFill" normal="none" highlighted="#ff0000" selected="#640000"/>
+            </button>
+            <button id="button08" defSize="true">
+              <action tsi="0" pgci="15"/>
+              <filename>text-underlined-v3.xml</filename>
+              <parameter name="underlineFill" normal="none" highlighted="#ff0000" selected="#640000"/>
+            </button>
+            <button id="button09" defSize="true">
+              <action tsi="0" pgci="17"/>
+              <filename>text-underlined-v3.xml</filename>
+              <parameter name="underlineFill" normal="none" highlighted="#ff0000" selected="#640000"/>
+            </button>
+            <button id="button10" defSize="true">
+              <action tsi="0" pgci="19"/>
+              <filename>text-underlined-v3.xml</filename>
+              <parameter name="underlineFill" normal="none" highlighted="#ff0000" selected="#640000"/>
+            </button>
+            <button id="button11" defSize="true">
+              <action tsi="0" pgci="21"/>
+              <filename>text-underlined-v3.xml</filename>
+              <parameter name="underlineFill" normal="none" highlighted="#ff0000" selected="#640000"/>
+            </button>
+            <button id="button12" defSize="true">
+              <action tsi="0" pgci="23"/>
+              <filename>text-underlined-v3.xml</filename>
+              <parameter name="underlineFill" normal="none" highlighted="#ff0000" selected="#640000"/>
+            </button>
+            <button id="button13" defSize="true">
+              <action tsi="0" pgci="1" playAll="true"/>
+              <filename>text-underlined-v3.xml</filename>
+              <parameter name="underlineFill" normal="none" highlighted="#ff0000" selected="#640000"/>
+            </button>
+          </menu>
+        </vob>
+      </pgc>
+    </menus>
+  </vmgm>
+</dvdstyler>
