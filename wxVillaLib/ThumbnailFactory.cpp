@@ -86,7 +86,7 @@ wxThumbnailFactory* wxThumbnailFactory::thread = NULL;
 int wxThumbnailFactory::maxFileSize = 102400; // immediately render files with size < 100K
 
 void wxThumbnailFactory::Init() {
-#if defined(GNOME2) || defined(GNOME3)
+#if !defined(GNOME2) && !defined(GNOME3)
 	wxLogNull log;
 	wxMkdir(THUMBNAILS_DIR);
 	wxMkdir(THUMBNAILS_DIR + wxFILE_SEP_PATH + wxT("normal"));
@@ -313,7 +313,7 @@ wxImage wxThumbnailFactory::LoadThumbnail(ThumbInfo& info, ThumbType type) {
 }
 
 bool wxThumbnailFactory::CanThumbnail(ThumbInfo& info) {
-	if (info.mimeType == _T("unknown"))
+	if (info.mimeType == _T("unknown") || wxFile(info.filename).Length() == 0)
 		return false;
 #if defined(GNOME2) || defined(GNOME3)
 	if (info.mimeType != _T("image") && info.mimeType != _T("concat") && !info.mimeType.StartsWith(wxT("video/")))

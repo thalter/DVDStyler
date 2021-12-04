@@ -1217,7 +1217,7 @@ void TitlesetManager::OnDelete(wxCommandEvent& WXUNUSED(event)) {
 	bool isMenu = DVD::IsMenu(id);
 	int vobi = DVD::GetVobi(id);
 	if (s_config.GetTitleDeletePrompt()) {
-		wxString caption = isMenu ? _("Menu") : _T("Title");
+		wxString caption = isMenu ? _("Menu") : _("Title");
 		caption += wxString::Format(wxT(" %d"), pgci+1);
 		if (vobi>0)
 			caption += wxString::Format(_T("-%d"), vobi+1);

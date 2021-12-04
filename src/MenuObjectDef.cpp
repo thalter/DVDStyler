@@ -664,7 +664,9 @@ void MenuObjectDef::SetImageVideoParams(wxSVGSVGElement* svgElem, const wxString
 			oldElem->GetParent()->RemoveChild(oldElem);
 			elem = newElem;
 		}
-		wxString href = filename + (filename.length() && pos >= 0 ? wxString::Format(wxT("#%ld"), pos) : wxT(""));
+		wxString href = filename;
+		if (filename.length() && pos >= 0)
+			href += wxString::Format("#%ld", pos);
 		if (href != ((wxSVGImageElement*) elem)->GetHref()) {
 			((wxSVGImageElement*) elem)->SetCanvasItem(NULL);
 			((wxSVGImageElement*) elem)->SetHref(href);
