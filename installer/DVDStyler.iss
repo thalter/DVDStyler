@@ -1,13 +1,13 @@
 ﻿[Setup]
 AppName=DVDStyler
-AppVerName=DVDStyler v3.1.1
+AppVerName=DVDStyler v3.2.1
 AppPublisher=Thüring IT-Consulting
 AppPublisherURL=http://www.dvdstyler.org
 AppSupportURL=http://www.dvdstyler.org
 AppUpdatesURL=http://www.dvdstyler.org
 DefaultDirName={pf}\DVDStyler
 DefaultGroupName=DVDStyler
-OutputBaseFilename=DVDStyler-3.1.1-win32
+OutputBaseFilename=DVDStyler-3.2.1-win32
 Compression=lzma
 SolidCompression=yes
 UninstallDisplayIcon={app}\bin\DVDStyler.exe  
@@ -25,15 +25,15 @@ Name: "ca"; MessagesFile: "compiler:Languages\Catalan.isl"
 Name: "cs"; MessagesFile: "compiler:Languages\Czech.isl"  
 Name: "da"; MessagesFile: "compiler:Languages\Danish.isl"
 Name: "de"; MessagesFile: "compiler:Languages\German.isl"
-Name: "el"; MessagesFile: "compiler:Languages\Greek.isl"
+Name: "el"; MessagesFile: "Languages\Greek.isl"
 Name: "en"; MessagesFile: "compiler:Default.isl"
 Name: "es"; MessagesFile: "compiler:Languages\Spanish.isl"
 Name: "es_ar"; MessagesFile: "Languages\SpanishArg.isl"
 Name: "eu"; MessagesFile: "Languages\Basque.isl"
 Name: "fi"; MessagesFile: "compiler:Languages\Finnish.isl"
 Name: "fr"; MessagesFile: "compiler:Languages\French.isl"
-Name: "hu"; MessagesFile: "compiler:Languages\Hungarian.isl"
-Name: "hy"; MessagesFile: "compiler:Languages\Armenian.islu"
+Name: "hu"; MessagesFile: "Languages\Hungarian.isl"
+Name: "hy"; MessagesFile: "compiler:Languages\Armenian.isl"
 Name: "it"; MessagesFile: "compiler:Languages\Italian.isl"
 Name: "ja"; MessagesFile: "compiler:Languages\Japanese.isl"
 Name: "ko"; MessagesFile: "Languages\Korean.isl"
@@ -46,9 +46,9 @@ Name: "pt_BR"; MessagesFile: "compiler:Languages\BrazilianPortuguese.isl"
 Name: "ro"; MessagesFile: "Languages\Romanian.isl"
 Name: "ru"; MessagesFile: "compiler:Languages\Russian.isl"
 Name: "si"; MessagesFile: "Languages\Sinhala.islu"
-Name: "sk"; MessagesFile: "Languages\Slovak.isl"
+Name: "sk"; MessagesFile: "compiler:Languages\Slovak.isl"
 Name: "sl"; MessagesFile: "compiler:Languages\Slovenian.isl"
-Name: "sr"; MessagesFile: "compiler:Languages\SerbianLatin.isl"
+Name: "sr"; MessagesFile: "Languages\SerbianLatin.isl"
 Name: "sv"; MessagesFile: "Languages\Swedish.isl"
 Name: "tr"; MessagesFile: "compiler:Languages\Turkish.isl"
 Name: "uk"; MessagesFile: "compiler:Languages\Ukrainian.isl"
