@@ -165,7 +165,7 @@
                 <use x="316" y="370" width="84" height="25" id="button10" xlink:href="#s_button10"/>
                 <use x="316" y="400" width="84" height="25" id="button11" xlink:href="#s_button11"/>
                 <use x="316" y="430" width="84" height="25" id="button12" xlink:href="#s_button12"/>
-                <use x="500" y="470" width="86" height="33" id="button13" xlink:href="#s_button13"/>
+                <use x="480" y="470" width="86" height="33" id="button13" xlink:href="#s_button13"/>
               </g>
             </svg>
             <object id="obj01">
