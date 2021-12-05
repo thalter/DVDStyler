@@ -135,18 +135,20 @@ bool DVDStyler::OnInit() {
 		wxArrayString ntscCountries(4, ntscCountriesArr);
 		wxRegKey key(wxT("HKEY_CURRENT_USER\\Control Panel\\International"));
 		wxString country;
-		if (key.QueryValue(wxT("sCountry"), country) && ntscCountries.Index(country, false) >= 0)
-			s_config.SetDefVideoFormat(vfNTSC);
+		if (key.HasValue("sCountry")) {
+			if (key.QueryValue("sCountry", country) && ntscCountries.Index(country, false) >= 0)
+				s_config.SetDefVideoFormat(vfNTSC);
+		} else {
+			if (wxDateTime::GetCountry() == wxDateTime::USA)
+				s_config.SetDefVideoFormat(vfNTSC);
+		}
 #else
 		if (wxDateTime::GetCountry() == wxDateTime::USA)
 			s_config.SetDefVideoFormat(vfNTSC);
 #endif
 	}
 	
-#ifndef __WXWINCE__
 	setlocale(LC_NUMERIC, "C");
-#endif
-	
 	wxFfmpegMediaDecoder::Init();
 	
 #ifdef __WXMAC__
