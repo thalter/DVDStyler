@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- Changed by ecodrv -->
+<button>
+	<title>Gold frame</title>
+	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="240" height="142" version="1.1">
+		<symbol id="def_symbol" viewBox="0 0 790 500" preserveAspectRatio="none">
+			<defs>
+				<filter id="filter1" color-interpolation-filters="sRGB">
+					<feGaussianBlur stdDeviation="3.8" />
+				</filter>
+				<linearGradient id="gradient1" x1="225" y1="420" x2="235" y2="-20" gradientUnits="userSpaceOnUse">
+					<stop offset="0" />
+					<stop stop-opacity="0" offset="1" />
+				</linearGradient>
+				<linearGradient id="gradient2" x1="320" y1="-70" x2="305" y2="330" gradientUnits="userSpaceOnUse">
+					<stop stop-color="#ffffff" offset="0" />
+					<stop stop-color="#ffffff" stop-opacity="0" offset="1" />
+				</linearGradient>
+				<linearGradient id="gradient3" x1="320" y1="570" x2="325" y2="420" gradientUnits="userSpaceOnUse">
+					<stop stop-color="#ffffff" offset="0" />
+					<stop stop-color="#ffffff" stop-opacity="0" offset="1" />
+				</linearGradient>
+				<linearGradient id="gradient4" x1="370" y1="-130" x2="370" y2="350" gradientUnits="userSpaceOnUse">
+					<stop id="g_st0" stop-color="#504000" offset="0" />
+					<stop id="g_st1" stop-color="#504000" stop-opacity="0" offset="1" />
+				</linearGradient>
+			</defs>
+			<path id="path1" filter="url(#filter1)"
+				d="m10 6c-2.1414 0-3.8438 1.7336-3.8438 3.875v284.22c0 2.1414 1.7023 3.8438 3.8438 3.8438h458.97c2.1414 0 3.875-1.7023 3.875-3.8438v-284.22c0-2.1414-1.7336-3.875-3.875-3.875h-458.97zm31.312 27.281h395.34c2.1414 0 3.8438 1.7336 3.8438 3.875v231.69c0 2.1414-1.7023 3.8438-3.8438 3.8438h-395.34c-2.1414 0-3.8438-1.7023-3.8438-3.8438v-231.69c0-2.1414 1.7023-3.875 3.8438-3.875z"
+				fill="url(#gradient1)" transform="matrix(1.63,0,0,1.65,0,0)" />
+			<path id="path2" fill="#a28800"
+				d="m17 5c-3.5388 0-6.352 2.8798-6.352 6.4372v472.15c0 3.5573 2.8132 6.3852 6.352 6.3852h758.47c3.5388 0 6.4036-2.8279 6.4036-6.3852v-472.15c0-3.5573-2.8648-6.4372-6.4036-6.4372h-758.47zm51.745 45.32h653.32c3.5388 0 6.352 2.8798 6.352 6.4372v384.88c0 3.5573-2.8132 6.3853-6.352 6.3853h-653.32c-3.5388 0-6.352-2.828-6.352-6.3853v-384.88c0-3.5573 2.8132-6.4372 6.352-6.4372z" />
+			<path id="path3" fill="#ffd700"
+				d="m755 17c-129.42 0.76014-258.83-0.0158-388.25 0.29003-114.94-0.0469-229.96-0.12626-344.84 0.33497 0.3953 7.7486 1.4027 15.445 0.41077 23.188 0.28608 146.55-0.59256 293.11 0.46423 439.66 8.9903-0.20929 17.95-1.4083 26.938-0.37776 240.02-0.28264 480.04 0.51154 720.06-0.43474-0.0108-8.8072-1.5586-17.547-0.38182-26.344-0.37195-145.49 0.77091-290.98-0.61818-436.47-4.5938 0.0521-9.1875 0.10417-13.781 0.15625zm-684.12 23.094c124.8 0.85183 249.6 0.11601 374.41 0.35261 93.764-0.0209 187.59-0.46426 281.31 0.99114 11.319 4.3636 13.368 18.583 11.656 29.281-0.77354 126.09 1.2925 252.28-1.1562 378.31-4.7072 11.34-19.038 13.038-29.781 11.25-214.22-0.42259-428.45 0.82065-642.66-0.625-11.27-2.9402-14.542-16.706-13.031-26.969 1.3024-127.1-1.5104-254.29 1.5-381.34 2.7078-7.1191 10.407-11.088 17.75-11.25z" />
+			<path id="path4" fill="url(#gradient2)"
+				d="m770 10c-51.067 1.242-102.2-0.0204-153.3 0.46722-201.53 0.14369-403.15-0.32161-604.63 0.31147-4.2749 6.1217 1.014 14.61-1.1421 21.648v107.25c13.935 6.1568 27.885 12.276 42.101 17.754 0.68304-35.11-1.6894-70.502 1.2459-105.43 7.3876-11.335 22.399-4.2661 33.328-6.1776 212.11 0.12658 424.26-0.4052 636.35 0.36339 12.496 4.0584 7.8862 19.532 8.5137 29.331v147.9c14.604-1.0038 29.187-2.2844 43.762-3.6339-0.5666-69.571 1.1133-139.49-0.8306-208.84-1.5485-1.0314-3.6-1.065-5.3989-0.93443z" />
+			<path id="path5" fill="url(#gradient3)"
+				d="m740 420c-0.11599 10.282 2.9132 23.978-6.875 31-8.6706 5.0967-19.234 1.1322-28.687 2.4505-204.64 0.6336-409.3 0.25686-613.94 0.23704-11.082-1.2514-24.814 4.0756-33.781-5.0312-5.8967-6.5084-2.6497-15.962-4.1591-23.843-0.96542-26.942 0.23733-53.897-0.0284-80.844-11.467 4.5796-22.741 9.4563-34.062 14.469 0.087 37.23-0.26803 74.613 0.34375 111.75-0.39178 3.4987-1.4152 7.0302-0.65625 10.469 243.07 0.72186 486.15 0.0415 729.22 0.39562 9.1772 0.0738 18.354 0.18733 27.532 0.19813 1.7797-67.27 0.18543-134.56 0.71875-201.84-11.864-1.125-23.738-2.1496-35.625-3v143.59z" />
+			<path id="path6" fill="url(#gradient4)"
+				d="m51 35c-3.3962 0-6.0897 2.866-6.0897 6.4124v412.11c0 3.5465 2.6934 6.4124 6.0897 6.4124h12.077v-398c0-3.4311 2.6504-6.1987 5.9362-6.1987h650.68c3.2858 0 5.9362 2.7676 5.9362 6.1987v398h12.845c3.3963 0 6.1409-2.866 6.1409-6.4124v-412.11c0-3.5465-2.7446-6.4124-6.1409-6.4124h-687.47z" />
+		</symbol>
+		<rect id="rect_fill" x="6.9%" y="9.0%" width="86.1%" height="81.8%" style="fill:#101010;stroke:none;"/>
+		<image id="image" x="7.7%" y="9.3%" width="84.8%" height="80.5%" opacity="1.0" preserveAspectRatio="xmidymid slice"/>
+		<use xlink:href="#def_symbol" x="0" y="0" width="100%" height="100%"/>
+		<rect id="rect_stroke" x="6.9%" y="9.0%" width="86.1%" height="81.8%" stroke-linejoin="round" style="fill:none;stroke:none;stroke-width:5;"/>
+	</svg>
+	<parameters>
+		<parameter>
+			<title>Image</title>
+			<name>href</name>
+			<type>image</type>
+			<element>image</element>
+			<attribute>xlink:href</attribute>
+		</parameter>
+		<parameter>
+			<title>Image opacity</title>
+			<name>image_opacity</name>
+			<type>percent</type>
+			<element>image</element>
+			<attribute>opacity</attribute>
+		</parameter>
+		<parameter>
+			<title>Frame colour</title>
+			<name>frame_colour1</name>
+			<type>colour</type>
+			<element>path3</element>
+			<attribute>fill</attribute>
+		</parameter>
+		<parameter>
+			<title>Stroke color</title>
+			<name>frame_colour2</name>
+			<type>colour</type>
+			<element>path2</element>
+			<attribute>fill</attribute>
+		</parameter>
+		<parameter>
+			<title>Gradient</title>
+			<name>g_sc0</name>
+			<type>colour</type>
+			<element>g_st0</element>
+			<attribute>stop-color</attribute>
+		</parameter>
+		<parameter>
+			<title>Gradient</title>
+			<name>g_sc1</name>
+			<type>colour</type>
+			<element>g_st1</element>
+			<attribute>stop-color</attribute>
+		</parameter>
+		<parameter>
+			<title>Inner colour</title>
+			<name>inner_colour</name>
+			<type>colour</type>
+			<element>rect_fill</element>
+			<attribute>fill</attribute>
+		</parameter>
+		<parameter>
+			<title>Selection colour</title>
+			<name>selection_colour</name>
+			<type>colour</type>
+			<element>rect_stroke</element>
+			<attribute>stroke</attribute>
+			<changeable/>
+			<default-value>
+				<highlighted>#ff0000</highlighted>
+				<selected>#ffff00</selected>
+			</default-value>
+		</parameter>
+		<parameter>
+			<title>Selection width</title>
+			<name>selection_width</name>
+			<type>integer(0,100)</type>
+			<element>rect_stroke</element>
+			<attribute>stroke-width</attribute>
+		</parameter>
+	</parameters>
+	<init-parameter>href</init-parameter>
+	<default-size>
+		<width>240</width>
+		<height>142</height>
+	</default-size>
+	<min-size>
+		<width>16</width>
+		<height>16</height>
+	</min-size>
+</button>
