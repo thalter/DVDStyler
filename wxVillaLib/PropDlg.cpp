@@ -762,7 +762,9 @@ void wxPropDlg::OnSelectColour(wxCommandEvent& event) {
 	((wxButton*) event.GetEventObject())->GetName().Mid(12).ToLong(&index);
 	ColourPanel* panel = ((ColourPanel*) m_controls[index]);
 	m_colourData.SetColour(panel->GetColour());
+#if wxCHECK_VERSION(3,1,0)
 	m_colourData.SetChooseAlpha(true);
+#endif
 #ifdef __WXMSW__
 	wxGenericColourDialog dialog(propWindow, &m_colourData);
 #else
