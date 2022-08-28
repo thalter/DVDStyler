@@ -208,6 +208,7 @@ public:
 	CONFIG_PROP(OutputDir, _T("Generate/OutputDir"), DEF_GEN_OUTPUT_DIR)
 	CONFIG_PROP_BOOL(RemoveTempFiles, _T("Generate/RemoveTempFiles"), true)
 	CONFIG_PROP_INT(Vbr, _T("Generate/Vbr"), false)
+	CONFIG_PROP(FfmpegOptions, _T("Generate/FfmpegOptions"), "")
 	CONFIG_PROP_INT(VideoBitrate, _T("Generate/VideoBitrate"), DEF_VIDEO_BITRATE)
 	CONFIG_PROP_INT(AudioBitrate, _T("Generate/AudioBitrate"), DEF_AUDIO_BITRATE)
 	CONFIG_PROP_INT(MenuFrameCount,_T("Generate/MenuFrameCount"), DEF_MENU_FRAME_COUNT)

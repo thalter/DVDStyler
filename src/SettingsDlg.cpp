@@ -293,6 +293,7 @@ void SettingsDlg::CreatePropPanel(wxSizer* sizer) {
 	wxCommandEvent evt;
 	OnChangeEncoderMode(evt);
 	
+	AddTextProp(coreGrid, _("FFmpeg options:"), s_config.GetFfmpegOptions(def));
 	AddTextProp(coreGrid, _("Create ISO command:"), s_config.GetIsoCmd(def));
 	AddTextProp(coreGrid, _("Burn command:"), s_config.GetBurnCmd(def));
 	AddTextProp(coreGrid, _("Burn ISO command:"), s_config.GetBurnISOCmd(def));
@@ -388,6 +389,7 @@ bool SettingsDlg::SetValues() {
 		mode += "_xhq";
 	s_config.SetEncoderMode(mode);
 	i += 3;
+	s_config.SetFfmpegOptions(GetString(i++)); //-hwaccel cuda -hwaccel_output_format cuda
 	s_config.SetIsoCmd(GetString(i++));
 	s_config.SetBurnCmd(GetString(i++));
 	s_config.SetBurnISOCmd(GetString(i++));

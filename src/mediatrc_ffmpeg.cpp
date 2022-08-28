@@ -42,6 +42,8 @@ wxString wxFfmpegMediaTranscoder::GetCmd(bool forceInternalEncoder) const {
 			cmd += wxT(" -mode " + s_config.GetEncoderMode());
 		}
 	}
+	if (s_config.GetFfmpegOptions().length() > 0)
+		cmd += " " + s_config.GetFfmpegOptions();
 	return cmd + m_cmd;
 }
 
