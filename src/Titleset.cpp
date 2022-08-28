@@ -303,8 +303,8 @@ wxSvgXmlNode* Titles::GetXML(DVDFileType type, DVD* dvd, int nextTitleset) {
 	for (int i = 0; i < (int) GetCount(); i++) {
 		node->AddChild(new wxSvgXmlNode(wxSVGXML_COMMENT_NODE, wxT(""),
 				wxString::Format(wxT("************** TITLE %d **************"), i + 1)));
-		wxString nextTitle;
-		node->AddChild((*this)[i]->GetXML(type, dvd, *this, false, i != (int) GetCount() - 1 ? i + 2: -1, nextTitleset));
+		int nextTitle = i != (int) GetCount() - 1 ? i + 2: -1;
+		node->AddChild((*this)[i]->GetXML(type, dvd, *this, false, nextTitle, nextTitleset));
 	}
 	return node;
 }

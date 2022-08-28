@@ -223,7 +223,7 @@ wxString Cache::Find(Vob* vob, DVD* dvd) {
 
 	// check if cache entry is valid
 	wxString filename = GetFileName(it->GetIdx());
-	if (wxFile::Exists(filename)) {
+	if (wxFile::Exists(filename) && wxFile(filename).Length() > 0) {
 		it->SetUsed(true);
 		return filename;
 	}
