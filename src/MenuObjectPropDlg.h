@@ -61,6 +61,7 @@ private:
 	void OnChangeSubtitle(wxCommandEvent& evt);
 	
 	bool m_displayVideoFrame; // shows if video frame must be automatically selected if it is available
+	wxString m_customVideoFile;
 	long m_defaultPos;
 	long m_videoPos;
 	int m_videoDuration;

@@ -14,6 +14,7 @@
 #include "AnimationDlg.h"
 #include "Config.h"
 #include <wxVillaLib/utils.h>
+#include <wxVillaLib/Thumbnails.h>
 #include <wxSVG/svg.h>
 #include <wx/statline.h>
 #include <wx/collpane.h>
@@ -430,8 +431,9 @@ void MenuObjectPropDlg::CreateImageCrtls(wxFlexGridSizer* grid, const wxString& 
 	// file name
 	wxString imageFile = m_object->GetParam(param->name);
 	wxString fname = imageFile.Find(wxT('#')) != -1 && m_videoDuration == 0 ? imageFile.BeforeLast(wxT('#')) : imageFile;
+	m_videoChoice = AddChoiceProp(wxT(""), wxArrayString());
+	m_videoChoice->Append(_("Custom file"));
 	if (!m_object->IsButton()) {
-		m_videoChoice = AddChoiceProp(wxT(""), wxArrayString());
 		int sel = 0;
 		for (unsigned int tsi = 0; tsi < m_dvd->GetTitlesets().size(); tsi++) {
 			Titleset* ts = m_dvd->GetTitlesets()[tsi];
@@ -446,27 +448,35 @@ void MenuObjectPropDlg::CreateImageCrtls(wxFlexGridSizer* grid, const wxString& 
 				}
 			}
 		}
-		if (m_videoChoice->GetCount() > 0)
-			m_videoChoice->SetSelection(sel);
+		m_videoChoice->SetSelection(sel);
+	} else {
+		m_videoChoice->Append(_("Auto"));
+		m_videoChoice->SetSelection(1);
+	}
+	// check if custom video file is selected
+	if (fname != GetVideoFilename(false) && (m_object->IsParamVideo(param->name) || imageFile.Find(wxT('#')) != -1)) {
+		m_customVideoFile = m_object->IsParamVideo(param->name) ? imageFile : imageFile.BeforeLast(wxT('#'));
+		m_videoChoice->SetSelection(0);
 	}
 	bool hasVideo = GetVideoFilename(false).length();
 	// image
-	bool image = !m_displayVideoFrame || !hasVideo || fname != GetVideoFilename(false);
+	bool image = m_customVideoFile.length() == 0
+			&& (!m_displayVideoFrame || !hasVideo || fname != GetVideoFilename(false));
 	AddRadioProp(grid, wxString(_("Image")) + wxT(":"), image, wxRB_GROUP, false, IMAGE_RADIO_ID);
 	m_imageRadio = (wxRadioButton*) GetLastControl();
 	wxString wildcard = _("Image Files ") + wxImage::GetImageExtWildcard()
-		+ wxT("|") + wxString(_("All Files")) + wxT(" (*.*)|*.*"); 
-	AddFileProp(grid, wxT(""), wxString(image ? imageFile : wxT("")), wxFD_OPEN, wxT("..."), wildcard);
+		+ wxT("|") + wxString(_("All Files")) + wxT(" (*.*)|*.*");
+	wxString img;
+	if (image)
+		img = imageFile;
+	AddFileProp(grid, "", img, wxFD_OPEN, "...", wildcard);
 	m_imageEdit = (wxTextCtrl*) GetLastControl();
 	m_imageEditIdx = GetLastControlIndex();
 	// video frame
 	AddRadioProp(grid, wxString(_("Video")) + wxT(":"), !image, 0, false, VIDEOFRAME_RADIO_ID);
 	m_videoFrameRadio = (wxRadioButton*) GetLastControl();
-	m_videoFrameRadio->Enable(hasVideo);
 	wxBoxSizer* videoFrameSizer = new wxBoxSizer(wxHORIZONTAL);
-	if (!m_object->IsButton()) {
-		videoFrameSizer->Add(m_videoChoice, 0, wxALIGN_CENTER_VERTICAL);
-	}
+	videoFrameSizer->Add(m_videoChoice, 0, wxALIGN_CENTER_VERTICAL);
 	m_videoFrameBt = new wxButton(propWindow, VIDEOFRAME_BT_ID, wxT("..."));
 	int h = m_videoFrameBt->GetSize().GetHeight() > 24 ? m_videoFrameBt->GetSize().GetHeight() : 24;
 	m_videoFrameBt->SetSizeHints(h, h, h, h);
@@ -723,12 +733,7 @@ void MenuObjectPropDlg::UpdateChapters() {
 void MenuObjectPropDlg::OnChangeTarget(wxCommandEvent& evt) {
 	UpdateChapters();
 	if (m_videoFrameRadio) {
-		m_videoFrameRadio->Enable(GetVideoFilename(false).length());
-		if (!m_videoFrameRadio->IsEnabled() && !m_imageRadio->GetValue()) {
-			m_imageRadio->SetValue(true);
-			wxCommandEvent event(wxEVT_COMMAND_RADIOBUTTON_SELECTED, m_imageRadio->GetId());
-			GetEventHandler()->ProcessEvent(event);
-		} else if (m_displayVideoFrame && !m_videoFrameRadio->GetValue()) {
+		if (m_displayVideoFrame && !m_videoFrameRadio->GetValue()) {
 			m_videoFrameRadio->SetValue(true);
 			wxCommandEvent event(wxEVT_COMMAND_RADIOBUTTON_SELECTED, m_imageRadio->GetId());
 			GetEventHandler()->ProcessEvent(event);
@@ -795,6 +800,8 @@ void MenuObjectPropDlg::OnCustomActionSelected(wxCommandEvent& evt) {
 }
 
 wxString MenuObjectPropDlg::GetVideoFilename(bool withTimestamp, long position) {
+	if (m_customVideoFile.length() > 0)
+		return m_customVideoFile;
 	int tsi = -1;
 	int pgci = 0;
 	int chapter = 0;
@@ -814,7 +821,7 @@ wxString MenuObjectPropDlg::GetVideoFilename(bool withTimestamp, long position) 
 			chapter = GetSelectedChapter();
 		}
 	} else {
-		if (m_videoChoice != NULL) {
+		if (m_videoChoice != NULL && m_videoChoice->GetSelection() > 0) {
 			int id = (intptr_t) m_videoChoice->GetClientData(m_videoChoice->GetSelection());
 			tsi = DVD::GetTsi(id);
 			pgci = DVD::GetPgci(id);
@@ -844,6 +851,22 @@ void MenuObjectPropDlg::OnImageRadio(wxCommandEvent& evt){
 }
 
 void MenuObjectPropDlg::OnVideoFrame(wxCommandEvent& evt) {
+	if (m_customVideoFile.length() == 0
+			&& (m_videoChoice->GetSelection() == 0 || GetVideoFilename(false).length() == 0)) {
+		// select video file
+		wxString videoExt = wxThumbnails::GetVideoExtWildcard();
+		wxFileDialog fileDlg(propWindow, _("Choose a file"), "", "",
+				_("Video Files") + wxString::Format(" (%s)|%s|", videoExt.c_str(), videoExt.c_str())
+				+ wxT("|") + wxString(_("All Files")) +" (*.*)|*.*", wxFD_FILE_MUST_EXIST);
+		if (fileDlg.ShowModal() == wxID_OK) {
+			m_customVideoFile = fileDlg.GetPath();
+			m_videoChoice->SetSelection(0);
+		}
+		else
+			return;
+	}
+	if (m_videoChoice->GetSelection() > 0 && m_customVideoFile.length() > 0)
+		m_customVideoFile = "";
 	VideoFrameDlg dlg(this, GetVideoFilename(false), false, m_defaultPos, m_videoPos, m_videoDuration);
 	if (dlg.ShowModal() == wxID_OK) {
 		m_videoPos = dlg.GetPos();
@@ -916,9 +939,12 @@ bool MenuObjectPropDlg::SetValues() {
 		action.SetMenu(IsSelectedMenu());
 		if (GetSelectedTsi() != m_tsi && GetSelectedTsi() != -1 && IsSelectedMenu() && GetSelectedPgci() > 0) {
 			const StringSet& entries = m_dvd->GetPgcArray(GetSelectedTsi(), true)[GetSelectedPgci()]->GetEntries();
-			action.SetEntry(wxString(entries.size() > 0 ? *entries.begin() : wxT("")));
+			wxString entry;
+			if (entries.size() > 0)
+				entry = *entries.begin();
+			action.SetEntry(entry);
 		} else
-			action.SetEntry(wxT(""));
+			action.SetEntry("");
 		action.SetChapter(GetSelectedChapter());
 		n += 3;
 		action.SetPlayAll(GetBool(n++));
@@ -1005,7 +1031,9 @@ bool MenuObjectPropDlg::SetValues() {
 				m_object->SetParam(param->name, opacity, wxT("-opacity"));
 			} else if (param->type == _T("image") && !m_multObjects) {
 				m_object->SetDisplayVideoFrame(m_displayVideoFrame);
-				n += m_object->IsButton() ? 0 : 1; // video choice
+				int videoChoiceSel = GetInt(n++); // video choice (custom video file) --> it's after video radio button
+				if (videoChoiceSel > 0)
+					m_customVideoFile = "";
 				bool image = GetBool(n++); // image radio button
 				wxString imgFile = GetString(n++);
 				n++; // video radio button
@@ -1013,7 +1041,10 @@ bool MenuObjectPropDlg::SetValues() {
 					m_object->SetCustomVideoFrame(m_videoPos != m_defaultPos);
 					m_object->SetParamImageVideo(param->name, GetVideoFilename(false), m_videoPos, m_videoDuration);
 					if (!m_object->IsButton()) {
-						m_object->SetDisplayVobId((intptr_t) m_videoChoice->GetClientData(m_videoChoice->GetSelection()));
+						int vobId = DVD::MakeId(0, 0, 0);
+						if (m_videoChoice->GetSelection() > 0)
+							vobId = (intptr_t) m_videoChoice->GetClientData(m_videoChoice->GetSelection());
+						m_object->SetDisplayVobId(vobId);
 					}
 				} else {
 					m_object->SetParamImageVideo(param->name, imgFile, -1, -1);

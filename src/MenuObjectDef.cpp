@@ -615,24 +615,28 @@ void MenuObjectDef::SetParamColour(wxString name, wxColour value, MenuButtonStat
 	}
 }
 
-double MenuObjectDef::GetParamVideoClipBegin(const wxString& name) {
+wxSVGVideoElement* MenuObjectDef::GetVideoElement(const wxString& name) {
 	MenuObjectParam* param = GetParamByName(name);
 	if (!param || param->element.size() == 0)
-		return 0;
+		return NULL;
 	wxSVGElement* elem = GetElementById(param->element.front());
 	if (!elem || elem->GetDtd() != wxSVG_VIDEO_ELEMENT)
-		return 0;
-	return ((wxSVGVideoElement*) elem)->GetClipBegin();
+		return NULL;
+	return (wxSVGVideoElement*) elem;
+}
+
+bool MenuObjectDef::IsParamVideo(const wxString& name) {
+	return GetVideoElement(name) != NULL;
+}
+
+double MenuObjectDef::GetParamVideoClipBegin(const wxString& name) {
+	wxSVGVideoElement* video = GetVideoElement(name);
+	return video != NULL ? video->GetClipBegin() : 0;
 }
 
 double MenuObjectDef::GetParamVideoDuration(const wxString& name) {
-	MenuObjectParam* param = GetParamByName(name);
-	if (!param || param->element.size() == 0)
-		return 0;
-	wxSVGElement* elem = GetElementById(param->element.front());
-	if (!elem || elem->GetDtd() != wxSVG_VIDEO_ELEMENT)
-		return 0;
-	return ((wxSVGVideoElement*) elem)->GetDur();
+	wxSVGVideoElement* video = GetVideoElement(name);
+	return video != NULL ? video->GetDur() : 0;
 }
 
 void MenuObjectDef::SetParamImageVideo(const wxString& name, const wxString& filename, long pos, int duration) {

@@ -16,6 +16,7 @@
 #include <wxSVG/SVGLength.h>
 #include <vector>
 #include <set>
+class wxSVGVideoElement;
 
 using namespace std;
 enum MenuButtonState { mbsNORMAL, mbsHIGHLIGHTED, mbsSELECTED };
@@ -115,6 +116,7 @@ public:
 	wxColour GetParamColour(wxString name, MenuButtonState state = mbsNORMAL) const;
 	void SetParamColour(wxString name, wxColour value, MenuButtonState state = mbsNORMAL);
 	
+	bool IsParamVideo(const wxString& name);
 	double GetParamVideoClipBegin(const wxString& name);
 	double GetParamVideoDuration(const wxString& name);
 	void SetParamImageVideo(const wxString& name, const wxString& filename, long pos, int duration);
@@ -147,6 +149,7 @@ protected:
 	
 	wxString ReadNodeContent(wxSvgXmlNode* node);
 	void InitSize(wxSvgXmlNode* node, MenuObjectSize& width, MenuObjectSize& height);
+	wxSVGVideoElement* GetVideoElement(const wxString& name);
 };
 
 #endif /* MENUOBJECTDEF_H_ */
