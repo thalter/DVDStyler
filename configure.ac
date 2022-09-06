@@ -1,8 +1,8 @@
 dnl Process this file with autoconf to produce a configure script.
 
 dnl initialization
-AC_INIT([DVDStyler], [3.3b2], [http://www.dvdstyler.org])
-AC_CANONICAL_SYSTEM
+AC_INIT([DVDStyler],[3.3b3],[http://www.dvdstyler.org])
+AC_CANONICAL_TARGET
 AM_INIT_AUTOMAKE
 AM_MAINTAINER_MODE
 
@@ -24,7 +24,7 @@ prefix=$m_cv_prefix
 
 
 dnl Checks for programs.
-AC_LANG_CPLUSPLUS
+AC_LANG([C++])
 AX_CXX_COMPILE_STDCXX_11
 AC_PROG_INSTALL
 AC_PROG_LN_S
@@ -33,7 +33,7 @@ AC_PROG_CC
 AC_PROG_CXX
 AC_PROG_CXXCPP
 AC_PROG_OBJCXX
-AC_PROG_LEX
+AC_PROG_LEX(noyywrap)
 if test "x$LEX" = "x:"; then
   AC_MSG_ERROR([
     DVDStyler requires lex (flex).
@@ -77,10 +77,7 @@ LIBS="$LIBS $WX_LIBS "
 
 AC_MSG_CHECKING([for wxWidgets media])
 WX_OK=no
-AC_TRY_LINK(
-    [#include <wx/mediactrl.h>],
-    [wxMediaCtrl media;],
-    [WX_OK=yes], [WX_OK=no])
+AC_LINK_IFELSE([AC_LANG_PROGRAM([[#include <wx/mediactrl.h>]], [[wxMediaCtrl media;]])],[WX_OK=yes],[WX_OK=no])
 AC_MSG_RESULT([$WX_OK])
 if test "x$WX_OK" = x"no"; then
   AC_MSG_ERROR([
@@ -101,10 +98,7 @@ dnl check for wxSVG
 PKG_CHECK_MODULES(wxSVG, [libwxsvg >= 1.5.23], [LIBS="$LIBS $wxSVG_LIBS"], [AC_MSG_ERROR([*** missing wxSVG library >= 1.5.23 ***])])
 AC_MSG_CHECKING([for wxSVG library with ffmpeg/libav support])
 WXSVGLIBAV=no
-AC_TRY_LINK(
-    [#include <wxSVG/mediadec_ffmpeg.h>],
-    [wxFfmpegMediaDecoder *a = new wxFfmpegMediaDecoder;],
-    [WXSVGLIBAV=yes], [WXSVGLIBAV=no])
+AC_LINK_IFELSE([AC_LANG_PROGRAM([[#include <wxSVG/mediadec_ffmpeg.h>]], [[wxFfmpegMediaDecoder *a = new wxFfmpegMediaDecoder;]])],[WXSVGLIBAV=yes],[WXSVGLIBAV=no])
 AC_MSG_RESULT([$WXSVGLIBAV])
 if test "x$WXSVGLIBAV" = x"no"; then
   AC_MSG_ERROR([
@@ -113,21 +107,18 @@ if test "x$WXSVGLIBAV" = x"no"; then
 fi
 
 dnl check gnomeui-2.0
-CHECK_WX_BUILT_WITH_GTK2()
+CHECK_WX_BUILT_WITH_GTK()
 if test x"$GTK_USEDVERSION" = x"2" ; then
   PKG_CHECK_MODULES(GNOMEUI2, libgnomeui-2.0, GNOME2="-DGNOME2",
     AC_MSG_WARN([libgnomeui will not be used for rendering of thumbnails]))
+  CXXFLAGS="$CXXFLAGS $GNOME2"
+  LIBS="$LIBS $GNOMEUI2_LIBS "
+elif test x"$GTK_USEDVERSION" = x"3" ; then
+  PKG_CHECK_MODULES(GNOME_DESKTOP_4, gnome-desktop-4, GNOME3="-DGNOME3",
+    AC_MSG_WARN([gnome-desktop will not be used for rendering of thumbnails]))
+  CXXFLAGS="$CXXFLAGS $GNOME3 $GNOME_DESKTOP_3_CFLAGS"
+  LIBS="$LIBS $GNOME_DESKTOP_3_LIBS"
 fi
-CXXFLAGS="$CXXFLAGS $GNOME2"
-LIBS="$LIBS $GNOMEUI2_LIBS "
-
-dnl CHECK_WX_BUILT_WITH_GTK3()
-dnl if test x"$GTK_USEDVERSION" = x"3" ; then  
-dnl  PKG_CHECK_MODULES(GNOME_DESKTOP_3, gnome-desktop-3.0, GNOME3="-DGNOME3",
-dnl    AC_MSG_WARN([gnome-desktop will not be used for rendering of thumbnails]))
-dnl  CXXFLAGS="$CXXFLAGS $GNOME3 $GNOME_DESKTOP_3_CFLAGS"
-dnl  LIBS="$LIBS $GNOME_DESKTOP_3_LIBS"
-dnl fi
 
 dnl check libexif
 PKG_CHECK_MODULES(LIBEXIF, libexif, [LIBS="$LIBS $LIBEXIF_LIBS"], [AC_MSG_ERROR([*** missing libexif ***])])
