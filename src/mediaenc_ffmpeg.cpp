@@ -30,6 +30,7 @@ extern "C" {
 #include <libswscale/swscale.h>
 #include <libavutil/mathematics.h>
 #include <libavutil/avstring.h>
+#include <libavcodec/avcodec.h>
 }
 
 #define AUDIO_BUF_SIZE 524288
@@ -86,7 +87,7 @@ bool wxFfmpegMediaEncoder::BeginEncode(const wxString& fileName, VideoFormat vid
 		}
 		return true;
 	}
-	AVOutputFormat* outputFormat = NULL;
+	const AVOutputFormat* outputFormat = NULL;
 	if (videoFormat == vfNONE || audioFormat == afNONE)
 		outputFormat = av_guess_format(NULL, (const char*) fileName.ToUTF8(), NULL);
 	else
@@ -95,13 +96,15 @@ bool wxFfmpegMediaEncoder::BeginEncode(const wxString& fileName, VideoFormat vid
 		wxLogError(wxT("Cannot open output format"));
 		return false;
 	}
-	outputFormat->video_codec = videoFormat == vfNONE ? AV_CODEC_ID_NONE : AV_CODEC_ID_MPEG2VIDEO;
+
+	AVCodecID video_codec = videoFormat == vfNONE ? AV_CODEC_ID_NONE : AV_CODEC_ID_MPEG2VIDEO;
+	AVCodecID audio_codec;
 	if (audioFormat == afNONE)
-		outputFormat->audio_codec = AV_CODEC_ID_NONE;
+		audio_codec = AV_CODEC_ID_NONE;
 	else if (audioFormat == afAC3)
-		outputFormat->audio_codec = AV_CODEC_ID_AC3;
+		audio_codec = AV_CODEC_ID_AC3;
 	else
-		outputFormat->audio_codec = AV_CODEC_ID_MP2;
+		audio_codec = AV_CODEC_ID_MP2;
 	
 	m_outputCtx = NULL;
 	avformat_alloc_output_context2(&m_outputCtx, outputFormat, NULL, (const char*) fileName.ToUTF8());
@@ -113,9 +116,9 @@ bool wxFfmpegMediaEncoder::BeginEncode(const wxString& fileName, VideoFormat vid
 	m_outputCtx->packet_size = 2048;
 
 	// add video and audio streams
-	if (!addVideoStream(outputFormat->video_codec, videoFormat, aspectRatio, videoBitrate, cbr))
+	if (!addVideoStream(video_codec, videoFormat, aspectRatio, videoBitrate, cbr))
 		return false;
-	if (!addAudioStream(outputFormat->audio_codec))
+	if (!addAudioStream(audio_codec))
 		return false;
 
 	// open the output file
@@ -172,7 +175,7 @@ bool wxFfmpegMediaEncoder::addVideoStream(int codecId, VideoFormat videoFormat, 
 	m_videoStm->id = 0;
 
 	// find the video encoder and open it
-	AVCodec* encoder = avcodec_find_encoder((AVCodecID) codecId);
+	auto* encoder = avcodec_find_encoder((AVCodecID) codecId);
 	if (!encoder) {
 		wxLogError(wxT("Video codec not found"));
 		return false;
@@ -264,7 +267,7 @@ bool wxFfmpegMediaEncoder::addAudioStream(int codecId) {
 	}
 
 	// find the audio encoder and open it
-	AVCodec* encoder = NULL;
+	const AVCodec* encoder = NULL;
 	AVSampleFormat sampleFmt = AV_SAMPLE_FMT_S16;
 	if ((AVCodecID) codecId == AV_CODEC_ID_AC3) {
 		sampleFmt = AV_SAMPLE_FMT_FLTP;
