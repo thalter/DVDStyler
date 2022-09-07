@@ -1,3 +1,10 @@
+Version 3.3 beta 3 <2022-09-05>
+-------------------------------
+   
+   * added possibility to specify custom video file for buttons
+   * added one more menu template with text based title buttons (thanks to ecodrv)
+   * updated ffmpeg to version 5.0
+
 Version 3.3 beta 2 <2022-08-28>
 -------------------------------
    
