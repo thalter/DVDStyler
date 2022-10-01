@@ -58,10 +58,15 @@ wxFfmpegMediaEncoder::~wxFfmpegMediaEncoder() {
 }
 
 wxString wxFfmpegMediaEncoder::GetBackendVersion() {
+#ifdef LIBAVFORMAT_VERSION_INT
 	return wxString::Format(wxT("libavformat %d.%d.%d, libavcodec %d.%d.%d, libavutil %d.%d.%d"),
 			LIBAVFORMAT_VERSION_INT >> 16, LIBAVFORMAT_VERSION_INT >> 8 & 0xFF, LIBAVFORMAT_VERSION_INT & 0xFF,
 			LIBAVCODEC_VERSION_INT >> 16, LIBAVCODEC_VERSION_INT >> 8 & 0xFF, LIBAVCODEC_VERSION_INT & 0xFF,
 			LIBAVUTIL_VERSION_INT >> 16, LIBAVUTIL_VERSION_INT >> 8 & 0xFF, LIBAVUTIL_VERSION_INT & 0xFF);
+#else
+	return wxString::Format(wxT("libavformat %d, libavcodec %d, libavutil %d"),
+			LIBAVCODEC_VERSION_MAJOR, LIBAVFORMAT_VERSION_MAJOR, LIBAVUTIL_VERSION_MAJOR);
+#endif
 }
 
 void print_error(const char *filename, int err) {
