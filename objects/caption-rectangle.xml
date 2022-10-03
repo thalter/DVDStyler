@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- Created by ecodrv -->
+<object>
+	<title>Caption and rectangle</title>
+	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<defs>
+			<linearGradient id="lg" x1="0.5" y1="0" x2="0.5" y2="1">
+				<stop id="st1" offset="0%" style="stop-color:#c0c0c0;stop-opacity:1;"/>
+				<stop id="st2" offset="50%" style="stop-color:#ffffff;stop-opacity:1;"/>
+				<stop id="st3" offset="100%" style="stop-color:#c0c0c0;stop-opacity:1;"/>
+			</linearGradient>
+			<filter id="rect_shadowFilter">
+				<feGaussianBlur stdDeviation="2"/>
+			</filter>
+			<filter id="text_shadowFilter">
+				<feGaussianBlur stdDeviation="2"/>
+			</filter>
+			<rect id="def_rect" x="0%" y="0%" width="100%" height="100%" rx="9" style="stroke-width:0;"/>
+			<text id="text" transform="translate(0,0)" x="50%" y="50%" style="stroke-linejoin:round;text-anchor:middle;dominant-baseline:middle;font-size:36;stroke-width:2;">Text</text>
+		</defs>
+		<g id="skew_x" transform="skewX(0)">
+			<use id="rect_fill" xlink:href="#def_rect" style="fill:none;stroke:none;"/>
+			<use id="rect_shadow" xlink:href="#rect_stroke" x="3" y="3" style="fill:none;filter:url(#rect_shadowFilter);stroke:#000000;stroke-opacity:0.75;visibility:hidden;"/>
+			<g id="rect_body" style="fill:none;stroke:#ffffff;">
+				<use id="rect_stroke" xlink:href="#def_rect"/>
+				<use xlink:href="#def_rect" style="fill:none;stroke:url(#lg);"/>
+			</g>
+			<use id="text_shadow" xlink:href="#text_stroke" x="2" y="2" style="fill:none;filter:url(#text_shadowFilter);stroke:#000000;stroke-opacity:0.63;visibility:hidden;"/>
+			<g id="text_whole" style="fill:#ffffff;stroke:#808080;">
+				<use id="text_stroke" xlink:href="#text" style="fill:none;"/>
+				<use xlink:href="#text" style="fill:url(#lg);stroke:none;"/>
+			</g>
+		</g>
+	</svg>
+	<parameters>
+		<parameter>
+			<title>Text</title>
+			<name>text</name>
+			<type>text</type>
+			<element>text</element>
+		</parameter>
+		<parameter>
+			<title>Stroke color</title>
+			<name>text_stroke_colour</name>
+			<type>colour</type>
+			<element>text_whole</element>
+			<attribute>stroke</attribute>
+		</parameter>
+		<parameter>
+			<title>Stroke width</title>
+			<name>text_stroke_width</name>
+			<type>integer(0,30)</type>
+			<element>text</element>
+			<attribute>stroke-width</attribute>
+		</parameter>
+		<parameter>
+			<title>Text offset</title>
+			<name>text_offset</name>
+			<type>integer(-100,100)</type>
+			<element>text</element>
+			<attribute>transform#1</attribute>
+		</parameter>
+		<parameter>
+			<title>Shadow</title>
+			<name>text_shadow</name>
+			<type>shadow</type>
+			<element>text_shadow</element>
+			<attribute>stroke</attribute>
+		</parameter>
+		<parameter>
+			<title>Background colour</title>
+			<name>rect_fill_colour</name>
+			<type>colour</type>
+			<element>rect_fill</element>
+			<attribute>fill</attribute>
+		</parameter>
+		<parameter>
+			<title>Border width</title>
+			<name>rect_stroke_width</name>
+			<type>integer(0,30)</type>
+			<element>def_rect</element>
+			<attribute>stroke-width</attribute>
+		</parameter>
+		<parameter>
+			<title>Corner round</title>
+			<name>rect_rx</name>
+			<type>integer</type>
+			<element>def_rect</element>
+			<attribute>rx</attribute>
+		</parameter>
+		<parameter>
+			<title>Shadow</title>
+			<name>rect_shadow</name>
+			<type>shadow</type>
+			<element>rect_shadow</element>
+			<attribute>stroke</attribute>
+		</parameter>
+		<parameter>
+			<title>Gradient</title>
+			<name>st1_colour</name>
+			<type>colour</type>
+			<element>st1</element>
+			<attribute>stop-color</attribute>
+		</parameter>
+		<parameter>
+			<title>Gradient</title>
+			<name>st2_colour</name>
+			<type>colour</type>
+			<element>st2</element>
+			<attribute>stop-color</attribute>
+		</parameter>
+		<parameter>
+			<title>Gradient</title>
+			<name>st3_colour</name>
+			<type>colour</type>
+			<element>st3</element>
+			<attribute>stop-color</attribute>
+		</parameter>
+		<parameter>
+			<title>Skew X</title>
+			<name>skew_x</name>
+			<type>integer(-45,45)</type>
+			<element>skew_x</element>
+			<attribute>transform#1</attribute>
+		</parameter>
+	</parameters>
+	<init-parameter>text</init-parameter>
+	<text-offset>2%</text-offset>
+	<default-size>
+		<width>8|text+20</width>
+		<height>8|text+20</height>
+	</default-size>
+	<min-size>
+		<width>2|text</width>
+		<height>2|text</height>
+	</min-size>
+</object>
