@@ -1,13 +1,13 @@
 ﻿[Setup]
-AppName=DVDStyler
-AppVerName=DVDStyler v3.2.1
+AppName=DVDStyler     
+AppVerName=DVDStyler v3.2 
 AppPublisher=Thüring IT-Consulting
 AppPublisherURL=http://www.dvdstyler.org
 AppSupportURL=http://www.dvdstyler.org
 AppUpdatesURL=http://www.dvdstyler.org
 DefaultDirName={pf}\DVDStyler
 DefaultGroupName=DVDStyler
-OutputBaseFilename=DVDStyler-3.2.1-win32
+OutputBaseFilename=DVDStyler-3.2-win64
 Compression=lzma
 SolidCompression=yes
 UninstallDisplayIcon={app}\bin\DVDStyler.exe  
@@ -16,7 +16,10 @@ WizardSmallImageFile=dvdstyler.bmp
 DisableWelcomePage=no
 ChangesAssociations=yes
 AllowNoIcons=yes
+;LicenseFile=..\COPYING
 InfoBeforeFile=Info.rtf
+ArchitecturesAllowed=x64 
+ArchitecturesInstallIn64BitMode=x64
 
 [Languages]
 Name: "ar"; MessagesFile: "Languages\Arabic.isl"
@@ -46,14 +49,13 @@ Name: "pt_BR"; MessagesFile: "compiler:Languages\BrazilianPortuguese.isl"
 Name: "ro"; MessagesFile: "Languages\Romanian.isl"
 Name: "ru"; MessagesFile: "compiler:Languages\Russian.isl"
 Name: "si"; MessagesFile: "Languages\Sinhala.islu"
-Name: "sk"; MessagesFile: "compiler:Languages\Slovak.isl"
+Name: "sk"; MessagesFile: "Languages\Slovak.isl"
 Name: "sl"; MessagesFile: "compiler:Languages\Slovenian.isl"
 Name: "sr"; MessagesFile: "Languages\SerbianLatin.isl"
 Name: "sv"; MessagesFile: "Languages\Swedish.isl"
 Name: "tr"; MessagesFile: "compiler:Languages\Turkish.isl"
 Name: "uk"; MessagesFile: "compiler:Languages\Ukrainian.isl"
-Name: "uz"; MessagesFile: "Languages\Uzbek.isl"
-Name: "vi"; MessagesFile: "Languages\Vietnamese.isl"
+Name: "vi"; MessagesFile: "Languages\Vietnamese.islu"
 Name: "zh_CN"; MessagesFile: "Languages\ChineseSimp.isl"
 Name: "zh_TW"; MessagesFile: "Languages\ChineseTrad.isl"
 
