@@ -92,7 +92,10 @@ bool wxFfmpegMediaEncoder::BeginEncode(const wxString& fileName, VideoFormat vid
 		}
 		return true;
 	}
-	const AVOutputFormat* outputFormat = NULL;
+#if LIBAVCODEC_VERSION_MAJOR > 58
+	const
+#endif
+AVOutputFormat* outputFormat = NULL;
 	if (videoFormat == vfNONE || audioFormat == afNONE)
 		outputFormat = av_guess_format(NULL, (const char*) fileName.ToUTF8(), NULL);
 	else
