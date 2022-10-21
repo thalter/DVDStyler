@@ -114,10 +114,10 @@ if test x"$GTK_USEDVERSION" = x"2" ; then
   CXXFLAGS="$CXXFLAGS $GNOME2"
   LIBS="$LIBS $GNOMEUI2_LIBS "
 elif test x"$GTK_USEDVERSION" = x"3" ; then
-  PKG_CHECK_MODULES(GNOME_DESKTOP_4, gnome-desktop-4, GNOME3="-DGNOME3",
+  PKG_CHECK_MODULES(GNOME_DESKTOP_3, gnome-desktop-3, GNOME3="-DGNOME3",
     AC_MSG_WARN([gnome-desktop will not be used for rendering of thumbnails]))
-  CXXFLAGS="$CXXFLAGS $GNOME3 $GNOME_DESKTOP_4_CFLAGS"
-  LIBS="$LIBS $GNOME_DESKTOP_4_LIBS"
+  CXXFLAGS="$CXXFLAGS $GNOME3 $GNOME_DESKTOP_3_CFLAGS"
+  LIBS="$LIBS $GNOME_DESKTOP_3_LIBS"
 fi
 
 dnl check libexif
