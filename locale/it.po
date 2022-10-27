@@ -11,22 +11,23 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: DVDStyler 3.0\n"
+"Project-Id-Version: DVDStyler - Traduzione v. 25.10.2022\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-06 14:45+0100\n"
-"PO-Revision-Date: 2022-10-04 10:39+0200\n"
+"PO-Revision-Date: 2022-10-25 21:42+0200\n"
 "Last-Translator: Christian Bevini <serse.tharkas at gmail.com>\n"
-"Language-Team: it at li.org\n"
+"Language-Team: bovirus@gmail.com\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 #: src/About.cpp:35
 msgid "About ..."
-msgstr "Info sul programma..."
+msgstr "Info sul programma DVDStyler ..."
 
 #: src/About.cpp:39
 msgid "About"
@@ -58,10 +59,12 @@ msgstr "Forum"
 
 #: src/About.cpp:86
 #, c-format
-msgid "Please use %sDVDStyler forum%s to get support, ask questions, or discuss this software."
+msgid ""
+"Please use %sDVDStyler forum%s to get support, ask questions, or discuss "
+"this software."
 msgstr ""
-"Usa %sDVDStyler forum%s per ottenere supporto, risposte alle domande o scambiare informazioni su questo "
-"programma."
+"Visita a %sforum DVDStyler%s per ottenere supporto, risposte alle domande o "
+"scambiare informazioni su questo programma."
 
 #: src/About.cpp:88
 msgid "WIKI"
@@ -70,10 +73,11 @@ msgstr "WIKI"
 #: src/About.cpp:89
 #, c-format
 msgid ""
-"Some documentation and %sFAQ%s you can find in %sDVDStyler WIKI%s or you can publish there your comments or "
-"small guides."
+"Some documentation and %sFAQ%s you can find in %sDVDStyler WIKI%s or you can "
+"publish there your comments or small guides."
 msgstr ""
-"Una parte della documentazione e delle%sFAQ%s si trovano (e possono essere aggiunte) nel %sDVDStyler WIKI%s."
+"Una parte della documentazione e delle %sFAQ%s si trovano (e possono essere "
+"aggiunte) nel %sWIKI DVDStyler%s."
 
 #: src/About.cpp:92
 msgid "Bugs & RFE"
@@ -82,11 +86,11 @@ msgstr "Bug e RFE"
 #: src/About.cpp:93
 #, c-format
 msgid ""
-"Please use %sSourceforge Bugtracing system%s to report bug and %sSourceforge RFE system%s to submit a new "
-"feature request."
+"Please use %sSourceforge Bugtracing system%s to report bug and %sSourceforge "
+"RFE system%s to submit a new feature request."
 msgstr ""
-"Per documentare un difetto usa %sSourceforge Bugtracing system%s, per richiedere una nuova funzionalità usa "
-"%sSourceforge RFE system%s ."
+"Per segnalare un bug usa il %sSistema bugtracking Sourceforge%s.<br>Per "
+"richiedere una nuova funzionalità usa %sSistema RFE Sourceforge%s."
 
 #: src/About.cpp:98
 msgid "Support"
@@ -118,28 +122,34 @@ msgstr "Autori"
 
 #: src/About.cpp:143
 msgid ""
-"DVDStyler is <a href='http://www.gnu.org/philosophy/free-sw.html'>free software</a> distributed under <a "
-"href='http://www.gnu.org/copyleft/gpl.html'>GNU General Public License (GPL)</a>. Please visit those sites "
-"for details of each agreement."
+"DVDStyler is <a href='http://www.gnu.org/philosophy/free-sw.html'>free "
+"software</a> distributed under <a href='http://www.gnu.org/copyleft/gpl."
+"html'>GNU General Public License (GPL)</a>. Please visit those sites for "
+"details of each agreement."
 msgstr ""
-"DVDStyler è <a href='http://www.gnu.org/philosophy/free-sw.html'>un software libero</a> distribuito sotto "
-"la <a href='http://www.gnu.org/copyleft/gpl.html'>Licenza Pubblica Generica (GPL)</a>. Per maggiori "
-"dettagli visita il relativo sito."
+"DVDStyler è <a href='http://www.gnu.org/philosophy/free-sw.html'>un software "
+"libero</a> distribuito sotto la <a href='http://www.gnu.org/copyleft/gpl."
+"html'>Licenza Pubblica Generica (GPL)</a>. <br> <br>Per maggiori dettagli "
+"visita i relativi siti."
 
 #: src/About.cpp:148
 msgid ""
-"THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT "
-"LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO "
-"EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER "
-"IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE "
-"USE OR OTHER DEALINGS IN THE SOFTWARE."
+"THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR "
+"IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, "
+"FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE "
+"AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER "
+"LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING "
+"FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS "
+"IN THE SOFTWARE."
 msgstr ""
-"IL SOFTWARE È FORNITO “COSÌ COM'È”, SENZA GARANZIA DI ALCUN GENERE, ESPRESSA O IMPLICITA, INCLUDENDO E "
-"SENZA ESSERE LIMITATO ALLE GARANZIE DI POTER ESSERE VENDUTO, L'IDONEITÀ A UN PARTICOLARE FINE E LA NON "
-"VIOLAZIONE DEI DIRITTI ALTRUI. \n"
-"IN NESSUN CASO GLI AUTORI O I DETENTORI DEL COPYRIGHT SARANNO RESPONSABILI PER QUALSIASI RECLAMO, DANNO O "
-"ALTRA RESPONSABILITÀ, SIA IN FORZA DEL CONTRATTO, IN SITUAZIONE NON CONTEMPLATE NEL CONTRATTO O ALTRO, CHE "
-"NASCA DA, AL DI FUORI O IN RIFERIMENTO AL SOFTWARE O ALL'USO O AD ALTRE QUESTIONI RIGUARDANTI IL SOFTWARE."
+"IL SOFTWARE È FORNITO “COSÌ COM'È”, SENZA GARANZIA DI ALCUN GENERE, ESPRESSA "
+"O IMPLICITA, INCLUDENDO E SENZA ESSERE LIMITATO ALLE GARANZIE DI POTER "
+"ESSERE VENDUTO, L'IDONEITÀ A UN PARTICOLARE FINE E LA NON VIOLAZIONE DEI "
+"DIRITTI ALTRUI. <br>IN NESSUN CASO GLI AUTORI O I DETENTORI DEL COPYRIGHT "
+"SARANNO RESPONSABILI PER QUALSIASI RECLAMO, DANNO O ALTRA RESPONSABILITÀ, "
+"SIA IN FORZA DEL CONTRATTO, IN SITUAZIONE NON CONTEMPLATE NEL CONTRATTO O "
+"ALTRO, CHE NASCA DA, AL DI FUORI O IN RIFERIMENTO AL SOFTWARE O ALL'USO O AD "
+"ALTRE QUESTIONI RIGUARDANTI IL SOFTWARE."
 
 #: src/About.cpp:157
 msgid "Licence"
@@ -193,8 +203,8 @@ msgstr "Proprietà audio"
 msgid "File Name:"
 msgstr "Nome file:"
 
-#: src/AudioPropDlg.cpp:87 src/TitlePropDlg.cpp:196 src/VideoFrameDlg.cpp:77 src/VideoPropDlg.cpp:114
-#: src/VobListBox.cpp:109
+#: src/AudioPropDlg.cpp:87 src/TitlePropDlg.cpp:196 src/VideoFrameDlg.cpp:77
+#: src/VideoPropDlg.cpp:114 src/VobListBox.cpp:109
 msgid "Duration:"
 msgstr "Durata:"
 
@@ -212,7 +222,7 @@ msgstr "5.1"
 
 #: src/AudioPropDlg.cpp:104 src/SettingsDlg.cpp:77 src/SubtitlePropDlg.cpp:107
 msgid "Language:"
-msgstr "Lingua:"
+msgstr "Lingua interfaccia:"
 
 #: src/AudioPropDlg.cpp:108
 msgid "Time delay:"
@@ -268,16 +278,21 @@ msgstr "Valore volume '%s' non valido"
 msgid "Analysis of audio"
 msgstr "Analisi dell'audio"
 
-#: src/AudioPropDlg.cpp:395 src/MainWin.cpp:872 src/SysUtils.cpp:303 src/VobListBox.cpp:655
+#: src/AudioPropDlg.cpp:395 src/MainWin.cpp:872 src/SysUtils.cpp:303
+#: src/VobListBox.cpp:655
 msgid "Please wait..."
 msgstr "Attendi..."
 
-#: src/BurnDlg.cpp:104 src/BurnDlg.cpp:459 src/BurnDlg.cpp:466 src/BurnDlg.cpp:588 src/BurnDlg.cpp:595
-#: src/BurnDlg.cpp:601 src/BurnDlg.cpp:608 src/BurnDlg.cpp:615 src/BurnDlg.cpp:620 src/BurnDlg.cpp:627
-#: src/BurnDlg.cpp:632 src/BurnDlg.cpp:638 src/BurnDlg.cpp:644 src/BurnDlg.cpp:657 src/BurnDlg.cpp:660
-#: src/MainWin.cpp:1073 src/MainWin.cpp:1094 src/MainWin.cpp:1099 src/ProcessBurn.cpp:68
-#: src/ProcessBurn.cpp:86 src/ProcessBurn.cpp:128 src/ProcessFormatDvd.cpp:44 src/ProcessFormatDvd.cpp:53
-#: src/ProcessPreview.cpp:45 src/ProcessPreview.cpp:53 src/ProcessPreview.cpp:61 src/ProcessPreview.cpp:82
+#: src/BurnDlg.cpp:104 src/BurnDlg.cpp:459 src/BurnDlg.cpp:466
+#: src/BurnDlg.cpp:588 src/BurnDlg.cpp:595 src/BurnDlg.cpp:601
+#: src/BurnDlg.cpp:608 src/BurnDlg.cpp:615 src/BurnDlg.cpp:620
+#: src/BurnDlg.cpp:627 src/BurnDlg.cpp:632 src/BurnDlg.cpp:638
+#: src/BurnDlg.cpp:644 src/BurnDlg.cpp:657 src/BurnDlg.cpp:660
+#: src/MainWin.cpp:1073 src/MainWin.cpp:1094 src/MainWin.cpp:1099
+#: src/ProcessBurn.cpp:68 src/ProcessBurn.cpp:86 src/ProcessBurn.cpp:128
+#: src/ProcessFormatDvd.cpp:44 src/ProcessFormatDvd.cpp:53
+#: src/ProcessPreview.cpp:45 src/ProcessPreview.cpp:53
+#: src/ProcessPreview.cpp:61 src/ProcessPreview.cpp:82
 #: src/ProcessPreview.cpp:87 src/TitlesetManager.cpp:467
 msgid "Burn"
 msgstr "Masterizza"
@@ -286,8 +301,9 @@ msgstr "Masterizza"
 msgid "Temp directory:"
 msgstr "Cartella temporanea:"
 
-#: src/BurnDlg.cpp:114 src/BurnDlg.cpp:138 src/BurnDlg.cpp:160 src/BurnDlg.cpp:186 src/SubtitlePropDlg.cpp:148
-#: src/SubtitlePropDlg.cpp:161 src/SubtitlePropDlg.cpp:179
+#: src/BurnDlg.cpp:114 src/BurnDlg.cpp:138 src/BurnDlg.cpp:160
+#: src/BurnDlg.cpp:186 src/SubtitlePropDlg.cpp:148 src/SubtitlePropDlg.cpp:161
+#: src/SubtitlePropDlg.cpp:179
 msgid "..."
 msgstr "..."
 
@@ -343,7 +359,8 @@ msgstr "aggiungi dati correzione errore"
 msgid "Start"
 msgstr "Inizio"
 
-#: src/BurnDlg.cpp:229 src/SubtitlePropDlg.cpp:244 src/VideoFrameDlg.cpp:75 wxVillaLib/PropDlg.cpp:229
+#: src/BurnDlg.cpp:229 src/SubtitlePropDlg.cpp:244 src/VideoFrameDlg.cpp:75
+#: wxVillaLib/PropDlg.cpp:229
 msgid "Reset"
 msgstr "Ripristina"
 
@@ -363,7 +380,8 @@ msgstr "Riproduttore video personalizzato"
 msgid "N/A"
 msgstr "N/D"
 
-#: src/BurnDlg.cpp:401 src/BurnDlg.cpp:436 src/BurnDlg.cpp:437 src/BurnDlg.cpp:438
+#: src/BurnDlg.cpp:401 src/BurnDlg.cpp:436 src/BurnDlg.cpp:437
+#: src/BurnDlg.cpp:438
 msgid "GB"
 msgstr "GB"
 
@@ -379,8 +397,8 @@ msgstr "Non c'è abbastanza spazio nella cartella temporanea."
 msgid "Choose a directory"
 msgstr "Seleziona una cartella"
 
-#: src/BurnDlg.cpp:536 src/MainWin.cpp:1218 src/TitlePropDlg.cpp:423 src/TitlePropDlg.cpp:439
-#: wxVillaLib/PropDlg.cpp:815
+#: src/BurnDlg.cpp:536 src/MainWin.cpp:1218 src/TitlePropDlg.cpp:423
+#: src/TitlePropDlg.cpp:439 wxVillaLib/PropDlg.cpp:815
 msgid "Choose a file"
 msgstr "Scegli un file"
 
@@ -388,9 +406,9 @@ msgstr "Scegli un file"
 msgid "Programs"
 msgstr "Programmi"
 
-#: src/BurnDlg.cpp:538 src/MainWin.cpp:1052 src/MainWin.cpp:1213 src/MainWin.cpp:1217
-#: src/MenuObjectPropDlg.cpp:458 src/MenuPropDlg.cpp:141 src/MenuPropDlg.cpp:155 src/TitlePropDlg.cpp:235
-#: src/TitlePropDlg.cpp:425
+#: src/BurnDlg.cpp:538 src/MainWin.cpp:1052 src/MainWin.cpp:1213
+#: src/MainWin.cpp:1217 src/MenuObjectPropDlg.cpp:458 src/MenuPropDlg.cpp:141
+#: src/MenuPropDlg.cpp:155 src/TitlePropDlg.cpp:235 src/TitlePropDlg.cpp:425
 msgid "All Files"
 msgstr "Tutti i file"
 
@@ -403,16 +421,19 @@ msgid "Please enter output directory"
 msgstr "Inserisci la cartella destinazione"
 
 #: src/BurnDlg.cpp:594
-msgid "Output directory contains files. Please choose another output directory."
-msgstr "La cartella destinazione contiene file. Scegli un'altra cartella destinazione."
+msgid ""
+"Output directory contains files. Please choose another output directory."
+msgstr ""
+"La cartella destinazione contiene file. Scegli un'altra cartella "
+"destinazione."
 
 #: src/BurnDlg.cpp:600
 #, c-format
 msgid "Directory '%s' already exist. Do you want to overwrite it?"
-msgstr "La cartella \"%s\" esiste già. Vuoi sovrascriverla?"
+msgstr "La cartella '%s' esiste già. Vuoi sovrascriverla?"
 
-#: src/BurnDlg.cpp:608 src/BurnDlg.cpp:660 src/ProcessCleanTemp.cpp:43 src/ProcessCleanTemp.cpp:47
-#: src/ProcessCleanTemp.cpp:51
+#: src/BurnDlg.cpp:608 src/BurnDlg.cpp:660 src/ProcessCleanTemp.cpp:43
+#: src/ProcessCleanTemp.cpp:47 src/ProcessCleanTemp.cpp:51
 #, c-format
 msgid "Can't create directory '%s'"
 msgstr "Impossibile creare la cartella '%s'"
@@ -432,7 +453,7 @@ msgstr "Inserisci il nome del file ISO da salvare"
 #: src/BurnDlg.cpp:631 src/ButtonEditDlg.cpp:627
 #, c-format
 msgid "File '%s' already exist. Do you want to overwrite it?"
-msgstr "Il file \"%s\" esiste già. Vuoi sovrascriverlo?"
+msgstr "Il file '%s' esiste già. Vuoi sovrascriverlo?"
 
 #: src/BurnDlg.cpp:638
 msgid "Please enter device name"
@@ -471,13 +492,15 @@ msgstr "Attributo:"
 msgid "fill"
 msgstr "riempi"
 
-#: src/ButtonAddParamDlg.cpp:67 src/ButtonAddParamDlg.cpp:72 src/ButtonAddParamDlg.cpp:77
-#: src/MenuEditor.cpp:548 buttons/arrow-text-left.xml:8 buttons/arrow-text-left.xml:12
-#: buttons/arrow-text-right.xml:8 buttons/arrow-text-right.xml:13 buttons/frame-text.xml:25
-#: buttons/frame-text.xml:70 buttons/pill-opacity.xml:14 buttons/pill-opacity.xml:64
-#: buttons/pill-stroke.xml:14 buttons/pill-stroke.xml:73 buttons/pill2.xml:24 buttons/pill2.xml:36
-#: buttons/pill3.xml:17 buttons/pill3.xml:29 buttons/text-v3.xml:3 objects/text-v2.xml:3
-#: objects/text-v2.xml:19
+#: src/ButtonAddParamDlg.cpp:67 src/ButtonAddParamDlg.cpp:72
+#: src/ButtonAddParamDlg.cpp:77 src/MenuEditor.cpp:548
+#: buttons/arrow-text-left.xml:8 buttons/arrow-text-left.xml:12
+#: buttons/arrow-text-right.xml:8 buttons/arrow-text-right.xml:13
+#: buttons/frame-text.xml:25 buttons/frame-text.xml:70
+#: buttons/pill-opacity.xml:14 buttons/pill-opacity.xml:64
+#: buttons/pill-stroke.xml:14 buttons/pill-stroke.xml:73 buttons/pill2.xml:24
+#: buttons/pill2.xml:36 buttons/pill3.xml:17 buttons/pill3.xml:29
+#: buttons/text-v3.xml:3 objects/text-v2.xml:3 objects/text-v2.xml:19
 msgid "Text"
 msgstr "Testo"
 
@@ -493,7 +516,8 @@ msgstr "larghezza tratto"
 msgid "name"
 msgstr "nome"
 
-#: src/ButtonEditDlg.cpp:184 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:439 src/MenuObjectPropDlg.cpp:679
+#: src/ButtonEditDlg.cpp:184 src/DVDAction.cpp:184
+#: src/MenuObjectPropDlg.cpp:439 src/MenuObjectPropDlg.cpp:679
 #: src/MenuObjectPropDlg.cpp:688 src/MenuObjectPropDlg.cpp:700
 msgid "title"
 msgstr "titolo"
@@ -542,8 +566,9 @@ msgstr "Stato pulasnti"
 msgid "Directory:"
 msgstr "Cartella:"
 
-#: src/ButtonEditDlg.cpp:287 buttons/circle-outline.xml:16 buttons/circle.xml:15 buttons/pill.xml:44
-#: buttons/text-circle-v2.xml:19 buttons/text-square-v2.xml:20 buttons/text-underlined-v3.xml:19
+#: src/ButtonEditDlg.cpp:287 buttons/circle-outline.xml:16
+#: buttons/circle.xml:15 buttons/pill.xml:44 buttons/text-circle-v2.xml:19
+#: buttons/text-square-v2.xml:20 buttons/text-underlined-v3.xml:19
 #: buttons/text-v3.xml:19
 msgid "Label"
 msgstr "Etichetta"
@@ -564,17 +589,22 @@ msgstr "Titolo:"
 msgid "Default width:"
 msgstr "Larghezza predefinita:"
 
-#: src/ButtonEditDlg.cpp:307 src/ButtonEditDlg.cpp:330 src/ButtonEditDlg.cpp:354 src/ButtonEditDlg.cpp:377
+#: src/ButtonEditDlg.cpp:307 src/ButtonEditDlg.cpp:330
+#: src/ButtonEditDlg.cpp:354 src/ButtonEditDlg.cpp:377
 msgid "or"
 msgstr "or"
 
-#: src/ButtonEditDlg.cpp:311 src/ButtonEditDlg.cpp:316 src/ButtonEditDlg.cpp:334 src/ButtonEditDlg.cpp:339
-#: src/ButtonEditDlg.cpp:358 src/ButtonEditDlg.cpp:363 src/ButtonEditDlg.cpp:381 src/ButtonEditDlg.cpp:386
+#: src/ButtonEditDlg.cpp:311 src/ButtonEditDlg.cpp:316
+#: src/ButtonEditDlg.cpp:334 src/ButtonEditDlg.cpp:339
+#: src/ButtonEditDlg.cpp:358 src/ButtonEditDlg.cpp:363
+#: src/ButtonEditDlg.cpp:381 src/ButtonEditDlg.cpp:386
 msgid "+"
 msgstr "+"
 
-#: src/ButtonEditDlg.cpp:321 src/ButtonEditDlg.cpp:344 src/ButtonEditDlg.cpp:368 src/ButtonEditDlg.cpp:391
-#: src/SubtitlePropDlg.cpp:153 src/SubtitlePropDlg.cpp:167 src/SubtitlePropDlg.cpp:184
+#: src/ButtonEditDlg.cpp:321 src/ButtonEditDlg.cpp:344
+#: src/ButtonEditDlg.cpp:368 src/ButtonEditDlg.cpp:391
+#: src/SubtitlePropDlg.cpp:153 src/SubtitlePropDlg.cpp:167
+#: src/SubtitlePropDlg.cpp:184
 msgid "%"
 msgstr "%"
 
@@ -626,11 +656,12 @@ msgstr ""
 "Fai clic sull'immagine per selezionare un \n"
 "elemento SVG per un nuovo parametro"
 
-#: src/Cache.cpp:238 src/Cache.cpp:263 src/Process.cpp:25 src/ProcessMenuTransitions.cpp:121
-#: src/ProcessTranscode.cpp:195 src/ProcessTranscode.cpp:211
+#: src/Cache.cpp:238 src/Cache.cpp:263 src/Process.cpp:25
+#: src/ProcessMenuTransitions.cpp:121 src/ProcessTranscode.cpp:195
+#: src/ProcessTranscode.cpp:211
 #, c-format
 msgid "Can't remove file '%s'"
-msgstr "Impossibile rimuovere il file \"%s\""
+msgstr "Impossibile rimuovere il file '%s'"
 
 #: src/Cache.cpp:372
 #, c-format
@@ -663,12 +694,13 @@ msgstr "Tempo:"
 msgid "Type:"
 msgstr "Tipo:"
 
-#: src/ChaptersDlg.cpp:145 src/MenuCellsDlg.cpp:44 src/MenuCellsDlg.cpp:64 src/MenuCellsDlg.cpp:195
-#: src/MenuPropDlg.cpp:216
+#: src/ChaptersDlg.cpp:145 src/MenuCellsDlg.cpp:44 src/MenuCellsDlg.cpp:64
+#: src/MenuCellsDlg.cpp:195 src/MenuPropDlg.cpp:216
 msgid "Chapter"
 msgstr "Capitolo"
 
-#: src/ChaptersDlg.cpp:147 src/MenuCellsDlg.cpp:44 src/MenuCellsDlg.cpp:65 src/MenuCellsDlg.cpp:195
+#: src/ChaptersDlg.cpp:147 src/MenuCellsDlg.cpp:44 src/MenuCellsDlg.cpp:65
+#: src/MenuCellsDlg.cpp:195
 msgid "Program"
 msgstr "Programma"
 
@@ -680,22 +712,24 @@ msgstr "Cella normale"
 msgid "End:"
 msgstr "Fine:"
 
-#: src/ChaptersDlg.cpp:156 src/DVD.cpp:966 src/DVD.cpp:1003 src/MenuPropDlg.cpp:195
+#: src/ChaptersDlg.cpp:156 src/DVD.cpp:966 src/DVD.cpp:1003
+#: src/MenuPropDlg.cpp:195
 msgid "Auto"
 msgstr "Auto"
 
-#: src/ChaptersDlg.cpp:157 src/DVD.cpp:1006 src/MenuObjectPropDlg.cpp:161 src/MenuObjectPropDlg.cpp:559
-#: src/SettingsDlg.cpp:181
+#: src/ChaptersDlg.cpp:157 src/DVD.cpp:1006 src/MenuObjectPropDlg.cpp:161
+#: src/MenuObjectPropDlg.cpp:559 src/SettingsDlg.cpp:181
 msgid "Custom"
-msgstr "Personalizzato"
+msgstr "Personalizzata"
 
 #: src/ChaptersDlg.cpp:169 src/MenuPropDlg.cpp:171 src/TitlePropDlg.cpp:150
 msgid "Pause:"
 msgstr "Pausa:"
 
-#: src/ChaptersDlg.cpp:174 src/MainWin.cpp:621 src/MenuPropDlg.cpp:171 src/SettingsDlg.cpp:167
-#: src/SettingsDlg.cpp:169 src/TitlePropDlg.cpp:150 src/TitlePropDlg.cpp:196 src/VideoFrameDlg.cpp:82
-#: src/VideoPropDlg.cpp:190 src/VideoPropDlg.cpp:195
+#: src/ChaptersDlg.cpp:174 src/MainWin.cpp:621 src/MenuPropDlg.cpp:171
+#: src/SettingsDlg.cpp:167 src/SettingsDlg.cpp:169 src/TitlePropDlg.cpp:150
+#: src/TitlePropDlg.cpp:196 src/VideoFrameDlg.cpp:82 src/VideoPropDlg.cpp:190
+#: src/VideoPropDlg.cpp:195
 msgid "sec"
 msgstr "sec"
 
@@ -710,13 +744,14 @@ msgstr "Crea una cella all'inizio se non esiste"
 #: src/ChaptersDlg.cpp:445 src/ChaptersDlg.cpp:450
 #, c-format
 msgid "'%s' is not valid time"
-msgstr "\"%s\" non è un tempo valido"
+msgstr "'%s' non è un tempo valido"
 
 #: src/ChaptersDlg.cpp:455
 msgid "Start time cannot be after end time"
 msgstr "Il tempo iniziale non può andare oltre la fine"
 
-#: src/DirCtrl.cpp:24 src/MainWin.cpp:276 src/MainWin.cpp:283 src/MainWin.cpp:286
+#: src/DirCtrl.cpp:24 src/MainWin.cpp:276 src/MainWin.cpp:283
+#: src/MainWin.cpp:286
 msgid "&Refresh"
 msgstr "&Aggiorna"
 
@@ -725,8 +760,11 @@ msgid "Wide screen DVD menu can contain maximal 12 buttons"
 msgstr "Il menu 16:9 del DVD può contenere al massimo 12 pulsanti"
 
 #: src/DVD.cpp:273 src/Menu.cpp:1143 src/MenuEditor.cpp:467
-msgid "Wide screen DVD menu (nopanscan/noletterbox) can contain maximal 18 buttons"
-msgstr "Il menu dei DVD 16:9 (no panscan/no letterbox) può contenere al massimo 18 pulsanti"
+msgid ""
+"Wide screen DVD menu (nopanscan/noletterbox) can contain maximal 18 buttons"
+msgstr ""
+"Il menu dei DVD 16:9 (no panscan/no letterbox) può contenere al massimo 18 "
+"pulsanti"
 
 #: src/DVD.cpp:277 src/Menu.cpp:1147 src/MenuEditor.cpp:471
 msgid "DVD menu can contain maximal 34 buttons"
@@ -736,17 +774,17 @@ msgstr "Il menu del DVD può contenere al massimo 34 pulsanti"
 msgid "Some actions are invalid. Please click 'Details' for more information."
 msgstr ""
 "Qualche parametro è errato. \n"
-"Per ulteriori informazioni seleziona \"Dettagli\"."
+"Per ulteriori informazioni seleziona 'Dettagli'."
 
 #: src/DVD.cpp:486 src/MenuObjectDef.cpp:194
 #, c-format
 msgid "Cannot open file '%s'."
-msgstr "Impossibile aprire il file \"%s\"."
+msgstr "Impossibile aprire il file '%s'."
 
 #: src/DVD.cpp:492
 #, c-format
 msgid "'%s' is not a DVDStyler project file"
-msgstr "\"%s\" non è un progetto DVDStyler"
+msgstr "'%s' non è un progetto DVDStyler"
 
 #: src/DVD.cpp:590
 msgid "Can't load vmgm menus"
@@ -814,15 +852,15 @@ msgstr "DVD-9 (8.5 GB)"
 
 #: src/DVD.cpp:988
 msgid "Unlimited"
-msgstr "Illimitato"
+msgstr "Illimitata"
 
 #: src/DVD.cpp:995
 msgid "Call last menu"
-msgstr "Chiama l'ultimo menu"
+msgstr "Vai all'ultimo menu"
 
 #: src/DVD.cpp:996
 msgid "Call root menu"
-msgstr "Chiama il menu principale"
+msgstr "Vai al menu principale"
 
 #: src/DVD.cpp:997
 msgid "Play next title"
@@ -876,7 +914,8 @@ msgstr "salta al menu angolo"
 msgid "jump to chapter menu"
 msgstr "salta al menu capitolo"
 
-#: src/DVDAction.cpp:75 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:649 src/MenuObjectPropDlg.cpp:669
+#: src/DVDAction.cpp:75 src/DVDAction.cpp:184 src/MenuObjectPropDlg.cpp:649
+#: src/MenuObjectPropDlg.cpp:669
 msgid "menu"
 msgstr "menu"
 
@@ -897,8 +936,9 @@ msgstr "salta al titolo %d capitolo %d"
 msgid "jump to title"
 msgstr "salta al titolo"
 
-#: src/DVDAction.cpp:183 src/MenuObjectPropDlg.cpp:441 src/MenuObjectPropDlg.cpp:662
-#: src/MenuObjectPropDlg.cpp:671 src/MenuObjectPropDlg.cpp:681 src/MenuObjectPropDlg.cpp:690
+#: src/DVDAction.cpp:183 src/MenuObjectPropDlg.cpp:441
+#: src/MenuObjectPropDlg.cpp:662 src/MenuObjectPropDlg.cpp:671
+#: src/MenuObjectPropDlg.cpp:681 src/MenuObjectPropDlg.cpp:690
 #: src/MenuObjectPropDlg.cpp:699
 msgid "titleset"
 msgstr "set titoli"
@@ -974,14 +1014,20 @@ msgid "cannot jump to chapter %d of title %d, only %d exist"
 msgstr "impossibile saltare al capitolo %d del titolo %d, esiste solo %d"
 
 #: src/DVDAction.cpp:253
-msgid "cannot jump to a specific menu in another titleset, only to root/chapter/audio/subtitle/angle menu"
+msgid ""
+"cannot jump to a specific menu in another titleset, only to root/chapter/"
+"audio/subtitle/angle menu"
 msgstr ""
-"impossibile saltare al menu sepecificato in un altro titolo, solo nel menu principale/capitolo/audio/"
-"sottotitoli/angolo"
+"impossibile saltare al menu sepecificato in un altro titolo, solo nel menu "
+"principale/capitolo/audio/sottotitoli/angolo"
 
 #: src/DVDAction.cpp:256
-msgid "cannot jump from regular menu to a title in another titleset, use VMGM menu instead"
-msgstr "impossibile saltare al menu regolare da un titolo ad un altro, usa al suo posto VMGM Menu"
+msgid ""
+"cannot jump from regular menu to a title in another titleset, use VMGM menu "
+"instead"
+msgstr ""
+"impossibile saltare al menu regolare da un titolo ad un altro, usa al suo "
+"posto VMGM Menu"
 
 #: src/DVDAction.cpp:258
 msgid "cannot jump to a title in another titleset"
@@ -993,7 +1039,8 @@ msgstr "azione non valida"
 
 #: src/DVDAction.cpp:280 src/DVDAction.cpp:371
 msgid "cannot jump to a menu from a title, use 'call' instead"
-msgstr "impossibile saltare ad un menu da un titolo, usa al suo posto \"chiama\""
+msgstr ""
+"impossibile saltare ad un menu da un titolo, usa al suo posto 'richiama'"
 
 #: src/DVDAction.cpp:287 src/DVDAction.cpp:403
 msgid "chapter"
@@ -1015,7 +1062,7 @@ msgstr "salto non consentito dal menu VMGM a %s"
 #: src/DVDAction.cpp:320
 #, c-format
 msgid "on token '%s'"
-msgstr "sul gettone \"%s\""
+msgstr "sul gettone '%s'"
 
 #: src/DVDAction.cpp:336
 msgid "0 is not valid menu/chapter number"
@@ -1064,15 +1111,15 @@ msgstr "impossibile saltare al capitolo %d, esiste solo %d"
 
 #: src/DVDAction.cpp:455
 msgid "cannot 'call' a menu from another menu, use 'jump' instead"
-msgstr "impossibile \"chiamare\" un menu da un altro menu, usare invece un \"salto\""
+msgstr "impossibile 'chiamare' un menu da un altro menu, usa invece un 'salto'"
 
 #: src/DVDAction.cpp:459
 msgid "cannot 'call' another title, use 'jump' instead"
-msgstr "impossibile \"chiamare\" un altro titolo, usare invece un \"salto\""
+msgstr "impossibile 'chiamare' un altro titolo, usa invece un 'salto'"
 
 #: src/DVDAction.cpp:463
 msgid "cannot 'call' a chapter within a menu"
-msgstr "impossibile \"chiamare\" un capitolo dentro un menu"
+msgstr "impossibile 'chiamare' un capitolo dentro un menu"
 
 #: src/DVDAction.cpp:473
 msgid "cannot call to a menu in another titleset"
@@ -1095,7 +1142,7 @@ msgstr "opcode VM %d non supportato"
 #: src/DVDAction.cpp:577
 #, c-format
 msgid "invalid action '%s'"
-msgstr "azione \"%s\" non valida"
+msgstr "azione '%s' non valida"
 
 #: src/DVDPropDlg.cpp:29
 msgid "First Play Commands:"
@@ -1185,15 +1232,18 @@ msgstr "&Ripristina\tCtrl-Y"
 msgid "&Edit"
 msgstr "&Modifica"
 
-#: src/MainWin.cpp:190 src/MainWin.cpp:333 src/TitlesetManager.cpp:146 src/TitlesetManager.cpp:167
+#: src/MainWin.cpp:190 src/MainWin.cpp:333 src/TitlesetManager.cpp:146
+#: src/TitlesetManager.cpp:167
 msgid "&File..."
 msgstr "&File..."
 
-#: src/MainWin.cpp:191 src/MainWin.cpp:334 src/TitlesetManager.cpp:147 src/TitlesetManager.cpp:168
+#: src/MainWin.cpp:191 src/MainWin.cpp:334 src/TitlesetManager.cpp:147
+#: src/TitlesetManager.cpp:168
 msgid "File as &chapter..."
 msgstr "File come &capitolo..."
 
-#: src/MainWin.cpp:192 src/MainWin.cpp:335 src/TitlesetManager.cpp:148 src/TitlesetManager.cpp:169
+#: src/MainWin.cpp:192 src/MainWin.cpp:335 src/TitlesetManager.cpp:148
+#: src/TitlesetManager.cpp:169
 msgid "Titles from &DVD..."
 msgstr "Titoli dal &DVD..."
 
@@ -1213,8 +1263,8 @@ msgstr "Menu &VMGM"
 msgid "&Titleset"
 msgstr "&Titolo"
 
-#: src/MainWin.cpp:197 src/MenuEditor.cpp:360 src/MenuEditor.cpp:382 src/TitlesetManager.cpp:155
-#: src/TitlesetManager.cpp:176
+#: src/MainWin.cpp:197 src/MenuEditor.cpp:360 src/MenuEditor.cpp:382
+#: src/TitlesetManager.cpp:155 src/TitlesetManager.cpp:176
 msgid "&Add"
 msgstr "&Aggiungi"
 
@@ -1262,7 +1312,8 @@ msgstr "&Imposta come sfondo"
 msgid "&Play"
 msgstr "&Riproduci"
 
-#: src/MainWin.cpp:274 src/MenuEditor.cpp:374 src/TitlesetManager.cpp:184 wxVillaLib/PropDlg.cpp:670
+#: src/MainWin.cpp:274 src/MenuEditor.cpp:374 src/TitlesetManager.cpp:184
+#: wxVillaLib/PropDlg.cpp:670
 msgid "&Delete"
 msgstr "&Elimina"
 
@@ -1306,13 +1357,16 @@ msgstr "Esplora file"
 msgid "Backgrounds"
 msgstr "Sfondi"
 
-#: src/MainWin.cpp:358 src/MainWin.cpp:367 src/MainWin.cpp:530 src/MenuPropDlg.cpp:182
+#: src/MainWin.cpp:358 src/MainWin.cpp:367 src/MainWin.cpp:530
+#: src/MenuPropDlg.cpp:182
 msgid "Buttons"
 msgstr "Pulsanti"
 
-#: src/MainWin.cpp:522 src/MainWin.cpp:1371 src/MainWin.cpp:1393 src/MenuObject.cpp:266
-#: src/MenuObjectPropDlg.cpp:265 src/MenuObjectPropDlg.cpp:280 buttons/text-circle-v2.xml:13
-#: buttons/text-square-v2.xml:14 buttons/text-underlined-v3.xml:12 buttons/text-v3.xml:13
+#: src/MainWin.cpp:522 src/MainWin.cpp:1371 src/MainWin.cpp:1393
+#: src/MenuObject.cpp:266 src/MenuObjectPropDlg.cpp:265
+#: src/MenuObjectPropDlg.cpp:280 buttons/text-circle-v2.xml:13
+#: buttons/text-square-v2.xml:14 buttons/text-underlined-v3.xml:12
+#: buttons/text-v3.xml:13
 msgid "button"
 msgstr "pulsante"
 
@@ -1347,7 +1401,10 @@ msgstr "min"
 #: src/MainWin.cpp:700
 #, c-format
 msgid "Are you sure you want to delete '%s' from the file system?"
-msgstr "Sei sicuro di voler eliminare \"%s\" dal disco?"
+msgstr ""
+"Sei sicuro di voler eliminare dal disco\n"
+"\n"
+"'%s'?"
 
 #: src/MainWin.cpp:801
 msgid "Select chapter"
@@ -1393,7 +1450,12 @@ msgstr "Senza titolo"
 #: src/MainWin.cpp:1008
 #, c-format
 msgid "The file '%s' was modified, save changes?"
-msgstr "Il file \"%s\" è stato modificato, vuoi salvarlo?"
+msgstr ""
+"Il file \n"
+"\n"
+"'%s' \n"
+"\n"
+"è stato modificato. Vuoi salvarlo?"
 
 #: src/MainWin.cpp:1050
 msgid "Save a DVDStyler project file"
@@ -1422,13 +1484,15 @@ msgid ""
 "please drag a video file into the bottom section of the window."
 msgstr ""
 "Il titolo %d non contiene alcun titolo video. \n"
-"Per aggiungere un titolo trascina un file video nella sezione bassa della finestra."
+"Per aggiungere un titolo trascina un file video nella sezione bassa della "
+"finestra."
 
 #: src/MainWin.cpp:1207
 msgid "Audio/Video/Subtitle Files"
 msgstr "File audio/video/sottotitoli"
 
-#: src/MainWin.cpp:1209 src/MenuPropDlg.cpp:154 src/TitlePropDlg.cpp:234 src/TitlePropDlg.cpp:441
+#: src/MainWin.cpp:1209 src/MenuPropDlg.cpp:154 src/TitlePropDlg.cpp:234
+#: src/TitlePropDlg.cpp:441
 msgid "Audio Files"
 msgstr "File audio"
 
@@ -1496,7 +1560,7 @@ msgstr "Azioni:"
 #: src/MenuActionsDlg.cpp:220
 #, c-format
 msgid "Duplicated action ID '%s'."
-msgstr "ID azione \"%s\" duplicata."
+msgstr "ID azione '%s' duplicata."
 
 #: src/MenuCellsDlg.cpp:44 src/MenuCellsDlg.cpp:195
 msgid "Regular"
@@ -1623,7 +1687,8 @@ msgstr "Tagli&a"
 msgid "&Copy"
 msgstr "&Copia"
 
-#: src/MenuEditor.cpp:371 src/MenuEditor.cpp:385 src/TitlesetManager.cpp:156 src/TitlesetManager.cpp:181
+#: src/MenuEditor.cpp:371 src/MenuEditor.cpp:385 src/TitlesetManager.cpp:156
+#: src/TitlesetManager.cpp:181
 msgid "&Paste"
 msgstr "&Incolla"
 
@@ -1666,7 +1731,8 @@ msgstr "Inserisci testo"
 msgid "Please choose an image to insert"
 msgstr "Scegli un'immagine da inserire"
 
-#: src/MenuEditor.cpp:546 src/MenuObjectPropDlg.cpp:457 src/MenuPropDlg.cpp:140 src/TitlePropDlg.cpp:424
+#: src/MenuEditor.cpp:546 src/MenuObjectPropDlg.cpp:457 src/MenuPropDlg.cpp:140
+#: src/TitlePropDlg.cpp:424
 msgid "Image Files "
 msgstr "File immagine "
 
@@ -1677,7 +1743,7 @@ msgstr "oggetto"
 #: src/MenuObject.cpp:820 src/MenuObject.cpp:829
 #, c-format
 msgid "can't open file '%s'"
-msgstr "impossibile aprire il file \"%s\""
+msgstr "impossibile aprire il file '%s'"
 
 #: src/MenuObjectPropDlg.cpp:65 src/MenuPropDlg.cpp:49 src/TitlePropDlg.cpp:68
 msgid "Properties"
@@ -1711,11 +1777,13 @@ msgstr "ultimo selezionato"
 msgid "track"
 msgstr "traccia"
 
-#: src/MenuObjectPropDlg.cpp:176 src/MenuPropDlg.cpp:217 src/TitlePropDlg.cpp:254
+#: src/MenuObjectPropDlg.cpp:176 src/MenuPropDlg.cpp:217
+#: src/TitlePropDlg.cpp:254
 msgid "Audio"
 msgstr "Audio"
 
-#: src/MenuObjectPropDlg.cpp:183 src/MenuObjectPropDlg.cpp:200 src/NewProjectDlg.cpp:134
+#: src/MenuObjectPropDlg.cpp:183 src/MenuObjectPropDlg.cpp:200
+#: src/NewProjectDlg.cpp:134
 msgid "Warning"
 msgstr "Attenzione"
 
@@ -1751,9 +1819,10 @@ msgstr "Aspetto"
 msgid "none"
 msgstr "nessuno"
 
-#: src/MenuObjectPropDlg.cpp:267 src/MenuPropDlg.cpp:126 src/SettingsDlg.cpp:278 src/VideoPropDlg.cpp:134
+#: src/MenuObjectPropDlg.cpp:267 src/MenuPropDlg.cpp:126
+#: src/SettingsDlg.cpp:278 src/VideoPropDlg.cpp:134
 msgid "auto"
-msgstr "auto"
+msgstr "automatico"
 
 #: src/MenuObjectPropDlg.cpp:311
 msgid "Normal"
@@ -1771,7 +1840,8 @@ msgstr "Selezionato"
 msgid "Font..."
 msgstr "Font..."
 
-#: src/MenuObjectPropDlg.cpp:404 src/MenuObjectPropDlg.cpp:566 src/MenuPropDlg.cpp:81 src/VideoPropDlg.cpp:140
+#: src/MenuObjectPropDlg.cpp:404 src/MenuObjectPropDlg.cpp:566
+#: src/MenuPropDlg.cpp:81 src/VideoPropDlg.cpp:140
 msgid "Keep Aspect Ratio"
 msgstr "Mantieni le proporzioni"
 
@@ -1807,11 +1877,14 @@ msgstr "Unisci"
 msgid "Slice"
 msgstr "Dividi"
 
-#: src/MenuObjectPropDlg.cpp:455 buttons/dotted-frame.xml:25 buttons/ellipse-v2.xml:23
-#: buttons/frame-text.xml:30 buttons/frame-v2.xml:18 buttons/gold-frame.xml:49 buttons/maroon-frame.xml:50
-#: buttons/movie.xml:27 buttons/painting_frame.xml:40 buttons/star-frame.xml:35 buttons/sticky_note.xml:43
-#: objects/ellipse-v3.xml:22 objects/ellipse45.xml:24 objects/frame-v3.xml:18 objects/frame45.xml:20
-#: objects/gold-frame.xml:45 objects/image.xml:3 objects/image.xml:9 objects/sticky_note.xml:42
+#: src/MenuObjectPropDlg.cpp:455 buttons/dotted-frame.xml:25
+#: buttons/ellipse-v2.xml:23 buttons/frame-text.xml:30 buttons/frame-v2.xml:18
+#: buttons/gold-frame.xml:49 buttons/maroon-frame.xml:50 buttons/movie.xml:27
+#: buttons/painting_frame.xml:40 buttons/star-frame.xml:35
+#: buttons/sticky_note.xml:43 objects/ellipse-v3.xml:22
+#: objects/ellipse45.xml:24 objects/frame-v3.xml:18 objects/frame45.xml:20
+#: objects/gold-frame.xml:45 objects/image.xml:3 objects/image.xml:9
+#: objects/sticky_note.xml:42
 msgid "Image"
 msgstr "Immagine"
 
@@ -1839,10 +1912,12 @@ msgstr "X:"
 msgid "Y:"
 msgstr "Y:"
 
-#: src/MenuObjectPropDlg.cpp:551 buttons/arrow-blue.xml:26 buttons/arrow-cool.xml:17
-#: buttons/arrow-double.xml:13 buttons/arrow-gold.xml:26 buttons/arrow-green-double.xml:383
-#: buttons/arrow-green.xml:375 buttons/arrow-red.xml:29 buttons/arrow-simple-v2.xml:43
-#: buttons/arrow-star.xml:21 buttons/arrow.xml:42 buttons/arrow2.xml:25 buttons/arrow3.xml:19
+#: src/MenuObjectPropDlg.cpp:551 buttons/arrow-blue.xml:26
+#: buttons/arrow-cool.xml:17 buttons/arrow-double.xml:13
+#: buttons/arrow-gold.xml:26 buttons/arrow-green-double.xml:383
+#: buttons/arrow-green.xml:375 buttons/arrow-red.xml:29
+#: buttons/arrow-simple-v2.xml:43 buttons/arrow-star.xml:21
+#: buttons/arrow.xml:42 buttons/arrow2.xml:25 buttons/arrow3.xml:19
 #: buttons/gear.xml:86 buttons/star-frame.xml:28 objects/frame45.xml:34
 msgid "Rotation"
 msgstr "Rotazione"
@@ -1884,8 +1959,8 @@ msgstr "Inserisci il comando di azione."
 msgid "Titleset"
 msgstr "Insieme"
 
-#: src/MenuPropDlg.cpp:53 src/MenuPropDlg.cpp:206 src/TitlesetManager.cpp:331 src/TitlesetManager.cpp:1220
-#: buttons/pill.xml:26
+#: src/MenuPropDlg.cpp:53 src/MenuPropDlg.cpp:206 src/TitlesetManager.cpp:331
+#: src/TitlesetManager.cpp:1220 buttons/pill.xml:26
 msgid "Menu"
 msgstr "Menu"
 
@@ -1937,7 +2012,8 @@ msgstr "Sottotitolo"
 msgid "Angle"
 msgstr "Angolo"
 
-#: src/MenuPropDlg.cpp:221 src/TitlePropDlg.cpp:71 src/TitlePropDlg.cpp:263 src/TitlesetManager.cpp:331
+#: src/MenuPropDlg.cpp:221 src/TitlePropDlg.cpp:71 src/TitlePropDlg.cpp:263
+#: src/TitlesetManager.cpp:331
 msgid "Title"
 msgstr "Titolo"
 
@@ -1959,7 +2035,9 @@ msgstr "Azioni..."
 
 #: src/MenuPropDlg.cpp:276
 msgid "Subpicture end must be greater than start or empty"
-msgstr "La fine della sotto immagine deve essere maggiore dell'inizio o deve essere vuota"
+msgstr ""
+"La fine della sotto immagine deve essere maggiore dell'inizio o deve essere "
+"vuota"
 
 #: src/MenuPropDlg.cpp:283 src/TitlePropDlg.cpp:320
 #, c-format
@@ -2004,8 +2082,8 @@ msgstr "Capacità disco:"
 msgid "Video bitrate:"
 msgstr "Bitrate video:"
 
-#: src/NewProjectDlg.cpp:65 src/NewProjectDlg.cpp:71 src/SettingsDlg.cpp:249 src/SettingsDlg.cpp:254
-#: src/SettingsDlg.cpp:258
+#: src/NewProjectDlg.cpp:65 src/NewProjectDlg.cpp:71 src/SettingsDlg.cpp:249
+#: src/SettingsDlg.cpp:254 src/SettingsDlg.cpp:258
 msgid "KBit/s"
 msgstr "KBit/s"
 
@@ -2027,7 +2105,7 @@ msgstr "Formato audio"
 
 #: src/NewProjectDlg.cpp:113 src/SettingsDlg.cpp:136
 msgid "Default title post command:"
-msgstr "Comando post titolo predefinito:"
+msgstr "Comando predefinito post titolo:"
 
 #: src/NewProjectDlg.cpp:119
 msgid "Please enter the volume name."
@@ -2070,8 +2148,9 @@ msgstr "Masterizzaizone"
 msgid "Please insert a blank or rewritable DVD into the device %s."
 msgstr "Inserisci un DVD vuoto oppure un DVD riscrivibile nell'unità %s."
 
-#: src/ProcessBurn.cpp:69 src/ProcessBurn.cpp:87 src/ProcessBurn.cpp:129 src/ProcessFormatDvd.cpp:45
-#: src/ProcessPreview.cpp:88 src/ProgressDlg.cpp:291
+#: src/ProcessBurn.cpp:69 src/ProcessBurn.cpp:87 src/ProcessBurn.cpp:129
+#: src/ProcessFormatDvd.cpp:45 src/ProcessPreview.cpp:88
+#: src/ProgressDlg.cpp:291
 msgid "Aborted"
 msgstr "Interrotto"
 
@@ -2087,7 +2166,7 @@ msgstr "Cancellazione cartella temporanea"
 #: src/ProcessCleanTemp.cpp:76 src/ProcessCleanTemp.cpp:87
 #, c-format
 msgid "Cannot remove directory '%s'"
-msgstr "Impossibile eliminare la cartella \"%s\""
+msgstr "Impossibile eliminare la cartella '%s'"
 
 #: src/ProcessDvdFilesystem.cpp:80
 msgid "Generating DVD"
@@ -2100,7 +2179,7 @@ msgstr "Aggiungi dati ECC"
 #: src/ProcessEncode.cpp:39 src/ProcessSubtitles.cpp:32
 #, c-format
 msgid "Found transcoded file in cache for '%s'"
-msgstr "Trovato file codificato nella cache  per \"%s\""
+msgstr "Trovato file codificato nella cache per '%s'"
 
 #: src/ProcessEncode.cpp:78
 #, c-format
@@ -2141,8 +2220,8 @@ msgstr "Generazione menu %u di %lu"
 msgid "Create menu MPEG"
 msgstr "Crea un menu MPEG"
 
-#: src/ProcessMenu.cpp:150 src/ProcessMenu.cpp:174 src/ProcessMenu.cpp:188 src/ProcessMenu.cpp:249
-#: src/ProcessMenu.cpp:279 src/ProcessMenu.cpp:293
+#: src/ProcessMenu.cpp:150 src/ProcessMenu.cpp:174 src/ProcessMenu.cpp:188
+#: src/ProcessMenu.cpp:249 src/ProcessMenu.cpp:279 src/ProcessMenu.cpp:293
 msgid "Error creation of menu"
 msgstr "Errore nella creazione del menu"
 
@@ -2160,9 +2239,11 @@ msgstr "Codifica quadro %d di %d"
 msgid "Transcode audio from"
 msgstr "Transcodifica audio da"
 
-#: src/ProcessMenu.cpp:211 src/ProcessMenu.cpp:217 src/ProcessMenuTransitions.cpp:126
-#: src/ProcessMenuTransitions.cpp:136 src/ProcessSlideshow.cpp:198 src/ProcessTranscode.cpp:189
-#: src/ProcessTranscode.cpp:200 src/ProcessTranscode.cpp:226 src/ProcessTranscode.cpp:238
+#: src/ProcessMenu.cpp:211 src/ProcessMenu.cpp:217
+#: src/ProcessMenuTransitions.cpp:126 src/ProcessMenuTransitions.cpp:136
+#: src/ProcessSlideshow.cpp:198 src/ProcessTranscode.cpp:189
+#: src/ProcessTranscode.cpp:200 src/ProcessTranscode.cpp:226
+#: src/ProcessTranscode.cpp:238
 msgid "Error transcoding of "
 msgstr "Errore durante la transcodifica di "
 
@@ -2186,10 +2267,10 @@ msgstr "Multiplex sotto immagini in mpeg"
 #: src/ProcessMenu.cpp:334
 #, c-format
 msgid "Can't rename file '%s' in '%s'"
-msgstr "Impossibile rinominare il file \"%s\" in \"%s\""
+msgstr "Impossibile rinominare il file '%s' in '%s'"
 
-#: src/ProcessMenuTransitions.cpp:104 src/ProcessMenuTransitions.cpp:161 src/ProcessMenuTransitions.cpp:242
-#: src/ProcessMenuTransitions.cpp:254
+#: src/ProcessMenuTransitions.cpp:104 src/ProcessMenuTransitions.cpp:161
+#: src/ProcessMenuTransitions.cpp:242 src/ProcessMenuTransitions.cpp:254
 msgid "Error creation of transition"
 msgstr "Errore nella creazione della transizione"
 
@@ -2202,22 +2283,24 @@ msgstr "Genera transizione da %s"
 msgid "Start preview"
 msgstr "Inizio anteprima"
 
-#: src/ProcessPreview.cpp:42 src/ProcessPreview.cpp:58 src/ProcessPreview.cpp:79
+#: src/ProcessPreview.cpp:42 src/ProcessPreview.cpp:58
+#: src/ProcessPreview.cpp:79
 msgid ""
-"Starting of selected DVD player is failed. Please open the following directory with your favorite DVD "
-"player: "
+"Starting of selected DVD player is failed. Please open the following "
+"directory with your favorite DVD player: "
 msgstr ""
 "L'avvio del lettore DVD selezionato non è riuscito. \n"
 "Apri la seguente cartella con il lettore DVD preferito: "
 
 #: src/ProcessPreview.cpp:49
 msgid ""
-"VLC player is not found. Please install VLC player (http://www.videolan.org) in Applications directory or "
-"open the following directory with your favorite DVD player: "
+"VLC player is not found. Please install VLC player (http://www.videolan.org) "
+"in Applications directory or open the following directory with your favorite "
+"DVD player: "
 msgstr ""
 "VLC non trovato. \n"
-"Installa VLC (<http://www.videolan.org) nella cartella delle applicazioni o apri la seguente cartella con "
-"il player DVD preferito: "
+"Installa VLC (<http://www.videolan.org) nella cartella delle applicazioni o "
+"apri la seguente cartella con il player DVD preferito: "
 
 #: src/ProcessPreview.cpp:86
 msgid "Do you want to burn this video to DVD?"
@@ -2232,14 +2315,15 @@ msgstr "Vuoi creare un'immagine ISO di questo video?"
 msgid "Generating slideshow %u of %lu"
 msgstr "Generazione presentazione %u di %lu"
 
-#: src/ProcessSlideshow.cpp:102 src/ProcessSlideshow.cpp:130 src/ProcessSlideshow.cpp:153
+#: src/ProcessSlideshow.cpp:102 src/ProcessSlideshow.cpp:130
+#: src/ProcessSlideshow.cpp:153
 msgid "Error creation of slideshow"
 msgstr "Errore nella creazione della presentazione"
 
 #: src/ProcessSlideshow.cpp:121
 #, c-format
 msgid "Converting slide %u image to video"
-msgstr "Conversione  immagine %u diapositiva in video"
+msgstr "Conversione immagine %u diapositiva in video"
 
 #: src/ProcessSlideshow.cpp:172
 msgid "Audio file duration: "
@@ -2261,7 +2345,7 @@ msgstr "Multiplaex sottotitoli %u di %lu"
 #: src/ProcessSubtitles.cpp:93
 #, c-format
 msgid "Can't rename temporary file '%s'"
-msgstr "Impossibile rinominare i file temporanei \"%s\""
+msgstr "Impossibile rinominare i file temporanei '%s'"
 
 #: src/ProcessTranscode.cpp:35
 msgid "Transcode video file: "
@@ -2276,10 +2360,11 @@ msgstr "Multiplexing audio e video in corso"
 msgid "Analysis of audio track %d"
 msgstr "Analisi della traccia audio %d"
 
-#: src/ProcessTranscode.cpp:286 src/ProcessTranscode.cpp:300 wxVillaLib/ProgramProcess.cpp:84
+#: src/ProcessTranscode.cpp:286 src/ProcessTranscode.cpp:300
+#: wxVillaLib/ProgramProcess.cpp:84
 #, c-format
 msgid "Execution of '%s' failed."
-msgstr "Esecuzione di \"%s\" fallita."
+msgstr "Esecuzione di '%s' fallita."
 
 #: src/ProgressDlg.cpp:75
 msgid "Generate DVD"
@@ -2341,7 +2426,8 @@ msgstr "Masterizzazione completata."
 msgid "Generating was successful."
 msgstr "Generazione completata."
 
-#: src/SettingsDlg.cpp:45 src/SettingsDlg.cpp:417 src/SettingsDlg.cpp:423 buttons/settings.xml:3
+#: src/SettingsDlg.cpp:45 src/SettingsDlg.cpp:417 src/SettingsDlg.cpp:423
+#: buttons/settings.xml:3
 msgid "Settings"
 msgstr "Impostazioni"
 
@@ -2355,11 +2441,11 @@ msgstr "Nome disco predefinito:"
 
 #: src/SettingsDlg.cpp:80
 msgid "Default disc capacity:"
-msgstr "Capacità disco predefinita:"
+msgstr "Capacità predefinita disco:"
 
 #: src/SettingsDlg.cpp:84
 msgid "Default video format:"
-msgstr "Formato video predefinito:"
+msgstr "Formato predefinito video:"
 
 #: src/SettingsDlg.cpp:102
 msgid "Keep aspect ratio"
@@ -2367,11 +2453,11 @@ msgstr "Mantieni le proporzioni"
 
 #: src/SettingsDlg.cpp:106
 msgid "Default audio format:"
-msgstr "Formato audio predefinito:"
+msgstr "Formato predefinito audio:"
 
 #: src/SettingsDlg.cpp:129
 msgid "Default chapter length:"
-msgstr "Lunghezza capitolo predefinita:"
+msgstr "Lunghezza predefinita capitolo:"
 
 #: src/SettingsDlg.cpp:132
 msgid "Add chapter at title end"
@@ -2387,19 +2473,19 @@ msgstr "Accetta azioni non valide"
 
 #: src/SettingsDlg.cpp:167
 msgid "Default slide duration:"
-msgstr "Durata diapositiva predefinita:"
+msgstr "Durata predefinita diapositiva:"
 
 #: src/SettingsDlg.cpp:168
 msgid "Default transition duration:"
-msgstr "Durata transizione predefinita:"
+msgstr "Durata predefinita transizione:"
 
 #: src/SettingsDlg.cpp:175
 msgid "Default slide transition:"
-msgstr "Transizione diapositiva predefinita:"
+msgstr "Transizione predefinita diapositiva:"
 
 #: src/SettingsDlg.cpp:181
 msgid "Last directory"
-msgstr "Ultima cartella"
+msgstr "Ultima cartella usata"
 
 #: src/SettingsDlg.cpp:182
 msgid "File Browser start directory:"
@@ -2411,7 +2497,7 @@ msgstr "Cancella la cache delle miniature all'uscita"
 
 #: src/SettingsDlg.cpp:201
 msgid "Undo history size:"
-msgstr "Dimensione cronologia annullamenti:"
+msgstr "N. annullamenti cronologia:"
 
 #: src/SettingsDlg.cpp:202
 msgid "Clear transcoding cache:"
@@ -2419,7 +2505,7 @@ msgstr "Azzera cache transcodifica:"
 
 #: src/SettingsDlg.cpp:205
 msgid "Prompt"
-msgstr "Prompt"
+msgstr "Chiedi"
 
 #: src/SettingsDlg.cpp:206 src/SettingsDlg.cpp:305
 msgid "Yes"
@@ -2431,7 +2517,7 @@ msgstr "Azzera la cache ora"
 
 #: src/SettingsDlg.cpp:215
 msgid "\"Don't show again\" flags:"
-msgstr "Impostazioni \"Non mostrare più\":"
+msgstr "Impostazione 'Non visualizzare più':"
 
 #: src/SettingsDlg.cpp:217
 msgid "Reset All"
@@ -2439,7 +2525,7 @@ msgstr "Reimposta tutto"
 
 #: src/SettingsDlg.cpp:226
 msgid "Core"
-msgstr "Nucleo"
+msgstr "Generale"
 
 #: src/SettingsDlg.cpp:245
 msgid "Draw buttons on background"
@@ -2451,7 +2537,7 @@ msgstr "Consenti menu HD"
 
 #: src/SettingsDlg.cpp:248
 msgid "Menu video bitrate:"
-msgstr "Bitrate menu video:"
+msgstr "Bitrate video menu:"
 
 #: src/SettingsDlg.cpp:253
 msgid "Slideshow video bitrate:"
@@ -2459,7 +2545,7 @@ msgstr "Bitrate video presentazione:"
 
 #: src/SettingsDlg.cpp:258
 msgid "Default audio bitrate:"
-msgstr "Bitrate audio predefinito:"
+msgstr "Bitrate predefinito audio:"
 
 #: src/SettingsDlg.cpp:259
 msgid "Thread count:"
@@ -2519,7 +2605,7 @@ msgstr "Usa mplex:"
 
 #: src/SettingsDlg.cpp:307
 msgid "For menus only"
-msgstr "Solo per menu"
+msgstr "Solo per i menu"
 
 #: src/SettingsDlg.cpp:312
 msgid "NTSC film:"
@@ -2547,11 +2633,12 @@ msgstr "Non rimuovere i file temporanei"
 
 #: src/SettingsDlg.cpp:342
 msgid "Language change will not take effect until DVDStyler is restarted"
-msgstr "Il cambiamento della lingua avrà effetto solo dopo il riavvio di DVDStyler"
+msgstr ""
+"Il cambiamento della lingua avrà effetto solo dopo il riavvio di DVDStyler"
 
 #: src/SettingsDlg.cpp:417
 msgid "All \"don't show again\" flags are reseted."
-msgstr "Tutte le impostazioni \"non mostrare più\" sono state reimpostate."
+msgstr "Tutte le impostazioni 'Non visualizzare più' sono state reimpostate."
 
 #: src/SettingsDlg.cpp:423
 msgid "The transcoding cache is successfully cleared."
@@ -2571,7 +2658,7 @@ msgstr "Predefinito"
 
 #: src/Slideshow.cpp:243
 msgid "None"
-msgstr "Nessuno"
+msgstr "Nessuna"
 
 #: src/Slideshow.cpp:244
 msgid "Random"
@@ -2762,7 +2849,7 @@ msgstr "Tavolozza:"
 #: src/TitlePropDlg.cpp:354 src/TitlePropDlg.cpp:521
 #, c-format
 msgid "Invalid chapter timestamp '%s'"
-msgstr "Marcatura temporale \"%s\" del capitolo non valida"
+msgstr "Marcatura temporale '%s' del capitolo non valida"
 
 #: src/TitlePropDlg.cpp:440
 msgid "Audio & Subtitle Files"
@@ -2803,7 +2890,7 @@ msgstr "Trascina qui i video dal pannello file."
 #: src/TitlesetManager.cpp:410
 #, c-format
 msgid "Slideshow (%d images)"
-msgstr "Presentazione (% immagini)"
+msgstr "Presentazione (%d immagini)"
 
 #: src/TitlesetManager.cpp:412
 msgid "Slideshow (1 image)"
@@ -2829,16 +2916,20 @@ msgstr ""
 #: src/TitlesetManager.cpp:503
 #, c-format
 msgid "File '%s' doesn't contain any audio or video streams."
-msgstr "Il file \"%s\" non contiene uno stream audio o video."
+msgstr "Il file '%s' non contiene uno stream audio o video."
 
 #: src/TitlesetManager.cpp:572
-msgid "This file contains video in PAL format. Do you want to change DVD format to PAL too?"
+msgid ""
+"This file contains video in PAL format. Do you want to change DVD format to "
+"PAL too?"
 msgstr ""
 "Questo file contiene un video in formato PAL. \n"
 "Vuoi cambiare anche il formato DVD in PAL?"
 
 #: src/TitlesetManager.cpp:576
-msgid "This file contains video in NTSC format. Do you want to change DVD format to NTSC too?"
+msgid ""
+"This file contains video in NTSC format. Do you want to change DVD format to "
+"NTSC too?"
 msgstr ""
 "Questo file contiene un video in formato NTSC. \n"
 "Vuoi cambiare anche il formato del DVD in NTSC?"
@@ -2849,11 +2940,11 @@ msgstr "In un set titoli sono consentiti un massimo di 99 titoli."
 
 #: src/TitlesetManager.cpp:712
 msgid ""
-"The video bitrate is reduced below 2 Mb/s to fit your video on DVD. This can produce DVD with bad video "
-"quality."
+"The video bitrate is reduced below 2 Mb/s to fit your video on DVD. This can "
+"produce DVD with bad video quality."
 msgstr ""
-"Il bitrate del video verra abbassato sotto i 2 Mb/s per farlo stare nel DVD. Ciò comporterà una perdita di "
-"qualità."
+"Il bitrate del video verra abbassato sotto i 2 Mb/s per farlo stare nel DVD. "
+"Ciò comporterà una perdita di qualità."
 
 #: src/TitlesetManager.cpp:725 src/TitlesetManager.cpp:762
 msgid "Please add a video track first."
@@ -2992,7 +3083,7 @@ msgstr "Nessun esiste un gestore per il tipo immagine %d."
 #: wxVillaLib/imagjpg.cpp:537
 #, c-format
 msgid "Can't load image from file '%s': file does not exist."
-msgstr "Impossibile caricare l'immagine \"%s\": il file non esiste."
+msgstr "Impossibile caricare l'immagine '%s': il file non esiste."
 
 #: wxVillaLib/PropDlg.cpp:223
 msgid "&Don't show this dialog again"
@@ -3006,17 +3097,20 @@ msgstr "Freccia blu"
 msgid "Colour of the circle"
 msgstr "Colore del cerchio"
 
-#: buttons/arrow-blue.xml:40 buttons/arrow-red.xml:43 buttons/arrow-simple-v2.xml:19
-#: buttons/arrow-text-left.xml:32 buttons/arrow-text-right.xml:33 buttons/arrow3d-left.xml:29
-#: buttons/arrow3d-right.xml:29 buttons/gear.xml:105 buttons/gold-frame.xml:70 buttons/home-moon.xml:36
-#: buttons/pill-opacity.xml:77 buttons/pill-stroke.xml:86
+#: buttons/arrow-blue.xml:40 buttons/arrow-red.xml:43
+#: buttons/arrow-simple-v2.xml:19 buttons/arrow-text-left.xml:32
+#: buttons/arrow-text-right.xml:33 buttons/arrow3d-left.xml:29
+#: buttons/arrow3d-right.xml:29 buttons/gear.xml:105 buttons/gold-frame.xml:70
+#: buttons/home-moon.xml:36 buttons/pill-opacity.xml:77
+#: buttons/pill-stroke.xml:86
 msgid "Stroke color"
 msgstr "Colore bordo"
 
-#: buttons/arrow-blue.xml:47 buttons/arrow-cool.xml:38 buttons/arrow-gold.xml:33
-#: buttons/arrow-mirror-left.xml:19 buttons/arrow-mirror-right.xml:19 buttons/arrow-red.xml:50
-#: buttons/arrow-simple-v2.xml:31 buttons/arrow-text-left.xml:25 buttons/arrow-text-right.xml:26
-#: buttons/glow_arrow.xml:33
+#: buttons/arrow-blue.xml:47 buttons/arrow-cool.xml:38
+#: buttons/arrow-gold.xml:33 buttons/arrow-mirror-left.xml:19
+#: buttons/arrow-mirror-right.xml:19 buttons/arrow-red.xml:50
+#: buttons/arrow-simple-v2.xml:31 buttons/arrow-text-left.xml:25
+#: buttons/arrow-text-right.xml:26 buttons/glow_arrow.xml:33
 msgid "Arrow color"
 msgstr "Colore freccia"
 
@@ -3064,7 +3158,8 @@ msgstr "Colore freccia 2"
 msgid "Green Arrow"
 msgstr "Freccia verde"
 
-#: buttons/arrow-green.xml:382 buttons/arrow.xml:11 buttons/arrow2.xml:60 buttons/arrow3.xml:40
+#: buttons/arrow-green.xml:382 buttons/arrow.xml:11 buttons/arrow2.xml:60
+#: buttons/arrow3.xml:40
 msgid "Arrow colour"
 msgstr "Colore freccia"
 
@@ -3088,7 +3183,8 @@ msgstr "Freccia specchio a destra"
 msgid "Red Arrow"
 msgstr "Freccia rossa"
 
-#: buttons/arrow-red.xml:36 buttons/pill-opacity.xml:24 buttons/pill-stroke.xml:26 buttons/pill3.xml:22
+#: buttons/arrow-red.xml:36 buttons/pill-opacity.xml:24
+#: buttons/pill-stroke.xml:26 buttons/pill3.xml:22
 msgid "Button color"
 msgstr "Colore pulsante"
 
@@ -3096,13 +3192,16 @@ msgstr "Colore pulsante"
 msgid "Simple Arrow"
 msgstr "Freccia semplice"
 
-#: buttons/arrow-simple-v2.xml:50 buttons/arrow3d-left.xml:41 buttons/arrow3d-right.xml:41
-#: buttons/dotted-frame.xml:100 buttons/ellipse-v2.xml:44 buttons/frame-text.xml:63 buttons/frame-text.xml:83
-#: buttons/frame-v2.xml:53 buttons/gear.xml:119 buttons/home-moon.xml:62 buttons/home-v2.xml:35
-#: buttons/settings.xml:30 buttons/star-frame.xml:70 buttons/text-circle-v2.xml:32
-#: buttons/text-square-v2.xml:33 buttons/text-underlined-v3.xml:32 buttons/text-v3.xml:58
-#: objects/ellipse-v3.xml:57 objects/ellipse45.xml:59 objects/frame-v3.xml:67 objects/frame45.xml:76
-#: objects/rectangle-v2.xml:38 objects/text-v2.xml:53
+#: buttons/arrow-simple-v2.xml:50 buttons/arrow3d-left.xml:41
+#: buttons/arrow3d-right.xml:41 buttons/dotted-frame.xml:100
+#: buttons/ellipse-v2.xml:44 buttons/frame-text.xml:63
+#: buttons/frame-text.xml:83 buttons/frame-v2.xml:53 buttons/gear.xml:119
+#: buttons/home-moon.xml:62 buttons/home-v2.xml:35 buttons/settings.xml:30
+#: buttons/star-frame.xml:70 buttons/text-circle-v2.xml:32
+#: buttons/text-square-v2.xml:33 buttons/text-underlined-v3.xml:32
+#: buttons/text-v3.xml:58 objects/ellipse-v3.xml:57 objects/ellipse45.xml:59
+#: objects/frame-v3.xml:67 objects/frame45.xml:76 objects/rectangle-v2.xml:38
+#: objects/text-v2.xml:53
 msgid "Shadow"
 msgstr "Ombra"
 
@@ -3122,8 +3221,9 @@ msgstr "Colore del triangolo"
 msgid "Text Arrow Left"
 msgstr "Freccia di testo a sinistra"
 
-#: buttons/arrow-text-left.xml:18 buttons/arrow-text-right.xml:19 buttons/pill-opacity.xml:70
-#: buttons/pill-stroke.xml:79 buttons/pill2.xml:42 buttons/pill3.xml:35
+#: buttons/arrow-text-left.xml:18 buttons/arrow-text-right.xml:19
+#: buttons/pill-opacity.xml:70 buttons/pill-stroke.xml:79 buttons/pill2.xml:42
+#: buttons/pill3.xml:35
 msgid "Text color"
 msgstr "Colore testo"
 
@@ -3135,15 +3235,16 @@ msgstr "Freccia di testo a destra"
 msgid "Arrow"
 msgstr "Freccia"
 
-#: buttons/arrow.xml:23 buttons/cancel.xml:28 buttons/circle-outline.xml:36 buttons/circle.xml:28
-#: buttons/ellipse-v2.xml:51 buttons/ok.xml:27 objects/ellipse-v3.xml:43 objects/ellipse45.xml:45
-#: objects/frame-v3.xml:53 objects/frame45.xml:62 objects/text-v2.xml:32
+#: buttons/arrow.xml:23 buttons/cancel.xml:28 buttons/circle-outline.xml:36
+#: buttons/circle.xml:28 buttons/ellipse-v2.xml:51 buttons/ok.xml:27
+#: objects/ellipse-v3.xml:43 objects/ellipse45.xml:45 objects/frame-v3.xml:53
+#: objects/frame45.xml:62 objects/text-v2.xml:32
 msgid "Outline colour"
 msgstr "Colore esterno"
 
-#: buttons/arrow.xml:35 buttons/circle-outline.xml:48 buttons/circle.xml:35 buttons/ellipse-v2.xml:37
-#: objects/ellipse-v3.xml:36 objects/ellipse45.xml:38 objects/frame-v3.xml:46 objects/frame45.xml:55
-#: objects/text-v2.xml:39
+#: buttons/arrow.xml:35 buttons/circle-outline.xml:48 buttons/circle.xml:35
+#: buttons/ellipse-v2.xml:37 objects/ellipse-v3.xml:36 objects/ellipse45.xml:38
+#: objects/frame-v3.xml:46 objects/frame45.xml:55 objects/text-v2.xml:39
 msgid "Outline width"
 msgstr "Larghezza esterna"
 
@@ -3207,12 +3308,14 @@ msgstr "Bordo cerchio"
 msgid "01"
 msgstr "01"
 
-#: buttons/circle-outline.xml:22 buttons/circle.xml:21 buttons/text-circle-v2.xml:39
+#: buttons/circle-outline.xml:22 buttons/circle.xml:21
+#: buttons/text-circle-v2.xml:39
 msgid "Circle colour"
 msgstr "Colore cerchio"
 
-#: buttons/circle-outline.xml:29 buttons/circle.xml:42 buttons/frame-text.xml:76 buttons/pill.xml:50
-#: buttons/text-circle-v2.xml:25 buttons/text-square-v2.xml:26 buttons/text-underlined-v3.xml:25
+#: buttons/circle-outline.xml:29 buttons/circle.xml:42
+#: buttons/frame-text.xml:76 buttons/pill.xml:50 buttons/text-circle-v2.xml:25
+#: buttons/text-square-v2.xml:26 buttons/text-underlined-v3.xml:25
 #: buttons/text-v3.xml:25
 msgid "Text colour"
 msgstr "Colore testo"
@@ -3225,30 +3328,36 @@ msgstr "Cerchio"
 msgid "Dotted frame"
 msgstr "Bordo tratteggiato"
 
-#: buttons/dotted-frame.xml:32 buttons/ellipse-v2.xml:30 buttons/frame-v2.xml:25 buttons/gold-frame.xml:56
-#: buttons/maroon-frame.xml:57 buttons/movie.xml:34 buttons/star-frame.xml:42 objects/ellipse-v3.xml:29
-#: objects/ellipse45.xml:31 objects/frame-v3.xml:25 objects/frame45.xml:27
+#: buttons/dotted-frame.xml:32 buttons/ellipse-v2.xml:30
+#: buttons/frame-v2.xml:25 buttons/gold-frame.xml:56
+#: buttons/maroon-frame.xml:57 buttons/movie.xml:34 buttons/star-frame.xml:42
+#: objects/ellipse-v3.xml:29 objects/ellipse45.xml:31 objects/frame-v3.xml:25
+#: objects/frame45.xml:27
 msgid "Image opacity"
 msgstr "Opacità immagine"
 
-#: buttons/dotted-frame.xml:39 buttons/frame-text.xml:51 buttons/frame-v2.xml:60 buttons/movie.xml:41
-#: buttons/pill-opacity.xml:31 buttons/pill-stroke.xml:33 buttons/star-frame.xml:49
+#: buttons/dotted-frame.xml:39 buttons/frame-text.xml:51
+#: buttons/frame-v2.xml:60 buttons/movie.xml:41 buttons/pill-opacity.xml:31
+#: buttons/pill-stroke.xml:33 buttons/star-frame.xml:49
 msgid "Border colour"
 msgstr "Colore Bordo"
 
-#: buttons/dotted-frame.xml:46 buttons/frame-text.xml:37 buttons/frame-v2.xml:46 buttons/pill-opacity.xml:38
+#: buttons/dotted-frame.xml:46 buttons/frame-text.xml:37
+#: buttons/frame-v2.xml:46 buttons/pill-opacity.xml:38
 #: buttons/pill-stroke.xml:40 buttons/star-frame.xml:56
 msgid "Border width"
 msgstr "Larghezza bordo"
 
-#: buttons/dotted-frame.xml:53 buttons/frame-text.xml:44 buttons/pill-opacity.xml:45
-#: buttons/pill-stroke.xml:47
+#: buttons/dotted-frame.xml:53 buttons/frame-text.xml:44
+#: buttons/pill-opacity.xml:45 buttons/pill-stroke.xml:47
 msgid "Corner round"
 msgstr "Angolo tondo"
 
-#: buttons/dotted-frame.xml:60 buttons/ellipse-v2.xml:63 buttons/frame-v2.xml:72 buttons/gold-frame.xml:77
-#: buttons/maroon-frame.xml:85 buttons/star-frame.xml:63 objects/ellipse-v3.xml:50 objects/ellipse45.xml:52
-#: objects/frame-v3.xml:60 objects/frame45.xml:69
+#: buttons/dotted-frame.xml:60 buttons/ellipse-v2.xml:63
+#: buttons/frame-v2.xml:72 buttons/gold-frame.xml:77
+#: buttons/maroon-frame.xml:85 buttons/star-frame.xml:63
+#: objects/ellipse-v3.xml:50 objects/ellipse45.xml:52 objects/frame-v3.xml:60
+#: objects/frame45.xml:69
 msgid "Inner colour"
 msgstr "Colore interno"
 
@@ -3272,7 +3381,8 @@ msgstr "Ellisse"
 msgid "Frame and Text"
 msgstr "Bordo e testo"
 
-#: buttons/frame-text.xml:90 buttons/pill-opacity.xml:91 buttons/pill-stroke.xml:100
+#: buttons/frame-text.xml:90 buttons/pill-opacity.xml:91
+#: buttons/pill-stroke.xml:100
 msgid "Text offset"
 msgstr "OOffset etsto"
 
@@ -3280,13 +3390,13 @@ msgstr "OOffset etsto"
 msgid "Frame"
 msgstr "Fotogramma"
 
-#: buttons/frame-v2.xml:32 buttons/text-v3.xml:44 objects/frame-v3.xml:32 objects/frame45.xml:41
-#: objects/rectangle-v2.xml:17
+#: buttons/frame-v2.xml:32 buttons/text-v3.xml:44 objects/frame-v3.xml:32
+#: objects/frame45.xml:41 objects/rectangle-v2.xml:17
 msgid "Rx"
 msgstr "Dx"
 
-#: buttons/frame-v2.xml:39 buttons/text-v3.xml:51 objects/frame-v3.xml:39 objects/frame45.xml:48
-#: objects/rectangle-v2.xml:24
+#: buttons/frame-v2.xml:39 buttons/text-v3.xml:51 objects/frame-v3.xml:39
+#: objects/frame45.xml:48 objects/rectangle-v2.xml:24
 msgid "Ry"
 msgstr "Dy"
 
@@ -3294,7 +3404,8 @@ msgstr "Dy"
 msgid "Gear"
 msgstr "Ingranaggio"
 
-#: buttons/gear.xml:112 buttons/home-moon.xml:43 buttons/pill-opacity.xml:84 buttons/pill-stroke.xml:93
+#: buttons/gear.xml:112 buttons/home-moon.xml:43 buttons/pill-opacity.xml:84
+#: buttons/pill-stroke.xml:93
 msgid "Stroke width"
 msgstr "Larghezza tratto"
 
@@ -3314,16 +3425,19 @@ msgstr "Colore brillante"
 msgid "Gold frame"
 msgstr "Fotogramma dorato"
 
-#: buttons/gold-frame.xml:63 buttons/maroon-frame.xml:64 buttons/painting_frame.xml:47
+#: buttons/gold-frame.xml:63 buttons/maroon-frame.xml:64
+#: buttons/painting_frame.xml:47
 msgid "Frame colour"
 msgstr "Colore cornice"
 
-#: buttons/gold-frame.xml:84 buttons/maroon-frame.xml:92 buttons/pill-opacity.xml:52
-#: buttons/pill-stroke.xml:54 buttons/star-frame.xml:77 buttons/sticky_note.xml:64
+#: buttons/gold-frame.xml:84 buttons/maroon-frame.xml:92
+#: buttons/pill-opacity.xml:52 buttons/pill-stroke.xml:54
+#: buttons/star-frame.xml:77 buttons/sticky_note.xml:64
 msgid "Selection colour"
 msgstr "Colore seelzione"
 
-#: buttons/gold-frame.xml:96 buttons/pill-stroke.xml:66 buttons/sticky_note.xml:76
+#: buttons/gold-frame.xml:96 buttons/pill-stroke.xml:66
+#: buttons/sticky_note.xml:76
 msgid "Selection width"
 msgstr "Larghezza selezione"
 
