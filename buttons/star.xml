@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<button>
+  <title>Star</title>
+  <svg width="50" height="50" viewBox="0 0 50 50">
+    <g id="main" transform="rotate(270,25,25)">
+	  <path
+	    id="star"
+	    style="fill:#FFFFFF;stroke:#FFFFFF;stroke-width:0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+	    d="M 47.512674,24.833446 L 32.638939,32.208158 L 30.281904,48.641623 L 18.671899,36.774772 L 2.3143806,39.611318 L 10.012738,24.902488 L 2.2602716,10.222105 L 18.628123,12.9984 L 30.194353,1.0888782 L 32.611884,17.513553 L 47.512674,24.833446 z " />
+    </g>
+  </svg>
+  <parameters>
+    <parameter>
+      <title>Rotation</title>
+      <name>rotation</name>
+      <type>integer(0,360)</type>
+      <element>main</element>
+	  <attribute>transform#1</attribute>
+    </parameter>
+    <parameter>
+      <title>Star colour</title>
+      <name>star</name>
+      <type>colour</type>
+      <element>star</element>
+      <attribute>fill</attribute>
+	  <changeable/>
+      <default-value>
+         <highlighted>#00FF00</highlighted>
+         <selected>#FF0000</selected>
+      </default-value>	  
+    </parameter>
+  </parameters>
+  	<init-parameter>href</init-parameter>
+	<default-size>
+		<width>50</width>
+		<height>50</height>
+	</default-size>
+	<min-size>
+		<width>10</width>
+		<height>10</height>
+	</min-size>
+</button>
