@@ -32,6 +32,5 @@ LANG=en
 do_collect >__catstatus.php
 
 echo "Starting file transfer to host..."
-sftp -b update.batch `cat host.cfg` 
-echo "Transfer complete."
+sftp -b update.batch `cat host.cfg` && echo "Transfer complete."
 
