@@ -54,5 +54,10 @@
 	<true/>
 	<key>CSResourcesFileMapped</key>
 	<true/>
-</dict>
+	<key>NSPrincipalClass</key>
+	<string>wxNSApplication</string>
+	<key>NSHighResolutionCapable</key>
+	<true/>
+	<key>NSHighResolutionMagnifyAllowed</key>
+	<false/></dict>
 </plist>
