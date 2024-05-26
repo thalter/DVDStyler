@@ -207,7 +207,7 @@ int Cache::GetCount() {
  */
 long Cache::GetSize() {
 	long size = 0;
-	for (const CacheEntry entry : m_cacheSet) {
+	for (const CacheEntry& entry : m_cacheSet) {
 		wxString filename = GetFileName(entry.GetIdx());
 		if (wxFile::Exists(filename)) {
 			size += wxFile(filename).Length()/1024;
