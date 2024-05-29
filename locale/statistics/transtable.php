@@ -215,8 +215,7 @@ $langnames = array(
 
         uksort($catstatus, "cmp_catstatus");
         
-        while (list($lang, $value) = each ($catstatus))
-        {
+        foreach ($catstatus as $lang => $value) {
             $remark = "";
             $cnt_total = $value[0] + $value[1] + $value[2];
             if ($cnt_total == 0) {

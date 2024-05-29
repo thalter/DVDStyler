@@ -199,7 +199,7 @@ thumb_md5_final (unsigned char digest[16], struct ThumbMD5Context *ctx)
 static void 
 thumb_md5_transform (wxUint32 buf[4], wxUint32 const in[16])
 {
-    register wxUint32 a, b, c, d;
+    wxUint32 a, b, c, d;
 
     a = buf[0];
     b = buf[1];

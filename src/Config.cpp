@@ -12,6 +12,7 @@
 #include <wxVillaLib/utils.h>
 #include <wx/fileconf.h>
 #include <wx/stdpaths.h>
+#include <wx/dir.h>
 
 Config s_config;
 
@@ -37,6 +38,10 @@ void Config::Init() {
 		wxMkdir(dataDir);
 		wxRenameFile(dataDir + ".tmp", dataDir + wxFILE_SEP_PATH + "dvdstyler");
 	}
+	if (!wxDir::Exists(dataDir)) {
+		wxMkdir(dataDir);
+	}
+
 	cfg = new wxFileConfig("", "", dataDir + wxFILE_SEP_PATH + "dvdstyler");
 	wxConfig::Set(cfg);
 #endif

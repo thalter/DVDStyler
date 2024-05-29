@@ -1,7 +1,7 @@
 dnl Process this file with autoconf to produce a configure script.
 
 dnl initialization
-AC_INIT([DVDStyler],[3.3b3],[http://www.dvdstyler.org])
+AC_INIT([DVDStyler],[3.3b4],[http://www.dvdstyler.org])
 AC_CANONICAL_TARGET
 AM_INIT_AUTOMAKE
 AM_MAINTAINER_MODE
@@ -114,7 +114,7 @@ if test x"$GTK_USEDVERSION" = x"2" ; then
   CXXFLAGS="$CXXFLAGS $GNOME2"
   LIBS="$LIBS $GNOMEUI2_LIBS "
 elif test x"$GTK_USEDVERSION" = x"3" ; then
-  PKG_CHECK_MODULES(GNOME_DESKTOP_4, gnome-desktop-4, GNOME3="-DGNOME3",
+  PKG_CHECK_MODULES(GNOME_DESKTOP_3, gnome-desktop-3, GNOME3="-DGNOME3",
     AC_MSG_WARN([gnome-desktop will not be used for rendering of thumbnails]))
   CXXFLAGS="$CXXFLAGS $GNOME3 $GNOME_DESKTOP_3_CFLAGS"
   LIBS="$LIBS $GNOME_DESKTOP_3_LIBS"
@@ -182,6 +182,7 @@ if test "x$ZIP" = x; then
     Please check that zip is in path.
 ])
 fi
+ZIP="$ZIP -X"
 
 dnl check dvdauthor
 AC_PATH_PROG(DVDAUTHOR_PATH, dvdauthor, "")

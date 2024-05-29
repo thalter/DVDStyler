@@ -363,7 +363,7 @@ wxImage wxThumbnailFactory::GenerateThumbnailFromVideo(const wxString& filename)
 				img = decoder.GetNextFrame();
 		}
 		if (img.Ok() && decoder.GetFrameAspectRatio() > 0 
-				&& labs(decoder.GetFrameAspectRatio()*100 - img.GetWidth()*100/img.GetHeight()) >= 5) {
+				&& std::abs(decoder.GetFrameAspectRatio()*100 - img.GetWidth()*100/img.GetHeight()) >= 5) {
 			if (lround(img.GetWidth() / decoder.GetFrameAspectRatio()) > img.GetHeight())
 				img.Rescale(img.GetWidth(), lround(img.GetWidth() / decoder.GetFrameAspectRatio()));
 			else

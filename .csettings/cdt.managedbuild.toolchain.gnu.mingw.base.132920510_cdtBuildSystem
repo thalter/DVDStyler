@@ -11,11 +11,17 @@
 					</tool>
 					<tool id="cdt.managedbuild.tool.gnu.archiver.mingw.base.1426836052" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.mingw.base"/>
 					<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.base.969354288" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.base">
-						<option id="gnu.cpp.compiler.option.include.paths.1744682040" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false"/>
+						<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.1744682040" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+							<listOptionValue builtIn="false" value="/usr/include/wx-3.0"/>
+							<listOptionValue builtIn="false" value="/usr/lib/x86_64-linux-gnu/wx/include/gtk3-unicode-3.0"/>
+							<listOptionValue builtIn="false" value="/usr/include/gnome-desktop-4.0"/>
+						</option>
 						<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.777825308" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 					</tool>
 					<tool id="cdt.managedbuild.tool.gnu.c.compiler.mingw.base.533247573" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.mingw.base">
-						<option id="gnu.c.compiler.option.include.paths.459939353" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false"/>
+						<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.c.compiler.option.include.paths.459939353" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+							<listOptionValue builtIn="false" value="/usr/include/gnome-desktop-4.0"/>
+						</option>
 						<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.705534568" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 					</tool>
 					<tool id="cdt.managedbuild.tool.gnu.c.linker.mingw.base.894718814" name="MinGW C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.mingw.base"/>
