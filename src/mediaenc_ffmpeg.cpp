@@ -225,7 +225,8 @@ bool wxFfmpegMediaEncoder::addVideoStream(int codecId, VideoFormat videoFormat, 
 	m_videoOutbuf = (uint8_t*) av_malloc(VIDEO_BUF_SIZE);
 
 	AVCPBProperties *props;
-	props = (AVCPBProperties*) av_stream_new_side_data(m_videoStm, AV_PKT_DATA_CPB_PROPERTIES, sizeof(*props));
+	props = (AVCPBProperties*) av_packet_side_data_new(&m_videoStm->codecpar->coded_side_data, 
+		&m_videoStm->codecpar->nb_coded_side_data, AV_PKT_DATA_CPB_PROPERTIES, sizeof(*props), 0);
 	props->buffer_size = VIDEO_BUF_SIZE;
 	props->max_bitrate = 0;
 	props->min_bitrate = 0;
