@@ -1,3 +1,14 @@
+# DVDStyler
+
+This is fork of the DVDStyler SourceForge Repo. DVDStyler does not seem to be well maintained anymore, and is difficult to build (especially on MacOS).
+
+The MacOS port is very neglected. The latest official binary is very old - among other issues, it does not
+support high-DPI displays and is not ARM native (it is an Intel build that runs under Rosetta2). By builiding your own version, you can get support for the latest Apple hardware and OS versions.
+
+See [[Build.MD]] for the latest MacOS build instructions. 
+
+## Original README
+
                   -----------
                    DVDStyler
                   -----------
@@ -12,4 +23,4 @@ DVDStyler is free software. You may use it for any personal, commercial or
 educational purpose, including installing it on as many different computers
 as you wish. DVDStyler is licensed under the GNU General Public License (GPL).
 
-See http://www.dvdstyler.org for more information
+See <http://www.dvdstyler.org> for more information
