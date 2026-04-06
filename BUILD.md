@@ -4,7 +4,7 @@ DVD Styler is an exceptionally difficult application to build, especially on Mac
 
 ## Notes
 
-After make -j command, enter the number of performance cores on your Mac (e.g. I have an M4 Max,
+After the `make -j` command, enter the number of performance cores on your Mac (e.g. I have an M4 Max,
 which has 12 performance and 4 efficiency cores, so I would use the number 12).
 
 ## 1 Install Prerequisites
