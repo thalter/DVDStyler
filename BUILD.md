@@ -22,7 +22,7 @@ More dependencies, this time managed by homebrew.
 Do not install the homebrew version of wxwidgets. We will be building it separately later in this procedure.
 
 ```bash
-brew install ffmpeg dvdauthor autoconf automake libtool libconfig libexif libsvg-cairo xmlto cdrtools mjpegtools dylibbundler
+brew install ffmpeg dvdauthor autoconf automake libtool libconfig libexif libsvg-cairo xmlto cdrtools mjpegtools dylibbundler pkgconf
 ```
 
 ## 4 Download and build wxSVG
