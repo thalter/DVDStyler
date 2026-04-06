@@ -5,11 +5,11 @@ DVD Styler is an exceptionally difficult application to build, especially on Mac
 ## Notes
 
 After make -j command, enter the number of performance cores on your Mac (e.g. I have an M4 Max,
-which has 12 performance and 4 efficiency cores, so I use the number 12).
+which has 12 performance and 4 efficiency cores, so I would use the number 12).
 
 ## 1 Install Prerequisites
 
-You will need Homebrew and XCode in order to follow this procedure.
+You will need [Homebrew](https://brew.sh/) and XCode in order to follow this procedure.
 
 ## 2 Create a symlink to /opt/local
 
@@ -49,7 +49,7 @@ sudo make install
 
 ### Note
 
-Until I figure out linking issue, modify rhe line of the generated makefile and add the following to the WX_CXXFLAGS:
+Until I figure out the linking issue, modify the line of the generated makefile and add the following to the WX_CXXFLAGS:
 `-I/opt/homebrew/Cellar/fontconfig/2.17.1/include`
 
 ## 6 Build DVDStyler
