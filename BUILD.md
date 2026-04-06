@@ -4,9 +4,6 @@ DVD Styler is an exceptionally difficult application to build, especially on Mac
 
 ## Notes
 
-After the `make -j` command, enter the number of performance cores on your Mac (e.g. I have an M4 Max,
-which has 12 performance and 4 efficiency cores, so I would use the number 12).
-
 ## 1 Install Prerequisites
 
 You will need [Homebrew](https://brew.sh/) and XCode in order to follow this procedure.
@@ -30,20 +27,23 @@ brew install ffmpeg dvdauthor autoconf automake libtool libconfig libexif libsvg
 
 ## 4 Download and build wxSVG
 
-git clone <https://git.code.sf.net/p/wxsvg/git> wxsvg-git
+If you get an AC_MSG_ERROR running the autogen script, just run it a second time.
+
+```bash
+git clone https://git.code.sf.net/p/wxsvg/git wxsvg-git
 cd wxsvg-git
-./autogen.sh
+./autogen.sh --enable-render=cairo
 ./configure --enable-shared
-make -j12
+make -j$(sysctl -n hw.ncpu)
 sudo make install
+```
 
 ## 5 Download and build wxWidgets
 
-Download wxWidgets 3.3.1 source code (there doesn't appear to be a repository for it anywhere)
-
 ```bash
+git clone https://github.com/wxWidgets/wxWidgets.git --recurse-submodules
 ./configure --enable-shared --with-wx-config=/usr/local/bin/wx-config
-make -j12
+make -j$(sysctl -n hw.ncpu)
 sudo make install
 ```
 
@@ -59,7 +59,7 @@ Clone this repo.
 ```bash
 ./autogen.sh
 ./configure
-make -j12
+make -j$(sysctl -n hw.ncpu)
 sudo make DVDStyler.app
 sudo make libs
 ```
