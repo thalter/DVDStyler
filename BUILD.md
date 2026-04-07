@@ -6,7 +6,7 @@ DVD Styler is an exceptionally difficult application to build, especially on Mac
 
 ## 1 Install Prerequisites
 
-You will need [Homebrew](https://brew.sh/) and XCode in order to follow this procedure.
+You will need [Homebrew](https://brew.sh/) and Xcode to follow this procedure. Xcode can be installed via the App Store, and instructions to install homebrew are at the homebrew site.
 
 ## 2 Create a symlink to /opt/local
 
@@ -26,13 +26,13 @@ brew install ffmpeg ffmpeg-full dvdauthor autoconf automake libtool libconfig li
 
 ### 3.2 Make ffmpeg-full take precedence over ffmpeg
 
-ffmeg is a scaled down distribution of ffmpeg. Because ffmpeg-full is an alternate version of an existing homebrew formula, it is not simlinked into /opt/homebrew by default. Take the following steps to correct this.
+Package `ffmpeg` is a scaled-down distribution of ffmpeg, and is incomplete for our purposes, so we will need `ffmpeg-full` instead. Because ffmpeg-full is an alternate version of an existing homebrew formula, it is not simlinked into /opt/homebrew by default. Take the following steps to correct this.
 
 ```bash
 echo 'export PATH="/opt/homebrew/opt/ffmpeg-full/bin:$PATH"' >> ~/.zshrc
 ```
 
-add the following lines to your .zshrc/.bashrc file to allow `make` to find ffmpeg-full
+Add the following lines to your .zshrc/.bashrc file to allow `make` to find ffmpeg-full
 
 ```bash
 export LDFLAGS="-L/opt/homebrew/opt/ffmpeg-full/lib"
