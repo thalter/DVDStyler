@@ -8,9 +8,11 @@ support high-DPI displays and is not ARM native (it is an Intel build that runs 
 This fork is based on the unreleased 3.3b4 code base, which, as near as I can tell, is fully functional.
 
 ## Build Instructions
-See [BUILD.md](BUILD.md) for the latest MacOS build instructions. 
+
+See [BUILD.md](BUILD.md) for the latest MacOS build instructions.
 
 Coming soon - Windows and Linux ARM build instructions!
 
 ## Reference
+
 You can also view the original [README](README) file.
