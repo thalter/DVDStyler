@@ -5,10 +5,8 @@ DVD Styler is an exceptionally difficult application to build, especially on Mac
 ## 1 Install Prerequisites
 
 ```bash
-sudo port install wx-widgets-3.2
+sudo port install cctools wxwidgets-3.2 libtool autogen automake autoconf cairo libexif ffmpeg-devel xmlto dvdauthor cdrtools libmpeg2 mjpegtools dylibbundler
 ```
-
-(maybe libtool autogen automake autoconf wxwidgets-3.2 ffmpeg_devel)
 
 ## 2 Build wxSVG
 
@@ -21,32 +19,11 @@ git clone https://git.code.sf.net/p/wxsvg/git wxsvg-git
 cd wxsvg-git
 ```
 
-### 4.2 File Modifications
-
-Note that you will need to manually modify the following files in order for the build to be successful.
-
-#### configure.ac
-
-Replace line 138 (after # check libexif) with the line below
-
-```m4
-PKG_CHECK_MODULES(LIBEXIF, libexif, [CXXFLAGS="$CXXFLAGS $LIBEXIF_CFLAGS"  LIBS="$LIBS $LIBEXIF_LIBS"], [AC_MSG_ERROR([*** missing libexif ***])])
-```
-
-#### src/cairo/SVGCanvasCairo.h, src/cairo/SVGCanvasImageCairo.h, src/cairo/SVGCanvasPathCairo.h
-
-- Replace all instances of `#include <cairo/cairo.h>` with `#include <cairo.h>`
-
-#### src/cairo/SVGCanvasTextCairo.cpp
-
-- Replace all instances of `#include <cairo/cairo.h>` with `#include <cairo.h>`
-- Replace all instances of `#include <cairo/cairo-quartz.h>` with `#include <cairo-quartz.h>`
-
 ### 4.3 Finish building wxSVG
 
 ```bash
 ./autogen.sh
-./configure
+./configure --prefix=/opt/local --with-wxdir=/opt/local/Library/Frameworks/wxWidgets.framework/Versions/wxWidgets/3.1/bin
 make -j$(sysctl -n hw.ncpu)
 sudo make install
 ```
