@@ -1,0 +1,6 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "./autogen.sh": true,
+        "./configure": true
+    }
+}
