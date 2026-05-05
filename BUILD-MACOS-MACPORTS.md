@@ -5,7 +5,7 @@ DVD Styler is an exceptionally difficult application to build, especially on Mac
 ## 1 Install Prerequisites
 
 ```bash
-sudo port install cctools wxwidgets-3.2 libtool autogen automake autoconf cairo libexif ffmpeg-devel xmlto dvdauthor cdrtools libmpeg2 mjpegtools dylibbundler
+sudo port -N install cctools wxwidgets-3.2 libtool autogen automake autoconf cairo libexif ffmpeg-devel xmlto dvdauthor cdrtools libmpeg2 mjpegtools dylibbundler
 ```
 
 ## 2 Build wxSVG
