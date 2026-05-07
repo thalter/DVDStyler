@@ -1,5 +1,8 @@
 # How to Build DVDStyler on MacOS using MacPorts
 
+> [!WARNING] The MacPorts version of mjpegtools is broken and does not compile, so this procedure is currently broken. Use the Homebrew instructions instead.
+
+
 DVD Styler is an exceptionally difficult application to build, especially on MacOS. There are not great instructions out there for doing this, so I decided to compile my own.
 
 ## 1 Install Prerequisites

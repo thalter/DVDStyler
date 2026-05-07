@@ -14,29 +14,19 @@ sudo ln -s /opt/homebrew /opt/local
 
 ## 3 Install Prerequisites using Homebrew
 
-### 3.1 Install Homebrew Packages
+### 3.1 Remove ffmpeg
+
+Package `ffmpeg` is a scaled-down distribution of ffmpeg, and is incomplete for our purposes, so we will need `ffmpeg-full` instead. Both packages cannot easily exist side-by-side, so execute the following command to remove ffmpeg from your system.
 
 ```bash
-brew install ffmpeg ffmpeg-full dvdauthor autoconf automake libtool libconfig libexif libsvg-cairo xmlto cdrtools mjpegtools dylibbundler pkgconf wxwidgets pango
+brew remove ffmpeg
 ```
 
-### 3.2 Make ffmpeg-full take precedence over ffmpeg
-
-Package `ffmpeg` is a scaled-down distribution of ffmpeg, and is incomplete for our purposes, so we will need `ffmpeg-full` instead. Because ffmpeg-full is an alternate version of an existing homebrew formula, it is not simlinked into /opt/homebrew by default. Take the following steps to correct this.
+### 3.2 Install Homebrew Packages
 
 ```bash
-echo 'export PATH="/opt/homebrew/opt/ffmpeg-full/bin:$PATH"' >> ~/.zshrc
+brew install ffmpeg-full dvdauthor autoconf automake libtool libconfig libexif libsvg-cairo xmlto cdrtools mjpegtools dylibbundler pkgconf wxwidgets pango
 ```
-
-Add the following lines to your .zshrc/.bashrc file to allow `make` to find ffmpeg-full
-
-```bash
-export LDFLAGS="-L/opt/homebrew/opt/ffmpeg-full/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/ffmpeg-full/include"
-export PKG_CONFIG_PATH="/opt/homebrew/opt/ffmpeg-full/lib/pkgconfig"
-```
-
-You can either  `source` your updated rc file, or just launch a new terminal window to pick up the new environment variables.
 
 ## 4 Download and build wxSVG
 
@@ -49,32 +39,11 @@ git clone https://git.code.sf.net/p/wxsvg/git wxsvg-git
 cd wxsvg-git
 ```
 
-### 4.2 File Modifications
-
-Note that you will need to manually modify the following files in order for the build to be successful.
-
-#### configure.ac
-
-Replace line 138 (after # check libexif) with the line below
-
-```m4
-PKG_CHECK_MODULES(LIBEXIF, libexif, [CXXFLAGS="$CXXFLAGS $LIBEXIF_CFLAGS"  LIBS="$LIBS $LIBEXIF_LIBS"], [AC_MSG_ERROR([*** missing libexif ***])])
-```
-
-#### src/cairo/SVGCanvasCairo.h, src/cairo/SVGCanvasImageCairo.h, src/cairo/SVGCanvasPathCairo.h
-
-- Replace all instances of `#include <cairo/cairo.h>` with `#include <cairo.h>`
-
-#### src/cairo/SVGCanvasTextCairo.cpp
-
-- Replace all instances of `#include <cairo/cairo.h>` with `#include <cairo.h>`
-- Replace all instances of `#include <cairo/cairo-quartz.h>` with `#include <cairo-quartz.h>`
-
-### 4.3 Finish building wxSVG
+## 3.2 Build and Install wxSVG
 
 ```bash
 ./autogen.sh
-./configure
+CPPFLAGS='-I/opt/homebrew/include' ./configure
 make -j$(sysctl -n hw.ncpu)
 sudo make install
 ```

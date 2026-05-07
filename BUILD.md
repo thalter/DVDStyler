@@ -4,7 +4,7 @@ DVD Styler is an exceptionally difficult application to build, especially on Mac
 
 For MacOS you have two choices for dependency management: Homebrew, or MacPorts. Each has their advantages and disadvantages with is beyond the scope of this document to discuss.
 
-If you are not already using one or the other, I would suggest using Homebrew.
+Currently the MacPorts setup is broken - only the Homebrew proces will yield a successful build.
 
 [Homebrew build instructions](BUILD-MACOS-HOMEBREW.md)
 
