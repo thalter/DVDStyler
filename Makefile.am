@@ -2,6 +2,12 @@ SUBDIRS = wxVillaLib src locale backgrounds buttons objects data docs templates 
 ACLOCAL_AMFLAGS=-I.
 doc_DATA = AUTHORS COPYING INSTALL README ChangeLog
 
+ifdef FFMPEG_PATH
+FFMPEG_DIR = $(FFMPEG_PATH)
+else
+FFMPEG_DIR = /opt/local/bin
+endif
+
 run: all
 	$(MAKE) -C src run
 
@@ -33,7 +39,7 @@ DVDStyler.app: Info.plist src/dvdstyler docs/*.zip
 	cp /opt/local/bin/dvdauthor DVDStyler.app/Contents/MacOS/
 	cp /opt/local/bin/mplex DVDStyler.app/Contents/MacOS/
 	cp /opt/local/bin/mkisofs DVDStyler.app/Contents/MacOS/
-	cp /opt/local/bin/ffmpeg DVDStyler.app/Contents/MacOS/
+	cp $(FFMPEG_DIR)/ffmpeg DVDStyler.app/Contents/MacOS/
 	strip DVDStyler.app/Contents/MacOS/DVDStyler
 	strip DVDStyler.app/Contents/MacOS/spumux
 	strip DVDStyler.app/Contents/MacOS/dvdauthor
