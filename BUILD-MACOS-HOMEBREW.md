@@ -53,6 +53,7 @@ sudo make install
 Clone this repo.
 
 ```bash
+export FFMPEG_PATH=/opt/local/opt/ffmpeg-full/bin
 ./autogen.sh
 ./configure
 make -j$(sysctl -n hw.ncpu)

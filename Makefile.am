@@ -2,11 +2,7 @@ SUBDIRS = wxVillaLib src locale backgrounds buttons objects data docs templates 
 ACLOCAL_AMFLAGS=-I.
 doc_DATA = AUTHORS COPYING INSTALL README ChangeLog
 
-ifdef FFMPEG_PATH
-FFMPEG_DIR = $(FFMPEG_PATH)
-else
-FFMPEG_DIR = /opt/local/bin
-endif
+FFMPEG_DIR = $(if $(FFMPEG_PATH),$(FFMPEG_PATH),/opt/local/bin)
 
 run: all
 	$(MAKE) -C src run
