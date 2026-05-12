@@ -60,6 +60,12 @@ sudo make DVDStyler.app
 sudo make libs
 ```
 
+## Troubshooting
+
+If you run into any issues, it likely has to do with the expected locations of the external libraries. Make sure you created the simlink in step 2 above.
+
+If you are running into issues with ffmpeg (or any of its subcomponents), make sure you don't have both `ffmpeg` and `ffmpeg-full` installed. You may need to create some additional simlinks on your system if you are still running into issues.
+
 ## References
 
 <https://docs.wxwidgets.org/3.3/plat_osx_install.html>
