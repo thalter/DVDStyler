@@ -17,7 +17,7 @@ dvdstyler_SOURCES += BurnDlgOSX.mm
 endif
 
 AM_CXXFLAGS = @CXXFLAGS@ -I..
-LDADD = ../wxVillaLib/libwxvilla.a
+LDADD = ../wxVillaLib/libwxvilla.a -ljpeg
 
 EXTRA_DIST = dvdvml.l dvdvmy.y
 MAINTAINERCLEANFILES = dvdvml.c dvdvmy.c dvdvmy.h
