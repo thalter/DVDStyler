@@ -4,7 +4,6 @@
             "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/opt/homebrew/Cellar/ffmpeg/8.0_1/include",
                 "/usr/local/include/wx-3.3"
             ],
             "defines": [],
