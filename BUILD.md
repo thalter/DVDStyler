@@ -1,8 +1,12 @@
-# How to Build DVDStyler on MacOS
+# How to Build DVDStyler
 
-DVD Styler is an exceptionally difficult application to build, especially on MacOS. There are not great instructions out there for doing this, so I decided to compile my own.
+DVD Styler is a cross-platform application and can be difficult to build across toolchains.
+This document is an index for platform-specific guides and in-progress platform stubs.
 
-For MacOS you have two choices for dependency management: Homebrew, or MacPorts. Each has their advantages and disadvantages with is beyond the scope of this document to discuss.
+## macOS
+
+For macOS you have two choices for dependency management: Homebrew or MacPorts.
+Each has tradeoffs that are discussed in the platform-specific documents.
 
 Currently the MacPorts setup is broken - only the Homebrew proces will yield a successful build.
 
@@ -10,3 +14,10 @@ Currently the MacPorts setup is broken - only the Homebrew proces will yield a s
 
 [MacPorts build instructions](BUILD-MACOS-MACPORTS.md)
 
+## Windows
+
+[Windows build instructions](BUILD-WINDOWS.md)
+
+## Linux
+
+[Linux build instructions](BUILD-LINUX.md)
