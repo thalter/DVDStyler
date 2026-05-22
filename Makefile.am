@@ -42,12 +42,18 @@ DVDStyler.app: Info.plist src/dvdstyler docs/*.zip
 	strip DVDStyler.app/Contents/MacOS/ffmpeg
 
 libs:
-	dylibbundler -od -b -x ./DVDStyler.app/Contents/MacOS/DVDStyler -d ./DVDStyler.app/Contents/libs/
-	dylibbundler -of -b -x ./DVDStyler.app/Contents/MacOS/spumux -d ./DVDStyler.app/Contents/libs/
-	dylibbundler -of -b -x ./DVDStyler.app/Contents/MacOS/dvdauthor -d ./DVDStyler.app/Contents/libs/
-	dylibbundler -of -b -x ./DVDStyler.app/Contents/MacOS/mplex -d ./DVDStyler.app/Contents/libs/
-	dylibbundler -of -b -x ./DVDStyler.app/Contents/MacOS/mkisofs -d ./DVDStyler.app/Contents/libs/
-	dylibbundler -of -b -x ./DVDStyler.app/Contents/MacOS/ffmpeg -d ./DVDStyler.app/Contents/libs/
+	cp src/dvdstyler DVDStyler.app/Contents/MacOS/DVDStyler
+	cp /opt/local/bin/spumux DVDStyler.app/Contents/MacOS/
+	cp /opt/local/bin/dvdauthor DVDStyler.app/Contents/MacOS/
+	cp /opt/local/bin/mplex DVDStyler.app/Contents/MacOS/
+	cp /opt/local/bin/mkisofs DVDStyler.app/Contents/MacOS/
+	cp /opt/local/bin/ffmpeg DVDStyler.app/Contents/MacOS/
+	dylibbundler -od -b -x ./DVDStyler.app/Contents/MacOS/DVDStyler -d ./DVDStyler.app/Contents/libs/ -s /opt/homebrew/lib -s /opt/homebrew/opt/libarchive/lib -s /usr/local/lib -s /opt/local/lib
+	dylibbundler -of -b -x ./DVDStyler.app/Contents/MacOS/spumux -d ./DVDStyler.app/Contents/libs/ -s /opt/homebrew/lib -s /opt/homebrew/opt/libarchive/lib -s /usr/local/lib -s /opt/local/lib
+	dylibbundler -of -b -x ./DVDStyler.app/Contents/MacOS/dvdauthor -d ./DVDStyler.app/Contents/libs/ -s /opt/homebrew/lib -s /opt/homebrew/opt/libarchive/lib -s /usr/local/lib -s /opt/local/lib
+	dylibbundler -of -b -x ./DVDStyler.app/Contents/MacOS/mplex -d ./DVDStyler.app/Contents/libs/ -s /opt/homebrew/lib -s /opt/homebrew/opt/libarchive/lib -s /usr/local/lib -s /opt/local/lib
+	dylibbundler -of -b -x ./DVDStyler.app/Contents/MacOS/mkisofs -d ./DVDStyler.app/Contents/libs/ -s /opt/homebrew/lib -s /opt/homebrew/opt/libarchive/lib -s /usr/local/lib -s /opt/local/lib
+	dylibbundler -of -b -x ./DVDStyler.app/Contents/MacOS/ffmpeg -d ./DVDStyler.app/Contents/libs/ -s /opt/homebrew/lib -s /opt/homebrew/opt/libarchive/lib -s /usr/local/lib -s /opt/local/lib
 	
 dmg:
 	rm -f DVDStyler.dmg DVDStyler-@VERSION@-MacOSX.dmg
