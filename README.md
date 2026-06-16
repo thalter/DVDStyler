@@ -6,4 +6,5 @@ You may want to head over to the [Official DVDStyler GitHub Repo](https://github
 ## Links
 
 https://github.com/ntxalex/DVDStyler
+
 https://www.dvdstyler.org/
